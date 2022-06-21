@@ -3,12 +3,12 @@
 .source "StoryElongatedCreateViewHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/search/holder/StoryElongatedCreateViewHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/search/holder/StoryElongatedCreateViewHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -54,31 +54,31 @@
     .locals 6
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result p1
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->Z()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->Z()Ljava/lang/String;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/vk/search/holder/StoryElongatedCreateViewHolder$1;->this$0:Lcom/vk/search/holder/StoryElongatedCreateViewHolder;
 
-    invoke-static {v1}, Lcom/vk/search/holder/StoryElongatedCreateViewHolder;->a(Lcom/vk/search/holder/StoryElongatedCreateViewHolder;)Lkotlin/jvm/b/a;
+    invoke-static {v1}, Lcom/vk/search/holder/StoryElongatedCreateViewHolder;->a(Lcom/vk/search/holder/StoryElongatedCreateViewHolder;)Lkotlin/jvm/b/Functions;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -110,17 +110,17 @@
 
     .line 5
     :goto_0
-    new-instance v3, Lcom/vk/cameraui/builder/a;
+    new-instance v3, Lcom/vk/cameraui/builder/CameraBuilder;
 
     sget-object v4, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->SEARCH_NEWS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v4}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "stories_search_news"
 
-    invoke-direct {v3, v4, v5}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v4, v5}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     invoke-virtual {v3, p1, v0, v2}, Lcom/vk/cameraui/builder/CameraParams$b;->a(ILjava/lang/String;Ljava/lang/String;)Lcom/vk/cameraui/builder/CameraParams$b;
@@ -137,7 +137,7 @@
 
     const-string v0, "parent.context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, p1}, Lcom/vk/cameraui/builder/CameraParams$b;->c(Landroid/content/Context;)V
 
@@ -152,7 +152,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/search/holder/StoryElongatedCreateViewHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

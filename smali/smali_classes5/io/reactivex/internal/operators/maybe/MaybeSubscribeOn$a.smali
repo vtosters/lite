@@ -28,19 +28,19 @@
 
 
 # instance fields
-.field final a:Lc/a/j;
+.field final a:Lio/reactivex/MaybeObserver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/j<",
+            "Lio/reactivex/MaybeObserver<",
             "-TT;>;"
         }
     .end annotation
 .end field
 
-.field final b:Lc/a/k;
+.field final b:Lio/reactivex/MaybeSource;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/k<",
+            "Lio/reactivex/MaybeSource<",
             "TT;>;"
         }
     .end annotation
@@ -48,14 +48,14 @@
 
 
 # direct methods
-.method constructor <init>(Lc/a/j;Lc/a/k;)V
+.method constructor <init>(Lio/reactivex/MaybeObserver;Lio/reactivex/MaybeSource;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/j<",
+            "Lio/reactivex/MaybeObserver<",
             "-TT;>;",
-            "Lc/a/k<",
+            "Lio/reactivex/MaybeSource<",
             "TT;>;)V"
         }
     .end annotation
@@ -64,10 +64,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$a;->a:Lc/a/j;
+    iput-object p1, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$a;->a:Lio/reactivex/MaybeObserver;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$a;->b:Lc/a/k;
+    iput-object p2, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$a;->b:Lio/reactivex/MaybeSource;
 
     return-void
 .end method
@@ -78,11 +78,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$a;->b:Lc/a/k;
+    iget-object v0, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$a;->b:Lio/reactivex/MaybeSource;
 
-    iget-object v1, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$a;->a:Lc/a/j;
+    iget-object v1, p0, Lio/reactivex/internal/operators/maybe/MaybeSubscribeOn$a;->a:Lio/reactivex/MaybeObserver;
 
-    invoke-interface {v0, v1}, Lc/a/k;->a(Lc/a/j;)V
+    invoke-interface {v0, v1}, Lio/reactivex/MaybeSource;->a(Lio/reactivex/MaybeObserver;)V
 
     return-void
 .end method

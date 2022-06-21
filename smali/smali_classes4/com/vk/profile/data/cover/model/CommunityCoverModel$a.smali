@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/data/cover/model/CommunityCoverModel$a;
-.super Lcom/vk/media/player/j/a;
+.super Lcom/vk/media/player/j/VkAudioFocusListener;
 .source "CommunityCoverModel.kt"
 
 
@@ -34,7 +34,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, p1, v0, p1}, Lcom/vk/media/player/j/a;-><init>(Landroid/os/Handler;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, p1, v0, p1}, Lcom/vk/media/player/j/VkAudioFocusListener;-><init>(Landroid/os/Handler;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -67,13 +67,13 @@
     .line 2
     iget-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel$a;->b:Lcom/vk/profile/data/cover/model/CommunityCoverModel;
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->p()Lb/h/g/t/c;
+    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->p()Lb/h/g/t/ValidatorSet;
 
     move-result-object p1
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     goto :goto_0
 
@@ -81,11 +81,11 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel$a;->b:Lcom/vk/profile/data/cover/model/CommunityCoverModel;
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->p()Lb/h/g/t/c;
+    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->p()Lb/h/g/t/ValidatorSet;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0, v0}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, v0, v0}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     :goto_0
     return-void

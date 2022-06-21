@@ -3,7 +3,7 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -50,7 +50,7 @@
     .locals 5
 
     .line 1
-    instance-of v0, p1, Lcom/vk/dto/newsfeed/d;
+    instance-of v0, p1, Lcom/vk/dto/newsfeed/Ownable;
 
     const/4 v1, 0x0
 
@@ -60,9 +60,9 @@
 
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/dto/newsfeed/d;
+    check-cast v0, Lcom/vk/dto/newsfeed/Ownable;
 
-    invoke-interface {v0}, Lcom/vk/dto/newsfeed/d;->L0()Lcom/vk/dto/newsfeed/Owner;
+    invoke-interface {v0}, Lcom/vk/dto/newsfeed/Ownable;->L0()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
     :goto_0
     iget-object v3, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$1;->$sourceId:Ljava/lang/Integer;
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -158,7 +158,7 @@
     :goto_2
     iget-object v4, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$1;->$sourceId:Ljava/lang/Integer;
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -189,7 +189,7 @@
     :cond_6
     iget-object p1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$1;->$sourceId:Ljava/lang/Integer;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

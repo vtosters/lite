@@ -84,11 +84,11 @@
     if-nez v1, :cond_0
 
     .line 2
-    sget-object v1, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
+    sget-object v1, Lcom/vtosters/lite/im/ImSendHelper;->b:Lcom/vtosters/lite/im/ImSendHelper;
 
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-virtual {v1, v0}, Lcom/vtosters/lite/im/i;->a(I)V
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/im/ImSendHelper;->a(I)V
 
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/SendActivity$e;->c:Lcom/vk/dto/user/UserProfile;

@@ -3,12 +3,12 @@
 .source "SearchHolder.kt"
 
 # interfaces
-.implements Lcom/vk/common/g/g;
+.implements Lcom/vk/common/g/VoidF1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/search/holder/SearchHolder;-><init>(Lcom/vk/search/b/a;Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/search/holder/SearchHolder;-><init>(Lcom/vk/search/b/BaseSearchAdapter;Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/g<",
+        "Lcom/vk/common/g/VoidF1<",
         "Lcom/vk/dto/user/UserProfile;",
         ">;"
     }
@@ -32,18 +32,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/search/holder/SearchHolder;
 
-.field final synthetic b:Lkotlin/jvm/b/b;
+.field final synthetic b:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic c:Landroid/view/ViewGroup;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/search/holder/SearchHolder;Lkotlin/jvm/b/b;Landroid/view/ViewGroup;)V
+.method constructor <init>(Lcom/vk/search/holder/SearchHolder;Lkotlin/jvm/b/Functions2;Landroid/view/ViewGroup;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/search/holder/SearchHolder$a;->a:Lcom/vk/search/holder/SearchHolder;
 
-    iput-object p2, p0, Lcom/vk/search/holder/SearchHolder$a;->b:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/search/holder/SearchHolder$a;->b:Lkotlin/jvm/b/Functions2;
 
     iput-object p3, p0, Lcom/vk/search/holder/SearchHolder$a;->c:Landroid/view/ViewGroup;
 
@@ -96,13 +96,13 @@
 
     iget-object v3, v3, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
@@ -120,7 +120,7 @@
 
     const-string v6, "search"
 
-    invoke-static/range {v3 .. v12}, Lcom/vk/webapp/helpers/a;->a(Landroid/content/Context;Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lio/reactivex/disposables/b;
+    invoke-static/range {v3 .. v12}, Lcom/vk/webapp/helpers/AppsHelper;->a(Landroid/content/Context;Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v3
 
@@ -166,25 +166,25 @@
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
     iget-object p1, p0, Lcom/vk/search/holder/SearchHolder$a;->a:Lcom/vk/search/holder/SearchHolder;
 
-    invoke-static {p1}, Lcom/vk/search/holder/SearchHolder;->b(Lcom/vk/search/holder/SearchHolder;)Lcom/vk/dto/discover/b/d;
+    invoke-static {p1}, Lcom/vk/search/holder/SearchHolder;->b(Lcom/vk/search/holder/SearchHolder;)Lcom/vk/dto/discover/b/SearchProfileItem;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/dto/discover/b/d;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/discover/b/SearchProfileItem;->d()Ljava/lang/String;
 
     move-result-object p1
 
@@ -202,7 +202,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v3 .. v9}, Lcom/vk/extensions/a;->a(Lcom/vk/dto/common/Action;Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Z
+    invoke-static/range {v3 .. v9}, Lcom/vk/extensions/ActionExt;->a(Lcom/vk/dto/common/Action;Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Z
 
     move-result p1
 
@@ -231,16 +231,16 @@
     if-eqz p1, :cond_8
 
     .line 7
-    new-instance v0, Lcom/vk/api/search/a;
+    new-instance v0, Lcom/vk/api/search/SearchAddRecents;
 
     iget v1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v0, v1}, Lcom/vk/api/search/a;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/search/SearchAddRecents;-><init>(I)V
 
     const/4 v1, 0x1
 
     .line 8
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -251,47 +251,47 @@
     sget-object v3, Lcom/vk/search/holder/SearchHolder$a$b;->a:Lcom/vk/search/holder/SearchHolder$a$b;
 
     .line 11
-    invoke-virtual {v0, v1, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     .line 12
-    iget-object v0, p0, Lcom/vk/search/holder/SearchHolder$a;->b:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/search/holder/SearchHolder$a;->b:Lkotlin/jvm/b/Functions2;
 
     if-eqz v0, :cond_6
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     .line 13
     :cond_6
-    new-instance v0, Lcom/vk/profile/ui/c$z;
+    new-instance v0, Lcom/vk/profile/ui/BaseProfileFragment$z;
 
     iget v1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/c$z;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
 
     .line 14
     iget-object v1, p0, Lcom/vk/search/holder/SearchHolder$a;->a:Lcom/vk/search/holder/SearchHolder;
 
-    invoke-static {v1}, Lcom/vk/search/holder/SearchHolder;->b(Lcom/vk/search/holder/SearchHolder;)Lcom/vk/dto/discover/b/d;
+    invoke-static {v1}, Lcom/vk/search/holder/SearchHolder;->b(Lcom/vk/search/holder/SearchHolder;)Lcom/vk/dto/discover/b/SearchProfileItem;
 
     move-result-object v1
 
     if-eqz v1, :cond_7
 
-    invoke-virtual {v1}, Lcom/vk/dto/discover/b/d;->d()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/dto/discover/b/SearchProfileItem;->d()Ljava/lang/String;
 
     move-result-object v2
 
     :cond_7
-    invoke-virtual {v0, v2}, Lcom/vk/profile/ui/c$z;->a(Ljava/lang/String;)Lcom/vk/profile/ui/c$z;
+    invoke-virtual {v0, v2}, Lcom/vk/profile/ui/BaseProfileFragment$z;->a(Ljava/lang/String;)Lcom/vk/profile/ui/BaseProfileFragment$z;
 
     .line 15
     iget-object p1, p1, Lcom/vk/dto/user/UserProfile;->X:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/c$z;->b(Ljava/lang/String;)Lcom/vk/profile/ui/c$z;
+    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/BaseProfileFragment$z;->b(Ljava/lang/String;)Lcom/vk/profile/ui/BaseProfileFragment$z;
 
     .line 16
     iget-object p1, p0, Lcom/vk/search/holder/SearchHolder$a;->c:Landroid/view/ViewGroup;
@@ -300,10 +300,10 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 17
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     .line 18
     :cond_8

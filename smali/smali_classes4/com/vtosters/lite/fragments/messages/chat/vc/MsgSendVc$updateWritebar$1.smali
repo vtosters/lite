@@ -3,7 +3,7 @@
 .source "MsgSendVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -60,11 +60,11 @@
 
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$updateWritebar$1;->this$0:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/b;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/q/h/f/b;->f()V
+    invoke-interface {p1}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->f()V
 
     goto :goto_0
 
@@ -72,11 +72,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$updateWritebar$1;->this$0:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/b;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/q/h/f/b;->j()V
+    invoke-interface {p1}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->j()V
 
     :goto_0
     return-void
@@ -90,7 +90,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$updateWritebar$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -1,5 +1,5 @@
 .class public Lorg/chromium/net/impl/NativeCronetProvider;
-.super Lorg/chromium/net/g;
+.super Lorg/chromium/net/CronetProvider;
 .source "NativeCronetProvider.java"
 
 
@@ -8,27 +8,27 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lorg/chromium/net/g;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lorg/chromium/net/CronetProvider;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lorg/chromium/net/f$a;
+.method public a()Lorg/chromium/net/CronetEngine$a;
     .locals 2
 
     .line 1
-    new-instance v0, Lorg/chromium/net/impl/f;
+    new-instance v0, Lorg/chromium/net/impl/NativeCronetEngineBuilderWithLibraryLoaderImpl;
 
-    iget-object v1, p0, Lorg/chromium/net/g;->a:Landroid/content/Context;
+    iget-object v1, p0, Lorg/chromium/net/CronetProvider;->a:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lorg/chromium/net/impl/f;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lorg/chromium/net/impl/NativeCronetEngineBuilderWithLibraryLoaderImpl;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance v1, Lorg/chromium/net/i$a;
+    new-instance v1, Lorg/chromium/net/ExperimentalCronetEngine$a;
 
-    invoke-direct {v1, v0}, Lorg/chromium/net/i$a;-><init>(Lorg/chromium/net/k;)V
+    invoke-direct {v1, v0}, Lorg/chromium/net/ExperimentalCronetEngine$a;-><init>(Lorg/chromium/net/ICronetEngineBuilder;)V
 
     return-object v1
 .end method
@@ -45,7 +45,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lorg/chromium/net/impl/d;->a()Ljava/lang/String;
+    invoke-static {}, Lorg/chromium/net/impl/ImplVersion;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -70,11 +70,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lorg/chromium/net/g;->a:Landroid/content/Context;
+    iget-object v0, p0, Lorg/chromium/net/CronetProvider;->a:Landroid/content/Context;
 
     check-cast p1, Lorg/chromium/net/impl/NativeCronetProvider;
 
-    iget-object p1, p1, Lorg/chromium/net/g;->a:Landroid/content/Context;
+    iget-object p1, p1, Lorg/chromium/net/CronetProvider;->a:Landroid/content/Context;
 
     .line 2
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -112,7 +112,7 @@
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lorg/chromium/net/g;->a:Landroid/content/Context;
+    iget-object v1, p0, Lorg/chromium/net/CronetProvider;->a:Landroid/content/Context;
 
     const/4 v2, 0x1
 

@@ -38,13 +38,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$b;->a:Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->V4()Ld/a/a/c/b;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->V4()Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Ld/a/a/c/b;->J(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    invoke-virtual {v0, p1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->J(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object p1
 
@@ -54,7 +54,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    instance-of p1, p1, Lcom/vk/profile/ui/photos/a;
+    instance-of p1, p1, Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     if-eqz p1, :cond_1
 

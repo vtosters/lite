@@ -390,7 +390,7 @@
 
     .line 20
     :cond_0
-    invoke-static {p0, p1}, Lcom/vk/audio/a;->a([BI)[B
+    invoke-static {p0, p1}, Lcom/vk/audio/AudioMessageUtils;->a([BI)[B
 
     move-result-object p0
 

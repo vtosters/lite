@@ -40,13 +40,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter$b;->a:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;
 
-    invoke-static {p1}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->a(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;)Lcom/vk/stories/util/h;
+    invoke-static {p1}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->a(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;)Lcom/vk/stories/util/CycleDataSwitcher;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/stories/util/h;->e()V
+    invoke-virtual {p1}, Lcom/vk/stories/util/CycleDataSwitcher;->e()V
 
     :cond_0
     return-void

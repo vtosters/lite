@@ -3,7 +3,7 @@
 .source "AutoDismissListener.kt"
 
 # interfaces
-.implements Lcom/vk/music/bottomsheets/a/a$a;
+.implements Lcom/vk/music/bottomsheets/a/MusicAction$a;
 .implements Landroid/content/DialogInterface$OnDismissListener;
 
 
@@ -14,7 +14,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/music/bottomsheets/a/a$a<",
+        "Lcom/vk/music/bottomsheets/a/MusicAction$a<",
         "TT;>;",
         "Landroid/content/DialogInterface$OnDismissListener;"
     }
@@ -22,20 +22,20 @@
 
 
 # instance fields
-.field private a:Lkotlin/jvm/b/a;
+.field private a:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/music/bottomsheets/a/a$a;
+.field private final b:Lcom/vk/music/bottomsheets/a/MusicAction$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/bottomsheets/a/a$a<",
+            "Lcom/vk/music/bottomsheets/a/MusicAction$a<",
             "TT;>;"
         }
     .end annotation
@@ -43,12 +43,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/music/bottomsheets/a/a$a;)V
+.method public constructor <init>(Lcom/vk/music/bottomsheets/a/MusicAction$a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/bottomsheets/a/a$a<",
+            "Lcom/vk/music/bottomsheets/a/MusicAction$a<",
             "TT;>;)V"
         }
     .end annotation
@@ -56,12 +56,12 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->b:Lcom/vk/music/bottomsheets/a/a$a;
+    iput-object p1, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->b:Lcom/vk/music/bottomsheets/a/MusicAction$a;
 
     .line 2
     sget-object p1, Lcom/vk/music/bottomsheets/AutoDismissListener$closeDialogAction$1;->a:Lcom/vk/music/bottomsheets/AutoDismissListener$closeDialogAction$1;
 
-    iput-object p1, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->a:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->a:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -77,56 +77,56 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->b:Lcom/vk/music/bottomsheets/a/a$a;
+    iget-object v0, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->b:Lcom/vk/music/bottomsheets/a/MusicAction$a;
 
-    invoke-interface {v0, p1}, Lcom/vk/music/bottomsheets/a/a$a;->a(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lcom/vk/music/bottomsheets/a/MusicAction$a;->a(Ljava/lang/Object;)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->a:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->a:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->a:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->a:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public a(Lcom/vk/music/bottomsheets/a/a;Ljava/lang/Object;)Z
+.method public a(Lcom/vk/music/bottomsheets/a/MusicAction;Ljava/lang/Object;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/bottomsheets/a/a;",
+            "Lcom/vk/music/bottomsheets/a/MusicAction;",
             "TT;)Z"
         }
     .end annotation
 
     .line 4
-    iget-object v0, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->b:Lcom/vk/music/bottomsheets/a/a$a;
+    iget-object v0, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->b:Lcom/vk/music/bottomsheets/a/MusicAction$a;
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/music/bottomsheets/a/a$a;->a(Lcom/vk/music/bottomsheets/a/a;Ljava/lang/Object;)Z
+    invoke-interface {v0, p1, p2}, Lcom/vk/music/bottomsheets/a/MusicAction$a;->a(Lcom/vk/music/bottomsheets/a/MusicAction;Ljava/lang/Object;)Z
 
     move-result p1
 
     .line 5
-    iget-object p2, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->a:Lkotlin/jvm/b/a;
+    iget-object p2, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->a:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return p1
 .end method
@@ -135,7 +135,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->b:Lcom/vk/music/bottomsheets/a/a$a;
+    iget-object v0, p0, Lcom/vk/music/bottomsheets/AutoDismissListener;->b:Lcom/vk/music/bottomsheets/a/MusicAction$a;
 
     instance-of v1, v0, Landroid/content/DialogInterface$OnDismissListener;
 

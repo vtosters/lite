@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/music/notifications/inapp/b;
+.field final synthetic a:Lcom/vk/music/notifications/inapp/InAppNotificationManager1;
 
 .field final synthetic b:Landroid/content/DialogInterface$OnDismissListener;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/notifications/inapp/b;Landroid/content/DialogInterface$OnDismissListener;)V
+.method constructor <init>(Lcom/vk/music/notifications/inapp/InAppNotificationManager1;Landroid/content/DialogInterface$OnDismissListener;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/music/notifications/inapp/InAppNotificationManager$a;->a:Lcom/vk/music/notifications/inapp/b;
+    iput-object p1, p0, Lcom/vk/music/notifications/inapp/InAppNotificationManager$a;->a:Lcom/vk/music/notifications/inapp/InAppNotificationManager1;
 
     iput-object p2, p0, Lcom/vk/music/notifications/inapp/InAppNotificationManager$a;->b:Landroid/content/DialogInterface$OnDismissListener;
 
@@ -56,7 +56,7 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/music/notifications/inapp/InAppNotificationManager$a;->a:Lcom/vk/music/notifications/inapp/b;
+    iget-object v0, p0, Lcom/vk/music/notifications/inapp/InAppNotificationManager$a;->a:Lcom/vk/music/notifications/inapp/InAppNotificationManager1;
 
     invoke-virtual {p1, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 

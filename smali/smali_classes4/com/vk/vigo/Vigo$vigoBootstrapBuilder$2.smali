@@ -3,7 +3,7 @@
 .source "Vigo.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lvigo/sdk/VigoBootstrapBuilder;",
         ">;"
     }
@@ -103,16 +103,16 @@
     .line 3
     sget-object v0, Lcom/vk/core/network/Network$ClientType;->CLIENT_VIGO:Lcom/vk/core/network/Network$ClientType;
 
-    invoke-static {v0}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/x$b;
+    invoke-static {v0}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/OkHttpClient$b;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/k0;->i()I
+    invoke-interface {v1}, Lcom/vk/bridges/VideoBridge1;->i()I
 
     move-result v1
 
@@ -120,14 +120,14 @@
 
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Lokhttp3/x$b;->a(JLjava/util/concurrent/TimeUnit;)Lokhttp3/x$b;
+    invoke-virtual {v0, v1, v2, v3}, Lokhttp3/OkHttpClient$b;->a(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$b;
 
     .line 5
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/k0;->f()I
+    invoke-interface {v1}, Lcom/vk/bridges/VideoBridge1;->f()I
 
     move-result v1
 
@@ -135,32 +135,32 @@
 
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Lokhttp3/x$b;->b(JLjava/util/concurrent/TimeUnit;)Lokhttp3/x$b;
+    invoke-virtual {v0, v1, v2, v3}, Lokhttp3/OkHttpClient$b;->b(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$b;
 
     .line 6
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v2, 0x3e8
 
-    invoke-virtual {v0, v2, v3, v1}, Lokhttp3/x$b;->c(JLjava/util/concurrent/TimeUnit;)Lokhttp3/x$b;
+    invoke-virtual {v0, v2, v3, v1}, Lokhttp3/OkHttpClient$b;->c(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$b;
 
     .line 7
     sget-object v1, Lcom/vk/core/network/Network$ClientType;->CLIENT_VIGO:Lcom/vk/core/network/Network$ClientType;
 
-    invoke-static {v1, v0}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network$ClientType;Lokhttp3/x$b;)Lokhttp3/x;
+    invoke-static {v1, v0}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network$ClientType;Lokhttp3/OkHttpClient$b;)Lokhttp3/OkHttpClient;
 
     .line 8
     new-instance v0, Lvigo/sdk/VigoBootstrapBuilder;
 
     .line 9
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     .line 10
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v2}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v2
 
@@ -176,11 +176,11 @@
     invoke-direct {v0, v1, v2}, Lvigo/sdk/VigoBootstrapBuilder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 12
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/k0;->b()Z
+    invoke-interface {v1}, Lcom/vk/bridges/VideoBridge1;->b()Z
 
     move-result v1
 
@@ -301,11 +301,11 @@
     :goto_0
     sget-object v1, Lcom/vk/core/network/Network$ClientType;->CLIENT_VIGO:Lcom/vk/core/network/Network$ClientType;
 
-    invoke-static {v1}, Lcom/vk/core/network/Network;->b(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/x;
+    invoke-static {v1}, Lcom/vk/core/network/Network;->b(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/OkHttpClient;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lvigo/sdk/VigoBootstrapBuilder;->withOkHttp3(Lokhttp3/x;)Lvigo/sdk/VigoBootstrapBuilder;
+    invoke-virtual {v0, v1}, Lvigo/sdk/VigoBootstrapBuilder;->withOkHttp3(Lokhttp3/OkHttpClient;)Lvigo/sdk/VigoBootstrapBuilder;
 
     return-object v0
 .end method

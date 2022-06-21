@@ -206,7 +206,7 @@
     move-result v2
 
     .line 8
-    invoke-static {}, Lcom/vk/attachpicker/o;->a()Landroid/content/Context;
+    invoke-static {}, Lcom/vk/attachpicker/Picker;->a()Landroid/content/Context;
 
     move-result-object v3
 
@@ -318,7 +318,7 @@
     move-result v2
 
     .line 3
-    invoke-static {}, Lcom/vk/attachpicker/o;->a()Landroid/content/Context;
+    invoke-static {}, Lcom/vk/attachpicker/Picker;->a()Landroid/content/Context;
 
     move-result-object v3
 
@@ -457,7 +457,7 @@
     iput-boolean p1, p0, Lcom/vk/attachpicker/widget/ContentViewPager;->d:Z
 
     .line 2
-    invoke-static {p0}, Lcom/vk/attachpicker/util/f;->a(Landroidx/viewpager/widget/ViewPager;)Landroid/view/View;
+    invoke-static {p0}, Lcom/vk/attachpicker/util/Utils;->a(Landroidx/viewpager/widget/ViewPager;)Landroid/view/View;
 
     move-result-object v0
 
@@ -481,7 +481,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/attachpicker/o;->a()Landroid/content/Context;
+    invoke-static {}, Lcom/vk/attachpicker/Picker;->a()Landroid/content/Context;
 
     move-result-object p4
 

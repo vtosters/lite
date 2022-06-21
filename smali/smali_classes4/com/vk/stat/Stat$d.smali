@@ -49,7 +49,7 @@
     :try_start_0
     sget-object v2, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-static {v2}, Lcom/vk/stat/Stat;->c(Lcom/vk/stat/Stat;)Lcom/vk/stat/storage/c;
+    invoke-static {v2}, Lcom/vk/stat/Stat;->c(Lcom/vk/stat/Stat;)Lcom/vk/stat/storage/Storage;
 
     move-result-object v2
 
@@ -65,11 +65,11 @@
 
     sget-object v2, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-static {v2}, Lcom/vk/stat/Stat;->a(Lcom/vk/stat/Stat;)Lcom/vk/stat/utils/b;
+    invoke-static {v2}, Lcom/vk/stat/Stat;->a(Lcom/vk/stat/Stat;)Lcom/vk/stat/utils/EventFilter;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/stat/utils/b;->c()Z
+    invoke-virtual {v2}, Lcom/vk/stat/utils/EventFilter;->c()Z
 
     move-result v2
 
@@ -90,11 +90,11 @@
 
     sget-object v3, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-static {v3}, Lcom/vk/stat/Stat;->a(Lcom/vk/stat/Stat;)Lcom/vk/stat/utils/b;
+    invoke-static {v3}, Lcom/vk/stat/Stat;->a(Lcom/vk/stat/Stat;)Lcom/vk/stat/utils/EventFilter;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/stat/utils/b;->b()Z
+    invoke-virtual {v3}, Lcom/vk/stat/utils/EventFilter;->b()Z
 
     move-result v3
 
@@ -118,7 +118,7 @@
     :cond_3
     sget-object v2, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-static {v2}, Lcom/vk/stat/Stat;->c(Lcom/vk/stat/Stat;)Lcom/vk/stat/storage/c;
+    invoke-static {v2}, Lcom/vk/stat/Stat;->c(Lcom/vk/stat/Stat;)Lcom/vk/stat/storage/Storage;
 
     move-result-object v2
 
@@ -128,14 +128,14 @@
 
     iget-boolean v4, p0, Lcom/vk/stat/Stat$d;->a:Z
 
-    invoke-interface {v2, v3, v4}, Lcom/vk/stat/storage/c;->b(ZZ)Lcom/vk/stat/storage/c$a;
+    invoke-interface {v2, v3, v4}, Lcom/vk/stat/storage/Storage;->b(ZZ)Lcom/vk/stat/storage/Storage$a;
 
     move-result-object v2
 
     if-eqz v2, :cond_9
 
     .line 5
-    invoke-virtual {v2}, Lcom/vk/stat/storage/c$a;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/stat/storage/Storage$a;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -151,15 +151,15 @@
 
     if-eqz v3, :cond_6
 
-    invoke-virtual {v3}, Lcom/vk/stat/Stat$a;->a()Lcom/vk/stat/b/b;
+    invoke-virtual {v3}, Lcom/vk/stat/Stat$a;->a()Lcom/vk/stat/b/EventSender;
 
     move-result-object v3
 
-    invoke-virtual {v2}, Lcom/vk/stat/storage/c$a;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/stat/storage/Storage$a;->a()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-interface {v3, v5}, Lcom/vk/stat/b/b;->a(Ljava/lang/String;)Z
+    invoke-interface {v3, v5}, Lcom/vk/stat/b/EventSender;->a(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -181,7 +181,7 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Lcom/vk/stat/storage/c$a;->b()Ljava/util/ArrayList;
+    invoke-virtual {v2}, Lcom/vk/stat/storage/Storage$a;->b()Ljava/util/ArrayList;
 
     move-result-object v6
 
@@ -202,7 +202,7 @@
 
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Lcom/vk/stat/storage/c$a;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/stat/storage/Storage$a;->a()Ljava/lang/String;
 
     move-result-object v4
 
@@ -220,7 +220,7 @@
     :cond_5
     sget-object v3, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-static {v3}, Lcom/vk/stat/Stat;->c(Lcom/vk/stat/Stat;)Lcom/vk/stat/storage/c;
+    invoke-static {v3}, Lcom/vk/stat/Stat;->c(Lcom/vk/stat/Stat;)Lcom/vk/stat/storage/Storage;
 
     move-result-object v3
 
@@ -230,13 +230,13 @@
 
     iget-boolean v5, p0, Lcom/vk/stat/Stat$d;->a:Z
 
-    invoke-interface {v3, v4, v5, v2}, Lcom/vk/stat/storage/c;->a(ZZLcom/vk/stat/storage/c$a;)V
+    invoke-interface {v3, v4, v5, v2}, Lcom/vk/stat/storage/Storage;->a(ZZLcom/vk/stat/storage/Storage$a;)V
 
     goto :goto_3
 
     .line 9
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -248,7 +248,7 @@
     :try_start_1
     sget-object v2, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-static {v2}, Lcom/vk/stat/Stat;->c(Lcom/vk/stat/Stat;)Lcom/vk/stat/storage/c;
+    invoke-static {v2}, Lcom/vk/stat/Stat;->c(Lcom/vk/stat/Stat;)Lcom/vk/stat/storage/Storage;
 
     move-result-object v2
 
@@ -258,7 +258,7 @@
 
     iget-boolean v4, p0, Lcom/vk/stat/Stat$d;->a:Z
 
-    invoke-interface {v2, v3, v4}, Lcom/vk/stat/storage/c;->a(ZZ)V
+    invoke-interface {v2, v3, v4}, Lcom/vk/stat/storage/Storage;->a(ZZ)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

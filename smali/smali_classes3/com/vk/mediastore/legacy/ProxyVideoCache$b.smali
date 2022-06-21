@@ -41,11 +41,11 @@
     :try_start_0
     iget-object v0, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$b;->a:Lcom/vk/mediastore/legacy/ProxyVideoCache;
 
-    invoke-static {v0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->d(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/danikula/videocache/f;
+    invoke-static {v0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->d(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/danikula/videocache/HttpProxyCacheServer;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/danikula/videocache/f;->a()V
+    invoke-virtual {v0}, Lcom/danikula/videocache/HttpProxyCacheServer;->a()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -87,16 +87,16 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
 
     .line 4
     iget-object v0, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$b;->a:Lcom/vk/mediastore/legacy/ProxyVideoCache;
 
-    invoke-static {v0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/vk/core/util/u0;
+    invoke-static {v0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b(Lcom/vk/mediastore/legacy/ProxyVideoCache;)Lcom/vk/core/util/Provider2;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/core/util/u0;->reset()V
+    invoke-interface {v0}, Lcom/vk/core/util/Provider2;->reset()V
 
     return-void
 .end method

@@ -49,17 +49,17 @@
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveVideoState$c;->a:Lcom/vk/libvideo/live/views/live/LiveVideoState;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LiveVideoState;->c(Lcom/vk/libvideo/live/views/live/LiveVideoState;)Lcom/vk/libvideo/live/views/live/b;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LiveVideoState;->c(Lcom/vk/libvideo/live/views/live/LiveVideoState;)Lcom/vk/libvideo/live/views/live/LiveContract1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/b;->getPresenter()Ljava/lang/Object;
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BaseView;->getPresenter()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/libvideo/live/views/live/a;
+    check-cast v0, Lcom/vk/libvideo/live/views/live/LiveContract;
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/a;->h0()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract;->h0()V
 
     :cond_0
     return-void

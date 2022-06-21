@@ -235,7 +235,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v8}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v0 .. v8}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -254,14 +254,14 @@
     .locals 3
 
     .line 11
-    invoke-static {}, Lcom/vk/core/util/i1;->c()Ljava/util/Calendar;
+    invoke-static {}, Lcom/vk/core/util/TimeUtils;->c()Ljava/util/Calendar;
 
     move-result-object v0
 
     const-string v1, "calendar"
 
     .line 12
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v1, 0x3e8
 
@@ -374,7 +374,7 @@
 
     const-string v0, "textView.context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v0, Lb/h/z/e;->ic_explicit_16:I
 
@@ -382,7 +382,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     const/4 p1, 0x4
 
@@ -399,7 +399,7 @@
     const/4 p1, 0x0
 
     .line 17
-    invoke-static {p0, p1}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     :goto_0
     return-void
@@ -487,7 +487,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p0, 0x0
 

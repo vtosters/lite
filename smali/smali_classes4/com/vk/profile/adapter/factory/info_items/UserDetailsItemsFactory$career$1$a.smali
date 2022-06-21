@@ -42,7 +42,7 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/profile/ui/c$z;
+    new-instance v0, Lcom/vk/profile/ui/BaseProfileFragment$z;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$career$1$a;->a:Lcom/vtosters/lite/api/ExtendedUserProfile$e;
 
@@ -52,13 +52,13 @@
 
     mul-int/lit8 v1, v1, -0x1
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/c$z;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$career$1$a;->b:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$career$1;
 
     iget-object v1, v1, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$career$1;->$context:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

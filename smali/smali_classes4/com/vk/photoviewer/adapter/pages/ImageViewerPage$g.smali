@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;->d()Lcom/vk/imageloader/view/c;
+    value = Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;->d()Lcom/vk/imageloader/view/VKZoomableImageView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/imageloader/view/c;
+.field final synthetic a:Lcom/vk/imageloader/view/VKZoomableImageView;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/imageloader/view/c;)V
+.method constructor <init>(Lcom/vk/imageloader/view/VKZoomableImageView;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$g;->a:Lcom/vk/imageloader/view/c;
+    iput-object p1, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$g;->a:Lcom/vk/imageloader/view/VKZoomableImageView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,13 +43,13 @@
 
     .line 1
     :cond_0
-    iget-object p1, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$g;->a:Lcom/vk/imageloader/view/c;
+    iget-object p1, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$g;->a:Lcom/vk/imageloader/view/VKZoomableImageView;
 
     const/high16 p2, 0x3f800000    # 1.0f
 
     const/4 p3, 0x0
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/imageloader/view/c;->a(FZ)V
+    invoke-virtual {p1, p2, p3}, Lcom/vk/imageloader/view/VKZoomableImageView;->a(FZ)V
 
     :cond_1
     return-void

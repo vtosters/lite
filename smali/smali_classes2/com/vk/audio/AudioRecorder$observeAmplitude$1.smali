@@ -3,12 +3,12 @@
 .source "AudioRecorder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audio/AudioRecorder;->a(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    value = Lcom/vk/audio/AudioRecorder;->a(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/Double;",
         "Ljava/lang/Integer;",
         "Ljava/lang/Double;",

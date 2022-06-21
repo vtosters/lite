@@ -3,7 +3,7 @@
 .source "CatchUpButtonController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/profile/ui/community/CatchUpButtonController$showSnackBar$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -62,7 +62,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController$showSnackBar$1;->this$0:Lcom/vk/profile/ui/community/CatchUpButtonController;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/CatchUpButtonController;->a(Lcom/vk/profile/ui/community/CatchUpButtonController;)Lb/h/g/t/c;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/CatchUpButtonController;->a(Lcom/vk/profile/ui/community/CatchUpButtonController;)Lb/h/g/t/ValidatorSet;
 
     move-result-object v0
 
@@ -70,7 +70,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController$showSnackBar$1;->this$0:Lcom/vk/profile/ui/community/CatchUpButtonController;
@@ -91,7 +91,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/utils/b;->b(Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vtosters/lite/data/PostInteract;)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/utils/AdsUtil;->b(Landroid/content/Context;Lcom/vk/dto/newsfeed/ButtonAction;Lcom/vtosters/lite/data/PostInteract;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController$showSnackBar$1;->this$0:Lcom/vk/profile/ui/community/CatchUpButtonController;
@@ -100,7 +100,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/e/a;->b(Lcom/vk/dto/profile/HeaderCatchUpLink;)V
+    invoke-static {v0}, Lcom/vk/profile/e/CatchUpButtonTracker;->b(Lcom/vk/dto/profile/HeaderCatchUpLink;)V
 
     return-void
 .end method

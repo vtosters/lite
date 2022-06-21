@@ -3,7 +3,7 @@
 .source "UserNotificationHolder.kt"
 
 # interfaces
-.implements Lcom/vk/mediastore/system/b$g;
+.implements Lcom/vk/mediastore/system/MediaStoreController$g;
 
 
 # annotations

@@ -3,7 +3,7 @@
 .source "SourcesNotificationsSettingsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -60,12 +60,12 @@
 
     invoke-direct {v0, p0}, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$unsubsribeAction$1$1;-><init>(Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$unsubsribeAction$1;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/i0;->b(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/SimpleAdapter;->b(Lkotlin/jvm/b/Functions2;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$unsubsribeAction$1;->a:Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter;
 
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result p1
 
@@ -76,7 +76,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$unsubsribeAction$1;->a:Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter;
 
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     .line 4
     :cond_0

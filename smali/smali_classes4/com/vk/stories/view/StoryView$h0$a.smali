@@ -47,7 +47,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/c;->a(Landroid/content/Context;)Lcom/vk/core/util/c$b;
+    invoke-static {v0}, Lcom/vk/core/util/AlertDialogs;->a(Landroid/content/Context;)Lcom/vk/core/util/AlertDialogs$b;
 
     move-result-object v0
 
@@ -58,7 +58,7 @@
 
     const v2, 0x7f120edf
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 3
     iget-object v1, p0, Lcom/vk/stories/view/StoryView$h0$a;->a:Lcom/vk/stories/view/StoryView$h0;
@@ -77,7 +77,7 @@
 
     iget-object v3, v3, Lcom/vk/stories/view/StoryView$h0;->c:Lcom/vk/stories/view/StoryView;
 
-    invoke-static {v3}, Lcom/vk/stories/view/StoryView;->m(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/y0;
+    invoke-static {v3}, Lcom/vk/stories/view/StoryView;->m(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/StoryViewHelper;
 
     move-result-object v3
 
@@ -85,13 +85,13 @@
 
     iget-object v4, v4, Lcom/vk/stories/view/StoryView$h0;->c:Lcom/vk/stories/view/StoryView;
 
-    iget-object v4, v4, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v4, v4, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v4}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcom/vk/stories/y0;->d(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lcom/vk/stories/StoryViewHelper;->d(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -109,14 +109,14 @@
 
     invoke-direct {v2, p0}, Lcom/vk/stories/view/StoryView$h0$a$b;-><init>(Lcom/vk/stories/view/StoryView$h0$a;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/core/util/c$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/core/util/AlertDialogs$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 4
     iget-object v1, p0, Lcom/vk/stories/view/StoryView$h0$a;->a:Lcom/vk/stories/view/StoryView$h0;
 
     iget-object v1, v1, Lcom/vk/stories/view/StoryView$h0;->c:Lcom/vk/stories/view/StoryView;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/c$b;->b()Landroidx/appcompat/app/AlertDialog;
+    invoke-virtual {v0}, Lcom/vk/core/util/AlertDialogs$b;->b()Landroidx/appcompat/app/AlertDialog;
 
     move-result-object v0
 

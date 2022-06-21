@@ -55,7 +55,7 @@
     iput-wide v0, p0, Lcom/vk/attachpicker/widget/ViewerToolbar$b;->a:J
 
     .line 3
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
 
     const/4 v2, 0x6
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/l/d;->a(II)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/l/NotificationCenter;->a(II)V
 
     return-void
 .end method
@@ -98,7 +98,7 @@
     if-lez v4, :cond_0
 
     .line 6
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
@@ -114,11 +114,11 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, v2, p1}, Lb/h/g/l/d;->a(IILjava/lang/Object;)V
+    invoke-virtual {v0, v1, v2, p1}, Lb/h/g/l/NotificationCenter;->a(IILjava/lang/Object;)V
 
     .line 7
     :cond_0
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
@@ -130,7 +130,7 @@
 
     move-result v1
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/l/d;->a(II)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/l/NotificationCenter;->a(II)V
 
     return-void
 .end method

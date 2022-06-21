@@ -3,20 +3,20 @@
 .source "StoryViewMusicDelegate.kt"
 
 # interfaces
-.implements Lcom/vk/stories/view/r1;
+.implements Lcom/vk/stories/view/StoryViewClickableStickerListener;
 .implements Landroid/content/DialogInterface$OnDismissListener;
-.implements Lcom/vk/music/bottomsheets/a/a$a;
+.implements Lcom/vk/music/bottomsheets/a/MusicAction$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/stories/view/r1<",
+        "Lcom/vk/stories/view/StoryViewClickableStickerListener<",
         "Lcom/vk/dto/stories/model/clickable/ClickableMusic;",
         ">;",
         "Landroid/content/DialogInterface$OnDismissListener;",
-        "Lcom/vk/music/bottomsheets/a/a$a<",
+        "Lcom/vk/music/bottomsheets/a/MusicAction$a<",
         "Lcom/vk/dto/music/MusicTrack;",
         ">;"
     }
@@ -24,13 +24,13 @@
 
 
 # instance fields
-.field private final B:Lcom/vk/music/l/a;
+.field private final B:Lcom/vk/music/l/ModernMusicTrackModel;
 
 .field private final C:Lcom/vk/music/common/BoomModel;
 
-.field private final D:Lcom/vk/music/player/d;
+.field private final D:Lcom/vk/music/player/PlayerModel;
 
-.field private final E:Lcom/vk/music/restriction/h;
+.field private final E:Lcom/vk/music/restriction/MusicRestrictionManager;
 
 .field private a:Lcom/vk/dto/stories/model/clickable/ClickableMusic;
 
@@ -57,7 +57,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/stories/view/StoryView;Lcom/vk/music/l/a;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/d;Lcom/vk/music/restriction/h;)V
+.method public constructor <init>(Lcom/vk/stories/view/StoryView;Lcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/restriction/MusicRestrictionManager;)V
     .locals 0
 
     .line 1
@@ -65,13 +65,13 @@
 
     iput-object p1, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->h:Lcom/vk/stories/view/StoryView;
 
-    iput-object p2, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->B:Lcom/vk/music/l/a;
+    iput-object p2, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->B:Lcom/vk/music/l/ModernMusicTrackModel;
 
     iput-object p3, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->C:Lcom/vk/music/common/BoomModel;
 
-    iput-object p4, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->D:Lcom/vk/music/player/d;
+    iput-object p4, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->D:Lcom/vk/music/player/PlayerModel;
 
-    iput-object p5, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->E:Lcom/vk/music/restriction/h;
+    iput-object p5, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->E:Lcom/vk/music/restriction/MusicRestrictionManager;
 
     .line 2
     iget-object p1, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->h:Lcom/vk/stories/view/StoryView;
@@ -163,12 +163,12 @@
     move-object v2, v10
 
     .line 34
-    invoke-direct/range {v2 .. v9}, Lcom/vk/stories/clickable/models/StoryMusicInfo;-><init>(Lcom/vk/dto/music/MusicTrack;Ljava/lang/String;IILjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/stories/clickable/models/StoryMusicInfo;-><init>(Lcom/vk/dto/music/MusicTrack;Ljava/lang/String;IILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 35
     iget-object v0, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->h:Lcom/vk/stories/view/StoryView;
 
-    iget-object v0, v0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, v0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
@@ -183,7 +183,7 @@
 
     .line 36
     :goto_0
-    new-instance v2, Lcom/vk/cameraui/builder/a;
+    new-instance v2, Lcom/vk/cameraui/builder/CameraBuilder;
 
     sget-object v3, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_VIEWER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
@@ -191,7 +191,7 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3, p1}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, p1}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 37
     sget-object p1, Lcom/vk/cameraui/CameraUI;->d:Lcom/vk/cameraui/CameraUI$a;
@@ -236,7 +236,7 @@
 
     const-string v0, "storyView.context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, p1}, Lcom/vk/cameraui/builder/CameraParams$b;->c(Landroid/content/Context;)V
 
@@ -247,7 +247,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/camera/j/b;)V
+.method public final a(Lcom/vk/camera/j/CadreUtils2;)V
     .locals 2
 
     .line 8
@@ -255,9 +255,9 @@
 
     const-string v1, "restrictionTextView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/camera/j/b;->a()F
+    invoke-virtual {p1}, Lcom/vk/camera/j/CadreUtils2;->a()F
 
     move-result p1
 
@@ -355,13 +355,13 @@
     if-eqz v4, :cond_2
 
     .line 13
-    iget-object v2, v0, Lcom/vk/stories/view/StoryViewMusicDelegate;->E:Lcom/vk/music/restriction/h;
+    iget-object v2, v0, Lcom/vk/stories/view/StoryViewMusicDelegate;->E:Lcom/vk/music/restriction/MusicRestrictionManager;
 
     new-instance v4, Lcom/vk/stories/view/StoryViewMusicDelegate$a;
 
     invoke-direct {v4, v0}, Lcom/vk/stories/view/StoryViewMusicDelegate$a;-><init>(Lcom/vk/stories/view/StoryViewMusicDelegate;)V
 
-    invoke-interface {v2, v1, v4}, Lcom/vk/music/restriction/h;->a(Lcom/vk/dto/music/MusicDynamicRestriction;Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-interface {v2, v1, v4}, Lcom/vk/music/restriction/MusicRestrictionManager;->a(Lcom/vk/dto/music/MusicDynamicRestriction;Landroid/content/DialogInterface$OnDismissListener;)V
 
     goto :goto_1
 
@@ -414,16 +414,16 @@
 
     const-string v5, "MusicPlaybackLaunchContext.NONE"
 
-    invoke-static {v6, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 18
-    iget-object v7, v0, Lcom/vk/stories/view/StoryViewMusicDelegate;->B:Lcom/vk/music/l/a;
+    iget-object v7, v0, Lcom/vk/stories/view/StoryViewMusicDelegate;->B:Lcom/vk/music/l/ModernMusicTrackModel;
 
     .line 19
     iget-object v8, v0, Lcom/vk/stories/view/StoryViewMusicDelegate;->C:Lcom/vk/music/common/BoomModel;
 
     .line 20
-    iget-object v9, v0, Lcom/vk/stories/view/StoryViewMusicDelegate;->D:Lcom/vk/music/player/d;
+    iget-object v9, v0, Lcom/vk/stories/view/StoryViewMusicDelegate;->D:Lcom/vk/music/player/PlayerModel;
 
     .line 21
     invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/stories/model/clickable/ClickableMusic;->v1()Lcom/vk/dto/music/MusicTrack;
@@ -443,7 +443,7 @@
     move-object v5, v4
 
     .line 22
-    invoke-direct/range {v5 .. v15}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/a;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/d;Ljava/lang/Object;Lkotlin/jvm/b/b;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v5 .. v15}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/PlayerModel;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 23
     invoke-virtual {v4}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->b()Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
@@ -453,10 +453,10 @@
 
     invoke-direct {v2, v0}, Lcom/vk/stories/view/StoryViewMusicDelegate$onStickerClicked$2;-><init>(Lcom/vk/stories/view/StoryViewMusicDelegate;)V
 
-    invoke-virtual {v4, v2}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Lkotlin/jvm/b/a;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
+    invoke-virtual {v4, v2}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
 
     .line 25
-    invoke-virtual {v4, v1, v0}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/a$a;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
+    invoke-virtual {v4, v1, v0}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;->a(Landroid/app/Activity;Lcom/vk/music/bottomsheets/a/MusicAction$a;)Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
 
     iput-object v4, v0, Lcom/vk/stories/view/StoryViewMusicDelegate;->c:Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheet;
 
@@ -484,11 +484,11 @@
     return p1
 .end method
 
-.method public a(Lcom/vk/music/bottomsheets/a/a;Lcom/vk/dto/music/MusicTrack;)Z
+.method public a(Lcom/vk/music/bottomsheets/a/MusicAction;Lcom/vk/dto/music/MusicTrack;)Z
     .locals 0
 
     .line 27
-    invoke-virtual {p1}, Lcom/vk/music/bottomsheets/a/a;->a()I
+    invoke-virtual {p1}, Lcom/vk/music/bottomsheets/a/MusicAction;->a()I
 
     move-result p1
 
@@ -511,13 +511,13 @@
     return p1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/music/bottomsheets/a/a;Ljava/lang/Object;)Z
+.method public bridge synthetic a(Lcom/vk/music/bottomsheets/a/MusicAction;Ljava/lang/Object;)Z
     .locals 0
 
     .line 3
     check-cast p2, Lcom/vk/dto/music/MusicTrack;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/view/StoryViewMusicDelegate;->a(Lcom/vk/music/bottomsheets/a/a;Lcom/vk/dto/music/MusicTrack;)Z
+    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/view/StoryViewMusicDelegate;->a(Lcom/vk/music/bottomsheets/a/MusicAction;Lcom/vk/dto/music/MusicTrack;)Z
 
     move-result p1
 
@@ -665,14 +665,14 @@
     .line 6
     iget-object v1, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->b:Landroid/widget/TextView;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1, v2}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 7
     iget-object v1, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->b:Landroid/widget/TextView;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/music/MusicDynamicRestriction;->getTitle()Ljava/lang/String;
 
@@ -686,14 +686,14 @@
     :cond_7
     iget-object v0, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->b:Landroid/widget/TextView;
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 9
     iget-object v0, p0, Lcom/vk/stories/view/StoryViewMusicDelegate;->b:Landroid/widget/TextView;
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, ""
 

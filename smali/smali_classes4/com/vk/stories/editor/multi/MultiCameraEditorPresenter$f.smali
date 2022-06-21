@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Ljava/util/List;ILcom/vk/cameraui/entities/d;)V
+    value = Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Ljava/util/List;ILcom/vk/cameraui/entities/StoryRawData3;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,18 +31,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-.field final synthetic b:Lcom/vk/cameraui/entities/d;
+.field final synthetic b:Lcom/vk/cameraui/entities/StoryRawData3;
 
 .field final synthetic c:I
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/d;I)V
+.method constructor <init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData3;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    iput-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->b:Lcom/vk/cameraui/entities/d;
+    iput-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->b:Lcom/vk/cameraui/entities/StoryRawData3;
 
     iput p3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->c:I
 
@@ -53,13 +53,13 @@
 
 
 # virtual methods
-.method public final call()Lcom/vk/stories/editor/multi/k/b/b;
+.method public final call()Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;
     .locals 4
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->b:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->b:Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->t()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->t()Z
 
     move-result v0
 
@@ -68,26 +68,26 @@
     .line 3
     iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->o(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/d;
+    invoke-static {v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->o(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/CameraVideoDelegate;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->b:Lcom/vk/cameraui/entities/d;
+    iget-object v1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->b:Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-virtual {v1}, Lcom/vk/cameraui/entities/d;->q()Lcom/vk/cameraui/entities/e;
+    invoke-virtual {v1}, Lcom/vk/cameraui/entities/StoryRawData3;->q()Lcom/vk/cameraui/entities/StoryRawData2;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/editor/multi/d;->a(Lcom/vk/cameraui/entities/e;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v1}, Lcom/vk/stories/editor/multi/CameraVideoDelegate;->a(Lcom/vk/cameraui/entities/StoryRawData2;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -101,13 +101,13 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->b:Lcom/vk/cameraui/entities/d;
+    iget-object v1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->b:Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/editor/multi/CameraPhotoDelegate;->a(Lcom/vk/cameraui/entities/d;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/stories/editor/multi/CameraPhotoDelegate;->a(Lcom/vk/cameraui/entities/StoryRawData3;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -115,11 +115,11 @@
 
     .line 5
     :goto_0
-    new-instance v1, Lcom/vk/stories/editor/multi/k/b/b;
+    new-instance v1, Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;
 
     iget-object v2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    invoke-static {v2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->j(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/lists/b;
+    invoke-static {v2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->j(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/lists/BaseListDataSet;
 
     move-result-object v2
 
@@ -137,13 +137,13 @@
     const/4 v2, 0x0
 
     :goto_1
-    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->b:Lcom/vk/cameraui/entities/d;
+    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->b:Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-virtual {v3}, Lcom/vk/cameraui/entities/d;->t()Z
+    invoke-virtual {v3}, Lcom/vk/cameraui/entities/StoryRawData3;->t()Z
 
     move-result v3
 
-    invoke-direct {v1, v0, v2, v3}, Lcom/vk/stories/editor/multi/k/b/b;-><init>(Landroid/graphics/Bitmap;ZZ)V
+    invoke-direct {v1, v0, v2, v3}, Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;-><init>(Landroid/graphics/Bitmap;ZZ)V
 
     return-object v1
 .end method
@@ -152,7 +152,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->call()Lcom/vk/stories/editor/multi/k/b/b;
+    invoke-virtual {p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;->call()Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;
 
     move-result-object v0
 

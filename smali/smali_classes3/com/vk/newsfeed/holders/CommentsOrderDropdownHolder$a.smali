@@ -31,15 +31,15 @@
     .end annotation
 .end field
 
-.field private e:Lkotlin/jvm/b/c;
+.field private e:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/String;",
             "-",
             "Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -47,7 +47,7 @@
 
 
 # direct methods
-.method public constructor <init>(IILjava/lang/String;Ljava/util/List;Lkotlin/jvm/b/c;)V
+.method public constructor <init>(IILjava/lang/String;Ljava/util/List;Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -56,12 +56,12 @@
             "Ljava/util/List<",
             "Lcom/vk/api/comments/CommentsOrder$Item;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/String;",
             "-",
             "Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -77,12 +77,12 @@
 
     iput-object p4, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->d:Ljava/util/List;
 
-    iput-object p5, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->e:Lkotlin/jvm/b/c;
+    iput-object p5, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->e:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILjava/lang/String;Ljava/util/List;Lkotlin/jvm/b/c;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IILjava/lang/String;Ljava/util/List;Lkotlin/jvm/b/Functions1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 7
 
     and-int/lit8 p7, p6, 0x1
@@ -136,28 +136,28 @@
 
     move-object v6, p5
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;-><init>(IILjava/lang/String;Ljava/util/List;Lkotlin/jvm/b/c;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;-><init>(IILjava/lang/String;Ljava/util/List;Lkotlin/jvm/b/Functions1;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lkotlin/jvm/b/c;
+.method public final a()Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Ljava/lang/String;",
             "Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 4
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->e:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->e:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
@@ -277,7 +277,7 @@
 
     iget-object v1, p1, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -287,17 +287,17 @@
 
     iget-object v1, p1, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->d:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->e:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->e:Lkotlin/jvm/b/Functions1;
 
-    iget-object p1, p1, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->e:Lkotlin/jvm/b/c;
+    iget-object p1, p1, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->e:Lkotlin/jvm/b/Functions1;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -368,7 +368,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->e:Lkotlin/jvm/b/c;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->e:Lkotlin/jvm/b/Functions1;
 
     if-eqz v1, :cond_2
 
@@ -425,7 +425,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->e:Lkotlin/jvm/b/c;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->e:Lkotlin/jvm/b/Functions1;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

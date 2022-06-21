@@ -49,14 +49,14 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar$c0;->b:Landroid/view/View;
 
     const/4 v1, 0x4
 
-    invoke-static {v0, v1}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     return-void
 .end method

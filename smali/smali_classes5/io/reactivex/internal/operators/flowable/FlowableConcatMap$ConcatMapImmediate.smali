@@ -31,10 +31,10 @@
 
 
 # instance fields
-.field final downstream:Le/b/c;
+.field final downstream:Le/b/Subscriber;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TR;>;"
         }
     .end annotation
@@ -44,25 +44,25 @@
 
 
 # direct methods
-.method constructor <init>(Le/b/c;Lc/a/z/j;I)V
+.method constructor <init>(Le/b/Subscriber;Lio/reactivex/functions/Function;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TR;>;",
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "-TT;+",
-            "Le/b/b<",
+            "Le/b/Publisher<",
             "+TR;>;>;I)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;-><init>(Lc/a/z/j;I)V
+    invoke-direct {p0, p2, p3}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;-><init>(Lio/reactivex/functions/Function;I)V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/c;
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/Subscriber;
 
     .line 3
     new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
@@ -113,9 +113,9 @@
     if-eqz v2, :cond_1
 
     .line 7
-    iget-object v2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/c;
+    iget-object v2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/Subscriber;
 
-    invoke-interface {v2, p1}, Le/b/c;->b(Ljava/lang/Object;)V
+    invoke-interface {v2, p1}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
 
     .line 8
     invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
@@ -128,7 +128,7 @@
 
     .line 9
     :cond_0
-    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/c;
+    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/Subscriber;
 
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->errors:Lio/reactivex/internal/util/AtomicThrowable;
 
@@ -136,7 +136,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Le/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
 
     :cond_1
     return-void
@@ -167,7 +167,7 @@
     if-nez p1, :cond_1
 
     .line 4
-    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/c;
+    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/Subscriber;
 
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->errors:Lio/reactivex/internal/util/AtomicThrowable;
 
@@ -175,13 +175,13 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Le/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
@@ -201,9 +201,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/d;
+    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/Subscription;
 
-    invoke-interface {p1}, Le/b/d;->cancel()V
+    invoke-interface {p1}, Le/b/Subscription;->cancel()V
 
     .line 3
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
@@ -213,7 +213,7 @@
     if-nez p1, :cond_1
 
     .line 4
-    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/c;
+    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/Subscriber;
 
     iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->errors:Lio/reactivex/internal/util/AtomicThrowable;
 
@@ -221,13 +221,13 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Le/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
@@ -266,9 +266,9 @@
 
     .line 5
     :try_start_0
-    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lc/a/a0/b/k;
+    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->queue:Lc/a/a0/b/SimpleQueue;
 
-    invoke-interface {v1}, Lc/a/a0/b/k;->poll()Ljava/lang/Object;
+    invoke-interface {v1}, Lc/a/a0/b/SimpleQueue;->poll()Ljava/lang/Object;
 
     move-result-object v1
     :try_end_0
@@ -293,9 +293,9 @@
     if-eqz v4, :cond_3
 
     .line 6
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/Subscriber;
 
-    invoke-interface {v0}, Le/b/c;->b()V
+    invoke-interface {v0}, Le/b/Subscriber;->b()V
 
     return-void
 
@@ -304,17 +304,17 @@
 
     .line 7
     :try_start_1
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->mapper:Lc/a/z/j;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->mapper:Lio/reactivex/functions/Function;
 
-    invoke-interface {v0, v1}, Lc/a/z/j;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lio/reactivex/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     const-string v1, "The mapper returned a null Publisher"
 
-    invoke-static {v0, v1}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    check-cast v0, Le/b/b;
+    check-cast v0, Le/b/Publisher;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -337,11 +337,11 @@
     iput v2, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->consumed:I
 
     .line 12
-    iget-object v4, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/d;
+    iget-object v4, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/Subscription;
 
     int-to-long v5, v1
 
-    invoke-interface {v4, v5, v6}, Le/b/d;->a(J)V
+    invoke-interface {v4, v5, v6}, Le/b/Subscription;->a(J)V
 
     goto :goto_2
 
@@ -395,9 +395,9 @@
     if-eqz v1, :cond_0
 
     .line 19
-    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/c;
+    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/Subscriber;
 
-    invoke-interface {v1, v0}, Le/b/c;->b(Ljava/lang/Object;)V
+    invoke-interface {v1, v0}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
 
     .line 20
     invoke-virtual {p0, v3, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
@@ -407,7 +407,7 @@
     if-nez v0, :cond_0
 
     .line 21
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/Subscriber;
 
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->errors:Lio/reactivex/internal/util/AtomicThrowable;
 
@@ -415,7 +415,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Le/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -428,9 +428,9 @@
 
     new-instance v2, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$c;
 
-    invoke-direct {v2, v0, v1}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$c;-><init>(Ljava/lang/Object;Le/b/c;)V
+    invoke-direct {v2, v0, v1}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$c;-><init>(Ljava/lang/Object;Le/b/Subscriber;)V
 
-    invoke-virtual {v1, v2}, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->b(Le/b/d;)V
+    invoke-virtual {v1, v2}, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->b(Le/b/Subscription;)V
 
     goto :goto_3
 
@@ -438,12 +438,12 @@
     move-exception v0
 
     .line 24
-    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 25
-    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/d;
+    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/Subscription;
 
-    invoke-interface {v1}, Le/b/d;->cancel()V
+    invoke-interface {v1}, Le/b/Subscription;->cancel()V
 
     .line 26
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->errors:Lio/reactivex/internal/util/AtomicThrowable;
@@ -451,7 +451,7 @@
     invoke-virtual {v1, v0}, Lio/reactivex/internal/util/AtomicThrowable;->a(Ljava/lang/Throwable;)Z
 
     .line 27
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/Subscriber;
 
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->errors:Lio/reactivex/internal/util/AtomicThrowable;
 
@@ -459,7 +459,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Le/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -470,7 +470,7 @@
     .line 29
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->inner:Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapInner;
 
-    invoke-interface {v0, v1}, Le/b/b;->a(Le/b/c;)V
+    invoke-interface {v0, v1}, Le/b/Publisher;->a(Le/b/Subscriber;)V
 
     goto :goto_3
 
@@ -478,12 +478,12 @@
     move-exception v0
 
     .line 30
-    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 31
-    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/d;
+    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/Subscription;
 
-    invoke-interface {v1}, Le/b/d;->cancel()V
+    invoke-interface {v1}, Le/b/Subscription;->cancel()V
 
     .line 32
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->errors:Lio/reactivex/internal/util/AtomicThrowable;
@@ -491,7 +491,7 @@
     invoke-virtual {v1, v0}, Lio/reactivex/internal/util/AtomicThrowable;->a(Ljava/lang/Throwable;)Z
 
     .line 33
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/Subscriber;
 
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->errors:Lio/reactivex/internal/util/AtomicThrowable;
 
@@ -499,7 +499,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Le/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -507,12 +507,12 @@
     move-exception v0
 
     .line 34
-    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 35
-    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/d;
+    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/Subscription;
 
-    invoke-interface {v1}, Le/b/d;->cancel()V
+    invoke-interface {v1}, Le/b/Subscription;->cancel()V
 
     .line 36
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->errors:Lio/reactivex/internal/util/AtomicThrowable;
@@ -520,7 +520,7 @@
     invoke-virtual {v1, v0}, Lio/reactivex/internal/util/AtomicThrowable;->a(Ljava/lang/Throwable;)Z
 
     .line 37
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/Subscriber;
 
     iget-object v1, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->errors:Lio/reactivex/internal/util/AtomicThrowable;
 
@@ -528,7 +528,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Le/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Le/b/Subscriber;->a(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -566,9 +566,9 @@
     invoke-virtual {v0}, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->cancel()V
 
     .line 4
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/d;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$BaseConcatMapSubscriber;->upstream:Le/b/Subscription;
 
-    invoke-interface {v0}, Le/b/d;->cancel()V
+    invoke-interface {v0}, Le/b/Subscription;->cancel()V
 
     :cond_0
     return-void
@@ -578,9 +578,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap$ConcatMapImmediate;->downstream:Le/b/Subscriber;
 
-    invoke-interface {v0, p0}, Le/b/c;->a(Le/b/d;)V
+    invoke-interface {v0, p0}, Le/b/Subscriber;->a(Le/b/Subscription;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "PhotosLikeHeaderBlockViewHolder.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/photo/Photo;",
@@ -37,7 +37,7 @@
 
 .field private final d:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private final e:Lcom/vk/feedlikes/c/d;
+.field private final e:Lcom/vk/feedlikes/c/PhotosLikeAdapter;
 
 
 # direct methods
@@ -48,7 +48,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->h:Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder$b;
 
@@ -79,7 +79,7 @@
     const v0, 0x7f0d0431
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -92,7 +92,7 @@
 
     const-string v0, "itemView.findViewById(R.id.photo_likes_show_all)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->c:Landroid/view/View;
 
@@ -107,18 +107,18 @@
 
     const-string v0, "itemView.findViewById(R.\u2026hotos_like_recycler_view)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
     iput-object p1, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->d:Landroidx/recyclerview/widget/RecyclerView;
 
     .line 4
-    new-instance p1, Lcom/vk/feedlikes/c/d;
+    new-instance p1, Lcom/vk/feedlikes/c/PhotosLikeAdapter;
 
-    invoke-direct {p1}, Lcom/vk/feedlikes/c/d;-><init>()V
+    invoke-direct {p1}, Lcom/vk/feedlikes/c/PhotosLikeAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->e:Lcom/vk/feedlikes/c/d;
+    iput-object p1, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->e:Lcom/vk/feedlikes/c/PhotosLikeAdapter;
 
     .line 5
     iget-object p1, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->c:Landroid/view/View;
@@ -127,14 +127,14 @@
 
     invoke-direct {v0, p0}, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder$1;-><init>(Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->d:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder$2;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -177,7 +177,7 @@
     .line 11
     iget-object p1, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->e:Lcom/vk/feedlikes/c/d;
+    iget-object v0, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->e:Lcom/vk/feedlikes/c/PhotosLikeAdapter;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -229,12 +229,12 @@
     if-eqz p1, :cond_0
 
     .line 1
-    iget-object v0, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->e:Lcom/vk/feedlikes/c/d;
+    iget-object v0, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->e:Lcom/vk/feedlikes/c/PhotosLikeAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->e:Lcom/vk/feedlikes/c/d;
+    iget-object p1, p0, Lcom/vk/feedlikes/viewholders/PhotosLikeHeaderBlockViewHolder;->e:Lcom/vk/feedlikes/c/PhotosLikeAdapter;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 

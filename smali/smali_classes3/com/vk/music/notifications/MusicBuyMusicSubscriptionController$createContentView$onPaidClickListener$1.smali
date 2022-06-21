@@ -3,7 +3,7 @@
 .source "MusicBuyMusicSubscriptionController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/common/data/Subscription;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,22 +52,22 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$createContentView$onPaidClickListener$1;->this$0:Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;
 
-    invoke-static {v0}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->f(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lkotlin/jvm/b/b;
+    invoke-static {v0}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->f(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     iget-object p1, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$createContentView$onPaidClickListener$1;->this$0:Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;
 
-    invoke-static {p1}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->a(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lcom/vk/core/dialogs/bottomsheet/k/a;
+    invoke-static {p1}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;->a(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;)Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/core/dialogs/bottomsheet/k/a;->close()V
+    invoke-interface {p1}, Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;->close()V
 
     :cond_0
     return-void
@@ -81,7 +81,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$createContentView$onPaidClickListener$1;->a(Lcom/vk/dto/common/data/Subscription;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

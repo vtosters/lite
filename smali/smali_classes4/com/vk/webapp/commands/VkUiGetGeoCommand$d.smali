@@ -3,7 +3,7 @@
 .source "VkUiGetGeoCommand.kt"
 
 # interfaces
-.implements Lcom/vk/common/view/j/c$a;
+.implements Lcom/vk/common/view/j/ConfirmationBottomSheetDialog$a;
 
 
 # annotations
@@ -46,7 +46,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/commands/VkUiGetGeoCommand$d;->a:Lcom/vk/webapp/commands/VkUiGetGeoCommand;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/commands/c;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
+    invoke-virtual {v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
     move-result-object v0
 
@@ -66,13 +66,13 @@
 
     const-string v3, "VKWebAppGeodataFailed"
 
-    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     .line 2
     :cond_0
     iget-object v0, p0, Lcom/vk/webapp/commands/VkUiGetGeoCommand$d;->a:Lcom/vk/webapp/commands/VkUiGetGeoCommand;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/commands/c;->a()Lcom/vk/webapp/helpers/b;
+    invoke-virtual {v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a()Lcom/vk/webapp/helpers/VkAppsAnalytics;
 
     move-result-object v0
 
@@ -82,7 +82,7 @@
 
     const-string v2, "deny"
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/b;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/VkAppsAnalytics;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -99,7 +99,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/webapp/commands/VkUiGetGeoCommand$d;->a:Lcom/vk/webapp/commands/VkUiGetGeoCommand;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/commands/c;->f()Lcom/vk/webapp/commands/VkUiPermissionsHandler;
+    invoke-virtual {v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->f()Lcom/vk/webapp/commands/VkUiPermissionsHandler;
 
     move-result-object v0
 
@@ -113,7 +113,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/webapp/commands/VkUiGetGeoCommand$d;->a:Lcom/vk/webapp/commands/VkUiGetGeoCommand;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/commands/c;->a()Lcom/vk/webapp/helpers/b;
+    invoke-virtual {v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a()Lcom/vk/webapp/helpers/VkAppsAnalytics;
 
     move-result-object v0
 
@@ -123,7 +123,7 @@
 
     const-string v2, "allow"
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/b;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/VkAppsAnalytics;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -135,7 +135,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/commands/VkUiGetGeoCommand$d;->a:Lcom/vk/webapp/commands/VkUiGetGeoCommand;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/commands/c;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
+    invoke-virtual {v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
     move-result-object v0
 
@@ -155,13 +155,13 @@
 
     const-string v3, "VKWebAppGeodataFailed"
 
-    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     .line 2
     :cond_0
     iget-object v0, p0, Lcom/vk/webapp/commands/VkUiGetGeoCommand$d;->a:Lcom/vk/webapp/commands/VkUiGetGeoCommand;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/commands/c;->a()Lcom/vk/webapp/helpers/b;
+    invoke-virtual {v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a()Lcom/vk/webapp/helpers/VkAppsAnalytics;
 
     move-result-object v0
 
@@ -171,7 +171,7 @@
 
     const-string v2, "deny"
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/b;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/VkAppsAnalytics;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     return-void

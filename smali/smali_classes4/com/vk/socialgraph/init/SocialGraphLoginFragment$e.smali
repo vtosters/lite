@@ -1,5 +1,5 @@
 .class public final Lcom/vk/socialgraph/init/SocialGraphLoginFragment$e;
-.super Lcom/twitter/sdk/android/core/b;
+.super Lcom/twitter/sdk/android/core/Callback;
 .source "SocialGraphLoginFragment.kt"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/twitter/sdk/android/core/b<",
-        "Lcom/twitter/sdk/android/core/t;",
+        "Lcom/twitter/sdk/android/core/Callback<",
+        "Lcom/twitter/sdk/android/core/TwitterSession;",
         ">;"
     }
 .end annotation
@@ -38,7 +38,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$e;->a:Lcom/vk/socialgraph/init/SocialGraphLoginFragment;
 
-    invoke-direct {p0}, Lcom/twitter/sdk/android/core/b;-><init>()V
+    invoke-direct {p0}, Lcom/twitter/sdk/android/core/Callback;-><init>()V
 
     return-void
 .end method
@@ -86,7 +86,7 @@
     :cond_1
     sget p1, Lcom/vk/socialgraph/e;->social_graph_auth_error:I
 
-    invoke-static {p1, v2, v0, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v2, v0, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 4
     :cond_2
@@ -97,13 +97,13 @@
     return-void
 .end method
 
-.method public a(Lcom/twitter/sdk/android/core/k;)V
+.method public a(Lcom/twitter/sdk/android/core/Result;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/twitter/sdk/android/core/k<",
-            "Lcom/twitter/sdk/android/core/t;",
+            "Lcom/twitter/sdk/android/core/Result<",
+            "Lcom/twitter/sdk/android/core/TwitterSession;",
             ">;)V"
         }
     .end annotation
@@ -113,15 +113,15 @@
 
     sget-object v1, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment;->g:Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$a;
 
-    iget-object p1, p1, Lcom/twitter/sdk/android/core/k;->a:Ljava/lang/Object;
+    iget-object p1, p1, Lcom/twitter/sdk/android/core/Result;->a:Ljava/lang/Object;
 
     const-string v2, "result.data"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/twitter/sdk/android/core/t;
+    check-cast p1, Lcom/twitter/sdk/android/core/TwitterSession;
 
-    invoke-virtual {v1, p1}, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$a;->a(Lcom/twitter/sdk/android/core/t;)Landroid/os/Bundle;
+    invoke-virtual {v1, p1}, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$a;->a(Lcom/twitter/sdk/android/core/TwitterSession;)Landroid/os/Bundle;
 
     move-result-object p1
 

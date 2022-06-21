@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/c;
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/community/CommunityDetailsBoldItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1;
 
-.field final synthetic b:Lcom/vtosters/lite/api/i;
+.field final synthetic b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1;Lcom/vtosters/lite/api/i;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1$a;->a:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1$a;->b:Lcom/vtosters/lite/api/i;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1$a;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,23 +49,23 @@
     invoke-virtual {p1}, Lcom/vk/profile/presenter/CommunityPresenter;->Z()V
 
     .line 2
-    new-instance p1, Lcom/vk/profile/e/b;
+    new-instance p1, Lcom/vk/profile/e/CommunityScreenTracker1;
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1$a;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1$a;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {p1, v0}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     const-string v0, "info"
 
     .line 3
-    invoke-virtual {p1, v0}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     return-void
 .end method

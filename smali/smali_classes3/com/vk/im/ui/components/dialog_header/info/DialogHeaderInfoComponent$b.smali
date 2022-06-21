@@ -3,7 +3,7 @@
 .source "DialogHeaderInfoComponent.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/f0;
+.implements Lcom/vk/bridges/StoriesBridge2;
 
 
 # annotations

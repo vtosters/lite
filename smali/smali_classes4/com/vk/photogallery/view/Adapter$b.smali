@@ -24,5 +24,5 @@
 .method public abstract a(Landroid/view/View;I)V
 .end method
 
-.method public abstract a(ZLcom/vk/photogallery/dto/c;I)V
+.method public abstract a(ZLcom/vk/photogallery/dto/GalleryState2;I)V
 .end method

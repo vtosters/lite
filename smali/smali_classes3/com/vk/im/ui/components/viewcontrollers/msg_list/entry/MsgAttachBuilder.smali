@@ -12,15 +12,15 @@
 
 
 # static fields
-.field static final synthetic d:[Lkotlin/u/j;
+.field static final synthetic d:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lcom/vk/core/util/d1;
+.field private final a:Lcom/vk/core/util/ThreadLocalDelegate;
 
-.field private final b:Lcom/vk/im/engine/models/e;
+.field private final b:Lcom/vk/im/engine/models/ImExperiments;
 
-.field private final c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/d;
+.field private final c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;
 
 
 # direct methods
@@ -29,13 +29,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -43,42 +43,42 @@
 
     const-string v4, "getArgs()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$Args;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->d:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->d:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/models/e;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/d;)V
+.method public constructor <init>(Lcom/vk/im/engine/models/ImExperiments;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->b:Lcom/vk/im/engine/models/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/d;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;
 
     .line 2
     sget-object p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$args$2;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$args$2;
 
-    invoke-static {p1}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {p1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a:Lcom/vk/core/util/d1;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/engine/models/e;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/d;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/im/engine/models/ImExperiments;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -86,12 +86,12 @@
     if-eqz p3, :cond_0
 
     .line 3
-    new-instance p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/d;
+    new-instance p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;
 
-    invoke-direct {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/d;-><init>()V
+    invoke-direct {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;-><init>()V
 
     :cond_0
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;-><init>(Lcom/vk/im/engine/models/e;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/d;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;-><init>(Lcom/vk/im/engine/models/ImExperiments;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;)V
 
     return-void
 .end method
@@ -102,7 +102,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -151,7 +151,7 @@
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v5
 
@@ -194,7 +194,7 @@
 
     .line 10
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v5
 
@@ -248,7 +248,7 @@
     move v9, v0
 
     .line 16
-    invoke-static/range {v7 .. v13}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v7 .. v13}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -276,7 +276,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -325,7 +325,7 @@
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v5
 
@@ -368,7 +368,7 @@
 
     .line 10
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v5
 
@@ -441,7 +441,7 @@
     const/16 v0, 0x36
 
     .line 15
-    invoke-direct {p0, p2, v0, v5, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-direct {p0, p2, v0, v5, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object p2
 
@@ -457,7 +457,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -507,7 +507,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -528,7 +528,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -600,7 +600,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -621,7 +621,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -693,7 +693,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -714,7 +714,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -793,7 +793,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -815,7 +815,7 @@
     move-object v6, p2
 
     .line 7
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -885,7 +885,7 @@
     move-object v4, p2
 
     .line 11
-    invoke-static/range {v3 .. v9}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v3 .. v9}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v1
 
@@ -907,7 +907,7 @@
     move-object v4, p2
 
     .line 12
-    invoke-static/range {v3 .. v9}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v3 .. v9}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v1
 
@@ -925,7 +925,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -975,7 +975,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -996,7 +996,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -1176,7 +1176,7 @@
     move-object/from16 v9, p2
 
     .line 11
-    invoke-static/range {v8 .. v14}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v8 .. v14}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v7
 
@@ -1199,7 +1199,7 @@
     move-object/from16 v9, p2
 
     .line 12
-    invoke-static/range {v8 .. v14}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v8 .. v14}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v7
 
@@ -1364,7 +1364,7 @@
     move-object/from16 v7, p2
 
     .line 21
-    invoke-static/range {v6 .. v12}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v6 .. v12}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v2
 
@@ -1387,7 +1387,7 @@
     move-object/from16 v7, p2
 
     .line 22
-    invoke-static/range {v6 .. v12}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v6 .. v12}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v2
 
@@ -1405,7 +1405,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -1455,7 +1455,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -1476,7 +1476,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -1527,7 +1527,7 @@
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v6
 
@@ -1592,7 +1592,7 @@
 
     .line 10
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v6
 
@@ -1657,7 +1657,7 @@
 
     .line 15
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v6
 
@@ -1709,7 +1709,7 @@
     move v12, v1
 
     .line 21
-    invoke-static/range {v10 .. v16}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v10 .. v16}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v5
 
@@ -1768,7 +1768,7 @@
     move v7, v1
 
     .line 27
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v5
 
@@ -1789,7 +1789,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -1868,7 +1868,7 @@
     move-object v3, v15
 
     .line 6
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -1946,7 +1946,7 @@
     move-object v3, v15
 
     .line 11
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -1987,7 +1987,7 @@
 
     move-object/from16 v17, v5
 
-    invoke-direct/range {v17 .. v27}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/models/messages/NestedMsg;IJZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v17 .. v27}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/models/messages/NestedMsg;IJZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 14
     invoke-virtual {v5, v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;->a(Ljava/util/List;)V
@@ -2040,7 +2040,7 @@
     move-object/from16 v6, v19
 
     .line 20
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -2057,7 +2057,7 @@
     move-object/from16 v1, v20
 
     .line 21
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -2099,22 +2099,22 @@
     move-object v3, v15
 
     .line 23
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
     .line 24
-    iget-object v1, v7, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/d;
+    iget-object v1, v7, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;
 
     invoke-virtual/range {v16 .. v16}, Lcom/vk/im/engine/models/attaches/AttachWall;->k()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/d;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->e:Ljava/lang/CharSequence;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->e:Ljava/lang/CharSequence;
 
     .line 25
     invoke-interface {v8, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -2169,7 +2169,7 @@
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
 
     .line 31
-    invoke-direct {v7, v1, v10, v15, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-direct {v7, v1, v10, v15, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -2189,7 +2189,7 @@
     move-object v3, v15
 
     .line 32
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -2217,7 +2217,7 @@
     move-object v3, v15
 
     .line 34
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -2281,7 +2281,7 @@
     move-object v3, v13
 
     .line 38
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -2359,7 +2359,7 @@
     move-object v3, v13
 
     .line 43
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -2400,7 +2400,7 @@
 
     move-object/from16 v16, v6
 
-    invoke-direct/range {v16 .. v26}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/models/messages/NestedMsg;IJZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v16 .. v26}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/models/messages/NestedMsg;IJZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 46
     invoke-virtual {v6, v15}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;->a(Ljava/util/List;)V
@@ -2449,7 +2449,7 @@
     move-object/from16 v6, v17
 
     .line 52
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -2464,7 +2464,7 @@
     move-object/from16 v1, v18
 
     .line 53
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -2506,22 +2506,22 @@
     move-object v3, v13
 
     .line 55
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
     .line 56
-    iget-object v1, v7, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/d;
+    iget-object v1, v7, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;
 
     invoke-virtual {v14}, Lcom/vk/im/engine/models/attaches/AttachWall;->k()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/d;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->e:Ljava/lang/CharSequence;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->e:Ljava/lang/CharSequence;
 
     .line 57
     invoke-interface {v8, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -2574,7 +2574,7 @@
     invoke-virtual {v0, v15}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
 
     .line 63
-    invoke-direct {v7, v1, v10, v13, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-direct {v7, v1, v10, v13, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -2594,7 +2594,7 @@
     move-object v3, v13
 
     .line 64
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -2622,7 +2622,7 @@
     move-object v3, v13
 
     .line 66
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -2640,7 +2640,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -2690,7 +2690,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -2866,15 +2866,15 @@
 .method private final a()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a:Lcom/vk/core/util/d1;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->d:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->d:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2883,7 +2883,7 @@
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+.method private final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2895,59 +2895,59 @@
             "+",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;)",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;"
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;"
         }
     .end annotation
 
     .line 6
-    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;-><init>()V
 
     .line 7
-    iput p2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
+    iput p2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
 
     .line 8
     invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;->f()J
 
     move-result-wide v1
 
-    iput-wide v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->b:J
+    iput-wide v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->b:J
 
     .line 9
     invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;->d()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object p2
 
-    iput-object p2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iput-object p2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     .line 10
     invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;->e()Lcom/vk/im/engine/models/messages/NestedMsg;
 
     move-result-object p2
 
-    iput-object p2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->d:Lcom/vk/im/engine/models/messages/NestedMsg;
+    iput-object p2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->d:Lcom/vk/im/engine/models/messages/NestedMsg;
 
     .line 11
     invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;->b()Z
 
     .line 12
-    iput-object p3, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->f:Lcom/vk/im/engine/models/attaches/Attach;
+    iput-object p3, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->f:Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 13
-    iput-object p4, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->g:Ljava/util/List;
+    iput-object p4, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->g:Ljava/util/List;
 
     .line 14
     invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;->c()I
 
     move-result p1
 
-    iput p1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i:I
+    iput p1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i:I
 
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+.method static synthetic a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
     .locals 1
 
     and-int/lit8 p6, p5, 0x4
@@ -2967,7 +2967,7 @@
 
     .line 5
     :cond_1
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object p0
 
@@ -3038,7 +3038,7 @@
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {v0, v5, v6}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v0, v5, v6}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     .line 21
     :cond_0
@@ -3090,7 +3090,7 @@
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {v0, v4, v5}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     .line 26
     :cond_2
@@ -3135,7 +3135,7 @@
 
     const-string v4, "priorityAttaches[priorityAttaches.keyAt(i)]"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Ljava/util/Collection;
 
@@ -3196,7 +3196,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -3246,7 +3246,7 @@
     move-object v5, p2
 
     .line 51
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -3267,7 +3267,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -3317,7 +3317,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -3338,7 +3338,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -3516,7 +3516,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -3566,7 +3566,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -3587,7 +3587,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -3655,16 +3655,16 @@
     move-object v3, v12
 
     .line 5
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
     invoke-interface {v8, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 6
-    iget-object v0, v7, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, v7, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/e;->j()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperiments;->j()Z
 
     move-result v0
 
@@ -3727,7 +3727,7 @@
 
     move-object v3, v12
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -3762,7 +3762,7 @@
     move-object v3, v12
 
     .line 10
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -3819,16 +3819,16 @@
     move-object v3, v10
 
     .line 13
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
     invoke-interface {v8, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 14
-    iget-object v0, v7, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->b:Lcom/vk/im/engine/models/e;
+    iget-object v0, v7, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->b:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/e;->j()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/models/ImExperiments;->j()Z
 
     move-result v0
 
@@ -3891,7 +3891,7 @@
 
     move-object v3, v10
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -3926,7 +3926,7 @@
     move-object v3, v10
 
     .line 18
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -3944,7 +3944,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -3994,7 +3994,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -4015,7 +4015,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -4031,7 +4031,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, p2, v1, v2, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-direct {p0, p2, v1, v2, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object p2
 
@@ -4046,7 +4046,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -4115,7 +4115,7 @@
 
     .line 5
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v6
 
@@ -4234,7 +4234,7 @@
     move-object/from16 v15, p2
 
     .line 14
-    invoke-direct {v4, v15, v1, v6, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-direct {v4, v15, v1, v6, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v1
 
@@ -4323,7 +4323,7 @@
     move v10, v1
 
     .line 21
-    invoke-static/range {v8 .. v14}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v8 .. v14}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v8
 
@@ -4400,7 +4400,7 @@
     move v10, v1
 
     .line 27
-    invoke-static/range {v8 .. v14}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v8 .. v14}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v8
 
@@ -4422,7 +4422,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -4494,7 +4494,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -4515,7 +4515,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -4565,7 +4565,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -4586,7 +4586,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -4654,7 +4654,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -4675,7 +4675,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -4743,7 +4743,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -4764,7 +4764,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -4832,7 +4832,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -4853,7 +4853,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -4921,7 +4921,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -4942,7 +4942,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -4992,7 +4992,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -5013,7 +5013,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -5099,7 +5099,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -5120,7 +5120,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -5206,7 +5206,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -5227,7 +5227,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -5308,7 +5308,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -5329,7 +5329,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -5379,7 +5379,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -5400,7 +5400,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -5480,7 +5480,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -5501,7 +5501,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -5582,7 +5582,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -5603,7 +5603,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -5653,7 +5653,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -5674,7 +5674,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -5748,7 +5748,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -5769,7 +5769,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -5843,7 +5843,7 @@
     move-object v6, p2
 
     .line 6
-    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v5 .. v11}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v4
 
@@ -5864,7 +5864,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -5914,7 +5914,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -5935,7 +5935,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;",
             ")V"
@@ -5985,7 +5985,7 @@
     move-object v5, p2
 
     .line 6
-    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-static/range {v4 .. v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgAttachBuilder$a;ILcom/vk/im/engine/models/attaches/Attach;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
@@ -6008,7 +6008,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;",
             ">;",
             "Ljava/util/List<",
             "+",

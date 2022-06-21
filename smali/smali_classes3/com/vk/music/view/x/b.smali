@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$e;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
 
 
 # static fields
@@ -36,7 +36,7 @@
 .method public final a(I)V
     .locals 0
 
-    invoke-static {p1}, Lcom/vk/music/view/x/p;->v(I)V
+    invoke-static {p1}, Lcom/vk/music/view/x/ControlsHolder;->v(I)V
 
     return-void
 .end method

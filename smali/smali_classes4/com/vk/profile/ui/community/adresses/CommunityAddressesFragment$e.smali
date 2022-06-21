@@ -130,7 +130,7 @@
 
     .line 6
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -190,7 +190,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -205,7 +205,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/a;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/AbstractErrorView;->setVisibility(I)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$e;->b:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;

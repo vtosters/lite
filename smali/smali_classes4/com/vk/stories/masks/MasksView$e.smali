@@ -37,7 +37,7 @@
     const/4 p1, 0x0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/lists/AbstractPaginatedView;->setFooterErrorViewProvider(Lcom/vk/lists/k;)V
+    invoke-virtual {p0, p1}, Lcom/vk/lists/AbstractPaginatedView;->setFooterErrorViewProvider(Lcom/vk/lists/FooterErrorViewProvider;)V
 
     return-void
 .end method
@@ -72,11 +72,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/lists/h;)V
+.method public a(Lcom/vk/lists/EmptyViewConfiguration;)V
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/h;)V
+    invoke-super {p0, p1}, Lcom/vk/lists/AbstractPaginatedView;->a(Lcom/vk/lists/EmptyViewConfiguration;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/stories/masks/MasksView$e;->V:Lcom/vk/stories/masks/MasksView;
@@ -100,7 +100,7 @@
     return-void
 .end method
 
-.method protected b(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/vk/lists/a;
+.method protected b(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/vk/lists/AbstractErrorView;
     .locals 2
 
     .line 1
@@ -181,7 +181,7 @@
     const-string v0, "v"
 
     .line 4
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 

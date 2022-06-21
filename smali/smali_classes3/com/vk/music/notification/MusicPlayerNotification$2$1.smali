@@ -3,7 +3,7 @@
 .source "MusicPlayerNotification.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/graphics/Bitmap;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -66,7 +66,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/music/notification/MusicPlayerNotification$2$1;->this$0:Lcom/vk/music/notification/MusicPlayerNotification$2;
 
-    iget-object v1, v0, Lcom/vk/music/notification/MusicPlayerNotification$2;->$afterCreation:Lkotlin/jvm/b/b;
+    iget-object v1, v0, Lcom/vk/music/notification/MusicPlayerNotification$2;->$afterCreation:Lkotlin/jvm/b/Functions2;
 
     iget-object v2, v0, Lcom/vk/music/notification/MusicPlayerNotification$2;->this$0:Lcom/vk/music/notification/MusicPlayerNotification;
 
@@ -80,17 +80,17 @@
 
     iget-boolean v7, v0, Lcom/vk/music/notification/MusicPlayerNotification$2;->$isPlaying:Z
 
-    iget-object v8, v0, Lcom/vk/music/notification/MusicPlayerNotification$2;->$musicTrackModel:Lcom/vk/music/l/a;
+    iget-object v8, v0, Lcom/vk/music/notification/MusicPlayerNotification$2;->$musicTrackModel:Lcom/vk/music/l/ModernMusicTrackModel;
 
     iget-object v9, v0, Lcom/vk/music/notification/MusicPlayerNotification$2;->$track:Lcom/vk/dto/music/MusicTrack;
 
     move-object v5, p1
 
-    invoke-static/range {v2 .. v9}, Lcom/vk/music/notification/MusicPlayerNotification;->a(Lcom/vk/music/notification/MusicPlayerNotification;Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Landroid/graphics/Bitmap;ZZLcom/vk/music/l/a;Lcom/vk/dto/music/MusicTrack;)Landroid/app/Notification;
+    invoke-static/range {v2 .. v9}, Lcom/vk/music/notification/MusicPlayerNotification;->a(Lcom/vk/music/notification/MusicPlayerNotification;Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;Landroid/graphics/Bitmap;ZZLcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/dto/music/MusicTrack;)Landroid/app/Notification;
 
     move-result-object p1
 
-    invoke-interface {v1, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -103,7 +103,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/notification/MusicPlayerNotification$2$1;->a(Landroid/graphics/Bitmap;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

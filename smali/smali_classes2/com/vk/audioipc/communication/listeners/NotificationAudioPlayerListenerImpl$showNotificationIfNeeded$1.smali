@@ -3,7 +3,7 @@
 .source "NotificationAudioPlayerListenerImpl.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/app/Notification;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,11 +52,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/audioipc/communication/listeners/NotificationAudioPlayerListenerImpl$showNotificationIfNeeded$1;->this$0:Lcom/vk/audioipc/communication/listeners/NotificationAudioPlayerListenerImpl;
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/listeners/NotificationAudioPlayerListenerImpl;->a(Lcom/vk/audioipc/communication/listeners/NotificationAudioPlayerListenerImpl;)Lcom/vk/audioipc/communication/s;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/listeners/NotificationAudioPlayerListenerImpl;->a(Lcom/vk/audioipc/communication/listeners/NotificationAudioPlayerListenerImpl;)Lcom/vk/audioipc/communication/ServiceNotificationManger;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/audioipc/communication/s;->a(Landroid/app/Notification;)V
+    invoke-interface {v0, p1}, Lcom/vk/audioipc/communication/ServiceNotificationManger;->a(Landroid/app/Notification;)V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/listeners/NotificationAudioPlayerListenerImpl$showNotificationIfNeeded$1;->a(Landroid/app/Notification;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

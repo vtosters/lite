@@ -3,7 +3,7 @@
 .source "RecommendedView.java"
 
 # interfaces
-.implements Lcom/vk/libvideo/live/views/recommended/b;
+.implements Lcom/vk/libvideo/live/views/recommended/RecommendedContract1;
 
 
 # annotations
@@ -23,9 +23,9 @@
 
 .field private final d:Lme/zhanghai/android/materialprogressbar/MaterialProgressBar;
 
-.field private e:Lcom/vk/libvideo/live/views/recommended/f/a;
+.field private e:Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;
 
-.field private f:Lcom/vk/libvideo/live/views/recommended/a;
+.field private f:Lcom/vk/libvideo/live/views/recommended/RecommendedContract;
 
 
 # direct methods
@@ -167,20 +167,20 @@
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/vk/libvideo/live/views/recommended/RecommendedView;Lcom/vk/libvideo/live/views/recommended/f/a;)Lcom/vk/libvideo/live/views/recommended/f/a;
+.method static synthetic a(Lcom/vk/libvideo/live/views/recommended/RecommendedView;Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;)Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->e:Lcom/vk/libvideo/live/views/recommended/f/a;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->e:Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;
 
     return-object p1
 .end method
 
-.method static synthetic b(Lcom/vk/libvideo/live/views/recommended/RecommendedView;)Lcom/vk/libvideo/live/views/recommended/f/a;
+.method static synthetic b(Lcom/vk/libvideo/live/views/recommended/RecommendedView;)Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->e:Lcom/vk/libvideo/live/views/recommended/f/a;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->e:Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;
 
     return-object p0
 .end method
@@ -191,12 +191,12 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->f:Lcom/vk/libvideo/live/views/recommended/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->f:Lcom/vk/libvideo/live/views/recommended/RecommendedContract;
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->a()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->a()V
 
     .line 5
     :cond_0
@@ -209,17 +209,17 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->e:Lcom/vk/libvideo/live/views/recommended/f/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->e:Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/recommended/f/a;->b()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;->b()V
 
     const/4 v0, 0x0
 
     .line 4
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->e:Lcom/vk/libvideo/live/views/recommended/f/a;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->e:Lcom/vk/libvideo/live/views/recommended/f/RecommendedElement;
 
     :cond_0
     return-void
@@ -242,12 +242,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->f:Lcom/vk/libvideo/live/views/recommended/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->f:Lcom/vk/libvideo/live/views/recommended/RecommendedContract;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->e()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->e()V
 
     .line 3
     :cond_0
@@ -285,11 +285,11 @@
     return-void
 .end method
 
-.method public getPresenter()Lcom/vk/libvideo/live/views/recommended/a;
+.method public getPresenter()Lcom/vk/libvideo/live/views/recommended/RecommendedContract;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->f:Lcom/vk/libvideo/live/views/recommended/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->f:Lcom/vk/libvideo/live/views/recommended/RecommendedContract;
 
     return-object v0
 .end method
@@ -298,7 +298,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->getPresenter()Lcom/vk/libvideo/live/views/recommended/a;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->getPresenter()Lcom/vk/libvideo/live/views/recommended/RecommendedContract;
 
     move-result-object v0
 
@@ -355,11 +355,11 @@
     return-void
 .end method
 
-.method public setPresenter(Lcom/vk/libvideo/live/views/recommended/a;)V
+.method public setPresenter(Lcom/vk/libvideo/live/views/recommended/RecommendedContract;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->f:Lcom/vk/libvideo/live/views/recommended/a;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->f:Lcom/vk/libvideo/live/views/recommended/RecommendedContract;
 
     return-void
 .end method
@@ -368,9 +368,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/live/views/recommended/a;
+    check-cast p1, Lcom/vk/libvideo/live/views/recommended/RecommendedContract;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->setPresenter(Lcom/vk/libvideo/live/views/recommended/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->setPresenter(Lcom/vk/libvideo/live/views/recommended/RecommendedContract;)V
 
     return-void
 .end method
@@ -413,12 +413,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->f:Lcom/vk/libvideo/live/views/recommended/a;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/recommended/RecommendedView;->f:Lcom/vk/libvideo/live/views/recommended/RecommendedContract;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->t()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->t()V
 
     :cond_0
     return-void

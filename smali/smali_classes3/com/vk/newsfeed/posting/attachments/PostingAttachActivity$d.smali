@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->a(Lcom/vk/newsfeed/posting/attachments/b;)V
+    value = Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->a(Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;
 
-.field final synthetic b:Lcom/vk/newsfeed/posting/attachments/b;
+.field final synthetic b:Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;Lcom/vk/newsfeed/posting/attachments/b;)V
+.method constructor <init>(Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity$d;->a:Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;
 
-    iput-object p2, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity$d;->b:Lcom/vk/newsfeed/posting/attachments/b;
+    iput-object p2, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity$d;->b:Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -63,9 +63,9 @@
 
     .line 3
     :cond_0
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity$d;->b:Lcom/vk/newsfeed/posting/attachments/b;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity$d;->b:Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/attachments/b;->W3()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;->W3()V
 
     return-void
 .end method

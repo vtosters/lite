@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/search/holder/StoryElongatedViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/search/b/c;Lkotlin/jvm/b/b;Lcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;)V
+    value = Lcom/vk/search/holder/StoryElongatedViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/search/b/StoryElongatedAdapter;Lkotlin/jvm/b/Functions2;Lcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -52,7 +52,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/search/holder/StoryElongatedViewHolder$a;->a:Lcom/vk/search/holder/StoryElongatedViewHolder;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -73,7 +73,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->g(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->g(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v1
 
@@ -82,11 +82,11 @@
     .line 4
     iget-object v0, p0, Lcom/vk/search/holder/StoryElongatedViewHolder$a;->a:Lcom/vk/search/holder/StoryElongatedViewHolder;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/c;->a(Landroid/content/Context;)Lcom/vk/core/util/c$b;
+    invoke-static {v0}, Lcom/vk/core/util/AlertDialogs;->a(Landroid/content/Context;)Lcom/vk/core/util/AlertDialogs$b;
 
     move-result-object v0
 
@@ -109,10 +109,10 @@
 
     invoke-direct {v2, p0, p1}, Lcom/vk/search/holder/StoryElongatedViewHolder$a$a;-><init>(Lcom/vk/search/holder/StoryElongatedViewHolder$a;Lcom/vk/dto/stories/model/StoriesContainer;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/core/util/c$b;->b()Landroidx/appcompat/app/AlertDialog;
+    invoke-virtual {v0}, Lcom/vk/core/util/AlertDialogs$b;->b()Landroidx/appcompat/app/AlertDialog;
 
     const/4 v0, 0x1
 

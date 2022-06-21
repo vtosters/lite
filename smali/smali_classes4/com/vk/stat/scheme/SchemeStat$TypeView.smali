@@ -188,7 +188,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeView;->a:Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -198,7 +198,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeView;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -208,7 +208,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeView;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -218,7 +218,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeView;->d:Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -228,7 +228,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeView;->e:Lcom/vk/stat/scheme/SchemeStat$TypeView$Type;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -238,7 +238,7 @@
 
     iget-object p1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeView;->f:Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

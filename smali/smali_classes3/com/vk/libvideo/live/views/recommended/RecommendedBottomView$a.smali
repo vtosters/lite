@@ -55,7 +55,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    invoke-static {p1, p2, v0}, Lcom/vk/libvideo/live/base/h;->b(FFLandroid/view/View;)Z
+    invoke-static {p1, p2, v0}, Lcom/vk/libvideo/live/base/TouchHelper;->b(FFLandroid/view/View;)Z
 
     move-result p1
 

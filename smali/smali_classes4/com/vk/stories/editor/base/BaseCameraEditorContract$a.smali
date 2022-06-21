@@ -3,10 +3,10 @@
 .source "BaseCameraEditorContract.java"
 
 # interfaces
-.implements Lb/h/r/a;
+.implements Lb/h/r/BaseContract;
 .implements Lcom/vk/attachpicker/widget/ColorSelectorView$c;
-.implements Lb/h/v/a;
-.implements Lcom/vk/stories/editor/background/a;
+.implements Lb/h/v/CompositeDisposableContainer;
+.implements Lcom/vk/stories/editor/background/StoryBackgroundEditorContract;
 
 
 # annotations
@@ -21,7 +21,7 @@
 
 
 # virtual methods
-.method public abstract A1()Lcom/vk/music/stories/d$c;
+.method public abstract A1()Lcom/vk/music/stories/MusicStoriesPlayer$c;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method
@@ -72,7 +72,7 @@
 .method public abstract N1()V
 .end method
 
-.method public abstract O1()Lcom/vk/cameraui/entities/d;
+.method public abstract O1()Lcom/vk/cameraui/entities/StoryRawData3;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end method
@@ -98,7 +98,7 @@
 .method public abstract S1()I
 .end method
 
-.method public abstract T1()Lcom/vk/stories/editor/base/h0;
+.method public abstract T1()Lcom/vk/stories/editor/base/CameraEditorUserActionsHolder;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method
@@ -126,7 +126,7 @@
 .method public abstract a(Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 .end method
 
-.method public abstract a(F)Lb/h/p/c$b;
+.method public abstract a(F)Lb/h/p/MediaUtils$b;
 .end method
 
 .method public abstract a(II)V
@@ -139,7 +139,7 @@
     .end param
 .end method
 
-.method public abstract a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;)V
+.method public abstract a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;)V
     .param p1    # Lcom/vk/attachpicker/stickers/ISticker;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -148,7 +148,7 @@
         value = {
             "(",
             "Lcom/vk/attachpicker/stickers/ISticker;",
-            "Lkotlin/jvm/b/d<",
+            "Lkotlin/jvm/b/Functions4<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
             "Lcom/vk/attachpicker/stickers/ISticker;",
@@ -158,7 +158,7 @@
     .end annotation
 .end method
 
-.method public abstract a(Lcom/vk/cameraui/entities/d;Landroid/graphics/Bitmap;)V
+.method public abstract a(Lcom/vk/cameraui/entities/StoryRawData3;Landroid/graphics/Bitmap;)V
     .param p2    # Landroid/graphics/Bitmap;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -171,14 +171,14 @@
 .method public abstract a(Lcom/vk/stories/analytics/StoryPublishEvent;)V
 .end method
 
-.method public abstract a(Lcom/vk/stories/editor/background/b;)V
+.method public abstract a(Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;)V
 .end method
 
-.method public abstract a(Lcom/vk/stories/editor/base/e0;)V
+.method public abstract a(Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;)V
 .end method
 
-.method public abstract a(Lcom/vk/stories/editor/base/m0;Z)V
-    .param p1    # Lcom/vk/stories/editor/base/m0;
+.method public abstract a(Lcom/vk/stories/editor/base/StoryEditorState;Z)V
+    .param p1    # Lcom/vk/stories/editor/base/StoryEditorState;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -214,7 +214,7 @@
     .end param
 .end method
 
-.method public abstract c2()Lc/a/s;
+.method public abstract c2()Lio/reactivex/Scheduler;
 .end method
 
 .method public abstract d2()Lcom/vk/cameraui/CameraUI$States;
@@ -307,12 +307,12 @@
 .method public abstract t0()V
 .end method
 
-.method public abstract u1()Lc/a/m;
+.method public abstract u1()Lio/reactivex/Observable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
-            "Lcom/vk/music/stories/d$c;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/music/stories/MusicStoriesPlayer$c;",
             ">;"
         }
     .end annotation

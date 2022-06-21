@@ -3,7 +3,7 @@
 .source "ArticleAuthorPageFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,19 +52,19 @@
     .line 1
     iget-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$onCreateView$2;->this$0:Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;
 
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/articles/authorpage/a;->U0()Lcom/vk/dto/articles/a;
+    invoke-interface {p1}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->U0()Lcom/vk/dto/articles/ArticleAuthor;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->i()Z
+    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->i()Z
 
     move-result p1
 
@@ -83,13 +83,13 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$onCreateView$2;->this$0:Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;
 
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/articles/authorpage/a;->c1()V
+    invoke-interface {p1}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->c1()V
 
     :cond_1
     :goto_0
@@ -104,7 +104,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$onCreateView$2;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "MultiCameraEditorPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/a;
+.implements Lio/reactivex/functions/Action;
 
 
 # annotations
@@ -40,21 +40,21 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$n;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->p(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/h;
+    invoke-static {v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->p(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     move-result-object v0
 
     const-string v1, "view"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getAnimationStickerManager()Lcom/vk/attachpicker/stickers/r;
+    invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getAnimationStickerManager()Lcom/vk/attachpicker/stickers/AnimationChoreographer;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/attachpicker/stickers/r;->a(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/attachpicker/stickers/AnimationChoreographer;->a(Z)V
 
     return-void
 .end method

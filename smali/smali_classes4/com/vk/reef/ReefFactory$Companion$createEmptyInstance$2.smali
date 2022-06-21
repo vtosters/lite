@@ -3,7 +3,7 @@
 .source "ReefFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,12 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
-        "Lcom/vk/reef/d;",
-        "Lcom/vk/reef/utils/c;",
+        "Lkotlin/jvm/b/Functions1<",
+        "Lcom/vk/reef/SendRequestController;",
+        "Lcom/vk/reef/utils/ReefLogger;",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/reef/c;",
+        "Lcom/vk/reef/ReefStateSource;",
         ">;>;"
     }
 .end annotation
@@ -63,27 +63,27 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/reef/d;
+    check-cast p1, Lcom/vk/reef/SendRequestController;
 
-    check-cast p2, Lcom/vk/reef/utils/c;
+    check-cast p2, Lcom/vk/reef/utils/ReefLogger;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/reef/ReefFactory$Companion$createEmptyInstance$2;->a(Lcom/vk/reef/d;Lcom/vk/reef/utils/c;)Ljava/util/List;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/reef/ReefFactory$Companion$createEmptyInstance$2;->a(Lcom/vk/reef/SendRequestController;Lcom/vk/reef/utils/ReefLogger;)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/reef/d;Lcom/vk/reef/utils/c;)Ljava/util/List;
+.method public final a(Lcom/vk/reef/SendRequestController;Lcom/vk/reef/utils/ReefLogger;)Ljava/util/List;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/reef/d;",
-            "Lcom/vk/reef/utils/c;",
+            "Lcom/vk/reef/SendRequestController;",
+            "Lcom/vk/reef/utils/ReefLogger;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/reef/c;",
+            "Lcom/vk/reef/ReefStateSource;",
             ">;"
         }
     .end annotation

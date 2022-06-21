@@ -3,12 +3,12 @@
 .source "DialogsHistoryStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/b;)V
+    value = Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/internal/storage/models/d;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/internal/storage/models/d;)I
+.method public final a(Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;)I
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/d;->a()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->a()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     move-result-object p1
 
@@ -75,9 +75,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/d;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager$metaCacheHelper$1;->a(Lcom/vk/im/engine/internal/storage/models/d;)I
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager$metaCacheHelper$1;->a(Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;)I
 
     move-result p1
 

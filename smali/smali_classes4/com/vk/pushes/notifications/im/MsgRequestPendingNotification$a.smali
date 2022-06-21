@@ -45,7 +45,7 @@
     move-object v5, p3
 
     .line 1
-    invoke-direct/range {v0 .. v10}, Lcom/vk/pushes/notifications/base/SimpleNotification$b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v10}, Lcom/vk/pushes/notifications/base/SimpleNotification$b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     iput p1, p0, Lcom/vk/pushes/notifications/im/MsgRequestPendingNotification$a;->D:I
@@ -77,7 +77,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/vk/core/extensions/z;->i(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->i(Ljava/lang/String;)I
 
     move-result p1
 

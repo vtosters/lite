@@ -101,7 +101,7 @@
     const-string v3, "it"
 
     .line 8
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Lcom/vk/dto/common/ImageSize;->t1()I
 
@@ -119,7 +119,7 @@
     check-cast v5, Lcom/vk/dto/common/ImageSize;
 
     .line 11
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Lcom/vk/dto/common/ImageSize;->t1()I
 
@@ -206,7 +206,7 @@
     :goto_3
     const-string v1, "gif.video ?: \"\""
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vtosters/lite/bridges/CommonImageViewer$d;->f:Ljava/lang/String;
 

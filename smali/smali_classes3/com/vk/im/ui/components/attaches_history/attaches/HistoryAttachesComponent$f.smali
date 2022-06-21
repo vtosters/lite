@@ -3,7 +3,7 @@
 .source "HistoryAttachesComponent.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lio/reactivex/disposables/Disposable;",
         ">;"
     }
 .end annotation
@@ -46,19 +46,19 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/disposables/b;)V
+.method public final a(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$f;->a:Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/a;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/attaches_history/attaches/l/a;->b(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;->b(Z)V
 
     return-void
 .end method
@@ -67,9 +67,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lio/reactivex/disposables/b;
+    check-cast p1, Lio/reactivex/disposables/Disposable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$f;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$f;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

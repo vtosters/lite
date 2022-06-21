@@ -285,7 +285,7 @@
     return-object p0
 .end method
 
-.method public withOkHttp3(Lokhttp3/x;)Lvigo/sdk/VigoBootstrapBuilder;
+.method public withOkHttp3(Lokhttp3/OkHttpClient;)Lvigo/sdk/VigoBootstrapBuilder;
     .locals 3
 
     .line 1
@@ -295,7 +295,7 @@
 
     new-instance v2, Lvigo/sdk/utils/OkHttp3Sender;
 
-    invoke-direct {v2, p1}, Lvigo/sdk/utils/OkHttp3Sender;-><init>(Lokhttp3/x;)V
+    invoke-direct {v2, p1}, Lvigo/sdk/utils/OkHttp3Sender;-><init>(Lokhttp3/OkHttpClient;)V
 
     invoke-direct {v0, v1, v2}, Lvigo/sdk/VigoSenderManager;-><init>(Lvigo/sdk/utils/SenderType;Lvigo/sdk/utils/AbstractSender;)V
 

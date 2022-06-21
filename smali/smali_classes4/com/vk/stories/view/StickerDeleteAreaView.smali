@@ -360,7 +360,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/h;->h(Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {p1}, Lcom/vk/core/util/AnimationUtils;->h(Landroid/animation/Animator;)Landroid/animation/Animator;
 
     aput-object p1, v2, v4
 
@@ -439,7 +439,7 @@
 
     sget v4, Lcom/vk/stories/view/StickerDeleteAreaView;->D:I
 
-    invoke-static {v2, v3, v4}, Lcom/vk/core/util/h;->a(FII)I
+    invoke-static {v2, v3, v4}, Lcom/vk/core/util/AnimationUtils;->a(FII)I
 
     move-result v2
 
@@ -487,7 +487,7 @@
 
     const v6, -0x18bcbd
 
-    invoke-static {v3, v5, v6}, Lcom/vk/core/util/h;->b(FII)I
+    invoke-static {v3, v5, v6}, Lcom/vk/core/util/AnimationUtils;->b(FII)I
 
     move-result v3
 
@@ -544,7 +544,7 @@
     .line 13
     iget-object v1, p0, Lcom/vk/stories/view/StickerDeleteAreaView;->b:Landroid/graphics/Paint;
 
-    invoke-static {v0, v4, v3}, Lcom/vk/core/util/h;->a(FII)I
+    invoke-static {v0, v4, v3}, Lcom/vk/core/util/AnimationUtils;->a(FII)I
 
     move-result v0
 
@@ -569,7 +569,7 @@
     .line 15
     iget-object v1, p0, Lcom/vk/stories/view/StickerDeleteAreaView;->b:Landroid/graphics/Paint;
 
-    invoke-static {v0, v3, v4}, Lcom/vk/core/util/h;->a(FII)I
+    invoke-static {v0, v3, v4}, Lcom/vk/core/util/AnimationUtils;->a(FII)I
 
     move-result v0
 

@@ -3,12 +3,12 @@
 .source "MsgViewContentComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;->a(Lcom/vk/im/engine/utils/collection/d;)V
+    value = Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/models/a<",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/models/EntityIntMap<",
         "Lcom/vk/im/engine/models/messages/Msg;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -48,25 +48,25 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/a;)V
+.method public final a(Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/messages/Msg;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iget-object p1, p1, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object p1, p1, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     const-string v0, "entityMap.cached"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lcom/vk/core/extensions/x;->g(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {p1}, Lcom/vk/core/extensions/SparseArrayExt1;->g(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object p1
 
@@ -97,11 +97,11 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$onMsgsUpdate$1;->this$0:Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;
 
-    invoke-static {v2}, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;->a(Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;)Lcom/vk/im/ui/components/msg_view/content/h;
+    invoke-static {v2}, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;->a(Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;)Lcom/vk/im/ui/components/msg_view/content/State;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/msg_view/content/h;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/msg_view/content/State;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object v2
 
@@ -135,11 +135,11 @@
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$onMsgsUpdate$1;->this$0:Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;->a(Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;)Lcom/vk/im/ui/components/msg_view/content/h;
+    invoke-static {p1}, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;->a(Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;)Lcom/vk/im/ui/components/msg_view/content/State;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/msg_view/content/h;->a(Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/msg_view/content/State;->a(Lcom/vk/im/engine/models/messages/Msg;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$onMsgsUpdate$1;->this$0:Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;
@@ -154,11 +154,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/a;
+    check-cast p1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$onMsgsUpdate$1;->a(Lcom/vk/im/engine/models/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent$onMsgsUpdate$1;->a(Lcom/vk/im/engine/models/EntityIntMap;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

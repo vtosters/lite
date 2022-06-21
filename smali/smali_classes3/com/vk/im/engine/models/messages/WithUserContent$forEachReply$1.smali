@@ -3,12 +3,12 @@
 .source "WithUserContent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/models/messages/WithUserContent$DefaultImpls;->b(Lcom/vk/im/engine/models/messages/WithUserContent;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/im/engine/models/messages/WithUserContent$DefaultImpls;->b(Lcom/vk/im/engine/models/messages/WithUserContent;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/models/messages/NestedMsg;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $block:Lkotlin/jvm/b/b;
+.field final synthetic $block:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/engine/models/messages/WithUserContent$forEachReply$1;->$block:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/im/engine/models/messages/WithUserContent$forEachReply$1;->$block:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x1
 
@@ -58,9 +58,9 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/engine/models/messages/WithUserContent$forEachReply$1;->$block:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/im/engine/models/messages/WithUserContent$forEachReply$1;->$block:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -74,7 +74,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/models/messages/WithUserContent$forEachReply$1;->a(Lcom/vk/im/engine/models/messages/NestedMsg;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

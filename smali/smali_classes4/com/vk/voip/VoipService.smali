@@ -20,11 +20,11 @@
 
 
 # instance fields
-.field private a:Lio/reactivex/disposables/b;
+.field private a:Lio/reactivex/disposables/Disposable;
 
 .field private b:Landroid/os/PowerManager$WakeLock;
 
-.field private c:Lcom/vk/voip/e;
+.field private c:Lcom/vk/voip/PipController;
 
 .field private d:Z
 
@@ -32,7 +32,7 @@
 
 .field private f:Z
 
-.field private g:Lcom/vk/voip/n;
+.field private g:Lcom/vk/voip/VoipLongPoll;
 
 
 # direct methods
@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/voip/VoipService$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/voip/VoipService$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/voip/VoipService;->C:Lcom/vk/voip/VoipService$a;
 
@@ -60,7 +60,7 @@
 
     const-string v1, "VoipService.javaClass.simpleName"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/voip/VoipService;->h:Ljava/lang/String;
 
@@ -289,7 +289,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     sget-object v0, Lcom/vk/voip/VoipViewModel;->Z:Lcom/vk/voip/VoipViewModel;
@@ -619,7 +619,7 @@
 
     const-string v1, "builder.build()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -628,11 +628,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/voip/VoipService;->c:Lcom/vk/voip/e;
+    iget-object v0, p0, Lcom/vk/voip/VoipService;->c:Lcom/vk/voip/PipController;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/voip/e;->b()Z
+    invoke-virtual {v0}, Lcom/vk/voip/PipController;->b()Z
 
     :cond_0
     return-void
@@ -651,11 +651,11 @@
     iput-boolean v0, p0, Lcom/vk/voip/VoipService;->d:Z
 
     .line 2
-    iget-object v0, p0, Lcom/vk/voip/VoipService;->c:Lcom/vk/voip/e;
+    iget-object v0, p0, Lcom/vk/voip/VoipService;->c:Lcom/vk/voip/PipController;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/voip/e;->a()V
+    invoke-virtual {v0}, Lcom/vk/voip/PipController;->a()V
 
     :cond_0
     return-void
@@ -729,7 +729,7 @@
 
     const-string v2, "Failed to initialize proximity lock"
 
-    invoke-static {v1, v2, v0}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, v0}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1
     return-void
@@ -771,7 +771,7 @@
 
     const-string v2, "Failed to release proximity lock"
 
-    invoke-static {v1, v2, v0}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, v0}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -891,7 +891,7 @@
 
     const-string v1, "onCreate"
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
@@ -906,11 +906,11 @@
     if-nez v0, :cond_2
 
     .line 4
-    new-instance v0, Lcom/vk/voip/e;
+    new-instance v0, Lcom/vk/voip/PipController;
 
-    invoke-direct {v0, p0}, Lcom/vk/voip/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/vk/voip/PipController;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/voip/VoipService;->c:Lcom/vk/voip/e;
+    iput-object v0, p0, Lcom/vk/voip/VoipService;->c:Lcom/vk/voip/PipController;
 
     .line 5
     sget-object v0, Lcom/vk/voip/VoipWrapper;->j0:Lcom/vk/voip/VoipWrapper;
@@ -922,37 +922,37 @@
     if-eqz v0, :cond_0
 
     .line 6
-    sget-object v0, Lcom/vk/voip/p;->l:Lcom/vk/voip/p;
+    sget-object v0, Lcom/vk/voip/VoipOrientationListener;->l:Lcom/vk/voip/VoipOrientationListener;
 
     sget-object v1, Lcom/vk/voip/VoipService$onCreate$1;->a:Lcom/vk/voip/VoipService$onCreate$1;
 
-    invoke-virtual {v0, p0, v1}, Lcom/vk/voip/p;->a(Landroid/content/Context;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p0, v1}, Lcom/vk/voip/VoipOrientationListener;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     :cond_0
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 8
     sget-object v1, Lcom/vk/voip/VoipService$b;->a:Lcom/vk/voip/VoipService$b;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 9
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -961,11 +961,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/voip/VoipService$c;-><init>(Lcom/vk/voip/VoipService;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/voip/VoipService;->a:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/voip/VoipService;->a:Lio/reactivex/disposables/Disposable;
 
     const/16 v0, 0x2ee0
 
@@ -990,23 +990,23 @@
     invoke-direct {p0}, Lcom/vk/voip/VoipService;->e()V
 
     .line 15
-    new-instance v0, Lcom/vk/voip/n;
+    new-instance v0, Lcom/vk/voip/VoipLongPoll;
 
-    invoke-direct {v0}, Lcom/vk/voip/n;-><init>()V
+    invoke-direct {v0}, Lcom/vk/voip/VoipLongPoll;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/voip/VoipService;->g:Lcom/vk/voip/n;
+    iput-object v0, p0, Lcom/vk/voip/VoipService;->g:Lcom/vk/voip/VoipLongPoll;
 
     .line 16
-    iget-object v0, p0, Lcom/vk/voip/VoipService;->g:Lcom/vk/voip/n;
+    iget-object v0, p0, Lcom/vk/voip/VoipService;->g:Lcom/vk/voip/VoipLongPoll;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/voip/n;->a()V
+    invoke-virtual {v0}, Lcom/vk/voip/VoipLongPoll;->a()V
 
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -1028,14 +1028,14 @@
 
     const-string v1, "onDestroy"
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/voip/VoipService;->a:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/voip/VoipService;->a:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 3
     :cond_0
@@ -1048,22 +1048,22 @@
     invoke-direct {p0}, Lcom/vk/voip/VoipService;->g()V
 
     .line 6
-    sget-object v0, Lcom/vk/voip/p;->l:Lcom/vk/voip/p;
+    sget-object v0, Lcom/vk/voip/VoipOrientationListener;->l:Lcom/vk/voip/VoipOrientationListener;
 
-    invoke-virtual {v0}, Lcom/vk/voip/p;->d()V
+    invoke-virtual {v0}, Lcom/vk/voip/VoipOrientationListener;->d()V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/voip/VoipService;->g:Lcom/vk/voip/n;
+    iget-object v0, p0, Lcom/vk/voip/VoipService;->g:Lcom/vk/voip/VoipLongPoll;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/voip/n;->b()V
+    invoke-virtual {v0}, Lcom/vk/voip/VoipLongPoll;->b()V
 
     :cond_1
     const/4 v0, 0x0
 
     .line 8
-    iput-object v0, p0, Lcom/vk/voip/VoipService;->g:Lcom/vk/voip/n;
+    iput-object v0, p0, Lcom/vk/voip/VoipService;->g:Lcom/vk/voip/VoipLongPoll;
 
     .line 9
     sget-object v0, Lcom/vk/voip/VoipService;->C:Lcom/vk/voip/VoipService$a;
@@ -1086,7 +1086,7 @@
 
     const-string v1, "onStartCommand"
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->onStartCommand(Landroid/content/Intent;II)I

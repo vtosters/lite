@@ -3,12 +3,12 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/masks/MasksController;->a(ZZ)Lc/a/m;
+    value = Lcom/vk/masks/MasksController;->a(ZZ)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,12 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "Ljava/util/ArrayList<",
-        "Lcom/vk/dto/masks/a;",
+        "Lcom/vk/dto/masks/MasksListItem;",
         ">;",
         "Ljava/util/ArrayList<",
-        "Lcom/vk/dto/masks/a;",
+        "Lcom/vk/dto/masks/MasksListItem;",
         ">;>;"
     }
 .end annotation
@@ -48,10 +48,10 @@
         value = {
             "(",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;)",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;"
         }
     .end annotation

@@ -3,7 +3,7 @@
 .source "NotificationsSettingsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -60,23 +60,23 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d()Lcom/vk/common/view/settings/a$a;
+    invoke-virtual {p1}, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d()Lcom/vk/common/view/settings/SettingsInfoView$a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d()Lcom/vk/common/view/settings/a$a;
+    invoke-virtual {p1}, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d()Lcom/vk/common/view/settings/SettingsInfoView$a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/common/view/settings/a$a;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/common/view/settings/SettingsInfoView$a;->b()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "groups_messages_pushes"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -3,12 +3,12 @@
 .source "MsgSendReporter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/b;)V
+    value = Lcom/vk/im/engine/reporters/MsgSendReporter;->a(IILkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/im/engine/reporters/MsgSendReporter$a;",
         ">;"
     }
@@ -105,7 +105,7 @@
 
     const/16 v28, 0x0
 
-    invoke-direct/range {v0 .. v28}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;-><init>(IJJJLjava/lang/String;ZZJJJJLjava/lang/String;ILcom/vk/im/engine/models/ImBgSyncState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v28}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;-><init>(IJJJLjava/lang/String;ZZJJJJLjava/lang/String;ILcom/vk/im/engine/models/ImBgSyncState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v29
 .end method

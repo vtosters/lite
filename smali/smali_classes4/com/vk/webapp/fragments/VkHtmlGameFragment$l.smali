@@ -3,7 +3,7 @@
 .source "VkHtmlGameFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/api/apps/AppsGetGameLeaderboard$LeaderboardData;",
         ">;"
     }
@@ -58,7 +58,7 @@
 
     const-string v1, "it.leaderboard"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
@@ -94,9 +94,9 @@
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 5
-    new-instance p1, Lcom/vtosters/lite/fragments/m1;
+    new-instance p1, Lcom/vtosters/lite/general/fragments/LeaderboardFragment;
 
-    invoke-direct {p1}, Lcom/vtosters/lite/fragments/m1;-><init>()V
+    invoke-direct {p1}, Lcom/vtosters/lite/general/fragments/LeaderboardFragment;-><init>()V
 
     .line 6
     invoke-virtual {p1, v0}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
@@ -108,7 +108,7 @@
 
     move-result-object v0
 
-    iput-object v0, p1, Lcom/vtosters/lite/fragments/m1;->c:Lcom/vtosters/lite/fragments/m1$f;
+    iput-object v0, p1, Lcom/vtosters/lite/general/fragments/LeaderboardFragment;->c:Lcom/vtosters/lite/general/fragments/LeaderboardFragment$f;
 
     .line 8
     iget-object v0, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$l;->a:Lcom/vk/webapp/fragments/VkHtmlGameFragment;
@@ -119,7 +119,7 @@
 
     const-string v1, "requireActivity()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
@@ -135,7 +135,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$l;->a:Lcom/vk/webapp/fragments/VkHtmlGameFragment;
 
-    invoke-static {p1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->b(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)Lcom/vk/webapp/bridges/c;
+    invoke-static {p1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->b(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)Lcom/vk/webapp/bridges/VkHtmlGameBridge;
 
     move-result-object p1
 
@@ -153,7 +153,7 @@
 
     const-string v2, "VKWebAppShowLeaderBoardBoxFailed"
 
-    invoke-virtual {p1, v0, v2, v1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, v0, v2, v1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :goto_0
     return-void

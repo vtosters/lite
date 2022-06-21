@@ -41,7 +41,7 @@
 
     const-string v0, "pagindatedView.recyclerView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
@@ -49,27 +49,27 @@
 
     if-eqz p1, :cond_3
 
-    check-cast p1, Lcom/vk/lists/s;
+    check-cast p1, Lcom/vk/lists/PaginatedRecyclerAdapter;
 
-    iget-object p1, p1, Lcom/vk/lists/s;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object p1, p1, Lcom/vk/lists/PaginatedRecyclerAdapter;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     if-eqz p1, :cond_2
 
-    check-cast p1, Lcom/vk/stories/masks/a;
+    check-cast p1, Lcom/vk/stories/masks/MasksAdapter;
 
     .line 2
     new-instance v1, Lcom/vk/stories/masks/MasksView$SectionHeaderView$1$index$1;
 
     invoke-direct {v1, p0}, Lcom/vk/stories/masks/MasksView$SectionHeaderView$1$index$1;-><init>(Lcom/vk/stories/masks/MasksView$SectionHeaderView$1;)V
 
-    invoke-virtual {p1, v1}, Lcom/vk/lists/i0;->d(Lkotlin/jvm/b/b;)I
+    invoke-virtual {p1, v1}, Lcom/vk/lists/SimpleAdapter;->d(Lkotlin/jvm/b/Functions2;)I
 
     move-result v1
 
     if-ltz v1, :cond_1
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->size()I
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->size()I
 
     move-result p1
 
@@ -102,7 +102,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 

@@ -12,10 +12,10 @@
 
 
 # static fields
-.field private static volatile a:Lkotlin/jvm/b/a;
+.field private static volatile a:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -41,7 +41,7 @@
     .line 2
     sget-object v0, Lcom/vk/utils/AppUtils$forceLogEnabledProvider$1;->a:Lcom/vk/utils/AppUtils$forceLogEnabledProvider$1;
 
-    sput-object v0, Lcom/vk/utils/AppUtils;->a:Lkotlin/jvm/b/a;
+    sput-object v0, Lcom/vk/utils/AppUtils;->a:Lkotlin/jvm/b/Functions;
 
     const-string v0, ""
 
@@ -126,7 +126,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 10
-    invoke-static {}, Lb/h/g/g/b;->l()Z
+    invoke-static {}, Lb/h/g/g/BuildInfo;->l()Z
 
     move-result v1
 
@@ -135,15 +135,15 @@
     xor-int/lit8 v9, v1, 0x1
 
     .line 11
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/bridges/a;->h()Z
+    invoke-virtual {v1}, Lcom/vk/bridges/AuthBridge1;->h()Z
 
     move-result v10
 
@@ -152,9 +152,9 @@
     if-nez v10, :cond_2
 
     .line 12
-    sget-object v1, Lcom/vk/utils/AppUtils;->a:Lkotlin/jvm/b/a;
+    sget-object v1, Lcom/vk/utils/AppUtils;->a:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -188,7 +188,7 @@
     if-eqz v1, :cond_3
 
     .line 14
-    invoke-static {}, Lb/h/g/m/d;->j()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->j()Ljava/io/File;
 
     move-result-object v3
 
@@ -197,14 +197,14 @@
     goto :goto_2
 
     :cond_3
-    invoke-static {}, Lb/h/g/m/d;->z()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->z()Ljava/io/File;
 
     move-result-object v3
 
     const-string v4, "FileUtils.getVKDir()"
 
     :goto_2
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -250,21 +250,21 @@
     move-result-object v1
 
     .line 16
-    new-instance v4, Lcom/vk/log/b/a;
+    new-instance v4, Lcom/vk/log/b/DefaultFileManager;
 
-    invoke-direct {v4}, Lcom/vk/log/b/a;-><init>()V
+    invoke-direct {v4}, Lcom/vk/log/b/DefaultFileManager;-><init>()V
 
     .line 17
-    new-instance v5, Lcom/vk/log/a/b;
+    new-instance v5, Lcom/vk/log/a/HeaderFileBuilder;
 
-    invoke-direct {v5}, Lcom/vk/log/a/b;-><init>()V
+    invoke-direct {v5}, Lcom/vk/log/a/HeaderFileBuilder;-><init>()V
 
     .line 18
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v6
 
-    invoke-interface {v6}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v6}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v6
 
@@ -274,37 +274,37 @@
 
     const-string v7, "UID_USER:"
 
-    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/b;
+    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/HeaderFileBuilder;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/HeaderFileBuilder;
 
     .line 19
     sget-object v6, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
 
-    invoke-virtual {v6}, Lcom/vk/core/network/Network;->c()Lcom/vk/core/network/utils/d;
+    invoke-virtual {v6}, Lcom/vk/core/network/Network;->c()Lcom/vk/core/network/utils/NetworkUserAgent;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/vk/core/network/utils/d;->a()Ljava/lang/String;
+    invoke-virtual {v6}, Lcom/vk/core/network/utils/NetworkUserAgent;->a()Ljava/lang/String;
 
     move-result-object v6
 
     const-string v7, "Network.userAgent.userAgent()"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, "USER_AGENT:"
 
-    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/b;
+    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/HeaderFileBuilder;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/HeaderFileBuilder;
 
     .line 20
     sget-object v6, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
 
     const-string v7, "Build.VERSION.CODENAME"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, "VERSION_CODENAME:"
 
-    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/b;
+    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/HeaderFileBuilder;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/HeaderFileBuilder;
 
     .line 21
     sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -315,84 +315,84 @@
 
     const-string v7, "SDK CODE:"
 
-    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/b;
+    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/HeaderFileBuilder;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/HeaderFileBuilder;
 
     .line 22
     sget-object v6, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     const-string v7, "Build.MANUFACTURER"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, "MANUFACTURER:"
 
-    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/b;
+    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/HeaderFileBuilder;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/HeaderFileBuilder;
 
     .line 23
     sget-object v6, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v7, "Build.MODEL"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, "MODEL:"
 
-    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/b;
+    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/HeaderFileBuilder;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/HeaderFileBuilder;
 
     .line 24
     sget-object v6, Landroid/os/Build;->BOARD:Ljava/lang/String;
 
     const-string v7, "Build.BOARD"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, "BOARD:"
 
-    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/b;
+    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/HeaderFileBuilder;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/HeaderFileBuilder;
 
     .line 25
     sget-object v6, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
     const-string v7, "Build.BRAND"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, "BRAND:"
 
-    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/b;
+    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/HeaderFileBuilder;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/HeaderFileBuilder;
 
     .line 26
     sget-object v6, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string v7, "Build.DEVICE"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, "DEVICE:"
 
-    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/b;
+    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/HeaderFileBuilder;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/HeaderFileBuilder;
 
     .line 27
     sget-object v6, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
 
     const-string v7, "Build.HARDWARE"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, "HARDWARE:"
 
-    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/b;
+    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/HeaderFileBuilder;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/HeaderFileBuilder;
 
     .line 28
     sget-object v6, Landroid/os/Build;->DISPLAY:Ljava/lang/String;
 
     const-string v7, "Build.DISPLAY"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, "DISPLAY:"
 
-    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/b;
+    invoke-virtual {v5, v7, v6}, Lcom/vk/log/a/HeaderFileBuilder;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/HeaderFileBuilder;
 
     .line 29
     invoke-static {}, Lcom/vk/core/preference/Preference;->a()Landroid/content/SharedPreferences;
@@ -412,63 +412,63 @@
     :cond_5
     const-string v6, "VERSIONS:"
 
-    invoke-virtual {v5, v6, v3}, Lcom/vk/log/a/b;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/b;
+    invoke-virtual {v5, v6, v3}, Lcom/vk/log/a/HeaderFileBuilder;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/vk/log/a/HeaderFileBuilder;
 
     .line 30
-    new-instance v13, Lcom/vk/log/a/a;
+    new-instance v13, Lcom/vk/log/a/FileSettingsBuilder;
 
-    invoke-direct {v13}, Lcom/vk/log/a/a;-><init>()V
+    invoke-direct {v13}, Lcom/vk/log/a/FileSettingsBuilder;-><init>()V
 
     .line 31
-    invoke-virtual {v13, v0}, Lcom/vk/log/a/a;->a(Ljava/lang/String;)Lcom/vk/log/a/a;
+    invoke-virtual {v13, v0}, Lcom/vk/log/a/FileSettingsBuilder;->a(Ljava/lang/String;)Lcom/vk/log/a/FileSettingsBuilder;
 
     .line 32
-    invoke-virtual {v13, v5}, Lcom/vk/log/a/a;->a(Lcom/vk/log/a/b;)Lcom/vk/log/a/a;
+    invoke-virtual {v13, v5}, Lcom/vk/log/a/FileSettingsBuilder;->a(Lcom/vk/log/a/HeaderFileBuilder;)Lcom/vk/log/a/FileSettingsBuilder;
 
     .line 33
-    invoke-virtual {v13, v4}, Lcom/vk/log/a/a;->a(Lcom/vk/log/b/b;)Lcom/vk/log/a/a;
+    invoke-virtual {v13, v4}, Lcom/vk/log/a/FileSettingsBuilder;->a(Lcom/vk/log/b/FileManager;)Lcom/vk/log/a/FileSettingsBuilder;
 
     .line 34
-    invoke-virtual {v13, v1}, Lcom/vk/log/a/a;->b(Ljava/lang/String;)Lcom/vk/log/a/a;
+    invoke-virtual {v13, v1}, Lcom/vk/log/a/FileSettingsBuilder;->b(Ljava/lang/String;)Lcom/vk/log/a/FileSettingsBuilder;
 
     .line 35
-    new-instance v14, Lcom/vk/log/a/c;
+    new-instance v14, Lcom/vk/log/a/LoggerBuilder;
 
     .line 36
     sget-object v3, Lcom/vk/utils/AppUtils$initLogger$loggerBuilder$1;->a:Lcom/vk/utils/AppUtils$initLogger$loggerBuilder$1;
 
     .line 37
-    invoke-direct {v14, v3}, Lcom/vk/log/a/c;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v14, v3}, Lcom/vk/log/a/LoggerBuilder;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 38
-    invoke-virtual {v14, v0}, Lcom/vk/log/a/c;->a(Ljava/lang/String;)Lcom/vk/log/a/c;
+    invoke-virtual {v14, v0}, Lcom/vk/log/a/LoggerBuilder;->a(Ljava/lang/String;)Lcom/vk/log/a/LoggerBuilder;
 
     .line 39
     invoke-static {}, Lcom/vk/core/preference/Preference;->a()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    invoke-virtual {v14, v0}, Lcom/vk/log/a/c;->a(Landroid/content/SharedPreferences;)Lcom/vk/log/a/c;
+    invoke-virtual {v14, v0}, Lcom/vk/log/a/LoggerBuilder;->a(Landroid/content/SharedPreferences;)Lcom/vk/log/a/LoggerBuilder;
 
     .line 40
-    invoke-virtual {v14, v9}, Lcom/vk/log/a/c;->a(Z)Lcom/vk/log/a/c;
+    invoke-virtual {v14, v9}, Lcom/vk/log/a/LoggerBuilder;->a(Z)Lcom/vk/log/a/LoggerBuilder;
 
     .line 41
     sget-object v0, Lcom/vk/utils/AppUtils$initLogger$2;->a:Lcom/vk/utils/AppUtils$initLogger$2;
 
     .line 42
-    new-instance v0, Lcom/vk/log/d/b;
+    new-instance v0, Lcom/vk/log/d/FileRemover;
 
-    invoke-direct {v0, v1, v2, v4}, Lcom/vk/log/d/b;-><init>(Ljava/lang/String;Ljava/util/List;Lcom/vk/log/b/b;)V
+    invoke-direct {v0, v1, v2, v4}, Lcom/vk/log/d/FileRemover;-><init>(Ljava/lang/String;Ljava/util/List;Lcom/vk/log/b/FileManager;)V
 
     .line 43
-    new-instance v15, Lcom/vk/log/d/a;
+    new-instance v15, Lcom/vk/log/d/Archive;
 
     const/4 v3, 0x0
 
     new-instance v5, Lcom/vk/utils/AppUtils$d;
 
-    invoke-direct {v5, v0, v10}, Lcom/vk/utils/AppUtils$d;-><init>(Lcom/vk/log/d/b;Z)V
+    invoke-direct {v5, v0, v10}, Lcom/vk/utils/AppUtils$d;-><init>(Lcom/vk/log/d/FileRemover;Z)V
 
     const/4 v6, 0x4
 
@@ -478,7 +478,7 @@
 
     move-object/from16 v2, p1
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/log/d/a;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lcom/vk/log/b/b;Lcom/vk/log/d/a$a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/log/d/Archive;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lcom/vk/log/b/FileManager;Lcom/vk/log/d/Archive$a;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 44
     sget-object v0, Lcom/vk/log/L;->g:Lcom/vk/log/L;
@@ -487,9 +487,9 @@
 
     move/from16 v2, p2
 
-    invoke-direct {v1, v10, v2, v15}, Lcom/vk/utils/AppUtils$c;-><init>(ZZLcom/vk/log/d/a;)V
+    invoke-direct {v1, v10, v2, v15}, Lcom/vk/utils/AppUtils$c;-><init>(ZZLcom/vk/log/d/Archive;)V
 
-    invoke-virtual {v0, v14, v13, v1}, Lcom/vk/log/L;->a(Lcom/vk/log/a/c;Lcom/vk/log/a/a;Lcom/vk/log/L$a;)V
+    invoke-virtual {v0, v14, v13, v1}, Lcom/vk/log/L;->a(Lcom/vk/log/a/LoggerBuilder;Lcom/vk/log/a/FileSettingsBuilder;Lcom/vk/log/L$a;)V
 
     if-eqz v9, :cond_6
 
@@ -528,7 +528,7 @@
 
     .line 48
     :goto_4
-    invoke-virtual {v15}, Lcom/vk/log/d/a;->b()Ljava/lang/String;
+    invoke-virtual {v15}, Lcom/vk/log/d/Archive;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -546,7 +546,7 @@
     move-result v0
 
     .line 50
-    sget-object v1, Lcom/vk/webapp/helpers/h;->b:Lcom/vk/webapp/helpers/h;
+    sget-object v1, Lcom/vk/webapp/helpers/WebClients3;->b:Lcom/vk/webapp/helpers/WebClients3;
 
     if-nez v10, :cond_9
 
@@ -561,7 +561,7 @@
 
     :cond_9
     :goto_5
-    invoke-virtual {v1, v8}, Lcom/vk/webapp/helpers/h;->a(Z)V
+    invoke-virtual {v1, v8}, Lcom/vk/webapp/helpers/WebClients3;->a(Z)V
 
     :cond_a
     :goto_6
@@ -600,14 +600,14 @@
     invoke-direct {v0}, Lcom/vk/utils/AppUtils$e;-><init>()V
 
     .line 52
-    invoke-static {}, Lb/h/g/g/b;->j()Z
+    invoke-static {}, Lb/h/g/g/BuildInfo;->j()Z
 
     move-result v1
 
     .line 53
     new-instance v2, Lcom/vk/stat/Stat$a;
 
-    invoke-direct {v2, v1, v0}, Lcom/vk/stat/Stat$a;-><init>(ZLcom/vk/stat/b/b;)V
+    invoke-direct {v2, v1, v0}, Lcom/vk/stat/Stat$a;-><init>(ZLcom/vk/stat/b/EventSender;)V
 
     .line 54
     invoke-static {}, Lcom/vk/core/preference/Preference;->a()Landroid/content/SharedPreferences;
@@ -637,7 +637,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v1, v4, v3, v4}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1, v4, v3, v4}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
 
     .line 57
     sget-object v0, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
@@ -647,24 +647,24 @@
     return-void
 .end method
 
-.method public static final a(Lkotlin/jvm/b/a;)V
+.method public static final a(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    sput-object p0, Lcom/vk/utils/AppUtils;->a:Lkotlin/jvm/b/a;
+    sput-object p0, Lcom/vk/utils/AppUtils;->a:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public static synthetic a(Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+.method public static synthetic a(Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p1, p1, 0x1
@@ -675,7 +675,7 @@
 
     .line 4
     :cond_0
-    invoke-static {p0}, Lcom/vk/utils/AppUtils;->b(Lkotlin/jvm/b/a;)V
+    invoke-static {p0}, Lcom/vk/utils/AppUtils;->b(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -684,7 +684,7 @@
     .locals 0
 
     .line 13
-    invoke-static {p0}, Lcom/vk/core/util/q;->a(Landroid/app/Application;)V
+    invoke-static {p0}, Lcom/vk/core/util/DebugUtils;->a(Landroid/app/Application;)V
 
     return-void
 .end method
@@ -698,13 +698,13 @@
     return-void
 .end method
 
-.method public static final b(Lkotlin/jvm/b/a;)V
+.method public static final b(Lkotlin/jvm/b/Functions;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -729,11 +729,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result v0
 
@@ -754,7 +754,7 @@
     invoke-virtual {v1, v2}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager$Sync;)V
 
     .line 6
-    new-instance v1, Lcom/vk/api/account/p;
+    new-instance v1, Lcom/vk/api/account/AccountGetToggles;
 
     invoke-virtual {v0}, Lcom/vk/toggle/FeatureManager$a;->a()Ljava/util/ArrayList;
 
@@ -764,30 +764,30 @@
 
     move-result v0
 
-    invoke-direct {v1, v2, v0}, Lcom/vk/api/account/p;-><init>(Ljava/util/ArrayList;I)V
+    invoke-direct {v1, v2, v0}, Lcom/vk/api/account/AccountGetToggles;-><init>(Ljava/util/ArrayList;I)V
 
     .line 7
-    invoke-virtual {v1}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
+    invoke-virtual {v1}, Lcom/vk/api/base/ApiRequest;->h()Lcom/vk/api/base/ApiRequest;
 
     const/4 v0, 0x1
 
     const/4 v2, 0x0
 
     .line 8
-    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 9
     new-instance v1, Lcom/vk/utils/AppUtils$h;
 
-    invoke-direct {v1, p0}, Lcom/vk/utils/AppUtils$h;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p0}, Lcom/vk/utils/AppUtils$h;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 10
     sget-object p0, Lcom/vk/utils/AppUtils$i;->a:Lcom/vk/utils/AppUtils$i;
 
     .line 11
-    invoke-virtual {v0, v1, p0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     .line 12
     sget-object p0, Lcom/vk/toggle/FeatureManager;->g:Lcom/vk/toggle/FeatureManager;
@@ -796,7 +796,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {p0, v0, v2, v1, v2}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lio/reactivex/disposables/b;
+    invoke-static {p0, v0, v2, v1, v2}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -968,7 +968,7 @@
 
     .line 16
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -988,14 +988,14 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->f()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->c()V
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->c()V
 
     :cond_0
     return-void
@@ -1005,9 +1005,9 @@
     .locals 8
 
     .line 1
-    sget-object v0, Lcom/vk/auth/n$b;->a:Lcom/vk/auth/n$b$a;
+    sget-object v0, Lcom/vk/auth/VKAuthUtils$b;->a:Lcom/vk/auth/VKAuthUtils$b$a;
 
-    invoke-virtual {v0}, Lcom/vk/auth/n$b$a;->b()J
+    invoke-virtual {v0}, Lcom/vk/auth/VKAuthUtils$b$a;->b()J
 
     move-result-wide v0
 
@@ -1044,9 +1044,9 @@
 
     .line 7
     :cond_0
-    new-instance v5, Lcom/vk/stat/utils/b;
+    new-instance v5, Lcom/vk/stat/utils/EventFilter;
 
-    invoke-direct {v5, v4}, Lcom/vk/stat/utils/b;-><init>(Ljava/util/List;)V
+    invoke-direct {v5, v4}, Lcom/vk/stat/utils/EventFilter;-><init>(Ljava/util/List;)V
 
     const/4 v6, 0x1
 
@@ -1063,7 +1063,7 @@
 
     .line 8
     :goto_0
-    invoke-virtual {v5, v2}, Lcom/vk/stat/utils/b;->a(Z)V
+    invoke-virtual {v5, v2}, Lcom/vk/stat/utils/EventFilter;->a(Z)V
 
     if-eqz v3, :cond_2
 
@@ -1074,7 +1074,7 @@
 
     .line 9
     :goto_1
-    invoke-virtual {v5, v0, v1}, Lcom/vk/stat/utils/b;->a(J)V
+    invoke-virtual {v5, v0, v1}, Lcom/vk/stat/utils/EventFilter;->a(J)V
 
     new-array v0, v6, [Ljava/lang/Object;
 
@@ -1100,7 +1100,7 @@
     .line 11
     sget-object v0, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-virtual {v0, v5}, Lcom/vk/stat/Stat;->a(Lcom/vk/stat/utils/b;)V
+    invoke-virtual {v0, v5}, Lcom/vk/stat/Stat;->a(Lcom/vk/stat/utils/EventFilter;)V
 
     return-void
 .end method
@@ -1109,9 +1109,9 @@
     .locals 10
 
     .line 1
-    sget-object v0, Lb/h/g/g/b;->i:Lb/h/g/g/b;
+    sget-object v0, Lb/h/g/g/BuildInfo;->i:Lb/h/g/g/BuildInfo;
 
-    invoke-virtual {v0}, Lb/h/g/g/b;->e()I
+    invoke-virtual {v0}, Lb/h/g/g/BuildInfo;->e()I
 
     move-result v0
 
@@ -1388,7 +1388,7 @@
 
     const-string v3, "result.toString()"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_9
 
@@ -1422,7 +1422,7 @@
 
     .line 30
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 .end method
@@ -1459,30 +1459,30 @@
     .locals 3
 
     .line 14
-    new-instance v0, Lcom/vk/webapp/h;
+    new-instance v0, Lcom/vk/webapp/SuperappSettings;
 
-    invoke-direct {v0}, Lcom/vk/webapp/h;-><init>()V
+    invoke-direct {v0}, Lcom/vk/webapp/SuperappSettings;-><init>()V
 
     .line 15
-    invoke-static {}, Lb/h/g/m/d;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
 
     move-result-object v1
 
     const-string v2, "FileUtils.getExternalHiddenDir()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/h;->a(Ljava/io/File;)V
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/SuperappSettings;->a(Ljava/io/File;)V
 
     .line 16
     new-instance v1, Lcom/vk/utils/AppUtils$f;
 
     invoke-direct {v1}, Lcom/vk/utils/AppUtils$f;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/h;->a(Lcom/vk/webapp/h$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/SuperappSettings;->a(Lcom/vk/webapp/SuperappSettings$a;)V
 
     .line 17
-    invoke-static {v0}, Lcom/vk/webapp/SuperappCore;->a(Lcom/vk/webapp/h;)V
+    invoke-static {v0}, Lcom/vk/webapp/SuperappCore;->a(Lcom/vk/webapp/SuperappSettings;)V
 
     return-void
 .end method

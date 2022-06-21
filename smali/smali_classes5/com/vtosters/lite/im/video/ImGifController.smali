@@ -3,7 +3,7 @@
 .source "ImGifController.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/q/h/b$c;
+.implements Lcom/vk/im/ui/q/h/VideoAutoPlayer$c;
 
 
 # annotations
@@ -18,7 +18,7 @@
 # instance fields
 .field private a:Lcom/vk/im/engine/models/attaches/AttachDoc;
 
-.field private b:Lcom/vk/libvideo/autoplay/a;
+.field private b:Lcom/vk/libvideo/autoplay/AutoPlay;
 
 .field private final c:Ljava/lang/StringBuilder;
 
@@ -28,7 +28,7 @@
 
 .field private final f:Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;
 
-.field private final g:Lcom/vtosters/lite/im/video/b;
+.field private final g:Lcom/vtosters/lite/im/video/ImAutoplayFactory;
 
 .field private final h:Landroid/app/Activity;
 
@@ -38,7 +38,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vtosters/lite/im/video/b;Landroid/app/Activity;Landroid/view/ViewGroup;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/View;Lcom/vk/libvideo/ui/VideoErrorView;Lcom/vk/libvideo/ui/DurationView;Landroid/view/View;F)V
+.method public constructor <init>(Lcom/vtosters/lite/im/video/ImAutoplayFactory;Landroid/app/Activity;Landroid/view/ViewGroup;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/View;Lcom/vk/libvideo/ui/VideoErrorView;Lcom/vk/libvideo/ui/DurationView;Landroid/view/View;F)V
     .locals 25
 
     move-object/from16 v0, p0
@@ -60,7 +60,7 @@
 
     move-object/from16 v1, p1
 
-    iput-object v1, v0, Lcom/vtosters/lite/im/video/ImGifController;->g:Lcom/vtosters/lite/im/video/b;
+    iput-object v1, v0, Lcom/vtosters/lite/im/video/ImGifController;->g:Lcom/vtosters/lite/im/video/ImAutoplayFactory;
 
     move-object/from16 v1, p2
 
@@ -100,7 +100,7 @@
 
     move-object/from16 v16, v1
 
-    invoke-direct/range {v16 .. v23}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;-><init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v16 .. v23}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;-><init>(ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v1, v0, Lcom/vtosters/lite/im/video/ImGifController;->d:Lcom/vk/libvideo/autoplay/AutoPlayConfig;
 
@@ -113,7 +113,7 @@
 
     const/4 v8, 0x0
 
-    invoke-direct {v1, v2, v4, v8}, Lcom/vtosters/lite/im/video/ImGifController$a;-><init>(IILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2, v4, v8}, Lcom/vtosters/lite/im/video/ImGifController$a;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v1, v0, Lcom/vtosters/lite/im/video/ImGifController;->e:Lcom/vtosters/lite/im/video/ImGifController$a;
 
@@ -154,7 +154,7 @@
     const/16 v22, 0x0
 
     .line 9
-    invoke-direct/range {v1 .. v22}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;-><init>(Lcom/vk/core/util/b;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/ViewGroup;FLandroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;Lcom/vk/libvideo/ui/DurationView;Lcom/google/android/exoplayer2/ui/VKSubtitleView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/libvideo/ui/VideoErrorView;Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZZLcom/vk/libvideo/ui/ActionLinkView;Lcom/vk/libvideo/ad/VideoAdLayout;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v22}, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;-><init>(Lcom/vk/core/util/AdapterPosition;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/ViewGroup;FLandroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/widget/ProgressBar;Landroid/view/View;Lcom/vk/libvideo/ui/DurationView;Lcom/google/android/exoplayer2/ui/VKSubtitleView;Lcom/vk/libvideo/ui/VideoRestrictionView;Lcom/vk/libvideo/ui/VideoErrorView;Landroid/view/ViewGroup;Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;ZZLcom/vk/libvideo/ui/ActionLinkView;Lcom/vk/libvideo/ad/VideoAdLayout;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object/from16 v1, v24
 
@@ -169,17 +169,17 @@
 
     invoke-direct {v2, v0}, Lcom/vtosters/lite/im/video/ImGifController$1;-><init>(Lcom/vtosters/lite/im/video/ImGifController;)V
 
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/im/video/ImGifController;)Lcom/vk/libvideo/autoplay/a;
+.method public static final synthetic a(Lcom/vtosters/lite/im/video/ImGifController;)Lcom/vk/libvideo/autoplay/AutoPlay;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/im/video/ImGifController;->b:Lcom/vk/libvideo/autoplay/a;
+    iget-object p0, p0, Lcom/vtosters/lite/im/video/ImGifController;->b:Lcom/vk/libvideo/autoplay/AutoPlay;
 
     return-object p0
 .end method
@@ -231,7 +231,7 @@
 
     const-string v4, "Locale.getDefault()"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v1, :cond_1
 
@@ -241,7 +241,7 @@
 
     const-string v3, "(this as java.lang.String).toUpperCase(locale)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -276,7 +276,7 @@
 
     .line 6
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -291,7 +291,7 @@
     throw v0
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -307,7 +307,7 @@
     if-eqz v0, :cond_0
 
     .line 9
-    invoke-static {}, Lcom/vk/bridges/q;->a()Lcom/vk/bridges/p;
+    invoke-static {}, Lcom/vk/bridges/ImageViewer1;->a()Lcom/vk/bridges/ImageViewer;
 
     move-result-object v1
 
@@ -321,7 +321,7 @@
 
     invoke-direct {v4, p0}, Lcom/vtosters/lite/im/video/ImGifController$b;-><init>(Lcom/vtosters/lite/im/video/ImGifController;)V
 
-    invoke-interface {v1, v0, v2, v3, v4}, Lcom/vk/bridges/p;->a(Lcom/vk/im/engine/models/attaches/AttachWithImage;Ljava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
+    invoke-interface {v1, v0, v2, v3, v4}, Lcom/vk/bridges/ImageViewer;->a(Lcom/vk/im/engine/models/attaches/AttachWithImage;Ljava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
 
     :cond_0
     return-void
@@ -350,9 +350,9 @@
     iput-object v0, p0, Lcom/vtosters/lite/im/video/ImGifController;->a:Lcom/vk/im/engine/models/attaches/AttachDoc;
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImGifController;->g:Lcom/vtosters/lite/im/video/b;
+    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImGifController;->g:Lcom/vtosters/lite/im/video/ImAutoplayFactory;
 
-    invoke-virtual {v0, p2}, Lcom/vtosters/lite/im/video/b;->a(Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {v0, p2}, Lcom/vtosters/lite/im/video/ImAutoplayFactory;->a(Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/libvideo/autoplay/AutoPlay;
 
     move-result-object p2
 
@@ -392,7 +392,7 @@
 
     .line 6
     :goto_1
-    iput-object p2, p0, Lcom/vtosters/lite/im/video/ImGifController;->b:Lcom/vk/libvideo/autoplay/a;
+    iput-object p2, p0, Lcom/vtosters/lite/im/video/ImGifController;->b:Lcom/vk/libvideo/autoplay/AutoPlay;
 
     .line 7
     iget-object p1, p0, Lcom/vtosters/lite/im/video/ImGifController;->j:Lcom/vk/libvideo/ui/DurationView;
@@ -418,7 +418,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic b()Lcom/vk/libvideo/r;
+.method public bridge synthetic b()Lcom/vk/libvideo/VideoUI;
     .locals 1
 
     .line 2
@@ -433,7 +433,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0}, Lcom/vk/im/ui/q/h/b$c$a;->a(Lcom/vk/im/ui/q/h/b$c;)V
+    invoke-static {p0}, Lcom/vk/im/ui/q/h/VideoAutoPlayer$c$a;->a(Lcom/vk/im/ui/q/h/VideoAutoPlayer$c;)V
 
     return-void
 .end method

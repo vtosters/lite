@@ -3,7 +3,7 @@
 .source "DiscoverFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/j;
+.implements Lcom/vk/newsfeed/NewsEntryActionsAdapter3;
 
 
 # annotations
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/core/dialogs/actionspopup/a;I)V
+.method public a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup;I)V
     .locals 2
 
     .line 1
@@ -59,7 +59,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
 
     .line 3
     :cond_0
@@ -67,7 +67,7 @@
 
     const/4 p2, 0x0
 
-    invoke-static {p1, p2}, Lcom/vk/discover/DiscoverFragment;->a(Lcom/vk/discover/DiscoverFragment;Lcom/vk/core/dialogs/actionspopup/a;)V
+    invoke-static {p1, p2}, Lcom/vk/discover/DiscoverFragment;->a(Lcom/vk/discover/DiscoverFragment;Lcom/vk/core/dialogs/actionspopup/ActionsPopup;)V
 
     return-void
 .end method

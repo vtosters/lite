@@ -4,24 +4,24 @@
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/a;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/coroutines/a<",
+            "Lkotlin/coroutines/Continuation<",
             "Ljava/lang/Object;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;-><init>(Lkotlin/coroutines/a;)V
+    invoke-direct {p0, p1}, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;)V
 
     if-eqz p1, :cond_2
 
     .line 2
-    invoke-interface {p1}, Lkotlin/coroutines/a;->getContext()Lkotlin/coroutines/c;
+    invoke-interface {p1}, Lkotlin/coroutines/Continuation;->getContext()Lkotlin/coroutines/CoroutineContext;
 
     move-result-object p1
 
@@ -61,7 +61,7 @@
 
 
 # virtual methods
-.method public getContext()Lkotlin/coroutines/c;
+.method public getContext()Lkotlin/coroutines/CoroutineContext;
     .locals 1
 
     .line 1

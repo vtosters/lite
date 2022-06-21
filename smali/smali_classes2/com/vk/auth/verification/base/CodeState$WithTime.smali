@@ -27,7 +27,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/auth/verification/base/CodeState;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0}, Lcom/vk/auth/verification/base/CodeState;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-wide p1, p0, Lcom/vk/auth/verification/base/CodeState$WithTime;->initTime:J
 

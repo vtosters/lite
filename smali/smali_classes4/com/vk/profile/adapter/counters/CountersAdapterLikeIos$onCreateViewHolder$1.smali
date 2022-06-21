@@ -1,11 +1,11 @@
 .class public final Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos$onCreateViewHolder$1;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "CountersAdapterLikeIos.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+    value = Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/profile/data/CountersWrapper;",
         ">;"
     }
@@ -47,7 +47,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos$onCreateViewHolder$1;->e:Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;
 
-    invoke-direct {p0, p4, p5}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p4, p5}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     const p1, 0x7f0a02e4
 
@@ -76,13 +76,13 @@
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos$onCreateViewHolder$1$1;
 
     invoke-direct {p2, p0}, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos$onCreateViewHolder$1$1;-><init>(Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos$onCreateViewHolder$1;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -91,7 +91,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/profile/data/CountersWrapper;
 
@@ -123,11 +123,11 @@
 
     const-string v1, "contView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-lez v2, :cond_0
 
-    invoke-static {v2}, Lcom/vk/core/util/b1;->a(I)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/core/util/StringUtils;->a(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -151,7 +151,7 @@
 
     const-string v1, "nameView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     invoke-virtual {p1}, Lcom/vk/profile/data/CountersWrapper;->e()I
@@ -170,7 +170,7 @@
     const/4 v7, 0x0
 
     .line 8
-    invoke-static/range {v2 .. v7}, Lcom/vk/core/util/b1;->a(IIIZILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v2 .. v7}, Lcom/vk/core/util/StringUtils;->a(IIIZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 

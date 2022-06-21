@@ -3,12 +3,12 @@
 .source "ArticleAuthorPageItemHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $sortTypeProvider:Lkotlin/jvm/b/a;
+.field final synthetic $sortTypeProvider:Lkotlin/jvm/b/Functions;
 
 .field final synthetic this$0:Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$1;->this$0:Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;
 
-    iput-object p2, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$1;->$sortTypeProvider:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$1;->$sortTypeProvider:Lkotlin/jvm/b/Functions;
 
     const/4 p1, 0x1
 
@@ -66,11 +66,11 @@
     .line 3
     iget-object p1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$1;->this$0:Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;
 
-    invoke-static {p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->e(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;)Lcom/vk/articles/authorpage/g/a;
+    invoke-static {p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->e(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;)Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/a;->c()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;->c()Lcom/vk/dto/articles/Article;
 
     move-result-object v2
 
@@ -87,15 +87,15 @@
     move-result-object p1
 
     .line 6
-    iget-object v3, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$1;->$sortTypeProvider:Lkotlin/jvm/b/a;
+    iget-object v3, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$1;->$sortTypeProvider:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v3}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v3}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;
 
-    invoke-static {p1, v3}, Lcom/vk/articles/authorpage/e;->a(Lcom/vk/articles/preload/QueryParameters;Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;)Lcom/vk/articles/preload/QueryParameters;
+    invoke-static {p1, v3}, Lcom/vk/articles/authorpage/ArticleAuthorPageHelper1;->a(Lcom/vk/articles/preload/QueryParameters;Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;)Lcom/vk/articles/preload/QueryParameters;
 
     move-result-object v4
 
@@ -121,7 +121,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -29,47 +29,47 @@
         value = {
             "Ljava/util/Map<",
             "Lcom/vk/im/engine/models/MemberType;",
-            "Lcom/vk/im/engine/models/a<",
-            "Lcom/vk/im/engine/models/j;",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
+            "Lcom/vk/im/engine/models/Profile;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/im/engine/models/a;
+.field private final b:Lcom/vk/im/engine/models/EntityIntMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/users/User;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final c:Lcom/vk/im/engine/models/a;
+.field private final c:Lcom/vk/im/engine/models/EntityIntMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/contacts/Contact;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Lcom/vk/im/engine/models/a;
+.field private final d:Lcom/vk/im/engine/models/EntityIntMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/emails/Email;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final e:Lcom/vk/im/engine/models/a;
+.field private final e:Lcom/vk/im/engine/models/EntityIntMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/groups/Group;",
             ">;"
         }
@@ -85,7 +85,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/ProfilesInfo$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/ProfilesInfo$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/ProfilesInfo$a;
@@ -102,29 +102,29 @@
     .locals 5
 
     .line 21
-    new-instance v0, Lcom/vk/im/engine/models/a;
+    new-instance v0, Lcom/vk/im/engine/models/EntityIntMap;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
     .line 22
-    new-instance v2, Lcom/vk/im/engine/models/a;
+    new-instance v2, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {v2, v1}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
     .line 23
-    new-instance v3, Lcom/vk/im/engine/models/a;
+    new-instance v3, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {v3, v1}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
     .line 24
-    new-instance v4, Lcom/vk/im/engine/models/a;
+    new-instance v4, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {v4, v1}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {v4, v1}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
     .line 25
-    invoke-direct {p0, v0, v2, v3, v4}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, v0, v2, v3, v4}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
@@ -147,27 +147,27 @@
     .end annotation
 
     .line 38
-    new-instance v0, Lcom/vk/im/engine/models/a;
+    new-instance v0, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {v0, p1}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {v0, p1}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 39
-    new-instance p1, Lcom/vk/im/engine/models/a;
+    new-instance p1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p1, p2}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 40
-    new-instance p2, Lcom/vk/im/engine/models/a;
+    new-instance p2, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p2, p3}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p2, p3}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 41
-    invoke-direct {p0, v0, p1, p2}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, v0, p1, p2}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x1
@@ -228,32 +228,32 @@
     .end annotation
 
     .line 30
-    new-instance v0, Lcom/vk/im/engine/models/a;
+    new-instance v0, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {v0, p1}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {v0, p1}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 31
-    new-instance p1, Lcom/vk/im/engine/models/a;
+    new-instance p1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p1, p2}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 32
-    new-instance p2, Lcom/vk/im/engine/models/a;
+    new-instance p2, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p2, p3}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p2, p3}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 33
-    new-instance p3, Lcom/vk/im/engine/models/a;
+    new-instance p3, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p3, p4}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p3, p4}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 34
-    invoke-direct {p0, v0, p1, p2, p3}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, v0, p1, p2, p3}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x1
@@ -309,54 +309,54 @@
     .line 54
     const-class v0, Lcom/vk/im/engine/models/users/User;
 
-    invoke-static {p1, v0}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/core/serialize/Serializer;Ljava/lang/Class;)Lcom/vk/im/engine/models/a;
+    invoke-static {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/core/serialize/Serializer;Ljava/lang/Class;)Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v0
 
     const-string v1, "EntityIntMap.read(s, User::class.java)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 55
     const-class v1, Lcom/vk/im/engine/models/contacts/Contact;
 
-    invoke-static {p1, v1}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/core/serialize/Serializer;Ljava/lang/Class;)Lcom/vk/im/engine/models/a;
+    invoke-static {p1, v1}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/core/serialize/Serializer;Ljava/lang/Class;)Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v1
 
     const-string v2, "EntityIntMap.read(s, Contact::class.java)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 56
     const-class v2, Lcom/vk/im/engine/models/emails/Email;
 
-    invoke-static {p1, v2}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/core/serialize/Serializer;Ljava/lang/Class;)Lcom/vk/im/engine/models/a;
+    invoke-static {p1, v2}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/core/serialize/Serializer;Ljava/lang/Class;)Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v2
 
     const-string v3, "EntityIntMap.read(s, Email::class.java)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 57
     const-class v3, Lcom/vk/im/engine/models/groups/Group;
 
-    invoke-static {p1, v3}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/core/serialize/Serializer;Ljava/lang/Class;)Lcom/vk/im/engine/models/a;
+    invoke-static {p1, v3}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/core/serialize/Serializer;Ljava/lang/Class;)Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object p1
 
     const-string v3, "EntityIntMap.read(s, Group::class.java)"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 58
-    invoke-direct {p0, v0, v1, v2, p1}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, v0, v1, v2, p1}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -369,47 +369,47 @@
     .locals 4
 
     .line 46
-    iget-object v0, p1, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iget-object v0, p1, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/a;->c()Lcom/vk/im/engine/models/a;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityIntMap;->c()Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v0
 
     const-string v1, "profiles.users.copy()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p1, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/a;
+    iget-object v1, p1, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/a;->c()Lcom/vk/im/engine/models/a;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/EntityIntMap;->c()Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v1
 
     const-string v2, "profiles.contacts.copy()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, p1, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iget-object v2, p1, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/models/a;->c()Lcom/vk/im/engine/models/a;
+    invoke-virtual {v2}, Lcom/vk/im/engine/models/EntityIntMap;->c()Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v2
 
     const-string v3, "profiles.emails.copy()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object p1, p1, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iget-object p1, p1, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/a;->c()Lcom/vk/im/engine/models/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/EntityIntMap;->c()Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object p1
 
     const-string v3, "profiles.groups.copy()"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0, v1, v2, p1}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, v0, v1, v2, p1}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
@@ -454,36 +454,36 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
+.method public constructor <init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/users/User;",
             ">;",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/emails/Email;",
             ">;",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/groups/Group;",
             ">;)V"
         }
     .end annotation
 
     .line 20
-    new-instance v0, Lcom/vk/im/engine/models/a;
+    new-instance v0, Lcom/vk/im/engine/models/EntityIntMap;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
-    invoke-direct {p0, p1, v0, p2, p3}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, p1, v0, p2, p3}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x1
@@ -493,9 +493,9 @@
     if-eqz p5, :cond_0
 
     .line 17
-    new-instance p1, Lcom/vk/im/engine/models/a;
+    new-instance p1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p1, v0}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
     :cond_0
     and-int/lit8 p5, p4, 0x2
@@ -503,9 +503,9 @@
     if-eqz p5, :cond_1
 
     .line 18
-    new-instance p2, Lcom/vk/im/engine/models/a;
+    new-instance p2, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p2, v0}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {p2, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
     :cond_1
     and-int/lit8 p4, p4, 0x4
@@ -513,31 +513,31 @@
     if-eqz p4, :cond_2
 
     .line 19
-    new-instance p3, Lcom/vk/im/engine/models/a;
+    new-instance p3, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p3, v0}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {p3, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
     :cond_2
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
+.method public constructor <init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/users/User;",
             ">;",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/contacts/Contact;",
             ">;",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/emails/Email;",
             ">;",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/groups/Group;",
             ">;)V"
         }
@@ -546,13 +546,13 @@
     .line 6
     invoke-direct {p0}, Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iput-object p1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iput-object p2, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/a;
+    iput-object p2, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iput-object p3, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iput-object p3, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iput-object p4, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iput-object p4, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
 
     const/4 p1, 0x5
 
@@ -561,13 +561,13 @@
     .line 7
     sget-object p2, Lcom/vk/im/engine/models/MemberType;->USER:Lcom/vk/im/engine/models/MemberType;
 
-    iget-object p3, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iget-object p3, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
     const-string p4, "null cannot be cast to non-null type com.vk.im.engine.models.EntityIntMap<com.vk.im.engine.models.Profile>"
 
     if-eqz p3, :cond_3
 
-    invoke-static {p2, p3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p2, p3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p2
 
@@ -580,11 +580,11 @@
     .line 8
     sget-object v0, Lcom/vk/im/engine/models/MemberType;->CONTACT:Lcom/vk/im/engine/models/MemberType;
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/EntityIntMap;
 
     if-eqz v1, :cond_2
 
-    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -595,11 +595,11 @@
     .line 9
     sget-object v0, Lcom/vk/im/engine/models/MemberType;->EMAIL:Lcom/vk/im/engine/models/MemberType;
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
     if-eqz v1, :cond_1
 
-    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -610,11 +610,11 @@
     .line 10
     sget-object v0, Lcom/vk/im/engine/models/MemberType;->GROUP:Lcom/vk/im/engine/models/MemberType;
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
 
     if-eqz v1, :cond_0
 
-    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p4
 
@@ -625,11 +625,11 @@
     .line 11
     sget-object p4, Lcom/vk/im/engine/models/MemberType;->UNKNOWN:Lcom/vk/im/engine/models/MemberType;
 
-    new-instance v0, Lcom/vk/im/engine/models/a;
+    new-instance v0, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {v0, p3}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {v0, p3}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
-    invoke-static {p4, v0}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p4, v0}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p3
 
@@ -677,7 +677,7 @@
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x1
@@ -687,9 +687,9 @@
     if-eqz p6, :cond_0
 
     .line 2
-    new-instance p1, Lcom/vk/im/engine/models/a;
+    new-instance p1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p1, v0}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
     :cond_0
     and-int/lit8 p6, p5, 0x2
@@ -697,9 +697,9 @@
     if-eqz p6, :cond_1
 
     .line 3
-    new-instance p2, Lcom/vk/im/engine/models/a;
+    new-instance p2, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p2, v0}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {p2, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
     :cond_1
     and-int/lit8 p6, p5, 0x4
@@ -707,9 +707,9 @@
     if-eqz p6, :cond_2
 
     .line 4
-    new-instance p3, Lcom/vk/im/engine/models/a;
+    new-instance p3, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p3, v0}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {p3, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
     :cond_2
     and-int/lit8 p5, p5, 0x8
@@ -717,17 +717,17 @@
     if-eqz p5, :cond_3
 
     .line 5
-    new-instance p4, Lcom/vk/im/engine/models/a;
+    new-instance p4, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p4, v0}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {p4, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
     :cond_3
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/models/j;)V
+.method public constructor <init>(Lcom/vk/im/engine/models/Profile;)V
     .locals 0
 
     .line 47
@@ -747,7 +747,7 @@
             "(",
             "Ljava/util/Collection<",
             "+",
-            "Lcom/vk/im/engine/models/j;",
+            "Lcom/vk/im/engine/models/Profile;",
             ">;)V"
         }
     .end annotation
@@ -772,26 +772,26 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/models/j;
+    check-cast v0, Lcom/vk/im/engine/models/Profile;
 
     .line 50
     instance-of v1, v0, Lcom/vk/im/engine/models/users/User;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iget-object v1, v1, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v1, v1, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     const-string v2, "users.cached"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/u;->getId()I
+    invoke-interface {v0}, Lcom/vk/im/engine/models/WithId;->getId()I
 
     move-result v2
 
-    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -801,19 +801,19 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iget-object v1, v1, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v1, v1, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     const-string v2, "emails.cached"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/u;->getId()I
+    invoke-interface {v0}, Lcom/vk/im/engine/models/WithId;->getId()I
 
     move-result v2
 
-    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -823,19 +823,19 @@
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iget-object v1, v1, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v1, v1, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     const-string v2, "groups.cached"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/u;->getId()I
+    invoke-interface {v0}, Lcom/vk/im/engine/models/WithId;->getId()I
 
     move-result v2
 
-    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -845,19 +845,19 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iget-object v1, v1, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v1, v1, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     const-string v2, "contacts.cached"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/u;->getId()I
+    invoke-interface {v0}, Lcom/vk/im/engine/models/WithId;->getId()I
 
     move-result v2
 
-    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v1, v2, v0}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -924,9 +924,9 @@
 
     .line 89
     :cond_0
-    new-instance p1, Lcom/vk/im/engine/models/a;
+    new-instance p1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p1, v0}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 90
     new-instance v0, Landroid/util/SparseArray;
@@ -970,9 +970,9 @@
 
     .line 95
     :cond_1
-    new-instance p2, Lcom/vk/im/engine/models/a;
+    new-instance p2, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p2, v0}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p2, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 96
     new-instance v0, Landroid/util/SparseArray;
@@ -1016,12 +1016,12 @@
 
     .line 101
     :cond_2
-    new-instance p3, Lcom/vk/im/engine/models/a;
+    new-instance p3, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p3, v0}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p3, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 102
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
@@ -1088,9 +1088,9 @@
 
     .line 64
     :cond_0
-    new-instance p1, Lcom/vk/im/engine/models/a;
+    new-instance p1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p1, v0}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 65
     new-instance v0, Landroid/util/SparseArray;
@@ -1134,9 +1134,9 @@
 
     .line 70
     :cond_1
-    new-instance p2, Lcom/vk/im/engine/models/a;
+    new-instance p2, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p2, v0}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p2, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 71
     new-instance v0, Landroid/util/SparseArray;
@@ -1180,9 +1180,9 @@
 
     .line 76
     :cond_2
-    new-instance p3, Lcom/vk/im/engine/models/a;
+    new-instance p3, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p3, v0}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p3, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 77
     new-instance v0, Landroid/util/SparseArray;
@@ -1226,12 +1226,12 @@
 
     .line 82
     :cond_3
-    new-instance p4, Lcom/vk/im/engine/models/a;
+    new-instance p4, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {p4, v0}, Lcom/vk/im/engine/models/a;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {p4, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(Landroid/util/SparseArray;)V
 
     .line 83
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
@@ -1245,40 +1245,40 @@
     new-instance v0, Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     .line 2
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iget-object v1, v1, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v1, v1, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     const-string v2, "users.cached"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
-    iget-object v2, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/a;
+    iget-object v2, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iget-object v2, v2, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v2, v2, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     const-string v3, "contacts.cached"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
-    iget-object v3, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iget-object v3, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iget-object v3, v3, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v3, v3, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     const-string v4, "emails.cached"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    iget-object v4, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iget-object v4, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iget-object v4, v4, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v4, v4, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     const-string v5, "groups.cached"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;-><init>(Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;Landroid/util/SparseArray;)V
@@ -1319,7 +1319,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/engine/models/a;
+    check-cast v2, Lcom/vk/im/engine/models/EntityIntMap;
 
     iget-object v3, p1, Lcom/vk/im/engine/models/ProfilesInfo;->a:Ljava/util/Map;
 
@@ -1331,9 +1331,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/models/a;
+    check-cast v1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v2, v1}, Lcom/vk/im/engine/models/a;->b(Lcom/vk/im/engine/models/a;)Lcom/vk/im/engine/models/a;
+    invoke-virtual {v2, v1}, Lcom/vk/im/engine/models/EntityIntMap;->b(Lcom/vk/im/engine/models/EntityIntMap;)Lcom/vk/im/engine/models/EntityIntMap;
 
     goto :goto_0
 
@@ -1341,13 +1341,13 @@
     return-object p0
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/j;)Lcom/vk/im/engine/models/ProfilesInfo;
+.method public final a(Lcom/vk/im/engine/models/Profile;)Lcom/vk/im/engine/models/ProfilesInfo;
     .locals 2
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->a:Ljava/util/Map;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->S()Lcom/vk/im/engine/models/MemberType;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->S()Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v1
 
@@ -1357,67 +1357,67 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/im/engine/models/a;
+    check-cast v0, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->L()I
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->L()I
 
     move-result v1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/im/engine/models/a;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/im/engine/models/EntityIntMap;->a(ILjava/lang/Object;)V
 
     return-object p0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/l;)Lcom/vk/im/engine/models/ProfilesInfo;
+.method public final a(Lcom/vk/im/engine/models/ProfilesIds1;)Lcom/vk/im/engine/models/ProfilesInfo;
     .locals 2
 
     .line 12
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/l;->d()Lcom/vk/im/engine/utils/collection/h;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/ProfilesIds1;->d()Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/im/engine/utils/collection/h;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/im/engine/utils/collection/IntSet;)V
 
     .line 13
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/l;->a()Lcom/vk/im/engine/utils/collection/h;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/ProfilesIds1;->a()Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/im/engine/utils/collection/h;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/im/engine/utils/collection/IntSet;)V
 
     .line 14
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/l;->b()Lcom/vk/im/engine/utils/collection/h;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/ProfilesIds1;->b()Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/im/engine/utils/collection/h;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/im/engine/utils/collection/IntSet;)V
 
     .line 15
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/l;->c()Lcom/vk/im/engine/utils/collection/h;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/ProfilesIds1;->c()Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/im/engine/utils/collection/h;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/im/engine/utils/collection/IntSet;)V
 
     return-object p0
 .end method
 
-.method public final a(Ljava/util/Collection;)Lcom/vk/im/engine/models/l;
+.method public final a(Ljava/util/Collection;)Lcom/vk/im/engine/models/ProfilesIds1;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1425,12 +1425,12 @@
             "Ljava/util/Collection<",
             "Lcom/vk/im/engine/models/Member;",
             ">;)",
-            "Lcom/vk/im/engine/models/l;"
+            "Lcom/vk/im/engine/models/ProfilesIds1;"
         }
     .end annotation
 
     .line 1
-    new-instance v7, Lcom/vk/im/engine/models/l;
+    new-instance v7, Lcom/vk/im/engine/models/ProfilesIds1;
 
     const/4 v1, 0x0
 
@@ -1446,7 +1446,7 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/models/l;-><init>(Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/utils/collection/h;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/models/ProfilesIds1;-><init>(Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/utils/collection/IntSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1474,7 +1474,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v7, v0}, Lcom/vk/im/engine/models/l;->a(Lcom/vk/im/engine/models/Member;)V
+    invoke-virtual {v7, v0}, Lcom/vk/im/engine/models/ProfilesIds1;->a(Lcom/vk/im/engine/models/Member;)V
 
     goto :goto_0
 
@@ -1486,24 +1486,24 @@
     .locals 1
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-static {v0, p1}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/im/engine/models/a;Lcom/vk/core/serialize/Serializer;)V
+    invoke-static {v0, p1}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/core/serialize/Serializer;)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-static {v0, p1}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/im/engine/models/a;Lcom/vk/core/serialize/Serializer;)V
+    invoke-static {v0, p1}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/core/serialize/Serializer;)V
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-static {v0, p1}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/im/engine/models/a;Lcom/vk/core/serialize/Serializer;)V
+    invoke-static {v0, p1}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/core/serialize/Serializer;)V
 
     .line 11
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-static {v0, p1}, Lcom/vk/im/engine/models/a;->a(Lcom/vk/im/engine/models/a;Lcom/vk/core/serialize/Serializer;)V
+    invoke-static {v0, p1}, Lcom/vk/im/engine/models/EntityIntMap;->a(Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/core/serialize/Serializer;)V
 
     return-void
 .end method
@@ -1515,7 +1515,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/engine/models/j;",
+            "Lcom/vk/im/engine/models/Profile;",
             ">;)",
             "Lcom/vk/im/engine/models/ProfilesInfo;"
         }
@@ -1537,10 +1537,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/models/j;
+    check-cast v0, Lcom/vk/im/engine/models/Profile;
 
     .line 7
-    invoke-virtual {p0, v0}, Lcom/vk/im/engine/models/ProfilesInfo;->a(Lcom/vk/im/engine/models/j;)Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p0, v0}, Lcom/vk/im/engine/models/ProfilesInfo;->a(Lcom/vk/im/engine/models/Profile;)Lcom/vk/im/engine/models/ProfilesInfo;
 
     goto :goto_0
 
@@ -1548,11 +1548,11 @@
     return-object p0
 .end method
 
-.method public final b(Lcom/vk/im/engine/models/ProfilesInfo;)Lcom/vk/im/engine/models/l;
+.method public final b(Lcom/vk/im/engine/models/ProfilesInfo;)Lcom/vk/im/engine/models/ProfilesIds1;
     .locals 8
 
     .line 1
-    new-instance v7, Lcom/vk/im/engine/models/l;
+    new-instance v7, Lcom/vk/im/engine/models/ProfilesIds1;
 
     const/4 v1, 0x0
 
@@ -1568,7 +1568,7 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/models/l;-><init>(Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/utils/collection/h;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/models/ProfilesIds1;-><init>(Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/utils/collection/IntSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->a:Ljava/util/Map;
@@ -1600,7 +1600,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/engine/models/a;
+    check-cast v2, Lcom/vk/im/engine/models/EntityIntMap;
 
     iget-object v3, p1, Lcom/vk/im/engine/models/ProfilesInfo;->a:Ljava/util/Map;
 
@@ -1612,9 +1612,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/im/engine/models/a;
+    check-cast v3, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v2, v3}, Lcom/vk/im/engine/models/a;->c(Lcom/vk/im/engine/models/a;)Lcom/vk/im/engine/utils/collection/d;
+    invoke-virtual {v2, v3}, Lcom/vk/im/engine/models/EntityIntMap;->c(Lcom/vk/im/engine/models/EntityIntMap;)Lcom/vk/im/engine/utils/collection/IntCollection;
 
     move-result-object v2
 
@@ -1627,9 +1627,9 @@
 
     const-string v3, "intersection"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v7, v1, v2}, Lcom/vk/im/engine/models/l;->a(Lcom/vk/im/engine/models/MemberType;Lcom/vk/im/engine/utils/collection/d;)V
+    invoke-virtual {v7, v1, v2}, Lcom/vk/im/engine/models/ProfilesIds1;->a(Lcom/vk/im/engine/models/MemberType;Lcom/vk/im/engine/utils/collection/IntCollection;)V
 
     goto :goto_0
 
@@ -1678,16 +1678,16 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/models/a;
+    check-cast v1, Lcom/vk/im/engine/models/EntityIntMap;
 
     .line 5
     invoke-interface {p1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/engine/models/a;
+    check-cast v2, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/engine/models/a;->d(Lcom/vk/im/engine/models/a;)V
+    invoke-virtual {v1, v2}, Lcom/vk/im/engine/models/EntityIntMap;->d(Lcom/vk/im/engine/models/EntityIntMap;)V
 
     goto :goto_0
 
@@ -1711,20 +1711,20 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/im/engine/models/a;
+    check-cast v0, Lcom/vk/im/engine/models/EntityIntMap;
 
     invoke-virtual {p1}, Lcom/vk/im/engine/models/Member;->getId()I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/a;->c(I)Z
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/EntityIntMap;->c(I)Z
 
     move-result p1
 
     return p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -1764,9 +1764,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/models/a;
+    check-cast v1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/a;->a()V
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/EntityIntMap;->a()V
 
     goto :goto_0
 
@@ -1785,7 +1785,7 @@
     return-object v0
 .end method
 
-.method public final d(Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/j;
+.method public final d(Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/Profile;
     .locals 3
 
     const/4 v0, 0x0
@@ -1803,11 +1803,11 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/models/a;
+    check-cast v1, Lcom/vk/im/engine/models/EntityIntMap;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, v1, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v1, v1, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     if-eqz v1, :cond_0
 
@@ -1821,7 +1821,7 @@
 
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/im/engine/models/j;
+    check-cast v0, Lcom/vk/im/engine/models/Profile;
 
     :cond_0
     return-object v0
@@ -1860,7 +1860,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/engine/models/a;
+    check-cast v2, Lcom/vk/im/engine/models/EntityIntMap;
 
     iget-object v3, p1, Lcom/vk/im/engine/models/ProfilesInfo;->a:Ljava/util/Map;
 
@@ -1872,9 +1872,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/models/a;
+    check-cast v1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v2, v1}, Lcom/vk/im/engine/models/a;->e(Lcom/vk/im/engine/models/a;)V
+    invoke-virtual {v2, v1}, Lcom/vk/im/engine/models/EntityIntMap;->e(Lcom/vk/im/engine/models/EntityIntMap;)V
 
     goto :goto_0
 
@@ -1898,20 +1898,20 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/im/engine/models/a;
+    check-cast v0, Lcom/vk/im/engine/models/EntityIntMap;
 
     invoke-virtual {p1}, Lcom/vk/im/engine/models/Member;->getId()I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/a;->i(I)Z
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/EntityIntMap;->i(I)Z
 
     move-result p1
 
     return p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -1929,41 +1929,41 @@
 
     check-cast p1, Lcom/vk/im/engine/models/ProfilesInfo;
 
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iget-object v1, p1, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iget-object v1, p1, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/a;
-
-    iget-object v1, p1, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/a;
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iget-object v1, p1, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iget-object v1, p1, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
-    iget-object p1, p1, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iget-object v1, p1, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
+
+    iget-object p1, p1, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
+
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1996,7 +1996,7 @@
     return p1
 .end method
 
-.method public final get(I)Lcom/vk/im/engine/models/j;
+.method public final get(I)Lcom/vk/im/engine/models/Profile;
     .locals 2
 
     .line 1
@@ -2010,11 +2010,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/models/a;
+    check-cast v0, Lcom/vk/im/engine/models/EntityIntMap;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     if-eqz v0, :cond_0
 
@@ -2026,7 +2026,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/j;
+    check-cast p1, Lcom/vk/im/engine/models/Profile;
 
     goto :goto_0
 
@@ -2040,13 +2040,13 @@
 .method public hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/a;->hashCode()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityIntMap;->hashCode()I
 
     move-result v0
 
@@ -2058,11 +2058,11 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/a;
+    iget-object v2, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/EntityIntMap;
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/models/a;->hashCode()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/models/EntityIntMap;->hashCode()I
 
     move-result v2
 
@@ -2076,11 +2076,11 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iget-object v2, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/models/a;->hashCode()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/models/EntityIntMap;->hashCode()I
 
     move-result v2
 
@@ -2094,11 +2094,11 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iget-object v2, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
 
     if-eqz v2, :cond_3
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/models/a;->hashCode()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/models/EntityIntMap;->hashCode()I
 
     move-result v1
 
@@ -2108,58 +2108,58 @@
     return v0
 .end method
 
-.method public final t1()Lcom/vk/im/engine/models/l;
+.method public final t1()Lcom/vk/im/engine/models/ProfilesIds1;
     .locals 6
 
     .line 1
-    new-instance v0, Lcom/vk/im/engine/models/l;
+    new-instance v0, Lcom/vk/im/engine/models/ProfilesIds1;
 
     .line 2
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/a;->b()Lcom/vk/im/engine/utils/collection/h;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/EntityIntMap;->b()Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object v1
 
     const-string v2, "users.collectMissedExpired()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
-    iget-object v2, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/a;
+    iget-object v2, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/models/a;->b()Lcom/vk/im/engine/utils/collection/h;
+    invoke-virtual {v2}, Lcom/vk/im/engine/models/EntityIntMap;->b()Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object v2
 
     const-string v3, "contacts.collectMissedExpired()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
-    iget-object v3, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iget-object v3, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/models/a;->b()Lcom/vk/im/engine/utils/collection/h;
+    invoke-virtual {v3}, Lcom/vk/im/engine/models/EntityIntMap;->b()Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object v3
 
     const-string v4, "emails.collectMissedExpired()"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    iget-object v4, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iget-object v4, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/models/a;->b()Lcom/vk/im/engine/utils/collection/h;
+    invoke-virtual {v4}, Lcom/vk/im/engine/models/EntityIntMap;->b()Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object v4
 
     const-string v5, "groups.collectMissedExpired()"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/im/engine/models/l;-><init>(Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/utils/collection/h;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/im/engine/models/ProfilesIds1;-><init>(Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/utils/collection/IntSet;)V
 
     return-object v0
 .end method
@@ -2175,7 +2175,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2183,7 +2183,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->c:Lcom/vk/im/engine/models/EntityIntMap;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2191,7 +2191,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2199,7 +2199,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iget-object v1, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2214,53 +2214,53 @@
     return-object v0
 .end method
 
-.method public final u1()Lcom/vk/im/engine/models/a;
+.method public final u1()Lcom/vk/im/engine/models/EntityIntMap;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/emails/Email;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->d:Lcom/vk/im/engine/models/EntityIntMap;
 
     return-object v0
 .end method
 
-.method public final v1()Lcom/vk/im/engine/models/a;
+.method public final v1()Lcom/vk/im/engine/models/EntityIntMap;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/groups/Group;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->e:Lcom/vk/im/engine/models/EntityIntMap;
 
     return-object v0
 .end method
 
-.method public final w1()Lcom/vk/im/engine/models/a;
+.method public final w1()Lcom/vk/im/engine/models/EntityIntMap;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/users/User;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/a;
+    iget-object v0, p0, Lcom/vk/im/engine/models/ProfilesInfo;->b:Lcom/vk/im/engine/models/EntityIntMap;
 
     return-object v0
 .end method
@@ -2310,9 +2310,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/models/a;
+    check-cast v1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/a;->e()Z
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/EntityIntMap;->e()Z
 
     move-result v1
 
@@ -2370,9 +2370,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/models/a;
+    check-cast v1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/a;->f()Z
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/EntityIntMap;->f()Z
 
     move-result v1
 

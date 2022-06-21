@@ -12,10 +12,10 @@
 
 
 # static fields
-.field private static final B:Lcom/vk/dto/common/data/c;
+.field private static final B:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/common/Restriction;",
             ">;"
         }
@@ -61,7 +61,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/common/Restriction$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/common/Restriction$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/common/Restriction;->C:Lcom/vk/dto/common/Restriction$c;
 
@@ -78,7 +78,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/common/Restriction$a;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/common/Restriction;->B:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/common/Restriction;->B:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method
@@ -108,11 +108,11 @@
     return-void
 .end method
 
-.method public static final synthetic z1()Lcom/vk/dto/common/data/c;
+.method public static final synthetic z1()Lcom/vk/dto/common/data/JsonParser;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/dto/common/Restriction;->B:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/common/Restriction;->B:Lcom/vk/dto/common/data/JsonParser;
 
     return-object v0
 .end method
@@ -180,7 +180,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/common/Restriction;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -190,7 +190,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/common/Restriction;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -218,7 +218,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/common/Restriction;->f:Lcom/vk/dto/common/Image;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -228,7 +228,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/common/Restriction;->g:Lcom/vk/dto/common/Image;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -238,7 +238,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/common/Restriction;->h:Lcom/vk/dto/common/RestrictionButton;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

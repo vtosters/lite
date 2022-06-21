@@ -45,7 +45,7 @@
     return-void
 .end method
 
-.method public static a(Lcom/vk/photogallery/PhotoGalleryView$Callback;ILcom/vk/photogallery/dto/d;)V
+.method public static a(Lcom/vk/photogallery/PhotoGalleryView$Callback;ILcom/vk/photogallery/dto/GalleryState4;)V
     .locals 0
 
     return-void
@@ -73,7 +73,7 @@
 
     sget-object v0, Lcom/vk/photogallery/PhotoGalleryView$Callback$getSelectionStrategy$1;->a:Lcom/vk/photogallery/PhotoGalleryView$Callback$getSelectionStrategy$1;
 
-    invoke-direct {p0, v0}, Lcom/vk/photogallery/PhotoGalleryView$c$a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, v0}, Lcom/vk/photogallery/PhotoGalleryView$c$a;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     return-object p0
 .end method

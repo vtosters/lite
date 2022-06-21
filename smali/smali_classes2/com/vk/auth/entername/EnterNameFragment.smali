@@ -3,7 +3,7 @@
 .source "EnterNameFragment.kt"
 
 # interfaces
-.implements Lcom/vk/auth/entername/b;
+.implements Lcom/vk/auth/entername/EnterNameView;
 
 
 # annotations
@@ -18,13 +18,13 @@
         "Lcom/vk/auth/base/BaseAuthFragment<",
         "Lcom/vk/auth/entername/EnterNamePresenter;",
         ">;",
-        "Lcom/vk/auth/entername/b;"
+        "Lcom/vk/auth/entername/EnterNameView;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic N:[Lkotlin/u/j;
+.field static final synthetic N:[Lkotlin/u/KProperty5;
 
 .field private static final O:Landroid/text/InputFilter;
 
@@ -44,9 +44,9 @@
 
 .field private H:Lcom/vk/auth/ui/AuthCircleView;
 
-.field private I:Lcom/vk/auth/main/i$b;
+.field private I:Lcom/vk/auth/main/AuthUiManager$b;
 
-.field private final J:Lio/reactivex/disposables/a;
+.field private final J:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private final K:Lcom/vk/auth/entername/EnterNameFragment$d;
 
@@ -54,7 +54,7 @@
 
 .field private final M:Lcom/vk/auth/entername/EnterNameFragment$j;
 
-.field private final f:Lkotlin/e;
+.field private final f:Lkotlin/Lazy2;
 
 .field protected g:Landroid/widget/TextView;
 
@@ -67,13 +67,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/auth/entername/EnterNameFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -81,21 +81,21 @@
 
     const-string v4, "getTitle()Ljava/lang/CharSequence;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/auth/entername/EnterNameFragment;->N:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/auth/entername/EnterNameFragment;->N:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/auth/entername/EnterNameFragment$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/entername/EnterNameFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/entername/EnterNameFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     sget-object v0, Lcom/vk/auth/entername/EnterNameFragment$a;->a:Lcom/vk/auth/entername/EnterNameFragment$a;
@@ -116,18 +116,18 @@
 
     invoke-direct {v0, p0}, Lcom/vk/auth/entername/EnterNameFragment$title$2;-><init>(Lcom/vk/auth/entername/EnterNameFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/auth/entername/EnterNameFragment;->f:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/auth/entername/EnterNameFragment;->f:Lkotlin/Lazy2;
 
     .line 3
-    new-instance v0, Lio/reactivex/disposables/a;
+    new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {v0}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/auth/entername/EnterNameFragment;->J:Lio/reactivex/disposables/a;
+    iput-object v0, p0, Lcom/vk/auth/entername/EnterNameFragment;->J:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 4
     new-instance v0, Lcom/vk/auth/entername/EnterNameFragment$d;
@@ -157,7 +157,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p0
 
@@ -196,7 +196,7 @@
     :cond_0
     const-string v0, "genderFemaleView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -204,7 +204,7 @@
     const-string v0, "genderMaleView"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -277,7 +277,7 @@
     return-void
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -292,7 +292,7 @@
     throw v0
 
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -300,7 +300,7 @@
     const-string v0, "subtitleView"
 
     .line 7
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -308,7 +308,7 @@
     const-string v0, "titleView"
 
     .line 8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -341,7 +341,7 @@
     :cond_0
     const-string v0, "genderFemaleView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -349,7 +349,7 @@
     const-string v0, "genderMaleView"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -420,7 +420,7 @@
     return-void
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -435,7 +435,7 @@
     throw v0
 
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -443,7 +443,7 @@
     const-string v0, "subtitleView"
 
     .line 7
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -451,7 +451,7 @@
     const-string v0, "titleView"
 
     .line 8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -469,7 +469,7 @@
     :cond_0
     const-string v0, "firstNameView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -489,7 +489,7 @@
     :cond_0
     const-string v0, "lastNameView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -499,15 +499,15 @@
 .method protected final M4()Ljava/lang/CharSequence;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/auth/entername/EnterNameFragment;->f:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/auth/entername/EnterNameFragment;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/auth/entername/EnterNameFragment;->N:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/auth/entername/EnterNameFragment;->N:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -528,7 +528,7 @@
 
     const-string v1, "getString(R.string.vk_au\u2026sign_up_enter_name_title)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -559,7 +559,7 @@
     :cond_0
     const-string v0, "genderFemaleView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -567,7 +567,7 @@
     const-string v0, "genderMaleView"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -576,18 +576,18 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/auth/entername/EnterNameFragment;->I:Lcom/vk/auth/main/i$b;
+    iget-object v0, p0, Lcom/vk/auth/entername/EnterNameFragment;->I:Lcom/vk/auth/main/AuthUiManager$b;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/auth/main/i$b;->a(Landroid/net/Uri;)V
+    invoke-interface {v0, p1}, Lcom/vk/auth/main/AuthUiManager$b;->a(Landroid/net/Uri;)V
 
     return-void
 
     :cond_0
     const-string p1, "avatarController"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -618,7 +618,7 @@
     :cond_0
     const-string p1, "lastNameView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -626,12 +626,12 @@
     const-string p1, "firstNameView"
 
     .line 3
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/auth/base/a;
+.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/auth/base/AuthPresenter;
     .locals 0
 
     .line 1
@@ -697,7 +697,7 @@
     :cond_0
     const-string p1, "termsController"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -705,7 +705,7 @@
     const-string p1, "avatarButton"
 
     .line 5
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -713,7 +713,7 @@
     const-string p1, "lastNameView"
 
     .line 6
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -721,7 +721,7 @@
     const-string p1, "firstNameView"
 
     .line 7
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -745,7 +745,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object v0
 
@@ -754,11 +754,11 @@
     invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->o2()V
 
     .line 2
-    sget-object v0, Lcom/vk/auth/utils/c;->d:Lcom/vk/auth/utils/c;
+    sget-object v0, Lcom/vk/auth/utils/KeyboardController;->d:Lcom/vk/auth/utils/KeyboardController;
 
     iget-object v1, p0, Lcom/vk/auth/entername/EnterNameFragment;->K:Lcom/vk/auth/entername/EnterNameFragment$d;
 
-    invoke-virtual {v0, v1}, Lcom/vk/auth/utils/c;->b(Lcom/vk/auth/utils/c$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/auth/utils/KeyboardController;->b(Lcom/vk/auth/utils/KeyboardController$a;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/auth/entername/EnterNameFragment;->D:Landroid/widget/EditText;
@@ -788,9 +788,9 @@
     invoke-virtual {v0}, Lcom/vk/auth/terms/TermsController;->a()V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/auth/entername/EnterNameFragment;->J:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/auth/entername/EnterNameFragment;->J:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 7
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroyView()V
@@ -801,7 +801,7 @@
     const-string v0, "termsController"
 
     .line 8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -809,7 +809,7 @@
     const-string v0, "firstNameView"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -817,7 +817,7 @@
     const-string v0, "lastNameView"
 
     .line 10
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -837,7 +837,7 @@
 
     const-string v0, "view.findViewById(R.id.title)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -852,7 +852,7 @@
 
     const-string v0, "view.findViewById(R.id.subtitle)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -867,7 +867,7 @@
 
     const-string v0, "view.findViewById(R.id.error)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -880,7 +880,7 @@
 
     const-string v0, "view.findViewById(R.id.avatar_button)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/auth/entername/EnterNameFragment;->B:Landroid/view/View;
 
@@ -893,7 +893,7 @@
 
     const-string v0, "view.findViewById(R.id.avatar_container)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/auth/ui/AuthCircleView;
 
@@ -908,7 +908,7 @@
 
     const-string v0, "view.findViewById(R.id.first_name)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/EditText;
 
@@ -923,7 +923,7 @@
 
     const-string v0, "view.findViewById(R.id.last_name)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/EditText;
 
@@ -938,7 +938,7 @@
 
     const-string v0, "view.findViewById(R.id.gender_container)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     sget p2, Lcom/vk/auth/r/e;->gender_male:I
@@ -949,7 +949,7 @@
 
     const-string v0, "view.findViewById(R.id.gender_male)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -964,7 +964,7 @@
 
     const-string v0, "view.findViewById(R.id.gender_female)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -980,17 +980,17 @@
     .line 13
     new-instance p2, Lcom/vk/auth/terms/TermsController;
 
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/auth/terms/a;
+    check-cast v0, Lcom/vk/auth/terms/TermsPresenter;
 
     const-string v1, "termsContainer"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p2, v0, p1}, Lcom/vk/auth/terms/TermsController;-><init>(Lcom/vk/auth/terms/a;Landroid/view/View;)V
+    invoke-direct {p2, v0, p1}, Lcom/vk/auth/terms/TermsController;-><init>(Lcom/vk/auth/terms/TermsPresenter;Landroid/view/View;)V
 
     iput-object p2, p0, Lcom/vk/auth/entername/EnterNameFragment;->G:Lcom/vk/auth/terms/TermsController;
 
@@ -1003,7 +1003,7 @@
 
     if-eqz p1, :cond_10
 
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object v1
 
@@ -1025,7 +1025,7 @@
     invoke-virtual {p1, v0}, Lcom/vk/auth/terms/TermsController;->c(Z)V
 
     .line 16
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/i;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/AuthUiManager;
 
     move-result-object p1
 
@@ -1035,24 +1035,24 @@
 
     const-string v2, "requireContext()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/auth/main/i;->a(Landroid/content/Context;I)Lcom/vk/auth/main/i$b;
+    invoke-interface {p1, v1, v0}, Lcom/vk/auth/main/AuthUiManager;->a(Landroid/content/Context;I)Lcom/vk/auth/main/AuthUiManager$b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/auth/entername/EnterNameFragment;->I:Lcom/vk/auth/main/i$b;
+    iput-object p1, p0, Lcom/vk/auth/entername/EnterNameFragment;->I:Lcom/vk/auth/main/AuthUiManager$b;
 
     .line 17
     iget-object v1, p0, Lcom/vk/auth/entername/EnterNameFragment;->H:Lcom/vk/auth/ui/AuthCircleView;
 
     if-eqz v1, :cond_e
 
-    iget-object p1, p0, Lcom/vk/auth/entername/EnterNameFragment;->I:Lcom/vk/auth/main/i$b;
+    iget-object p1, p0, Lcom/vk/auth/entername/EnterNameFragment;->I:Lcom/vk/auth/main/AuthUiManager$b;
 
     if-eqz p1, :cond_d
 
-    invoke-interface {p1}, Lcom/vk/auth/main/i$b;->a()Landroid/view/View;
+    invoke-interface {p1}, Lcom/vk/auth/main/AuthUiManager$b;->a()Landroid/view/View;
 
     move-result-object v2
 
@@ -1128,7 +1128,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/auth/entername/EnterNameFragment$onViewCreated$1;-><init>(Lcom/vk/auth/entername/EnterNameFragment;)V
 
-    invoke-static {p1, v3}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v3}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 22
     iget-object p1, p0, Lcom/vk/auth/entername/EnterNameFragment;->E:Landroid/widget/TextView;
@@ -1189,19 +1189,19 @@
 
     if-eqz p1, :cond_4
 
-    invoke-static {p1}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/widget/TextView;)Lcom/vk/auth/utils/b;
+    invoke-static {p1}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/widget/TextView;)Lcom/vk/auth/utils/AuthExtensions1;
 
     move-result-object p1
 
     .line 28
-    invoke-virtual {p1}, Lcom/vk/auth/utils/b;->n()Lcom/vk/auth/utils/b;
+    invoke-virtual {p1}, Lcom/vk/auth/utils/AuthExtensions1;->n()Lcom/vk/auth/utils/AuthExtensions1;
 
     .line 29
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v4, 0x12c
 
-    invoke-virtual {p1, v4, v5, v3}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {p1, v4, v5, v3}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1210,7 +1210,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/auth/entername/EnterNameFragment$h;-><init>(Lcom/vk/auth/entername/EnterNameFragment;)V
 
-    invoke-virtual {p1, v3}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v3}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
@@ -1219,17 +1219,17 @@
 
     if-eqz v3, :cond_3
 
-    invoke-static {v3}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/widget/TextView;)Lcom/vk/auth/utils/b;
+    invoke-static {v3}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/widget/TextView;)Lcom/vk/auth/utils/AuthExtensions1;
 
     move-result-object v2
 
     .line 32
-    invoke-virtual {v2}, Lcom/vk/auth/utils/b;->n()Lcom/vk/auth/utils/b;
+    invoke-virtual {v2}, Lcom/vk/auth/utils/AuthExtensions1;->n()Lcom/vk/auth/utils/AuthExtensions1;
 
     .line 33
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v2, v4, v5, v3}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v2, v4, v5, v3}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -1238,16 +1238,16 @@
 
     invoke-direct {v3, p0}, Lcom/vk/auth/entername/EnterNameFragment$i;-><init>(Lcom/vk/auth/entername/EnterNameFragment;)V
 
-    invoke-virtual {v2, v3}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v2, v3}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v2
 
     .line 35
-    iget-object v3, p0, Lcom/vk/auth/entername/EnterNameFragment;->J:Lio/reactivex/disposables/a;
+    iget-object v3, p0, Lcom/vk/auth/entername/EnterNameFragment;->J:Lio/reactivex/disposables/CompositeDisposable;
 
     const/4 v4, 0x2
 
-    new-array v4, v4, [Lio/reactivex/disposables/b;
+    new-array v4, v4, [Lio/reactivex/disposables/Disposable;
 
     aput-object p1, v4, v0
 
@@ -1255,19 +1255,19 @@
 
     aput-object v2, v4, p1
 
-    invoke-virtual {v3, v4}, Lio/reactivex/disposables/a;->a([Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v3, v4}, Lio/reactivex/disposables/CompositeDisposable;->a([Lio/reactivex/disposables/Disposable;)Z
 
     .line 36
-    sget-object p1, Lcom/vk/auth/utils/c;->d:Lcom/vk/auth/utils/c;
+    sget-object p1, Lcom/vk/auth/utils/KeyboardController;->d:Lcom/vk/auth/utils/KeyboardController;
 
     iget-object v0, p0, Lcom/vk/auth/entername/EnterNameFragment;->K:Lcom/vk/auth/entername/EnterNameFragment$d;
 
-    invoke-virtual {p1, v0}, Lcom/vk/auth/utils/c;->a(Lcom/vk/auth/utils/c$a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/auth/utils/KeyboardController;->a(Lcom/vk/auth/utils/KeyboardController$a;)V
 
     .line 37
-    sget-object p1, Lcom/vk/auth/utils/c;->d:Lcom/vk/auth/utils/c;
+    sget-object p1, Lcom/vk/auth/utils/KeyboardController;->d:Lcom/vk/auth/utils/KeyboardController;
 
-    invoke-virtual {p1}, Lcom/vk/auth/utils/c;->b()Z
+    invoke-virtual {p1}, Lcom/vk/auth/utils/KeyboardController;->b()Z
 
     move-result p1
 
@@ -1293,43 +1293,43 @@
     invoke-virtual {p1, v0}, Lcom/vk/auth/utils/AuthUtils;->c(Landroid/view/View;)V
 
     .line 41
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p1
 
     check-cast p1, Lcom/vk/auth/entername/EnterNamePresenter;
 
-    invoke-virtual {p1, p0}, Lcom/vk/auth/entername/EnterNamePresenter;->a(Lcom/vk/auth/entername/b;)V
+    invoke-virtual {p1, p0}, Lcom/vk/auth/entername/EnterNamePresenter;->a(Lcom/vk/auth/entername/EnterNameView;)V
 
     return-void
 
     .line 42
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 43
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 44
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 45
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 46
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -1337,7 +1337,7 @@
     const-string p1, "genderFemaleView"
 
     .line 47
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -1345,7 +1345,7 @@
     const-string p1, "genderMaleView"
 
     .line 48
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -1353,7 +1353,7 @@
     const-string p1, "avatarButton"
 
     .line 49
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -1361,19 +1361,19 @@
     const-string p1, "titleView"
 
     .line 50
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 51
     :cond_b
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 52
     :cond_c
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -1381,26 +1381,26 @@
     const-string p1, "avatarController"
 
     .line 53
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     :cond_e
     const-string p1, "avatarContainerView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 54
     :cond_f
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 55
     :cond_10
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 .end method

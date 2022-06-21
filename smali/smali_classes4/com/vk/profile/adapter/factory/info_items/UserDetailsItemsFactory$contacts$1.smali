@@ -3,7 +3,7 @@
 .source "UserDetailsItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/util/ArrayList<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
@@ -75,13 +75,13 @@
     if-eqz v5, :cond_0
 
     .line 3
-    new-instance v11, Lcom/vk/profile/adapter/items/p;
+    new-instance v11, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v4, 0x7f0806af
 
     const-string v3, "profile.mobilePhone"
 
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v6, 0x0
 
@@ -97,7 +97,7 @@
 
     move-object v3, v11
 
-    invoke-direct/range {v3 .. v10}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -108,13 +108,13 @@
     if-eqz v14, :cond_1
 
     .line 5
-    new-instance v3, Lcom/vk/profile/adapter/items/p;
+    new-instance v3, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v13, 0x7f0806af
 
     const-string v4, "profile.homePhone"
 
-    invoke-static {v14, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v14, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v15, 0x0
 
@@ -132,7 +132,7 @@
 
     move-object/from16 v16, v4
 
-    invoke-direct/range {v12 .. v19}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v12 .. v19}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -167,7 +167,7 @@
     if-nez v3, :cond_4
 
     .line 7
-    new-instance v3, Lcom/vk/profile/adapter/items/p;
+    new-instance v3, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v7, 0x7f080523
 
@@ -175,7 +175,7 @@
 
     const-string v6, "profile.website"
 
-    invoke-static {v8, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v9, 0x0
 
@@ -191,7 +191,7 @@
 
     move-object v6, v3
 
-    invoke-direct/range {v6 .. v13}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v13}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -202,13 +202,13 @@
     if-eqz v3, :cond_5
 
     .line 9
-    new-instance v6, Lcom/vk/profile/adapter/items/p;
+    new-instance v6, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v15, 0x7f080563
 
     const-string v7, "profile.screenName"
 
-    invoke-static {v3, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v17, 0x0
 
@@ -228,7 +228,7 @@
 
     move-object/from16 v18, v7
 
-    invoke-direct/range {v14 .. v21}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v14 .. v21}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -239,13 +239,13 @@
     if-eqz v3, :cond_6
 
     .line 11
-    new-instance v6, Lcom/vk/profile/adapter/items/p;
+    new-instance v6, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v23, 0x7f080561
 
     const-string v7, "profile.twitter"
 
-    invoke-static {v3, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v25, 0x0
 
@@ -265,7 +265,7 @@
 
     move-object/from16 v26, v7
 
-    invoke-direct/range {v22 .. v29}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v22 .. v29}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -276,13 +276,13 @@
     if-eqz v10, :cond_7
 
     .line 13
-    new-instance v3, Lcom/vk/profile/adapter/items/p;
+    new-instance v3, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v9, 0x7f08055a
 
     const-string v6, "profile.instagram"
 
-    invoke-static {v10, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v11, 0x0
 
@@ -298,7 +298,7 @@
 
     move-object v8, v3
 
-    invoke-direct/range {v8 .. v15}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v8 .. v15}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -309,13 +309,13 @@
     if-eqz v3, :cond_8
 
     .line 15
-    new-instance v6, Lcom/vk/profile/adapter/items/p;
+    new-instance v6, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v17, 0x7f080557
 
     const-string v7, "profile.facebookName"
 
-    invoke-static {v3, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v19, 0x0
 
@@ -335,7 +335,7 @@
 
     move-object/from16 v20, v7
 
-    invoke-direct/range {v16 .. v23}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v16 .. v23}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -346,13 +346,13 @@
     if-eqz v10, :cond_9
 
     .line 17
-    new-instance v3, Lcom/vk/profile/adapter/items/p;
+    new-instance v3, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v9, 0x7f08055e
 
     const-string v6, "profile.skype"
 
-    invoke-static {v10, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v11, 0x0
 
@@ -368,7 +368,7 @@
 
     move-object v8, v3
 
-    invoke-direct/range {v8 .. v15}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v8 .. v15}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -383,7 +383,7 @@
     if-eqz v1, :cond_a
 
     .line 19
-    new-instance v1, Lcom/vk/profile/adapter/items/n;
+    new-instance v1, Lcom/vk/profile/adapter/items/DetailsHeaderItem;
 
     const v7, 0x7f120514
 
@@ -397,7 +397,7 @@
 
     move-object v6, v1
 
-    invoke-direct/range {v6 .. v11}, Lcom/vk/profile/adapter/items/n;-><init>(ILjava/lang/String;Ljava/lang/Runnable;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/profile/adapter/items/DetailsHeaderItem;-><init>(ILjava/lang/String;Ljava/lang/Runnable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v5, v1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 

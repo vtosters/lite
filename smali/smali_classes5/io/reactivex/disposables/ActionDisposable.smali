@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lio/reactivex/disposables/ReferenceDisposable<",
-        "Lc/a/z/a;",
+        "Lio/reactivex/functions/Action;",
         ">;"
     }
 .end annotation
@@ -18,7 +18,7 @@
 
 
 # direct methods
-.method constructor <init>(Lc/a/z/a;)V
+.method constructor <init>(Lio/reactivex/functions/Action;)V
     .locals 0
 
     .line 1
@@ -29,12 +29,12 @@
 
 
 # virtual methods
-.method protected a(Lc/a/z/a;)V
+.method protected a(Lio/reactivex/functions/Action;)V
     .locals 0
 
     .line 2
     :try_start_0
-    invoke-interface {p1}, Lc/a/z/a;->run()V
+    invoke-interface {p1}, Lio/reactivex/functions/Action;->run()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -55,9 +55,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lc/a/z/a;
+    check-cast p1, Lio/reactivex/functions/Action;
 
-    invoke-virtual {p0, p1}, Lio/reactivex/disposables/ActionDisposable;->a(Lc/a/z/a;)V
+    invoke-virtual {p0, p1}, Lio/reactivex/disposables/ActionDisposable;->a(Lio/reactivex/functions/Action;)V
 
     return-void
 .end method

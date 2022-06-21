@@ -3,20 +3,20 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/fragments/y0;
+.field private final synthetic a:Lcom/vtosters/lite/general/fragments/BaseNewsSearchFragment;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/y0;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/general/fragments/BaseNewsSearchFragment;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/a;->a:Lcom/vtosters/lite/fragments/y0;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/a;->a:Lcom/vtosters/lite/general/fragments/BaseNewsSearchFragment;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/a;->a:Lcom/vtosters/lite/fragments/y0;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/a;->a:Lcom/vtosters/lite/general/fragments/BaseNewsSearchFragment;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/y0;->d5()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/general/fragments/BaseNewsSearchFragment;->d5()Ljava/lang/String;
 
     move-result-object v0
 

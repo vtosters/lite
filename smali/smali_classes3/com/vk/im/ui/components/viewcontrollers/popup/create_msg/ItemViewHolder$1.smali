@@ -3,7 +3,7 @@
 .source "ItemViewHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,14 +52,14 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder$1;->this$0:Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;)Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/c;
+    invoke-static {p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;)Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/Item;
 
     move-result-object p1
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder$1;->this$0:Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->b(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;)Lkotlin/jvm/b/b;
+    invoke-static {v0}, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;->b(Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder;)Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -82,7 +82,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/create_msg/ItemViewHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

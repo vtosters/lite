@@ -50,11 +50,11 @@
     .line 2
     iget-object p2, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC$a;->a:Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->b()Lcom/vk/im/ui/views/adapter_delegate/a;
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->b()Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/views/adapter_delegate/a;->getItemCount()I
+    invoke-virtual {p2}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->getItemCount()I
 
     move-result p2
 

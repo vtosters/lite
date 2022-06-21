@@ -3,7 +3,7 @@
 .source "VoipCallActivity.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -50,11 +50,11 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/voip/m;->c:Lcom/vk/voip/m$a;
+    sget-object v0, Lcom/vk/voip/VoipBottomSheetDialog;->c:Lcom/vk/voip/VoipBottomSheetDialog$a;
 
     iget-object v1, p0, Lcom/vk/voip/VoipCallActivity$onCreate$3;->this$0:Lcom/vk/voip/VoipCallActivity;
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/voip/m$a;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/vk/voip/m;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/voip/VoipBottomSheetDialog$a;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/vk/voip/VoipBottomSheetDialog;
 
     move-result-object p1
 
@@ -79,7 +79,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/voip/VoipCallActivity$onCreate$3;->a(Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

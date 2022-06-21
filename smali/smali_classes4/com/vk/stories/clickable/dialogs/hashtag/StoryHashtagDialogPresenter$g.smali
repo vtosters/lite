@@ -3,7 +3,7 @@
 .source "StoryHashtagDialogPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/c<",
-        "Lcom/vk/stories/clickable/models/e;",
+        "Lkotlin/jvm/b/Functions1<",
+        "Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stories/clickable/models/e;
+    check-cast p1, Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;
 
     check-cast p2, Ljava/lang/Number;
 
@@ -63,24 +63,24 @@
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter$g;->a(Lcom/vk/stories/clickable/models/e;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter$g;->a(Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/stories/clickable/models/e;I)V
+.method public a(Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;I)V
     .locals 3
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter$g;->a:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;->e(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;)Lcom/vk/stories/clickable/dialogs/hashtag/c;
+    invoke-static {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;->e(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;)Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/c;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v0
 
@@ -100,7 +100,7 @@
 
     const-string v1, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter$g;->a:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;
@@ -140,7 +140,7 @@
     .line 6
     iget-object p2, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter$g;->a:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/e;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;->a()Ljava/lang/String;
 
     move-result-object p1
 

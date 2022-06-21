@@ -3,12 +3,12 @@
 .source "MusicPlayerAuthorizationManager.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->a(I)Lc/a/t;
+    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->a(I)Lio/reactivex/Single;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/x<",
+        "Lio/reactivex/SingleSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,14 +49,14 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/m;)Lc/a/t;
+.method public final a(Lkotlin/Unit;)Lio/reactivex/Single;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ")",
-            "Lc/a/t<",
+            "Lio/reactivex/Single<",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;>;"
@@ -66,7 +66,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$d;->a:Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;
 
-    invoke-virtual {p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->c()Lc/a/t;
+    invoke-virtual {p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->c()Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -77,9 +77,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$d;->a(Lkotlin/m;)Lc/a/t;
+    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$d;->a(Lkotlin/Unit;)Lio/reactivex/Single;
 
     move-result-object p1
 

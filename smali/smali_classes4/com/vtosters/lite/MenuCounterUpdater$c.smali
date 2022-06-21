@@ -3,7 +3,7 @@
 .source "MenuCounterUpdater.kt"
 
 # interfaces
-.implements Lc/a/z/b;
+.implements Lio/reactivex/functions/BiConsumer;
 
 
 # annotations
@@ -24,8 +24,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/b<",
-        "Lcom/vk/im/engine/models/b<",
+        "Lio/reactivex/functions/BiConsumer<",
+        "Lcom/vk/im/engine/models/EntityValue<",
         "Ljava/lang/Integer;",
         ">;",
         "Ljava/lang/Throwable;",
@@ -35,14 +35,14 @@
 
 
 # instance fields
-.field final synthetic a:Lio/reactivex/disposables/a;
+.field final synthetic a:Lio/reactivex/disposables/CompositeDisposable;
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/disposables/a;)V
+.method constructor <init>(Lio/reactivex/disposables/CompositeDisposable;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vtosters/lite/MenuCounterUpdater$c;->a:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vtosters/lite/MenuCounterUpdater$c;->a:Lio/reactivex/disposables/CompositeDisposable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,12 +51,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/b;Ljava/lang/Throwable;)V
+.method public final a(Lcom/vk/im/engine/models/EntityValue;Ljava/lang/Throwable;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/b<",
+            "Lcom/vk/im/engine/models/EntityValue<",
             "Ljava/lang/Integer;",
             ">;",
             "Ljava/lang/Throwable;",
@@ -105,7 +105,7 @@
     sget-object p2, Lcom/vtosters/lite/MenuCounterUpdater;->e:Lcom/vtosters/lite/MenuCounterUpdater;
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/b;->e()Z
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/EntityValue;->e()Z
 
     move-result p2
 
@@ -114,7 +114,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/b;->b()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/EntityValue;->b()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -129,13 +129,13 @@
     .line 5
     :cond_2
     :goto_0
-    invoke-static {v0}, Lcom/vtosters/lite/w;->j(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->j(I)V
 
     .line 6
     :goto_1
-    iget-object p1, p0, Lcom/vtosters/lite/MenuCounterUpdater$c;->a:Lio/reactivex/disposables/a;
+    iget-object p1, p0, Lcom/vtosters/lite/MenuCounterUpdater$c;->a:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {p1}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {p1}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     return-void
 .end method
@@ -144,11 +144,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/b;
+    check-cast p1, Lcom/vk/im/engine/models/EntityValue;
 
     check-cast p2, Ljava/lang/Throwable;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/MenuCounterUpdater$c;->a(Lcom/vk/im/engine/models/b;Ljava/lang/Throwable;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/MenuCounterUpdater$c;->a(Lcom/vk/im/engine/models/EntityValue;Ljava/lang/Throwable;)V
 
     return-void
 .end method

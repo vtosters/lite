@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;
-.super Lcom/vk/common/e/a;
+.super Lcom/vk/common/e/BaseItemAdapter;
 .source "NarrativesProfileAdapter.kt"
 
 
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/a<",
-        "Lcom/vk/common/i/b;",
+        "Lcom/vk/common/e/BaseItemAdapter<",
+        "Lcom/vk/common/i/RecyclerItem;",
         ">;"
     }
 .end annotation
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field private final c:Lio/reactivex/disposables/a;
+.field private final c:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private final d:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b;
 
@@ -49,7 +49,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v0, 0x40
 
@@ -77,18 +77,18 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/common/e/a;-><init>(Z)V
+    invoke-direct {p0, v0}, Lcom/vk/common/e/BaseItemAdapter;-><init>(Z)V
 
     iput p1, p0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->e:I
 
     iput-object p2, p0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->f:Ljava/util/List;
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->c:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->c:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 3
     new-instance p1, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b;
@@ -111,20 +111,20 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lio/reactivex/disposables/a;
+.method public static final synthetic a(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lio/reactivex/disposables/CompositeDisposable;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->c:Lio/reactivex/disposables/a;
+    iget-object p0, p0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->c:Lio/reactivex/disposables/CompositeDisposable;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lcom/vk/lists/b;
+.method public static final synthetic b(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lcom/vk/lists/BaseListDataSet;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object p0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
     return-object p0
 .end method
@@ -142,7 +142,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/i0;->b:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->b:Landroidx/recyclerview/widget/RecyclerView;
 
     const/4 v1, 0x0
 
@@ -155,12 +155,12 @@
 
     move-result v3
 
-    invoke-static {v2, v3}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {v2, v3}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v2
 
     .line 3
-    invoke-static {v2}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v2}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v2
 
@@ -169,7 +169,7 @@
 
     invoke-direct {v3, v0}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$findCoverViewByNarrativeId$1;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    invoke-static {v2, v3}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v2, v3}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v2
 
@@ -178,19 +178,19 @@
 
     invoke-direct {v3, v0}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$findCoverViewByNarrativeId$2;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    invoke-static {v2, v3}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v2, v3}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 6
     sget-object v2, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$findCoverViewByNarrativeId$3;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$findCoverViewByNarrativeId$3;
 
-    invoke-static {v0, v2}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v2}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 7
-    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -207,14 +207,14 @@
 
     move-object v3, v2
 
-    check-cast v3, Lcom/vk/profile/adapter/holders/c;
+    check-cast v3, Lcom/vk/profile/adapter/holders/NarrativeProfileHolder1;
 
     .line 8
-    invoke-interface {v3}, Lcom/vk/profile/adapter/holders/c;->W()Ljava/lang/String;
+    invoke-interface {v3}, Lcom/vk/profile/adapter/holders/NarrativeProfileHolder1;->W()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -227,12 +227,12 @@
 
     .line 9
     :goto_0
-    check-cast v2, Lcom/vk/profile/adapter/holders/c;
+    check-cast v2, Lcom/vk/profile/adapter/holders/NarrativeProfileHolder1;
 
     if-eqz v2, :cond_2
 
     .line 10
-    invoke-interface {v2}, Lcom/vk/profile/adapter/holders/c;->T()Landroid/view/View;
+    invoke-interface {v2}, Lcom/vk/profile/adapter/holders/NarrativeProfileHolder1;->T()Landroid/view/View;
 
     move-result-object v1
 
@@ -244,7 +244,7 @@
     .locals 5
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {p0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result v0
 
@@ -254,11 +254,11 @@
     if-ge v1, v0, :cond_5
 
     .line 2
-    invoke-virtual {p0, v1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    instance-of v3, v2, Lcom/vk/profile/adapter/items/v;
+    instance-of v3, v2, Lcom/vk/profile/adapter/items/NarrativeProfileItem;
 
     const/4 v4, 0x0
 
@@ -267,11 +267,11 @@
     move-object v2, v4
 
     :cond_0
-    check-cast v2, Lcom/vk/profile/adapter/items/v;
+    check-cast v2, Lcom/vk/profile/adapter/items/NarrativeProfileItem;
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/v;->c()Lcom/vk/dto/narratives/Narrative;
+    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/NarrativeProfileItem;->c()Lcom/vk/dto/narratives/Narrative;
 
     move-result-object v2
 
@@ -281,7 +281,7 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcom/vk/dto/stories/d/a;->a(I)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/dto/stories/d/StoriesContainerExt;->a(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -291,14 +291,14 @@
     move-object v2, v4
 
     :goto_1
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
     .line 3
-    iget-object p1, p0, Lcom/vk/lists/i0;->b:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p1, p0, Lcom/vk/lists/SimpleAdapter;->b:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz p1, :cond_2
 
@@ -341,14 +341,14 @@
 
 
 # virtual methods
-.method protected a(Landroid/view/View;I)Lcom/vk/common/e/b;
+.method protected a(Landroid/view/View;I)Lcom/vk/common/e/BaseItemHolder;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "I)",
-            "Lcom/vk/common/e/b<",
+            "Lcom/vk/common/e/BaseItemHolder<",
             "*>;"
         }
     .end annotation
@@ -376,7 +376,7 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/profile/adapter/holders/NarrativeProfileHolder;-><init>(Landroid/view/View;ILjava/util/List;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/profile/adapter/holders/NarrativeProfileHolder;-><init>(Landroid/view/View;ILjava/util/List;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     return-object p2
 
@@ -395,7 +395,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/lists/i0;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-super {p0, p1}, Lcom/vk/lists/SimpleAdapter;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->d:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b;
@@ -409,7 +409,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/lists/i0;->onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-super {p0, p1}, Lcom/vk/lists/SimpleAdapter;->onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->d:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b;

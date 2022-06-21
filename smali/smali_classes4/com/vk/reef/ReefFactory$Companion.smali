@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -53,12 +53,12 @@
 
     invoke-direct {v1}, Lcom/vk/reef/ReefFactory$Companion$a;-><init>()V
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/reef/ReefFactory;-><init>(Landroid/app/Application;Lcom/vk/reef/utils/a;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/reef/ReefFactory;-><init>(Landroid/app/Application;Lcom/vk/reef/utils/ReefApplicationSettings;)V
 
     .line 3
     sget-object p1, Lcom/vk/reef/ReefFactory$Companion$createEmptyInstance$2;->a:Lcom/vk/reef/ReefFactory$Companion$createEmptyInstance$2;
 
-    invoke-virtual {v0, p1}, Lcom/vk/reef/ReefFactory;->a(Lkotlin/jvm/b/c;)Lcom/vk/reef/ReefFactory;
+    invoke-virtual {v0, p1}, Lcom/vk/reef/ReefFactory;->a(Lkotlin/jvm/b/Functions1;)Lcom/vk/reef/ReefFactory;
 
     .line 4
     invoke-virtual {v0}, Lcom/vk/reef/ReefFactory;->a()Lcom/vk/reef/Reef;
@@ -78,11 +78,11 @@
     throw p1
 .end method
 
-.method public final a()Lcom/vk/reef/utils/c;
+.method public final a()Lcom/vk/reef/utils/ReefLogger;
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/reef/ReefFactory;->b()Lcom/vk/reef/utils/c;
+    invoke-static {}, Lcom/vk/reef/ReefFactory;->b()Lcom/vk/reef/utils/ReefLogger;
 
     move-result-object v0
 

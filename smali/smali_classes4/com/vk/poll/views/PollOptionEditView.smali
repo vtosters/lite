@@ -43,7 +43,7 @@
 
     const-string v0, "findViewById(R.id.poll_text_view)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -58,7 +58,7 @@
 
     const-string v0, "findViewById(R.id.poll_remove_item_btn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -67,7 +67,7 @@
     .line 6
     iget-object p1, p0, Lcom/vk/poll/views/PollOptionEditView;->b:Landroid/widget/TextView;
 
-    sget-object v0, Lcom/vk/core/drawable/l;->c:Lcom/vk/core/drawable/l;
+    sget-object v0, Lcom/vk/core/drawable/VkUiDrawableHelper;->c:Lcom/vk/core/drawable/VkUiDrawableHelper;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
@@ -75,7 +75,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -89,7 +89,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/core/drawable/l;->a(Lcom/vk/core/drawable/l;Landroid/content/Context;IIIIILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
+    invoke-static/range {v0 .. v7}, Lcom/vk/core/drawable/VkUiDrawableHelper;->a(Lcom/vk/core/drawable/VkUiDrawableHelper;Landroid/content/Context;IIIIILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -122,7 +122,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/poll/views/PollOptionEditView;->b:Landroid/widget/TextView;
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     return-void
 .end method
@@ -206,13 +206,13 @@
     return-object v0
 .end method
 
-.method public final setRemoveClickListener(Lkotlin/jvm/b/a;)V
+.method public final setRemoveClickListener(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -222,9 +222,9 @@
 
     new-instance v1, Lcom/vk/poll/views/PollOptionEditView$setRemoveClickListener$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/poll/views/PollOptionEditView$setRemoveClickListener$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/poll/views/PollOptionEditView$setRemoveClickListener$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

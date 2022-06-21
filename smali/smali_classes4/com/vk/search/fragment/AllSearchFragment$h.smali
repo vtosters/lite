@@ -3,12 +3,12 @@
 .source "AllSearchFragment.kt"
 
 # interfaces
-.implements Lc/a/z/c;
+.implements Lio/reactivex/functions/BiFunction;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/search/fragment/AllSearchFragment;->a(Lcom/vk/lists/t;Z)Lc/a/m;
+    value = Lcom/vk/search/fragment/AllSearchFragment;->a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,15 +26,15 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/c<",
+        "Lio/reactivex/functions/BiFunction<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/common/data/ApiApplication;",
         ">;",
         "Lcom/vk/dto/common/data/VKList<",
-        "Lcom/vk/common/i/b;",
+        "Lcom/vk/common/i/RecyclerItem;",
         ">;",
         "Lcom/vk/dto/common/data/VKList<",
-        "Lcom/vk/common/i/b;",
+        "Lcom/vk/common/i/RecyclerItem;",
         ">;>;"
     }
 .end annotation
@@ -66,10 +66,10 @@
             "Lcom/vk/dto/common/data/ApiApplication;",
             ">;",
             "Lcom/vk/dto/common/data/VKList<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;)",
             "Lcom/vk/dto/common/data/VKList<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;"
         }
     .end annotation
@@ -132,19 +132,19 @@
     check-cast v2, Lcom/vk/dto/common/data/ApiApplication;
 
     .line 7
-    new-instance v4, Lcom/vk/dto/discover/b/a;
+    new-instance v4, Lcom/vk/dto/discover/b/SearchAppItem;
 
     const-string v5, "app"
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v5, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
+    sget-object v5, Lcom/vk/core/ui/v/UiTracker;->g:Lcom/vk/core/ui/v/UiTracker;
 
-    invoke-virtual {v5}, Lcom/vk/core/ui/v/a;->b()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/vk/core/ui/v/UiTracker;->b()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-direct {v4, v2, v3, v0, v5}, Lcom/vk/dto/discover/b/a;-><init>(Lcom/vk/dto/common/data/ApiApplication;ZLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, v2, v3, v0, v5}, Lcom/vk/dto/discover/b/SearchAppItem;-><init>(Lcom/vk/dto/common/data/ApiApplication;ZLjava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v1, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -152,9 +152,9 @@
 
     .line 8
     :cond_2
-    new-instance p1, Lcom/vk/dto/discover/b/f;
+    new-instance p1, Lcom/vk/dto/discover/b/SearchRecentAppsItems;
 
-    invoke-direct {p1, v1}, Lcom/vk/dto/discover/b/f;-><init>(Ljava/util/List;)V
+    invoke-direct {p1, v1}, Lcom/vk/dto/discover/b/SearchRecentAppsItems;-><init>(Ljava/util/List;)V
 
     .line 9
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
@@ -174,22 +174,22 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/i/b;
+    check-cast v0, Lcom/vk/common/i/RecyclerItem;
 
     .line 12
-    instance-of v1, v0, Lcom/vk/dto/discover/b/e;
+    instance-of v1, v0, Lcom/vk/dto/discover/b/SearchProfileListItem;
 
     if-eqz v1, :cond_4
 
-    check-cast v0, Lcom/vk/dto/discover/b/e;
+    check-cast v0, Lcom/vk/dto/discover/b/SearchProfileListItem;
 
-    invoke-virtual {v0}, Lcom/vk/dto/discover/b/e;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/dto/discover/b/SearchProfileListItem;->c()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "search_all_recent"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

@@ -28,11 +28,11 @@
 
 .field private final d:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
-.field private final e:Lcom/vk/stories/editor/base/e0;
+.field private final e:Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;Lcom/vk/stories/editor/base/e0;)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;)V
     .locals 0
 
     .line 1
@@ -42,10 +42,10 @@
 
     iput-object p3, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate;->d:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
-    iput-object p4, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate;->e:Lcom/vk/stories/editor/base/e0;
+    iput-object p4, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate;->e:Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;
 
     .line 2
-    invoke-static {p1}, Lcom/vk/core/util/x0;->a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+    invoke-static {p1}, Lcom/vk/core/util/ReferenceExt;->a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
 
     move-result-object p1
 
@@ -96,7 +96,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/stories/clickable/stickers/e;)V
+.method public final a(Lcom/vk/stories/clickable/stickers/StoryPollSticker;)V
     .locals 17
 
     move-object/from16 v0, p0
@@ -108,13 +108,13 @@
     if-eqz v1, :cond_0
 
     .line 2
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/stories/clickable/stickers/e;->o()Lcom/vk/stories/clickable/models/i;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/stories/clickable/stickers/StoryPollSticker;->o()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams4;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v3}, Lcom/vk/stories/clickable/models/i;->a()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {v3}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams4;->a()Lcom/vk/dto/polls/Poll;
 
     move-result-object v3
 
@@ -132,13 +132,13 @@
     if-eqz v1, :cond_1
 
     .line 3
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/stories/clickable/stickers/e;->o()Lcom/vk/stories/clickable/models/i;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/stories/clickable/stickers/StoryPollSticker;->o()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams4;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {v3}, Lcom/vk/stories/clickable/models/i;->a()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {v3}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams4;->a()Lcom/vk/dto/polls/Poll;
 
     move-result-object v3
 
@@ -149,11 +149,11 @@
 
     move-result v3
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v4
 
-    invoke-interface {v4}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v4}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v4
 
@@ -175,18 +175,18 @@
 
     const-string v4, "activityRef.get() ?: return"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v1, :cond_2
 
     .line 6
-    invoke-virtual {v1, v2}, Lcom/vk/attachpicker/stickers/y;->setInEditMode(Z)V
+    invoke-virtual {v1, v2}, Lcom/vk/attachpicker/stickers/CanvasSticker;->setInEditMode(Z)V
 
     .line 7
     :cond_2
-    iget-object v4, v0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate;->e:Lcom/vk/stories/editor/base/e0;
+    iget-object v4, v0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate;->e:Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;
 
-    invoke-virtual {v4}, Lcom/vk/stories/editor/base/e0;->m()V
+    invoke-virtual {v4}, Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;->m()V
 
     .line 8
     iget-object v4, v0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate;->d:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
@@ -196,29 +196,29 @@
     const v4, 0x7f080434
 
     .line 9
-    invoke-static {v4}, Lcom/vk/core/util/y0;->e(I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v4}, Lcom/vk/core/util/ResUtils;->e(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
     const-string v5, "ResUtils.drawable(R.drawable.ic_done_outline_28)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v5, 0x7f060211
 
     .line 10
-    invoke-static {v5}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v5}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v5
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
     .line 11
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v5}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v7
 
@@ -227,13 +227,13 @@
     if-eqz v1, :cond_3
 
     .line 12
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/stories/clickable/stickers/e;->o()Lcom/vk/stories/clickable/models/i;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/stories/clickable/stickers/StoryPollSticker;->o()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams4;
 
     move-result-object v6
 
     if-eqz v6, :cond_3
 
-    invoke-virtual {v6}, Lcom/vk/stories/clickable/models/i;->a()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {v6}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams4;->a()Lcom/vk/dto/polls/Poll;
 
     move-result-object v6
 
@@ -297,7 +297,7 @@
     move-object v15, v2
 
     .line 16
-    invoke-direct/range {v6 .. v15}, Lcom/vk/poll/fragments/PollEditorScreen;-><init>(ILjava/lang/String;Lcom/vtosters/lite/attachments/PollAttachment;IZJILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v15}, Lcom/vk/poll/fragments/PollEditorScreen;-><init>(ILjava/lang/String;Lcom/vtosters/lite/attachments/PollAttachment;IZJILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 17
     invoke-static/range {v16 .. v16}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -306,7 +306,7 @@
 
     const-string v6, "LayoutInflater.from(activity)"
 
-    invoke-static {v2, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v2, v5}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
 
@@ -325,68 +325,68 @@
     iput-boolean v7, v6, Lkotlin/jvm/internal/Ref$BooleanRef;->element:Z
 
     .line 20
-    new-instance v8, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v8, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     move-object/from16 v9, v16
 
-    invoke-direct {v8, v9}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v8, v9}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     const v10, 0x7f040095
 
     .line 21
-    invoke-virtual {v8, v10}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, v10}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 22
-    invoke-virtual {v8, v4}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, v4}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 23
-    invoke-virtual {v8, v7}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(Z)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, v7}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(Z)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 24
     new-instance v7, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$a;
 
-    invoke-direct {v7, v0, v3, v1, v6}, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$a;-><init>(Lcom/vk/stories/clickable/delegates/StoryPollDelegate;Lcom/vk/poll/fragments/PollEditorScreen;Lcom/vk/stories/clickable/stickers/e;Lkotlin/jvm/internal/Ref$BooleanRef;)V
+    invoke-direct {v7, v0, v3, v1, v6}, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$a;-><init>(Lcom/vk/stories/clickable/delegates/StoryPollDelegate;Lcom/vk/poll/fragments/PollEditorScreen;Lcom/vk/stories/clickable/stickers/StoryPollSticker;Lkotlin/jvm/internal/Ref$BooleanRef;)V
 
-    invoke-virtual {v8, v7}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, v7}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 25
     new-instance v7, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$bottomSheet$2;
 
     invoke-direct {v7, v3}, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$bottomSheet$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-virtual {v8, v7}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, v7}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 26
     new-instance v7, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$bottomSheet$3;
 
     invoke-direct {v7, v3}, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$bottomSheet$3;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-virtual {v8, v7}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, v7}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v7, 0x7f120af5
 
     .line 27
-    invoke-virtual {v8, v7}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, v7}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 28
-    invoke-virtual {v8, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 29
-    new-instance v2, Lcom/vk/core/dialogs/bottomsheet/j;
+    new-instance v2, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy4;
 
     const v7, 0x3f59999a    # 0.85f
 
-    invoke-direct {v2, v7}, Lcom/vk/core/dialogs/bottomsheet/j;-><init>(F)V
+    invoke-direct {v2, v7}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy4;-><init>(F)V
 
-    invoke-virtual {v8, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v2, 0x1
 
     .line 30
-    invoke-virtual {v8, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->h(Z)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->h(Z)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 31
-    invoke-static {v8, v5, v2, v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v8, v5, v2, v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v2
 
@@ -395,24 +395,24 @@
 
     invoke-direct {v5, v4}, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$2;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {v3, v5}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v3, v5}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 33
     new-instance v4, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$3;
 
     invoke-direct {v4, v9}, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$3;-><init>(Landroid/app/Activity;)V
 
-    invoke-virtual {v3, v4}, Lcom/vk/poll/fragments/PollEditorScreen;->c(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v3, v4}, Lcom/vk/poll/fragments/PollEditorScreen;->c(Lkotlin/jvm/b/Functions;)V
 
     .line 34
     new-instance v4, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;
 
-    invoke-direct {v4, v0, v6, v1, v2}, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;-><init>(Lcom/vk/stories/clickable/delegates/StoryPollDelegate;Lkotlin/jvm/internal/Ref$BooleanRef;Lcom/vk/stories/clickable/stickers/e;Lcom/vk/core/dialogs/bottomsheet/e;)V
+    invoke-direct {v4, v0, v6, v1, v2}, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;-><init>(Lcom/vk/stories/clickable/delegates/StoryPollDelegate;Lkotlin/jvm/internal/Ref$BooleanRef;Lcom/vk/stories/clickable/stickers/StoryPollSticker;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
 
-    invoke-virtual {v3, v4}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v3, v4}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Lkotlin/jvm/b/Functions1;)V
 
     .line 35
-    invoke-static {v3}, Lcom/vk/core/util/x0;->a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
+    invoke-static {v3}, Lcom/vk/core/util/ReferenceExt;->a(Ljava/lang/Object;)Ljava/lang/ref/WeakReference;
 
     move-result-object v1
 

@@ -4,14 +4,14 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lkotlin/e;
+.field private static final b:Lkotlin/Lazy2;
 
-.field private static final c:Lio/reactivex/subjects/a;
+.field private static final c:Lio/reactivex/subjects/BehaviorSubject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/subjects/a<",
+            "Lio/reactivex/subjects/BehaviorSubject<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -27,13 +27,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -41,15 +41,15 @@
 
     const-string v4, "getPrefs()Landroid/content/SharedPreferences;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;
@@ -61,22 +61,22 @@
     .line 2
     sget-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper$prefs$2;->a:Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper$prefs$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->b:Lkotlin/e;
+    sput-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->b:Lkotlin/Lazy2;
 
     .line 3
-    invoke-static {}, Lio/reactivex/subjects/a;->r()Lio/reactivex/subjects/a;
+    invoke-static {}, Lio/reactivex/subjects/BehaviorSubject;->r()Lio/reactivex/subjects/BehaviorSubject;
 
     move-result-object v0
 
     const-string v1, "BehaviorSubject.create<Boolean>()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sput-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->c:Lio/reactivex/subjects/a;
+    sput-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->c:Lio/reactivex/subjects/BehaviorSubject;
 
     return-void
 .end method
@@ -122,7 +122,7 @@
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 8
-    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "com.vtosters.lite.permission.ACCESS_DATA"
 
@@ -165,11 +165,11 @@
     return p0
 .end method
 
-.method public static final synthetic b(Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;)Lio/reactivex/subjects/a;
+.method public static final synthetic b(Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;)Lio/reactivex/subjects/BehaviorSubject;
     .locals 0
 
     .line 1
-    sget-object p0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->c:Lio/reactivex/subjects/a;
+    sget-object p0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->c:Lio/reactivex/subjects/BehaviorSubject;
 
     return-object p0
 .end method
@@ -196,15 +196,15 @@
 .method private final e()Landroid/content/SharedPreferences;
     .locals 3
 
-    sget-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->b:Lkotlin/e;
+    sget-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -279,13 +279,13 @@
     .locals 2
 
     .line 5
-    sget-object v0, Lb/h/n/c;->h:Lb/h/n/c;
+    sget-object v0, Lb/h/n/AppLifecycleDispatcher;->h:Lb/h/n/AppLifecycleDispatcher;
 
     new-instance v1, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper$a;
 
     invoke-direct {v1}, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper$a;-><init>()V
 
-    invoke-virtual {v0, v1}, Lb/h/n/c;->a(Lb/h/n/c$a;)V
+    invoke-virtual {v0, v1}, Lb/h/n/AppLifecycleDispatcher;->a(Lb/h/n/AppLifecycleDispatcher$a;)V
 
     return-void
 .end method
@@ -311,11 +311,11 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result v0
 
@@ -323,11 +323,11 @@
 
     sget-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper;->b:Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v1
 

@@ -72,13 +72,13 @@
     .line 2
     iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$ADDRESSES_SELECTED;->h:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-static {v1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->s(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lcom/vk/profile/ui/community/adresses/c;
+    invoke-static {v1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->s(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lcom/vk/profile/ui/community/adresses/AddressesRenderer;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1, v0}, Lcom/vk/profile/ui/community/adresses/c;->a(Lcom/vk/dto/profile/Address;)V
+    invoke-virtual {v1, v0}, Lcom/vk/profile/ui/community/adresses/AddressesRenderer;->a(Lcom/vk/dto/profile/Address;)V
 
     .line 3
     :cond_0
@@ -99,11 +99,11 @@
     .line 4
     iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$ADDRESSES_SELECTED;->h:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    new-instance v2, Lcom/vk/profile/data/a;
+    new-instance v2, Lcom/vk/profile/data/AddressClusterAdapter;
 
-    invoke-direct {v2, v0}, Lcom/vk/profile/data/a;-><init>(Lcom/vk/dto/profile/PlainAddress;)V
+    invoke-direct {v2, v0}, Lcom/vk/profile/data/AddressClusterAdapter;-><init>(Lcom/vk/dto/profile/PlainAddress;)V
 
-    invoke-static {v1, v2}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lcom/vk/profile/data/a;)V
+    invoke-static {v1, v2}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lcom/vk/profile/data/AddressClusterAdapter;)V
 
     .line 5
     :cond_1
@@ -117,7 +117,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$ADDRESSES_SELECTED$initAddressView$2;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$ADDRESSES_SELECTED;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->c(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->c(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$ADDRESSES_SELECTED;->h:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
@@ -163,7 +163,7 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -201,7 +201,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lcom/vk/profile/data/a;)V
+    invoke-static {v0, v1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lcom/vk/profile/data/AddressClusterAdapter;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$ADDRESSES_SELECTED;->h:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
@@ -480,13 +480,13 @@
     :goto_1
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$ADDRESSES_SELECTED;->h:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->s(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lcom/vk/profile/ui/community/adresses/c;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->s(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lcom/vk/profile/ui/community/adresses/AddressesRenderer;
 
     move-result-object v0
 
     if-eqz v0, :cond_a
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/community/adresses/c;->a(Lcom/vk/dto/profile/Address;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/community/adresses/AddressesRenderer;->a(Lcom/vk/dto/profile/Address;)V
 
     :cond_a
     return-void
@@ -583,7 +583,7 @@
     .line 9
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$ADDRESSES_SELECTED;->h:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->t(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lb/d/b/a/f/a;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->t(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lb/d/b/a/f/Cluster;
 
     move-result-object v0
 
@@ -591,13 +591,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lb/d/b/a/f/a;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-interface {v0}, Lb/d/b/a/f/Cluster;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0, p2}, Lcom/vk/profile/ui/community/adresses/d;->a(Lcom/google/android/gms/maps/model/LatLng;Lcom/vk/dto/profile/PlainAddress;)Z
+    invoke-static {v0, p2}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment1;->a(Lcom/google/android/gms/maps/model/LatLng;Lcom/vk/dto/profile/PlainAddress;)Z
 
     move-result v0
 
@@ -605,19 +605,19 @@
 
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$ADDRESSES_SELECTED;->h:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-static {v0, v1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lb/d/b/a/f/a;)V
+    invoke-static {v0, v1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lb/d/b/a/f/Cluster;)V
 
     .line 10
     :cond_0
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$ADDRESSES_SELECTED;->h:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->s(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lcom/vk/profile/ui/community/adresses/c;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->s(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lcom/vk/profile/ui/community/adresses/AddressesRenderer;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/community/adresses/c;->a(Lcom/vk/dto/profile/Address;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/community/adresses/AddressesRenderer;->a(Lcom/vk/dto/profile/Address;)V
 
     .line 11
     :cond_1
@@ -699,13 +699,13 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$ADDRESSES_SELECTED;->h:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->getPresenter()Lcom/vk/profile/presenter/f/a;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->getPresenter()Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$ADDRESSES_SELECTED;->g:Lcom/vk/dto/profile/PlainAddress;
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/presenter/f/a;->a(Lcom/vk/dto/profile/PlainAddress;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/presenter/f/CommunityAddressPresenter;->a(Lcom/vk/dto/profile/PlainAddress;)V
 
     .line 5
     :goto_0

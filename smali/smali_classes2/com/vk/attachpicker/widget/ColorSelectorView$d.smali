@@ -1,5 +1,5 @@
 .class Lcom/vk/attachpicker/widget/ColorSelectorView$d;
-.super Lcom/vk/attachpicker/widget/q;
+.super Lcom/vk/attachpicker/widget/ViewPagerAdapter;
 .source "ColorSelectorView.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/attachpicker/widget/ColorSelectorView$d;->a:Lcom/vk/attachpicker/widget/ColorSelectorView;
 
-    invoke-direct {p0}, Lcom/vk/attachpicker/widget/q;-><init>()V
+    invoke-direct {p0}, Lcom/vk/attachpicker/widget/ViewPagerAdapter;-><init>()V
 
     return-void
 .end method
@@ -99,7 +99,7 @@
     if-ge v1, v2, :cond_1
 
     .line 4
-    sget-object v2, Lcom/vk/attachpicker/drawing/b;->a:[I
+    sget-object v2, Lcom/vk/attachpicker/drawing/DrawingColors;->a:[I
 
     aget v2, v2, v1
 
@@ -178,7 +178,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/attachpicker/drawing/b;->a:[I
+    sget-object v0, Lcom/vk/attachpicker/drawing/DrawingColors;->a:[I
 
     array-length v0, v0
 

@@ -3,16 +3,16 @@
 .source "VideoUIEventDispatcher.kt"
 
 # interfaces
-.implements Lcom/vk/libvideo/autoplay/h;
+.implements Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/util/concurrent/CopyOnWriteArraySet<",
-        "Lcom/vk/libvideo/autoplay/h;",
+        "Lcom/vk/libvideo/autoplay/VideoUIEventListener;",
         ">;",
-        "Lcom/vk/libvideo/autoplay/h;"
+        "Lcom/vk/libvideo/autoplay/VideoUIEventListener;"
     }
 .end annotation
 
@@ -40,7 +40,7 @@
     return v0
 .end method
 
-.method public a(Lcom/vk/libvideo/ad/b;)V
+.method public a(Lcom/vk/libvideo/ad/AdBannerData;)V
     .locals 2
 
     .line 11
@@ -59,10 +59,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 12
-    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/h;->a(Lcom/vk/libvideo/ad/b;)V
+    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->a(Lcom/vk/libvideo/ad/AdBannerData;)V
 
     goto :goto_0
 
@@ -70,7 +70,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/libvideo/ad/b;FFZLjava/lang/Integer;)V
+.method public a(Lcom/vk/libvideo/ad/AdBannerData;FFZLjava/lang/Integer;)V
     .locals 8
 
     .line 13
@@ -91,7 +91,7 @@
 
     move-object v2, v1
 
-    check-cast v2, Lcom/vk/libvideo/autoplay/h;
+    check-cast v2, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     move-object v3, p1
 
@@ -104,7 +104,7 @@
     move-object v7, p5
 
     .line 14
-    invoke-interface/range {v2 .. v7}, Lcom/vk/libvideo/autoplay/h;->a(Lcom/vk/libvideo/ad/b;FFZLjava/lang/Integer;)V
+    invoke-interface/range {v2 .. v7}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->a(Lcom/vk/libvideo/ad/AdBannerData;FFZLjava/lang/Integer;)V
 
     goto :goto_0
 
@@ -112,7 +112,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/libvideo/autoplay/a;)V
+.method public a(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     .line 3
@@ -131,10 +131,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 4
-    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/h;->a(Lcom/vk/libvideo/autoplay/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->a(Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     goto :goto_0
 
@@ -142,7 +142,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/libvideo/autoplay/a;I)V
+.method public a(Lcom/vk/libvideo/autoplay/AutoPlay;I)V
     .locals 2
 
     .line 5
@@ -161,10 +161,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 6
-    invoke-interface {v1, p1, p2}, Lcom/vk/libvideo/autoplay/h;->a(Lcom/vk/libvideo/autoplay/a;I)V
+    invoke-interface {v1, p1, p2}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->a(Lcom/vk/libvideo/autoplay/AutoPlay;I)V
 
     goto :goto_0
 
@@ -172,7 +172,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/libvideo/autoplay/a;II)V
+.method public a(Lcom/vk/libvideo/autoplay/AutoPlay;II)V
     .locals 2
 
     .line 7
@@ -191,10 +191,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 8
-    invoke-interface {v1, p1, p2, p3}, Lcom/vk/libvideo/autoplay/h;->a(Lcom/vk/libvideo/autoplay/a;II)V
+    invoke-interface {v1, p1, p2, p3}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->a(Lcom/vk/libvideo/autoplay/AutoPlay;II)V
 
     goto :goto_0
 
@@ -229,10 +229,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 10
-    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/h;->a(Ljava/util/List;)V
+    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->a(Ljava/util/List;)V
 
     goto :goto_0
 
@@ -240,7 +240,7 @@
     return-void
 .end method
 
-.method public bridge a(Lcom/vk/libvideo/autoplay/h;)Z
+.method public bridge a(Lcom/vk/libvideo/autoplay/VideoUIEventListener;)Z
     .locals 0
 
     .line 1
@@ -251,7 +251,7 @@
     return p1
 .end method
 
-.method public b(Lcom/vk/libvideo/autoplay/a;)V
+.method public b(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     .line 4
@@ -270,10 +270,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 5
-    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/h;->b(Lcom/vk/libvideo/autoplay/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->b(Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     goto :goto_0
 
@@ -281,7 +281,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/libvideo/autoplay/a;II)V
+.method public b(Lcom/vk/libvideo/autoplay/AutoPlay;II)V
     .locals 2
 
     .line 2
@@ -300,10 +300,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 3
-    invoke-interface {v1, p1, p2, p3}, Lcom/vk/libvideo/autoplay/h;->b(Lcom/vk/libvideo/autoplay/a;II)V
+    invoke-interface {v1, p1, p2, p3}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->b(Lcom/vk/libvideo/autoplay/AutoPlay;II)V
 
     goto :goto_0
 
@@ -311,7 +311,7 @@
     return-void
 .end method
 
-.method public bridge b(Lcom/vk/libvideo/autoplay/h;)Z
+.method public bridge b(Lcom/vk/libvideo/autoplay/VideoUIEventListener;)Z
     .locals 0
 
     .line 1
@@ -341,10 +341,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 6
-    invoke-interface {v1}, Lcom/vk/libvideo/autoplay/h;->c()V
+    invoke-interface {v1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->c()V
 
     goto :goto_0
 
@@ -352,7 +352,7 @@
     return-void
 .end method
 
-.method public c(Lcom/vk/libvideo/autoplay/a;)V
+.method public c(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     .line 1
@@ -371,10 +371,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 2
-    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/h;->c(Lcom/vk/libvideo/autoplay/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->c(Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     goto :goto_0
 
@@ -382,7 +382,7 @@
     return-void
 .end method
 
-.method public c(Lcom/vk/libvideo/autoplay/a;II)V
+.method public c(Lcom/vk/libvideo/autoplay/AutoPlay;II)V
     .locals 2
 
     .line 3
@@ -401,10 +401,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 4
-    invoke-interface {v1, p1, p2, p3}, Lcom/vk/libvideo/autoplay/h;->c(Lcom/vk/libvideo/autoplay/a;II)V
+    invoke-interface {v1, p1, p2, p3}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->c(Lcom/vk/libvideo/autoplay/AutoPlay;II)V
 
     goto :goto_0
 
@@ -418,7 +418,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    instance-of v0, p1, Lcom/vk/libvideo/autoplay/h;
+    instance-of v0, p1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     goto :goto_0
 
@@ -428,9 +428,9 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vk/libvideo/autoplay/h;
+    check-cast p1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;->a(Lcom/vk/libvideo/autoplay/h;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;->a(Lcom/vk/libvideo/autoplay/VideoUIEventListener;)Z
 
     move-result p1
 
@@ -442,7 +442,7 @@
     return p1
 .end method
 
-.method public d(Lcom/vk/libvideo/autoplay/a;)V
+.method public d(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     .line 1
@@ -461,10 +461,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 2
-    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/h;->d(Lcom/vk/libvideo/autoplay/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->d(Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     goto :goto_0
 
@@ -472,7 +472,7 @@
     return-void
 .end method
 
-.method public e(Lcom/vk/libvideo/autoplay/a;)V
+.method public e(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     .line 1
@@ -491,10 +491,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 2
-    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/h;->e(Lcom/vk/libvideo/autoplay/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->e(Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     goto :goto_0
 
@@ -502,7 +502,7 @@
     return-void
 .end method
 
-.method public f(Lcom/vk/libvideo/autoplay/a;)V
+.method public f(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     .line 1
@@ -521,10 +521,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 2
-    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/h;->f(Lcom/vk/libvideo/autoplay/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->f(Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     goto :goto_0
 
@@ -532,7 +532,7 @@
     return-void
 .end method
 
-.method public g(Lcom/vk/libvideo/autoplay/a;)V
+.method public g(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     .line 1
@@ -551,10 +551,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 2
-    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/h;->g(Lcom/vk/libvideo/autoplay/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->g(Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     goto :goto_0
 
@@ -562,7 +562,7 @@
     return-void
 .end method
 
-.method public h(Lcom/vk/libvideo/autoplay/a;)V
+.method public h(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     .line 1
@@ -581,10 +581,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 2
-    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/h;->h(Lcom/vk/libvideo/autoplay/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->h(Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     goto :goto_0
 
@@ -592,7 +592,7 @@
     return-void
 .end method
 
-.method public i(Lcom/vk/libvideo/autoplay/a;)V
+.method public i(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 2
 
     .line 1
@@ -611,10 +611,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/libvideo/autoplay/h;
+    check-cast v1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     .line 2
-    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/h;->i(Lcom/vk/libvideo/autoplay/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventListener;->i(Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     goto :goto_0
 
@@ -628,7 +628,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    instance-of v0, p1, Lcom/vk/libvideo/autoplay/h;
+    instance-of v0, p1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
     goto :goto_0
 
@@ -638,9 +638,9 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vk/libvideo/autoplay/h;
+    check-cast p1, Lcom/vk/libvideo/autoplay/VideoUIEventListener;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;->b(Lcom/vk/libvideo/autoplay/h;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;->b(Lcom/vk/libvideo/autoplay/VideoUIEventListener;)Z
 
     move-result p1
 

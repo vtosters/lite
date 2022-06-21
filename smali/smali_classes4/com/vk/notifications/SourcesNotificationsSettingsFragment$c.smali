@@ -1,5 +1,5 @@
 .class final Lcom/vk/notifications/SourcesNotificationsSettingsFragment$c;
-.super Lcom/vk/common/i/b;
+.super Lcom/vk/common/i/RecyclerItem;
 .source "SourcesNotificationsSettingsFragment.kt"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/common/i/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/common/i/RecyclerItem;-><init>()V
 
     return-void
 .end method

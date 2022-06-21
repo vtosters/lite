@@ -48,11 +48,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$l;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-static {v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/b;
+    invoke-static {v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/c;->e()Lcom/vk/webapp/VkUiFragment;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->e()Lcom/vk/webapp/VkUiFragment;
 
     move-result-object v1
 
@@ -80,7 +80,7 @@
 
     const-string v0, "Uri.parse(url)"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v6, Lcom/vk/webapp/bridges/VkUiConnectBridge$l$a;
 
@@ -94,7 +94,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v1 .. v8}, Lcom/vk/common/links/OpenFunctionsKt;->a(Lcom/vk/core/fragments/FragmentImpl;Ljava/lang/String;Landroid/net/Uri;IILcom/vk/common/links/f;ILjava/lang/Object;)Lio/reactivex/disposables/b;
+    invoke-static/range {v1 .. v8}, Lcom/vk/common/links/OpenFunctionsKt;->a(Lcom/vk/core/fragments/FragmentImpl;Ljava/lang/String;Landroid/net/Uri;IILcom/vk/common/links/OpenCallback;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

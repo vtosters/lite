@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/holders/StoriesDialogHolder2;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/d;)V
+    value = Lcom/vk/stories/holders/StoriesDialogHolder2;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions4;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/stories/holders/StoriesDialogHolder2;
 
-.field final synthetic b:Lkotlin/jvm/b/d;
+.field final synthetic b:Lkotlin/jvm/b/Functions4;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/holders/StoriesDialogHolder2;Lkotlin/jvm/b/d;)V
+.method constructor <init>(Lcom/vk/stories/holders/StoriesDialogHolder2;Lkotlin/jvm/b/Functions4;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stories/holders/StoriesDialogHolder2$a;->a:Lcom/vk/stories/holders/StoriesDialogHolder2;
 
-    iput-object p2, p0, Lcom/vk/stories/holders/StoriesDialogHolder2$a;->b:Lkotlin/jvm/b/d;
+    iput-object p2, p0, Lcom/vk/stories/holders/StoriesDialogHolder2$a;->b:Lkotlin/jvm/b/Functions4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,7 +42,7 @@
     .locals 2
 
     .line 1
-    iget-object p1, p0, Lcom/vk/stories/holders/StoriesDialogHolder2$a;->b:Lkotlin/jvm/b/d;
+    iget-object p1, p0, Lcom/vk/stories/holders/StoriesDialogHolder2$a;->b:Lkotlin/jvm/b/Functions4;
 
     if-eqz p1, :cond_0
 
@@ -62,11 +62,11 @@
 
     iget-object v1, p0, Lcom/vk/stories/holders/StoriesDialogHolder2$a;->a:Lcom/vk/stories/holders/StoriesDialogHolder2;
 
-    invoke-static {v1}, Lcom/vk/stories/holders/StoriesDialogHolder2;->b(Lcom/vk/stories/holders/StoriesDialogHolder2;)Lcom/vk/stories/d1/a;
+    invoke-static {v1}, Lcom/vk/stories/holders/StoriesDialogHolder2;->b(Lcom/vk/stories/holders/StoriesDialogHolder2;)Lcom/vk/stories/d1/StoryDialogItem;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/d1/a;->b()I
+    invoke-virtual {v1}, Lcom/vk/stories/d1/StoryDialogItem;->b()I
 
     move-result v1
 
@@ -74,11 +74,11 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v0, p2, v1}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, p2, v1}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

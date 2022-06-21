@@ -60,11 +60,11 @@
     return-void
 .end method
 
-.method public a(ILcom/vk/photogallery/dto/d;)V
+.method public a(ILcom/vk/photogallery/dto/GalleryState4;)V
     .locals 0
 
     .line 4
-    invoke-static {p0, p1, p2}, Lcom/vk/photogallery/PhotoGalleryView$Callback$DefaultImpls;->a(Lcom/vk/photogallery/PhotoGalleryView$Callback;ILcom/vk/photogallery/dto/d;)V
+    invoke-static {p0, p1, p2}, Lcom/vk/photogallery/PhotoGalleryView$Callback$DefaultImpls;->a(Lcom/vk/photogallery/PhotoGalleryView$Callback;ILcom/vk/photogallery/dto/GalleryState4;)V
 
     return-void
 .end method

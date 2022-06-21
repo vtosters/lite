@@ -43,11 +43,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity$r;->a:Lcom/vk/stories/StoryChooseReceiversActivity;
 
-    invoke-static {v0}, Lcom/vk/stories/StoryChooseReceiversActivity;->f(Lcom/vk/stories/StoryChooseReceiversActivity;)Lcom/vk/stories/a1/b;
+    invoke-static {v0}, Lcom/vk/stories/StoryChooseReceiversActivity;->f(Lcom/vk/stories/StoryChooseReceiversActivity;)Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 

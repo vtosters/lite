@@ -62,7 +62,7 @@
 
     const v0, 0x7f0a07d9
 
-    invoke-static {p1, v0}, Lcom/vk/menu/c;->a(Lcom/vk/navigation/NavigationDelegate;I)V
+    invoke-static {p1, v0}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/navigation/NavigationDelegate;I)V
 
     :cond_0
     return-void

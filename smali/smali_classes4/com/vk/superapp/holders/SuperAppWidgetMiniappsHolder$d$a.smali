@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;-><init>(Landroid/view/View;Lkotlin/jvm/b/c;)V
+    value = Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -53,7 +53,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d$a;->a:Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;
 
-    invoke-static {v0}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;->a(Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;)Lkotlin/jvm/b/c;
+    invoke-static {v0}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;->a(Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;)Lkotlin/jvm/b/Functions1;
 
     move-result-object v0
 
@@ -63,7 +63,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1, p1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1, p1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

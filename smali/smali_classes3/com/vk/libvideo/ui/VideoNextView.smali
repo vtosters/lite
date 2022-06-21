@@ -18,7 +18,7 @@
 
 .field private final c:Landroid/animation/ObjectAnimator;
 
-.field private final d:Lcom/vk/core/drawable/c;
+.field private final d:Lcom/vk/core/drawable/CircularProgressDrawable;
 
 .field private final e:Landroid/widget/ImageView;
 
@@ -33,7 +33,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/VideoNextView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/VideoNextView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -67,13 +67,13 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 4
-    new-instance p2, Lcom/vk/core/drawable/c;
+    new-instance p2, Lcom/vk/core/drawable/CircularProgressDrawable;
 
     const/4 p3, 0x0
 
-    invoke-direct {p2, p3}, Lcom/vk/core/drawable/c;-><init>(Z)V
+    invoke-direct {p2, p3}, Lcom/vk/core/drawable/CircularProgressDrawable;-><init>(Z)V
 
-    iput-object p2, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/c;
+    iput-object p2, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/CircularProgressDrawable;
 
     const/16 p2, 0xc
 
@@ -104,7 +104,7 @@
 
     const-string p2, "findViewById(R.id.video_next_stop)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoNextView;->a:Landroid/view/View;
 
@@ -117,7 +117,7 @@
 
     const-string p2, "findViewById(R.id.video_next_progress)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ProgressBar;
 
@@ -132,7 +132,7 @@
 
     const-string p2, "findViewById(R.id.videoNextViewIcon)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -147,14 +147,14 @@
 
     const-string p2, "findViewById(R.id.videoNextViewText)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoNextView;->f:Landroid/widget/TextView;
 
     .line 11
-    iget-object p1, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/c;
+    iget-object p1, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/CircularProgressDrawable;
 
     const-wide v0, 0xfff2f2f2L
 
@@ -162,29 +162,29 @@
 
     const v0, 0x67ffffff
 
-    invoke-virtual {p1, v0, p2}, Lcom/vk/core/drawable/c;->a(II)V
+    invoke-virtual {p1, v0, p2}, Lcom/vk/core/drawable/CircularProgressDrawable;->a(II)V
 
     .line 12
-    iget-object p1, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/c;
+    iget-object p1, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/CircularProgressDrawable;
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    invoke-virtual {p1, p2}, Lcom/vk/core/drawable/c;->a(F)V
+    invoke-virtual {p1, p2}, Lcom/vk/core/drawable/CircularProgressDrawable;->a(F)V
 
     .line 13
-    iget-object p1, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/c;
+    iget-object p1, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/CircularProgressDrawable;
 
-    invoke-virtual {p1, p3}, Lcom/vk/core/drawable/c;->a(Z)V
+    invoke-virtual {p1, p3}, Lcom/vk/core/drawable/CircularProgressDrawable;->a(Z)V
 
     .line 14
-    iget-object p1, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/c;
+    iget-object p1, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/CircularProgressDrawable;
 
-    invoke-virtual {p1, p3}, Lcom/vk/core/drawable/c;->b(Z)V
+    invoke-virtual {p1, p3}, Lcom/vk/core/drawable/CircularProgressDrawable;->b(Z)V
 
     .line 15
     iget-object p1, p0, Lcom/vk/libvideo/ui/VideoNextView;->b:Landroid/widget/ProgressBar;
 
-    iget-object p2, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/c;
+    iget-object p2, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/CircularProgressDrawable;
 
     invoke-virtual {p1, p2}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -205,7 +205,7 @@
 
     const-string p2, "ObjectAnimator.ofInt(pro\u2026sBar, \"progress\", 0, 100)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/libvideo/ui/VideoNextView;->c:Landroid/animation/ObjectAnimator;
 
@@ -240,9 +240,9 @@
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/c;
+    iget-object v0, p0, Lcom/vk/libvideo/ui/VideoNextView;->d:Lcom/vk/core/drawable/CircularProgressDrawable;
 
-    invoke-virtual {v0}, Lcom/vk/core/drawable/c;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/drawable/CircularProgressDrawable;->b()V
 
     .line 5
     iget-object v0, p0, Lcom/vk/libvideo/ui/VideoNextView;->c:Landroid/animation/ObjectAnimator;

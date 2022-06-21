@@ -13,15 +13,15 @@
 
 
 # static fields
-.field static final synthetic J:[Lkotlin/u/j;
+.field static final synthetic J:[Lkotlin/u/KProperty5;
 
 
 # instance fields
 .field private B:I
 
-.field private final C:Lkotlin/e;
+.field private final C:Lkotlin/Lazy2;
 
-.field private final D:Lkotlin/e;
+.field private final D:Lkotlin/Lazy2;
 
 .field private E:Z
 
@@ -33,7 +33,7 @@
 
 .field private I:Z
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
 .field private c:I
 
@@ -54,13 +54,13 @@
 
     const/4 v0, 0x3
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -68,9 +68,9 @@
 
     const-string v4, "getVelocityTracker()Landroid/view/VelocityTracker;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -80,7 +80,7 @@
 
     const-class v2, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -88,9 +88,9 @@
 
     const-string v4, "getContainer()Landroid/view/View;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x1
 
@@ -100,7 +100,7 @@
 
     const-class v2, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -108,15 +108,15 @@
 
     const-string v4, "getWidthReply()I"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->J:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->J:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -130,11 +130,11 @@
     .line 2
     sget-object p1, Lcom/vk/newsfeed/holders/FrameLayoutSwiped$velocityTracker$2;->a:Lcom/vk/newsfeed/holders/FrameLayoutSwiped$velocityTracker$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->b:Lkotlin/Lazy2;
 
     const/4 p1, -0x1
 
@@ -151,22 +151,22 @@
 
     invoke-direct {p1, p0}, Lcom/vk/newsfeed/holders/FrameLayoutSwiped$container$2;-><init>(Lcom/vk/newsfeed/holders/FrameLayoutSwiped;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->C:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->C:Lkotlin/Lazy2;
 
     .line 6
     new-instance p1, Lcom/vk/newsfeed/holders/FrameLayoutSwiped$widthReply$2;
 
     invoke-direct {p1, p0}, Lcom/vk/newsfeed/holders/FrameLayoutSwiped$widthReply$2;-><init>(Lcom/vk/newsfeed/holders/FrameLayoutSwiped;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->D:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->D:Lkotlin/Lazy2;
 
     .line 7
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -180,7 +180,7 @@
     const-string p2, "vc"
 
     .line 8
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
@@ -201,7 +201,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -416,7 +416,7 @@
     :cond_0
     const-string v0, "callback"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -453,7 +453,7 @@
     const-string v2, "this"
 
     .line 6
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v2, 0xb4
 
@@ -532,15 +532,15 @@
 .method private final getContainer()Landroid/view/View;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->C:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->C:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->J:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->J:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -552,15 +552,15 @@
 .method private final getVelocityTracker()Landroid/view/VelocityTracker;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->J:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->J:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -572,15 +572,15 @@
 .method private final getWidthReply()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->D:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->D:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->J:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/holders/FrameLayoutSwiped;->J:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -608,7 +608,7 @@
     :cond_0
     const-string v0, "callback"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -959,7 +959,7 @@
     const-string p1, "callback"
 
     .line 39
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1304,7 +1304,7 @@
     const-string p1, "callback"
 
     .line 34
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

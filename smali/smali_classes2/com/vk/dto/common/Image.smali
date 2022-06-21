@@ -3,7 +3,7 @@
 .source "Image.java"
 
 # interfaces
-.implements Lcom/vk/core/serialize/a;
+.implements Lcom/vk/core/serialize/JSONSerialize;
 
 
 # annotations
@@ -272,9 +272,9 @@
     .end annotation
 
     .line 4
-    sget-object v0, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
+    sget-object v0, Lcom/vk/core/util/MediaLoadingInfo;->b:Lcom/vk/core/util/MediaLoadingInfo;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/p0;->c()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/MediaLoadingInfo;->c()Z
 
     move-result v0
 
@@ -353,9 +353,9 @@
     .end annotation
 
     .line 8
-    sget-object v0, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
+    sget-object v0, Lcom/vk/core/util/MediaLoadingInfo;->b:Lcom/vk/core/util/MediaLoadingInfo;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/p0;->c()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/MediaLoadingInfo;->c()Z
 
     move-result v0
 

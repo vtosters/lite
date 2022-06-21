@@ -3,12 +3,12 @@
 .source "StoryBoxConverter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionText;)Lc/a/m;
+    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionText;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lkotlin/text/j;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/text/MatchResult2;",
         "Landroid/text/SpannableString;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/text/j;)Landroid/text/SpannableString;
+.method public final a(Lkotlin/text/MatchResult2;)Landroid/text/SpannableString;
     .locals 4
 
     .line 1
-    invoke-interface {p1}, Lkotlin/text/j;->a()Ljava/util/List;
+    invoke-interface {p1}, Lkotlin/text/MatchResult2;->a()Ljava/util/List;
 
     move-result-object p1
 
@@ -98,9 +98,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlin/text/j;
+    check-cast p1, Lkotlin/text/MatchResult2;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$createText$hashtagReplacer$1;->a(Lkotlin/text/j;)Landroid/text/SpannableString;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$createText$hashtagReplacer$1;->a(Lkotlin/text/MatchResult2;)Landroid/text/SpannableString;
 
     move-result-object p1
 

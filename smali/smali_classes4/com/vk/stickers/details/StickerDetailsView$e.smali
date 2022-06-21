@@ -42,13 +42,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stickers/details/StickerDetailsView$e;->b:Lcom/vk/stickers/details/StickerDetailsView;
 
-    invoke-static {v0}, Lcom/vk/stickers/details/StickerDetailsView;->a(Lcom/vk/stickers/details/StickerDetailsView;)Lcom/vk/stickers/details/a;
+    invoke-static {v0}, Lcom/vk/stickers/details/StickerDetailsView;->a(Lcom/vk/stickers/details/StickerDetailsView;)Lcom/vk/stickers/details/StickerDetailsAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/stickers/details/a;->I(I)Z
+    invoke-virtual {v0, p1}, Lcom/vk/stickers/details/StickerDetailsAdapter;->I(I)Z
 
     move-result p1
 
@@ -71,7 +71,7 @@
 
     .line 3
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

@@ -3,7 +3,7 @@
 .source "ModalBottomSheetBehavior.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/b$a;
+.implements Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener$a;
 
 
 # annotations
@@ -22,7 +22,7 @@
         ">",
         "Landroidx/coordinatorlayout/widget/CoordinatorLayout$Behavior<",
         "TV;>;",
-        "Lcom/vk/core/ui/b$a;"
+        "Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener$a;"
     }
 .end annotation
 
@@ -47,11 +47,11 @@
 
 .field private C:I
 
-.field private D:Lcom/vk/core/ui/b;
+.field private D:Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;
 
-.field E:Lcom/vk/core/dialogs/bottomsheet/b;
+.field E:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
 
-.field F:Lcom/vk/core/dialogs/bottomsheet/b$a;
+.field F:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy$a2;
 
 .field private final G:Landroidx/customview/widget/ViewDragHelper$Callback;
 
@@ -124,7 +124,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/core/dialogs/bottomsheet/b;)V
+.method public constructor <init>(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)V
     .locals 2
 
     .line 1
@@ -152,11 +152,11 @@
     iput v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->C:I
 
     .line 7
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/b$a;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy$a2;
 
-    invoke-direct {v0}, Lcom/vk/core/dialogs/bottomsheet/b$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy$a2;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->F:Lcom/vk/core/dialogs/bottomsheet/b$a;
+    iput-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->F:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy$a2;
 
     .line 8
     new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior$b;
@@ -166,7 +166,7 @@
     iput-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->G:Landroidx/customview/widget/ViewDragHelper$Callback;
 
     .line 9
-    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->E:Lcom/vk/core/dialogs/bottomsheet/b;
+    iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->E:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
 
     return-void
 .end method
@@ -931,22 +931,22 @@
     check-cast p1, Landroidx/viewpager/widget/ViewPager;
 
     .line 44
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->D:Lcom/vk/core/ui/b;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->D:Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;
 
     if-nez v0, :cond_1
 
     .line 45
-    new-instance v0, Lcom/vk/core/ui/b;
+    new-instance v0, Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;
 
-    invoke-direct {v0, p0}, Lcom/vk/core/ui/b;-><init>(Lcom/vk/core/ui/b$a;)V
+    invoke-direct {v0, p0}, Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;-><init>(Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener$a;)V
 
-    iput-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->D:Lcom/vk/core/ui/b;
+    iput-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->D:Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;
 
     .line 46
     :cond_1
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->D:Lcom/vk/core/ui/b;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->D:Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/ui/b;->a(Landroidx/viewpager/widget/ViewPager;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;->a(Landroidx/viewpager/widget/ViewPager;)V
 
     .line 47
     invoke-static {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->b(Landroidx/viewpager/widget/ViewPager;)Landroid/view/View;
@@ -1653,9 +1653,9 @@
     iput-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->n:Landroidx/customview/widget/ViewDragHelper;
 
     .line 4
-    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->D:Lcom/vk/core/ui/b;
+    iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->D:Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/core/ui/BottomSheetViewPagerSwitchListener;->a()V
 
     return-void
 .end method
@@ -2024,7 +2024,7 @@
     move-result v5
 
     .line 7
-    iget-object v4, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->E:Lcom/vk/core/dialogs/bottomsheet/b;
+    iget-object v4, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->E:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
 
     iget-object v2, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->a:Landroid/view/View;
 
@@ -2042,15 +2042,15 @@
 
     move-result v8
 
-    iget-object v9, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->F:Lcom/vk/core/dialogs/bottomsheet/b$a;
+    iget-object v9, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->F:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy$a2;
 
     .line 10
-    invoke-virtual/range {v4 .. v9}, Lcom/vk/core/dialogs/bottomsheet/b;->a(IIIILcom/vk/core/dialogs/bottomsheet/b$a;)V
+    invoke-virtual/range {v4 .. v9}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;->a(IIIILcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy$a2;)V
 
     .line 11
-    iget-object v2, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->F:Lcom/vk/core/dialogs/bottomsheet/b$a;
+    iget-object v2, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->F:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy$a2;
 
-    invoke-virtual {v2}, Lcom/vk/core/dialogs/bottomsheet/b$a;->b()I
+    invoke-virtual {v2}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy$a2;->b()I
 
     move-result v2
 
@@ -2061,9 +2061,9 @@
     if-lez v2, :cond_3
 
     .line 12
-    iget-object v2, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->F:Lcom/vk/core/dialogs/bottomsheet/b$a;
+    iget-object v2, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->F:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy$a2;
 
-    invoke-virtual {v2}, Lcom/vk/core/dialogs/bottomsheet/b$a;->b()I
+    invoke-virtual {v2}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy$a2;->b()I
 
     move-result v2
 
@@ -2141,9 +2141,9 @@
     iput p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->s:I
 
     .line 25
-    iget-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->F:Lcom/vk/core/dialogs/bottomsheet/b$a;
+    iget-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->F:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy$a2;
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/b$a;->a()I
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy$a2;->a()I
 
     move-result p1
 
@@ -2251,9 +2251,9 @@
     invoke-static {p2, v2}, Landroidx/core/view/ViewCompat;->offsetTopAndBottom(Landroid/view/View;I)V
 
     .line 37
-    iget-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->E:Lcom/vk/core/dialogs/bottomsheet/b;
+    iget-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior;->E:Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/b;->a()Z
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;->a()Z
 
     move-result p1
 

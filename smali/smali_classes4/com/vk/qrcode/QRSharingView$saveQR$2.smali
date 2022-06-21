@@ -3,7 +3,7 @@
 .source "QRSharingView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,12 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/List<",
         "+",
         "Ljava/lang/String;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -89,7 +89,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vigo/metrics/d;->c(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Lcom/vigo/metrics/Log;->c(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -102,7 +102,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/qrcode/QRSharingView$saveQR$2;->a(Ljava/util/List;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

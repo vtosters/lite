@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -88,7 +88,7 @@
 
     if-ne p2, v0, :cond_2
 
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v0
 
@@ -96,7 +96,7 @@
 
     .line 6
     :cond_2
-    invoke-static {v3}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v3}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v0
 
@@ -112,7 +112,7 @@
 
     if-ne p2, v0, :cond_3
 
-    invoke-static {v5}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v5}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v0
 
@@ -120,7 +120,7 @@
 
     .line 8
     :cond_3
-    invoke-static {v6}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v6}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v0
 
@@ -132,7 +132,7 @@
 
     if-ne p2, v0, :cond_4
 
-    invoke-static {v3}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v3}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v0
 
@@ -140,7 +140,7 @@
 
     .line 10
     :cond_4
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v0
 
@@ -152,7 +152,7 @@
 
     if-ne p2, v0, :cond_5
 
-    invoke-static {v6}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v6}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result p2
 
@@ -160,7 +160,7 @@
 
     .line 12
     :cond_5
-    invoke-static {v5}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v5}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result p2
 

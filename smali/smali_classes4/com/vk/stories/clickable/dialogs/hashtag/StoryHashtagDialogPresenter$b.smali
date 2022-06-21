@@ -46,11 +46,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter$b;->a:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;->e(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;)Lcom/vk/stories/clickable/dialogs/hashtag/c;
+    invoke-static {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;->e(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;)Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/c;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
 
     const-string v1, "view.editText.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
@@ -87,11 +87,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter$b;->a:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;
 
-    invoke-static {p1}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;->e(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;)Lcom/vk/stories/clickable/dialogs/hashtag/c;
+    invoke-static {p1}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;->e(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;)Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/hashtag/c;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object p1
 

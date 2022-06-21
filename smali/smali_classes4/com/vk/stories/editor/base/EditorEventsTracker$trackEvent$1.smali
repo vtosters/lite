@@ -3,7 +3,7 @@
 .source "EditorEventsTracker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/data/n$l;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/data/Analytics$l;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $currentStory:Lcom/vk/cameraui/entities/d;
+.field final synthetic $currentStory:Lcom/vk/cameraui/entities/StoryRawData3;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/cameraui/entities/d;)V
+.method constructor <init>(Lcom/vk/cameraui/entities/StoryRawData3;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker$trackEvent$1;->$currentStory:Lcom/vk/cameraui/entities/d;
+    iput-object p1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker$trackEvent$1;->$currentStory:Lcom/vk/cameraui/entities/StoryRawData3;
 
     const/4 p1, 0x1
 
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/data/n$l;)V
+.method public final a(Lcom/vtosters/lite/data/Analytics$l;)V
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/EditorEventsTracker$trackEvent$1;->$currentStory:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/EditorEventsTracker$trackEvent$1;->$currentStory:Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->s()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->s()Z
 
     move-result v0
 
@@ -68,7 +68,7 @@
     :goto_0
     const-string v1, "story_type"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     return-void
 .end method
@@ -77,11 +77,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/data/n$l;
+    check-cast p1, Lcom/vtosters/lite/data/Analytics$l;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/base/EditorEventsTracker$trackEvent$1;->a(Lcom/vtosters/lite/data/n$l;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/base/EditorEventsTracker$trackEvent$1;->a(Lcom/vtosters/lite/data/Analytics$l;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

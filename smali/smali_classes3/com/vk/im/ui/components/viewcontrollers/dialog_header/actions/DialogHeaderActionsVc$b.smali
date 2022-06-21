@@ -50,7 +50,7 @@
 
     const-string v2, "it"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
@@ -69,11 +69,11 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v1, Lcom/vk/im/ui/reporters/e;->b:Lcom/vk/im/ui/reporters/e;
+    sget-object v1, Lcom/vk/im/ui/reporters/MsgActionReporter;->b:Lcom/vk/im/ui/reporters/MsgActionReporter;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/im/ui/reporters/e;->a(Lcom/vk/im/ui/components/common/MsgAction;Z)V
+    invoke-virtual {v1, v0, v2}, Lcom/vk/im/ui/reporters/MsgActionReporter;->a(Lcom/vk/im/ui/components/common/MsgAction;Z)V
 
     .line 3
     :cond_0
@@ -88,13 +88,13 @@
 
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc$b;->a:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;->a()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;->a()V
 
     goto :goto_0
 
@@ -106,13 +106,13 @@
 
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc$b;->a:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;->c()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;->c()V
 
     goto :goto_0
 
@@ -124,13 +124,13 @@
 
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc$b;->a:Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;->f()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;->f()V
 
     goto :goto_0
 

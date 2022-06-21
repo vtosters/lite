@@ -3,12 +3,12 @@
 .source "StoryPollDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/delegates/StoryPollDelegate;->a(Lcom/vk/stories/clickable/stickers/e;)V
+    value = Lcom/vk/stories/clickable/delegates/StoryPollDelegate;->a(Lcom/vk/stories/clickable/stickers/StoryPollSticker;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,36 +19,36 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Lcom/vtosters/lite/attachments/PollAttachment;",
         "Ljava/lang/String;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $bottomSheet:Lcom/vk/core/dialogs/bottomsheet/e;
+.field final synthetic $bottomSheet:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 .field final synthetic $isPollCreated:Lkotlin/jvm/internal/Ref$BooleanRef;
 
-.field final synthetic $sticker:Lcom/vk/stories/clickable/stickers/e;
+.field final synthetic $sticker:Lcom/vk/stories/clickable/stickers/StoryPollSticker;
 
 .field final synthetic this$0:Lcom/vk/stories/clickable/delegates/StoryPollDelegate;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/clickable/delegates/StoryPollDelegate;Lkotlin/jvm/internal/Ref$BooleanRef;Lcom/vk/stories/clickable/stickers/e;Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method constructor <init>(Lcom/vk/stories/clickable/delegates/StoryPollDelegate;Lkotlin/jvm/internal/Ref$BooleanRef;Lcom/vk/stories/clickable/stickers/StoryPollSticker;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->this$0:Lcom/vk/stories/clickable/delegates/StoryPollDelegate;
 
     iput-object p2, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->$isPollCreated:Lkotlin/jvm/internal/Ref$BooleanRef;
 
-    iput-object p3, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->$sticker:Lcom/vk/stories/clickable/stickers/e;
+    iput-object p3, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->$sticker:Lcom/vk/stories/clickable/stickers/StoryPollSticker;
 
-    iput-object p4, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->$bottomSheet:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object p4, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->$bottomSheet:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     const/4 p1, 0x2
 
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->a(Lcom/vtosters/lite/attachments/PollAttachment;Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -158,7 +158,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lb/h/g/m/d;->h(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p2}, Lb/h/g/m/FileUtils;->h(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -172,7 +172,7 @@
     :goto_1
     const-string v0, "FileUtils.tryToGetRealPa\u2026i.parse(imagePath)) ?: \"\""
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     new-instance v0, Ljava/io/File;
@@ -180,7 +180,7 @@
     invoke-direct {v0, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 9
-    invoke-static {v0}, Lcom/vk/core/util/e0;->a(Ljava/io/File;)I
+    invoke-static {v0}, Lcom/vk/core/util/Exif;->a(Ljava/io/File;)I
 
     move-result v0
 
@@ -192,7 +192,7 @@
     if-eqz v0, :cond_5
 
     .line 11
-    invoke-static {p2, v0, v3}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
+    invoke-static {p2, v0, v3}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
 
     move-result-object p2
 
@@ -201,9 +201,9 @@
     if-eqz p2, :cond_7
 
     .line 12
-    sget-object v0, Lcom/vk/stories/clickable/stickers/e;->h0:Lcom/vk/stories/clickable/stickers/e$a;
+    sget-object v0, Lcom/vk/stories/clickable/stickers/StoryPollSticker;->h0:Lcom/vk/stories/clickable/stickers/StoryPollSticker$a;
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/stickers/e$a;->a()F
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/stickers/StoryPollSticker$a;->a()F
 
     move-result v0
 
@@ -221,7 +221,7 @@
     move-result v1
 
     .line 14
-    invoke-static {p2, v0, v1}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+    invoke-static {p2, v0, v1}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -252,18 +252,18 @@
     .line 18
     :cond_7
     :goto_3
-    new-instance p2, Lcom/vk/stories/clickable/models/i;
+    new-instance p2, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams4;
 
     const-string v0, "poll"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x2
 
-    invoke-direct {p2, p1, v3, v0, v2}, Lcom/vk/stories/clickable/models/i;-><init>(Lcom/vk/dto/polls/Poll;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {p2, p1, v3, v0, v2}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams4;-><init>(Lcom/vk/dto/polls/Poll;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 19
-    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->$sticker:Lcom/vk/stories/clickable/stickers/e;
+    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->$sticker:Lcom/vk/stories/clickable/stickers/StoryPollSticker;
 
     if-nez p1, :cond_b
 
@@ -274,21 +274,21 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->getStickersState()Lcom/vk/attachpicker/stickers/m0;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->getStickersState()Lcom/vk/attachpicker/stickers/StickersState;
 
     move-result-object p1
 
     const-string v0, "stickersDrawingViewGroup.stickersState"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
 
     move-result-object p1
 
     const-string v0, "stickersDrawingViewGroup.stickersState.stickers"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -311,7 +311,7 @@
     check-cast v1, Lcom/vk/attachpicker/stickers/ISticker;
 
     .line 22
-    instance-of v1, v1, Lcom/vk/stories/clickable/stickers/e;
+    instance-of v1, v1, Lcom/vk/stories/clickable/stickers/StoryPollSticker;
 
     if-eqz v1, :cond_8
 
@@ -337,9 +337,9 @@
 
     .line 25
     :cond_a
-    new-instance p1, Lcom/vk/stories/clickable/stickers/e;
+    new-instance p1, Lcom/vk/stories/clickable/stickers/StoryPollSticker;
 
-    invoke-direct {p1, p2}, Lcom/vk/stories/clickable/stickers/e;-><init>(Lcom/vk/stories/clickable/models/i;)V
+    invoke-direct {p1, p2}, Lcom/vk/stories/clickable/stickers/StoryPollSticker;-><init>(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams4;)V
 
     .line 26
     iget-object p2, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->this$0:Lcom/vk/stories/clickable/delegates/StoryPollDelegate;
@@ -365,9 +365,9 @@
     invoke-interface {p1, v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->a(Lcom/vk/dto/stories/model/StickerType;)V
 
     .line 28
-    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->$sticker:Lcom/vk/stories/clickable/stickers/e;
+    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->$sticker:Lcom/vk/stories/clickable/stickers/StoryPollSticker;
 
-    invoke-virtual {p1, p2}, Lcom/vk/stories/clickable/stickers/e;->a(Lcom/vk/stories/clickable/models/i;)V
+    invoke-virtual {p1, p2}, Lcom/vk/stories/clickable/stickers/StoryPollSticker;->a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams4;)V
 
     .line 29
     iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->this$0:Lcom/vk/stories/clickable/delegates/StoryPollDelegate;
@@ -380,9 +380,9 @@
 
     .line 30
     :goto_5
-    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->$bottomSheet:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$openPollEditor$4;->$bottomSheet:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->G4()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->G4()V
 
     return-void
 .end method

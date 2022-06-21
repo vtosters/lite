@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;
-.super Lcom/vk/im/engine/i/a;
+.super Lcom/vk/im/engine/i/BaseImEngineCmd;
 .source "DialogGetMembersCmd.kt"
 
 
@@ -12,9 +12,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/a<",
-        "Lcom/vk/im/engine/models/b<",
-        "Lcom/vk/im/engine/models/dialogs/d;",
+        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
+        "Lcom/vk/im/engine/models/EntityValue<",
+        "Lcom/vk/im/engine/models/dialogs/DialogMembersList;",
         ">;>;"
     }
 .end annotation
@@ -35,7 +35,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->b:I
 
@@ -48,22 +48,22 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+.method public static final synthetic a(Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->d(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->d(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+.method private final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
     .locals 13
 
     .line 8
-    new-instance v0, Lcom/vk/im/engine/models/dialogs/d;
+    new-instance v0, Lcom/vk/im/engine/models/dialogs/DialogMembersList;
 
     const/4 v1, 0x2
 
@@ -71,13 +71,13 @@
 
     new-instance v12, Lcom/vk/im/engine/models/dialogs/DialogMember;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->Z()Lcom/vk/im/engine/models/Member;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->Z()Lcom/vk/im/engine/models/Member;
 
     move-result-object v3
 
     const-string p1, "env.member"
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -95,7 +95,7 @@
 
     move-object v2, v12
 
-    invoke-direct/range {v2 .. v11}, Lcom/vk/im/engine/models/dialogs/DialogMember;-><init>(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/Member;JZZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v11}, Lcom/vk/im/engine/models/dialogs/DialogMember;-><init>(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/Member;JZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 p1, 0x0
 
@@ -107,30 +107,30 @@
 
     move-object v3, p2
 
-    invoke-direct/range {v2 .. v11}, Lcom/vk/im/engine/models/dialogs/DialogMember;-><init>(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/Member;JZZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v11}, Lcom/vk/im/engine/models/dialogs/DialogMember;-><init>(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/Member;JZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 p2, 0x1
 
     aput-object v12, v1, p2
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/dialogs/d;-><init>([Lcom/vk/im/engine/models/dialogs/DialogMember;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/dialogs/DialogMembersList;-><init>([Lcom/vk/im/engine/models/dialogs/DialogMember;)V
 
     .line 9
-    new-instance p2, Lcom/vk/im/engine/models/b;
+    new-instance p2, Lcom/vk/im/engine/models/EntityValue;
 
-    invoke-direct {p2, v0, p1}, Lcom/vk/im/engine/models/b;-><init>(Ljava/lang/Object;Z)V
+    invoke-direct {p2, v0, p1}, Lcom/vk/im/engine/models/EntityValue;-><init>(Ljava/lang/Object;Z)V
 
     .line 10
     new-instance p1, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p2, v0}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;-><init>(Lcom/vk/im/engine/models/b;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
+    invoke-direct {p1, p2, v0}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;-><init>(Lcom/vk/im/engine/models/EntityValue;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
     return-object p1
 .end method
 
-.method private final b(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+.method private final b(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
     .locals 2
 
     .line 1
@@ -157,7 +157,7 @@
     if-ne v0, v1, :cond_0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->e(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->e(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
 
     move-result-object p1
 
@@ -172,7 +172,7 @@
 
     .line 3
     :cond_1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->c(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->c(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
 
     move-result-object p1
 
@@ -180,7 +180,7 @@
 
     .line 4
     :cond_2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->d(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->d(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
 
     move-result-object p1
 
@@ -188,19 +188,19 @@
     return-object p1
 .end method
 
-.method private final c(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+.method private final c(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
     .locals 2
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$executeForChatByActual$fromCache$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$executeForChatByActual$fromCache$1;-><init>(Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;Lcom/vk/im/engine/d;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$executeForChatByActual$fromCache$1;-><init>(Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;Lcom/vk/im/engine/ImEnvironment;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -212,7 +212,7 @@
 
     .line 3
     :cond_0
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->e(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->e(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
 
     move-result-object v0
 
@@ -220,11 +220,11 @@
     return-object v0
 .end method
 
-.method private final d(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+.method private final d(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
     .locals 1
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -232,7 +232,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$executeForChatByCache$1;-><init>(Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -241,30 +241,30 @@
     return-object p1
 .end method
 
-.method private final e(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+.method private final e(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
     .locals 8
 
     .line 1
-    new-instance v0, Lcom/vk/im/engine/internal/api_commands/messages/l;
+    new-instance v0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationMembersApiCmd;
 
     iget v1, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->b:I
 
     iget-boolean v2, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->d:Z
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/internal/api_commands/messages/l;-><init>(IZ)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationMembersApiCmd;-><init>(IZ)V
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
 
     move-result-object v0
 
     move-object v3, v0
 
-    check-cast v3, Lcom/vk/im/engine/models/conversations/d;
+    check-cast v3, Lcom/vk/im/engine/models/conversations/ChatInfo;
 
     .line 3
     sget-object v0, Lcom/vk/core/network/TimeProvider;->f:Lcom/vk/core/network/TimeProvider;
@@ -274,7 +274,7 @@
     move-result-wide v4
 
     .line 4
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -286,9 +286,9 @@
 
     move-object v6, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$executeForChatByNetwork$1;-><init>(Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;Lcom/vk/im/engine/models/conversations/d;JLcom/vk/im/engine/d;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$executeForChatByNetwork$1;-><init>(Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;Lcom/vk/im/engine/models/conversations/ChatInfo;JLcom/vk/im/engine/ImEnvironment;)V
 
-    invoke-virtual {v0, v7}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v0, v7}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -299,15 +299,15 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
+.method public a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")",
-            "Lcom/vk/im/engine/models/b<",
-            "Lcom/vk/im/engine/models/dialogs/d;",
+            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/dialogs/DialogMembersList;",
             ">;"
         }
     .end annotation
@@ -321,7 +321,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->b(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->b(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
 
     move-result-object v0
 
@@ -335,7 +335,7 @@
 
     invoke-direct {v0, v1}, Lcom/vk/im/engine/models/Member;-><init>(I)V
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
 
     move-result-object v0
 
@@ -348,28 +348,28 @@
     if-eqz v1, :cond_1
 
     .line 6
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->n0()Lcom/vk/im/engine/internal/c;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->n0()Lcom/vk/im/engine/internal/EventHelper;
 
     move-result-object p1
 
     iget-object v2, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->e:Ljava/lang/Object;
 
-    invoke-virtual {p1, v2, v1}, Lcom/vk/im/engine/internal/c;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
+    invoke-virtual {p1, v2, v1}, Lcom/vk/im/engine/internal/EventHelper;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
     .line 7
     :cond_1
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->b()Lcom/vk/im/engine/models/b;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->b()Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/b;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object p1
 
@@ -406,7 +406,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->c:Lcom/vk/im/engine/models/Source;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -422,7 +422,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;->e:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

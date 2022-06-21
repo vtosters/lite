@@ -40,11 +40,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh$b;->a:Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh;
 
-    invoke-static {v0}, Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh;->b(Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh;)Lcom/vk/catalog2/core/holders/headers/a;
+    invoke-static {v0}, Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh;->b(Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh;)Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/headers/a;->h()Lcom/vk/core/view/search/ModernSearchView;
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->h()Lcom/vk/core/view/search/ModernSearchView;
 
     move-result-object v0
 

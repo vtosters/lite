@@ -126,13 +126,13 @@
 
     if-nez p2, :cond_5
 
-    sget-object p2, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
+    sget-object p2, Lcom/vtosters/lite/bridges/VkAuthBridge;->a:Lcom/vtosters/lite/bridges/VkAuthBridge;
 
     invoke-virtual {p1}, Lcom/vk/profile/ui/photos/PhotoUploadExtraParams;->b()I
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/vtosters/lite/bridges/h;->b(I)Z
+    invoke-virtual {p2, p1}, Lcom/vtosters/lite/bridges/VkAuthBridge;->b(I)Z
 
     move-result p1
 
@@ -269,7 +269,7 @@
     if-eqz p1, :cond_5
 
     .line 17
-    sget-object p1, Lcom/vk/navigation/q;->S:Ljava/lang/String;
+    sget-object p1, Lcom/vk/navigation/NavigatorKeys;->S:Ljava/lang/String;
 
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -295,7 +295,7 @@
 
     const-string v0, "recivedAlbum"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2, p1}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter;->a(Lcom/vk/dto/photo/PhotoAlbum;)V
 
@@ -365,7 +365,7 @@
 
     const-string v0, "photo"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p2, p1}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter$a;->a(Lcom/vk/dto/photo/Photo;)V
 

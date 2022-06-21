@@ -3,7 +3,7 @@
 .source "DialogHeaderActionsComponent.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/a;
+.implements Lcom/vk/im/ui/components/viewcontrollers/dialog_header/actions/DialogHeaderActionsVcCallback;
 
 
 # annotations
@@ -46,23 +46,23 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/c;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/actions/c;->b()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;->b()V
 
     .line 2
     :cond_0
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/e;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/State;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/e;->h()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/State;->h()Ljava/util/List;
 
     move-result-object v0
 
@@ -77,13 +77,13 @@
     .line 3
     iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/c;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v1, v0}, Lcom/vk/im/ui/components/dialog_header/actions/c;->a(Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-interface {v1, v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;->a(Lcom/vk/im/engine/models/messages/Msg;)V
 
     :cond_1
     return-void
@@ -95,13 +95,13 @@
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/c;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/actions/c;->b()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;->b()V
 
     .line 5
     :cond_0
@@ -112,11 +112,11 @@
     .line 6
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/e;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/State;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->h()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->h()Ljava/util/List;
 
     move-result-object v1
 
@@ -142,19 +142,19 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/c;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/actions/c;->b()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;->b()V
 
     .line 2
     :cond_0
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/c;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
 
     move-result-object v0
 
@@ -162,15 +162,15 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/e;
+    invoke-static {v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/State;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->h()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->h()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/c;->a(Ljava/util/List;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;->a(Ljava/util/List;)V
 
     :cond_1
     return-void
@@ -193,23 +193,23 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/c;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/actions/c;->b()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;->b()V
 
     .line 2
     :cond_0
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/e;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/State;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->h()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->h()Ljava/util/List;
 
     move-result-object v1
 
@@ -224,23 +224,23 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/c;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/actions/c;->b()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;->b()V
 
     .line 2
     :cond_0
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/e;
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/State;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/e;->h()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->h()Ljava/util/List;
 
     move-result-object v1
 
@@ -255,13 +255,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent$a;->a:Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/c;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->u()Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/actions/c;->a()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponentCallback;->a()V
 
     :cond_0
     return-void

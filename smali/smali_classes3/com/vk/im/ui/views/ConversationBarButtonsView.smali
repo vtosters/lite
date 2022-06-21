@@ -22,13 +22,13 @@
     .end annotation
 .end field
 
-.field private f:Lkotlin/jvm/b/b;
+.field private f:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/dialogs/ConversationBar$Button;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -179,7 +179,7 @@
 
     const-string v4, "getChildAt(i)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -291,7 +291,7 @@
     move-result-object v7
 
     .line 7
-    invoke-static {v7, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v7}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -357,7 +357,7 @@
     move-result-object v3
 
     .line 15
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -387,7 +387,7 @@
 
     const-string v1, "LayoutInflater.from(context)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/im/ui/views/ConversationBarButtonsView;->a:Landroid/view/LayoutInflater;
 
@@ -451,7 +451,7 @@
 
     const-string v4, "getChildAt(i)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -509,7 +509,7 @@
     :cond_1
     const-string p1, "inflater"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -609,7 +609,7 @@
     :cond_1
     const-string p1, "inflater"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -671,7 +671,7 @@
     :cond_1
     const-string p1, "inflater"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -845,20 +845,20 @@
     return v0
 .end method
 
-.method public final getOnButtonClickListener()Lkotlin/jvm/b/b;
+.method public final getOnButtonClickListener()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/im/engine/models/dialogs/ConversationBar$Button;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/ConversationBarButtonsView;->f:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/im/ui/views/ConversationBarButtonsView;->f:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
@@ -894,7 +894,7 @@
     const-string v0, "child"
 
     .line 5
-    invoke-static {p5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p5}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -1178,21 +1178,21 @@
     return-void
 .end method
 
-.method public final setOnButtonClickListener(Lkotlin/jvm/b/b;)V
+.method public final setOnButtonClickListener(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/dialogs/ConversationBar$Button;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/views/ConversationBarButtonsView;->f:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/im/ui/views/ConversationBarButtonsView;->f:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method

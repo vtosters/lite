@@ -3,12 +3,12 @@
 .source "UserHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/newsfeed/k0/b/b/i;Ljava/util/ArrayList;Landroid/view/View$OnClickListener;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Ljava/util/ArrayList;Landroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/util/List<",
         "+",
@@ -71,7 +71,7 @@
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -80,11 +80,11 @@
     .line 3
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$infoItems$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->a(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/a$h;
+    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->a(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/a$h;->a(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$h;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
@@ -104,11 +104,11 @@
     :cond_1
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$infoItems$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->i(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/a$h;
+    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->i(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/a$h;->a(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$h;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
@@ -127,11 +127,11 @@
     .line 5
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$infoItems$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->g(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/a$h;
+    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->g(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/a$h;->a(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$h;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
@@ -148,7 +148,7 @@
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->addAll(Ljava/util/Collection;)Z
 
     .line 6
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -156,11 +156,11 @@
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$infoItems$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->f(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/a$h;
+    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->f(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/a$h;->a(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$h;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
@@ -180,11 +180,11 @@
     :cond_5
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$infoItems$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->e(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/a$h;
+    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->e(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/a$h;->a(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$h;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
@@ -203,11 +203,11 @@
     .line 8
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$infoItems$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->j(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/a$h;
+    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->j(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/a$h;->a(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$h;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
@@ -224,7 +224,7 @@
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->addAll(Ljava/util/Collection;)Z
 
     .line 9
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -232,11 +232,11 @@
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$infoItems$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->f(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/a$h;
+    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->f(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/a$h;->a(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$h;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
@@ -254,7 +254,7 @@
 
     .line 10
     :cond_9
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -263,11 +263,11 @@
     .line 11
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$infoItems$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->c(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/a$h;
+    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->c(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/a$h;->a(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$h;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
@@ -286,11 +286,11 @@
     .line 12
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$infoItems$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->d(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/a$h;
+    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->d(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/a$h;->a(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$h;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
@@ -316,7 +316,7 @@
 
     if-eqz v1, :cond_d
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result p1
 
@@ -345,16 +345,16 @@
 
     if-eqz p1, :cond_e
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p1
 
     if-nez p1, :cond_e
 
     .line 16
-    new-instance p1, Lcom/vk/profile/adapter/items/r;
+    new-instance p1, Lcom/vk/profile/adapter/items/GridInfoItemsListItem;
 
-    invoke-direct {p1, v0}, Lcom/vk/profile/adapter/items/r;-><init>(Ljava/util/List;)V
+    invoke-direct {p1, v0}, Lcom/vk/profile/adapter/items/GridInfoItemsListItem;-><init>(Ljava/util/List;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 

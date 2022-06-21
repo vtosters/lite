@@ -3,12 +3,12 @@
 .source "NotificationClickHandler.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/notifications/i;)V
+    value = Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/notifications/NotificationsContainer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lio/reactivex/disposables/b;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lio/reactivex/disposables/Disposable;",
         ">;"
     }
 .end annotation
@@ -29,7 +29,7 @@
 # instance fields
 .field final synthetic $action:Lcom/vk/dto/notifications/NotificationAction;
 
-.field final synthetic $container:Lcom/vk/notifications/i;
+.field final synthetic $container:Lcom/vk/notifications/NotificationsContainer;
 
 .field final synthetic $context:Landroid/content/Context;
 
@@ -37,7 +37,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/notifications/NotificationAction;Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;)V
+.method constructor <init>(Lcom/vk/dto/notifications/NotificationAction;Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/NotificationsContainer;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;->$action:Lcom/vk/dto/notifications/NotificationAction;
@@ -46,7 +46,7 @@
 
     iput-object p3, p0, Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;->$parentNotification:Lcom/vk/dto/notifications/NotificationItem;
 
-    iput-object p4, p0, Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;->$container:Lcom/vk/notifications/i;
+    iput-object p4, p0, Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;->$container:Lcom/vk/notifications/NotificationsContainer;
 
     const/4 p1, 0x0
 
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method public final invoke()Lio/reactivex/disposables/b;
+.method public final invoke()Lio/reactivex/disposables/Disposable;
     .locals 17
 
     move-object/from16 v0, p0
@@ -89,7 +89,7 @@
 
     const-string v6, "ok"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -99,7 +99,7 @@
 
     const-string v6, "done"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -125,16 +125,16 @@
     move-result-object v1
 
     .line 6
-    new-instance v6, Lb/h/c/q/c;
+    new-instance v6, Lcom/vk/api/notifications/NotificationsAction;
 
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x2
 
-    invoke-direct {v6, v4, v2, v3, v2}, Lb/h/c/q/c;-><init>(Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v6, v4, v2, v3, v2}, Lcom/vk/api/notifications/NotificationsAction;-><init>(Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 7
-    invoke-static {v6, v2, v7, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v6, v2, v7, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v8
 
@@ -153,7 +153,7 @@
 
     const/16 v16, 0x0
 
-    invoke-static/range {v8 .. v16}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v8 .. v16}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -168,7 +168,7 @@
     invoke-direct {v1, v0}, Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1$b;-><init>(Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;)V
 
     .line 11
-    invoke-virtual {v2, v3, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v2, v3, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v2
 
@@ -180,7 +180,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;->invoke()Lio/reactivex/disposables/b;
+    invoke-virtual {p0}, Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;->invoke()Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 

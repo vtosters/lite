@@ -22,7 +22,7 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/facebook/internal/h;",
+            "Lcom/facebook/internal/FetchedAppSettings;",
             ">;"
         }
     .end annotation
@@ -140,18 +140,18 @@
     return-void
 .end method
 
-.method static synthetic a(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/facebook/internal/h;
+.method static synthetic a(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/facebook/internal/FetchedAppSettings;
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/facebook/internal/FetchedAppSettingsManager;->b(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/facebook/internal/h;
+    invoke-static {p0, p1}, Lcom/facebook/internal/FetchedAppSettingsManager;->b(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/facebook/internal/FetchedAppSettings;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static a(Ljava/lang/String;Z)Lcom/facebook/internal/h;
+.method public static a(Ljava/lang/String;Z)Lcom/facebook/internal/FetchedAppSettings;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -174,7 +174,7 @@
 
     move-result-object p0
 
-    check-cast p0, Lcom/facebook/internal/h;
+    check-cast p0, Lcom/facebook/internal/FetchedAppSettings;
 
     return-object p0
 
@@ -192,12 +192,12 @@
 
     .line 8
     :cond_1
-    invoke-static {p0, p1}, Lcom/facebook/internal/FetchedAppSettingsManager;->b(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/facebook/internal/h;
+    invoke-static {p0, p1}, Lcom/facebook/internal/FetchedAppSettingsManager;->b(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/facebook/internal/FetchedAppSettings;
 
     move-result-object p1
 
     .line 9
-    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -232,7 +232,7 @@
             "Ljava/lang/String;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/facebook/internal/h$a;",
+            "Lcom/facebook/internal/FetchedAppSettings$a;",
             ">;>;"
         }
     .end annotation
@@ -269,7 +269,7 @@
     move-result-object v2
 
     .line 16
-    invoke-static {v2}, Lcom/facebook/internal/h$a;->a(Lorg/json/JSONObject;)Lcom/facebook/internal/h$a;
+    invoke-static {v2}, Lcom/facebook/internal/FetchedAppSettings$a;->a(Lorg/json/JSONObject;)Lcom/facebook/internal/FetchedAppSettings$a;
 
     move-result-object v2
 
@@ -279,7 +279,7 @@
 
     .line 17
     :cond_0
-    invoke-virtual {v2}, Lcom/facebook/internal/h$a;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/facebook/internal/FetchedAppSettings$a;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -302,7 +302,7 @@
 
     .line 21
     :cond_1
-    invoke-virtual {v2}, Lcom/facebook/internal/h$a;->b()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/facebook/internal/FetchedAppSettings$a;->b()Ljava/lang/String;
 
     move-result-object v3
 
@@ -346,7 +346,7 @@
     return p0
 .end method
 
-.method private static b(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/facebook/internal/h;
+.method private static b(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/facebook/internal/FetchedAppSettings;
     .locals 22
 
     move-object/from16 v0, p1
@@ -450,7 +450,7 @@
 
     if-eqz v2, :cond_5
 
-    invoke-static {}, Lcom/facebook/internal/j;->b()Z
+    invoke-static {}, Lcom/facebook/internal/InternalSettings;->b()Z
 
     move-result v2
 
@@ -461,11 +461,11 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/facebook/appevents/codeless/internal/c;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/facebook/appevents/codeless/internal/UnityReflection;->a(Ljava/lang/String;)V
 
     .line 10
     :cond_5
-    new-instance v12, Lcom/facebook/internal/h;
+    new-instance v12, Lcom/facebook/internal/FetchedAppSettings;
 
     move-object v2, v12
 
@@ -493,7 +493,7 @@
     move-result v5
 
     .line 14
-    invoke-static {}, Lcom/facebook/appevents/internal/d;->a()I
+    invoke-static {}, Lcom/facebook/appevents/internal/Constants;->a()I
 
     move-result v1
 
@@ -572,7 +572,7 @@
 
     move-result-object v20
 
-    invoke-direct/range {v2 .. v20}, Lcom/facebook/internal/h;-><init>(ZLjava/lang/String;ZILjava/util/EnumSet;Ljava/util/Map;ZLcom/facebook/internal/FacebookRequestErrorClassification;Ljava/lang/String;Ljava/lang/String;ZZLorg/json/JSONArray;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v2 .. v20}, Lcom/facebook/internal/FetchedAppSettings;-><init>(ZLjava/lang/String;ZILjava/util/EnumSet;Ljava/util/Map;ZLcom/facebook/internal/FacebookRequestErrorClassification;Ljava/lang/String;Ljava/lang/String;ZZLorg/json/JSONArray;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 24
     sget-object v0, Lcom/facebook/internal/FetchedAppSettingsManager;->c:Ljava/util/Map;
@@ -641,18 +641,18 @@
     invoke-virtual {p0, v0}, Lcom/facebook/GraphRequest;->a(Landroid/os/Bundle;)V
 
     .line 31
-    invoke-virtual {p0}, Lcom/facebook/GraphRequest;->a()Lcom/facebook/i;
+    invoke-virtual {p0}, Lcom/facebook/GraphRequest;->a()Lcom/facebook/GraphResponse;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/facebook/i;->b()Lorg/json/JSONObject;
+    invoke-virtual {p0}, Lcom/facebook/GraphResponse;->b()Lorg/json/JSONObject;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static c(Ljava/lang/String;)Lcom/facebook/internal/h;
+.method public static c(Ljava/lang/String;)Lcom/facebook/internal/FetchedAppSettings;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -666,7 +666,7 @@
 
     move-result-object p0
 
-    check-cast p0, Lcom/facebook/internal/h;
+    check-cast p0, Lcom/facebook/internal/FetchedAppSettings;
 
     goto :goto_0
 
@@ -708,17 +708,17 @@
     .locals 7
 
     .line 1
-    invoke-static {}, Lcom/facebook/e;->e()Landroid/content/Context;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->e()Landroid/content/Context;
 
     move-result-object v0
 
     .line 2
-    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
 
     move-result-object v1
 
     .line 3
-    invoke-static {v1}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -821,7 +821,7 @@
     move-result-object v2
 
     .line 13
-    invoke-static {}, Lcom/facebook/e;->m()Ljava/util/concurrent/Executor;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->m()Ljava/util/concurrent/Executor;
 
     move-result-object v3
 
@@ -872,7 +872,7 @@
 
     .line 3
     :cond_0
-    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
 
     move-result-object v2
 
@@ -883,7 +883,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/facebook/internal/h;
+    check-cast v2, Lcom/facebook/internal/FetchedAppSettings;
 
     .line 5
     new-instance v3, Landroid/os/Handler;
@@ -963,7 +963,7 @@
     .line 13
     new-instance v4, Lcom/facebook/internal/FetchedAppSettingsManager$c;
 
-    invoke-direct {v4, v1, v2}, Lcom/facebook/internal/FetchedAppSettingsManager$c;-><init>(Lcom/facebook/internal/FetchedAppSettingsManager$d;Lcom/facebook/internal/h;)V
+    invoke-direct {v4, v1, v2}, Lcom/facebook/internal/FetchedAppSettingsManager$c;-><init>(Lcom/facebook/internal/FetchedAppSettingsManager$d;Lcom/facebook/internal/FetchedAppSettings;)V
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_1

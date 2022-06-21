@@ -1,5 +1,5 @@
 .class public final Lcom/vk/ml/model/BrandsNNModel;
-.super Lcom/vk/ml/model/a/a;
+.super Lcom/vk/ml/model/a/ImageNNModel;
 .source "BrandsNNModel.kt"
 
 
@@ -41,12 +41,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/ml/model/BrandsNNModel$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/ml/model/BrandsNNModel$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/ml/model/a/b;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/ml/model/a/ModelDtoProvider;)V
     .locals 16
 
     move-object/from16 v0, p0
@@ -58,7 +58,7 @@
     const/4 v3, 0x1
 
     .line 1
-    invoke-direct {v0, v2, v2, v1, v3}, Lcom/vk/ml/model/a/a;-><init>(IIII)V
+    invoke-direct {v0, v2, v2, v1, v3}, Lcom/vk/ml/model/a/ImageNNModel;-><init>(IIII)V
 
     new-array v2, v3, [[[F
 
@@ -159,7 +159,7 @@
 
     move-object/from16 v3, p2
 
-    invoke-interface {v3, v2}, Lcom/vk/ml/model/a/b;->a(Lcom/vk/ml/MLFeatures$MLFeature;)Lcom/vk/ml/c;
+    invoke-interface {v3, v2}, Lcom/vk/ml/model/a/ModelDtoProvider;->a(Lcom/vk/ml/MLFeatures$MLFeature;)Lcom/vk/ml/MLModelDto;
 
     move-result-object v2
 
@@ -168,7 +168,7 @@
     .line 9
     new-instance v3, Lorg/json/JSONObject;
 
-    invoke-virtual {v2}, Lcom/vk/ml/c;->b()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/ml/MLModelDto;->b()Ljava/lang/String;
 
     move-result-object v5
 
@@ -212,7 +212,7 @@
 
     const-string v6, "context.resources"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -242,7 +242,7 @@
 
     const-string v9, "this.getJSONObject(i)"
 
-    invoke-static {v8, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v9, "id"
 
@@ -261,7 +261,7 @@
     const-string v10, "locale"
 
     .line 18
-    invoke-static {v5, v10}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v10}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
@@ -412,7 +412,7 @@
 
     const-string v8, "Uri.parse(actionURL)\n   \u2026              .toString()"
 
-    invoke-static {v4, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 38
     iget-object v8, v0, Lcom/vk/ml/model/BrandsNNModel;->l:Landroid/util/SparseArray;
@@ -438,7 +438,7 @@
 
     new-instance v4, Ljava/io/File;
 
-    invoke-virtual {v2}, Lcom/vk/ml/c;->d()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/ml/MLModelDto;->d()Ljava/lang/String;
 
     move-result-object v2
 
@@ -457,40 +457,40 @@
     move-object/from16 v3, p1
 
     .line 40
-    invoke-virtual {v0, v3, v2}, Lcom/vk/ml/model/a/c;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/nio/MappedByteBuffer;
+    invoke-virtual {v0, v3, v2}, Lcom/vk/ml/model/a/NNModel;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/nio/MappedByteBuffer;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/vk/ml/model/a/c;->a(Ljava/nio/MappedByteBuffer;)V
+    invoke-virtual {v0, v2}, Lcom/vk/ml/model/a/NNModel;->a(Ljava/nio/MappedByteBuffer;)V
 
     .line 41
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/ml/model/a/c;->b()Lorg/tensorflow/lite/b$a;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/ml/model/a/NNModel;->b()Lorg/tensorflow/lite/Interpreter$a;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lorg/tensorflow/lite/b$a;->a(I)Lorg/tensorflow/lite/b$a;
+    invoke-virtual {v2, v1}, Lorg/tensorflow/lite/Interpreter$a;->a(I)Lorg/tensorflow/lite/Interpreter$a;
 
     .line 42
-    new-instance v1, Lorg/tensorflow/lite/b;
+    new-instance v1, Lorg/tensorflow/lite/Interpreter;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/ml/model/a/c;->a()Ljava/nio/MappedByteBuffer;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/ml/model/a/NNModel;->a()Ljava/nio/MappedByteBuffer;
 
     move-result-object v2
 
     if-eqz v2, :cond_7
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/ml/model/a/c;->b()Lorg/tensorflow/lite/b$a;
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/ml/model/a/NNModel;->b()Lorg/tensorflow/lite/Interpreter$a;
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v3}, Lorg/tensorflow/lite/b;-><init>(Ljava/nio/ByteBuffer;Lorg/tensorflow/lite/b$a;)V
+    invoke-direct {v1, v2, v3}, Lorg/tensorflow/lite/Interpreter;-><init>(Ljava/nio/ByteBuffer;Lorg/tensorflow/lite/Interpreter$a;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/ml/model/a/c;->a(Lorg/tensorflow/lite/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/ml/model/a/NNModel;->a(Lorg/tensorflow/lite/Interpreter;)V
 
     return-void
 
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v1, 0x0
 
@@ -672,7 +672,7 @@
     const-string p1, "finalBmp"
 
     .line 18
-    invoke-static {p3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p3
 .end method
@@ -693,7 +693,7 @@
     move-result-object p1
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/vk/ml/model/a/a;->a(Landroid/graphics/Bitmap;)Ljava/nio/ByteBuffer;
+    invoke-virtual {p0, p1}, Lcom/vk/ml/model/a/ImageNNModel;->a(Landroid/graphics/Bitmap;)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
@@ -764,7 +764,7 @@
     invoke-interface {p1, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 13
-    invoke-virtual {p0, v2, p1}, Lcom/vk/ml/model/a/c;->a([Ljava/lang/Object;Ljava/util/Map;)V
+    invoke-virtual {p0, v2, p1}, Lcom/vk/ml/model/a/NNModel;->a([Ljava/lang/Object;Ljava/util/Map;)V
 
     new-array p1, p3, [Ljava/lang/Object;
 
@@ -803,14 +803,14 @@
     aget-object p1, p1, p4
 
     .line 16
-    invoke-static {p1}, Lkotlin/collections/f;->a([F)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/collections/f;->a([F)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 17
     sget-object v0, Lcom/vk/ml/model/BrandsNNModel$run$results$1;->a:Lcom/vk/ml/model/BrandsNNModel$run$results$1;
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Lkotlin/jvm/b/c;)Lkotlin/sequences/j;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions1;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
@@ -819,24 +819,24 @@
 
     invoke-direct {v0}, Lcom/vk/ml/model/BrandsNNModel$b;-><init>()V
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/util/Comparator;)Lkotlin/sequences/j;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/util/Comparator;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 19
-    invoke-static {p1, v3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
+    invoke-static {p1, v3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 20
     sget-object v0, Lcom/vk/ml/model/BrandsNNModel$run$results$3;->a:Lcom/vk/ml/model/BrandsNNModel$run$results$3;
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 21
-    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object p1
 

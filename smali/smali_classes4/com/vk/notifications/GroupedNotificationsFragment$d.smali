@@ -58,7 +58,7 @@
     const-string v1, "v"
 
     .line 3
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
@@ -96,7 +96,7 @@
     .line 6
     iget-object v1, p0, Lcom/vk/notifications/GroupedNotificationsFragment$d;->a:Lcom/vk/notifications/GroupedNotificationsFragment;
 
-    invoke-static {v1}, Lcom/vk/notifications/GroupedNotificationsFragment;->b(Lcom/vk/notifications/GroupedNotificationsFragment;)Lcom/vk/notifications/h;
+    invoke-static {v1}, Lcom/vk/notifications/GroupedNotificationsFragment;->b(Lcom/vk/notifications/GroupedNotificationsFragment;)Lcom/vk/notifications/NotificationsAnalytics;
 
     move-result-object v1
 
@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vk/notifications/h;->a(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/vk/notifications/NotificationsAnalytics;->a(Ljava/lang/String;)V
 
     goto :goto_1
 

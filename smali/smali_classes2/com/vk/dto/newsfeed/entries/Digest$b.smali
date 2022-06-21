@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -226,9 +226,9 @@
 
     .line 15
     :cond_4
-    sget-object v6, Lcom/vk/dto/newsfeed/b;->a:Lcom/vk/dto/newsfeed/b;
+    sget-object v6, Lcom/vk/dto/newsfeed/DigestNormalizer;->a:Lcom/vk/dto/newsfeed/DigestNormalizer;
 
-    invoke-virtual {v6, v9}, Lcom/vk/dto/newsfeed/b;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v6, v9}, Lcom/vk/dto/newsfeed/DigestNormalizer;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v6
 
@@ -257,17 +257,17 @@
     .line 18
     new-instance v9, Lcom/vk/dto/newsfeed/entries/Digest;
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "feedId"
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v5, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "buttonText"
 
-    invoke-static {v7, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v2, v9
 

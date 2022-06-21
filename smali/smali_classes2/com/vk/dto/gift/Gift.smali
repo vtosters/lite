@@ -1,5 +1,5 @@
 .class public Lcom/vk/dto/gift/Gift;
-.super Lcom/vk/dto/common/e;
+.super Lcom/vk/dto/common/Model;
 .source "Gift.java"
 
 # interfaces
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 13
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     .line 14
     new-instance v0, Ljava/util/ArrayList;
@@ -141,7 +141,7 @@
     .end param
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     .line 3
     new-instance v0, Ljava/util/ArrayList;

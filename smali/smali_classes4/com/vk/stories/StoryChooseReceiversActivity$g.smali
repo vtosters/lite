@@ -80,7 +80,7 @@
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity$g;->a:Lcom/vk/stories/StoryChooseReceiversActivity;
 
     .line 6
-    invoke-virtual {v1, v0}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/w;
+    invoke-virtual {v1, v0}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/Dismissable;
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "SelectionPreviewViewTypeDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/selection/b;)V
+    value = Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/selection/SelectionPreviewCallback;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,17 +52,17 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/selection/UserVh$1;->this$0:Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;->a(Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;)Lcom/vk/im/ui/components/contacts/vc/selection/b;
+    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;->a(Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;)Lcom/vk/im/ui/components/contacts/vc/selection/SelectionPreviewCallback;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/selection/UserVh$1;->this$0:Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;->b(Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;)Lcom/vk/im/engine/models/j;
+    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;->b(Lcom/vk/im/ui/components/contacts/vc/selection/UserVh;)Lcom/vk/im/engine/models/Profile;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/im/ui/components/contacts/vc/selection/b;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-interface {p1, v0}, Lcom/vk/im/ui/components/contacts/vc/selection/SelectionPreviewCallback;->a(Lcom/vk/im/engine/models/Profile;)V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/vc/selection/UserVh$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

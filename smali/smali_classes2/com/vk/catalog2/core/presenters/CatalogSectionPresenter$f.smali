@@ -3,12 +3,12 @@
 .source "CatalogSectionPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/catalog2/core/api/dto/d<",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
         "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
         ">;>;"
     }
@@ -51,12 +51,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/api/dto/d;)V
+.method public final a(Lcom/vk/catalog2/core/api/dto/CatalogResponse;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/catalog2/core/api/dto/d<",
+            "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;)V"
         }
@@ -87,13 +87,13 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$f;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/presenters/c;->o()Lcom/vk/catalog2/core/holders/common/g;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->o()Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/j;->F()V
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogScrollableViewHolder;->F()V
 
     .line 3
     :cond_1
@@ -106,21 +106,21 @@
     .line 4
     iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$f;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-static {v0}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->d(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)Lcom/vk/catalog2/core/i;
+    invoke-static {v0}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->d(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)Lcom/vk/catalog2/core/CatalogResponseTransformer;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/d;->b()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/CatalogResponse;->b()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/vk/catalog2/core/api/dto/CatalogSection;
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/d;->a()Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/CatalogResponse;->a()Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;
 
     move-result-object v3
 
-    invoke-interface {v0, v2, v3}, Lcom/vk/catalog2/core/i;->a(Lcom/vk/catalog2/core/api/dto/CatalogSection;Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+    invoke-interface {v0, v2, v3}, Lcom/vk/catalog2/core/CatalogResponseTransformer;->a(Lcom/vk/catalog2/core/api/dto/CatalogSection;Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;)Lcom/vk/catalog2/core/blocks/UIBlockList;
 
     move-result-object v0
 
@@ -193,35 +193,35 @@
     .line 11
     iget-object v1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$f;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-static {v1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)Lcom/vk/catalog2/core/e;
+    invoke-static {v1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/catalog2/core/e;->i()Lcom/vk/catalog2/core/w/b;
+    invoke-virtual {v1}, Lcom/vk/catalog2/core/CatalogEntryPointParams;->i()Lcom/vk/catalog2/core/w/CatalogEventsBus;
 
     move-result-object v1
 
-    new-instance v2, Lcom/vk/catalog2/core/w/e/g;
+    new-instance v2, Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent;
 
     invoke-virtual {v0}, Lcom/vk/catalog2/core/blocks/UIBlock;->t1()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Lcom/vk/catalog2/core/w/e/g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0}, Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/catalog2/core/w/b;->a(Lcom/vk/catalog2/core/w/e/a;)V
+    invoke-virtual {v1, v2}, Lcom/vk/catalog2/core/w/CatalogEventsBus;->a(Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent1;)V
 
     .line 12
     :cond_5
     iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$f;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/presenters/c;->b()Lcom/vk/lists/t;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->b()Lcom/vk/lists/PaginationHelper;
 
     move-result-object v0
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/d;->b()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/CatalogResponse;->b()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -231,7 +231,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/t;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/PaginationHelper;->a(Ljava/lang/String;)V
 
     :cond_6
     return-void
@@ -241,9 +241,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/catalog2/core/api/dto/d;
+    check-cast p1, Lcom/vk/catalog2/core/api/dto/CatalogResponse;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$f;->a(Lcom/vk/catalog2/core/api/dto/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$f;->a(Lcom/vk/catalog2/core/api/dto/CatalogResponse;)V
 
     return-void
 .end method

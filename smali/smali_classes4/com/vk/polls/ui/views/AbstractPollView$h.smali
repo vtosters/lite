@@ -53,7 +53,7 @@
 
     if-eqz p1, :cond_2
 
-    check-cast p1, Lcom/vk/polls/ui/views/c;
+    check-cast p1, Lcom/vk/polls/ui/views/PollOptionView;
 
     invoke-static {v1, p1}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lcom/vk/polls/ui/views/AbstractPollView;Landroid/view/View;)I
 

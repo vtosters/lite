@@ -17,13 +17,13 @@
 
 .field private final I:Lcom/vk/stickers/StickersRecyclerView$d;
 
-.field private J:Lcom/vk/stickers/g0/a;
+.field private J:Lcom/vk/stickers/g0/StickerKeyboardListener;
 
 .field private K:Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
 
-.field private L:Lcom/vk/stickers/x;
+.field private L:Lcom/vk/stickers/StickersKeyboardAnalytics;
 
-.field private M:Lcom/vk/core/util/w;
+.field private M:Lcom/vk/core/util/Dismissable;
 
 
 # direct methods
@@ -145,11 +145,11 @@
     add-int/2addr p1, v1
 
     .line 7
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/stickers/bridge/k;->d()Lcom/vk/stickers/bridge/h;
+    invoke-interface {v1}, Lcom/vk/stickers/bridge/StickersBridge;->d()Lcom/vk/stickers/bridge/StickersBridge6;
 
     move-result-object v1
 
@@ -160,7 +160,7 @@
 
     const-string v4, "context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v3}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -182,16 +182,16 @@
     invoke-direct {v4, v5, v6, v2, p1}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 10
-    invoke-interface {v1, v3, v4}, Lcom/vk/stickers/bridge/h;->a(Landroid/app/Activity;Landroid/graphics/Rect;)Lcom/vk/core/util/w;
+    invoke-interface {v1, v3, v4}, Lcom/vk/stickers/bridge/StickersBridge6;->a(Landroid/app/Activity;Landroid/graphics/Rect;)Lcom/vk/core/util/Dismissable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stickers/StickersRecyclerView;->M:Lcom/vk/core/util/w;
+    iput-object p1, p0, Lcom/vk/stickers/StickersRecyclerView;->M:Lcom/vk/core/util/Dismissable;
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -206,20 +206,20 @@
     .end array-data
 .end method
 
-.method public static final synthetic b(Lcom/vk/stickers/StickersRecyclerView;)Lcom/vk/stickers/x;
+.method public static final synthetic b(Lcom/vk/stickers/StickersRecyclerView;)Lcom/vk/stickers/StickersKeyboardAnalytics;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stickers/StickersRecyclerView;->L:Lcom/vk/stickers/x;
+    iget-object p0, p0, Lcom/vk/stickers/StickersRecyclerView;->L:Lcom/vk/stickers/StickersKeyboardAnalytics;
 
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/stickers/StickersRecyclerView;)Lcom/vk/stickers/g0/a;
+.method public static final synthetic c(Lcom/vk/stickers/StickersRecyclerView;)Lcom/vk/stickers/g0/StickerKeyboardListener;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stickers/StickersRecyclerView;->J:Lcom/vk/stickers/g0/a;
+    iget-object p0, p0, Lcom/vk/stickers/StickersRecyclerView;->J:Lcom/vk/stickers/g0/StickerKeyboardListener;
 
     return-object p0
 .end method
@@ -279,15 +279,15 @@
     .locals 2
 
     .line 2
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stickers/bridge/k;->d()Lcom/vk/stickers/bridge/h;
+    invoke-interface {v0}, Lcom/vk/stickers/bridge/StickersBridge;->d()Lcom/vk/stickers/bridge/StickersBridge6;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stickers/bridge/h;->a()Z
+    invoke-interface {v0}, Lcom/vk/stickers/bridge/StickersBridge6;->a()Z
 
     move-result v0
 
@@ -329,17 +329,17 @@
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/stickers/StickersRecyclerView;->M:Lcom/vk/core/util/w;
+    iget-object p1, p0, Lcom/vk/stickers/StickersRecyclerView;->M:Lcom/vk/core/util/Dismissable;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/core/util/w;->dismiss()V
+    invoke-interface {p1}, Lcom/vk/core/util/Dismissable;->dismiss()V
 
     :cond_0
     const/4 p1, 0x0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/stickers/StickersRecyclerView;->M:Lcom/vk/core/util/w;
+    iput-object p1, p0, Lcom/vk/stickers/StickersRecyclerView;->M:Lcom/vk/core/util/Dismissable;
 
     return-void
 .end method
@@ -372,7 +372,7 @@
 
     const-string p2, "context"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -380,7 +380,7 @@
 
     const-string p2, "context.resources"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -403,7 +403,7 @@
     if-eqz p1, :cond_1
 
     .line 4
-    sget p1, Lcom/vk/stickers/v;->b:I
+    sget p1, Lcom/vk/stickers/StickersConfig;->b:I
 
     goto :goto_1
 
@@ -469,20 +469,20 @@
     return-void
 .end method
 
-.method public final setAnalytics(Lcom/vk/stickers/x;)V
+.method public final setAnalytics(Lcom/vk/stickers/StickersKeyboardAnalytics;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/stickers/StickersRecyclerView;->L:Lcom/vk/stickers/x;
+    iput-object p1, p0, Lcom/vk/stickers/StickersRecyclerView;->L:Lcom/vk/stickers/StickersKeyboardAnalytics;
 
     return-void
 .end method
 
-.method public final setKeyboardListener(Lcom/vk/stickers/g0/a;)V
+.method public final setKeyboardListener(Lcom/vk/stickers/g0/StickerKeyboardListener;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/stickers/StickersRecyclerView;->J:Lcom/vk/stickers/g0/a;
+    iput-object p1, p0, Lcom/vk/stickers/StickersRecyclerView;->J:Lcom/vk/stickers/g0/StickerKeyboardListener;
 
     return-void
 .end method

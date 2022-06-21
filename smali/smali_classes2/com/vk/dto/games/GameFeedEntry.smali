@@ -3,7 +3,7 @@
 .source "GameFeedEntry.java"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/h;
+.implements Lcom/vk/dto/common/data/ServerKeys;
 
 
 # annotations

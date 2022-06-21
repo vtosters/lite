@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lcom/vk/music/podcasts/page/e;)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/music/podcasts/page/PodcastScreenContract;)V
     .locals 1
 
     .line 1
@@ -49,20 +49,20 @@
 
     const-string v0, "retryButton"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/music/podcasts/page/PodcastPageErrorViewController$1;
 
-    invoke-direct {v0, p2}, Lcom/vk/music/podcasts/page/PodcastPageErrorViewController$1;-><init>(Lcom/vk/music/podcasts/page/e;)V
+    invoke-direct {v0, p2}, Lcom/vk/music/podcasts/page/PodcastPageErrorViewController$1;-><init>(Lcom/vk/music/podcasts/page/PodcastScreenContract;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Throwable;Lcom/vk/lists/i;)Lcom/vk/music/podcasts/page/PodcastPageErrorViewController;
+.method public final a(Ljava/lang/Throwable;Lcom/vk/lists/ErrorViewConfiguration;)Lcom/vk/music/podcasts/page/PodcastPageErrorViewController;
     .locals 3
 
     const-string v0, "retryButton"
@@ -74,9 +74,9 @@
 
     const-string v2, "errorTextView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, p1}, Lcom/vk/lists/i;->a(Ljava/lang/Throwable;)Ljava/lang/CharSequence;
+    invoke-interface {p2, p1}, Lcom/vk/lists/ErrorViewConfiguration;->a(Ljava/lang/Throwable;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -85,9 +85,9 @@
     .line 2
     iget-object v1, p0, Lcom/vk/music/podcasts/page/PodcastPageErrorViewController;->b:Landroid/view/View;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, p1}, Lcom/vk/lists/i;->b(Ljava/lang/Throwable;)Z
+    invoke-interface {p2, p1}, Lcom/vk/lists/ErrorViewConfiguration;->b(Ljava/lang/Throwable;)Z
 
     move-result p1
 
@@ -106,7 +106,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/music/podcasts/page/PodcastPageErrorViewController;->b:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x1
 

@@ -3,7 +3,7 @@
 .source "NotifyFormatter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/im/ui/formatters/j;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/im/ui/formatters/MsgAttachFormatter;",
         ">;"
     }
 .end annotation
@@ -55,11 +55,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/formatters/j;
+.method public final invoke()Lcom/vk/im/ui/formatters/MsgAttachFormatter;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/formatters/j;
+    new-instance v0, Lcom/vk/im/ui/formatters/MsgAttachFormatter;
 
     sget-object v1, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->g:Lcom/vtosters/lite/im/notifications/NotifyFormatter;
 
@@ -69,9 +69,9 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/j;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/MsgAttachFormatter;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -80,7 +80,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/im/notifications/NotifyFormatter$attachFormatter$2;->invoke()Lcom/vk/im/ui/formatters/j;
+    invoke-virtual {p0}, Lcom/vtosters/lite/im/notifications/NotifyFormatter$attachFormatter$2;->invoke()Lcom/vk/im/ui/formatters/MsgAttachFormatter;
 
     move-result-object v0
 

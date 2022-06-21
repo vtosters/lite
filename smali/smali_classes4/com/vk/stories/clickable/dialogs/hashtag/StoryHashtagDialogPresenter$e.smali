@@ -3,7 +3,7 @@
 .source "StoryHashtagDialogPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/stories/clickable/models/StoryHashtagSearchResult;",
         ">;"
     }
@@ -52,17 +52,17 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter$e;->a:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;->e(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;)Lcom/vk/stories/clickable/dialogs/hashtag/c;
+    invoke-static {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;->e(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;)Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/c;->c0()Lcom/vk/stories/clickable/views/StoryHashtagsTopView;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;->c0()Lcom/vk/stories/clickable/views/StoryHashtagsTopView;
 
     move-result-object v0
 
     const-string v1, "result"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 

@@ -3,7 +3,7 @@
 .source "ReefProtocol.java"
 
 # interfaces
-.implements Lcom/vk/reef/protocol/f0;
+.implements Lcom/vk/reef/protocol/ReefProtocol25;
 
 
 # annotations
@@ -20,7 +20,7 @@
         "Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;",
         "Lcom/vk/reef/protocol/ReefProtocol$SignalInfo$a;",
         ">;",
-        "Lcom/vk/reef/protocol/f0;"
+        "Lcom/vk/reef/protocol/ReefProtocol25;"
     }
 .end annotation
 
@@ -40,7 +40,7 @@
 
 
 # instance fields
-.field private B:Lcom/vk/reef/protocol/v;
+.field private B:Lcom/vk/reef/protocol/ReefProtocol14;
 
 .field private d:I
 
@@ -104,34 +104,34 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;Lcom/vk/reef/protocol/b0$a;)V
+.method static synthetic a(Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;Lcom/vk/reef/protocol/ReefProtocol$a9;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->a(Lcom/vk/reef/protocol/b0$a;)V
+    invoke-direct {p0, p1}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->a(Lcom/vk/reef/protocol/ReefProtocol$a9;)V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;Lcom/vk/reef/protocol/d0$a;)V
+.method static synthetic a(Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;Lcom/vk/reef/protocol/ReefProtocol$a2;)V
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->a(Lcom/vk/reef/protocol/d0$a;)V
+    invoke-direct {p0, p1}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->a(Lcom/vk/reef/protocol/ReefProtocol$a2;)V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;Lcom/vk/reef/protocol/v;)V
+.method static synthetic a(Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;Lcom/vk/reef/protocol/ReefProtocol14;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->a(Lcom/vk/reef/protocol/v;)V
+    invoke-direct {p0, p1}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->a(Lcom/vk/reef/protocol/ReefProtocol14;)V
 
     return-void
 .end method
 
-.method private a(Lcom/vk/reef/protocol/b0$a;)V
+.method private a(Lcom/vk/reef/protocol/ReefProtocol$a9;)V
     .locals 0
 
     .line 8
@@ -149,7 +149,7 @@
     return-void
 .end method
 
-.method private a(Lcom/vk/reef/protocol/d0$a;)V
+.method private a(Lcom/vk/reef/protocol/ReefProtocol$a2;)V
     .locals 0
 
     .line 10
@@ -167,13 +167,13 @@
     return-void
 .end method
 
-.method private a(Lcom/vk/reef/protocol/v;)V
+.method private a(Lcom/vk/reef/protocol/ReefProtocol14;)V
     .locals 0
 
     if-eqz p1, :cond_0
 
     .line 6
-    iput-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/v;
+    iput-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/ReefProtocol14;
 
     return-void
 
@@ -273,7 +273,7 @@
     .locals 7
 
     .line 24
-    sget-object v0, Lcom/vk/reef/protocol/a;->a:[I
+    sget-object v0, Lcom/vk/reef/protocol/ReefProtocol1;->a:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
@@ -408,13 +408,13 @@
     .line 36
     iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->e:Ljava/lang/Object;
 
-    check-cast p1, Lcom/vk/reef/protocol/d0;
+    check-cast p1, Lcom/vk/reef/protocol/ReefProtocol19;
 
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite;->b()Lcom/google/protobuf/GeneratedMessageLite$b;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/reef/protocol/d0$a;
+    check-cast p1, Lcom/vk/reef/protocol/ReefProtocol$a2;
 
     goto :goto_2
 
@@ -423,7 +423,7 @@
 
     .line 37
     :goto_2
-    invoke-static {}, Lcom/vk/reef/protocol/d0;->r()Lcom/google/protobuf/v;
+    invoke-static {}, Lcom/vk/reef/protocol/ReefProtocol19;->r()Lcom/google/protobuf/v;
 
     move-result-object v5
 
@@ -438,7 +438,7 @@
     .line 38
     iget-object v5, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->e:Ljava/lang/Object;
 
-    check-cast v5, Lcom/vk/reef/protocol/d0;
+    check-cast v5, Lcom/vk/reef/protocol/ReefProtocol19;
 
     invoke-virtual {p1, v5}, Lcom/google/protobuf/GeneratedMessageLite$b;->b(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$b;
 
@@ -464,13 +464,13 @@
     .line 42
     iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->e:Ljava/lang/Object;
 
-    check-cast p1, Lcom/vk/reef/protocol/b0;
+    check-cast p1, Lcom/vk/reef/protocol/ReefProtocol8;
 
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite;->b()Lcom/google/protobuf/GeneratedMessageLite$b;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/reef/protocol/b0$a;
+    check-cast p1, Lcom/vk/reef/protocol/ReefProtocol$a9;
 
     goto :goto_3
 
@@ -479,7 +479,7 @@
 
     .line 43
     :goto_3
-    invoke-static {}, Lcom/vk/reef/protocol/b0;->n()Lcom/google/protobuf/v;
+    invoke-static {}, Lcom/vk/reef/protocol/ReefProtocol8;->n()Lcom/google/protobuf/v;
 
     move-result-object v5
 
@@ -494,7 +494,7 @@
     .line 44
     iget-object v5, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->e:Ljava/lang/Object;
 
-    check-cast v5, Lcom/vk/reef/protocol/b0;
+    check-cast v5, Lcom/vk/reef/protocol/ReefProtocol8;
 
     invoke-virtual {p1, v5}, Lcom/google/protobuf/GeneratedMessageLite$b;->b(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$b;
 
@@ -513,18 +513,18 @@
 
     .line 47
     :cond_9
-    iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/v;
+    iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/ReefProtocol14;
 
     if-eqz p1, :cond_a
 
     .line 48
-    iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/v;
+    iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/ReefProtocol14;
 
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite;->b()Lcom/google/protobuf/GeneratedMessageLite$b;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/reef/protocol/v$a;
+    check-cast p1, Lcom/vk/reef/protocol/ReefProtocol$a11;
 
     goto :goto_4
 
@@ -533,7 +533,7 @@
 
     .line 49
     :goto_4
-    invoke-static {}, Lcom/vk/reef/protocol/v;->w()Lcom/google/protobuf/v;
+    invoke-static {}, Lcom/vk/reef/protocol/ReefProtocol14;->w()Lcom/google/protobuf/v;
 
     move-result-object v5
 
@@ -541,14 +541,14 @@
 
     move-result-object v5
 
-    check-cast v5, Lcom/vk/reef/protocol/v;
+    check-cast v5, Lcom/vk/reef/protocol/ReefProtocol14;
 
-    iput-object v5, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/v;
+    iput-object v5, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/ReefProtocol14;
 
     if-eqz p1, :cond_2
 
     .line 50
-    iget-object v5, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/v;
+    iget-object v5, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/ReefProtocol14;
 
     invoke-virtual {p1, v5}, Lcom/google/protobuf/GeneratedMessageLite$b;->b(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$b;
 
@@ -557,9 +557,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/reef/protocol/v;
+    check-cast p1, Lcom/vk/reef/protocol/ReefProtocol14;
 
-    iput-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/v;
+    iput-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/ReefProtocol14;
 
     goto/16 :goto_1
 
@@ -772,20 +772,20 @@
     iput p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->h:I
 
     .line 65
-    iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/v;
+    iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/ReefProtocol14;
 
-    iget-object v2, p3, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/v;
+    iget-object v2, p3, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/ReefProtocol14;
 
     invoke-interface {p2, p1, v2}, Lcom/google/protobuf/GeneratedMessageLite$i;->a(Lcom/google/protobuf/s;Lcom/google/protobuf/s;)Lcom/google/protobuf/s;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/reef/protocol/v;
+    check-cast p1, Lcom/vk/reef/protocol/ReefProtocol14;
 
-    iput-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/v;
+    iput-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/ReefProtocol14;
 
     .line 66
-    sget-object p1, Lcom/vk/reef/protocol/a;->b:[I
+    sget-object p1, Lcom/vk/reef/protocol/ReefProtocol1;->b:[I
 
     invoke-virtual {p3}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->j()Lcom/vk/reef/protocol/ReefProtocol$SignalInfo$DetailsCase;
 
@@ -883,7 +883,7 @@
     :pswitch_4
     new-instance p1, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo$a;
 
-    invoke-direct {p1, v2}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo$a;-><init>(Lcom/vk/reef/protocol/a;)V
+    invoke-direct {p1, v2}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo$a;-><init>(Lcom/vk/reef/protocol/ReefProtocol1;)V
 
     return-object p1
 
@@ -961,14 +961,14 @@
 
     .line 18
     :cond_2
-    iget-object v0, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/v;
+    iget-object v0, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/ReefProtocol14;
 
     if-eqz v0, :cond_3
 
     const/4 v0, 0x4
 
     .line 19
-    invoke-virtual {p0}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->k()Lcom/vk/reef/protocol/v;
+    invoke-virtual {p0}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->k()Lcom/vk/reef/protocol/ReefProtocol14;
 
     move-result-object v1
 
@@ -985,7 +985,7 @@
     .line 21
     iget-object v0, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->e:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vk/reef/protocol/b0;
+    check-cast v0, Lcom/vk/reef/protocol/ReefProtocol8;
 
     invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->a(ILcom/google/protobuf/s;)V
 
@@ -1000,7 +1000,7 @@
     .line 23
     iget-object v0, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->e:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vk/reef/protocol/d0;
+    check-cast v0, Lcom/vk/reef/protocol/ReefProtocol19;
 
     invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->a(ILcom/google/protobuf/s;)V
 
@@ -1069,14 +1069,14 @@
 
     .line 10
     :cond_3
-    iget-object v1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/v;
+    iget-object v1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/ReefProtocol14;
 
     if-eqz v1, :cond_4
 
     const/4 v1, 0x4
 
     .line 11
-    invoke-virtual {p0}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->k()Lcom/vk/reef/protocol/v;
+    invoke-virtual {p0}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->k()Lcom/vk/reef/protocol/ReefProtocol14;
 
     move-result-object v2
 
@@ -1097,7 +1097,7 @@
     .line 13
     iget-object v1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->e:Ljava/lang/Object;
 
-    check-cast v1, Lcom/vk/reef/protocol/b0;
+    check-cast v1, Lcom/vk/reef/protocol/ReefProtocol8;
 
     .line 14
     invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->b(ILcom/google/protobuf/s;)I
@@ -1117,7 +1117,7 @@
     .line 16
     iget-object v1, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->e:Ljava/lang/Object;
 
-    check-cast v1, Lcom/vk/reef/protocol/d0;
+    check-cast v1, Lcom/vk/reef/protocol/ReefProtocol19;
 
     .line 17
     invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->b(ILcom/google/protobuf/s;)I
@@ -1146,15 +1146,15 @@
     return-object v0
 .end method
 
-.method public k()Lcom/vk/reef/protocol/v;
+.method public k()Lcom/vk/reef/protocol/ReefProtocol14;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/v;
+    iget-object v0, p0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->B:Lcom/vk/reef/protocol/ReefProtocol14;
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/vk/reef/protocol/v;->u()Lcom/vk/reef/protocol/v;
+    invoke-static {}, Lcom/vk/reef/protocol/ReefProtocol14;->u()Lcom/vk/reef/protocol/ReefProtocol14;
 
     move-result-object v0
 

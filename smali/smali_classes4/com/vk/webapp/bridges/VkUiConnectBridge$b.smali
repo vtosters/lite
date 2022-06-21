@@ -44,11 +44,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$b;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-static {v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/b;
+    invoke-static {v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/c;->g()Lcom/vk/webapp/commands/VkUiCommandsController;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->g()Lcom/vk/webapp/commands/VkUiCommandsController;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
 
     sget-object v1, Lcom/vk/webapp/commands/VkUiCommandsController$Commands;->ALLOW_MESSAGES_FROM_GROUP:Lcom/vk/webapp/commands/VkUiCommandsController$Commands;
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/commands/VkUiCommandsController;->a(Lcom/vk/webapp/commands/VkUiCommandsController$Commands;)Lcom/vk/webapp/commands/c;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/commands/VkUiCommandsController;->a(Lcom/vk/webapp/commands/VkUiCommandsController$Commands;)Lcom/vk/webapp/commands/VkUiBaseCommand;
 
     move-result-object v0
 
@@ -64,7 +64,7 @@
 
     iget-object v1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$b;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/commands/c;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(Ljava/lang/String;)V
 
     :cond_0
     return-void

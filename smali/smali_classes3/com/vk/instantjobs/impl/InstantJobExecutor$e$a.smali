@@ -46,11 +46,11 @@
 
     iget-object v1, v0, Lcom/vk/instantjobs/impl/InstantJobExecutor$e;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v0, v0, Lcom/vk/instantjobs/impl/InstantJobExecutor$e;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v0, v0, Lcom/vk/instantjobs/impl/InstantJobExecutor$e;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
     iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$e$a;->b:Ljava/lang/Throwable;
 
-    invoke-static {v1, v0, v2}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0, v2}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -3,8 +3,8 @@
 .source "VKPayFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/f;
-.implements Lcom/vk/navigation/b0/g;
+.implements Lcom/vk/navigation/b0/FragmentWithCustomOrientation;
+.implements Lcom/vk/navigation/b0/FragmentWithCustomStatusBar;
 
 
 # annotations
@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field private final A0:Lcom/vk/webapp/bridges/a;
+.field private final A0:Lcom/vk/webapp/bridges/AndroidBridge;
 
 .field private final B0:Z
 
@@ -38,7 +38,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/fragments/VkPayFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/fragments/VkPayFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/webapp/fragments/VkPayFragment;->E0:Lcom/vk/webapp/fragments/VkPayFragment$b;
 
@@ -63,13 +63,13 @@
     .line 2
     new-instance v0, Lcom/vk/webapp/bridges/VkPayBridge;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->a5()Lcom/vk/webapp/o/c;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->a5()Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/vk/webapp/bridges/VkPayBridge;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/webapp/o/c;)V
+    invoke-direct {v0, p0, v1}, Lcom/vk/webapp/bridges/VkPayBridge;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/webapp/o/VkUiFragmentDelegate;)V
 
-    iput-object v0, p0, Lcom/vk/webapp/fragments/VkPayFragment;->A0:Lcom/vk/webapp/bridges/a;
+    iput-object v0, p0, Lcom/vk/webapp/fragments/VkPayFragment;->A0:Lcom/vk/webapp/bridges/AndroidBridge;
 
     const/4 v0, 0x1
 
@@ -77,11 +77,11 @@
     iput-boolean v0, p0, Lcom/vk/webapp/fragments/VkPayFragment;->B0:Z
 
     .line 4
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f0600a2
 
@@ -150,7 +150,7 @@
 
     const-string v4, "activity!!"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -225,7 +225,7 @@
     .line 7
     :cond_2
     :try_start_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -278,7 +278,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkPayFragment;->Z4()Lcom/vk/webapp/bridges/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkPayFragment;->Z4()Lcom/vk/webapp/bridges/AndroidBridge;
 
     move-result-object v0
 
@@ -288,7 +288,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -351,7 +351,7 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -382,7 +382,7 @@
     const-string v2, "activity!!.contentResolv\u2026ull, null) ?: return null"
 
     .line 4
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
@@ -409,7 +409,7 @@
 
     .line 8
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -418,7 +418,7 @@
     .locals 2
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkPayFragment;->Z4()Lcom/vk/webapp/bridges/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkPayFragment;->Z4()Lcom/vk/webapp/bridges/AndroidBridge;
 
     move-result-object v0
 
@@ -428,7 +428,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -471,7 +471,7 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -493,7 +493,7 @@
 
     const-string v2, "activity!!.contentResolv\u2026ame.GIVEN_NAME) ?: return"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
@@ -560,7 +560,7 @@
 
     .line 10
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -595,7 +595,7 @@
     const-string v1, "uri"
 
     .line 2
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
@@ -623,9 +623,9 @@
 
     .line 3
     :cond_0
-    sget-object v5, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v5, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -633,7 +633,7 @@
 
     const-string v0, "context!!"
 
-    invoke-static {v6, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v8, 0x0
 
@@ -643,12 +643,12 @@
 
     move-object v7, p1
 
-    invoke-static/range {v5 .. v10}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v5 .. v10}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     return v1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -662,11 +662,11 @@
     return v0
 .end method
 
-.method public Z4()Lcom/vk/webapp/bridges/a;
+.method public Z4()Lcom/vk/webapp/bridges/AndroidBridge;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/fragments/VkPayFragment;->A0:Lcom/vk/webapp/bridges/a;
+    iget-object v0, p0, Lcom/vk/webapp/fragments/VkPayFragment;->A0:Lcom/vk/webapp/bridges/AndroidBridge;
 
     return-object v0
 .end method
@@ -727,7 +727,7 @@
     const/4 v10, 0x0
 
     .line 6
-    invoke-static/range {v2 .. v10}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
+    invoke-static/range {v2 .. v10}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
 
     goto :goto_0
 
@@ -751,12 +751,12 @@
     invoke-super {p0}, Lcom/vk/webapp/VkUiFragment;->onResume()V
 
     .line 2
-    iget-boolean v0, p0, Ld/a/a/a/j;->Q:Z
+    iget-boolean v0, p0, Lme/grishka/appkit/fragments/LoaderFragment;->Q:Z
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkPayFragment;->Z4()Lcom/vk/webapp/bridges/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkPayFragment;->Z4()Lcom/vk/webapp/bridges/AndroidBridge;
 
     move-result-object v0
 
@@ -766,7 +766,7 @@
 
     const-string v2, "VKWebAppUpdateInfo"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/webapp/bridges/a;->a(Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v2, v1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :cond_0
     return-void
@@ -779,7 +779,7 @@
     invoke-super {p0, p1, p2}, Lcom/vk/webapp/VkUiFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object p1
 

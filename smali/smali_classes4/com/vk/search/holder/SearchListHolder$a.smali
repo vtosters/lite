@@ -27,7 +27,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/dto/discover/b/d;",
+            "Lcom/vk/dto/discover/b/SearchProfileItem;",
             ">;"
         }
     .end annotation
@@ -69,7 +69,7 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/dto/discover/b/d;
+    check-cast p2, Lcom/vk/dto/discover/b/SearchProfileItem;
 
     goto :goto_0
 
@@ -79,7 +79,7 @@
     :goto_0
     iget-object v0, p0, Lcom/vk/search/holder/SearchListHolder$a;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, p2, v0}, Lcom/vk/search/holder/SearchListHolder$Holder;->a(Lcom/vk/dto/discover/b/d;Ljava/lang/String;)V
+    invoke-virtual {p1, p2, v0}, Lcom/vk/search/holder/SearchListHolder$Holder;->a(Lcom/vk/dto/discover/b/SearchProfileItem;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -90,7 +90,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/dto/discover/b/d;",
+            "Lcom/vk/dto/discover/b/SearchProfileItem;",
             ">;",
             "Ljava/lang/String;",
             ")V"

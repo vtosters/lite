@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/fragments/photos/PhotoListFragment$p;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "PhotoListFragment.java"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/dto/photo/Photo;",
         ">;",
         "Lme/grishka/appkit/views/UsableRecyclerView$f;"
@@ -48,7 +48,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/imageloader/view/VKImageView;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(Landroid/view/View;)V
 
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -57,7 +57,7 @@
 
     const/high16 v1, 0x43340000    # 180.0f
 
-    invoke-static {v1}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v1}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v1
 
@@ -72,9 +72,9 @@
 
     check-cast p1, Lcom/vk/imageloader/view/VKImageView;
 
-    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->o:Lcom/facebook/drawee/drawable/r$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->o:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
-    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/a;->setActualScaleType(Lcom/facebook/drawee/drawable/r$b;)V
+    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setActualScaleType(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
 
     .line 5
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -83,7 +83,7 @@
 
     const v0, -0xd0d0e
 
-    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/a;->setPlaceholderColor(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderColor(I)V
 
     return-void
 .end method
@@ -152,7 +152,7 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$p;->d:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
 
-    iget-object v1, v0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->y0:Lcom/vk/bridges/p$d;
+    iget-object v1, v0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->y0:Lcom/vk/bridges/ImageViewer$d;
 
     if-eqz v1, :cond_0
 
@@ -160,7 +160,7 @@
 
     .line 3
     :cond_0
-    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/photo/Photo;
 

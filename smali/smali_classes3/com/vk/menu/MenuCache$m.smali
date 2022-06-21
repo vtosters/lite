@@ -3,7 +3,7 @@
 .source "MenuCache.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/core/util/q0<",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/core/util/Optional<",
         "Landroid/location/Location;",
         ">;>;"
     }
@@ -47,21 +47,21 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/core/util/q0;)V
+.method public final a(Lcom/vk/core/util/Optional;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/util/q0<",
+            "Lcom/vk/core/util/Optional<",
             "Landroid/location/Location;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lb/h/c/n/h;
+    new-instance v0, Lcom/vk/api/apps/SuperAppGet;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/q0;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/core/util/Optional;->a()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -69,17 +69,17 @@
 
     iget-object v1, p0, Lcom/vk/menu/MenuCache$m;->a:Ljava/lang/String;
 
-    invoke-direct {v0, p1, v1}, Lb/h/c/n/h;-><init>(Landroid/location/Location;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/api/apps/SuperAppGet;-><init>(Landroid/location/Location;Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->h()Lcom/vk/api/base/ApiRequest;
 
     const/4 p1, 0x0
 
     const/4 v1, 0x1
 
     .line 3
-    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -90,7 +90,7 @@
     sget-object v1, Lcom/vk/menu/MenuCache$m$b;->a:Lcom/vk/menu/MenuCache$m$b;
 
     .line 6
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -99,9 +99,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/core/util/q0;
+    check-cast p1, Lcom/vk/core/util/Optional;
 
-    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuCache$m;->a(Lcom/vk/core/util/q0;)V
+    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuCache$m;->a(Lcom/vk/core/util/Optional;)V
 
     return-void
 .end method

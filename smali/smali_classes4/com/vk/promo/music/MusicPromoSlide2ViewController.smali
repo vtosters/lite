@@ -28,12 +28,12 @@
 
 
 # instance fields
-.field private a:Lcom/vk/promo/f;
+.field private a:Lcom/vk/promo/PromoNavigator;
 
-.field private final b:Lcom/vtosters/lite/fragments/money/r/a;
+.field private final b:Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vtosters/lite/fragments/money/r/a<",
+            "Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper<",
             "Lcom/vk/dto/common/data/Subscription;",
             ">;"
         }
@@ -55,7 +55,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/promo/music/MusicPromoSlide2ViewController$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/promo/music/MusicPromoSlide2ViewController$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/promo/music/MusicPromoSlide2ViewController$a;
@@ -104,11 +104,11 @@
     iput-object p2, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->e:Lcom/vk/promo/music/MusicPromoStat;
 
     .line 2
-    new-instance p1, Lcom/vtosters/lite/fragments/money/r/a;
+    new-instance p1, Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;
 
-    invoke-direct {p1}, Lcom/vtosters/lite/fragments/money/r/a;-><init>()V
+    invoke-direct {p1}, Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->b:Lcom/vtosters/lite/fragments/money/r/a;
+    iput-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->b:Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;
 
     .line 3
     new-instance p1, Lcom/vk/promo/music/MusicPromoSlide2ViewController$f;
@@ -120,11 +120,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/promo/music/MusicPromoSlide2ViewController;)Lcom/vtosters/lite/fragments/money/r/a;
+.method public static final synthetic a(Lcom/vk/promo/music/MusicPromoSlide2ViewController;)Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->b:Lcom/vtosters/lite/fragments/money/r/a;
+    iget-object p0, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->b:Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;
 
     return-object p0
 .end method
@@ -138,11 +138,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/promo/music/MusicPromoSlide2ViewController;)Lcom/vk/promo/f;
+.method public static final synthetic c(Lcom/vk/promo/music/MusicPromoSlide2ViewController;)Lcom/vk/promo/PromoNavigator;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->a:Lcom/vk/promo/f;
+    iget-object p0, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->a:Lcom/vk/promo/PromoNavigator;
 
     return-object p0
 .end method
@@ -158,7 +158,7 @@
 
 
 # virtual methods
-.method public a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/f;)Landroid/view/View;
+.method public a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/PromoNavigator;)Landroid/view/View;
     .locals 10
 
     const/4 v0, 0x0
@@ -171,7 +171,7 @@
     move-result-object p1
 
     .line 3
-    iput-object p3, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->a:Lcom/vk/promo/f;
+    iput-object p3, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->a:Lcom/vk/promo/PromoNavigator;
 
     const v1, 0x7f0a025b
 
@@ -202,10 +202,10 @@
 
     const/4 v1, 0x5
 
-    new-array v2, v1, [Lcom/vk/promo/music/b;
+    new-array v2, v1, [Lcom/vk/promo/music/MusicPromoAdapterOptions1;
 
     .line 7
-    new-instance v4, Lcom/vk/promo/music/b;
+    new-instance v4, Lcom/vk/promo/music/MusicPromoAdapterOptions1;
 
     const v5, 0x7f120823
 
@@ -213,51 +213,51 @@
 
     const/4 v7, 0x1
 
-    invoke-direct {v4, v5, v6, v7}, Lcom/vk/promo/music/b;-><init>(IIZ)V
+    invoke-direct {v4, v5, v6, v7}, Lcom/vk/promo/music/MusicPromoAdapterOptions1;-><init>(IIZ)V
 
     aput-object v4, v2, v0
 
     .line 8
-    new-instance v4, Lcom/vk/promo/music/b;
+    new-instance v4, Lcom/vk/promo/music/MusicPromoAdapterOptions1;
 
     const v5, 0x7f120824
 
     const v6, 0x7f080905
 
-    invoke-direct {v4, v5, v6, v7}, Lcom/vk/promo/music/b;-><init>(IIZ)V
+    invoke-direct {v4, v5, v6, v7}, Lcom/vk/promo/music/MusicPromoAdapterOptions1;-><init>(IIZ)V
 
     aput-object v4, v2, v7
 
     .line 9
-    new-instance v4, Lcom/vk/promo/music/b;
+    new-instance v4, Lcom/vk/promo/music/MusicPromoAdapterOptions1;
 
     const v5, 0x7f120825
 
-    invoke-direct {v4, v5, v6, v0}, Lcom/vk/promo/music/b;-><init>(IIZ)V
+    invoke-direct {v4, v5, v6, v0}, Lcom/vk/promo/music/MusicPromoAdapterOptions1;-><init>(IIZ)V
 
     const/4 v5, 0x2
 
     aput-object v4, v2, v5
 
     .line 10
-    new-instance v4, Lcom/vk/promo/music/b;
+    new-instance v4, Lcom/vk/promo/music/MusicPromoAdapterOptions1;
 
     const v8, 0x7f120826
 
-    invoke-direct {v4, v8, v6, v0}, Lcom/vk/promo/music/b;-><init>(IIZ)V
+    invoke-direct {v4, v8, v6, v0}, Lcom/vk/promo/music/MusicPromoAdapterOptions1;-><init>(IIZ)V
 
     const/4 v6, 0x3
 
     aput-object v4, v2, v6
 
     .line 11
-    new-instance v4, Lcom/vk/promo/music/b;
+    new-instance v4, Lcom/vk/promo/music/MusicPromoAdapterOptions1;
 
     const v8, 0x7f120827
 
     const v9, 0x7f080904
 
-    invoke-direct {v4, v8, v9, v0}, Lcom/vk/promo/music/b;-><init>(IIZ)V
+    invoke-direct {v4, v8, v9, v0}, Lcom/vk/promo/music/MusicPromoAdapterOptions1;-><init>(IIZ)V
 
     aput-object v4, v2, v3
 
@@ -275,7 +275,7 @@
 
     const-string v8, "view.findViewById<View>(R.id.toolbar_title)"
 
-    invoke-static {v4, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-boolean v8, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->d:Z
 
@@ -292,7 +292,7 @@
 
     const-string v8, "view.findViewById<View>(R.id.divider)"
 
-    invoke-static {v4, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-boolean v8, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->d:Z
 
@@ -323,56 +323,56 @@
     new-array v1, v1, [Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     .line 17
-    new-instance v8, Lcom/vk/music/ui/common/g;
+    new-instance v8, Lcom/vk/music/ui/common/MusicJustInflateAdapter;
 
     const v9, 0x7f0d0395
 
-    invoke-direct {v8, v9}, Lcom/vk/music/ui/common/g;-><init>(I)V
+    invoke-direct {v8, v9}, Lcom/vk/music/ui/common/MusicJustInflateAdapter;-><init>(I)V
 
     aput-object v8, v1, v0
 
     .line 18
-    new-instance v8, Lcom/vk/promo/music/c;
+    new-instance v8, Lcom/vk/promo/music/MusicPromoAdapterOptions;
 
-    invoke-direct {v8, v2}, Lcom/vk/promo/music/c;-><init>(Ljava/util/List;)V
+    invoke-direct {v8, v2}, Lcom/vk/promo/music/MusicPromoAdapterOptions;-><init>(Ljava/util/List;)V
 
     aput-object v8, v1, v7
 
     .line 19
-    new-instance v8, Lcom/vk/music/ui/common/c;
+    new-instance v8, Lcom/vk/music/ui/common/MusicClickableItemAdapter;
 
     const v9, 0x7f0d0396
 
-    invoke-direct {v8, v9, p0}, Lcom/vk/music/ui/common/c;-><init>(ILandroid/view/View$OnClickListener;)V
+    invoke-direct {v8, v9, p0}, Lcom/vk/music/ui/common/MusicClickableItemAdapter;-><init>(ILandroid/view/View$OnClickListener;)V
 
     aput-object v8, v1, v5
 
     .line 20
     new-instance v5, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;
 
-    new-instance v8, Lcom/vk/music/subscription/d/a;
+    new-instance v8, Lcom/vk/music/subscription/d/DefaultBuyMusicSubscriptionButtonModel;
 
-    invoke-direct {v8}, Lcom/vk/music/subscription/d/a;-><init>()V
+    invoke-direct {v8}, Lcom/vk/music/subscription/d/DefaultBuyMusicSubscriptionButtonModel;-><init>()V
 
     new-instance v9, Lcom/vk/promo/music/MusicPromoSlide2ViewController$createView$$inlined$apply$lambda$1;
 
-    invoke-direct {v9, v4, p0, v2, p3}, Lcom/vk/promo/music/MusicPromoSlide2ViewController$createView$$inlined$apply$lambda$1;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/promo/music/MusicPromoSlide2ViewController;Ljava/util/List;Lcom/vk/promo/f;)V
+    invoke-direct {v9, v4, p0, v2, p3}, Lcom/vk/promo/music/MusicPromoSlide2ViewController$createView$$inlined$apply$lambda$1;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/promo/music/MusicPromoSlide2ViewController;Ljava/util/List;Lcom/vk/promo/PromoNavigator;)V
 
-    invoke-direct {v5, v8, v9}, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;-><init>(Lcom/vk/music/subscription/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {v5, v8, v9}, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;-><init>(Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;Lkotlin/jvm/b/Functions2;)V
 
     aput-object v5, v1, v6
 
     .line 21
-    new-instance p3, Lcom/vk/music/ui/common/c;
+    new-instance p3, Lcom/vk/music/ui/common/MusicClickableItemAdapter;
 
     const v2, 0x7f0d0394
 
-    invoke-direct {p3, v2, p0}, Lcom/vk/music/ui/common/c;-><init>(ILandroid/view/View$OnClickListener;)V
+    invoke-direct {p3, v2, p0}, Lcom/vk/music/ui/common/MusicClickableItemAdapter;-><init>(ILandroid/view/View$OnClickListener;)V
 
     aput-object p3, v1, v3
 
     .line 22
-    invoke-static {v1}, Lcom/vk/lists/p;->a([Landroidx/recyclerview/widget/RecyclerView$Adapter;)Lcom/vk/lists/p;
+    invoke-static {v1}, Lcom/vk/lists/MergedAdapter;->a([Landroidx/recyclerview/widget/RecyclerView$Adapter;)Lcom/vk/lists/MergedAdapter;
 
     move-result-object p3
 
@@ -382,9 +382,9 @@
     invoke-virtual {v4, v0}, Landroidx/recyclerview/widget/RecyclerView;->setNestedScrollingEnabled(Z)V
 
     .line 24
-    new-instance p3, Lcom/vk/promo/music/e;
+    new-instance p3, Lcom/vk/promo/music/MusicPromoSlide2RecyclerDecorator;
 
-    invoke-direct {p3}, Lcom/vk/promo/music/e;-><init>()V
+    invoke-direct {p3}, Lcom/vk/promo/music/MusicPromoSlide2RecyclerDecorator;-><init>()V
 
     invoke-virtual {v4, p3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -397,7 +397,7 @@
     const-string p2, "view"
 
     .line 27
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -469,16 +469,16 @@
 
     .line 3
     :cond_1
-    new-instance v0, Lb/h/c/c/o;
+    new-instance v0, Lcom/vk/api/audio/AudioGetOnboardingOffer;
 
-    invoke-direct {v0}, Lb/h/c/c/o;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/audio/AudioGetOnboardingOffer;-><init>()V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
     .line 4
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -499,7 +499,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -508,7 +508,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/promo/music/MusicPromoSlide2ViewController$c;-><init>(Landroid/view/View;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -521,7 +521,7 @@
     sget-object p1, Lcom/vk/promo/music/MusicPromoSlide2ViewController$e;->a:Lcom/vk/promo/music/MusicPromoSlide2ViewController$e;
 
     .line 9
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
 
@@ -535,11 +535,11 @@
 
     .line 11
     :cond_3
-    iget-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->a:Lcom/vk/promo/f;
+    iget-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->a:Lcom/vk/promo/PromoNavigator;
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/promo/f;->close()V
+    invoke-interface {p1}, Lcom/vk/promo/PromoNavigator;->close()V
 
     goto :goto_0
 
@@ -553,11 +553,11 @@
 
     .line 13
     :cond_5
-    iget-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->a:Lcom/vk/promo/f;
+    iget-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->a:Lcom/vk/promo/PromoNavigator;
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/promo/f;->close()V
+    invoke-interface {p1}, Lcom/vk/promo/PromoNavigator;->close()V
 
     :cond_6
     :goto_0

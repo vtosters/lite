@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -221,7 +221,7 @@
     const/4 v7, 0x0
 
     .line 21
-    invoke-static {v14, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v14, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v23, 0x0
 
@@ -234,7 +234,7 @@
     move-object/from16 v4, p3
 
     .line 22
-    invoke-direct/range {v2 .. v25}, Lcom/vk/dto/masks/Mask;-><init>(Lcom/vk/dto/user/UserProfile;Lcom/vk/dto/group/Group;IIZLjava/lang/String;IJJLjava/lang/String;Lcom/vk/dto/common/NotificationImage;ZIILcom/vk/dto/masks/MaskDisableReason;Ljava/lang/String;Lcom/vk/dto/masks/MaskGeo;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v25}, Lcom/vk/dto/masks/Mask;-><init>(Lcom/vk/dto/user/UserProfile;Lcom/vk/dto/group/Group;IIZLjava/lang/String;IJJLjava/lang/String;Lcom/vk/dto/common/NotificationImage;ZIILcom/vk/dto/masks/MaskDisableReason;Ljava/lang/String;Lcom/vk/dto/masks/MaskGeo;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method

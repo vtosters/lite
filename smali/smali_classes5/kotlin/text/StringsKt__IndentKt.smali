@@ -134,7 +134,7 @@
 
     add-int/2addr p0, v3
 
-    invoke-static {p1}, Lkotlin/text/StringsKt__IndentKt;->a(Ljava/lang/String;)Lkotlin/jvm/b/b;
+    invoke-static {p1}, Lkotlin/text/StringsKt__IndentKt;->a(Ljava/lang/String;)Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -195,7 +195,7 @@
 
     if-eqz v2, :cond_6
 
-    invoke-interface {p1, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -251,7 +251,7 @@
 
     move-object v5, p1
 
-    invoke-static/range {v4 .. v13}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/Appendable;
+    invoke-static/range {v4 .. v13}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/Appendable;
 
     check-cast p1, Ljava/lang/StringBuilder;
 
@@ -262,19 +262,19 @@
 
     const-string p1, "mapIndexedNotNull { inde\u2026\"\\n\")\n        .toString()"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
-.method private static final a(Ljava/lang/String;)Lkotlin/jvm/b/b;
+.method private static final a(Ljava/lang/String;)Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"

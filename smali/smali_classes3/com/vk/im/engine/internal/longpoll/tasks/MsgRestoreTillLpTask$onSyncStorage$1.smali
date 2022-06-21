@@ -3,12 +3,12 @@
 .source "MsgRestoreTillLpTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->b(Lcom/vk/im/engine/internal/longpoll/d;)V
+    value = Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->b(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,16 +19,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $dialog:Lcom/vk/im/engine/models/dialogs/c;
+.field final synthetic $dialog:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
 .field final synthetic $latestMsg:Lcom/vk/im/engine/models/messages/Msg;
 
@@ -36,14 +36,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/models/dialogs/c;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/models/dialogs/DialogApiModel;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;
 
     iput-object p2, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask$onSyncStorage$1;->$latestMsg:Lcom/vk/im/engine/models/messages/Msg;
 
-    iput-object p3, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask$onSyncStorage$1;->$dialog:Lcom/vk/im/engine/models/dialogs/c;
+    iput-object p3, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask$onSyncStorage$1;->$dialog:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     const/4 p1, 0x1
 
@@ -70,7 +70,7 @@
 
     move-result v2
 
-    invoke-static {v0, p1, v1, v2}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;Lcom/vk/im/engine/internal/storage/StorageManager;II)Lcom/vk/im/engine/internal/storage/models/e;
+    invoke-static {v0, p1, v1, v2}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;Lcom/vk/im/engine/internal/storage/StorageManager;II)Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     move-result-object v0
 
@@ -79,7 +79,7 @@
     .line 2
     iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
 
     move-result v0
 
@@ -96,7 +96,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;
 
-    invoke-static {p1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->b(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;)Lcom/vk/im/engine/d;
+    invoke-static {p1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->b(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;)Lcom/vk/im/engine/ImEnvironment;
 
     move-result-object v0
 
@@ -106,7 +106,7 @@
 
     move-result v1
 
-    invoke-static {p1, v0, v1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;Lcom/vk/im/engine/d;I)V
+    invoke-static {p1, v0, v1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;Lcom/vk/im/engine/ImEnvironment;I)V
 
     goto :goto_0
 
@@ -114,7 +114,7 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;
 
-    invoke-static {p1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->b(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;)Lcom/vk/im/engine/d;
+    invoke-static {p1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->b(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;)Lcom/vk/im/engine/ImEnvironment;
 
     move-result-object v0
 
@@ -126,23 +126,23 @@
 
     iget-object v2, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask$onSyncStorage$1;->$latestMsg:Lcom/vk/im/engine/models/messages/Msg;
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/messages/Msg;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/messages/Msg;)V
 
     .line 6
     :goto_0
     iget-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;
 
-    invoke-static {p1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->b(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;)Lcom/vk/im/engine/d;
+    invoke-static {p1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->b(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;)Lcom/vk/im/engine/ImEnvironment;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask$onSyncStorage$1;->$dialog:Lcom/vk/im/engine/models/dialogs/c;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask$onSyncStorage$1;->$dialog:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     const-string v2, "dialog"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, v0, v1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/dialogs/c;)V
+    invoke-static {p1, v0, v1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask;Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/dialogs/DialogApiModel;)V
 
     return-void
 .end method
@@ -155,7 +155,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/longpoll/tasks/MsgRestoreTillLpTask$onSyncStorage$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

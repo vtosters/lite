@@ -19,14 +19,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/ui/community/CommunityFragment;Landroid/view/View;Landroid/view/View;Lcom/vtosters/lite/api/i;I)V
+.method constructor <init>(Lcom/vk/profile/ui/community/CommunityFragment;Landroid/view/View;Landroid/view/View;Lcom/vtosters/lite/api/ExtendedCommunityProfile;I)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "Landroid/view/View;",
-            "Lcom/vtosters/lite/api/i;",
+            "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
             "I)V"
         }
     .end annotation
@@ -34,7 +34,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/ui/community/CommunityFragment$g;->d:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-direct {p0, p3, p4, p5}, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;-><init>(Landroid/view/View;Lcom/vtosters/lite/api/i;I)V
+    invoke-direct {p0, p3, p4, p5}, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;-><init>(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedCommunityProfile;I)V
 
     return-void
 .end method
@@ -65,7 +65,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/community/CommunityFragment$g;->d:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->l(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vtosters/lite/api/i;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->l(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v1
 
@@ -196,7 +196,7 @@
 
     iget-object v1, p0, Lcom/vk/profile/ui/community/CommunityFragment$g;->d:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-static {v1}, Lcom/vk/profile/ui/community/CommunityFragment;->l(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vtosters/lite/api/i;
+    invoke-static {v1}, Lcom/vk/profile/ui/community/CommunityFragment;->l(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v1
 

@@ -45,7 +45,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView$a;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->b(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/b;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->b(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
 
     move-result-object p1
 
@@ -54,11 +54,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView$a;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->b(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/b;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->b(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/liveswipe/b;->g0()V
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeContract1;->g0()V
 
     :cond_0
     return-void
@@ -76,7 +76,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView$a;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->a(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/a0/b;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->a(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/a0/LiveAnimationController;
 
     move-result-object v0
 
@@ -87,11 +87,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView$a;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->a(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/a0/b;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->a(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/a0/LiveAnimationController;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/libvideo/a0/b;->l()V
+    invoke-interface {p1}, Lcom/vk/libvideo/a0/LiveAnimationController;->l()V
 
     goto :goto_0
 
@@ -99,11 +99,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView$a;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->a(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/a0/b;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->a(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/a0/LiveAnimationController;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/libvideo/a0/b;->j()V
+    invoke-interface {p1}, Lcom/vk/libvideo/a0/LiveAnimationController;->j()V
 
     :cond_1
     :goto_0

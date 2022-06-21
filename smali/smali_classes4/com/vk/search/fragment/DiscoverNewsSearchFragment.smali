@@ -1,10 +1,10 @@
 .class public Lcom/vk/search/fragment/DiscoverNewsSearchFragment;
-.super Lcom/vtosters/lite/fragments/y0;
+.super Lcom/vtosters/lite/general/fragments/BaseNewsSearchFragment;
 .source "DiscoverNewsSearchFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/contracts/i;
-.implements Lcom/vk/search/a;
+.implements Lcom/vk/newsfeed/contracts/GlobalSearchContract;
+.implements Lcom/vk/search/SearchPage;
 
 
 # annotations
@@ -16,11 +16,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/fragments/y0<",
-        "Lcom/vk/newsfeed/presenters/e;",
+        "Lcom/vtosters/lite/general/fragments/BaseNewsSearchFragment<",
+        "Lcom/vk/newsfeed/presenters/GlobalSearchPresenter;",
         ">;",
-        "Lcom/vk/newsfeed/contracts/i;",
-        "Lcom/vk/search/a;"
+        "Lcom/vk/newsfeed/contracts/GlobalSearchContract;",
+        "Lcom/vk/search/SearchPage;"
     }
 .end annotation
 
@@ -37,7 +37,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/search/fragment/DiscoverNewsSearchFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/search/fragment/DiscoverNewsSearchFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/search/fragment/DiscoverNewsSearchFragment;->r0:Lcom/vk/search/fragment/DiscoverNewsSearchFragment$a;
 
@@ -48,20 +48,20 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vtosters/lite/fragments/y0;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/general/fragments/BaseNewsSearchFragment;-><init>()V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/search/fragment/DiscoverNewsSearchFragment;)Lcom/vk/newsfeed/presenters/e;
+.method public static final synthetic a(Lcom/vk/search/fragment/DiscoverNewsSearchFragment;)Lcom/vk/newsfeed/presenters/GlobalSearchPresenter;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/newsfeed/presenters/e;
+    check-cast p0, Lcom/vk/newsfeed/presenters/GlobalSearchPresenter;
 
     return-object p0
 .end method
@@ -98,9 +98,9 @@
     if-eqz p1, :cond_0
 
     .line 1
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -108,16 +108,16 @@
 
     invoke-direct {v1, p1}, Lcom/vk/search/fragment/DiscoverSearchFragment$d;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/presenters/e;
+    check-cast v0, Lcom/vk/newsfeed/presenters/GlobalSearchPresenter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/presenters/j;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/presenters/NewsSearchPresenter;->b(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -127,9 +127,9 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -137,7 +137,7 @@
 
     invoke-direct {v1}, Lcom/vk/search/fragment/DiscoverSearchFragment$c;-><init>()V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -156,7 +156,7 @@
 
     const-string p2, "inflater.inflate(R.layou\u2026kshake, container, false)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -206,24 +206,24 @@
     return-void
 .end method
 
-.method public bridge synthetic c5()Lcom/vk/newsfeed/contracts/e;
+.method public bridge synthetic c5()Lcom/vk/newsfeed/contracts/EntriesListContract;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/search/fragment/DiscoverNewsSearchFragment;->c5()Lcom/vk/newsfeed/presenters/e;
+    invoke-virtual {p0}, Lcom/vk/search/fragment/DiscoverNewsSearchFragment;->c5()Lcom/vk/newsfeed/presenters/GlobalSearchPresenter;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected c5()Lcom/vk/newsfeed/presenters/e;
+.method protected c5()Lcom/vk/newsfeed/presenters/GlobalSearchPresenter;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/newsfeed/presenters/e;
+    new-instance v0, Lcom/vk/newsfeed/presenters/GlobalSearchPresenter;
 
-    invoke-direct {v0, p0}, Lcom/vk/newsfeed/presenters/e;-><init>(Lcom/vk/newsfeed/contracts/i;)V
+    invoke-direct {v0, p0}, Lcom/vk/newsfeed/presenters/GlobalSearchPresenter;-><init>(Lcom/vk/newsfeed/contracts/GlobalSearchContract;)V
 
     return-object v0
 .end method
@@ -332,7 +332,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/search/fragment/DiscoverNewsSearchFragment$onViewCreated$3;-><init>(Lcom/vk/search/fragment/DiscoverNewsSearchFragment;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 10
     :cond_6
@@ -379,7 +379,7 @@
     const v1, 0x7f040167
 
     .line 12
-    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     const v1, 0x7f120300
 
@@ -631,13 +631,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/presenters/e;
+    check-cast v0, Lcom/vk/newsfeed/presenters/GlobalSearchPresenter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/presenters/j;->d(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/presenters/NewsSearchPresenter;->d(Ljava/lang/String;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "UserHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/newsfeed/k0/b/b/i;Ljava/util/ArrayList;Landroid/view/View$OnClickListener;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Ljava/util/ArrayList;Landroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
-        "Lcom/vk/profile/adapter/items/x;",
+        "Lcom/vk/profile/adapter/items/ProfilesRecommendationsInfoItem;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/x;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/ProfilesRecommendationsInfoItem;
     .locals 2
 
     .line 1
@@ -55,22 +55,22 @@
     if-eqz p1, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/profile/adapter/items/x;
+    new-instance v0, Lcom/vk/profile/adapter/items/ProfilesRecommendationsInfoItem;
 
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PROFILE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/profile/adapter/items/x;-><init>(Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/profile/adapter/items/ProfilesRecommendationsInfoItem;-><init>(Lcom/vk/dto/newsfeed/entries/ProfilesRecommendations;Ljava/lang/String;)V
 
     .line 3
     new-instance p1, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$recommendations$1$$special$$inlined$let$lambda$1;
 
     invoke-direct {p1, p0}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$recommendations$1$$special$$inlined$let$lambda$1;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$recommendations$1;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/adapter/items/x;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, p1}, Lcom/vk/profile/adapter/items/ProfilesRecommendationsInfoItem;->a(Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
@@ -87,7 +87,7 @@
     .line 1
     check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$recommendations$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/x;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$recommendations$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/ProfilesRecommendationsInfoItem;
 
     move-result-object p1
 

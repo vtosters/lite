@@ -1,5 +1,5 @@
 .class final Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter;
-.super Lcom/vk/lists/i0;
+.super Lcom/vk/lists/SimpleAdapter;
 .source "SourcesNotificationsSettingsFragment.kt"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/i0<",
-        "Lcom/vk/common/i/b;",
+        "Lcom/vk/lists/SimpleAdapter<",
+        "Lcom/vk/common/i/RecyclerItem;",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
         ">;"
     }
@@ -34,7 +34,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
 
     iput-object p1, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter;->c:Landroid/app/Activity;
 
@@ -53,7 +53,7 @@
 
     iget v1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/notifications/SourcesNotificationsSettingsFragment;->p0(I)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/notifications/SourcesNotificationsSettingsFragment;->p0(I)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -72,7 +72,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -85,7 +85,7 @@
     sget-object p1, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$c;->a:Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$c;
 
     .line 5
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -94,13 +94,13 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/common/i/b;
+    check-cast p1, Lcom/vk/common/i/RecyclerItem;
 
-    invoke-virtual {p1}, Lcom/vk/common/i/b;->b()I
+    invoke-virtual {p1}, Lcom/vk/common/i/RecyclerItem;->b()I
 
     move-result p1
 
@@ -129,18 +129,18 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/common/i/b;
+    check-cast p2, Lcom/vk/common/i/RecyclerItem;
 
     .line 2
     instance-of v0, p2, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$d;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vtosters/lite/ui/b0/l;
+    check-cast p1, Lcom/vtosters/lite/ui/holder/UserHolder;
 
     check-cast p2, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$d;
 
@@ -148,7 +148,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -160,7 +160,7 @@
     if-nez p2, :cond_0
 
     .line 1
-    invoke-static {p1}, Lcom/vtosters/lite/ui/b0/l;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/l;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/holder/UserHolder;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/holder/UserHolder;
 
     move-result-object p1
 
@@ -169,18 +169,18 @@
 
     invoke-direct {p2, p0}, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$a;-><init>(Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter;)V
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/l;->b(Lcom/vk/common/g/g;)Lcom/vtosters/lite/ui/b0/l;
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/UserHolder;->b(Lcom/vk/common/g/VoidF1;)Lcom/vtosters/lite/ui/holder/UserHolder;
 
     .line 3
     new-instance p2, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$b;
 
     invoke-direct {p2, p0}, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$b;-><init>(Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter;)V
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/l;->a(Lcom/vk/common/g/g;)Lcom/vtosters/lite/ui/b0/l;
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/UserHolder;->a(Lcom/vk/common/g/VoidF1;)Lcom/vtosters/lite/ui/holder/UserHolder;
 
     const-string p2, "UserHolder.actionable<Us\u2026                       })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 

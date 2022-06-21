@@ -3,7 +3,7 @@
 .source "StoriesPixelsController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/dto/stories/model/d;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/dto/stories/model/StoryAdsStatAction;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/stories/model/d;)Z
+.method public final a(Lcom/vk/dto/stories/model/StoryAdsStatAction;)Z
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/stories/StoriesPixelsController$trackPixel$1;->$action:Lcom/vk/dto/stories/model/StoryViewAction;
 
-    invoke-virtual {p1}, Lcom/vk/dto/stories/model/d;->a()Lcom/vk/dto/stories/model/StoryViewAction;
+    invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoryAdsStatAction;->a()Lcom/vk/dto/stories/model/StoryViewAction;
 
     move-result-object p1
 
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/stories/model/d;
+    check-cast p1, Lcom/vk/dto/stories/model/StoryAdsStatAction;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesPixelsController$trackPixel$1;->a(Lcom/vk/dto/stories/model/d;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesPixelsController$trackPixel$1;->a(Lcom/vk/dto/stories/model/StoryAdsStatAction;)Z
 
     move-result p1
 

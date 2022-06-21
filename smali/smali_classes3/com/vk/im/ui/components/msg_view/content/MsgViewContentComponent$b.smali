@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method public a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;)V
+.method public a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -60,7 +60,7 @@
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
             "Ljava/lang/String;",
-            "Lcom/vk/im/engine/models/messages/e;",
+            "Lcom/vk/im/engine/models/messages/MsgSendSource;",
             ")V"
         }
     .end annotation
@@ -72,9 +72,9 @@
 
     invoke-direct {v3, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    check-cast p4, Lcom/vk/im/engine/models/messages/e$a;
+    check-cast p4, Lcom/vk/im/engine/models/messages/MsgSendSource$a;
 
-    invoke-virtual {p4}, Lcom/vk/im/engine/models/messages/e$b;->a()Lcom/vk/im/engine/models/conversations/BotButton;
+    invoke-virtual {p4}, Lcom/vk/im/engine/models/messages/MsgSendSource$b;->a()Lcom/vk/im/engine/models/conversations/BotButton;
 
     move-result-object v4
 
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method public a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;Landroid/view/View;Lkotlin/jvm/b/a;)V
+.method public a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Landroid/view/View;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -102,16 +102,16 @@
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
             "Ljava/lang/String;",
-            "Lcom/vk/im/engine/models/messages/e;",
+            "Lcom/vk/im/engine/models/messages/MsgSendSource;",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-static/range {p0 .. p6}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a$b;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static/range {p0 .. p6}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a$b;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method

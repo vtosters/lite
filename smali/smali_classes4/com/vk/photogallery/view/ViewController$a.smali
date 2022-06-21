@@ -51,21 +51,21 @@
     return-object p1
 .end method
 
-.method public a(Landroid/view/ViewGroup;Lkotlin/jvm/b/a;)Landroid/view/View;
+.method public a(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions;)Landroid/view/View;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Landroid/view/View;"
         }
     .end annotation
 
     .line 3
-    invoke-static {p0, p1, p2}, Lcom/vk/photoviewer/PhotoViewer$e$a;->a(Lcom/vk/photoviewer/PhotoViewer$e;Landroid/view/ViewGroup;Lkotlin/jvm/b/a;)Landroid/view/View;
+    invoke-static {p0, p1, p2}, Lcom/vk/photoviewer/PhotoViewer$e$a;->a(Lcom/vk/photoviewer/PhotoViewer$e;Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions;)Landroid/view/View;
 
     move-result-object p1
 
@@ -93,11 +93,11 @@
 
     div-int/lit8 p2, p2, 0x2
 
-    invoke-static {p2}, Lcom/facebook/imagepipeline/common/d;->a(I)Lcom/facebook/imagepipeline/common/d;
+    invoke-static {p2}, Lcom/facebook/imagepipeline/common/ResizeOptions;->a(I)Lcom/facebook/imagepipeline/common/ResizeOptions;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/d;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p1, p2}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/ResizeOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 14
     invoke-virtual {p1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a()Lcom/facebook/imagepipeline/request/ImageRequest;
@@ -106,7 +106,7 @@
 
     const-string p2, "ImageRequestBuilder.newB\u2026                 .build()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

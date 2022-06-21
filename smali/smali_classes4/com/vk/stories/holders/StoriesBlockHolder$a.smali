@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -59,12 +59,12 @@
 
     move-object v6, p4
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/stories/holders/StoriesBlockHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/stories/holders/StoryInfoHolder;Lcom/vk/stories/holders/c;ILcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/stories/holders/StoriesBlockHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/stories/holders/StoryInfoHolder;Lcom/vk/stories/holders/StoriesItemHolder1;ILcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v9
 .end method
 
-.method public final a(Landroid/view/ViewGroup;Lcom/vk/stories/holders/c;Ljava/lang/String;)Lcom/vk/stories/holders/StoriesBlockHolder;
+.method public final a(Landroid/view/ViewGroup;Lcom/vk/stories/holders/StoriesItemHolder1;Ljava/lang/String;)Lcom/vk/stories/holders/StoriesBlockHolder;
     .locals 10
 
     .line 2
@@ -95,7 +95,7 @@
     move-object v6, p3
 
     .line 5
-    invoke-direct/range {v0 .. v8}, Lcom/vk/stories/holders/StoriesBlockHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/stories/holders/StoryInfoHolder;Lcom/vk/stories/holders/c;ILcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/stories/holders/StoriesBlockHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/stories/holders/StoryInfoHolder;Lcom/vk/stories/holders/StoriesItemHolder1;ILcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v9
 .end method
@@ -124,7 +124,7 @@
 
     move-object v6, p4
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/stories/holders/StoriesBlockHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/stories/holders/StoryInfoHolder;Lcom/vk/stories/holders/c;ILcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/stories/holders/StoriesBlockHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/stories/holders/StoryInfoHolder;Lcom/vk/stories/holders/StoriesItemHolder1;ILcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v9
 .end method

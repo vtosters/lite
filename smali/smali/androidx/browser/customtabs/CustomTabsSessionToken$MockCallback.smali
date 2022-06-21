@@ -1,5 +1,5 @@
 .class Landroidx/browser/customtabs/CustomTabsSessionToken$MockCallback;
-.super La/a/a/a$a;
+.super Landroid/support/customtabs/ICustomTabsCallback$a;
 .source "CustomTabsSessionToken.java"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, La/a/a/a$a;-><init>()V
+    invoke-direct {p0}, Landroid/support/customtabs/ICustomTabsCallback$a;-><init>()V
 
     return-void
 .end method

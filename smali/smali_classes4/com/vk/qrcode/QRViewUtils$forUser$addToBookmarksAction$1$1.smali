@@ -3,7 +3,7 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(I)Lkotlin/m;
+.method public final a(I)Lkotlin/Unit;
     .locals 1
 
     .line 1
@@ -61,7 +61,7 @@
     .line 2
     sget-object p1, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    invoke-virtual {p1}, Lcom/vk/qrcode/QRViewUtils;->a()Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {p1}, Lcom/vk/qrcode/QRViewUtils;->a()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
@@ -69,9 +69,9 @@
 
     const/4 v0, -0x2
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e;->o0(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->o0(I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_0
 
@@ -92,7 +92,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/qrcode/QRViewUtils$forUser$addToBookmarksAction$1$1;->a(I)Lkotlin/m;
+    invoke-virtual {p0, p1}, Lcom/vk/qrcode/QRViewUtils$forUser$addToBookmarksAction$1$1;->a(I)Lkotlin/Unit;
 
     move-result-object p1
 

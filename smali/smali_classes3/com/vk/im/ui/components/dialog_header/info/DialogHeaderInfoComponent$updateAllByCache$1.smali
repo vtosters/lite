@@ -3,7 +3,7 @@
 .source "DialogHeaderInfoComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/ui/components/dialog_header/info/h/b$a;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/ui/components/dialog_header/info/h/LoadAllByCacheCmd$a;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/dialog_header/info/h/b$a;)V
+.method public final a(Lcom/vk/im/ui/components/dialog_header/info/h/LoadAllByCacheCmd$a;)V
     .locals 1
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
@@ -48,7 +48,7 @@
     check-cast v0, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
     .line 1
-    invoke-static {v0, p1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;->a(Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;Lcom/vk/im/ui/components/dialog_header/info/h/b$a;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;->a(Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;Lcom/vk/im/ui/components/dialog_header/info/h/LoadAllByCacheCmd$a;)V
 
     return-void
 .end method
@@ -61,12 +61,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
     const-class v0, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -85,11 +85,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/dialog_header/info/h/b$a;
+    check-cast p1, Lcom/vk/im/ui/components/dialog_header/info/h/LoadAllByCacheCmd$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent$updateAllByCache$1;->a(Lcom/vk/im/ui/components/dialog_header/info/h/b$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent$updateAllByCache$1;->a(Lcom/vk/im/ui/components/dialog_header/info/h/LoadAllByCacheCmd$a;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

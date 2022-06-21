@@ -3,7 +3,7 @@
 .source "StoryView.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -52,7 +52,7 @@
     const p1, 0x7f120369
 
     .line 5
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
     const p1, 0x7f120f49
 
     .line 2
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$h0$a$a$a;->a:Lcom/vk/stories/view/StoryView$h0$a$a;

@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static final o:Lcom/vk/reef/utils/c;
+.field private static final o:Lcom/vk/reef/utils/ReefLogger;
 
 .field private static final p:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -22,10 +22,10 @@
 
 
 # instance fields
-.field private a:Lkotlin/jvm/b/a;
+.field private a:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Ljava/util/concurrent/Executor;",
             ">;"
@@ -33,62 +33,62 @@
     .end annotation
 .end field
 
-.field private b:Lkotlin/jvm/b/a;
+.field private b:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
-            "Lcom/vk/reef/j/c;",
+            "Lcom/vk/reef/j/ReefSnapshotRepo;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private c:Lkotlin/jvm/b/a;
+.field private c:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
-            "Lcom/vk/reef/utils/c;",
+            "Lcom/vk/reef/utils/ReefLogger;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private d:Lkotlin/jvm/b/a;
+.field private d:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
-            "Lcom/vk/reef/k/a;",
+            "Lcom/vk/reef/k/ReefDataSerializer;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private e:Lkotlin/jvm/b/a;
+.field private e:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
-            "Lcom/vk/reef/b;",
+            "Lcom/vk/reef/ReefDataSender;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private f:Lkotlin/jvm/b/c;
+.field private f:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
-            "Lcom/vk/reef/d;",
+            "Lcom/vk/reef/SendRequestController;",
             "-",
-            "Lcom/vk/reef/utils/c;",
+            "Lcom/vk/reef/utils/ReefLogger;",
             "+",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/reef/c;",
+            "Lcom/vk/reef/ReefStateSource;",
             ">;>;"
         }
     .end annotation
@@ -98,17 +98,17 @@
 
 .field private h:Lcom/vk/reef/trackers/ReefWifiTracker;
 
-.field private i:Lcom/vk/reef/j/c;
+.field private i:Lcom/vk/reef/j/ReefSnapshotRepo;
 
-.field private j:Lcom/vk/reef/utils/d;
+.field private j:Lcom/vk/reef/utils/ReefNetworkUtil;
 
 .field private k:Lcom/vk/reef/trackers/ReefNetworkInfoTracker;
 
-.field private final l:Lcom/vk/reef/utils/e;
+.field private final l:Lcom/vk/reef/utils/ReefPermissionsUtil;
 
 .field private final m:Landroid/app/Application;
 
-.field private final n:Lcom/vk/reef/utils/a;
+.field private final n:Lcom/vk/reef/utils/ReefApplicationSettings;
 
 
 # direct methods
@@ -119,7 +119,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/reef/ReefFactory$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/reef/ReefFactory$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/reef/ReefFactory;->r:Lcom/vk/reef/ReefFactory$Companion;
 
@@ -128,7 +128,7 @@
 
     invoke-direct {v0}, Lcom/vk/reef/ReefFactory$a;-><init>()V
 
-    sput-object v0, Lcom/vk/reef/ReefFactory;->o:Lcom/vk/reef/utils/c;
+    sput-object v0, Lcom/vk/reef/ReefFactory;->o:Lcom/vk/reef/utils/ReefLogger;
 
     .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
@@ -149,7 +149,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/Application;Lcom/vk/reef/utils/a;)V
+.method public constructor <init>(Landroid/app/Application;Lcom/vk/reef/utils/ReefApplicationSettings;)V
     .locals 0
 
     .line 1
@@ -157,46 +157,46 @@
 
     iput-object p1, p0, Lcom/vk/reef/ReefFactory;->m:Landroid/app/Application;
 
-    iput-object p2, p0, Lcom/vk/reef/ReefFactory;->n:Lcom/vk/reef/utils/a;
+    iput-object p2, p0, Lcom/vk/reef/ReefFactory;->n:Lcom/vk/reef/utils/ReefApplicationSettings;
 
     .line 2
     sget-object p1, Lcom/vk/reef/ReefFactory$executorFactory$1;->a:Lcom/vk/reef/ReefFactory$executorFactory$1;
 
-    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->a:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->a:Lkotlin/jvm/b/Functions;
 
     .line 3
     sget-object p1, Lcom/vk/reef/ReefFactory$repositoryFactory$1;->a:Lcom/vk/reef/ReefFactory$repositoryFactory$1;
 
-    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->b:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->b:Lkotlin/jvm/b/Functions;
 
     .line 4
     sget-object p1, Lcom/vk/reef/ReefFactory$loggerFactory$1;->a:Lcom/vk/reef/ReefFactory$loggerFactory$1;
 
-    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->c:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->c:Lkotlin/jvm/b/Functions;
 
     .line 5
     sget-object p1, Lcom/vk/reef/ReefFactory$serializerFactory$1;->a:Lcom/vk/reef/ReefFactory$serializerFactory$1;
 
-    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->d:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->d:Lkotlin/jvm/b/Functions;
 
     .line 6
     sget-object p1, Lcom/vk/reef/ReefFactory$senderFactory$1;->a:Lcom/vk/reef/ReefFactory$senderFactory$1;
 
-    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->e:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->e:Lkotlin/jvm/b/Functions;
 
     .line 7
     sget-object p1, Lcom/vk/reef/ReefFactory$trackersFactory$1;->a:Lcom/vk/reef/ReefFactory$trackersFactory$1;
 
-    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->f:Lkotlin/jvm/b/c;
+    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->f:Lkotlin/jvm/b/Functions1;
 
     .line 8
-    new-instance p1, Lcom/vk/reef/utils/e;
+    new-instance p1, Lcom/vk/reef/utils/ReefPermissionsUtil;
 
     iget-object p2, p0, Lcom/vk/reef/ReefFactory;->m:Landroid/app/Application;
 
-    invoke-direct {p1, p2}, Lcom/vk/reef/utils/e;-><init>(Landroid/app/Application;)V
+    invoke-direct {p1, p2}, Lcom/vk/reef/utils/ReefPermissionsUtil;-><init>(Landroid/app/Application;)V
 
-    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->l:Lcom/vk/reef/utils/e;
+    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->l:Lcom/vk/reef/utils/ReefPermissionsUtil;
 
     return-void
 .end method
@@ -210,52 +210,52 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/reef/ReefFactory;Lcom/vk/reef/utils/c;)Lcom/vk/reef/utils/d;
+.method public static final synthetic a(Lcom/vk/reef/ReefFactory;Lcom/vk/reef/utils/ReefLogger;)Lcom/vk/reef/utils/ReefNetworkUtil;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/reef/ReefFactory;->a(Lcom/vk/reef/utils/c;)Lcom/vk/reef/utils/d;
+    invoke-direct {p0, p1}, Lcom/vk/reef/ReefFactory;->a(Lcom/vk/reef/utils/ReefLogger;)Lcom/vk/reef/utils/ReefNetworkUtil;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/reef/utils/c;)Lcom/vk/reef/utils/d;
+.method private final a(Lcom/vk/reef/utils/ReefLogger;)Lcom/vk/reef/utils/ReefNetworkUtil;
     .locals 7
 
     .line 6
-    new-instance v5, Lcom/vk/reef/utils/h;
+    new-instance v5, Lcom/vk/reef/utils/ReflectionCellSignalStrengthExtractor;
 
-    iget-object v0, p0, Lcom/vk/reef/ReefFactory;->n:Lcom/vk/reef/utils/a;
+    iget-object v0, p0, Lcom/vk/reef/ReefFactory;->n:Lcom/vk/reef/utils/ReefApplicationSettings;
 
-    invoke-direct {v5, v0, p1}, Lcom/vk/reef/utils/h;-><init>(Lcom/vk/reef/utils/a;Lcom/vk/reef/utils/c;)V
+    invoke-direct {v5, v0, p1}, Lcom/vk/reef/utils/ReflectionCellSignalStrengthExtractor;-><init>(Lcom/vk/reef/utils/ReefApplicationSettings;Lcom/vk/reef/utils/ReefLogger;)V
 
     .line 7
-    new-instance v6, Lcom/vk/reef/utils/d;
+    new-instance v6, Lcom/vk/reef/utils/ReefNetworkUtil;
 
-    iget-object v1, p0, Lcom/vk/reef/ReefFactory;->l:Lcom/vk/reef/utils/e;
+    iget-object v1, p0, Lcom/vk/reef/ReefFactory;->l:Lcom/vk/reef/utils/ReefPermissionsUtil;
 
-    iget-object v2, p0, Lcom/vk/reef/ReefFactory;->n:Lcom/vk/reef/utils/a;
+    iget-object v2, p0, Lcom/vk/reef/ReefFactory;->n:Lcom/vk/reef/utils/ReefApplicationSettings;
 
     .line 8
     iget-object v0, p0, Lcom/vk/reef/ReefFactory;->m:Landroid/app/Application;
 
-    invoke-static {v0}, Lcom/vk/reef/utils/b;->c(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
+    invoke-static {v0}, Lcom/vk/reef/utils/ReefContextExt;->c(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
 
     move-result-object v3
 
     .line 9
-    new-instance v4, Lcom/vk/reef/utils/g;
+    new-instance v4, Lcom/vk/reef/utils/ReflectionCellInfoExtractor;
 
-    iget-object v0, p0, Lcom/vk/reef/ReefFactory;->n:Lcom/vk/reef/utils/a;
+    iget-object v0, p0, Lcom/vk/reef/ReefFactory;->n:Lcom/vk/reef/utils/ReefApplicationSettings;
 
-    invoke-direct {v4, v0, v5, p1}, Lcom/vk/reef/utils/g;-><init>(Lcom/vk/reef/utils/a;Lcom/vk/reef/utils/h;Lcom/vk/reef/utils/c;)V
+    invoke-direct {v4, v0, v5, p1}, Lcom/vk/reef/utils/ReflectionCellInfoExtractor;-><init>(Lcom/vk/reef/utils/ReefApplicationSettings;Lcom/vk/reef/utils/ReflectionCellSignalStrengthExtractor;Lcom/vk/reef/utils/ReefLogger;)V
 
     move-object v0, v6
 
     .line 10
-    invoke-direct/range {v0 .. v5}, Lcom/vk/reef/utils/d;-><init>(Lcom/vk/reef/utils/e;Lcom/vk/reef/utils/a;Landroid/telephony/SubscriptionManager;Lcom/vk/reef/utils/g;Lcom/vk/reef/utils/h;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/reef/utils/ReefNetworkUtil;-><init>(Lcom/vk/reef/utils/ReefPermissionsUtil;Lcom/vk/reef/utils/ReefApplicationSettings;Landroid/telephony/SubscriptionManager;Lcom/vk/reef/utils/ReflectionCellInfoExtractor;Lcom/vk/reef/utils/ReflectionCellSignalStrengthExtractor;)V
 
     return-object v6
 .end method
@@ -278,20 +278,20 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/reef/ReefFactory;)Lcom/vk/reef/utils/a;
+.method public static final synthetic b(Lcom/vk/reef/ReefFactory;)Lcom/vk/reef/utils/ReefApplicationSettings;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/reef/ReefFactory;->n:Lcom/vk/reef/utils/a;
+    iget-object p0, p0, Lcom/vk/reef/ReefFactory;->n:Lcom/vk/reef/utils/ReefApplicationSettings;
 
     return-object p0
 .end method
 
-.method public static final synthetic b()Lcom/vk/reef/utils/c;
+.method public static final synthetic b()Lcom/vk/reef/utils/ReefLogger;
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/reef/ReefFactory;->o:Lcom/vk/reef/utils/c;
+    sget-object v0, Lcom/vk/reef/ReefFactory;->o:Lcom/vk/reef/utils/ReefLogger;
 
     return-object v0
 .end method
@@ -305,20 +305,20 @@
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/reef/ReefFactory;)Lcom/vk/reef/utils/d;
+.method public static final synthetic d(Lcom/vk/reef/ReefFactory;)Lcom/vk/reef/utils/ReefNetworkUtil;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/reef/ReefFactory;->j:Lcom/vk/reef/utils/d;
+    iget-object p0, p0, Lcom/vk/reef/ReefFactory;->j:Lcom/vk/reef/utils/ReefNetworkUtil;
 
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/reef/ReefFactory;)Lcom/vk/reef/utils/e;
+.method public static final synthetic e(Lcom/vk/reef/ReefFactory;)Lcom/vk/reef/utils/ReefPermissionsUtil;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/reef/ReefFactory;->l:Lcom/vk/reef/utils/e;
+    iget-object p0, p0, Lcom/vk/reef/ReefFactory;->l:Lcom/vk/reef/utils/ReefPermissionsUtil;
 
     return-object p0
 .end method
@@ -340,22 +340,22 @@
     move-object/from16 v0, p0
 
     .line 13
-    iget-object v1, v0, Lcom/vk/reef/ReefFactory;->i:Lcom/vk/reef/j/c;
+    iget-object v1, v0, Lcom/vk/reef/ReefFactory;->i:Lcom/vk/reef/j/ReefSnapshotRepo;
 
     if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, v0, Lcom/vk/reef/ReefFactory;->b:Lkotlin/jvm/b/a;
+    iget-object v1, v0, Lcom/vk/reef/ReefFactory;->b:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/reef/j/c;
+    check-cast v1, Lcom/vk/reef/j/ReefSnapshotRepo;
 
-    iput-object v1, v0, Lcom/vk/reef/ReefFactory;->i:Lcom/vk/reef/j/c;
+    iput-object v1, v0, Lcom/vk/reef/ReefFactory;->i:Lcom/vk/reef/j/ReefSnapshotRepo;
 
     :goto_0
     move-object v5, v1
@@ -368,9 +368,9 @@
     goto :goto_1
 
     :cond_1
-    iget-object v1, v0, Lcom/vk/reef/ReefFactory;->a:Lkotlin/jvm/b/a;
+    iget-object v1, v0, Lcom/vk/reef/ReefFactory;->a:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -382,35 +382,35 @@
     move-object v7, v1
 
     .line 15
-    iget-object v1, v0, Lcom/vk/reef/ReefFactory;->e:Lkotlin/jvm/b/a;
+    iget-object v1, v0, Lcom/vk/reef/ReefFactory;->e:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
     move-object v6, v1
 
-    check-cast v6, Lcom/vk/reef/b;
+    check-cast v6, Lcom/vk/reef/ReefDataSender;
 
     .line 16
-    iget-object v1, v0, Lcom/vk/reef/ReefFactory;->d:Lkotlin/jvm/b/a;
+    iget-object v1, v0, Lcom/vk/reef/ReefFactory;->d:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
     move-object v8, v1
 
-    check-cast v8, Lcom/vk/reef/k/a;
+    check-cast v8, Lcom/vk/reef/k/ReefDataSerializer;
 
     .line 17
-    iget-object v1, v0, Lcom/vk/reef/ReefFactory;->c:Lkotlin/jvm/b/a;
+    iget-object v1, v0, Lcom/vk/reef/ReefFactory;->c:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/reef/utils/c;
+    check-cast v1, Lcom/vk/reef/utils/ReefLogger;
 
     .line 18
     new-instance v12, Lcom/vk/reef/ReefFactory$b;
@@ -418,9 +418,9 @@
     invoke-direct {v12}, Lcom/vk/reef/ReefFactory$b;-><init>()V
 
     .line 19
-    iget-object v2, v0, Lcom/vk/reef/ReefFactory;->f:Lkotlin/jvm/b/c;
+    iget-object v2, v0, Lcom/vk/reef/ReefFactory;->f:Lkotlin/jvm/b/Functions1;
 
-    invoke-interface {v2, v12, v1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v12, v1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -429,7 +429,7 @@
     check-cast v13, Ljava/util/List;
 
     .line 20
-    new-instance v14, Lcom/vk/reef/a;
+    new-instance v14, Lcom/vk/reef/ReefController;
 
     .line 21
     sget-wide v9, Lcom/vk/reef/ReefFactory;->q:J
@@ -444,15 +444,15 @@
     move-object v4, v1
 
     .line 23
-    invoke-direct/range {v2 .. v11}, Lcom/vk/reef/a;-><init>(Ljava/util/List;Lcom/vk/reef/utils/c;Lcom/vk/reef/j/c;Lcom/vk/reef/b;Ljava/util/concurrent/Executor;Lcom/vk/reef/k/a;JLjava/util/concurrent/atomic/AtomicInteger;)V
+    invoke-direct/range {v2 .. v11}, Lcom/vk/reef/ReefController;-><init>(Ljava/util/List;Lcom/vk/reef/utils/ReefLogger;Lcom/vk/reef/j/ReefSnapshotRepo;Lcom/vk/reef/ReefDataSender;Ljava/util/concurrent/Executor;Lcom/vk/reef/k/ReefDataSerializer;JLjava/util/concurrent/atomic/AtomicInteger;)V
 
     .line 24
-    invoke-virtual {v12, v14}, Lcom/vk/reef/ReefFactory$b;->a(Lcom/vk/reef/d;)V
+    invoke-virtual {v12, v14}, Lcom/vk/reef/ReefFactory$b;->a(Lcom/vk/reef/SendRequestController;)V
 
     .line 25
     new-instance v2, Lcom/vk/reef/Reef;
 
-    invoke-direct {v2, v14}, Lcom/vk/reef/Reef;-><init>(Lcom/vk/reef/a;)V
+    invoke-direct {v2, v14}, Lcom/vk/reef/Reef;-><init>(Lcom/vk/reef/ReefController;)V
 
     .line 26
     new-instance v3, Ljava/lang/StringBuilder;
@@ -479,7 +479,7 @@
 
     const/16 v21, 0x0
 
-    invoke-static/range {v13 .. v21}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v13 .. v21}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -503,7 +503,7 @@
 
     move-result-object v3
 
-    invoke-interface {v1, v3}, Lcom/vk/reef/utils/c;->log(Ljava/lang/String;)V
+    invoke-interface {v1, v3}, Lcom/vk/reef/utils/ReefLogger;->log(Ljava/lang/String;)V
 
     return-object v2
 .end method
@@ -516,70 +516,70 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/reef/ReefFactory$withDefaultTrackers$$inlined$apply$lambda$1;-><init>(Lcom/vk/reef/ReefFactory;Lcom/vk/reef/trackers/ReefClientTracker;)V
 
-    iput-object v0, p0, Lcom/vk/reef/ReefFactory;->f:Lkotlin/jvm/b/c;
+    iput-object v0, p0, Lcom/vk/reef/ReefFactory;->f:Lkotlin/jvm/b/Functions1;
 
     return-object p0
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)Lcom/vk/reef/ReefFactory;
+.method public final a(Lkotlin/jvm/b/Functions;)Lcom/vk/reef/ReefFactory;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
-            "Lcom/vk/reef/utils/c;",
+            "Lcom/vk/reef/utils/ReefLogger;",
             ">;)",
             "Lcom/vk/reef/ReefFactory;"
         }
     .end annotation
 
     .line 12
-    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->c:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->c:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
 
-.method public final a(Lkotlin/jvm/b/c;)Lcom/vk/reef/ReefFactory;
+.method public final a(Lkotlin/jvm/b/Functions1;)Lcom/vk/reef/ReefFactory;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
-            "Lcom/vk/reef/d;",
+            "Lcom/vk/reef/SendRequestController;",
             "-",
-            "Lcom/vk/reef/utils/c;",
+            "Lcom/vk/reef/utils/ReefLogger;",
             "+",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/reef/c;",
+            "Lcom/vk/reef/ReefStateSource;",
             ">;>;)",
             "Lcom/vk/reef/ReefFactory;"
         }
     .end annotation
 
     .line 11
-    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->f:Lkotlin/jvm/b/c;
+    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->f:Lkotlin/jvm/b/Functions1;
 
     return-object p0
 .end method
 
-.method public final b(Lkotlin/jvm/b/a;)Lcom/vk/reef/ReefFactory;
+.method public final b(Lkotlin/jvm/b/Functions;)Lcom/vk/reef/ReefFactory;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
-            "Lcom/vk/reef/b;",
+            "Lcom/vk/reef/ReefDataSender;",
             ">;)",
             "Lcom/vk/reef/ReefFactory;"
         }
     .end annotation
 
     .line 3
-    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->e:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/reef/ReefFactory;->e:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method

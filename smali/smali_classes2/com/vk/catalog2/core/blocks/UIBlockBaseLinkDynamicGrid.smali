@@ -3,7 +3,7 @@
 .source "UIBlockBaseLinkDynamicGrid.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/ui/a;
+.implements Lcom/vk/catalog2/core/ui/CatalogAutoPlayVideoProvider;
 
 
 # annotations
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field static final synthetic J:[Lkotlin/u/j;
+.field static final synthetic J:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -63,7 +63,7 @@
     .end annotation
 .end field
 
-.field private final I:Lkotlin/e;
+.field private final I:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -72,13 +72,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -86,21 +86,21 @@
 
     const-string v4, "getFirstVideo()Lcom/vk/dto/common/VideoFile;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->J:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->J:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid$a;
@@ -124,11 +124,11 @@
 
     invoke-direct {v0, p0}, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid$firstVideo$2;-><init>(Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->I:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->I:Lkotlin/Lazy2;
 
     .line 10
     sget-object v0, Lcom/vk/dto/tags/TagLink;->CREATOR:Lcom/vk/core/serialize/Serializer$c;
@@ -148,7 +148,7 @@
 
     const-string v2, "VideoFile.CREATOR"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->b(Lcom/vk/core/serialize/Serializer$c;)Ljava/util/ArrayList;
 
@@ -211,19 +211,19 @@
 
     .line 15
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 16
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 17
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -281,18 +281,18 @@
     move/from16 v9, p7
 
     .line 1
-    invoke-direct/range {v0 .. v11}, Lcom/vk/catalog2/core/blocks/UIBlock;-><init>(Ljava/lang/String;Lcom/vk/catalog2/core/api/dto/CatalogViewType;Lcom/vk/catalog2/core/api/dto/CatalogDataType;Ljava/lang/String;ILjava/util/List;JZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v11}, Lcom/vk/catalog2/core/blocks/UIBlock;-><init>(Ljava/lang/String;Lcom/vk/catalog2/core/api/dto/CatalogViewType;Lcom/vk/catalog2/core/api/dto/CatalogDataType;Ljava/lang/String;ILjava/util/List;JZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     new-instance v0, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid$firstVideo$2;
 
     invoke-direct {v0, p0}, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid$firstVideo$2;-><init>(Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, v12, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->I:Lkotlin/e;
+    iput-object v0, v12, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->I:Lkotlin/Lazy2;
 
     move-object/from16 v0, p8
 
@@ -520,15 +520,15 @@
 .method private final H1()Lcom/vk/dto/common/VideoFile;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->I:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->I:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->J:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->J:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -705,13 +705,13 @@
 
     iget-object v0, p0, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->E:Ljava/util/List;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/c;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v8
 
     iget-object v0, p0, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->F:Ljava/util/List;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/c;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v9
 
@@ -730,7 +730,7 @@
 
     iget-object v0, p0, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->H:Ljava/util/List;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/c;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v12
 
@@ -769,7 +769,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->E:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -779,7 +779,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->F:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -789,7 +789,7 @@
 
     iget-object v1, p1, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->D:Lcom/vk/catalog2/core/api/dto/layout/GridLayout;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -805,7 +805,7 @@
 
     iget-object p1, p1, Lcom/vk/catalog2/core/blocks/UIBlockBaseLinkDynamicGrid;->H:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

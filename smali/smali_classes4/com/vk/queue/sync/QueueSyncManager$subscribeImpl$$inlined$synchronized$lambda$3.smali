@@ -3,12 +3,12 @@
 .source "QueueSyncManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/queue/sync/QueueSyncManager;->b(Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)Ljava/util/Collection;
+    value = Lcom/vk/queue/sync/QueueSyncManager;->b(Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)Ljava/util/Collection;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,22 +19,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Throwable;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $doOnError$inlined:Lkotlin/jvm/b/c;
+.field final synthetic $doOnError$inlined:Lkotlin/jvm/b/Functions1;
 
-.field final synthetic $doOnEvent$inlined:Lkotlin/jvm/b/c;
+.field final synthetic $doOnEvent$inlined:Lkotlin/jvm/b/Functions1;
 
-.field final synthetic $doOnSubscribe$inlined:Lkotlin/jvm/b/a;
+.field final synthetic $doOnSubscribe$inlined:Lkotlin/jvm/b/Functions;
 
-.field final synthetic $event:Lb/h/u/b/c;
+.field final synthetic $event:Lb/h/u/b/QueueEvent;
 
 .field final synthetic $events$inlined:Ljava/util/Collection;
 
@@ -44,10 +44,10 @@
 
 
 # direct methods
-.method constructor <init>(Lb/h/u/b/c;Lcom/vk/queue/sync/QueueSyncManager;Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)V
+.method constructor <init>(Lb/h/u/b/QueueEvent;Lcom/vk/queue/sync/QueueSyncManager;Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$event:Lb/h/u/b/c;
+    iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$event:Lb/h/u/b/QueueEvent;
 
     iput-object p2, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->this$0:Lcom/vk/queue/sync/QueueSyncManager;
 
@@ -55,11 +55,11 @@
 
     iput-object p4, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$tag$inlined:Ljava/lang/Object;
 
-    iput-object p5, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$doOnSubscribe$inlined:Lkotlin/jvm/b/a;
+    iput-object p5, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$doOnSubscribe$inlined:Lkotlin/jvm/b/Functions;
 
-    iput-object p6, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$doOnEvent$inlined:Lkotlin/jvm/b/c;
+    iput-object p6, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$doOnEvent$inlined:Lkotlin/jvm/b/Functions1;
 
-    iput-object p7, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$doOnError$inlined:Lkotlin/jvm/b/c;
+    iput-object p7, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$doOnError$inlined:Lkotlin/jvm/b/Functions1;
 
     const/4 p1, 0x1
 
@@ -75,17 +75,17 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$doOnError$inlined:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$doOnError$inlined:Lkotlin/jvm/b/Functions1;
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$event:Lb/h/u/b/c;
+    iget-object v1, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->$event:Lb/h/u/b/QueueEvent;
 
-    invoke-interface {v0, v1, p1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1, p1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -118,7 +118,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;->a(Ljava/lang/Throwable;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

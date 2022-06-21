@@ -132,11 +132,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/profile/ui/cover/c;
+    check-cast v0, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/cover/c;->a(F)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/cover/CoverViewItem;->a(F)V
 
     .line 4
     :cond_1
@@ -164,11 +164,11 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/profile/ui/cover/c;
+    check-cast p1, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1, v1}, Lcom/vk/profile/ui/cover/c;->a(F)V
+    invoke-virtual {p1, v1}, Lcom/vk/profile/ui/cover/CoverViewItem;->a(F)V
 
     :cond_2
     return-void

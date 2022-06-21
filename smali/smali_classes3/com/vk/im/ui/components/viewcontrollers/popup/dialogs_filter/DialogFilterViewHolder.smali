@@ -24,13 +24,13 @@
 
 .field private d:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-.field private e:Lkotlin/jvm/b/b;
+.field private e:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/dialogs/DialogsFilter;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder$a;
 
@@ -102,13 +102,13 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder$1;
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -122,28 +122,28 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder;)Lkotlin/jvm/b/b;
+.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder;->e:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder;->e:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/dialogs/DialogsFilter;ZLkotlin/jvm/b/b;)V
+.method public final a(Lcom/vk/im/engine/models/dialogs/DialogsFilter;ZLkotlin/jvm/b/Functions2;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/im/engine/models/dialogs/DialogsFilter;",
             "Z",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/dialogs/DialogsFilter;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -152,14 +152,14 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder;->d:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     .line 3
-    iput-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder;->e:Lkotlin/jvm/b/b;
+    iput-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder;->e:Lkotlin/jvm/b/Functions2;
 
     .line 4
     iget-object p3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v0, "itemView"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -260,7 +260,7 @@
     :goto_1
     iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -283,7 +283,7 @@
 
     const-string p3, "selectionView"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p2, :cond_4
 
@@ -309,7 +309,7 @@
     iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder;->d:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     .line 2
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder;->e:Lkotlin/jvm/b/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/dialogs_filter/DialogFilterViewHolder;->e:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method

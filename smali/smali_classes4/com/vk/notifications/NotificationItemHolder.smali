@@ -20,12 +20,12 @@
 
 .field private d:Lcom/vk/dto/notifications/NotificationItem;
 
-.field private final e:Lcom/vk/notifications/i;
+.field private final e:Lcom/vk/notifications/NotificationsContainer;
 
-.field private final f:Lcom/vk/im/ui/utils/k/b;
+.field private final f:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/ui/utils/k/b<",
+            "Lcom/vk/im/ui/utils/k/SimpleObjectsPool<",
             "Landroid/view/View;",
             ">;"
         }
@@ -34,14 +34,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/notifications/i;Lcom/vk/im/ui/utils/k/b;Lcom/vk/core/ui/swipes/ButtonsSwipeView$a;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/notifications/NotificationsContainer;Lcom/vk/im/ui/utils/k/SimpleObjectsPool;Lcom/vk/core/ui/swipes/ButtonsSwipeView$a;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lcom/vk/notifications/i;",
-            "Lcom/vk/im/ui/utils/k/b<",
+            "Lcom/vk/notifications/NotificationsContainer;",
+            "Lcom/vk/im/ui/utils/k/SimpleObjectsPool<",
             "Landroid/view/View;",
             ">;",
             "Lcom/vk/core/ui/swipes/ButtonsSwipeView$a;",
@@ -64,13 +64,13 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/ui/swipes/ButtonsSwipeView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/ui/swipes/ButtonsSwipeView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-direct {p0, v6}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/notifications/NotificationItemHolder;->e:Lcom/vk/notifications/i;
+    iput-object p2, p0, Lcom/vk/notifications/NotificationItemHolder;->e:Lcom/vk/notifications/NotificationsContainer;
 
-    iput-object p3, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/b;
+    iput-object p3, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
 
     .line 2
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -84,9 +84,9 @@
     .line 3
     new-instance p2, Lcom/vk/notifications/NotificationView;
 
-    iget-object p3, p0, Lcom/vk/notifications/NotificationItemHolder;->e:Lcom/vk/notifications/i;
+    iget-object p3, p0, Lcom/vk/notifications/NotificationItemHolder;->e:Lcom/vk/notifications/NotificationsContainer;
 
-    invoke-direct {p2, p3, p1}, Lcom/vk/notifications/NotificationView;-><init>(Lcom/vk/notifications/i;Landroid/content/Context;)V
+    invoke-direct {p2, p3, p1}, Lcom/vk/notifications/NotificationView;-><init>(Lcom/vk/notifications/NotificationsContainer;Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/vk/notifications/NotificationItemHolder;->b:Lcom/vk/notifications/NotificationView;
 
@@ -107,13 +107,13 @@
     invoke-virtual {p2, p3}, Lcom/vk/core/ui/swipes/ButtonsSwipeView;->setContentView(Landroid/view/View;)V
 
     .line 6
-    new-instance p2, Lcom/vk/core/ui/swipes/a;
+    new-instance p2, Lcom/vk/core/ui/swipes/SwipeHelper;
 
-    invoke-direct {p2, p1}, Lcom/vk/core/ui/swipes/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/core/ui/swipes/SwipeHelper;-><init>(Landroid/content/Context;)V
 
     iget-object p1, p0, Lcom/vk/notifications/NotificationItemHolder;->a:Lcom/vk/core/ui/swipes/ButtonsSwipeView;
 
-    invoke-virtual {p2, p1}, Lcom/vk/core/ui/swipes/a;->a(Lcom/vk/core/ui/swipes/ButtonsSwipeView;)V
+    invoke-virtual {p2, p1}, Lcom/vk/core/ui/swipes/SwipeHelper;->a(Lcom/vk/core/ui/swipes/ButtonsSwipeView;)V
 
     if-eqz p4, :cond_0
 
@@ -134,7 +134,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/notifications/NotificationItemHolder$1;-><init>(Lcom/vk/notifications/NotificationItemHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
@@ -149,11 +149,11 @@
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/notifications/NotificationItemHolder;)Lcom/vk/notifications/i;
+.method public static final synthetic a(Lcom/vk/notifications/NotificationItemHolder;)Lcom/vk/notifications/NotificationsContainer;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/notifications/NotificationItemHolder;->e:Lcom/vk/notifications/i;
+    iget-object p0, p0, Lcom/vk/notifications/NotificationItemHolder;->e:Lcom/vk/notifications/NotificationsContainer;
 
     return-object p0
 .end method
@@ -203,7 +203,7 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/notifications/NotificationItemHolder$bind$1;-><init>(Lcom/vk/notifications/NotificationItemHolder;Landroid/widget/TextView;Lcom/vk/dto/notifications/NotificationButton;)V
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -257,9 +257,9 @@
     invoke-virtual {v0, v5}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
     .line 26
-    iget-object v6, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/b;
+    iget-object v6, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
 
-    invoke-virtual {v6, v5}, Lcom/vk/im/ui/utils/k/b;->a(Ljava/lang/Object;)V
+    invoke-virtual {v6, v5}, Lcom/vk/im/ui/utils/k/SimpleObjectsPool;->a(Ljava/lang/Object;)V
 
     add-int/lit8 v4, v4, 0x1
 
@@ -288,9 +288,9 @@
     invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
     .line 29
-    iget-object v5, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/b;
+    iget-object v5, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
 
-    invoke-virtual {v5, v4}, Lcom/vk/im/ui/utils/k/b;->a(Ljava/lang/Object;)V
+    invoke-virtual {v5, v4}, Lcom/vk/im/ui/utils/k/SimpleObjectsPool;->a(Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -322,9 +322,9 @@
     invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
     .line 33
-    iget-object v5, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/b;
+    iget-object v5, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
 
-    invoke-virtual {v5, v4}, Lcom/vk/im/ui/utils/k/b;->a(Ljava/lang/Object;)V
+    invoke-virtual {v5, v4}, Lcom/vk/im/ui/utils/k/SimpleObjectsPool;->a(Ljava/lang/Object;)V
 
     add-int/lit8 v3, v3, 0x1
 
@@ -353,9 +353,9 @@
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
     .line 36
-    iget-object v4, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/b;
+    iget-object v4, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
 
-    invoke-virtual {v4, v3}, Lcom/vk/im/ui/utils/k/b;->a(Ljava/lang/Object;)V
+    invoke-virtual {v4, v3}, Lcom/vk/im/ui/utils/k/SimpleObjectsPool;->a(Ljava/lang/Object;)V
 
     goto :goto_3
 
@@ -416,9 +416,9 @@
     check-cast v3, Lcom/vk/dto/notifications/NotificationButton;
 
     .line 5
-    iget-object v4, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/b;
+    iget-object v4, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
 
-    invoke-virtual {v4}, Lcom/vk/im/ui/utils/k/b;->a()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/vk/im/ui/utils/k/SimpleObjectsPool;->a()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -466,9 +466,9 @@
     check-cast v0, Lcom/vk/dto/notifications/NotificationButton;
 
     .line 10
-    iget-object v2, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/b;
+    iget-object v2, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/utils/k/b;->a()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/vk/im/ui/utils/k/SimpleObjectsPool;->a()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -565,9 +565,9 @@
     if-ltz v1, :cond_3
 
     .line 10
-    iget-object v0, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/b;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationItemHolder;->f:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/utils/k/b;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/im/ui/utils/k/SimpleObjectsPool;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -873,7 +873,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
 

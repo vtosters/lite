@@ -1,5 +1,5 @@
 .class public final Lcom/vk/qrcode/QRTypes$AddressBookQRAction;
-.super Lcom/vk/qrcode/l;
+.super Lcom/vk/qrcode/QRTypes6;
 .source "QRTypes.kt"
 
 
@@ -26,7 +26,7 @@
     move-object/from16 v6, p0
 
     .line 1
-    invoke-direct/range {p0 .. p1}, Lcom/vk/qrcode/l;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
+    invoke-direct/range {p0 .. p1}, Lcom/vk/qrcode/QRTypes6;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
 
     move-object/from16 v0, p2
 
@@ -304,14 +304,14 @@
 
 
 # virtual methods
-.method public a()Lc/a/m;
+.method public a()Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;"
         }
     .end annotation

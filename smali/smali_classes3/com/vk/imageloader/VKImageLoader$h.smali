@@ -3,12 +3,12 @@
 .source "VKImageLoader.java"
 
 # interfaces
-.implements Lc/a/o;
+.implements Lio/reactivex/ObservableOnSubscribe;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/imageloader/VKImageLoader;->b(Landroid/net/Uri;)Lc/a/m;
+    value = Lcom/vk/imageloader/VKImageLoader;->b(Landroid/net/Uri;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/o<",
-        "Lcom/facebook/common/references/a<",
-        "Lcom/facebook/x/g/c;",
+        "Lio/reactivex/ObservableOnSubscribe<",
+        "Lcom/facebook/common/references/CloseableReference<",
+        "Lcom/facebook/x/g/CloseableImage;",
         ">;>;"
     }
 .end annotation
@@ -45,14 +45,14 @@
 
 
 # virtual methods
-.method public a(Lc/a/n;)V
+.method public a(Lio/reactivex/ObservableEmitter;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/n<",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lio/reactivex/ObservableEmitter<",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;>;)V"
         }
     .end annotation
@@ -66,7 +66,7 @@
     .line 1
     sget-object v0, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object v0
 
@@ -83,22 +83,22 @@
     move-result-object v1
 
     .line 4
-    invoke-virtual {v0, v1, p0}, Lcom/facebook/x/d/g;->a(Lcom/facebook/imagepipeline/request/ImageRequest;Ljava/lang/Object;)Lcom/facebook/datasource/b;
+    invoke-virtual {v0, v1, p0}, Lcom/facebook/x/d/ImagePipeline;->a(Lcom/facebook/imagepipeline/request/ImageRequest;Ljava/lang/Object;)Lcom/facebook/datasource/DataSource;
 
     move-result-object v0
 
     .line 5
     new-instance v1, Lcom/vk/imageloader/VKImageLoader$h$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/imageloader/VKImageLoader$h$a;-><init>(Lcom/vk/imageloader/VKImageLoader$h;Lc/a/n;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/imageloader/VKImageLoader$h$a;-><init>(Lcom/vk/imageloader/VKImageLoader$h;Lio/reactivex/ObservableEmitter;)V
 
     .line 6
-    invoke-static {}, Lcom/facebook/common/g/a;->a()Lcom/facebook/common/g/a;
+    invoke-static {}, Lcom/facebook/common/g/CallerThreadExecutor;->a()Lcom/facebook/common/g/CallerThreadExecutor;
 
     move-result-object p1
 
     .line 7
-    invoke-interface {v0, v1, p1}, Lcom/facebook/datasource/b;->a(Lcom/facebook/datasource/d;Ljava/util/concurrent/Executor;)V
+    invoke-interface {v0, v1, p1}, Lcom/facebook/datasource/DataSource;->a(Lcom/facebook/datasource/DataSubscriber;Ljava/util/concurrent/Executor;)V
 
     return-void
 .end method

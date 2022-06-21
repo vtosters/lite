@@ -6,19 +6,19 @@
 # instance fields
 .field private final a:Landroid/os/Handler;
 
-.field private b:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 .field private final c:Landroid/app/Activity;
 
 .field private final d:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
-.field private final e:Lcom/vk/stories/editor/base/e0;
+.field private final e:Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;
 
 .field private final f:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;Lcom/vk/stories/editor/base/e0;Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;)V
     .locals 0
 
     .line 1
@@ -28,7 +28,7 @@
 
     iput-object p2, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->d:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
-    iput-object p3, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->e:Lcom/vk/stories/editor/base/e0;
+    iput-object p3, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->e:Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;
 
     iput-object p4, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->f:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
@@ -51,43 +51,43 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;Lcom/vk/stories/clickable/stickers/b;Ljava/lang/Object;)V
+.method public static final synthetic a(Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;Ljava/lang/Object;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->a(Lcom/vk/stories/clickable/stickers/b;Ljava/lang/Object;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->a(Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/stories/clickable/stickers/b;Ljava/lang/Object;)V
+.method private final a(Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;Ljava/lang/Object;)V
     .locals 3
 
     .line 9
-    iget-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->b:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 10
-    iput-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->b:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     .line 11
     instance-of v1, p2, Lcom/vk/dto/common/Good;
 
     if-eqz v1, :cond_1
 
-    sget-object v0, Lcom/vk/stories/clickable/models/good/a;->r:Lcom/vk/stories/clickable/models/good/a$a;
+    sget-object v0, Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo;->r:Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo$a;
 
     move-object v1, p2
 
     check-cast v1, Lcom/vk/dto/common/Good;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/clickable/models/good/a$a;->a(Lcom/vk/dto/common/Good;)Lcom/vk/stories/clickable/models/good/a;
+    invoke-virtual {v0, v1}, Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo$a;->a(Lcom/vk/dto/common/Good;)Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo;
 
     move-result-object v0
 
@@ -99,13 +99,13 @@
 
     if-eqz v1, :cond_2
 
-    sget-object v0, Lcom/vk/stories/clickable/models/good/a;->r:Lcom/vk/stories/clickable/models/good/a$a;
+    sget-object v0, Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo;->r:Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo$a;
 
     move-object v1, p2
 
     check-cast v1, Lcom/vk/dto/attachments/SnippetAttachment;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/clickable/models/good/a$a;->a(Lcom/vk/dto/attachments/SnippetAttachment;)Lcom/vk/stories/clickable/models/good/a;
+    invoke-virtual {v0, v1}, Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo$a;->a(Lcom/vk/dto/attachments/SnippetAttachment;)Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo;
 
     move-result-object v0
 
@@ -118,9 +118,9 @@
     if-nez p1, :cond_3
 
     .line 13
-    new-instance p1, Lcom/vk/stories/clickable/stickers/b;
+    new-instance p1, Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;
 
-    invoke-direct {p1, v0}, Lcom/vk/stories/clickable/stickers/b;-><init>(Lcom/vk/stories/clickable/models/good/a;)V
+    invoke-direct {p1, v0}, Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;-><init>(Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo;)V
 
     .line 14
     iget-object p2, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->d:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
@@ -131,7 +131,7 @@
 
     .line 15
     :cond_3
-    invoke-virtual {p1, v0}, Lcom/vk/stories/clickable/stickers/b;->a(Lcom/vk/stories/clickable/models/good/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;->a(Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo;)V
 
     .line 16
     iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->d:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
@@ -172,18 +172,18 @@
 
     .line 19
     :goto_2
-    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->e:Lcom/vk/stories/editor/base/e0;
+    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->e:Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;
 
-    invoke-virtual {p1}, Lcom/vk/stories/editor/base/e0;->p()V
+    invoke-virtual {p1}, Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;->p()V
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;)Lcom/vk/stories/editor/base/e0;
+.method public static final synthetic b(Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;)Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->e:Lcom/vk/stories/editor/base/e0;
+    iget-object p0, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->e:Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;
 
     return-object p0
 .end method
@@ -199,7 +199,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stories/clickable/stickers/b;)V
+.method public final a(Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;)V
     .locals 10
 
     .line 3
@@ -211,7 +211,7 @@
     .line 5
     new-instance v2, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$1;
 
-    invoke-direct {v2, p0, p1}, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$1;-><init>(Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;Lcom/vk/stories/clickable/stickers/b;)V
+    invoke-direct {v2, p0, p1}, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$1;-><init>(Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;)V
 
     .line 6
     new-instance v3, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$2;
@@ -231,11 +231,11 @@
     const/4 v9, 0x0
 
     .line 7
-    invoke-static/range {v0 .. v9}, Lcom/vk/market/picker/GoodsPickerHelper;->a(Lcom/vk/market/picker/GoodsPickerHelper;Landroid/content/Context;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ZILkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static/range {v0 .. v9}, Lcom/vk/market/picker/GoodsPickerHelper;->a(Lcom/vk/market/picker/GoodsPickerHelper;Landroid/content/Context;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ZILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->b:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     .line 8
     iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->a:Landroid/os/Handler;

@@ -3,12 +3,12 @@
 .source "PollBackgroundDrawables.kt"
 
 # interfaces
-.implements Lcom/facebook/x/f/a;
+.implements Lcom/facebook/x/f/DrawableFactory;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/polls/ui/views/PhotoPollDrawable$Companion;->a(IIII)Lcom/facebook/x/f/a;
+    value = Lcom/vk/polls/ui/views/PhotoPollDrawable$Companion;->a(IIII)Lcom/facebook/x/f/DrawableFactory;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -47,35 +47,35 @@
 
 
 # virtual methods
-.method public a(Lcom/facebook/x/g/c;)Z
+.method public a(Lcom/facebook/x/g/CloseableImage;)Z
     .locals 0
 
     .line 1
-    instance-of p1, p1, Lcom/facebook/x/g/b;
+    instance-of p1, p1, Lcom/facebook/x/g/CloseableBitmap;
 
     return p1
 .end method
 
-.method public b(Lcom/facebook/x/g/c;)Landroid/graphics/drawable/Drawable;
+.method public b(Lcom/facebook/x/g/CloseableImage;)Landroid/graphics/drawable/Drawable;
     .locals 7
 
     .line 1
-    instance-of v0, p1, Lcom/facebook/x/g/b;
+    instance-of v0, p1, Lcom/facebook/x/g/CloseableBitmap;
 
     if-eqz v0, :cond_0
 
     .line 2
     new-instance v0, Lcom/vk/polls/ui/views/PhotoPollDrawable;
 
-    check-cast p1, Lcom/facebook/x/g/b;
+    check-cast p1, Lcom/facebook/x/g/CloseableBitmap;
 
-    invoke-virtual {p1}, Lcom/facebook/x/g/b;->d()Landroid/graphics/Bitmap;
+    invoke-virtual {p1}, Lcom/facebook/x/g/CloseableBitmap;->d()Landroid/graphics/Bitmap;
 
     move-result-object v2
 
     const-string p1, "image.underlyingBitmap"
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v3, p0, Lcom/vk/polls/ui/views/PhotoPollDrawable$Companion$a;->a:I
 

@@ -3,12 +3,12 @@
 .source "CommonStickersNavigation.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stickers/bridge/CommonStickersNavigation;->a(Landroid/content/Context;ILkotlin/jvm/b/b;Ljava/lang/String;)V
+    value = Lcom/vk/stickers/bridge/CommonStickersNavigation;->a(Landroid/content/Context;ILkotlin/jvm/b/Functions2;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/stickers/StickerStockItem;",
         ">;"
     }
@@ -30,7 +30,7 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/b;
+.field final synthetic a:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic b:Landroid/content/Context;
 
@@ -38,10 +38,10 @@
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/b;Landroid/content/Context;Ljava/lang/String;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions2;Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/stickers/bridge/CommonStickersNavigation$b;->a:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/stickers/bridge/CommonStickersNavigation$b;->a:Lkotlin/jvm/b/Functions2;
 
     iput-object p2, p0, Lcom/vk/stickers/bridge/CommonStickersNavigation$b;->b:Landroid/content/Context;
 
@@ -73,16 +73,16 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/t;->b()V
+    invoke-virtual {v0}, Lcom/vk/stickers/Stickers;->b()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stickers/bridge/CommonStickersNavigation$b;->a:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/stickers/bridge/CommonStickersNavigation$b;->a:Lkotlin/jvm/b/Functions2;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -92,7 +92,7 @@
 
     iget-object v3, p0, Lcom/vk/stickers/bridge/CommonStickersNavigation$b;->b:Landroid/content/Context;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v5, Lcom/vk/stickers/bridge/GiftData;->c:Lcom/vk/stickers/bridge/GiftData;
 

@@ -30,11 +30,11 @@
     .line 1
     iput-object p1, p0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter$b;->a:Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->j()Lcom/vk/stories/receivers/views/a;
+    invoke-virtual {p1}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->j()Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stories/receivers/views/a;->getMyBlockView()Landroid/view/ViewGroup;
+    invoke-interface {p1}, Lcom/vk/stories/receivers/views/IStoryChooseView;->getMyBlockView()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -51,11 +51,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter$b;->a:Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->j()Lcom/vk/stories/receivers/views/a;
+    invoke-virtual {v0}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->j()Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/stories/receivers/views/a;->setIsEmpty(Z)V
+    invoke-interface {v0, p1}, Lcom/vk/stories/receivers/views/IStoryChooseView;->setIsEmpty(Z)V
 
     return-void
 .end method

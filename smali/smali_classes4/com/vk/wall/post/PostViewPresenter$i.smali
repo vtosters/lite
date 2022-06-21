@@ -3,7 +3,7 @@
 .source "PostViewPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -72,7 +72,7 @@
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 3
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "com.vtosters.lite.permission.ACCESS_DATA"
 
@@ -104,7 +104,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/wall/post/PostViewPresenter$i;->a:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-static {p1}, Lcom/vk/wall/post/PostViewPresenter;->d(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/lists/o;
+    invoke-static {p1}, Lcom/vk/wall/post/PostViewPresenter;->d(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/lists/ListDataSet;
 
     move-result-object p1
 
@@ -114,21 +114,21 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/b;->a(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/BaseListDataSet;->a(I)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/wall/post/PostViewPresenter$i;->a:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/c;
+    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/PostViewContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/wall/post/c;->q1()V
+    invoke-interface {p1}, Lcom/vk/wall/post/PostViewContract;->q1()V
 
     .line 7
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
@@ -136,7 +136,7 @@
 
     iget-object v1, p0, Lcom/vk/wall/post/PostViewPresenter$i;->b:Lcom/vk/dto/newsfeed/entries/Post;
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method

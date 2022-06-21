@@ -18,9 +18,9 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lkotlin/e;
+.field private static final b:Lkotlin/Lazy2;
 
 .field private static c:J
 
@@ -37,13 +37,13 @@
 
     const/4 v0, 0x1
 
-    new-array v1, v0, [Lkotlin/u/j;
+    new-array v1, v0, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v3, Lcom/vk/core/network/TimeProvider;
 
-    invoke-static {v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -51,15 +51,15 @@
 
     const-string v5, "getTimeReceiver()Lcom/vk/core/network/TimeProvider$TimeReceiver;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    sput-object v1, Lcom/vk/core/network/TimeProvider;->a:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/core/network/TimeProvider;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v1, Lcom/vk/core/network/TimeProvider;
@@ -71,11 +71,11 @@
     .line 2
     sget-object v1, Lcom/vk/core/network/TimeProvider$timeReceiver$2;->a:Lcom/vk/core/network/TimeProvider$timeReceiver$2;
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v1
 
-    sput-object v1, Lcom/vk/core/network/TimeProvider;->b:Lkotlin/e;
+    sput-object v1, Lcom/vk/core/network/TimeProvider;->b:Lkotlin/Lazy2;
 
     .line 3
     sput-boolean v0, Lcom/vk/core/network/TimeProvider;->d:Z
@@ -95,15 +95,15 @@
 .method private final f()Lcom/vk/core/network/TimeProvider$a;
     .locals 3
 
-    sget-object v0, Lcom/vk/core/network/TimeProvider;->b:Lkotlin/e;
+    sget-object v0, Lcom/vk/core/network/TimeProvider;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/network/TimeProvider;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/network/TimeProvider;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -183,7 +183,7 @@
     sput-wide v0, Lcom/vk/core/network/TimeProvider;->c:J
 
     .line 5
-    invoke-static {}, Lcom/vk/core/util/i1;->g()V
+    invoke-static {}, Lcom/vk/core/util/TimeUtils;->g()V
 
     .line 6
     invoke-direct {p0}, Lcom/vk/core/network/TimeProvider;->f()Lcom/vk/core/network/TimeProvider$a;
@@ -202,7 +202,7 @@
     const-string p1, "prefs"
 
     .line 7
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -276,7 +276,7 @@
 
     long-to-int p2, p1
 
-    invoke-static {p2}, Lcom/vk/core/util/i1;->e(I)V
+    invoke-static {p2}, Lcom/vk/core/util/TimeUtils;->e(I)V
 
     return-void
 
@@ -284,7 +284,7 @@
     const-string p1, "prefs"
 
     .line 5
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -310,7 +310,7 @@
 
     const-string v1, "TimeZone.getDefault()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/util/TimeZone;->getRawOffset()I
 

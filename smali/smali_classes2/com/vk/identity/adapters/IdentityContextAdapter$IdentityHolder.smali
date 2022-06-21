@@ -65,21 +65,21 @@
     const v0, 0x7f040253
 
     .line 4
-    invoke-static {p1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {p1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object p1
 
     .line 5
     iget-object v0, p0, Lcom/vk/identity/adapters/IdentityContextAdapter$IdentityHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {v0, p1}, Lcom/vk/core/util/z;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, p1}, Lcom/vk/core/util/DrawableUtils;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     .line 6
     new-instance p1, Lcom/vk/identity/adapters/IdentityContextAdapter$IdentityHolder$1;
 
     invoke-direct {p1, p0}, Lcom/vk/identity/adapters/IdentityContextAdapter$IdentityHolder$1;-><init>(Lcom/vk/identity/adapters/IdentityContextAdapter$IdentityHolder;)V
 
-    invoke-static {p2, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -94,13 +94,13 @@
 
     const-string v1, "titleView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v2, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
+    sget-object v2, Lcom/vk/identity/IdentityHelper;->a:Lcom/vk/identity/IdentityHelper;
 
     iget-object v3, p0, Lcom/vk/identity/adapters/IdentityContextAdapter$IdentityHolder;->a:Landroid/widget/TextView;
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
@@ -108,13 +108,13 @@
 
     const-string v3, "titleView.context"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/identity/IdentityCard;->k0()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, v1, v3}, Lcom/vk/identity/a;->c(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1, v3}, Lcom/vk/identity/IdentityHelper;->c(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -125,13 +125,13 @@
 
     const-string v1, "selectedView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v2, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
+    sget-object v2, Lcom/vk/identity/IdentityHelper;->a:Lcom/vk/identity/IdentityHelper;
 
     iget-object v3, p0, Lcom/vk/identity/adapters/IdentityContextAdapter$IdentityHolder;->b:Landroid/widget/TextView;
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
@@ -139,7 +139,7 @@
 
     const-string v3, "selectedView.context"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/identity/IdentityCard;->getTitle()Ljava/lang/String;
 
@@ -149,7 +149,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v2, v1, v3, p1}, Lcom/vk/identity/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/text/SpannableString;
+    invoke-virtual {v2, v1, v3, p1}, Lcom/vk/identity/IdentityHelper;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/text/SpannableString;
 
     move-result-object p1
 

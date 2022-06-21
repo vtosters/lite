@@ -3,7 +3,7 @@
 .source "VkUiFragmentDelegateImpl.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -64,7 +64,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiFragment;->Z4()Lcom/vk/webapp/bridges/a;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiFragment;->Z4()Lcom/vk/webapp/bridges/AndroidBridge;
 
     move-result-object v0
 
@@ -72,7 +72,7 @@
 
     const-string v2, "it"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/vk/webapp/delegates/impl/VkUiFragmentDelegateImpl$b;->b:Ljava/util/HashMap;
 
@@ -84,7 +84,7 @@
 
     const-string v1, "VKWebAppCallAPIMethodFailed"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/webapp/bridges/a;->a(Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
 .end method

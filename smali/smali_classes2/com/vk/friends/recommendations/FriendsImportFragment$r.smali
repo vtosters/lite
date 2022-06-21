@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->Y4()Lc/a/m;
+    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->Y4()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final call()Lcom/vk/utils/b$a;
+.method public final call()Lcom/vk/utils/ContactImportUtils$a;
     .locals 9
 
     .line 2
@@ -61,9 +61,9 @@
 
     const-string v2, "getArguments()!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/friends/recommendations/FriendsImportFragment$b$a;->a(Landroid/os/Bundle;)Lcom/twitter/sdk/android/core/t;
+    invoke-virtual {v0, v1}, Lcom/vk/friends/recommendations/FriendsImportFragment$b$a;->a(Landroid/os/Bundle;)Lcom/twitter/sdk/android/core/TwitterSession;
 
     move-result-object v0
 
@@ -73,41 +73,41 @@
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     .line 4
-    new-instance v1, Lcom/vtosters/lite/utils/j;
+    new-instance v1, Lcom/vtosters/lite/utils/TwitterApiClient;
 
-    invoke-direct {v1, v0}, Lcom/vtosters/lite/utils/j;-><init>(Lcom/twitter/sdk/android/core/t;)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/utils/TwitterApiClient;-><init>(Lcom/twitter/sdk/android/core/TwitterSession;)V
 
     .line 5
-    invoke-virtual {v1}, Lcom/vtosters/lite/utils/j;->b()Lcom/vtosters/lite/utils/TwitterService;
+    invoke-virtual {v1}, Lcom/vtosters/lite/utils/TwitterApiClient;->b()Lcom/vtosters/lite/utils/TwitterService;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/t;->c()J
+    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/TwitterSession;->c()J
 
     move-result-wide v5
 
     const/16 v3, 0x1388
 
-    invoke-interface {v2, v5, v6, v3}, Lcom/vtosters/lite/utils/TwitterService;->friendsList(JI)Lf/b;
+    invoke-interface {v2, v5, v6, v3}, Lcom/vtosters/lite/utils/TwitterService;->friendsList(JI)Lretrofit2/Call;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lf/b;->execute()Lf/l;
+    invoke-interface {v2}, Lretrofit2/Call;->execute()Lretrofit2/Response;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lf/l;->a()Ljava/lang/Object;
+    invoke-virtual {v2}, Lretrofit2/Response;->a()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/vtosters/lite/utils/TwitterService$a;
 
     .line 6
-    invoke-virtual {v1}, Lcom/vtosters/lite/utils/j;->b()Lcom/vtosters/lite/utils/TwitterService;
+    invoke-virtual {v1}, Lcom/vtosters/lite/utils/TwitterApiClient;->b()Lcom/vtosters/lite/utils/TwitterService;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/t;->c()J
+    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/TwitterSession;->c()J
 
     move-result-wide v5
 
@@ -131,15 +131,15 @@
     :goto_0
     sub-int/2addr v3, v8
 
-    invoke-interface {v1, v5, v6, v3}, Lcom/vtosters/lite/utils/TwitterService;->followersList(JI)Lf/b;
+    invoke-interface {v1, v5, v6, v3}, Lcom/vtosters/lite/utils/TwitterService;->followersList(JI)Lretrofit2/Call;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lf/b;->execute()Lf/l;
+    invoke-interface {v1}, Lretrofit2/Call;->execute()Lretrofit2/Response;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lf/l;->a()Ljava/lang/Object;
+    invoke-virtual {v1}, Lretrofit2/Response;->a()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -181,7 +181,7 @@
 
     move-result-object v5
 
-    new-instance v6, Lcom/vk/dto/common/b;
+    new-instance v6, Lcom/vk/dto/common/Contact;
 
     new-array v8, v3, [Ljava/lang/String;
 
@@ -191,7 +191,7 @@
 
     move-result-object v8
 
-    invoke-direct {v6, v5, v8}, Lcom/vk/dto/common/b;-><init>(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v6, v5, v8}, Lcom/vk/dto/common/Contact;-><init>(Ljava/lang/String;Ljava/util/List;)V
 
     invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -232,7 +232,7 @@
 
     move-result-object v2
 
-    new-instance v5, Lcom/vk/dto/common/b;
+    new-instance v5, Lcom/vk/dto/common/Contact;
 
     new-array v6, v3, [Ljava/lang/String;
 
@@ -242,7 +242,7 @@
 
     move-result-object v6
 
-    invoke-direct {v5, v2, v6}, Lcom/vk/dto/common/b;-><init>(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v5, v2, v6}, Lcom/vk/dto/common/Contact;-><init>(Ljava/lang/String;Ljava/util/List;)V
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -250,9 +250,9 @@
 
     .line 13
     :cond_2
-    new-instance v8, Lcom/vk/utils/b$a;
+    new-instance v8, Lcom/vk/utils/ContactImportUtils$a;
 
-    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/t;->c()J
+    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/TwitterSession;->c()J
 
     move-result-wide v0
 
@@ -270,13 +270,13 @@
 
     move-object v1, v8
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/utils/b$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/utils/ContactImportUtils$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v8
 
     .line 14
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -287,7 +287,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsImportFragment$r;->call()Lcom/vk/utils/b$a;
+    invoke-virtual {p0}, Lcom/vk/friends/recommendations/FriendsImportFragment$r;->call()Lcom/vk/utils/ContactImportUtils$a;
 
     move-result-object v0
 

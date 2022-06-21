@@ -1,9 +1,9 @@
 .class public abstract Lcom/vk/search/fragment/BaseSearchFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "BaseSearchFragment.kt"
 
 # interfaces
-.implements Lcom/vk/search/a;
+.implements Lcom/vk/search/SearchPage;
 
 
 # annotations
@@ -16,10 +16,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<Adapter:",
-        "Lcom/vk/search/b/a;",
+        "Lcom/vk/search/b/BaseSearchAdapter;",
         ">",
-        "Lcom/vk/core/fragments/b;",
-        "Lcom/vk/search/a;"
+        "Lcom/vk/core/fragments/BaseFragment1;",
+        "Lcom/vk/search/SearchPage;"
     }
 .end annotation
 
@@ -33,11 +33,11 @@
 
 .field private final G:Lcom/vk/search/fragment/BaseSearchFragment$receiver$1;
 
-.field private H:Lcom/vk/lists/t;
+.field private H:Lcom/vk/lists/PaginationHelper;
 
 .field private I:Ljava/lang/String;
 
-.field private J:Lcom/vk/search/b/a;
+.field private J:Lcom/vk/search/b/BaseSearchAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TAdapter;"
@@ -54,7 +54,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/search/fragment/BaseSearchFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/search/fragment/BaseSearchFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/search/fragment/BaseSearchFragment;->K:Lcom/vk/search/fragment/BaseSearchFragment$a;
 
@@ -65,7 +65,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/search/fragment/BaseSearchFragment$receiver$1;
@@ -104,7 +104,7 @@
 .method public abstract M(Ljava/lang/String;)V
 .end method
 
-.method public final P4()Lcom/vk/search/b/a;
+.method public final P4()Lcom/vk/search/b/BaseSearchAdapter;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -113,28 +113,28 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/search/fragment/BaseSearchFragment;->J:Lcom/vk/search/b/a;
+    iget-object v0, p0, Lcom/vk/search/fragment/BaseSearchFragment;->J:Lcom/vk/search/b/BaseSearchAdapter;
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/search/fragment/BaseSearchFragment;->S4()Lcom/vk/search/b/a;
+    invoke-virtual {p0}, Lcom/vk/search/fragment/BaseSearchFragment;->S4()Lcom/vk/search/b/BaseSearchAdapter;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/search/fragment/BaseSearchFragment;->J:Lcom/vk/search/b/a;
+    iput-object v0, p0, Lcom/vk/search/fragment/BaseSearchFragment;->J:Lcom/vk/search/b/BaseSearchAdapter;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/search/fragment/BaseSearchFragment;->J:Lcom/vk/search/b/a;
+    iget-object v0, p0, Lcom/vk/search/fragment/BaseSearchFragment;->J:Lcom/vk/search/b/BaseSearchAdapter;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -145,16 +145,16 @@
 
     .line 4
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
 
-.method protected final Q4()Lcom/vk/lists/t;
+.method protected final Q4()Lcom/vk/lists/PaginationHelper;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/search/fragment/BaseSearchFragment;->H:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/search/fragment/BaseSearchFragment;->H:Lcom/vk/lists/PaginationHelper;
 
     return-object v0
 .end method
@@ -177,7 +177,7 @@
     return-object v0
 .end method
 
-.method public abstract S4()Lcom/vk/search/b/a;
+.method public abstract S4()Lcom/vk/search/b/BaseSearchAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TAdapter;"
@@ -185,7 +185,7 @@
     .end annotation
 .end method
 
-.method public abstract a(Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+.method public abstract a(Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 .end method
 
 .method public final b(Lcom/vk/lists/RecyclerPaginatedView;)V
@@ -201,7 +201,7 @@
     invoke-virtual {v0}, Lcom/vk/lists/AbstractPaginatedView$c;->a()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/search/fragment/BaseSearchFragment;->P4()Lcom/vk/search/b/a;
+    invoke-virtual {p0}, Lcom/vk/search/fragment/BaseSearchFragment;->P4()Lcom/vk/search/b/BaseSearchAdapter;
 
     move-result-object v0
 
@@ -265,11 +265,11 @@
 
     .line 7
     :cond_2
-    invoke-virtual {p0, p1}, Lcom/vk/search/fragment/BaseSearchFragment;->a(Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-virtual {p0, p1}, Lcom/vk/search/fragment/BaseSearchFragment;->a(Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/search/fragment/BaseSearchFragment;->H:Lcom/vk/lists/t;
+    iput-object p1, p0, Lcom/vk/search/fragment/BaseSearchFragment;->H:Lcom/vk/lists/PaginationHelper;
 
     return-void
 .end method
@@ -287,7 +287,7 @@
     .locals 4
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -346,7 +346,7 @@
 
     const-string v0, "activity!!"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, p2}, Lcom/vk/search/view/SearchRecyclerPaginatedView;-><init>(Landroid/content/Context;)V
 
@@ -366,13 +366,13 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 .end method
@@ -381,7 +381,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onDestroy()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -418,7 +418,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/search/fragment/BaseSearchFragment;->I:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -430,11 +430,11 @@
     iput-object p1, p0, Lcom/vk/search/fragment/BaseSearchFragment;->I:Ljava/lang/String;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/search/fragment/BaseSearchFragment;->P4()Lcom/vk/search/b/a;
+    invoke-virtual {p0}, Lcom/vk/search/fragment/BaseSearchFragment;->P4()Lcom/vk/search/b/BaseSearchAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     .line 4
     invoke-virtual {p0, p1}, Lcom/vk/search/fragment/BaseSearchFragment;->M(Ljava/lang/String;)V

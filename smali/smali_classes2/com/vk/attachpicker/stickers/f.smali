@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lcom/vk/common/g/g;
+.implements Lcom/vk/common/g/VoidF1;
 
 
 # instance fields
@@ -28,9 +28,9 @@
 
     iget-boolean v0, p0, Lcom/vk/attachpicker/stickers/f;->a:Z
 
-    check-cast p1, Lcom/vk/attachpicker/stickers/s0;
+    check-cast p1, Lcom/vk/attachpicker/stickers/VideoViewSticker;
 
-    invoke-static {v0, p1}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(ZLcom/vk/attachpicker/stickers/s0;)V
+    invoke-static {v0, p1}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->a(ZLcom/vk/attachpicker/stickers/VideoViewSticker;)V
 
     return-void
 .end method

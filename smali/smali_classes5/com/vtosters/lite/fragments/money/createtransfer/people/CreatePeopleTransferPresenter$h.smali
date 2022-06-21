@@ -3,7 +3,7 @@
 .source "CreatePeopleTransferPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -77,15 +77,15 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$h;->a:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->b(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/people/b;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->b(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;
 
     move-result-object v0
 
     const-string v1, "result"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lcom/vtosters/lite/fragments/money/createtransfer/people/b;->D(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;->D(Ljava/lang/String;)V
 
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$h;->a:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;

@@ -33,10 +33,10 @@
 
 .field private b:Lcom/vk/dto/common/City;
 
-.field private final c:Lcom/vtosters/lite/fragments/c1$c;
+.field private final c:Lcom/vtosters/lite/general/fragments/DatabaseSearchFragment$c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vtosters/lite/fragments/c1$c<",
+            "Lcom/vtosters/lite/general/fragments/DatabaseSearchFragment$c<",
             "Lcom/vk/dto/common/City;",
             ">;"
         }
@@ -76,7 +76,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/search/view/BaseSearchParamsView$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/search/view/BaseSearchParamsView$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/search/view/BaseSearchParamsView;->C:Lcom/vk/search/view/BaseSearchParamsView$b;
 
@@ -110,7 +110,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/search/view/BaseSearchParamsView$e;-><init>(Lcom/vk/search/view/BaseSearchParamsView;)V
 
-    iput-object p2, p0, Lcom/vk/search/view/BaseSearchParamsView;->c:Lcom/vtosters/lite/fragments/c1$c;
+    iput-object p2, p0, Lcom/vk/search/view/BaseSearchParamsView;->c:Lcom/vtosters/lite/general/fragments/DatabaseSearchFragment$c;
 
     .line 4
     iput-boolean p1, p0, Lcom/vk/search/view/BaseSearchParamsView;->a:Z
@@ -145,7 +145,7 @@
     const-string p2, "contentView"
 
     .line 8
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Lcom/vk/search/view/BaseSearchParamsView;->a(Landroid/view/View;)V
 
@@ -156,7 +156,7 @@
 
     const v0, 0x7f0a0e1a
 
-    invoke-static {p1, v0, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+    invoke-static {p1, v0, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
 
     move-result-object p2
 
@@ -171,7 +171,7 @@
     const/4 v1, 0x2
 
     .line 10
-    invoke-static {p1, v0, p2, v1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p2, v1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -186,7 +186,7 @@
 
     const v0, 0x7f0a0dd7
 
-    invoke-static {p1, v0, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+    invoke-static {p1, v0, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
 
     move-result-object p2
 
@@ -209,7 +209,7 @@
 
     if-eqz p2, :cond_1
 
-    sget-object v1, Lcom/vk/core/drawable/l;->c:Lcom/vk/core/drawable/l;
+    sget-object v1, Lcom/vk/core/drawable/VkUiDrawableHelper;->c:Lcom/vk/core/drawable/VkUiDrawableHelper;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
@@ -217,7 +217,7 @@
 
     const-string v3, "context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -231,7 +231,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v1 .. v8}, Lcom/vk/core/drawable/l;->a(Lcom/vk/core/drawable/l;Landroid/content/Context;IIIIILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
+    invoke-static/range {v1 .. v8}, Lcom/vk/core/drawable/VkUiDrawableHelper;->a(Lcom/vk/core/drawable/VkUiDrawableHelper;Landroid/content/Context;IIIIILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -248,7 +248,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/view/BaseSearchParamsView$4;-><init>(Lcom/vk/search/view/BaseSearchParamsView;)V
 
-    invoke-static {p1, p2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+    invoke-static {p1, p2, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
 
     move-result-object p1
 
@@ -299,9 +299,9 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/fragments/b1;
+    new-instance v0, Lcom/vtosters/lite/general/fragments/CitySelectFragment;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/fragments/b1;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/general/fragments/CitySelectFragment;-><init>()V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/search/view/BaseSearchParamsView;->getCityListArguments()Landroid/os/Bundle;
@@ -312,27 +312,27 @@
     invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/search/view/BaseSearchParamsView;->c:Lcom/vtosters/lite/fragments/c1$c;
+    iget-object v1, p0, Lcom/vk/search/view/BaseSearchParamsView;->c:Lcom/vtosters/lite/general/fragments/DatabaseSearchFragment$c;
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/c1;->a(Lcom/vtosters/lite/fragments/c1$c;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/general/fragments/DatabaseSearchFragment;->a(Lcom/vtosters/lite/general/fragments/DatabaseSearchFragment$c;)V
 
     .line 5
     iget-object v1, p0, Lcom/vk/search/view/BaseSearchParamsView;->B:Landroid/app/Activity;
 
-    instance-of v2, v1, Lcom/vk/core/fragments/e;
+    instance-of v2, v1, Lcom/vk/core/fragments/FragmentManagerImplProvider;
 
     if-eqz v2, :cond_0
 
     .line 6
-    check-cast v1, Lcom/vk/core/fragments/e;
+    check-cast v1, Lcom/vk/core/fragments/FragmentManagerImplProvider;
 
-    invoke-interface {v1}, Lcom/vk/core/fragments/e;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
+    invoke-interface {v1}, Lcom/vk/core/fragments/FragmentManagerImplProvider;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
 
     move-result-object v1
 
     const-string v2, "city"
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/core/fragments/j/b/a;->a(Lcom/vk/core/fragments/FragmentManagerImpl;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/core/fragments/j/b/ParentSupportFragment;->a(Lcom/vk/core/fragments/FragmentManagerImpl;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -455,7 +455,7 @@
     const-string v2, "adapter"
 
     .line 7
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1}, Landroid/widget/SpinnerAdapter;->getCount()I
 
@@ -471,7 +471,7 @@
 
     move-result-object v4
 
-    invoke-static {p2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -603,9 +603,9 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -615,7 +615,7 @@
 
     invoke-direct {v1, v2}, Lcom/vk/search/view/BaseSearchParamsView$c;-><init>(Lcom/vk/dto/common/SearchParams;)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/search/view/BaseSearchParamsView;->e:Landroid/widget/TextView;

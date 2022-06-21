@@ -3,7 +3,7 @@
 .source "IdentityContextAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
     iget-object p1, p1, Lcom/vk/identity/adapters/IdentityContextAdapter$IdentityHolder;->c:Lcom/vk/identity/adapters/IdentityContextAdapter;
 
-    invoke-static {p1}, Lcom/vk/identity/adapters/IdentityContextAdapter;->a(Lcom/vk/identity/adapters/IdentityContextAdapter;)Lkotlin/jvm/b/c;
+    invoke-static {p1}, Lcom/vk/identity/adapters/IdentityContextAdapter;->a(Lcom/vk/identity/adapters/IdentityContextAdapter;)Lkotlin/jvm/b/Functions1;
 
     move-result-object p1
 
@@ -86,9 +86,9 @@
 
     if-eqz v1, :cond_0
 
-    check-cast v1, Lcom/vk/identity/b/g;
+    check-cast v1, Lcom/vk/identity/b/IdentityAdapterItem;
 
-    invoke-virtual {v1}, Lcom/vk/identity/b/g;->b()Lcom/vk/dto/identity/IdentityCard;
+    invoke-virtual {v1}, Lcom/vk/identity/b/IdentityAdapterItem;->b()Lcom/vk/dto/identity/IdentityCard;
 
     move-result-object v1
 
@@ -96,7 +96,7 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v0, v1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, v1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
@@ -118,7 +118,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/identity/adapters/IdentityContextAdapter$IdentityHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

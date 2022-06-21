@@ -14,27 +14,27 @@
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/im/engine/internal/storage/b;
+.field private final b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/internal/storage/b;)V
+.method public constructor <init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
     .locals 6
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
     .line 2
     new-instance p1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
     const-class v1, Lcom/vk/im/engine/internal/storage/models/UserStorageModel;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/b;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/d;
+    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/StorageTrigger;
 
     move-result-object v2
 
@@ -56,29 +56,29 @@
     move-object v0, p1
 
     .line 7
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/d;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/StorageTrigger;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;)Lcom/vk/im/engine/internal/storage/b;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;)Lcom/vk/im/engine/internal/storage/StorageEnvironment;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
     return-object p0
 .end method
@@ -92,12 +92,12 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+.method private final b(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/d;",
+            "Lcom/vk/im/engine/utils/collection/IntCollection;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/internal/storage/models/UserStorageModel;",
@@ -106,13 +106,13 @@
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/core/extensions/x;->a()Landroid/util/SparseArray;
+    invoke-static {}, Lcom/vk/core/extensions/SparseArrayExt1;->a()Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -122,7 +122,7 @@
     const-string v0, ","
 
     .line 2
-    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/d;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -146,9 +146,9 @@
     move-result-object p1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -189,9 +189,9 @@
     move-result v1
 
     .line 9
-    sget-object v2, Lcom/vk/im/engine/internal/storage/delegates/users/a;->a:Lcom/vk/im/engine/internal/storage/delegates/users/a;
+    sget-object v2, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentReader;->a:Lcom/vk/im/engine/internal/storage/delegates/users/UserContentReader;
 
-    invoke-virtual {v2, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/a;->a(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/UserStorageModel;
+    invoke-virtual {v2, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentReader;->a(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/UserStorageModel;
 
     move-result-object v2
 
@@ -240,9 +240,9 @@
 
     .line 13
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -250,19 +250,19 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$putToDb$1;-><init>(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;Ljava/util/Collection;)V
 
-    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+.method public final a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/d;",
+            "Lcom/vk/im/engine/utils/collection/IntCollection;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/internal/storage/models/UserStorageModel;",
@@ -273,7 +273,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -284,15 +284,15 @@
     .locals 2
 
     .line 4
-    invoke-static {p1}, Lcom/vk/im/engine/utils/collection/e;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
+    invoke-static {p1}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
 
     move-result-object v0
 
     const-string v1, "intListOf(userId)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+    invoke-virtual {p0, v0}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
 
     move-result-object v0
 
@@ -314,9 +314,9 @@
     invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a()V
 
     .line 21
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -354,7 +354,7 @@
     invoke-direct/range {v2 .. v7}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$changeOnline$2;-><init>(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;Lcom/vk/dto/user/OnlineInfo;JI)V
 
     .line 19
-    invoke-virtual {v0, p1, v1, v8}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(ILkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p1, v1, v8}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(ILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -376,7 +376,7 @@
     invoke-direct {v2, p0, p1, p2, p3}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$changeContact$2;-><init>(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;ILjava/lang/Integer;Ljava/lang/String;)V
 
     .line 10
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(ILkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(ILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -403,7 +403,7 @@
     invoke-direct {p1, p0}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$changeByAccountInfo$2;-><init>(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;)V
 
     .line 15
-    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(ILkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(ILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -435,7 +435,7 @@
             "Ljava/util/Map<",
             "Lcom/vk/dto/user/Platform;",
             "+",
-            "Lcom/vk/im/engine/utils/collection/d;",
+            "Lcom/vk/im/engine/utils/collection/IntCollection;",
             ">;JJJ)V"
         }
     .end annotation
@@ -448,16 +448,16 @@
     invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a()V
 
     .line 23
-    iget-object v1, v0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v1, v0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v1}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v8
 
     .line 24
-    iget-object v1, v0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v1, v0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v1}, Lcom/vk/im/engine/internal/storage/b;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {v1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
@@ -475,7 +475,7 @@
 
     invoke-direct/range {v2 .. v10}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$updateOnlines$1;-><init>(Ljava/util/Map;JJLio/requery/android/database/sqlite/SQLiteDatabase;J)V
 
-    invoke-virtual {v1, v11}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v1, v11}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -484,9 +484,9 @@
     .locals 2
 
     .line 14
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -505,7 +505,7 @@
     return v0
 .end method
 
-.method public final b(I)Lcom/vk/im/engine/utils/collection/d;
+.method public final b(I)Lcom/vk/im/engine/utils/collection/IntCollection;
     .locals 5
 
     const/4 v0, 0x2
@@ -539,7 +539,7 @@
 
     const-string v3, ","
 
-    invoke-static {v1, v3, v2, v0, v2}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Ljava/lang/String;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v3, v2, v0, v2}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Ljava/lang/String;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -576,9 +576,9 @@
     invoke-direct {v0}, Lcom/vk/im/engine/utils/collection/IntArrayList;-><init>()V
 
     .line 20
-    iget-object v1, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v1}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 

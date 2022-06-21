@@ -54,7 +54,7 @@
 
     const-string v2, "it"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, v1}, Lcom/vk/profile/data/AddressesRepository$a;->a(Ljava/util/List;)V
 

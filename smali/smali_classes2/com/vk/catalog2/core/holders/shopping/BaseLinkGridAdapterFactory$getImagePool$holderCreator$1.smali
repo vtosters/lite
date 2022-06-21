@@ -3,12 +3,12 @@
 .source "BaseLinkGridAdapterFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory;->a(Lcom/vk/catalog2/core/holders/shopping/CellStyleType;)Lcom/vk/catalog2/core/holders/shopping/o;
+    value = Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory;->a(Lcom/vk/catalog2/core/holders/shopping/CellStyleType;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory3;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/ViewGroup;",
-        "Lcom/vk/catalog2/core/holders/shopping/n;",
+        "Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory2;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/catalog2/core/holders/shopping/n;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory2;
     .locals 1
 
     .line 1
     sget-object v0, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->a:Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;
 
-    invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->a(Landroid/view/ViewGroup;)Lcom/vk/catalog2/core/holders/shopping/n;
+    invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory;->a(Landroid/view/ViewGroup;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory2;
 
     move-result-object p1
 
@@ -75,7 +75,7 @@
     .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory$getImagePool$holderCreator$1;->a(Landroid/view/ViewGroup;)Lcom/vk/catalog2/core/holders/shopping/n;
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridAdapterFactory$getImagePool$holderCreator$1;->a(Landroid/view/ViewGroup;)Lcom/vk/catalog2/core/holders/shopping/BaseLinkGridViewHolderFactory2;
 
     move-result-object p1
 

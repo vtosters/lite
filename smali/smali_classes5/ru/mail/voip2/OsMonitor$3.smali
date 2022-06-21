@@ -84,7 +84,7 @@
     const-string v1, "nativeOnGoneToBackground"
 
     .line 5
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     iget-object v0, p0, Lru/mail/voip2/OsMonitor$3;->this$0:Lru/mail/voip2/OsMonitor;

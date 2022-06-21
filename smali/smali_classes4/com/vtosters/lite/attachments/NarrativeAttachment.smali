@@ -41,7 +41,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/NarrativeAttachment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/attachments/NarrativeAttachment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vtosters/lite/attachments/NarrativeAttachment;->h:Lcom/vtosters/lite/attachments/NarrativeAttachment$b;
 
@@ -80,7 +80,7 @@
 
     .line 6
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -96,7 +96,7 @@
     iput-object p1, p0, Lcom/vtosters/lite/attachments/NarrativeAttachment;->g:Lcom/vk/dto/narratives/Narrative;
 
     .line 2
-    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v0, 0x7f1208c5
 
@@ -106,12 +106,12 @@
 
     const-string v0, "AppContextHolder.context\u2026.string.narrative_attach)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vtosters/lite/attachments/NarrativeAttachment;->e:Ljava/lang/String;
 
     .line 3
-    sget p1, Lcom/vk/dto/attachments/a;->h:I
+    sget p1, Lcom/vk/dto/attachments/AttachmentWeights;->h:I
 
     iput p1, p0, Lcom/vtosters/lite/attachments/NarrativeAttachment;->f:I
 
@@ -152,7 +152,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 

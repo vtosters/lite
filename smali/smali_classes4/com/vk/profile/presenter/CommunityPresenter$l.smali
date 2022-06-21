@@ -3,12 +3,12 @@
 .source "CommunityPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/presenter/CommunityPresenter;->a(Landroid/location/Location;)Lc/a/m;
+    value = Lcom/vk/profile/presenter/CommunityPresenter;->a(Landroid/location/Location;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,15 +49,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;)Lc/a/m;
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/api/i;",
+            "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vtosters/lite/api/i;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
             ">;"
         }
     .end annotation
@@ -65,7 +65,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$l;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-static {v0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->a(Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vtosters/lite/api/i;)Lc/a/m;
+    invoke-static {v0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->a(Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -76,9 +76,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$l;->a(Lcom/vtosters/lite/api/i;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$l;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lio/reactivex/Observable;
 
     move-result-object p1
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/im/ui/components/viewcontrollers/search/ToolbarSearchVc;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,7 +40,7 @@
     const-string v0, "it"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
@@ -73,7 +73,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, v1, v0}, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;->a(Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v0}, Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;->a(Lcom/vk/core/view/search/MilkshakeSearchAnimationHelper;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     :cond_0
     return v1

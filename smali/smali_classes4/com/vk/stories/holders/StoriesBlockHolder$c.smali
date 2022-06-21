@@ -3,12 +3,12 @@
 .source "StoriesBlockHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/holders/StoriesBlockHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/stories/holders/StoryInfoHolder;Lcom/vk/stories/holders/c;ILcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;)V
+    value = Lcom/vk/stories/holders/StoriesBlockHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/stories/holders/StoryInfoHolder;Lcom/vk/stories/holders/StoriesItemHolder1;ILcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/stories/model/StoriesContainer;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -58,7 +58,7 @@
 
     const-string v2, "sc.storyEntries"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
@@ -68,13 +68,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result p1
 

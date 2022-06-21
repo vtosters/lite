@@ -44,25 +44,25 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vk/narratives/NarrativeController;->a()Lb/h/v/d;
+    invoke-static {}, Lcom/vk/narratives/NarrativeController;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {p1}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 2
     sget-object v0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$a;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$a;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 3
     sget-object v0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$b;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$b;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -75,30 +75,30 @@
     sget-object v1, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$d;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$d;
 
     .line 6
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 7
-    invoke-static {}, Lcom/vk/narratives/NarrativeController;->a()Lb/h/v/d;
+    invoke-static {}, Lcom/vk/narratives/NarrativeController;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 8
     sget-object v1, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$e;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$e;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 9
     sget-object v1, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$f;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$f;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -111,27 +111,27 @@
     sget-object v2, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$h;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$h;
 
     .line 12
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     .line 13
     iget-object v1, p0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->a(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lio/reactivex/disposables/a;
+    invoke-static {v1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->a(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v1, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     .line 14
     iget-object p1, p0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;
 
-    invoke-static {p1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->a(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lio/reactivex/disposables/a;
+    invoke-static {p1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->a(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -142,11 +142,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;
 
-    invoke-static {p1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->a(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lio/reactivex/disposables/a;
+    invoke-static {p1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->a(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lio/reactivex/disposables/a;->a()V
+    invoke-virtual {p1}, Lio/reactivex/disposables/CompositeDisposable;->a()V
 
     return-void
 .end method

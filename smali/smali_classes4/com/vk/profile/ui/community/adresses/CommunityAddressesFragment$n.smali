@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Ljava/util/concurrent/Callable<",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TT;>;>;"
     }
 .end annotation
@@ -50,12 +50,12 @@
 
 
 # virtual methods
-.method public final call()Lc/a/m;
+.method public final call()Lio/reactivex/Observable;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -89,7 +89,7 @@
     if-eqz v0, :cond_2
 
     .line 3
-    new-instance v0, Lcom/vk/api/groups/i;
+    new-instance v0, Lcom/vk/api/groups/GroupsGetById;
 
     iget-object v2, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$n;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
@@ -103,19 +103,19 @@
 
     move-result-object v3
 
-    invoke-direct {v0, v2, v3}, Lcom/vk/api/groups/i;-><init>(I[Ljava/lang/String;)V
+    invoke-direct {v0, v2, v3}, Lcom/vk/api/groups/GroupsGetById;-><init>(I[Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
     .line 4
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
     sget-object v1, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$n$a;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$n$a;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -131,7 +131,7 @@
 
     sget-object v1, Lcom/vk/imageloader/ImageScreenSize;->SIZE_28DP:Lcom/vk/imageloader/ImageScreenSize;
 
-    invoke-static {v0, v1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;Lcom/vk/imageloader/ImageScreenSize;)Lc/a/m;
+    invoke-static {v0, v1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;Lcom/vk/imageloader/ImageScreenSize;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -143,7 +143,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$n;->call()Lc/a/m;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$n;->call()Lio/reactivex/Observable;
 
     move-result-object v0
 

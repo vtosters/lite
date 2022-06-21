@@ -10,7 +10,7 @@
 
 .field private final c:Lcom/vk/photogallery/view/ViewController;
 
-.field private d:Lcom/vk/photogallery/dto/d;
+.field private d:Lcom/vk/photogallery/dto/GalleryState4;
 
 .field private e:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -20,7 +20,7 @@
 
 .field private final h:Landroid/content/Context;
 
-.field private final i:Lcom/vk/photogallery/a;
+.field private final i:Lcom/vk/photogallery/GalleryProvider;
 
 .field private final j:I
 
@@ -28,7 +28,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/photogallery/a;IILcom/vk/photogallery/dto/SelectionState;IZ)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/photogallery/GalleryProvider;IILcom/vk/photogallery/dto/SelectionState;IZ)V
     .locals 7
 
     .line 1
@@ -36,14 +36,14 @@
 
     iput-object p1, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->h:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->i:Lcom/vk/photogallery/a;
+    iput-object p2, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->i:Lcom/vk/photogallery/GalleryProvider;
 
     iput p3, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->j:I
 
     iput p4, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->k:I
 
     .line 2
-    new-instance p1, Lcom/vk/photogallery/dto/d;
+    new-instance p1, Lcom/vk/photogallery/dto/GalleryState4;
 
     const/4 v1, 0x0
 
@@ -59,9 +59,9 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/photogallery/dto/d;-><init>(Ljava/util/List;Ljava/util/HashMap;Lcom/vk/photogallery/dto/a;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/photogallery/dto/GalleryState4;-><init>(Ljava/util/List;Ljava/util/HashMap;Lcom/vk/photogallery/dto/GalleryState;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object p1, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->d:Lcom/vk/photogallery/dto/d;
+    iput-object p1, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->d:Lcom/vk/photogallery/dto/GalleryState4;
 
     .line 3
     new-instance p1, Lcom/vk/photogallery/view/Adapter;
@@ -95,7 +95,7 @@
 
     iget v3, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->k:I
 
-    iget-object v5, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->i:Lcom/vk/photogallery/a;
+    iget-object v5, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->i:Lcom/vk/photogallery/GalleryProvider;
 
     move-object v0, p1
 
@@ -105,7 +105,7 @@
 
     move v4, p6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/photogallery/view/ViewController;-><init>(Lcom/vk/photogallery/view/PhotoGalleryPageVH;Lcom/vk/photogallery/dto/SelectionState;IILcom/vk/photogallery/a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/photogallery/view/ViewController;-><init>(Lcom/vk/photogallery/view/PhotoGalleryPageVH;Lcom/vk/photogallery/dto/SelectionState;IILcom/vk/photogallery/GalleryProvider;)V
 
     iput-object p1, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->c:Lcom/vk/photogallery/view/ViewController;
 
@@ -143,18 +143,18 @@
     :cond_0
     const-string p0, "recycler"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/photogallery/view/PhotoGalleryPageVH;)Lcom/vk/photogallery/dto/d;
+.method public static final synthetic d(Lcom/vk/photogallery/view/PhotoGalleryPageVH;)Lcom/vk/photogallery/dto/GalleryState4;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->d:Lcom/vk/photogallery/dto/d;
+    iget-object p0, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->d:Lcom/vk/photogallery/dto/GalleryState4;
 
     return-object p0
 .end method
@@ -200,7 +200,7 @@
 
     const-string v3, "root.findViewById(R.id.lg_recycler)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -247,13 +247,13 @@
 
     if-eqz v1, :cond_4
 
-    new-instance v5, Lcom/vk/photogallery/view/b;
+    new-instance v5, Lcom/vk/photogallery/view/PaddingItemDecoration;
 
     iget v6, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->j:I
 
     div-int/lit8 v6, v6, 0x2
 
-    invoke-direct {v5, v6}, Lcom/vk/photogallery/view/b;-><init>(I)V
+    invoke-direct {v5, v6}, Lcom/vk/photogallery/view/PaddingItemDecoration;-><init>(I)V
 
     invoke-virtual {v1, v5}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -272,7 +272,7 @@
 
     const/4 v12, 0x0
 
-    invoke-static/range {v7 .. v12}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;JLkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static/range {v7 .. v12}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;JLkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     .line 11
     iget-object v1, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->e:Landroidx/recyclerview/widget/RecyclerView;
@@ -329,7 +329,7 @@
 
     const-string v1, "root.findViewById(R.id.lg_progress)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/pnikosis/materialishprogress/ProgressWheel;
 
@@ -344,7 +344,7 @@
 
     const-string v1, "root.findViewById(R.id.lg_empty_gallery_text)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -367,7 +367,7 @@
     const-string p1, "root"
 
     .line 19
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
@@ -375,55 +375,55 @@
     const-string p1, "emptyGalleryText"
 
     .line 20
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 21
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 22
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 23
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 24
     :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 25
     :cond_5
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 26
     :cond_6
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 27
     :cond_7
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 28
     :cond_8
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 .end method
@@ -451,7 +451,7 @@
     :cond_0
     const-string p1, "recycler"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -511,11 +511,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/photogallery/dto/d;)V
+.method public final a(Lcom/vk/photogallery/dto/GalleryState4;)V
     .locals 5
 
     .line 32
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/d;->e()Z
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState4;->e()Z
 
     move-result v0
 
@@ -534,7 +534,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -547,16 +547,16 @@
 
     .line 33
     :goto_0
-    iput-object p1, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->d:Lcom/vk/photogallery/dto/d;
+    iput-object p1, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->d:Lcom/vk/photogallery/dto/GalleryState4;
 
     .line 34
     iget-object v0, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->a:Lcom/vk/photogallery/view/Adapter;
 
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/d;->d()Lcom/vk/photogallery/dto/m;
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState4;->d()Lcom/vk/photogallery/dto/GalleryState1;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/photogallery/dto/m;->a()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/photogallery/dto/GalleryState1;->a()Ljava/util/List;
 
     move-result-object v1
 
@@ -565,11 +565,11 @@
     .line 35
     iget-object v0, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->a:Lcom/vk/photogallery/view/Adapter;
 
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/d;->d()Lcom/vk/photogallery/dto/m;
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState4;->d()Lcom/vk/photogallery/dto/GalleryState1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/m;->d()Z
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState1;->d()Z
 
     move-result p1
 
@@ -657,13 +657,13 @@
 
     .line 44
     :cond_3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 45
     :cond_4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -673,7 +673,7 @@
 
     .line 46
     :cond_6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -681,19 +681,19 @@
     const-string p1, "progress"
 
     .line 47
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 48
     :cond_8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 49
     :cond_9
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -728,7 +728,7 @@
     :cond_0
     const-string v0, "recycler"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -746,13 +746,13 @@
     return-void
 .end method
 
-.method public final c()Lcom/vk/photogallery/dto/d;
+.method public final c()Lcom/vk/photogallery/dto/GalleryState4;
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->d:Lcom/vk/photogallery/dto/d;
+    iget-object v0, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->d:Lcom/vk/photogallery/dto/GalleryState4;
 
-    invoke-virtual {v0}, Lcom/vk/photogallery/dto/d;->a()Lcom/vk/photogallery/dto/d;
+    invoke-virtual {v0}, Lcom/vk/photogallery/dto/GalleryState4;->a()Lcom/vk/photogallery/dto/GalleryState4;
 
     move-result-object v0
 
@@ -793,13 +793,13 @@
     return-void
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 4
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -832,7 +832,7 @@
     :cond_0
     const-string v0, "recycler"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -840,7 +840,7 @@
     const-string v0, "progress"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/holders/StoriesItemHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "StoriesItemHolder.kt"
 
 # interfaces
@@ -10,7 +10,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/dto/stories/model/StoriesContainer;",
         ">;",
         "Landroid/view/View$OnClickListener;",
@@ -24,7 +24,7 @@
 
 .field private final d:Lcom/vk/stories/holders/StoryInfoHolder;
 
-.field private final e:Lcom/vk/stories/holders/c;
+.field private final e:Lcom/vk/stories/holders/StoriesItemHolder1;
 
 .field private final f:Lcom/vk/stories/StoriesController$SourceType;
 
@@ -32,17 +32,17 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Landroid/view/ViewGroup;Lcom/vk/stories/holders/StoriesBlockHolder$b;Lcom/vk/stories/holders/StoryInfoHolder;Lcom/vk/stories/holders/c;Lcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;)V
+.method public constructor <init>(Landroid/view/View;Landroid/view/ViewGroup;Lcom/vk/stories/holders/StoriesBlockHolder$b;Lcom/vk/stories/holders/StoryInfoHolder;Lcom/vk/stories/holders/StoriesItemHolder1;Lcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     iput-object p3, p0, Lcom/vk/stories/holders/StoriesItemHolder;->c:Lcom/vk/stories/holders/StoriesBlockHolder$b;
 
     iput-object p4, p0, Lcom/vk/stories/holders/StoriesItemHolder;->d:Lcom/vk/stories/holders/StoryInfoHolder;
 
-    iput-object p5, p0, Lcom/vk/stories/holders/StoriesItemHolder;->e:Lcom/vk/stories/holders/c;
+    iput-object p5, p0, Lcom/vk/stories/holders/StoriesItemHolder;->e:Lcom/vk/stories/holders/StoriesItemHolder1;
 
     iput-object p6, p0, Lcom/vk/stories/holders/StoriesItemHolder;->f:Lcom/vk/stories/StoriesController$SourceType;
 
@@ -61,16 +61,16 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     const-string v0, "getContext()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
-    invoke-static {p1}, Lcom/vk/core/util/c;->a(Landroid/content/Context;)Lcom/vk/core/util/c$b;
+    invoke-static {p1}, Lcom/vk/core/util/AlertDialogs;->a(Landroid/content/Context;)Lcom/vk/core/util/AlertDialogs$b;
 
     move-result-object v0
 
@@ -81,10 +81,10 @@
 
     const p1, 0x7f120e5b
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/core/util/c$b;->b()Landroidx/appcompat/app/AlertDialog;
+    invoke-virtual {v0}, Lcom/vk/core/util/AlertDialogs$b;->b()Landroidx/appcompat/app/AlertDialog;
 
     return-void
 .end method
@@ -98,7 +98,7 @@
     move-result-object v0
 
     .line 2
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v1
 
@@ -113,7 +113,7 @@
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f120e86
 
@@ -121,7 +121,7 @@
 
     aput-object v0, v3, v2
 
-    invoke-virtual {p0, v1, v3}, Lcom/vtosters/lite/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v3}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -131,7 +131,7 @@
 
     .line 4
     :cond_0
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v1
 
@@ -140,7 +140,7 @@
     .line 5
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f120e85
 
@@ -148,7 +148,7 @@
 
     aput-object v0, v3, v2
 
-    invoke-virtual {p0, v1, v3}, Lcom/vtosters/lite/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v3}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -173,11 +173,11 @@
     .line 7
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f120e9f
 
-    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->m(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -189,7 +189,7 @@
     :cond_2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f120e9b
 
@@ -197,7 +197,7 @@
 
     aput-object v0, v3, v2
 
-    invoke-virtual {p0, v1, v3}, Lcom/vtosters/lite/ui/b0/i;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v3}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -211,15 +211,15 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/stories/util/j;
+    new-instance v0, Lcom/vk/stories/util/StoriesContainerPopupActionsBuilder;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object v1
 
     const-string v2, "parent"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -227,12 +227,12 @@
 
     const-string v2, "parent.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/util/j;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/util/StoriesContainerPopupActionsBuilder;-><init>(Landroid/content/Context;)V
 
     .line 2
-    invoke-virtual {v0, p1}, Lcom/vk/stories/util/j;->a(Lcom/vk/dto/stories/model/StoriesContainer;)Lcom/vk/stories/util/j;
+    invoke-virtual {v0, p1}, Lcom/vk/stories/util/StoriesContainerPopupActionsBuilder;->a(Lcom/vk/dto/stories/model/StoriesContainer;)Lcom/vk/stories/util/StoriesContainerPopupActionsBuilder;
 
     .line 3
     iget-object v1, p0, Lcom/vk/stories/holders/StoriesItemHolder;->d:Lcom/vk/stories/holders/StoryInfoHolder;
@@ -249,7 +249,7 @@
 
     if-nez v1, :cond_0
 
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->e(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->e(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result p1
 
@@ -263,10 +263,10 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {v0, p1}, Lcom/vk/stories/util/j;->a(Z)Lcom/vk/stories/util/j;
+    invoke-virtual {v0, p1}, Lcom/vk/stories/util/StoriesContainerPopupActionsBuilder;->a(Z)Lcom/vk/stories/util/StoriesContainerPopupActionsBuilder;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/stories/util/j;->b()Landroidx/appcompat/app/AlertDialog;
+    invoke-virtual {v0}, Lcom/vk/stories/util/StoriesContainerPopupActionsBuilder;->b()Landroidx/appcompat/app/AlertDialog;
 
     return-void
 .end method
@@ -281,9 +281,9 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/stories/holders/k;
+    check-cast v0, Lcom/vk/stories/holders/StoryPreview;
 
-    invoke-interface {v0, p1}, Lcom/vk/stories/holders/k;->setStory(Lcom/vk/dto/stories/model/StoriesContainer;)V
+    invoke-interface {v0, p1}, Lcom/vk/stories/holders/StoryPreview;->setStory(Lcom/vk/dto/stories/model/StoriesContainer;)V
 
     .line 3
     invoke-direct {p0, p1}, Lcom/vk/stories/holders/StoriesItemHolder;->c(Lcom/vk/dto/stories/model/StoriesContainer;)V
@@ -330,7 +330,7 @@
     .locals 9
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -352,25 +352,25 @@
     :cond_0
     iget-object v1, p0, Lcom/vk/stories/holders/StoriesItemHolder;->c:Lcom/vk/stories/holders/StoriesBlockHolder$b;
 
-    invoke-virtual {v1}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v1
 
     const-string v2, "adapter.list"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     :goto_0
-    invoke-static {v0}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    sget-object v2, Lcom/vk/stories/util/k;->a:Lcom/vk/stories/util/k;
+    sget-object v2, Lcom/vk/stories/util/StoriesUtil;->a:Lcom/vk/stories/util/StoriesUtil;
 
-    invoke-virtual {v2, v1}, Lcom/vk/stories/util/k;->a(Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-virtual {v2, v1}, Lcom/vk/stories/util/StoriesUtil;->a(Ljava/util/List;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -381,15 +381,15 @@
 
     .line 4
     :cond_1
-    invoke-static {v0}, Lcom/vk/dto/stories/d/a;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    sget-object v2, Lcom/vk/stories/util/k;->a:Lcom/vk/stories/util/k;
+    sget-object v2, Lcom/vk/stories/util/StoriesUtil;->a:Lcom/vk/stories/util/StoriesUtil;
 
-    invoke-virtual {v2, v1}, Lcom/vk/stories/util/k;->a(Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-virtual {v2, v1}, Lcom/vk/stories/util/StoriesUtil;->a(Ljava/util/List;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -403,9 +403,9 @@
 
     if-eqz v2, :cond_3
 
-    sget-object v2, Lcom/vk/stories/util/k;->a:Lcom/vk/stories/util/k;
+    sget-object v2, Lcom/vk/stories/util/StoriesUtil;->a:Lcom/vk/stories/util/StoriesUtil;
 
-    invoke-virtual {v2, v1}, Lcom/vk/stories/util/k;->b(Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-virtual {v2, v1}, Lcom/vk/stories/util/StoriesUtil;->b(Ljava/util/List;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -413,9 +413,9 @@
 
     .line 6
     :cond_3
-    sget-object v2, Lcom/vk/stories/util/k;->a:Lcom/vk/stories/util/k;
+    sget-object v2, Lcom/vk/stories/util/StoriesUtil;->a:Lcom/vk/stories/util/StoriesUtil;
 
-    invoke-virtual {v2, v1}, Lcom/vk/stories/util/k;->a(Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-virtual {v2, v1}, Lcom/vk/stories/util/StoriesUtil;->a(Ljava/util/List;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -429,9 +429,9 @@
 
     const-string v2, "sc.uniqueId"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v4, v1}, Lcom/vk/stories/util/k;->a(Ljava/util/List;Ljava/lang/String;)Lcom/vk/dto/stories/model/StoriesContainer;
+    invoke-static {v4, v1}, Lcom/vk/stories/util/StoriesUtil;->a(Ljava/util/List;Ljava/lang/String;)Lcom/vk/dto/stories/model/StoriesContainer;
 
     move-result-object v1
 
@@ -445,7 +445,7 @@
 
     const-string v3, "itemView"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -453,7 +453,7 @@
 
     const-string v3, "itemView.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v2}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -497,11 +497,11 @@
     const-string v0, "stories_discover_open_viewer"
 
     .line 17
-    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     :cond_4
     return-void
@@ -521,7 +521,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -547,7 +547,7 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -555,23 +555,23 @@
 
     const-string v0, "itemView.context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/stories/holders/StoriesItemHolder;->g:Ljava/lang/String;
 
     const-string v1, "new_story_avatar"
 
-    invoke-static {p1, v0, v1}, Lcom/vk/stories/holders/i;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0, v1}, Lcom/vk/stories/holders/StoriesItemHolder3;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/vk/stories/holders/StoriesItemHolder;->e:Lcom/vk/stories/holders/c;
+    iget-object v0, p0, Lcom/vk/stories/holders/StoriesItemHolder;->e:Lcom/vk/stories/holders/StoriesItemHolder1;
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0, p1}, Lcom/vk/stories/holders/c;->a(Lcom/vk/dto/stories/model/StoriesContainer;)V
+    invoke-interface {v0, p1}, Lcom/vk/stories/holders/StoriesItemHolder1;->a(Lcom/vk/dto/stories/model/StoriesContainer;)V
 
     .line 6
     :cond_2
@@ -598,7 +598,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -619,7 +619,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->g(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->g(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v1
 

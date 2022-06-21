@@ -3,7 +3,7 @@
 .source "PickerVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -81,7 +81,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
 
     :cond_0
     const/4 v0, 0x1

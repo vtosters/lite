@@ -3,12 +3,12 @@
 .source "CommunityPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/presenter/CommunityPresenter;->a(Landroid/location/Location;)Lc/a/m;
+    value = Lcom/vk/profile/presenter/CommunityPresenter;->a(Landroid/location/Location;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vtosters/lite/api/i;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
         ">;"
     }
 .end annotation
@@ -50,33 +50,33 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;)V
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$k;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/profile/presenter/CommunityPresenter$k;->b:Landroid/location/Location;
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Landroid/location/Location;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/newsfeed/contracts/ProfileContract;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Landroid/location/Location;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$k;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->b(Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vtosters/lite/api/i;)V
+    invoke-static {v0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->b(Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/profile/presenter/CommunityPresenter$k;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result p1
 
@@ -84,11 +84,11 @@
 
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$k;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->G()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->G()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/profile/e/f;->a(ILjava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/profile/e/ProfileTracker1;->a(ILjava/lang/String;)V
 
     return-void
 .end method
@@ -97,9 +97,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$k;->a(Lcom/vtosters/lite/api/i;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$k;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
 
     return-void
 .end method

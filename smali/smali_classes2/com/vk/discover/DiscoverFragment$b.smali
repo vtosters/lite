@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -44,22 +44,22 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/w;->b()I
+    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->b()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/api/newsfeed/j;
+    new-instance v0, Lcom/vk/api/newsfeed/NewsfeedMarkDiscoverBadgeViewed;
 
-    invoke-direct {v0}, Lcom/vk/api/newsfeed/j;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/newsfeed/NewsfeedMarkDiscoverBadgeViewed;-><init>()V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
     sget-object v2, Lcom/vk/discover/DiscoverFragment$b$b;->a:Lcom/vk/discover/DiscoverFragment$b$b;
 
     .line 4
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void

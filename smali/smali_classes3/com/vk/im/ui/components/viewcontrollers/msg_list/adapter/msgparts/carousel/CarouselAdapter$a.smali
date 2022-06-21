@@ -3,7 +3,7 @@
 .source "CarouselAdapter.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/views/adapter_delegate/c;
+.implements Lcom/vk/im/ui/views/adapter_delegate/ListItem;
 
 
 # annotations

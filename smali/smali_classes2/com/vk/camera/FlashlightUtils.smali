@@ -34,7 +34,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/camera/FlashlightUtils;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/camera/FlashlightUtils;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p4, p3, 0x1
@@ -54,27 +54,27 @@
 
     .line 3
     :cond_1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/camera/FlashlightUtils;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/camera/FlashlightUtils;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/camera/FlashlightUtils;Lkotlin/jvm/b/a;Z)V
+.method public static final synthetic a(Lcom/vk/camera/FlashlightUtils;Lkotlin/jvm/b/Functions;Z)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/camera/FlashlightUtils;->a(Lkotlin/jvm/b/a;Z)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/camera/FlashlightUtils;->a(Lkotlin/jvm/b/Functions;Z)V
 
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/a;Z)V
+.method private final a(Lkotlin/jvm/b/Functions;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;Z)V"
         }
     .end annotation
@@ -96,7 +96,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-static {p2}, Lcom/vk/camera/f;->a(Landroid/hardware/Camera;)V
+    invoke-static {p2}, Lcom/vk/camera/FlashlightUtils1;->a(Landroid/hardware/Camera;)V
 
     goto :goto_0
 
@@ -123,11 +123,11 @@
     if-eqz p1, :cond_3
 
     .line 11
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_3
     return-void
@@ -205,16 +205,16 @@
     return-void
 .end method
 
-.method private final c(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+.method private final c(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -229,7 +229,7 @@
     if-eqz v2, :cond_1
 
     .line 2
-    invoke-static {v2}, Lcom/vk/core/extensions/a;->c(Landroid/app/Activity;)Z
+    invoke-static {v2}, Lcom/vk/core/extensions/ActivityExt;->c(Landroid/app/Activity;)Z
 
     move-result v0
 
@@ -253,15 +253,15 @@
     .line 5
     new-instance v6, Lcom/vk/camera/FlashlightUtils$invokeWithPermissions$1;
 
-    invoke-direct {v6, p1}, Lcom/vk/camera/FlashlightUtils$invokeWithPermissions$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v6, p1}, Lcom/vk/camera/FlashlightUtils$invokeWithPermissions$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 6
     new-instance v7, Lcom/vk/camera/FlashlightUtils$invokeWithPermissions$2;
 
-    invoke-direct {v7, p2}, Lcom/vk/camera/FlashlightUtils$invokeWithPermissions$2;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v7, p2}, Lcom/vk/camera/FlashlightUtils$invokeWithPermissions$2;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 7
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v1 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     :cond_1
     :goto_0
@@ -308,16 +308,16 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -332,9 +332,9 @@
     .line 5
     new-instance v0, Lcom/vk/camera/FlashlightUtils$disable$1;
 
-    invoke-direct {v0, p1}, Lcom/vk/camera/FlashlightUtils$disable$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p1}, Lcom/vk/camera/FlashlightUtils$disable$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-direct {p0, v0, p2}, Lcom/vk/camera/FlashlightUtils;->c(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0, p2}, Lcom/vk/camera/FlashlightUtils;->c(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     :cond_0
     return-void
@@ -344,11 +344,11 @@
     .locals 2
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -356,7 +356,7 @@
 
     const-string v1, "AppContextHolder.context.applicationContext"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -371,16 +371,16 @@
     return v0
 .end method
 
-.method public final b(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+.method public final b(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -388,9 +388,9 @@
     .line 3
     new-instance v0, Lcom/vk/camera/FlashlightUtils$enable$1;
 
-    invoke-direct {v0, p1}, Lcom/vk/camera/FlashlightUtils$enable$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p1}, Lcom/vk/camera/FlashlightUtils$enable$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-direct {p0, v0, p2}, Lcom/vk/camera/FlashlightUtils;->c(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0, p2}, Lcom/vk/camera/FlashlightUtils;->c(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -410,7 +410,7 @@
 
     const-string v1, "it.parameters"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/hardware/Camera$Parameters;->getFlashMode()Ljava/lang/String;
 
@@ -418,7 +418,7 @@
 
     const-string v1, "torch"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

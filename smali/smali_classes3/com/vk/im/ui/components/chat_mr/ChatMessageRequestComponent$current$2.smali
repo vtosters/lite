@@ -3,12 +3,12 @@
 .source "ChatMessageRequestComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestComponent;-><init>(Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestComponent$a;)V
+    value = Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestComponent;-><init>(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestComponent$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/im/engine/models/Member;",
         ">;"
     }
@@ -51,11 +51,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestComponent$current$2;->this$0:Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestComponent;->d(Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestComponent;)Lcom/vk/im/engine/a;
+    invoke-static {v0}, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestComponent;->d(Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestComponent;)Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/a;->c()Lcom/vk/im/engine/models/Member;
+    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->c()Lcom/vk/im/engine/models/Member;
 
     move-result-object v0
 

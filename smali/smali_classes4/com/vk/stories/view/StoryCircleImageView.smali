@@ -1,9 +1,9 @@
 .class public Lcom/vk/stories/view/StoryCircleImageView;
-.super Lcom/vk/stories/view/g1;
+.super Lcom/vk/stories/view/BorderedCircleImageView;
 .source "StoryCircleImageView.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # static fields
@@ -21,7 +21,7 @@
 # instance fields
 .field private A0:I
 
-.field private final f0:Lcom/facebook/u/b/a/e;
+.field private final f0:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
 .field private g0:Landroid/graphics/drawable/Drawable;
 
@@ -61,7 +61,7 @@
 
 .field private y0:Ljava/lang/String;
 
-.field private z0:Lcom/airbnb/lottie/f;
+.field private z0:Lcom/airbnb/lottie/LottieDrawable;
 
 
 # direct methods
@@ -104,16 +104,16 @@
     .locals 1
 
     .line 3
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/stories/view/g1;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/stories/view/BorderedCircleImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 4
     sget-object v0, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->d()Lcom/facebook/u/b/a/e;
+    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->d()Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->f0:Lcom/facebook/u/b/a/e;
+    iput-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->f0:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 5
     invoke-virtual {p0, p1, p2, p3}, Lcom/vk/stories/view/StoryCircleImageView;->a(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -417,7 +417,7 @@
     :goto_7
     iget p2, p0, Lcom/vk/stories/view/StoryCircleImageView;->A0:I
 
-    invoke-static {p1, p2, p2}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
+    invoke-static {p1, p2, p2}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -428,14 +428,14 @@
 
     iget p2, p0, Lcom/vk/stories/view/StoryCircleImageView;->A0:I
 
-    invoke-static {p1, p2, p2}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
+    invoke-static {p1, p2, p2}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
 
     .line 42
     iget-object p1, p0, Lcom/vk/stories/view/StoryCircleImageView;->h0:Landroid/graphics/drawable/Drawable;
 
     iget p2, p0, Lcom/vk/stories/view/StoryCircleImageView;->A0:I
 
-    invoke-static {p1, p2, p2}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
+    invoke-static {p1, p2, p2}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -446,7 +446,7 @@
 
     iget p2, p0, Lcom/vk/stories/view/StoryCircleImageView;->A0:I
 
-    invoke-static {p1, p2, p2}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
+    invoke-static {p1, p2, p2}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -455,9 +455,9 @@
     return-void
 .end method
 
-.method private a(Lcom/facebook/u/b/a/e;Ljava/util/List;)V
+.method private a(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;Ljava/util/List;)V
     .locals 2
-    .param p1    # Lcom/facebook/u/b/a/e;
+    .param p1    # Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -468,7 +468,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/u/b/a/e;",
+            "Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;)V"
@@ -481,7 +481,7 @@
     invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->b(Ljava/lang/Object;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     .line 60
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/common/internal/j;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/common/internal/Supplier;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     if-eqz p2, :cond_2
 
@@ -542,7 +542,7 @@
 
     invoke-direct {v0, p0, p2}, Lcom/vk/stories/view/f;-><init>(Lcom/vk/stories/view/StoryCircleImageView;Ljava/util/List;)V
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/common/internal/j;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/common/internal/Supplier;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     goto :goto_1
 
@@ -555,27 +555,27 @@
     return-void
 .end method
 
-.method private a(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/airbnb/lottie/d;)V
+.method private a(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/airbnb/lottie/LottieComposition;)V
     .locals 1
 
     .line 47
-    new-instance v0, Lcom/airbnb/lottie/f;
+    new-instance v0, Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-direct {v0}, Lcom/airbnb/lottie/f;-><init>()V
+    invoke-direct {v0}, Lcom/airbnb/lottie/LottieDrawable;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iput-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
     .line 48
-    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-virtual {v0, p2}, Lcom/airbnb/lottie/f;->a(Lcom/airbnb/lottie/d;)Z
+    invoke-virtual {v0, p2}, Lcom/airbnb/lottie/LottieDrawable;->a(Lcom/airbnb/lottie/LottieComposition;)Z
 
     .line 49
-    iget-object p2, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object p2, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
     const/4 v0, -0x1
 
-    invoke-virtual {p2, v0}, Lcom/airbnb/lottie/f;->d(I)V
+    invoke-virtual {p2, v0}, Lcom/airbnb/lottie/LottieDrawable;->d(I)V
 
     .line 50
     invoke-virtual {p0}, Landroid/widget/ImageView;->getWidth()I
@@ -585,43 +585,43 @@
     invoke-direct {p0, p2}, Lcom/vk/stories/view/StoryCircleImageView;->b(I)V
 
     .line 51
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->f(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->f(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
     .line 52
-    iget-object p1, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
     new-instance p2, Lcom/vk/stories/view/StoryCircleImageView$b;
 
     invoke-direct {p2, p0}, Lcom/vk/stories/view/StoryCircleImageView$b;-><init>(Lcom/vk/stories/view/StoryCircleImageView;)V
 
-    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/f;->a(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/LottieDrawable;->a(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 53
-    iget-object p1, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-virtual {p1}, Lcom/airbnb/lottie/f;->start()V
+    invoke-virtual {p1}, Lcom/airbnb/lottie/LottieDrawable;->start()V
 
     goto :goto_0
 
     .line 54
     :cond_0
-    iget-object p1, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-virtual {p1}, Lcom/airbnb/lottie/f;->stop()V
+    invoke-virtual {p1}, Lcom/airbnb/lottie/LottieDrawable;->stop()V
 
     :goto_0
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/stories/view/StoryCircleImageView;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/airbnb/lottie/d;)V
+.method static synthetic a(Lcom/vk/stories/view/StoryCircleImageView;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/airbnb/lottie/LottieComposition;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/view/StoryCircleImageView;->a(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/airbnb/lottie/d;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/view/StoryCircleImageView;->a(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/airbnb/lottie/LottieComposition;)V
 
     return-void
 .end method
@@ -630,7 +630,7 @@
     .locals 0
 
     .line 55
-    invoke-virtual {p0}, Lcom/vk/stories/view/g1;->k()V
+    invoke-virtual {p0}, Lcom/vk/stories/view/BorderedCircleImageView;->k()V
 
     .line 56
     iput-boolean p1, p0, Lcom/vk/stories/view/StoryCircleImageView;->t0:Z
@@ -640,13 +640,13 @@
     const/high16 p1, 0x3f800000    # 1.0f
 
     .line 57
-    invoke-virtual {p0, p1}, Lcom/vk/stories/view/g1;->setSelectionAmount(F)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/view/BorderedCircleImageView;->setSelectionAmount(F)V
 
     goto :goto_0
 
     .line 58
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/stories/view/g1;->n()V
+    invoke-virtual {p0}, Lcom/vk/stories/view/BorderedCircleImageView;->n()V
 
     :goto_0
     return-void
@@ -656,27 +656,27 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/airbnb/lottie/f;->e()Lcom/airbnb/lottie/d;
+    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieDrawable;->e()Lcom/airbnb/lottie/LottieComposition;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-virtual {v0}, Lcom/airbnb/lottie/f;->e()Lcom/airbnb/lottie/d;
+    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieDrawable;->e()Lcom/airbnb/lottie/LottieComposition;
 
     move-result-object v0
 
     int-to-float p1, p1
 
     .line 4
-    invoke-virtual {v0}, Lcom/airbnb/lottie/d;->a()Landroid/graphics/Rect;
+    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieComposition;->a()Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -689,9 +689,9 @@
     div-float/2addr p1, v0
 
     .line 5
-    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/f;->d(F)V
+    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieDrawable;->d(F)V
 
     :cond_0
     return-void
@@ -701,9 +701,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/f;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieDrawable;->draw(Landroid/graphics/Canvas;)V
 
     return-void
 .end method
@@ -720,7 +720,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
     if-nez v0, :cond_0
 
@@ -747,14 +747,14 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-virtual {v0}, Lcom/airbnb/lottie/f;->stop()V
+    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieDrawable;->stop()V
 
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iput-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
     .line 3
     invoke-virtual {p0}, Landroid/widget/ImageView;->invalidate()V
@@ -797,7 +797,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v1}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -808,7 +808,7 @@
 
     iget v1, p0, Lcom/vk/stories/view/StoryCircleImageView;->A0:I
 
-    invoke-static {v0, v1, v1}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1, v1}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -849,7 +849,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v0}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -888,13 +888,13 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v0}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iget v1, p0, Lcom/vk/stories/view/StoryCircleImageView;->A0:I
 
-    invoke-static {v0, v1, v1}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1, v1}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
 
     .line 12
     iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->h0:Landroid/graphics/drawable/Drawable;
@@ -905,13 +905,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v1}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iget v1, p0, Lcom/vk/stories/view/StoryCircleImageView;->A0:I
 
-    invoke-static {v0, v1, v1}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1, v1}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -934,13 +934,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v1}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iget v1, p0, Lcom/vk/stories/view/StoryCircleImageView;->A0:I
 
-    invoke-static {v0, v1, v1}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1, v1}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;II)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -971,10 +971,10 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/vk/stories/view/g1;->c0:I
+    iput v0, p0, Lcom/vk/stories/view/BorderedCircleImageView;->c0:I
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/stories/view/g1;->m()V
+    invoke-virtual {p0}, Lcom/vk/stories/view/BorderedCircleImageView;->m()V
 
     .line 3
     invoke-direct {p0}, Lcom/vk/stories/view/StoryCircleImageView;->q()V
@@ -996,7 +996,7 @@
 
 
 # virtual methods
-.method public synthetic a(Ljava/util/List;)Lcom/facebook/datasource/b;
+.method public synthetic a(Ljava/util/List;)Lcom/facebook/datasource/DataSource;
     .locals 4
     .param p1    # Ljava/util/List;
         .annotation build Landroidx/annotation/Nullable;
@@ -1043,7 +1043,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, p1, v1}, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->a(Ljava/util/List;II)Lcom/facebook/datasource/b;
+    invoke-static {v0, p1, v1}, Lcom/vk/im/ui/views/avatars/AvatarDataSource;->a(Ljava/util/List;II)Lcom/facebook/datasource/DataSource;
 
     move-result-object p1
 
@@ -1074,7 +1074,7 @@
     .line 6
     iget-object p1, p0, Lcom/vk/stories/view/StoryCircleImageView;->p0:Landroid/graphics/Bitmap;
 
-    iput-object p1, p0, Lcom/vk/stories/view/g1;->T:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lcom/vk/stories/view/BorderedCircleImageView;->T:Landroid/graphics/Bitmap;
 
     return-void
 .end method
@@ -1083,7 +1083,7 @@
     .locals 2
 
     .line 44
-    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
     if-nez v0, :cond_0
 
@@ -1094,7 +1094,7 @@
 
     iget-object v1, p0, Lcom/vk/stories/view/StoryCircleImageView;->y0:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/airbnb/lottie/e;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/airbnb/lottie/m;
+    invoke-static {v0, v1}, Lcom/airbnb/lottie/LottieCompositionFactory;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/airbnb/lottie/LottieTask;
 
     move-result-object v0
 
@@ -1103,7 +1103,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/stories/view/StoryCircleImageView$a;-><init>(Lcom/vk/stories/view/StoryCircleImageView;Lcom/vk/dto/stories/model/StoriesContainer;)V
 
-    invoke-virtual {v0, v1}, Lcom/airbnb/lottie/m;->b(Lcom/airbnb/lottie/h;)Lcom/airbnb/lottie/m;
+    invoke-virtual {v0, v1}, Lcom/airbnb/lottie/LottieTask;->b(Lcom/airbnb/lottie/LottieListener;)Lcom/airbnb/lottie/LottieTask;
 
     :cond_0
     return-void
@@ -1125,34 +1125,34 @@
     .end annotation
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->f0:Lcom/facebook/u/b/a/e;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->f0:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 7
     invoke-virtual {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->j()Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v0, Lcom/facebook/u/b/a/e;
+    check-cast v0, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getController()Lcom/facebook/u/e/a;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getController()Lcom/facebook/u/e/DraweeController;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v0, Lcom/facebook/u/b/a/e;
+    check-cast v0, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 9
-    invoke-virtual {p0, v0}, Lcom/vk/imageloader/view/VKImageView;->setControllerListener(Lcom/facebook/u/b/a/e;)V
+    invoke-virtual {p0, v0}, Lcom/vk/imageloader/view/VKImageView;->setControllerListener(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;)V
 
     .line 10
-    invoke-direct {p0, v0, p1}, Lcom/vk/stories/view/StoryCircleImageView;->a(Lcom/facebook/u/b/a/e;Ljava/util/List;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/stories/view/StoryCircleImageView;->a(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;Ljava/util/List;)V
 
     .line 11
-    invoke-virtual {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/a;
+    invoke-virtual {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/AbstractDraweeController;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/imageloader/view/VKDraweeView;->setController(Lcom/facebook/u/e/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/imageloader/view/VKDraweeView;->setController(Lcom/facebook/u/e/DraweeController;)V
 
     return-void
 .end method
@@ -1166,7 +1166,7 @@
     const/16 v0, 0xff
 
     .line 2
-    invoke-virtual {p0, v0}, Lcom/vk/stories/view/g1;->setBorderAlpha(I)V
+    invoke-virtual {p0, v0}, Lcom/vk/stories/view/BorderedCircleImageView;->setBorderAlpha(I)V
 
     .line 3
     iget-boolean v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->u0:Z
@@ -1187,7 +1187,7 @@
     if-eqz v0, :cond_3
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
     if-eqz v0, :cond_1
 
@@ -1210,7 +1210,7 @@
     iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->p0:Landroid/graphics/Bitmap;
 
     :goto_0
-    iput-object v0, p0, Lcom/vk/stories/view/g1;->T:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/vk/stories/view/BorderedCircleImageView;->T:Landroid/graphics/Bitmap;
 
     .line 9
     invoke-virtual {p0}, Landroid/widget/ImageView;->getWidth()I
@@ -1221,16 +1221,16 @@
 
     move-result v1
 
-    invoke-virtual {p0, v0, v1}, Lcom/vk/stories/view/g1;->b(II)V
+    invoke-virtual {p0, v0, v1}, Lcom/vk/stories/view/BorderedCircleImageView;->b(II)V
 
     .line 10
-    invoke-virtual {p0, p1}, Lcom/vk/stories/view/g1;->a(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/view/BorderedCircleImageView;->a(Landroid/graphics/Canvas;)V
 
     goto :goto_1
 
     .line 11
     :cond_3
-    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
     if-eqz v0, :cond_4
 
@@ -1248,12 +1248,12 @@
     .line 14
     iget-object v0, p0, Lcom/vk/stories/view/StoryCircleImageView;->r0:Landroid/graphics/Bitmap;
 
-    iput-object v0, p0, Lcom/vk/stories/view/g1;->T:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/vk/stories/view/BorderedCircleImageView;->T:Landroid/graphics/Bitmap;
 
     const/16 v0, 0xa3
 
     .line 15
-    invoke-virtual {p0, v0}, Lcom/vk/stories/view/g1;->setBorderAlpha(I)V
+    invoke-virtual {p0, v0}, Lcom/vk/stories/view/BorderedCircleImageView;->setBorderAlpha(I)V
 
     .line 16
     invoke-virtual {p0}, Landroid/widget/ImageView;->getWidth()I
@@ -1264,10 +1264,10 @@
 
     move-result v1
 
-    invoke-virtual {p0, v0, v1}, Lcom/vk/stories/view/g1;->b(II)V
+    invoke-virtual {p0, v0, v1}, Lcom/vk/stories/view/BorderedCircleImageView;->b(II)V
 
     .line 17
-    invoke-virtual {p0, p1}, Lcom/vk/stories/view/g1;->a(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/view/BorderedCircleImageView;->a(Landroid/graphics/Canvas;)V
 
     :cond_5
     :goto_1
@@ -1278,7 +1278,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/stories/view/g1;->onSizeChanged(IIII)V
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/stories/view/BorderedCircleImageView;->onSizeChanged(IIII)V
 
     .line 2
     iget-object p3, p0, Lcom/vk/stories/view/StoryCircleImageView;->i0:Landroid/graphics/drawable/Drawable;
@@ -1354,13 +1354,13 @@
     if-eqz p1, :cond_11
 
     .line 4
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v4
 
     if-nez v4, :cond_3
 
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v4
 
@@ -1372,7 +1372,7 @@
     :cond_2
     iget-object v4, p0, Lcom/vk/stories/view/StoryCircleImageView;->p0:Landroid/graphics/Bitmap;
 
-    iput-object v4, p0, Lcom/vk/stories/view/g1;->T:Landroid/graphics/Bitmap;
+    iput-object v4, p0, Lcom/vk/stories/view/BorderedCircleImageView;->T:Landroid/graphics/Bitmap;
 
     goto :goto_3
 
@@ -1381,7 +1381,7 @@
     :goto_2
     iget-object v4, p0, Lcom/vk/stories/view/StoryCircleImageView;->q0:Landroid/graphics/Bitmap;
 
-    iput-object v4, p0, Lcom/vk/stories/view/g1;->T:Landroid/graphics/Bitmap;
+    iput-object v4, p0, Lcom/vk/stories/view/BorderedCircleImageView;->T:Landroid/graphics/Bitmap;
 
     .line 7
     :goto_3
@@ -1393,10 +1393,10 @@
 
     move-result v5
 
-    invoke-virtual {p0, v4, v5}, Lcom/vk/stories/view/g1;->b(II)V
+    invoke-virtual {p0, v4, v5}, Lcom/vk/stories/view/BorderedCircleImageView;->b(II)V
 
     .line 8
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->e(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->e(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v4
 
@@ -1409,7 +1409,7 @@
 
     .line 10
     :cond_4
-    iget-object v4, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/f;
+    iget-object v4, p0, Lcom/vk/stories/view/StoryCircleImageView;->z0:Lcom/airbnb/lottie/LottieDrawable;
 
     if-eqz v4, :cond_5
 
@@ -1446,7 +1446,7 @@
     if-eqz v2, :cond_c
 
     .line 13
-    invoke-static {v4}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v4}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v2
 
@@ -1492,7 +1492,7 @@
 
     if-nez v2, :cond_a
 
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v2
 
@@ -1562,7 +1562,7 @@
 
     if-nez v2, :cond_e
 
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v2
 
@@ -1583,7 +1583,7 @@
     check-cast p1, Lcom/vk/dto/stories/model/CommunityGroupedStoriesContainer;
 
     .line 29
-    invoke-static {v4}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v4}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v0
 
@@ -1598,7 +1598,7 @@
 
     .line 31
     :cond_f
-    invoke-static {v4}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v4}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v0
 

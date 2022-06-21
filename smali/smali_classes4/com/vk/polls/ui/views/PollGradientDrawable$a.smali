@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -118,14 +118,14 @@
     move-result-object v3
 
     .line 9
-    check-cast v3, Lkotlin/collections/x;
+    check-cast v3, Lkotlin/collections/IndexedValue;
 
     .line 10
-    invoke-virtual {v3}, Lkotlin/collections/x;->c()I
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->c()I
 
     move-result v4
 
-    invoke-virtual {v3}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v5
 
@@ -138,11 +138,11 @@
     aput v5, v8, v4
 
     .line 11
-    invoke-virtual {v3}, Lkotlin/collections/x;->c()I
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->c()I
 
     move-result v4
 
-    invoke-virtual {v3}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -157,7 +157,7 @@
     aput v3, v9, v4
 
     .line 12
-    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v3, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     invoke-interface {v2, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 

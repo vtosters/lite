@@ -1,12 +1,12 @@
 .class public final Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;
-.super Lcom/vk/music/ui/common/o;
+.super Lcom/vk/music/ui/common/MusicViewHolder;
 .source "MusicSectionSuggestionHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/music/ui/common/o<",
+        "Lcom/vk/music/ui/common/MusicViewHolder<",
         "Lcom/vk/dto/music/SearchSuggestion;",
         ">;"
     }
@@ -16,16 +16,16 @@
 # instance fields
 .field private final b:Landroid/widget/TextView;
 
-.field private final c:Lkotlin/jvm/b/b;
+.field private final c:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lkotlin/Pair<",
             "+",
             "Landroid/view/View;",
             "Lcom/vk/dto/music/SearchSuggestion;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -33,7 +33,7 @@
 
 
 # direct methods
-.method public constructor <init>(IILandroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(IILandroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
     .locals 6
     .param p1    # I
         .annotation build Landroidx/annotation/LayoutRes;
@@ -47,14 +47,14 @@
         value = {
             "(II",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lkotlin/Pair<",
             "+",
             "Landroid/view/View;",
             "Lcom/vk/dto/music/SearchSuggestion;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -72,9 +72,9 @@
     move-object v2, p3
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/ui/common/o;-><init>(ILandroid/view/ViewGroup;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/ui/common/MusicViewHolder;-><init>(ILandroid/view/ViewGroup;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object p4, p0, Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;->c:Lkotlin/jvm/b/b;
+    iput-object p4, p0, Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;->c:Lkotlin/jvm/b/Functions2;
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -87,7 +87,7 @@
 
     const-string p3, "itemView.findViewById(R.id.search_suggestion)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -99,32 +99,32 @@
     .line 4
     sget p3, Lcom/vk/music/m/a;->button_outline_foreground:I
 
-    invoke-static {p1, p2, p3}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;II)V
+    invoke-static {p1, p2, p3}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;II)V
 
     .line 5
     new-instance p3, Lcom/vk/music/ui/common/MusicSectionSuggestionHolder$$special$$inlined$apply$lambda$1;
 
     invoke-direct {p3, p1, p0, p2}, Lcom/vk/music/ui/common/MusicSectionSuggestionHolder$$special$$inlined$apply$lambda$1;-><init>(Landroid/widget/TextView;Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;I)V
 
-    invoke-static {p1, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lkotlin/Pair<",
             "+",
             "Landroid/view/View;",
             "Lcom/vk/dto/music/SearchSuggestion;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -134,16 +134,16 @@
 
     sget v1, Lcom/vk/music/m/d;->ic_search_16:I
 
-    invoke-direct {p0, v0, v1, p1, p2}, Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;-><init>(IILandroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, v0, v1, p1, p2}, Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;-><init>(IILandroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;)Lkotlin/jvm/b/b;
+.method public static final synthetic a(Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;->c:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/music/ui/common/MusicSectionSuggestionHolder;->c:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -179,7 +179,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -187,7 +187,7 @@
 
     const-string v1, "itemView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/music/SearchSuggestion;->getTitle()Ljava/lang/String;
 

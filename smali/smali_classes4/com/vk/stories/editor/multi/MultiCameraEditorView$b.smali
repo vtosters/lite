@@ -102,13 +102,13 @@
     .line 4
     iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView$b;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorView;
 
-    invoke-static {v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->b(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)Lcom/vk/stories/editor/multi/k/a;
+    invoke-static {v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->b(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)Lcom/vk/stories/editor/multi/k/MultiStoryAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -131,7 +131,7 @@
     :cond_2
     iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView$b;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorView;
 
-    invoke-static {p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->a(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)Lcom/vk/stories/editor/multi/g;
+    invoke-static {p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->a(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)Lcom/vk/stories/editor/multi/MultiCameraEditorContract;
 
     move-result-object p1
 
@@ -145,7 +145,7 @@
 
     move-result-object p3
 
-    invoke-interface {p1, p2, p3}, Lcom/vk/stories/editor/multi/g;->a(Ljava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-interface {p1, p2, p3}, Lcom/vk/stories/editor/multi/MultiCameraEditorContract;->a(Ljava/lang/Integer;Ljava/lang/Integer;)V
 
     :cond_3
     const/4 p1, 0x1

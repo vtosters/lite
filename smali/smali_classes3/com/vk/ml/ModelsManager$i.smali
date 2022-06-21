@@ -3,7 +3,7 @@
 .source "ModelsManager.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,10 +22,10 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/ml/b;",
+        "Lcom/vk/ml/MLModelDto1;",
         ">;>;"
     }
 .end annotation
@@ -54,7 +54,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/ml/b;",
+            "Lcom/vk/ml/MLModelDto1;",
             ">;)V"
         }
     .end annotation
@@ -71,7 +71,7 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/ml/ModelsManager;->a(Lcom/vk/ml/ModelsManager;Ljava/util/List;)V
 

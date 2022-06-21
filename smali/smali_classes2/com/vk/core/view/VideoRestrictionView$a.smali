@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -39,16 +39,16 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/core/drawable/g;
+    new-instance v0, Lcom/vk/core/drawable/LayerListDrawable;
 
-    invoke-direct {v0, p1}, Lcom/vk/core/drawable/g;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vk/core/drawable/LayerListDrawable;-><init>(Landroid/content/Context;)V
 
     .line 2
     sget v1, Lb/h/z/c;->black:I
 
     int-to-float p2, p2
 
-    invoke-virtual {v0, v1, p2}, Lcom/vk/core/drawable/g;->a(IF)Lcom/vk/core/drawable/g;
+    invoke-virtual {v0, v1, p2}, Lcom/vk/core/drawable/LayerListDrawable;->a(IF)Lcom/vk/core/drawable/LayerListDrawable;
 
     .line 3
     sget p2, Lb/h/z/e;->ic_do_not_disturb_48:I
@@ -59,7 +59,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/drawable/g;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/drawable/g;
+    invoke-virtual {v0, p1}, Lcom/vk/core/drawable/LayerListDrawable;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/drawable/LayerListDrawable;
 
     return-object v0
 .end method

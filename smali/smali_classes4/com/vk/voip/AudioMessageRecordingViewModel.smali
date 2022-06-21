@@ -27,11 +27,11 @@
 
 .field private static final f:Landroid/os/Handler;
 
-.field private static final g:Lkotlin/jvm/b/a;
+.field private static final g:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -39,11 +39,11 @@
 
 .field private static h:Z
 
-.field private static i:Lcom/vk/voip/r;
+.field private static i:Lcom/vk/voip/VoipSimpleAudioPlayer;
 
 .field private static j:Z
 
-.field private static k:Lio/reactivex/disposables/b;
+.field private static k:Lio/reactivex/disposables/Disposable;
 
 .field private static l:Ljava/lang/String;
 
@@ -100,7 +100,7 @@
     .line 6
     sget-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel$updateTimerDurationRunnable$1;->a:Lcom/vk/voip/AudioMessageRecordingViewModel$updateTimerDurationRunnable$1;
 
-    sput-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->g:Lkotlin/jvm/b/a;
+    sput-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->g:Lkotlin/jvm/b/Functions;
 
     const-string v0, ""
 
@@ -135,11 +135,11 @@
     invoke-direct {v0}, Lcom/vk/im/engine/models/attaches/AttachAudioMsg;-><init>()V
 
     .line 23
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v1
 
@@ -233,7 +233,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
     invoke-direct {p0}, Lcom/vk/voip/AudioMessageRecordingViewModel;->t()V
@@ -305,11 +305,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/voip/AudioMessageRecordingViewModel;Lcom/vk/voip/r;)V
+.method public static final synthetic a(Lcom/vk/voip/AudioMessageRecordingViewModel;Lcom/vk/voip/VoipSimpleAudioPlayer;)V
     .locals 0
 
     .line 4
-    sput-object p1, Lcom/vk/voip/AudioMessageRecordingViewModel;->i:Lcom/vk/voip/r;
+    sput-object p1, Lcom/vk/voip/AudioMessageRecordingViewModel;->i:Lcom/vk/voip/VoipSimpleAudioPlayer;
 
     return-void
 .end method
@@ -349,7 +349,7 @@
 
     const-string v1, "onRecordingFailed"
 
-    invoke-static {v0, v1, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 28
     invoke-direct {p0}, Lcom/vk/voip/AudioMessageRecordingViewModel;->t()V
@@ -382,11 +382,11 @@
     return-object p1
 .end method
 
-.method public static final synthetic b(Lcom/vk/voip/AudioMessageRecordingViewModel;)Lcom/vk/voip/r;
+.method public static final synthetic b(Lcom/vk/voip/AudioMessageRecordingViewModel;)Lcom/vk/voip/VoipSimpleAudioPlayer;
     .locals 0
 
     .line 1
-    sget-object p0, Lcom/vk/voip/AudioMessageRecordingViewModel;->i:Lcom/vk/voip/r;
+    sget-object p0, Lcom/vk/voip/AudioMessageRecordingViewModel;->i:Lcom/vk/voip/VoipSimpleAudioPlayer;
 
     return-object p0
 .end method
@@ -443,7 +443,7 @@
 
     const-string v2, "Uri.fromFile(result.file).toString()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/audio/AudioMsgTrackByRecord;->d(Ljava/lang/String;)V
 
@@ -512,7 +512,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "audio"
 
@@ -550,7 +550,7 @@
 
     const-string v1, "cancelRecording()"
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     sget-boolean v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->j:Z
@@ -632,20 +632,20 @@
     move v15, v0
 
     .line 6
-    invoke-direct/range {v2 .. v16}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;-><init>(ILjava/lang/String;Lcom/vk/im/engine/models/messages/e;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/h;Ljava/lang/Integer;Ljava/lang/String;Lcom/vk/im/engine/commands/messages/z;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v16}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;-><init>(ILjava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/IntSet;Ljava/lang/Integer;Ljava/lang/String;Lcom/vk/im/engine/commands/messages/MsgSendConfig;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 7
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
     const-string v2, "User send"
 
-    invoke-static {v2}, Lcom/vk/im/engine/internal/causation/c;->a(Ljava/lang/String;)Lcom/vk/im/engine/internal/causation/e;
+    invoke-static {v2}, Lcom/vk/im/engine/internal/causation/CauseProducer1;->a(Ljava/lang/String;)Lcom/vk/im/engine/internal/causation/WithCause;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     :cond_1
     :goto_0
@@ -677,9 +677,9 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -687,7 +687,7 @@
 
     invoke-direct {v1}, Lcom/vk/voip/AudioMessageRecordingViewModel$a;-><init>()V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -716,25 +716,25 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->i:Lcom/vk/voip/r;
+    sget-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->i:Lcom/vk/voip/VoipSimpleAudioPlayer;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/voip/r;->c()V
+    invoke-virtual {v0}, Lcom/vk/voip/VoipSimpleAudioPlayer;->c()V
 
     .line 2
     :cond_0
-    sget-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->i:Lcom/vk/voip/r;
+    sget-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->i:Lcom/vk/voip/VoipSimpleAudioPlayer;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/voip/r;->b()V
+    invoke-virtual {v0}, Lcom/vk/voip/VoipSimpleAudioPlayer;->b()V
 
     :cond_1
     const/4 v0, 0x0
 
     .line 3
-    sput-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->i:Lcom/vk/voip/r;
+    sput-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->i:Lcom/vk/voip/VoipSimpleAudioPlayer;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -748,7 +748,7 @@
 
     const-string v2, "Failed to release player"
 
-    invoke-static {v1, v2, v0}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, v0}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -776,20 +776,20 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    sget-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->k:Lio/reactivex/disposables/b;
+    sget-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->k:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 3
-    sput-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->k:Lio/reactivex/disposables/b;
+    sput-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->k:Lio/reactivex/disposables/Disposable;
 
     .line 4
     invoke-direct {p0}, Lcom/vk/voip/AudioMessageRecordingViewModel;->m()V
@@ -804,7 +804,7 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "audio"
 
@@ -844,13 +844,13 @@
     .line 1
     sget-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->f:Landroid/os/Handler;
 
-    sget-object v1, Lcom/vk/voip/AudioMessageRecordingViewModel;->g:Lkotlin/jvm/b/a;
+    sget-object v1, Lcom/vk/voip/AudioMessageRecordingViewModel;->g:Lkotlin/jvm/b/Functions;
 
     if-eqz v1, :cond_0
 
-    new-instance v2, Lcom/vk/voip/b;
+    new-instance v2, Lcom/vk/voip/AudioMessageRecordingViewModel2;
 
-    invoke-direct {v2, v1}, Lcom/vk/voip/b;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v1}, Lcom/vk/voip/AudioMessageRecordingViewModel2;-><init>(Lkotlin/jvm/b/Functions;)V
 
     move-object v1, v2
 
@@ -862,13 +862,13 @@
     .line 2
     sget-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->f:Landroid/os/Handler;
 
-    sget-object v1, Lcom/vk/voip/AudioMessageRecordingViewModel;->g:Lkotlin/jvm/b/a;
+    sget-object v1, Lcom/vk/voip/AudioMessageRecordingViewModel;->g:Lkotlin/jvm/b/Functions;
 
     if-eqz v1, :cond_1
 
-    new-instance v2, Lcom/vk/voip/b;
+    new-instance v2, Lcom/vk/voip/AudioMessageRecordingViewModel2;
 
-    invoke-direct {v2, v1}, Lcom/vk/voip/b;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v1}, Lcom/vk/voip/AudioMessageRecordingViewModel2;-><init>(Lkotlin/jvm/b/Functions;)V
 
     move-object v1, v2
 
@@ -909,7 +909,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/audio/AudioRecorder;->a(Ljava/lang/String;Z)Lc/a/m;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/audio/AudioRecorder;->a(Ljava/lang/String;Z)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -918,23 +918,23 @@
 
     invoke-direct {v1, p0}, Lcom/vk/voip/AudioMessageRecordingViewModel$startRecording$1;-><init>(Lcom/vk/voip/AudioMessageRecordingViewModel;)V
 
-    new-instance v2, Lcom/vk/voip/a;
+    new-instance v2, Lcom/vk/voip/AudioMessageRecordingViewModel1;
 
-    invoke-direct {v2, v1}, Lcom/vk/voip/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/voip/AudioMessageRecordingViewModel1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v1, Lcom/vk/voip/AudioMessageRecordingViewModel$startRecording$2;
 
     invoke-direct {v1, p0}, Lcom/vk/voip/AudioMessageRecordingViewModel$startRecording$2;-><init>(Lcom/vk/voip/AudioMessageRecordingViewModel;)V
 
-    new-instance v3, Lcom/vk/voip/a;
+    new-instance v3, Lcom/vk/voip/AudioMessageRecordingViewModel1;
 
-    invoke-direct {v3, v1}, Lcom/vk/voip/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v1}, Lcom/vk/voip/AudioMessageRecordingViewModel1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->k:Lio/reactivex/disposables/b;
+    sput-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->k:Lio/reactivex/disposables/Disposable;
 
     .line 4
     sget-object v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->a:Ljava/lang/String;
@@ -963,7 +963,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -983,7 +983,7 @@
 
     .line 7
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -1002,7 +1002,7 @@
 
     const-string v1, "stopRecording()"
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     sget-boolean v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->j:Z
@@ -1038,7 +1038,7 @@
 
     const-string v1, "stopRecordingAndSend()"
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     sget-boolean v0, Lcom/vk/voip/AudioMessageRecordingViewModel;->j:Z
@@ -1313,7 +1313,7 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/voip/d;->a:Lcom/vk/voip/d;
+    sget-object v0, Lcom/vk/voip/MiscHelper;->a:Lcom/vk/voip/MiscHelper;
 
     invoke-virtual {p0}, Lcom/vk/voip/AudioMessageRecordingViewModel;->a()I
 
@@ -1325,7 +1325,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/d;->a(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/vk/voip/MiscHelper;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1342,7 +1342,7 @@
 
     const-string v1, "Locale.getDefault()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
@@ -1350,7 +1350,7 @@
 
     const-string v1, "ru"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

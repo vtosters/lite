@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/msg_search/vc/VhPeer;
-.super Lcom/vk/im/ui/views/adapter_delegate/d;
+.super Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
 .source "VhPeer.kt"
 
 
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/d<",
-        "Lcom/vk/im/ui/components/msg_search/vc/i;",
+        "Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder<",
+        "Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels3;",
         ">;"
     }
 .end annotation
@@ -30,9 +30,9 @@
 
 .field private final c:Landroid/widget/TextView;
 
-.field private final d:Lcom/vk/im/ui/formatters/d;
+.field private final d:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
-.field private final e:Lcom/vk/im/ui/components/msg_search/vc/p;
+.field private final e:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
 
 # direct methods
@@ -43,20 +43,20 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/VhPeer$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/VhPeer$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->f:Lcom/vk/im/ui/components/msg_search/vc/VhPeer$a;
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_search/vc/p;)V
+.method private constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_search/vc/VcCallback;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/d;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->e:Lcom/vk/im/ui/components/msg_search/vc/p;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->e:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     .line 3
     sget p2, Lcom/vk/im/ui/h;->casper_icon:I
@@ -92,29 +92,29 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->c:Landroid/widget/TextView;
 
     .line 6
-    new-instance p1, Lcom/vk/im/ui/formatters/d;
+    new-instance p1, Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
-    invoke-direct {p1}, Lcom/vk/im/ui/formatters/d;-><init>()V
+    invoke-direct {p1}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->d:Lcom/vk/im/ui/formatters/d;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_search/vc/p;Lkotlin/jvm/internal/i;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_search/vc/p;)V
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->d:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/msg_search/vc/VhPeer;)Lcom/vk/im/ui/components/msg_search/vc/p;
+.method public synthetic constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_search/vc/VcCallback;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->e:Lcom/vk/im/ui/components/msg_search/vc/p;
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_search/vc/VcCallback;)V
+
+    return-void
+.end method
+
+.method public static final synthetic a(Lcom/vk/im/ui/components/msg_search/vc/VhPeer;)Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->e:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     return-object p0
 .end method
@@ -127,13 +127,13 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/im/ui/components/msg_search/vc/VhPeer$bind$1;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/vk/im/ui/components/msg_search/vc/VhPeer$bind$1;-><init>(Lcom/vk/im/ui/components/msg_search/vc/VhPeer;Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 8
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->b:Lcom/vk/im/ui/views/avatars/AvatarView;
@@ -145,11 +145,11 @@
 
     const-string v1, "text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->d:Lcom/vk/im/ui/formatters/d;
+    iget-object v2, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->d:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
-    invoke-virtual {v2, p1, p2}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
+    invoke-virtual {v2, p1, p2}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -160,7 +160,7 @@
 
     move-result v0
 
-    invoke-virtual {p2, v0}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p2, v0}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/Profile;
 
     move-result-object p2
 
@@ -169,7 +169,7 @@
 
     iget-object v3, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->c:Landroid/widget/TextView;
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v4, Lcom/vk/dto/common/VerifyInfo;
 
@@ -179,7 +179,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2}, Lcom/vk/im/engine/models/j;->U()Z
+    invoke-interface {p2}, Lcom/vk/im/engine/models/Profile;->U()Z
 
     move-result p2
 
@@ -217,20 +217,20 @@
     .line 13
     iget-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->a:Landroidx/appcompat/widget/AppCompatImageView;
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p2, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 14
     iget-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->a:Landroidx/appcompat/widget/AppCompatImageView;
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/Dialog;->O1()Lcom/vk/im/engine/models/dialogs/DialogTheme;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/im/ui/themes/a;->a(Lcom/vk/im/engine/models/dialogs/DialogTheme;)I
+    invoke-static {p1}, Lcom/vk/im/ui/themes/DialogThemesExt;->a(Lcom/vk/im/engine/models/dialogs/DialogTheme;)I
 
     move-result p1
 
@@ -242,7 +242,7 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->a:Landroidx/appcompat/widget/AppCompatImageView;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -252,22 +252,22 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/ui/components/msg_search/vc/i;)V
+.method public a(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels3;)V
     .locals 2
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/i;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels3;->a()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/i;->b()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels3;->b()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     move-result-object v1
 
     invoke-direct {p0, v0, v1}, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/i;->c()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels3;->c()Z
 
     move-result p1
 
@@ -278,7 +278,7 @@
     .line 5
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -290,7 +290,7 @@
     :cond_0
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x3ecccccd    # 0.4f
 
@@ -300,13 +300,13 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/c;)V
+.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/im/ui/components/msg_search/vc/i;
+    check-cast p1, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels3;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->a(Lcom/vk/im/ui/components/msg_search/vc/i;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/VhPeer;->a(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels3;)V
 
     return-void
 .end method

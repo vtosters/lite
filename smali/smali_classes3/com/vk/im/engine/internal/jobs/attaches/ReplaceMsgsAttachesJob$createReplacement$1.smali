@@ -3,12 +3,12 @@
 .source "ReplaceMsgsAttachesJob.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->b(Lcom/vk/im/engine/models/attaches/AttachWithId;)Lkotlin/jvm/b/b;
+    value = Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;->b(Lcom/vk/im/engine/models/attaches/AttachWithId;)Lkotlin/jvm/b/Functions2;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/models/attaches/Attach;",
         "Lcom/vk/im/engine/models/attaches/Attach;",
         ">;"
@@ -50,11 +50,11 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/im/engine/internal/match/a;->a:Lcom/vk/im/engine/internal/match/a;
+    sget-object v0, Lcom/vk/im/engine/internal/match/AttachMatcher;->a:Lcom/vk/im/engine/internal/match/AttachMatcher;
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob$createReplacement$1;->$attach:Lcom/vk/im/engine/models/attaches/AttachWithId;
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/im/engine/internal/match/a;->a(Lcom/vk/im/engine/models/attaches/Attach;Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/im/engine/internal/match/AttachMatcher;->a(Lcom/vk/im/engine/models/attaches/Attach;Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object p1
 

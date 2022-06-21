@@ -3,12 +3,12 @@
 .source "MsgHistoryFromServerMergeTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->d(Lcom/vk/im/engine/d;)Ljava/util/List;
+    value = Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->d(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Ljava/util/List<",
         "+",
@@ -30,7 +30,7 @@
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/d;
+.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
 
 .field final synthetic $msgListSorted:Ljava/util/List;
 
@@ -38,12 +38,12 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;Ljava/util/List;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/d;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     iput-object p3, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$msgListSorted:Ljava/util/List;
 
@@ -70,22 +70,22 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
 
     move-result p1
 
     .line 2
-    sget-object v0, Lcom/vk/im/engine/internal/merge/messages/a;->a:Lcom/vk/im/engine/internal/merge/messages/a;
+    sget-object v0, Lcom/vk/im/engine/internal/merge/messages/MsgPrepareUtils;->a:Lcom/vk/im/engine/internal/merge/messages/MsgPrepareUtils;
 
-    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     iget-object v2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$msgListSorted:Ljava/util/List;
 
-    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/im/engine/internal/merge/messages/a;->a(Lcom/vk/im/engine/d;Ljava/util/List;I)Ljava/util/List;
+    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgPrepareUtils;->a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;I)Ljava/util/List;
 
     move-result-object v0
 
@@ -93,7 +93,7 @@
     iget-object v3, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;
 
     .line 4
-    iget-object v4, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v4, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     invoke-static {v3}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->b(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;)I
 
@@ -128,10 +128,10 @@
     move-object v6, v0
 
     .line 7
-    invoke-static/range {v3 .. v10}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;ILjava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;ZZ)V
+    invoke-static/range {v3 .. v10}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;ILjava/util/List;Ljava/lang/Boolean;Ljava/lang/Boolean;ZZ)V
 
     .line 8
-    new-instance v1, Lcom/vk/im/engine/models/q;
+    new-instance v1, Lcom/vk/im/engine/models/Weight;
 
     invoke-static {v0}, Lkotlin/collections/l;->g(Ljava/util/List;)Ljava/lang/Object;
 
@@ -139,10 +139,10 @@
 
     check-cast v2, Lcom/vk/im/engine/models/messages/Msg;
 
-    invoke-direct {v1, v2}, Lcom/vk/im/engine/models/q;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-direct {v1, v2}, Lcom/vk/im/engine/models/Weight;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
 
     .line 9
-    new-instance v2, Lcom/vk/im/engine/models/q;
+    new-instance v2, Lcom/vk/im/engine/models/Weight;
 
     invoke-static {v0}, Lkotlin/collections/l;->i(Ljava/util/List;)Ljava/lang/Object;
 
@@ -150,7 +150,7 @@
 
     check-cast v3, Lcom/vk/im/engine/models/messages/Msg;
 
-    invoke-direct {v2, v3}, Lcom/vk/im/engine/models/q;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-direct {v2, v3}, Lcom/vk/im/engine/models/Weight;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
 
     .line 10
     invoke-static {v0}, Lkotlin/collections/l;->g(Ljava/util/List;)Ljava/lang/Object;
@@ -186,24 +186,24 @@
     .line 13
     iget-object v5, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;
 
-    iget-object v7, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v7, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     invoke-static {v5}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->b(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;)I
 
     move-result v8
 
-    invoke-static {v5, v7, v8, v1, v2}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;)V
+    invoke-static {v5, v7, v8, v1, v2}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;)V
 
     .line 14
     iget-object v5, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;
 
-    iget-object v7, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v7, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     invoke-static {v5}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->b(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;)I
 
     move-result v8
 
-    invoke-static {v5, v7, v8, v3, v4}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;III)V
+    invoke-static {v5, v7, v8, v3, v4}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;III)V
 
     .line 15
     :cond_0
@@ -218,24 +218,24 @@
     .line 16
     iget-object v5, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;
 
-    iget-object v7, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v7, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     invoke-static {v5}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->b(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;)I
 
     move-result v8
 
-    sget-object v9, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v9, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v9}, Lcom/vk/im/engine/models/q$a;->d()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v9}, Lcom/vk/im/engine/models/Weight$a;->d()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v9
 
-    invoke-static {v5, v7, v8, v9, v1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;)V
+    invoke-static {v5, v7, v8, v9, v1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;)V
 
     .line 17
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;
 
-    iget-object v5, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v5, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     invoke-static {v1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->b(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;)I
 
@@ -243,7 +243,7 @@
 
     sub-int/2addr v3, v6
 
-    invoke-static {v1, v5, v7, v6, v3}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;III)V
+    invoke-static {v1, v5, v7, v6, v3}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;III)V
 
     .line 18
     :cond_1
@@ -258,24 +258,24 @@
     .line 19
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;
 
-    iget-object v3, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v3, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     invoke-static {v1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->b(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;)I
 
     move-result v5
 
-    sget-object v7, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v7, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v7}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v7}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v7
 
-    invoke-static {v1, v3, v5, v2, v7}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;)V
+    invoke-static {v1, v3, v5, v2, v7}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;)V
 
     .line 20
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;
 
-    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     invoke-static {v1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->b(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;)I
 
@@ -285,20 +285,20 @@
 
     const v5, 0x7fffffff
 
-    invoke-static {v1, v2, v3, v4, v5}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;III)V
+    invoke-static {v1, v2, v3, v4, v5}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;III)V
 
     .line 21
     :cond_2
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;
 
-    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-static {v1, v2, v0}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;Ljava/util/List;)V
+    invoke-static {v1, v2, v0}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;)V
 
     .line 22
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;
 
-    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask$onMergeNonEmptyList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     invoke-static {v1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->b(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;)I
 
@@ -306,7 +306,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v1, v2, v3, v4, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/d;IZI)V
+    invoke-static {v1, v2, v3, v4, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;IZI)V
 
     return-object v0
 .end method

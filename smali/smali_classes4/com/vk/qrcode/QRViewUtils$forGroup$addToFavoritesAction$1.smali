@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/group/Group;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/group/Group;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $action:Lcom/vk/qrcode/i;
+.field final synthetic $action:Lcom/vk/qrcode/QRTypes7;
 
 .field final synthetic $group:Lcom/vk/dto/group/Group;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/group/Group;Lcom/vk/qrcode/i;)V
+.method constructor <init>(Lcom/vk/dto/group/Group;Lcom/vk/qrcode/QRTypes7;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forGroup$addToFavoritesAction$1;->$group:Lcom/vk/dto/group/Group;
 
-    iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$forGroup$addToFavoritesAction$1;->$action:Lcom/vk/qrcode/i;
+    iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$forGroup$addToFavoritesAction$1;->$action:Lcom/vk/qrcode/QRTypes7;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/qrcode/QRViewUtils$forGroup$addToFavoritesAction$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -69,7 +69,7 @@
     iget-boolean v6, v1, Lcom/vk/dto/group/Group;->h:Z
 
     .line 3
-    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$forGroup$addToFavoritesAction$1;->$action:Lcom/vk/qrcode/i;
+    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$forGroup$addToFavoritesAction$1;->$action:Lcom/vk/qrcode/QRTypes7;
 
     new-instance v3, Lcom/vk/qrcode/QRViewUtils$forGroup$addToFavoritesAction$1$1;
 
@@ -81,7 +81,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/qrcode/l;->a(Lcom/vk/qrcode/l;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/qrcode/QRTypes6;->a(Lcom/vk/qrcode/QRTypes6;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$forGroup$addToFavoritesAction$1;->$group:Lcom/vk/dto/group/Group;

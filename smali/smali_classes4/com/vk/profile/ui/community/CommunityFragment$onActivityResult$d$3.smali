@@ -3,7 +3,7 @@
 .source "CommunityFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,7 +56,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(II)I
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(II)I
 
     move-result v0
 
@@ -72,29 +72,29 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vtosters/lite/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     if-eqz v0, :cond_1
 
     const-string v1, "unreadCount"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/api/i;->d(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->d(I)V
 
     .line 3
     :cond_1
     iget-object v0, p0, Lcom/vk/profile/ui/community/CommunityFragment$onActivityResult$d$3;->a:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->g(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/lists/g;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->g(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/lists/DiffListDataSet;
 
     move-result-object v0
 
@@ -102,7 +102,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/profile/ui/community/CommunityFragment$onActivityResult$d$3$1;-><init>(Lcom/vk/profile/ui/community/CommunityFragment$onActivityResult$d$3;Ljava/lang/Integer;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/o;->a(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/ListDataSet;->a(Lkotlin/jvm/b/Functions1;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "MusicSearchSuggestionsContainer.kt"
 
 # interfaces
-.implements Lcom/vk/music/model/p$a;
+.implements Lcom/vk/music/model/MusicSearchSuggestionModel$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/model/p;)V
+    value = Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/model/MusicSearchSuggestionModel;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/music/model/p;)V
+.method public a(Lcom/vk/music/model/MusicSearchSuggestionModel;)V
     .locals 0
 
     .line 1
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/model/p;Ljava/lang/String;)V
+.method public a(Lcom/vk/music/model/MusicSearchSuggestionModel;Ljava/lang/String;)V
     .locals 0
 
     .line 2
@@ -62,7 +62,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/music/model/p;)V
+.method public b(Lcom/vk/music/model/MusicSearchSuggestionModel;)V
     .locals 0
 
     return-void

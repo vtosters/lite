@@ -3,12 +3,12 @@
 .source "MLFeatures.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/ml/MLFeatures;->a(Landroid/content/Context;Landroid/graphics/Bitmap;)Lc/a/t;
+    value = Lcom/vk/ml/MLFeatures;->a(Landroid/content/Context;Landroid/graphics/Bitmap;)Lio/reactivex/Single;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation

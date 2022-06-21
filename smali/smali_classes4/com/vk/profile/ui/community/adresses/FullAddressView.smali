@@ -16,7 +16,7 @@
 
 .field private G:I
 
-.field private H:Lio/reactivex/disposables/b;
+.field private H:Lio/reactivex/disposables/Disposable;
 
 .field private I:Landroid/location/Location;
 
@@ -53,7 +53,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/community/adresses/FullAddressView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/community/adresses/FullAddressView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -73,7 +73,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/community/adresses/FullAddressView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/community/adresses/FullAddressView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -126,7 +126,7 @@
 
     const-string v2, "findViewById(R.id.title)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/TextView;
 
@@ -141,7 +141,7 @@
 
     const-string v2, "findViewById(R.id.metro_frame)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/profile/ui/community/adresses/FullAddressView;->e:Landroid/view/View;
 
@@ -154,7 +154,7 @@
 
     const-string v2, "findViewById(R.id.metro)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/TextView;
 
@@ -169,7 +169,7 @@
 
     const-string v2, "findViewById(R.id.address)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/TextView;
 
@@ -184,7 +184,7 @@
 
     const-string v2, "findViewById(R.id.phone)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/TextView;
 
@@ -199,7 +199,7 @@
 
     const-string v2, "findViewById(R.id.recent)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/TextView;
 
@@ -214,7 +214,7 @@
 
     const-string v2, "findViewById(R.id.time_table)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/view/ViewGroup;
 
@@ -229,7 +229,7 @@
 
     const-string v2, "findViewById(R.id.create_a_route)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/profile/ui/community/adresses/FullAddressView;->E:Landroid/view/View;
 
@@ -242,7 +242,7 @@
 
     const-string v2, "findViewById<View>(R.id.phone_frame)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/profile/ui/community/adresses/FullAddressView;->h:Landroid/view/View;
 
@@ -255,7 +255,7 @@
 
     const-string v2, "findViewById(R.id.metro_drawable)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/ImageView;
 
@@ -270,7 +270,7 @@
 
     const-string v2, "findViewById(R.id.taxi)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/TextView;
 
@@ -423,10 +423,10 @@
     const v2, 0x7f04059d
 
     .line 36
-    invoke-static {v5, v2}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v5, v2}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 37
-    invoke-static {v4, v2}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v4, v2}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 38
     invoke-virtual {v3}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -508,7 +508,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -667,24 +667,24 @@
 
     const-string v4, "title.context"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aget v2, v2, v3
 
     float-to-int v2, v2
 
-    invoke-static {v1, v2}, Lcom/vk/core/utils/a;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/vk/core/utils/AddressesUtils;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-direct {p1, v1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
     .line 50
-    new-instance v1, Lb/h/g/s/a;
+    new-instance v1, Lb/h/g/s/ForegroundDynamicColorSpan;
 
     const v2, 0x7f04059d
 
-    invoke-direct {v1, v2}, Lb/h/g/s/a;-><init>(I)V
+    invoke-direct {v1, v2}, Lb/h/g/s/ForegroundDynamicColorSpan;-><init>(I)V
 
     invoke-virtual {p1}, Landroid/text/SpannableString;->length()I
 
@@ -693,7 +693,7 @@
     invoke-virtual {p1, v1, v3, v2, v3}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
     .line 51
-    invoke-static {}, Lcom/vk/core/utils/f;->a()Landroid/text/SpannableString;
+    invoke-static {}, Lcom/vk/core/utils/SpannableUtils1;->a()Landroid/text/SpannableString;
 
     move-result-object v1
 
@@ -718,11 +718,11 @@
     .locals 1
 
     .line 40
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/FullAddressView;->H:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/FullAddressView;->H:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -745,13 +745,13 @@
     .line 3
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/FullAddressView;->a:Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v1
 
     iget-object v2, p2, Lcom/vk/dto/profile/Address;->d:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v2}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -802,7 +802,7 @@
 
     const-string v3, "metroIcon.context"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0805c1
 
@@ -822,7 +822,7 @@
 
     const-string v3, "DrawableCompat.wrap(metr\u2026o_station_24)!!).mutate()"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     iget-object v3, p2, Lcom/vk/dto/profile/Address;->G:Lcom/vk/dto/profile/MetroStation;
@@ -848,7 +848,7 @@
 
     .line 11
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
@@ -925,9 +925,9 @@
 
     const-string v5, "context"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p2, v4, v3}, Lcom/vk/profile/utils/a;->a(Lcom/vk/dto/profile/Address;Landroid/content/Context;Z)Ljava/lang/CharSequence;
+    invoke-static {p2, v4, v3}, Lcom/vk/profile/utils/AddressesUtils;->a(Lcom/vk/dto/profile/Address;Landroid/content/Context;Z)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -1013,7 +1013,7 @@
 
     iget v10, v6, Lcom/vk/dto/profile/Timetable$WorkTime;->a:I
 
-    invoke-static {v10}, Lcom/vk/profile/utils/a;->a(I)Ljava/lang/String;
+    invoke-static {v10}, Lcom/vk/profile/utils/AddressesUtils;->a(I)Ljava/lang/String;
 
     move-result-object v10
 
@@ -1023,7 +1023,7 @@
 
     iget v10, v6, Lcom/vk/dto/profile/Timetable$WorkTime;->c:I
 
-    invoke-static {v10}, Lcom/vk/profile/utils/a;->a(I)Ljava/lang/String;
+    invoke-static {v10}, Lcom/vk/profile/utils/AddressesUtils;->a(I)Ljava/lang/String;
 
     move-result-object v10
 
@@ -1040,7 +1040,7 @@
     .line 27
     iget v10, v6, Lcom/vk/dto/profile/Timetable$WorkTime;->d:I
 
-    invoke-static {v10}, Lcom/vk/profile/utils/a;->a(I)Ljava/lang/String;
+    invoke-static {v10}, Lcom/vk/profile/utils/AddressesUtils;->a(I)Ljava/lang/String;
 
     move-result-object v10
 
@@ -1050,7 +1050,7 @@
 
     iget v6, v6, Lcom/vk/dto/profile/Timetable$WorkTime;->b:I
 
-    invoke-static {v6}, Lcom/vk/profile/utils/a;->a(I)Ljava/lang/String;
+    invoke-static {v6}, Lcom/vk/profile/utils/AddressesUtils;->a(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1078,7 +1078,7 @@
 
     iget v10, v6, Lcom/vk/dto/profile/Timetable$WorkTime;->a:I
 
-    invoke-static {v10}, Lcom/vk/profile/utils/a;->a(I)Ljava/lang/String;
+    invoke-static {v10}, Lcom/vk/profile/utils/AddressesUtils;->a(I)Ljava/lang/String;
 
     move-result-object v10
 
@@ -1088,7 +1088,7 @@
 
     iget v6, v6, Lcom/vk/dto/profile/Timetable$WorkTime;->b:I
 
-    invoke-static {v6}, Lcom/vk/profile/utils/a;->a(I)Ljava/lang/String;
+    invoke-static {v6}, Lcom/vk/profile/utils/AddressesUtils;->a(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1120,13 +1120,13 @@
 
     move-result-object v3
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-wide v4, p2, Lcom/vk/dto/profile/PlainAddress;->b:D
 
     iget-wide v6, p2, Lcom/vk/dto/profile/PlainAddress;->c:D
 
-    invoke-static {v3, v4, v5, v6, v7}, Lcom/vk/profile/utils/e;->a(Landroid/content/Context;DD)Ljava/util/List;
+    invoke-static {v3, v4, v5, v6, v7}, Lcom/vk/profile/utils/RouteToUtils;->a(Landroid/content/Context;DD)Ljava/util/List;
 
     move-result-object v3
 
@@ -1182,34 +1182,34 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v1 .. v7}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;)Lc/a/m;
+    invoke-static/range {v1 .. v7}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 35
     sget-object v1, Lcom/vk/profile/ui/community/adresses/FullAddressView$c;->a:Lcom/vk/profile/ui/community/adresses/FullAddressView$c;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 36
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->m()Lc/a/s;
+    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->m()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 37
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1218,17 +1218,17 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/ui/community/adresses/FullAddressView$d;-><init>(Lcom/vk/profile/ui/community/adresses/FullAddressView;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/profile/ui/community/adresses/FullAddressView;->H:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/profile/ui/community/adresses/FullAddressView;->H:Lio/reactivex/disposables/Disposable;
 
     .line 39
     :cond_d
     iget-boolean p2, p2, Lcom/vk/dto/profile/Address;->I:Z
 
-    invoke-static {p1, p2}, Lcom/vk/profile/e/f;->a(IZ)V
+    invoke-static {p1, p2}, Lcom/vk/profile/e/ProfileTracker1;->a(IZ)V
 
     return-void
 .end method
@@ -1341,11 +1341,11 @@
     return-object v0
 .end method
 
-.method public final getTaxiImageDisposable()Lio/reactivex/disposables/b;
+.method public final getTaxiImageDisposable()Lio/reactivex/disposables/Disposable;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/FullAddressView;->H:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/FullAddressView;->H:Lio/reactivex/disposables/Disposable;
 
     return-object v0
 .end method
@@ -1412,11 +1412,11 @@
     return-void
 .end method
 
-.method public final setTaxiImageDisposable(Lio/reactivex/disposables/b;)V
+.method public final setTaxiImageDisposable(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/FullAddressView;->H:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/FullAddressView;->H:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

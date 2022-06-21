@@ -13,7 +13,7 @@
 
 
 # static fields
-.field static final synthetic F:[Lkotlin/u/j;
+.field static final synthetic F:[Lkotlin/u/KProperty5;
 
 .field private static G:I
 
@@ -37,9 +37,9 @@
 
 .field private a:Lcom/vk/stickers/LongtapRecyclerView$b;
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
-.field private final c:Lkotlin/e;
+.field private final c:Lkotlin/Lazy2;
 
 .field private d:I
 
@@ -47,9 +47,9 @@
 
 .field private f:Landroid/view/MotionEvent;
 
-.field private g:Lio/reactivex/disposables/b;
+.field private g:Lio/reactivex/disposables/Disposable;
 
-.field private h:Lio/reactivex/disposables/b;
+.field private h:Lio/reactivex/disposables/Disposable;
 
 
 # direct methods
@@ -58,13 +58,13 @@
 
     const/4 v0, 0x2
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/stickers/LongtapRecyclerView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -72,9 +72,9 @@
 
     const-string v4, "getConfig()Landroid/view/ViewConfiguration;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -84,7 +84,7 @@
 
     const-class v2, Lcom/vk/stickers/LongtapRecyclerView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -92,21 +92,21 @@
 
     const-string v4, "getTouchSlop()I"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/stickers/LongtapRecyclerView;->F:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/stickers/LongtapRecyclerView;->F:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/stickers/LongtapRecyclerView$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stickers/LongtapRecyclerView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stickers/LongtapRecyclerView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -144,22 +144,22 @@
 
     invoke-direct {p1, p0}, Lcom/vk/stickers/LongtapRecyclerView$config$2;-><init>(Lcom/vk/stickers/LongtapRecyclerView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stickers/LongtapRecyclerView;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stickers/LongtapRecyclerView;->b:Lkotlin/Lazy2;
 
     .line 5
     new-instance p1, Lcom/vk/stickers/LongtapRecyclerView$touchSlop$2;
 
     invoke-direct {p1, p0}, Lcom/vk/stickers/LongtapRecyclerView$touchSlop$2;-><init>(Lcom/vk/stickers/LongtapRecyclerView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stickers/LongtapRecyclerView;->c:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stickers/LongtapRecyclerView;->c:Lkotlin/Lazy2;
 
     .line 6
     new-instance p1, Ljava/util/ArrayList;
@@ -249,7 +249,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -650,15 +650,15 @@
 .method private final getConfig()Landroid/view/ViewConfiguration;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/stickers/LongtapRecyclerView;->F:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/stickers/LongtapRecyclerView;->F:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -670,15 +670,15 @@
 .method private final getTouchSlop()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->c:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/stickers/LongtapRecyclerView;->F:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/stickers/LongtapRecyclerView;->F:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -703,25 +703,25 @@
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {v0, v1, v2}, Lc/a/m;->j(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-static {v0, v1, v2}, Lio/reactivex/Observable;->j(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -730,11 +730,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stickers/LongtapRecyclerView$c;-><init>(Lcom/vk/stickers/LongtapRecyclerView;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->g:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->g:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -759,25 +759,25 @@
 
     const-wide/16 v1, 0x3e8
 
-    invoke-static {v1, v2, v0}, Lc/a/m;->j(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-static {v1, v2, v0}, Lio/reactivex/Observable;->j(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -786,11 +786,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stickers/LongtapRecyclerView$d;-><init>(Lcom/vk/stickers/LongtapRecyclerView;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->h:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->h:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -808,17 +808,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->g:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->g:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->g:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->g:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -827,17 +827,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->h:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->h:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->h:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->h:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -952,11 +952,11 @@
 
     .line 5
     :cond_2
-    iget-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->g:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stickers/LongtapRecyclerView;->g:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_3
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 6
     :cond_3

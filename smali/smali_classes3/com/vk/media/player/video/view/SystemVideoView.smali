@@ -10,7 +10,7 @@
 # instance fields
 .field private B:Landroid/media/MediaPlayer$OnPreparedListener;
 
-.field private final C:Lcom/vk/media/player/video/h;
+.field private final C:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
 
 .field private final D:Lcom/vk/media/player/video/VideoScale;
 
@@ -88,15 +88,15 @@
     iput v0, p0, Lcom/vk/media/player/video/view/SystemVideoView;->b:I
 
     .line 4
-    new-instance v0, Lcom/vk/media/player/video/h;
+    new-instance v0, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
 
     new-instance v1, Lcom/vk/media/player/video/view/SystemVideoView$a;
 
     invoke-direct {v1, p0}, Lcom/vk/media/player/video/view/SystemVideoView$a;-><init>(Lcom/vk/media/player/video/view/SystemVideoView;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/media/player/video/h;-><init>(Lcom/vk/media/player/video/h$a;)V
+    invoke-direct {v0, v1}, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;-><init>(Lcom/vk/media/player/video/VideoPlayerAudioFocusListener$a;)V
 
-    iput-object v0, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/h;
+    iput-object v0, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
 
     .line 5
     new-instance v0, Lcom/vk/media/player/video/VideoScale;
@@ -189,15 +189,15 @@
     iput p2, p0, Lcom/vk/media/player/video/view/SystemVideoView;->b:I
 
     .line 21
-    new-instance p2, Lcom/vk/media/player/video/h;
+    new-instance p2, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
 
     new-instance v0, Lcom/vk/media/player/video/view/SystemVideoView$a;
 
     invoke-direct {v0, p0}, Lcom/vk/media/player/video/view/SystemVideoView$a;-><init>(Lcom/vk/media/player/video/view/SystemVideoView;)V
 
-    invoke-direct {p2, v0}, Lcom/vk/media/player/video/h;-><init>(Lcom/vk/media/player/video/h$a;)V
+    invoke-direct {p2, v0}, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;-><init>(Lcom/vk/media/player/video/VideoPlayerAudioFocusListener$a;)V
 
-    iput-object p2, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/h;
+    iput-object p2, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
 
     .line 22
     new-instance p2, Lcom/vk/media/player/video/VideoScale;
@@ -290,15 +290,15 @@
     iput p2, p0, Lcom/vk/media/player/video/view/SystemVideoView;->b:I
 
     .line 38
-    new-instance p2, Lcom/vk/media/player/video/h;
+    new-instance p2, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
 
     new-instance p3, Lcom/vk/media/player/video/view/SystemVideoView$a;
 
     invoke-direct {p3, p0}, Lcom/vk/media/player/video/view/SystemVideoView$a;-><init>(Lcom/vk/media/player/video/view/SystemVideoView;)V
 
-    invoke-direct {p2, p3}, Lcom/vk/media/player/video/h;-><init>(Lcom/vk/media/player/video/h$a;)V
+    invoke-direct {p2, p3}, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;-><init>(Lcom/vk/media/player/video/VideoPlayerAudioFocusListener$a;)V
 
-    iput-object p2, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/h;
+    iput-object p2, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
 
     .line 39
     new-instance p2, Lcom/vk/media/player/video/VideoScale;
@@ -517,11 +517,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/media/player/k/b;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {v0}, Lcom/vk/media/player/k/PlayerUtils;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/h;
+    iget-object v1, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
 
@@ -760,11 +760,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/media/player/k/b;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {v0}, Lcom/vk/media/player/k/PlayerUtils;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/h;
+    iget-object v1, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
 
     const/4 v2, 0x1
 
@@ -778,19 +778,19 @@
     if-ne v0, v2, :cond_0
 
     .line 4
-    iget-object v0, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/h;
+    iget-object v0, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
 
-    invoke-virtual {v0, v2}, Lcom/vk/media/player/video/h;->onAudioFocusChange(I)V
+    invoke-virtual {v0, v2}, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;->onAudioFocusChange(I)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/h;
+    iget-object v0, p0, Lcom/vk/media/player/video/view/SystemVideoView;->C:Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/media/player/video/h;->onAudioFocusChange(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/player/video/VideoPlayerAudioFocusListener;->onAudioFocusChange(I)V
 
     :goto_0
     return-void

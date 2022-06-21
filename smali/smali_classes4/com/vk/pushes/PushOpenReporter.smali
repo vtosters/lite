@@ -129,7 +129,7 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lb/h/c/q/p;
+    new-instance v0, Lcom/vk/api/notifications/NotificationsTrackPushInteraction;
 
     const-string v1, "stat_key"
 
@@ -139,25 +139,25 @@
 
     const-string v1, "intent.getStringExtra(PushIntentKeys.STAT_KEY)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "open"
 
-    invoke-direct {v0, p1, v1}, Lb/h/c/q/p;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/api/notifications/NotificationsTrackPushInteraction;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     const/4 v1, 0x1
 
     .line 2
-    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 3
     sget-object v0, Lcom/vk/pushes/PushOpenReporter$trackInteraction$1;->a:Lcom/vk/pushes/PushOpenReporter$trackInteraction$1;
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Lkotlin/jvm/b/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -166,7 +166,7 @@
     .locals 8
 
     .line 1
-    invoke-static {}, Lcom/vk/pushes/f;->a()Lcom/vk/pushes/e;
+    invoke-static {}, Lcom/vk/pushes/PushBridge1;->a()Lcom/vk/pushes/PushBridge;
 
     move-result-object v0
 
@@ -185,11 +185,11 @@
     move-result-object v3
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {p1}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result p1
 
@@ -206,7 +206,7 @@
     const/4 v7, 0x0
 
     .line 5
-    invoke-static/range {v0 .. v7}, Lcom/vk/pushes/e$a;->a(Lcom/vk/pushes/e;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v7}, Lcom/vk/pushes/PushBridge$a;->a(Lcom/vk/pushes/PushBridge;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -217,13 +217,13 @@
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
+    sget-object v0, Lcom/vk/core/ui/v/UiTracker;->g:Lcom/vk/core/ui/v/UiTracker;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/a;->h()Lcom/vk/core/ui/v/f;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTracker;->h()Lcom/vk/core/ui/v/UiTrackingListeners4;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/core/ui/v/f;->b()V
+    invoke-interface {v0}, Lcom/vk/core/ui/v/UiTrackingListeners4;->b()V
 
     .line 3
     invoke-direct {p0, p1}, Lcom/vk/pushes/PushOpenReporter;->c(Landroid/content/Intent;)Z

@@ -3,12 +3,12 @@
 .source "VkUiConnectBridge.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(ILjava/util/List;Lcom/vk/webapp/internal/data/c;I)V
+    value = Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(ILjava/util/List;Lcom/vk/webapp/internal/data/JsApiMethodType1;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-.field final synthetic b:Lcom/vk/webapp/internal/data/c;
+.field final synthetic b:Lcom/vk/webapp/internal/data/JsApiMethodType1;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;Lcom/vk/webapp/internal/data/c;)V
+.method constructor <init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;Lcom/vk/webapp/internal/data/JsApiMethodType1;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$w;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    iput-object p2, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$w;->b:Lcom/vk/webapp/internal/data/c;
+    iput-object p2, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$w;->b:Lcom/vk/webapp/internal/data/JsApiMethodType1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,15 +56,15 @@
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$w;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    iget-object v1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$w;->b:Lcom/vk/webapp/internal/data/c;
+    iget-object v1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$w;->b:Lcom/vk/webapp/internal/data/JsApiMethodType1;
 
-    invoke-virtual {v1}, Lcom/vk/webapp/internal/data/c;->c()Lcom/vk/webapp/internal/data/JsApiMethodType;
+    invoke-virtual {v1}, Lcom/vk/webapp/internal/data/JsApiMethodType1;->c()Lcom/vk/webapp/internal/data/JsApiMethodType;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$w;->b:Lcom/vk/webapp/internal/data/c;
+    iget-object v2, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$w;->b:Lcom/vk/webapp/internal/data/JsApiMethodType1;
 
-    invoke-virtual {v2}, Lcom/vk/webapp/internal/data/c;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/webapp/internal/data/JsApiMethodType1;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -72,7 +72,7 @@
 
     const-string v4, "it"
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -82,7 +82,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
 .end method

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -43,7 +43,7 @@
 
     sget-object v1, Lcom/vk/friends/recommendations/SearchFriendsItem$Type;->ICON_TEXT_USERS:Lcom/vk/friends/recommendations/SearchFriendsItem$Type;
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -73,7 +73,7 @@
 
     move-object v0, v8
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/friends/recommendations/SearchFriendsItem;-><init>(Lcom/vk/friends/recommendations/SearchFriendsItem$Type;IIILjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/friends/recommendations/SearchFriendsItem;-><init>(Lcom/vk/friends/recommendations/SearchFriendsItem$Type;IIILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v8
 .end method
@@ -86,7 +86,7 @@
 
     sget-object v1, Lcom/vk/friends/recommendations/SearchFriendsItem$Type;->ICON_TEXT:Lcom/vk/friends/recommendations/SearchFriendsItem$Type;
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -125,7 +125,7 @@
 
     sget-object v1, Lcom/vk/friends/recommendations/SearchFriendsItem$Type;->ICON_TEXT:Lcom/vk/friends/recommendations/SearchFriendsItem$Type;
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -155,7 +155,7 @@
 
     move-object v0, v8
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/friends/recommendations/SearchFriendsItem;-><init>(Lcom/vk/friends/recommendations/SearchFriendsItem$Type;IIILjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/friends/recommendations/SearchFriendsItem;-><init>(Lcom/vk/friends/recommendations/SearchFriendsItem$Type;IIILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v8
 .end method
@@ -168,7 +168,7 @@
 
     sget-object v1, Lcom/vk/friends/recommendations/SearchFriendsItem$Type;->ICON_TEXT:Lcom/vk/friends/recommendations/SearchFriendsItem$Type;
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -198,7 +198,7 @@
 
     move-object v0, v8
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/friends/recommendations/SearchFriendsItem;-><init>(Lcom/vk/friends/recommendations/SearchFriendsItem$Type;IIILjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/friends/recommendations/SearchFriendsItem;-><init>(Lcom/vk/friends/recommendations/SearchFriendsItem$Type;IIILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v8
 .end method

@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$t$b;->a:Lcom/vk/common/links/OpenFunctionsKt$t;
 
-    iget-object p1, p1, Lcom/vk/common/links/OpenFunctionsKt$t;->b:Lcom/vk/common/links/f;
+    iget-object p1, p1, Lcom/vk/common/links/OpenFunctionsKt$t;->b:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/common/links/f;->a()V
+    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->a()V
 
     :cond_0
     return-void

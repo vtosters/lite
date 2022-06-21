@@ -3,7 +3,7 @@
 .source "StoryCreateQuestionDataProvider.kt"
 
 # interfaces
-.implements Lcom/vk/stories/clickable/dialogs/question/e;
+.implements Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract1;
 
 
 # instance fields
@@ -13,10 +13,10 @@
 
 .field private final c:[Ljava/lang/String;
 
-.field private final d:Lcom/vk/stories/util/h;
+.field private final d:Lcom/vk/stories/util/CycleDataSwitcher;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/stories/util/h<",
+            "Lcom/vk/stories/util/CycleDataSwitcher<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -24,10 +24,10 @@
     .end annotation
 .end field
 
-.field private final e:Lcom/vk/stories/util/h;
+.field private final e:Lcom/vk/stories/util/CycleDataSwitcher;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/stories/util/h<",
+            "Lcom/vk/stories/util/CycleDataSwitcher<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Object;",
             ">;"
@@ -54,7 +54,7 @@
     const v1, 0x7f0601ec
 
     .line 2
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v1
 
@@ -69,7 +69,7 @@
     const v1, 0x7f0601b5
 
     .line 3
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v1
 
@@ -84,7 +84,7 @@
     const v1, 0x7f060322
 
     .line 4
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v1
 
@@ -99,7 +99,7 @@
     const v1, 0x7f0600f5
 
     .line 5
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v1
 
@@ -114,7 +114,7 @@
     const v1, 0x7f060260
 
     .line 6
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v1
 
@@ -129,7 +129,7 @@
     const v1, 0x7f060023
 
     .line 7
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v1
 
@@ -144,7 +144,7 @@
     const v1, 0x7f060271
 
     .line 8
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v1
 
@@ -159,7 +159,7 @@
     const v1, 0x7f060035
 
     .line 9
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v1
 
@@ -179,7 +179,7 @@
     const v1, 0x7f120f30
 
     .line 11
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -188,7 +188,7 @@
     const v1, 0x7f120f31
 
     .line 12
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -197,7 +197,7 @@
     const v1, 0x7f120f32
 
     .line 13
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -206,7 +206,7 @@
     const v1, 0x7f120f33
 
     .line 14
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -215,7 +215,7 @@
     const v1, 0x7f120f34
 
     .line 15
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -224,7 +224,7 @@
     const v1, 0x7f120f35
 
     .line 16
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -233,7 +233,7 @@
     const v1, 0x7f120f36
 
     .line 17
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -247,7 +247,7 @@
     const v1, 0x7f120f12
 
     .line 19
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -256,7 +256,7 @@
     const v1, 0x7f120f13
 
     .line 20
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -265,7 +265,7 @@
     const v1, 0x7f120f14
 
     .line 21
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -274,7 +274,7 @@
     const v1, 0x7f120f15
 
     .line 22
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -283,7 +283,7 @@
     const v1, 0x7f120f16
 
     .line 23
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -292,7 +292,7 @@
     const v1, 0x7f120f17
 
     .line 24
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -301,7 +301,7 @@
     const v1, 0x7f120f18
 
     .line 25
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -311,7 +311,7 @@
     iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->c:[Ljava/lang/String;
 
     .line 27
-    new-instance v0, Lcom/vk/stories/util/h;
+    new-instance v0, Lcom/vk/stories/util/CycleDataSwitcher;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->b:[Ljava/lang/String;
 
@@ -321,12 +321,12 @@
 
     invoke-direct {v4, p0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider$textSwitcher$1;-><init>(Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;)V
 
-    invoke-direct {v0, v1, v3, v4}, Lcom/vk/stories/util/h;-><init>([Ljava/lang/Object;[Ljava/lang/Object;Lkotlin/jvm/b/c;)V
+    invoke-direct {v0, v1, v3, v4}, Lcom/vk/stories/util/CycleDataSwitcher;-><init>([Ljava/lang/Object;[Ljava/lang/Object;Lkotlin/jvm/b/Functions1;)V
 
-    iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->d:Lcom/vk/stories/util/h;
+    iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->d:Lcom/vk/stories/util/CycleDataSwitcher;
 
     .line 28
-    new-instance v0, Lcom/vk/stories/util/h;
+    new-instance v0, Lcom/vk/stories/util/CycleDataSwitcher;
 
     iget-object v6, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->a:[Ljava/lang/Integer;
 
@@ -340,9 +340,9 @@
 
     move-object v5, v0
 
-    invoke-direct/range {v5 .. v10}, Lcom/vk/stories/util/h;-><init>([Ljava/lang/Object;[Ljava/lang/Object;Lkotlin/jvm/b/c;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v5 .. v10}, Lcom/vk/stories/util/CycleDataSwitcher;-><init>([Ljava/lang/Object;[Ljava/lang/Object;Lkotlin/jvm/b/Functions1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->e:Lcom/vk/stories/util/h;
+    iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->e:Lcom/vk/stories/util/CycleDataSwitcher;
 
     const-string v0, ""
 
@@ -353,21 +353,21 @@
     iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->g:Ljava/lang/String;
 
     .line 31
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->d:Lcom/vk/stories/util/h;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->d:Lcom/vk/stories/util/CycleDataSwitcher;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->b:[Ljava/lang/String;
 
     aget-object v1, v1, v2
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/util/h;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/util/CycleDataSwitcher;->a(Ljava/lang/Object;)V
 
     .line 32
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->d:Lcom/vk/stories/util/h;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->d:Lcom/vk/stories/util/CycleDataSwitcher;
 
-    invoke-virtual {v0}, Lcom/vk/stories/util/h;->f()V
+    invoke-virtual {v0}, Lcom/vk/stories/util/CycleDataSwitcher;->f()V
 
     .line 33
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->e:Lcom/vk/stories/util/h;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->e:Lcom/vk/stories/util/CycleDataSwitcher;
 
     sget-object v1, Lcom/vk/stories/clickable/models/StoryQuestionInfo;->i:Lcom/vk/stories/clickable/models/StoryQuestionInfo$a;
 
@@ -383,12 +383,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/util/h;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/util/CycleDataSwitcher;->a(Ljava/lang/Object;)V
 
     .line 34
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->e:Lcom/vk/stories/util/h;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->e:Lcom/vk/stories/util/CycleDataSwitcher;
 
-    invoke-virtual {v0}, Lcom/vk/stories/util/h;->f()V
+    invoke-virtual {v0}, Lcom/vk/stories/util/CycleDataSwitcher;->f()V
 
     return-void
 .end method
@@ -457,13 +457,13 @@
     const p1, 0x7f120f2e
 
     .line 3
-    invoke-static {p1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "ResUtils.str(R.string.st\u2026uestion_style_impressive)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -478,13 +478,13 @@
     const p1, 0x7f120f2f
 
     .line 4
-    invoke-static {p1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "ResUtils.str(R.string.story_question_style_light)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -517,9 +517,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->e:Lcom/vk/stories/util/h;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->e:Lcom/vk/stories/util/CycleDataSwitcher;
 
-    invoke-virtual {v0}, Lcom/vk/stories/util/h;->b()I
+    invoke-virtual {v0}, Lcom/vk/stories/util/CycleDataSwitcher;->b()I
 
     move-result v0
 
@@ -539,22 +539,22 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->d:Lcom/vk/stories/util/h;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->d:Lcom/vk/stories/util/CycleDataSwitcher;
 
-    invoke-virtual {v0}, Lcom/vk/stories/util/h;->b()I
+    invoke-virtual {v0}, Lcom/vk/stories/util/CycleDataSwitcher;->b()I
 
     move-result v0
 
     .line 2
     :cond_0
-    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->d:Lcom/vk/stories/util/h;
+    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->d:Lcom/vk/stories/util/CycleDataSwitcher;
 
-    invoke-virtual {v1}, Lcom/vk/stories/util/h;->f()V
+    invoke-virtual {v1}, Lcom/vk/stories/util/CycleDataSwitcher;->f()V
 
     .line 3
-    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->d:Lcom/vk/stories/util/h;
+    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->d:Lcom/vk/stories/util/CycleDataSwitcher;
 
-    invoke-virtual {v1}, Lcom/vk/stories/util/h;->b()I
+    invoke-virtual {v1}, Lcom/vk/stories/util/CycleDataSwitcher;->b()I
 
     move-result v1
 
@@ -576,9 +576,9 @@
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->e:Lcom/vk/stories/util/h;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;->e:Lcom/vk/stories/util/CycleDataSwitcher;
 
-    invoke-virtual {v0}, Lcom/vk/stories/util/h;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/stories/util/CycleDataSwitcher;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -644,7 +644,7 @@
     :goto_0
     const-string v1, "impressive"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

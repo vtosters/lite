@@ -3,7 +3,7 @@
 .source "StorySendMessageDialog.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/stories/message/k;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/stories/message/StoryStickerItem;",
         "Landroid/view/View;",
         ">;"
     }
@@ -50,11 +50,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stories/message/k;)Landroid/view/View;
+.method public final a(Lcom/vk/stories/message/StoryStickerItem;)Landroid/view/View;
     .locals 5
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/stories/message/k;->b()Lcom/vk/dto/stickers/StickerItem;
+    invoke-virtual {p1}, Lcom/vk/stories/message/StoryStickerItem;->b()Lcom/vk/dto/stickers/StickerItem;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
 
     const-string v3, "context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, v2}, Lcom/vk/stickers/views/animation/VKAnimationView;-><init>(Landroid/content/Context;)V
 
@@ -122,7 +122,7 @@
 
     .line 7
     :goto_0
-    invoke-virtual {p1}, Lcom/vk/stories/message/k;->c()Z
+    invoke-virtual {p1}, Lcom/vk/stories/message/StoryStickerItem;->c()Z
 
     move-result v2
 
@@ -137,9 +137,9 @@
     :cond_1
     new-instance v2, Lcom/vk/stories/message/StorySendMessageDialog$addFastStickersViews$1$createStickerView$$inlined$apply$lambda$1;
 
-    invoke-direct {v2, v1, p0, p1, v0}, Lcom/vk/stories/message/StorySendMessageDialog$addFastStickersViews$1$createStickerView$$inlined$apply$lambda$1;-><init>(Landroid/widget/ImageView;Lcom/vk/stories/message/StorySendMessageDialog$addFastStickersViews$1;Lcom/vk/stories/message/k;Lcom/vk/dto/stickers/StickerItem;)V
+    invoke-direct {v2, v1, p0, p1, v0}, Lcom/vk/stories/message/StorySendMessageDialog$addFastStickersViews$1$createStickerView$$inlined$apply$lambda$1;-><init>(Landroid/widget/ImageView;Lcom/vk/stories/message/StorySendMessageDialog$addFastStickersViews$1;Lcom/vk/stories/message/StoryStickerItem;Lcom/vk/dto/stickers/StickerItem;)V
 
-    invoke-static {v1, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v1, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-object v1
 .end method
@@ -148,9 +148,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stories/message/k;
+    check-cast p1, Lcom/vk/stories/message/StoryStickerItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/message/StorySendMessageDialog$addFastStickersViews$1;->a(Lcom/vk/stories/message/k;)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/message/StorySendMessageDialog$addFastStickersViews$1;->a(Lcom/vk/stories/message/StoryStickerItem;)Landroid/view/View;
 
     move-result-object p1
 

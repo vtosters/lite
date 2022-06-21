@@ -1,12 +1,12 @@
 .class public final Lcom/vk/im/engine/internal/merge/dialogs/DialogMemberRemoveMergeTask;
-.super Lcom/vk/im/engine/internal/k/a;
+.super Lcom/vk/im/engine/internal/k/MergeTask;
 .source "DialogMemberRemoveMergeTask.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/internal/k/a<",
+        "Lcom/vk/im/engine/internal/k/MergeTask<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/MergeTask;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/internal/merge/dialogs/DialogMemberRemoveMergeTask;->a:I
 
@@ -66,11 +66,11 @@
 
 
 # virtual methods
-.method protected b(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
+.method protected b(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
     .locals 1
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -78,7 +78,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/engine/internal/merge/dialogs/DialogMemberRemoveMergeTask$onMerge$1;-><init>(Lcom/vk/im/engine/internal/merge/dialogs/DialogMemberRemoveMergeTask;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     const/4 p1, 0x1
 
@@ -90,11 +90,11 @@
     return-object p1
 .end method
 
-.method public bridge synthetic b(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic b(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogMemberRemoveMergeTask;->b(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/dialogs/DialogMemberRemoveMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
 
     move-result-object p1
 

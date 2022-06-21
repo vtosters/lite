@@ -3,12 +3,12 @@
 .source "StoryBoxConverter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionEmoji;)Lc/a/m;
+    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionEmoji;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -51,11 +51,11 @@
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Bitmap;)Lcom/vk/attachpicker/stickers/u;
+.method public final a(Landroid/graphics/Bitmap;)Lcom/vk/attachpicker/stickers/BitmapSticker;
     .locals 4
 
     .line 1
-    new-instance v0, Lcom/vk/attachpicker/stickers/u;
+    new-instance v0, Lcom/vk/attachpicker/stickers/BitmapSticker;
 
     .line 2
     iget-object v1, p0, Lcom/vk/stories/clickable/box/StoryBoxConverter$e;->a:Lcom/vk/stories/clickable/box/StoryBoxConverter;
@@ -77,7 +77,7 @@
     iget-object v3, p0, Lcom/vk/stories/clickable/box/StoryBoxConverter$e;->b:Ljava/lang/String;
 
     .line 5
-    invoke-direct {v0, p1, v1, v2, v3}, Lcom/vk/attachpicker/stickers/u;-><init>(Landroid/graphics/Bitmap;ILcom/vk/dto/stories/model/StickerType;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1, v2, v3}, Lcom/vk/attachpicker/stickers/BitmapSticker;-><init>(Landroid/graphics/Bitmap;ILcom/vk/dto/stories/model/StickerType;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -88,7 +88,7 @@
     .line 1
     check-cast p1, Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$e;->a(Landroid/graphics/Bitmap;)Lcom/vk/attachpicker/stickers/u;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$e;->a(Landroid/graphics/Bitmap;)Lcom/vk/attachpicker/stickers/BitmapSticker;
 
     move-result-object p1
 

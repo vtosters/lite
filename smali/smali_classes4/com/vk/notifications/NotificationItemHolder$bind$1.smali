@@ -3,7 +3,7 @@
 .source "NotificationItemHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -69,7 +69,7 @@
 
     const-string p1, "context"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/vk/notifications/NotificationItemHolder$bind$1;->this$0:Lcom/vk/notifications/NotificationItemHolder;
 
@@ -89,7 +89,7 @@
 
     iget-object p1, p0, Lcom/vk/notifications/NotificationItemHolder$bind$1;->this$0:Lcom/vk/notifications/NotificationItemHolder;
 
-    invoke-static {p1}, Lcom/vk/notifications/NotificationItemHolder;->a(Lcom/vk/notifications/NotificationItemHolder;)Lcom/vk/notifications/i;
+    invoke-static {p1}, Lcom/vk/notifications/NotificationItemHolder;->a(Lcom/vk/notifications/NotificationItemHolder;)Lcom/vk/notifications/NotificationsContainer;
 
     move-result-object v4
 
@@ -100,7 +100,7 @@
     move-result-object v5
 
     .line 3
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/notifications/i;Landroid/view/View;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/notifications/NotificationsContainer;Landroid/view/View;)V
 
     return-void
 .end method
@@ -113,7 +113,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/notifications/NotificationItemHolder$bind$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

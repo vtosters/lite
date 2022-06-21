@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "AddressMapInfoItem.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/profile/adapter/items/AddressMapInfoItem;",
         ">;",
         "Lme/grishka/appkit/views/UsableRecyclerView$g;"
@@ -55,7 +55,7 @@
     const v0, 0x7f0d04bb
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -240,7 +240,7 @@
 
     const-string v2, "parent.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0806bb
 
@@ -269,7 +269,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0803e3
 
@@ -309,21 +309,21 @@
     .line 23
     iget-object v1, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;->g:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {v1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {v1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v1
 
-    check-cast v1, Lcom/facebook/drawee/generic/a;
+    check-cast v1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const-string v3, "logo.hierarchy"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {}, Lcom/facebook/drawee/generic/RoundingParams;->i()Lcom/facebook/drawee/generic/RoundingParams;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {v1, v3}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     .line 24
     iget-object v1, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;->B:Lcom/vk/common/view/SolidColorView;
@@ -343,7 +343,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f06004c
 
@@ -366,61 +366,61 @@
 
     .line 27
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 28
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 29
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 30
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 31
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 32
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 33
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 34
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 35
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 36
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -429,7 +429,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
@@ -440,7 +440,7 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     move-object v1, v0
 
@@ -460,7 +460,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/profile/ui/StaticMapWrapper;->a(Landroid/view/ViewGroup;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
@@ -489,7 +489,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/profile/utils/a;->a(Lcom/vk/dto/profile/Address;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/profile/utils/AddressesUtils;->a(Lcom/vk/dto/profile/Address;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -538,11 +538,11 @@
 
     const-string v3, "workInfo.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x1
 
-    invoke-static {v1, v2, v3}, Lcom/vk/profile/utils/a;->a(Lcom/vk/dto/profile/Address;Landroid/content/Context;Z)Ljava/lang/CharSequence;
+    invoke-static {v1, v2, v3}, Lcom/vk/profile/utils/AddressesUtils;->a(Lcom/vk/dto/profile/Address;Landroid/content/Context;Z)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -557,15 +557,15 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/b;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/CommunityLocationController;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/presenter/f/b;->c()Z
+    invoke-virtual {v0}, Lcom/vk/profile/presenter/f/CommunityLocationController;->c()Z
 
     move-result v0
 
@@ -573,15 +573,15 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/api/i;->f()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->f()I
 
     move-result v0
 
@@ -605,7 +605,7 @@
     invoke-direct {p0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;->i0()V
 
     .line 3
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/b;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/CommunityLocationController;
 
     move-result-object v0
 
@@ -615,7 +615,7 @@
 
     const-string v3, "itemView"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -623,7 +623,7 @@
 
     const-string v3, "itemView.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v3, "android.permission.ACCESS_FINE_LOCATION"
 
@@ -635,7 +635,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/presenter/f/b;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/presenter/f/CommunityLocationController;->a(Z)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;->j0()Z
@@ -679,15 +679,15 @@
 
     .line 10
     :cond_0
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/b;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/CommunityLocationController;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lcom/vk/profile/presenter/f/b;->a(Lcom/vtosters/lite/api/i;)V
+    invoke-virtual {v0, v3}, Lcom/vk/profile/presenter/f/CommunityLocationController;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
 
     .line 11
     iget-object v0, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;->B:Lcom/vk/common/view/SolidColorView;
@@ -719,7 +719,7 @@
     .line 16
     iget-object v0, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;->g:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v1
 
@@ -731,7 +731,7 @@
     :goto_0
     iget-object v0, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;->c:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object p1
 
@@ -788,7 +788,7 @@
 
     const-string v3, "itemView"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -812,16 +812,16 @@
     sget-object v7, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder$onClick$2;->a:Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder$onClick$2;
 
     .line 8
-    invoke-virtual/range {v2 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v2 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     .line 9
-    new-instance v0, Lcom/vk/profile/e/b;
+    new-instance v0, Lcom/vk/profile/e/CommunityScreenTracker1;
 
-    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
+    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v2
 
@@ -829,22 +829,22 @@
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v0, v2}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {v0, v2}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     .line 10
-    invoke-static {v1}, Lcom/vk/profile/e/c;->a(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/profile/e/CommunityScreenTracker;->a(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string v1, "permission"
 
     .line 11
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->d(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->d(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 12
-    invoke-virtual {v0}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     goto :goto_0
 
@@ -852,23 +852,23 @@
     :cond_0
     new-instance v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$b;
 
-    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-static {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/b;
+    invoke-static {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/CommunityLocationController;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/profile/presenter/f/b;->d()I
+    invoke-virtual {v2}, Lcom/vk/profile/presenter/f/CommunityLocationController;->d()I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v3, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-virtual {v3}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
+    invoke-virtual {v3}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v3
 
@@ -884,30 +884,30 @@
     invoke-virtual {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$b;->h()Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$b;
 
     .line 15
-    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-static {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/b;
+    invoke-static {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/CommunityLocationController;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/profile/presenter/f/b;->b()Landroid/app/Activity;
+    invoke-virtual {v2}, Lcom/vk/profile/presenter/f/CommunityLocationController;->b()Landroid/app/Activity;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v0, v2}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v2}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 16
-    new-instance v0, Lcom/vk/profile/e/b;
+    new-instance v0, Lcom/vk/profile/e/CommunityScreenTracker1;
 
-    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
+    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v2
 
@@ -915,29 +915,29 @@
 
     iget v2, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v0, v2}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {v0, v2}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     .line 17
-    invoke-static {v1}, Lcom/vk/profile/e/c;->a(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/profile/e/CommunityScreenTracker;->a(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string v1, "address"
 
     .line 18
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->d(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->d(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 19
-    invoke-virtual {v0}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     :goto_0
     return-void
 
     .line 20
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -959,30 +959,30 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/b;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/CommunityLocationController;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/presenter/f/b;->f()Lcom/vk/dto/profile/Address;
+    invoke-virtual {v0}, Lcom/vk/profile/presenter/f/CommunityLocationController;->f()Lcom/vk/dto/profile/Address;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/b;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/CommunityLocationController;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/presenter/f/b;->f()Lcom/vk/dto/profile/Address;
+    invoke-virtual {v0}, Lcom/vk/profile/presenter/f/CommunityLocationController;->f()Lcom/vk/dto/profile/Address;
 
     move-result-object v0
 
@@ -990,15 +990,15 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object v0
 
@@ -1009,7 +1009,7 @@
 
     .line 4
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -1020,11 +1020,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     const-string v1, "item"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/profile/adapter/items/AddressMapInfoItem;
 

@@ -3,7 +3,7 @@
 .source "ProfileCounters.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/lang/Integer;",
         ">;"
@@ -63,11 +63,11 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/profile/data/ProfileCountersKt$photos$1$2;->$this_apply:Lcom/vk/profile/data/CountersWrapper;
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/CountersWrapper;->b()Lkotlin/jvm/b/b;
+    invoke-virtual {v0}, Lcom/vk/profile/data/CountersWrapper;->b()Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/socialgraph/list/dataprovider/FacebookContactsProvider;->a()Lc/a/m;
+    value = Lcom/vk/socialgraph/list/dataprovider/FacebookContactsProvider;->a()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final call()Lcom/vk/socialgraph/list/dataprovider/b;
+.method public final call()Lcom/vk/socialgraph/list/dataprovider/Contacts;
     .locals 5
 
     .line 2
@@ -78,7 +78,7 @@
     move-result-object v2
 
     .line 5
-    invoke-virtual {v2}, Lcom/facebook/GraphRequest;->a()Lcom/facebook/i;
+    invoke-virtual {v2}, Lcom/facebook/GraphRequest;->a()Lcom/facebook/GraphResponse;
 
     .line 6
     iget-object v0, v0, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
@@ -88,7 +88,7 @@
     if-nez v0, :cond_0
 
     .line 7
-    new-instance v0, Lcom/vk/socialgraph/list/dataprovider/b;
+    new-instance v0, Lcom/vk/socialgraph/list/dataprovider/Contacts;
 
     sget-object v2, Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;->FACEBOOK:Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;
 
@@ -104,9 +104,9 @@
 
     const-string v4, "accessToken.userId"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v2, v3, v1}, Lcom/vk/socialgraph/list/dataprovider/b;-><init>(Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v0, v2, v3, v1}, Lcom/vk/socialgraph/list/dataprovider/Contacts;-><init>(Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;Ljava/lang/String;Ljava/util/List;)V
 
     return-object v0
 
@@ -123,7 +123,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/socialgraph/list/dataprovider/FacebookContactsProvider$a;->call()Lcom/vk/socialgraph/list/dataprovider/b;
+    invoke-virtual {p0}, Lcom/vk/socialgraph/list/dataprovider/FacebookContactsProvider$a;->call()Lcom/vk/socialgraph/list/dataprovider/Contacts;
 
     move-result-object v0
 

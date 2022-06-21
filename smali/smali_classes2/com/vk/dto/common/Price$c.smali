@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -89,7 +89,7 @@
 
     const-string p1, "jsonObject.optString(ServerKeys.TEXT)"
 
-    invoke-static {v7, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     new-instance p1, Lcom/vk/dto/common/Price;
@@ -101,19 +101,19 @@
     return-object p1
 .end method
 
-.method public final a()Lcom/vk/dto/common/data/c;
+.method public final a()Lcom/vk/dto/common/data/JsonParser;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/common/Price;",
             ">;"
         }
     .end annotation
 
     .line 6
-    invoke-static {}, Lcom/vk/dto/common/Price;->v()Lcom/vk/dto/common/data/c;
+    invoke-static {}, Lcom/vk/dto/common/Price;->v()Lcom/vk/dto/common/data/JsonParser;
 
     move-result-object v0
 

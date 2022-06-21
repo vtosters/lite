@@ -80,7 +80,7 @@
 
     const-string v0, "amountText"
 
-    invoke-static {v0, p1}, Lcom/vk/dto/common/g;->a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Lcom/vk/dto/common/Price1;->a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v6, p1
 

@@ -3,7 +3,7 @@
 .source "ParameterizedSearchFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -59,9 +59,9 @@
     invoke-virtual {p1}, Lcom/vk/dto/common/SearchParams;->y1()V
 
     .line 2
-    sget-object p1, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object p1, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {p1}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
@@ -71,7 +71,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/search/fragment/ParameterizedSearchFragment$onCreateView$2;->this$0:Lcom/vk/search/fragment/ParameterizedSearchFragment;
@@ -93,7 +93,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/search/fragment/ParameterizedSearchFragment$onCreateView$2;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

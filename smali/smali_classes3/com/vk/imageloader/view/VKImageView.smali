@@ -1,5 +1,5 @@
 .class public Lcom/vk/imageloader/view/VKImageView;
-.super Lcom/vk/imageloader/view/a;
+.super Lcom/vk/imageloader/view/GenericVKImageView;
 .source "VKImageView.java"
 
 
@@ -12,19 +12,19 @@
 
 
 # static fields
-.field public static final Q:Lcom/facebook/imagepipeline/common/e;
+.field public static final Q:Lcom/facebook/imagepipeline/common/RotationOptions;
 
 
 # instance fields
-.field private E:Lcom/facebook/u/b/a/e;
+.field private E:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
-.field private F:Lcom/vk/imageloader/g;
+.field private F:Lcom/vk/imageloader/OnLoadCallback;
 
-.field private G:Lcom/facebook/imagepipeline/request/a;
+.field private G:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
-.field private H:Lcom/facebook/imagepipeline/request/a;
+.field private H:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
-.field private I:Lcom/facebook/imagepipeline/request/a;
+.field private I:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
 .field private J:I
 
@@ -46,11 +46,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/facebook/imagepipeline/common/e;->e()Lcom/facebook/imagepipeline/common/e;
+    invoke-static {}, Lcom/facebook/imagepipeline/common/RotationOptions;->e()Lcom/facebook/imagepipeline/common/RotationOptions;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/imageloader/view/VKImageView;->Q:Lcom/facebook/imagepipeline/common/e;
+    sput-object v0, Lcom/vk/imageloader/view/VKImageView;->Q:Lcom/facebook/imagepipeline/common/RotationOptions;
 
     return-void
 .end method
@@ -81,7 +81,7 @@
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/imageloader/view/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/imageloader/view/GenericVKImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x0
 
@@ -143,11 +143,11 @@
     .line 4
     sget-object v0, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->d()Lcom/facebook/u/b/a/e;
+    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->d()Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->E:Lcom/facebook/u/b/a/e;
+    iput-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->E:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 5
     :cond_0
@@ -194,7 +194,7 @@
     if-eqz p1, :cond_0
 
     .line 70
-    new-instance v0, Lcom/facebook/imagepipeline/common/d;
+    new-instance v0, Lcom/facebook/imagepipeline/common/ResizeOptions;
 
     invoke-virtual {p1}, Lcom/vk/imageloader/ImageScreenSize;->a()I
 
@@ -204,9 +204,9 @@
 
     move-result p1
 
-    invoke-direct {v0, v1, p1}, Lcom/facebook/imagepipeline/common/d;-><init>(II)V
+    invoke-direct {v0, v1, p1}, Lcom/facebook/imagepipeline/common/ResizeOptions;-><init>(II)V
 
-    invoke-virtual {p0, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/d;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p0, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/ResizeOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     :cond_0
     return-void
@@ -230,11 +230,11 @@
     return p1
 .end method
 
-.method static synthetic c(Lcom/vk/imageloader/view/VKImageView;)Lcom/vk/imageloader/g;
+.method static synthetic c(Lcom/vk/imageloader/view/VKImageView;)Lcom/vk/imageloader/OnLoadCallback;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/imageloader/view/VKImageView;->F:Lcom/vk/imageloader/g;
+    iget-object p0, p0, Lcom/vk/imageloader/view/VKImageView;->F:Lcom/vk/imageloader/OnLoadCallback;
 
     return-object p0
 .end method
@@ -312,7 +312,7 @@
 
 
 # virtual methods
-.method protected a(Lcom/facebook/u/e/d;)Lcom/facebook/u/e/d;
+.method protected a(Lcom/facebook/u/e/SimpleDraweeControllerBuilder;)Lcom/facebook/u/e/SimpleDraweeControllerBuilder;
     .locals 0
 
     return-object p1
@@ -488,13 +488,13 @@
     return-void
 .end method
 
-.method protected a(Lcom/facebook/drawee/generic/b;)V
+.method protected a(Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;)V
     .locals 1
 
     const/16 v0, 0x4b
 
     .line 9
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/b;->a(I)Lcom/facebook/drawee/generic/b;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(I)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     return-void
 .end method
@@ -520,42 +520,42 @@
 
     .line 50
     :cond_0
-    sget-object v0, Lcom/vk/imageloader/view/VKImageView;->Q:Lcom/facebook/imagepipeline/common/e;
+    sget-object v0, Lcom/vk/imageloader/view/VKImageView;->Q:Lcom/facebook/imagepipeline/common/RotationOptions;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/e;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p1, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/RotationOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     if-eqz p2, :cond_1
 
     .line 51
-    sget-object v0, Lcom/vk/imageloader/view/VKImageView;->Q:Lcom/facebook/imagepipeline/common/e;
+    sget-object v0, Lcom/vk/imageloader/view/VKImageView;->Q:Lcom/facebook/imagepipeline/common/RotationOptions;
 
-    invoke-virtual {p2, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/e;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p2, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/RotationOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 52
     :cond_1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->G:Lcom/facebook/imagepipeline/request/a;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->G:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     if-eqz v0, :cond_2
 
     .line 53
-    invoke-virtual {p1, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p1, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     if-eqz p2, :cond_5
 
     .line 54
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->G:Lcom/facebook/imagepipeline/request/a;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->G:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
-    invoke-virtual {p2, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p2, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     goto :goto_0
 
     .line 55
     :cond_2
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->H:Lcom/facebook/imagepipeline/request/a;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->H:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->I:Lcom/facebook/imagepipeline/request/a;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->I:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     if-eqz v0, :cond_5
 
@@ -563,12 +563,12 @@
     if-eqz p1, :cond_4
 
     .line 56
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->I:Lcom/facebook/imagepipeline/request/a;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->I:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     if-eqz v0, :cond_4
 
     .line 57
-    invoke-virtual {p1, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p1, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     :cond_4
     if-eqz p2, :cond_5
@@ -576,18 +576,18 @@
     if-eqz p2, :cond_5
 
     .line 58
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->H:Lcom/facebook/imagepipeline/request/a;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->H:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
-    invoke-virtual {p2, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p2, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 59
     :cond_5
     :goto_0
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->E:Lcom/facebook/u/b/a/e;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->E:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     invoke-virtual {v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->j()Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v0, Lcom/facebook/u/b/a/e;
+    check-cast v0, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 60
     invoke-virtual {p1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a()Lcom/facebook/imagepipeline/request/ImageRequest;
@@ -617,11 +617,11 @@
     invoke-virtual {v0, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Z)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     .line 64
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getController()Lcom/facebook/u/e/a;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getController()Lcom/facebook/u/e/DraweeController;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     const/4 p1, 0x0
 
@@ -629,19 +629,19 @@
     invoke-virtual {v0, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Ljava/lang/Object;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     .line 66
-    invoke-virtual {p0, v0}, Lcom/vk/imageloader/view/VKImageView;->setControllerListener(Lcom/facebook/u/b/a/e;)V
+    invoke-virtual {p0, v0}, Lcom/vk/imageloader/view/VKImageView;->setControllerListener(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;)V
 
     .line 67
-    invoke-virtual {p0, v0}, Lcom/vk/imageloader/view/VKImageView;->a(Lcom/facebook/u/e/d;)Lcom/facebook/u/e/d;
+    invoke-virtual {p0, v0}, Lcom/vk/imageloader/view/VKImageView;->a(Lcom/facebook/u/e/SimpleDraweeControllerBuilder;)Lcom/facebook/u/e/SimpleDraweeControllerBuilder;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/facebook/u/e/d;->k0()Lcom/facebook/u/e/a;
+    invoke-interface {p1}, Lcom/facebook/u/e/SimpleDraweeControllerBuilder;->k0()Lcom/facebook/u/e/DraweeController;
 
     move-result-object p1
 
     .line 68
-    invoke-virtual {p0, p1}, Lcom/vk/imageloader/view/VKDraweeView;->setController(Lcom/facebook/u/e/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/imageloader/view/VKDraweeView;->setController(Lcom/facebook/u/e/DraweeController;)V
 
     const/4 p1, 0x0
 
@@ -651,19 +651,19 @@
     return-void
 .end method
 
-.method public a(Lcom/facebook/imagepipeline/request/a;Lcom/facebook/imagepipeline/request/a;)V
+.method public a(Lcom/facebook/imagepipeline/request/BasePostprocessor;Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
     .locals 1
 
     const/4 v0, 0x0
 
     .line 10
-    iput-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->G:Lcom/facebook/imagepipeline/request/a;
+    iput-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->G:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     .line 11
-    iput-object p1, p0, Lcom/vk/imageloader/view/VKImageView;->H:Lcom/facebook/imagepipeline/request/a;
+    iput-object p1, p0, Lcom/vk/imageloader/view/VKImageView;->H:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     .line 12
-    iput-object p2, p0, Lcom/vk/imageloader/view/VKImageView;->I:Lcom/facebook/imagepipeline/request/a;
+    iput-object p2, p0, Lcom/vk/imageloader/view/VKImageView;->I:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     return-void
 .end method
@@ -776,7 +776,7 @@
     const/4 v0, 0x0
 
     .line 2
-    invoke-virtual {p0, v0}, Lcom/vk/imageloader/view/VKDraweeView;->setController(Lcom/facebook/u/e/a;)V
+    invoke-virtual {p0, v0}, Lcom/vk/imageloader/view/VKDraweeView;->setController(Lcom/facebook/u/e/DraweeController;)V
 
     :cond_0
     return-void
@@ -788,7 +788,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, v0}, Lcom/vk/imageloader/view/VKDraweeView;->setController(Lcom/facebook/u/e/a;)V
+    invoke-virtual {p0, v0}, Lcom/vk/imageloader/view/VKDraweeView;->setController(Lcom/facebook/u/e/DraweeController;)V
 
     return-void
 .end method
@@ -830,7 +830,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getController()Lcom/facebook/u/e/a;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getController()Lcom/facebook/u/e/DraweeController;
 
     move-result-object v0
 
@@ -870,7 +870,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getController()Lcom/facebook/u/e/a;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getController()Lcom/facebook/u/e/DraweeController;
 
     move-result-object v0
 
@@ -937,7 +937,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getController()Lcom/facebook/u/e/a;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getController()Lcom/facebook/u/e/DraweeController;
 
     move-result-object v0
 
@@ -951,16 +951,16 @@
     if-nez v1, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v1
 
-    check-cast v1, Lcom/facebook/drawee/generic/a;
+    check-cast v1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-virtual {v1}, Lcom/facebook/drawee/generic/a;->reset()V
+    invoke-virtual {v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->reset()V
 
     .line 4
-    invoke-static {v0}, Lcom/vk/imageloader/view/VKImageView$b;->a(Lcom/facebook/u/e/a;)V
+    invoke-static {v0}, Lcom/vk/imageloader/view/VKImageView$b;->a(Lcom/facebook/u/e/DraweeController;)V
 
     :cond_0
     return-void
@@ -975,7 +975,7 @@
     return-void
 .end method
 
-.method protected setControllerListener(Lcom/facebook/u/b/a/e;)V
+.method protected setControllerListener(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;)V
     .locals 1
 
     .line 1
@@ -983,18 +983,18 @@
 
     invoke-direct {v0, p0}, Lcom/vk/imageloader/view/VKImageView$a;-><init>(Lcom/vk/imageloader/view/VKImageView;)V
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/drawee/controller/c;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/drawee/controller/ControllerListener;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
     return-void
 .end method
 
-.method public setDrawableFactory(Lcom/facebook/x/f/a;)V
+.method public setDrawableFactory(Lcom/facebook/x/f/DrawableFactory;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->E:Lcom/facebook/u/b/a/e;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKImageView;->E:Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/u/b/a/e;->a(Lcom/facebook/x/f/a;)Lcom/facebook/u/b/a/e;
+    invoke-virtual {v0, p1}, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;->a(Lcom/facebook/x/f/DrawableFactory;)Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     return-void
 .end method
@@ -1021,28 +1021,28 @@
     return-void
 .end method
 
-.method public setOnLoadCallback(Lcom/vk/imageloader/g;)V
+.method public setOnLoadCallback(Lcom/vk/imageloader/OnLoadCallback;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/imageloader/view/VKImageView;->F:Lcom/vk/imageloader/g;
+    iput-object p1, p0, Lcom/vk/imageloader/view/VKImageView;->F:Lcom/vk/imageloader/OnLoadCallback;
 
     return-void
 .end method
 
-.method public setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+.method public setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/imageloader/view/VKImageView;->G:Lcom/facebook/imagepipeline/request/a;
+    iput-object p1, p0, Lcom/vk/imageloader/view/VKImageView;->G:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     const/4 p1, 0x0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/imageloader/view/VKImageView;->H:Lcom/facebook/imagepipeline/request/a;
+    iput-object p1, p0, Lcom/vk/imageloader/view/VKImageView;->H:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     .line 3
-    iput-object p1, p0, Lcom/vk/imageloader/view/VKImageView;->I:Lcom/facebook/imagepipeline/request/a;
+    iput-object p1, p0, Lcom/vk/imageloader/view/VKImageView;->I:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     return-void
 .end method

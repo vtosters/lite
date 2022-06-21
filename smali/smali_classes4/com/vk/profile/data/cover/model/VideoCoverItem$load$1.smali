@@ -3,7 +3,7 @@
 .source "VideoCoverItem.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/String;",
         "Ljava/lang/String;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -57,7 +57,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/profile/data/cover/model/VideoCoverItem$load$1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -116,11 +116,11 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->k()Lcom/vk/profile/data/cover/model/a;
+    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->k()Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/a;->a()V
+    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;->a()V
 
     goto :goto_2
 
@@ -132,7 +132,7 @@
 
     iget-object v1, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem$load$1;->this$0:Lcom/vk/profile/data/cover/model/VideoCoverItem;
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->a(Lcom/vk/mediastore/a/c$c;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->a(Lcom/vk/mediastore/a/VideoCache$c;Ljava/lang/String;)V
 
     .line 7
     :goto_2

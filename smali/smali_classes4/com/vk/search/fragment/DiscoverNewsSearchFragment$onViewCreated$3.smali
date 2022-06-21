@@ -3,7 +3,7 @@
 .source "DiscoverNewsSearchFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,11 +52,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/search/fragment/DiscoverNewsSearchFragment$onViewCreated$3;->this$0:Lcom/vk/search/fragment/DiscoverNewsSearchFragment;
 
-    invoke-static {p1}, Lcom/vk/search/fragment/DiscoverNewsSearchFragment;->a(Lcom/vk/search/fragment/DiscoverNewsSearchFragment;)Lcom/vk/newsfeed/presenters/e;
+    invoke-static {p1}, Lcom/vk/search/fragment/DiscoverNewsSearchFragment;->a(Lcom/vk/search/fragment/DiscoverNewsSearchFragment;)Lcom/vk/newsfeed/presenters/GlobalSearchPresenter;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/j;->C()V
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsSearchPresenter;->C()V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/search/fragment/DiscoverNewsSearchFragment$onViewCreated$3;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -237,16 +237,16 @@
     return-object p1
 .end method
 
-.method private final a(Landroid/app/Activity;Lkotlin/jvm/b/b;)V
+.method private final a(Landroid/app/Activity;Lkotlin/jvm/b/Functions2;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/app/Activity;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vk/permission/b;",
-            "Lkotlin/m;",
+            "Lcom/vk/permission/PermissionFragment;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -261,9 +261,9 @@
 
     invoke-direct {v0}, Lkotlin/jvm/internal/Ref$ObjectRef;-><init>()V
 
-    sget-object v1, Lcom/vk/permission/b;->b:Lcom/vk/permission/b$a;
+    sget-object v1, Lcom/vk/permission/PermissionFragment;->b:Lcom/vk/permission/PermissionFragment$a;
 
-    invoke-virtual {v1, p1}, Lcom/vk/permission/b$a;->a(Landroid/app/Activity;)Lcom/vk/permission/b;
+    invoke-virtual {v1, p1}, Lcom/vk/permission/PermissionFragment$a;->a(Landroid/app/Activity;)Lcom/vk/permission/PermissionFragment;
 
     move-result-object v1
 
@@ -274,22 +274,22 @@
 
     move-object v2, v1
 
-    check-cast v2, Lcom/vk/permission/b;
+    check-cast v2, Lcom/vk/permission/PermissionFragment;
 
     if-eqz v2, :cond_1
 
     .line 49
-    check-cast v1, Lcom/vk/permission/b;
+    check-cast v1, Lcom/vk/permission/PermissionFragment;
 
-    invoke-interface {p2, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     .line 50
     :cond_1
-    new-instance v1, Lcom/vk/permission/b;
+    new-instance v1, Lcom/vk/permission/PermissionFragment;
 
-    invoke-direct {v1}, Lcom/vk/permission/b;-><init>()V
+    invoke-direct {v1}, Lcom/vk/permission/PermissionFragment;-><init>()V
 
     iput-object v1, v0, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
@@ -306,7 +306,7 @@
     .line 53
     iget-object v2, v0, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    check-cast v2, Lcom/vk/permission/b;
+    check-cast v2, Lcom/vk/permission/PermissionFragment;
 
     const-string v3, "PermissionFragmentTag"
 
@@ -328,7 +328,7 @@
 
     new-instance v2, Lcom/vk/permission/PermissionHelper$a;
 
-    invoke-direct {v2, p1, p2, v0}, Lcom/vk/permission/PermissionHelper$a;-><init>(Landroid/app/FragmentManager;Lkotlin/jvm/b/b;Lkotlin/jvm/internal/Ref$ObjectRef;)V
+    invoke-direct {v2, p1, p2, v0}, Lcom/vk/permission/PermissionHelper$a;-><init>(Landroid/app/FragmentManager;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/internal/Ref$ObjectRef;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -402,7 +402,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
+.method public static synthetic a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
     .locals 7
 
     and-int/lit8 p8, p7, 0x8
@@ -454,14 +454,14 @@
     move v3, p3
 
     .line 6
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static synthetic a(Lcom/vk/permission/PermissionHelper;Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
+.method public static synthetic a(Lcom/vk/permission/PermissionHelper;Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
     .locals 7
 
     and-int/lit8 p8, p7, 0x8
@@ -513,14 +513,14 @@
     move v3, p3
 
     .line 4
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static synthetic a(Lcom/vk/permission/PermissionHelper;Landroid/content/Context;[Ljava/lang/String;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
+.method public static synthetic a(Lcom/vk/permission/PermissionHelper;Landroid/content/Context;[Ljava/lang/String;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
     .locals 6
 
     and-int/lit8 p7, p6, 0x4
@@ -570,7 +570,7 @@
     move-object v2, p2
 
     .line 2
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     move-result p0
 
@@ -589,7 +589,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -640,7 +640,7 @@
     move-object v1, p2
 
     .line 38
-    invoke-static/range {v1 .. v9}, Lkotlin/collections/f;->a([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v1 .. v9}, Lkotlin/collections/f;->a([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -754,7 +754,7 @@
     move v5, p2
 
     .line 25
-    invoke-static/range {v1 .. v6}, Lpub/devrel/easypermissions/b;->a(Landroid/app/Activity;Ljava/lang/String;III[Ljava/lang/String;)V
+    invoke-static/range {v1 .. v6}, Lpub/devrel/easypermissions/EasyPermissions;->a(Landroid/app/Activity;Ljava/lang/String;III[Ljava/lang/String;)V
 
     return-void
 .end method
@@ -800,7 +800,7 @@
     check-cast p3, [Ljava/lang/String;
 
     .line 34
-    invoke-static {p1, p4, p2, p3}, Lpub/devrel/easypermissions/b;->a(Landroid/app/Fragment;Ljava/lang/String;I[Ljava/lang/String;)V
+    invoke-static {p1, p4, p2, p3}, Lpub/devrel/easypermissions/EasyPermissions;->a(Landroid/app/Fragment;Ljava/lang/String;I[Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -832,7 +832,7 @@
     check-cast p3, [Ljava/lang/String;
 
     .line 29
-    invoke-static {p1, p4, p2, p3}, Lpub/devrel/easypermissions/b;->a(Landroidx/fragment/app/Fragment;Ljava/lang/String;I[Ljava/lang/String;)V
+    invoke-static {p1, p4, p2, p3}, Lpub/devrel/easypermissions/EasyPermissions;->a(Landroidx/fragment/app/Fragment;Ljava/lang/String;I[Ljava/lang/String;)V
 
     return-void
 .end method
@@ -882,7 +882,7 @@
     aput-object v1, v2, v3
 
     .line 16
-    invoke-static {p1, v2}, Lpub/devrel/easypermissions/b;->a(Landroid/content/Context;[Ljava/lang/String;)Z
+    invoke-static {p1, v2}, Lpub/devrel/easypermissions/EasyPermissions;->a(Landroid/content/Context;[Ljava/lang/String;)Z
 
     move-result v2
 
@@ -895,14 +895,14 @@
 
     .line 18
     :cond_1
-    invoke-static {p1, v0}, Lpub/devrel/easypermissions/b;->a(Landroid/app/Activity;Ljava/util/List;)Z
+    invoke-static {p1, v0}, Lpub/devrel/easypermissions/EasyPermissions;->a(Landroid/app/Activity;Ljava/util/List;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public final a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+.method public final a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -911,15 +911,15 @@
             "[",
             "Ljava/lang/String;",
             "II",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)Z"
         }
     .end annotation
@@ -947,11 +947,11 @@
     if-eqz p5, :cond_2
 
     .line 9
-    invoke-interface {p5}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p5}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     goto :goto_1
 
@@ -971,9 +971,9 @@
 
     move v6, p3
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/permission/PermissionHelper$checkAndRequestPermissionsWithCallback$1;-><init>([Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;II)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/permission/PermissionHelper$checkAndRequestPermissionsWithCallback$1;-><init>([Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;II)V
 
-    invoke-direct {p0, p1, v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;Lkotlin/jvm/b/Functions2;)V
 
     :cond_2
     :goto_1
@@ -1005,7 +1005,7 @@
 
     check-cast p2, [Ljava/lang/String;
 
-    invoke-static {p1, p2}, Lpub/devrel/easypermissions/b;->a(Landroid/content/Context;[Ljava/lang/String;)Z
+    invoke-static {p1, p2}, Lpub/devrel/easypermissions/EasyPermissions;->a(Landroid/content/Context;[Ljava/lang/String;)Z
 
     move-result p1
 
@@ -1033,14 +1033,14 @@
 
     move v4, p4
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public final a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+.method public final a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1049,15 +1049,15 @@
             "[",
             "Ljava/lang/String;",
             "II",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)Z"
         }
     .end annotation
@@ -1089,14 +1089,14 @@
 
     move-object v6, p6
 
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public final a(Landroid/content/Context;[Ljava/lang/String;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+.method public final a(Landroid/content/Context;[Ljava/lang/String;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1105,15 +1105,15 @@
             "[",
             "Ljava/lang/String;",
             "I",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)Z"
         }
     .end annotation
@@ -1145,7 +1145,7 @@
 
     move-object v6, p5
 
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     move-result p1
 
@@ -1183,7 +1183,7 @@
     aput-object v3, v5, v1
 
     .line 3
-    invoke-static {p1, v5}, Lpub/devrel/easypermissions/b;->a(Landroid/content/Context;[Ljava/lang/String;)Z
+    invoke-static {p1, v5}, Lpub/devrel/easypermissions/EasyPermissions;->a(Landroid/content/Context;[Ljava/lang/String;)Z
 
     move-result v3
 

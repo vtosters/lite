@@ -1,12 +1,12 @@
 .class public Lcom/vk/stories/view/StoriesViewPager;
-.super Lcom/vk/common/view/a;
+.super Lcom/vk/common/view/EdgeViewPager;
 .source "StoriesViewPager.java"
 
 
 # instance fields
-.field private final c:Lcom/vk/core/util/j1;
+.field private final c:Lcom/vk/core/util/TimeoutLock;
 
-.field private d:Lcom/vk/core/widget/g;
+.field private d:Lcom/vk/core/widget/ScrollerCustomDuration;
 
 
 # direct methods
@@ -14,21 +14,21 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/common/view/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vk/common/view/EdgeViewPager;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance p1, Lcom/vk/core/util/j1;
+    new-instance p1, Lcom/vk/core/util/TimeoutLock;
 
     const-wide/16 v0, 0x1f4
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/core/util/j1;-><init>(J)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/core/util/TimeoutLock;-><init>(J)V
 
-    iput-object p1, p0, Lcom/vk/stories/view/StoriesViewPager;->c:Lcom/vk/core/util/j1;
+    iput-object p1, p0, Lcom/vk/stories/view/StoriesViewPager;->c:Lcom/vk/core/util/TimeoutLock;
 
     const/4 p1, 0x0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/stories/view/StoriesViewPager;->d:Lcom/vk/core/widget/g;
+    iput-object p1, p0, Lcom/vk/stories/view/StoriesViewPager;->d:Lcom/vk/core/widget/ScrollerCustomDuration;
 
     .line 4
     invoke-direct {p0}, Lcom/vk/stories/view/StoriesViewPager;->e()V
@@ -40,21 +40,21 @@
     .locals 2
 
     .line 5
-    invoke-direct {p0, p1, p2}, Lcom/vk/common/view/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/common/view/EdgeViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 6
-    new-instance p1, Lcom/vk/core/util/j1;
+    new-instance p1, Lcom/vk/core/util/TimeoutLock;
 
     const-wide/16 v0, 0x1f4
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/core/util/j1;-><init>(J)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/core/util/TimeoutLock;-><init>(J)V
 
-    iput-object p1, p0, Lcom/vk/stories/view/StoriesViewPager;->c:Lcom/vk/core/util/j1;
+    iput-object p1, p0, Lcom/vk/stories/view/StoriesViewPager;->c:Lcom/vk/core/util/TimeoutLock;
 
     const/4 p1, 0x0
 
     .line 7
-    iput-object p1, p0, Lcom/vk/stories/view/StoriesViewPager;->d:Lcom/vk/core/widget/g;
+    iput-object p1, p0, Lcom/vk/stories/view/StoriesViewPager;->d:Lcom/vk/core/widget/ScrollerCustomDuration;
 
     .line 8
     invoke-direct {p0}, Lcom/vk/stories/view/StoriesViewPager;->e()V
@@ -99,7 +99,7 @@
     invoke-virtual {v2, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     .line 5
-    new-instance v1, Lcom/vk/core/widget/g;
+    new-instance v1, Lcom/vk/core/widget/ScrollerCustomDuration;
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -114,12 +114,12 @@
 
     check-cast v2, Landroid/view/animation/Interpolator;
 
-    invoke-direct {v1, v3, v2}, Lcom/vk/core/widget/g;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
+    invoke-direct {v1, v3, v2}, Lcom/vk/core/widget/ScrollerCustomDuration;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
 
-    iput-object v1, p0, Lcom/vk/stories/view/StoriesViewPager;->d:Lcom/vk/core/widget/g;
+    iput-object v1, p0, Lcom/vk/stories/view/StoriesViewPager;->d:Lcom/vk/core/widget/ScrollerCustomDuration;
 
     .line 7
-    iget-object v1, p0, Lcom/vk/stories/view/StoriesViewPager;->d:Lcom/vk/core/widget/g;
+    iget-object v1, p0, Lcom/vk/stories/view/StoriesViewPager;->d:Lcom/vk/core/widget/ScrollerCustomDuration;
 
     invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
     :try_end_2
@@ -135,9 +135,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/StoriesViewPager;->c:Lcom/vk/core/util/j1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoriesViewPager;->c:Lcom/vk/core/util/TimeoutLock;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/j1;->b()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->b()Z
 
     move-result v0
 
@@ -148,9 +148,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/StoriesViewPager;->c:Lcom/vk/core/util/j1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoriesViewPager;->c:Lcom/vk/core/util/TimeoutLock;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/j1;->c()V
+    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->c()V
 
     return-void
 .end method
@@ -159,9 +159,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/StoriesViewPager;->c:Lcom/vk/core/util/j1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoriesViewPager;->c:Lcom/vk/core/util/TimeoutLock;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/j1;->b()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->b()Z
 
     move-result v0
 
@@ -173,7 +173,7 @@
 
     .line 2
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/common/view/a;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Lcom/vk/common/view/EdgeViewPager;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
@@ -184,9 +184,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/StoriesViewPager;->c:Lcom/vk/core/util/j1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoriesViewPager;->c:Lcom/vk/core/util/TimeoutLock;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/j1;->b()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->b()Z
 
     move-result v0
 
@@ -209,9 +209,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/StoriesViewPager;->d:Lcom/vk/core/widget/g;
+    iget-object v0, p0, Lcom/vk/stories/view/StoriesViewPager;->d:Lcom/vk/core/widget/ScrollerCustomDuration;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/core/widget/g;->a(D)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/core/widget/ScrollerCustomDuration;->a(D)V
 
     return-void
 .end method

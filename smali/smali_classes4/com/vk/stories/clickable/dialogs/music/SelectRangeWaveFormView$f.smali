@@ -3,7 +3,7 @@
 .source "SelectRangeWaveFormView.kt"
 
 # interfaces
-.implements Lcom/vk/core/util/r;
+.implements Lcom/vk/core/util/DefaultAnimatorListener;
 
 
 # annotations
@@ -128,7 +128,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/core/util/r$a;->a(Lcom/vk/core/util/r;Landroid/animation/Animator;)V
+    invoke-static {p0, p1}, Lcom/vk/core/util/DefaultAnimatorListener$a;->a(Lcom/vk/core/util/DefaultAnimatorListener;Landroid/animation/Animator;)V
 
     return-void
 .end method
@@ -137,7 +137,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/core/util/r$a;->b(Lcom/vk/core/util/r;Landroid/animation/Animator;)V
+    invoke-static {p0, p1}, Lcom/vk/core/util/DefaultAnimatorListener$a;->b(Lcom/vk/core/util/DefaultAnimatorListener;Landroid/animation/Animator;)V
 
     return-void
 .end method

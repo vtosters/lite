@@ -3,7 +3,7 @@
 .source "VKApplication.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,11 +24,11 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "Ljava/util/concurrent/Callable<",
-        "Lc/a/s;",
+        "Lio/reactivex/Scheduler;",
         ">;",
-        "Lc/a/s;",
+        "Lio/reactivex/Scheduler;",
         ">;"
     }
 .end annotation
@@ -61,22 +61,22 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/concurrent/Callable;)Lc/a/s;
+.method public final a(Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/Callable<",
-            "Lc/a/s;",
+            "Lio/reactivex/Scheduler;",
             ">;)",
-            "Lc/a/s;"
+            "Lio/reactivex/Scheduler;"
         }
     .end annotation
 
     .line 1
     sget-object p1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {p1}, Lcom/vk/core/concurrent/VkExecutors;->j()Lc/a/s;
+    invoke-virtual {p1}, Lcom/vk/core/concurrent/VkExecutors;->j()Lio/reactivex/Scheduler;
 
     move-result-object p1
 
@@ -89,7 +89,7 @@
     .line 1
     check-cast p1, Ljava/util/concurrent/Callable;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/VKApplication$f;->a(Ljava/util/concurrent/Callable;)Lc/a/s;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/VKApplication$f;->a(Ljava/util/concurrent/Callable;)Lio/reactivex/Scheduler;
 
     move-result-object p1
 

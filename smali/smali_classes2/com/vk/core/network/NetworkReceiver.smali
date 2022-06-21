@@ -16,11 +16,11 @@
 
 
 # instance fields
-.field private final a:Lkotlin/jvm/b/a;
+.field private final a:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -35,20 +35,20 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/network/NetworkReceiver$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/network/NetworkReceiver$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/network/NetworkReceiver;->b:Lcom/vk/core/network/NetworkReceiver$a;
 
     return-void
 .end method
 
-.method public constructor <init>(Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -56,7 +56,7 @@
     .line 1
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/core/network/NetworkReceiver;->a:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/core/network/NetworkReceiver;->a:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -83,7 +83,7 @@
 
     const-string v0, "android.net.conn.CONNECTIVITY_CHANGE"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -103,9 +103,9 @@
     if-eqz p1, :cond_1
 
     .line 4
-    iget-object p1, p0, Lcom/vk/core/network/NetworkReceiver;->a:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/core/network/NetworkReceiver;->a:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     :cond_1
     return-void

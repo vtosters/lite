@@ -30,7 +30,7 @@
     .end annotation
 .end field
 
-.field private final d:Lcom/vk/stat/scheme/c;
+.field private final d:Lcom/vk/stat/scheme/SchemeStat1;
     .annotation runtime Lcom/google/gson/t/c;
         value = "type_im_item"
     .end annotation
@@ -50,7 +50,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/c;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;)V
+.method public constructor <init>(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/SchemeStat1;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;)V
     .locals 0
 
     .line 1
@@ -62,7 +62,7 @@
 
     iput-object p3, p0, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->c:Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;
 
-    iput-object p4, p0, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->d:Lcom/vk/stat/scheme/c;
+    iput-object p4, p0, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->d:Lcom/vk/stat/scheme/SchemeStat1;
 
     iput-object p5, p0, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->e:Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;
 
@@ -71,7 +71,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/c;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/SchemeStat1;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 6
 
     and-int/lit8 v0, p7, 0x2
@@ -149,12 +149,12 @@
     move-object p8, v1
 
     .line 2
-    invoke-direct/range {p2 .. p8}, Lcom/vk/stat/scheme/SchemeStat$TypeClick;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/c;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;)V
+    invoke-direct/range {p2 .. p8}, Lcom/vk/stat/scheme/SchemeStat$TypeClick;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/SchemeStat1;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/stat/scheme/SchemeStat$TypeClick;Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/c;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;ILjava/lang/Object;)Lcom/vk/stat/scheme/SchemeStat$TypeClick;
+.method public static synthetic a(Lcom/vk/stat/scheme/SchemeStat$TypeClick;Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/SchemeStat1;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;ILjava/lang/Object;)Lcom/vk/stat/scheme/SchemeStat$TypeClick;
     .locals 4
 
     and-int/lit8 p8, p7, 0x1
@@ -186,7 +186,7 @@
 
     if-eqz p2, :cond_3
 
-    iget-object p4, p0, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->d:Lcom/vk/stat/scheme/c;
+    iget-object p4, p0, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->d:Lcom/vk/stat/scheme/SchemeStat1;
 
     :cond_3
     move-object v1, p4
@@ -223,7 +223,7 @@
 
     move-object p8, v3
 
-    invoke-virtual/range {p2 .. p8}, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->a(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/c;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;)Lcom/vk/stat/scheme/SchemeStat$TypeClick;
+    invoke-virtual/range {p2 .. p8}, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->a(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/SchemeStat1;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;)Lcom/vk/stat/scheme/SchemeStat$TypeClick;
 
     move-result-object p0
 
@@ -232,7 +232,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/c;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;)Lcom/vk/stat/scheme/SchemeStat$TypeClick;
+.method public final a(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/SchemeStat1;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;)Lcom/vk/stat/scheme/SchemeStat$TypeClick;
     .locals 8
 
     new-instance v7, Lcom/vk/stat/scheme/SchemeStat$TypeClick;
@@ -251,7 +251,7 @@
 
     move-object v6, p6
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/stat/scheme/SchemeStat$TypeClick;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/c;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/stat/scheme/SchemeStat$TypeClick;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem;Ljava/lang/Integer;Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;Lcom/vk/stat/scheme/SchemeStat1;Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;)V
 
     return-object v7
 .end method
@@ -271,7 +271,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->a:Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -281,7 +281,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->b:Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -291,17 +291,17 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->c:Lcom/vk/stat/scheme/SchemeStat$TypeClick$Type;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->d:Lcom/vk/stat/scheme/c;
+    iget-object v0, p0, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->d:Lcom/vk/stat/scheme/SchemeStat1;
 
-    iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->d:Lcom/vk/stat/scheme/c;
+    iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->d:Lcom/vk/stat/scheme/SchemeStat1;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -311,7 +311,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->e:Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -321,7 +321,7 @@
 
     iget-object p1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->f:Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -398,11 +398,11 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->d:Lcom/vk/stat/scheme/c;
+    iget-object v2, p0, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->d:Lcom/vk/stat/scheme/SchemeStat1;
 
     if-eqz v2, :cond_3
 
-    invoke-virtual {v2}, Lcom/vk/stat/scheme/c;->hashCode()I
+    invoke-virtual {v2}, Lcom/vk/stat/scheme/SchemeStat1;->hashCode()I
 
     move-result v2
 
@@ -483,7 +483,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->d:Lcom/vk/stat/scheme/c;
+    iget-object v1, p0, Lcom/vk/stat/scheme/SchemeStat$TypeClick;->d:Lcom/vk/stat/scheme/SchemeStat1;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

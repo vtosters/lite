@@ -3,12 +3,12 @@
 .source "VoipAppBindingFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/voip/VoipAppBindingFactory;->a()Lcom/vk/voip/k;
+    value = Lcom/vk/voip/VoipAppBindingFactory;->a()Lcom/vk/voip/VoipAppBinding;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -59,9 +59,9 @@
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/voip/p;->l:Lcom/vk/voip/p;
+    sget-object v0, Lcom/vk/voip/VoipOrientationListener;->l:Lcom/vk/voip/VoipOrientationListener;
 
-    invoke-virtual {v0}, Lcom/vk/voip/p;->b()I
+    invoke-virtual {v0}, Lcom/vk/voip/VoipOrientationListener;->b()I
 
     move-result v0
 

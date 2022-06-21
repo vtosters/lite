@@ -58,7 +58,7 @@
     const-string v2, "users"
 
     .line 3
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -85,7 +85,7 @@
 
     const-string v5, "it"
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v4, v2}, Lcom/vk/dto/newsfeed/Owner;-><init>(Lcom/vk/dto/user/UserProfile;)V
 
@@ -133,7 +133,7 @@
     check-cast v4, Lcom/vk/dto/common/AttachmentWithMedia;
 
     .line 10
-    invoke-interface {v4}, Lcom/vk/dto/common/k;->L0()Lcom/vk/dto/newsfeed/Owner;
+    invoke-interface {v4}, Lcom/vk/dto/common/WithOwner;->L0()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v4
 
@@ -185,7 +185,7 @@
     check-cast v3, Lcom/vk/dto/common/AttachmentWithMedia;
 
     .line 14
-    invoke-interface {v3}, Lcom/vk/dto/common/k;->b()I
+    invoke-interface {v3}, Lcom/vk/dto/common/WithOwner;->b()I
 
     move-result v4
 
@@ -195,7 +195,7 @@
 
     check-cast v4, Lcom/vk/dto/newsfeed/Owner;
 
-    invoke-interface {v3, v4}, Lcom/vk/dto/common/k;->a(Lcom/vk/dto/newsfeed/Owner;)V
+    invoke-interface {v3, v4}, Lcom/vk/dto/common/WithOwner;->a(Lcom/vk/dto/newsfeed/Owner;)V
 
     .line 15
     instance-of v4, v3, Lcom/vtosters/lite/attachments/PhotoAttachment;
@@ -223,7 +223,7 @@
 
     .line 17
     :cond_4
-    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v3, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     invoke-interface {p1, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 

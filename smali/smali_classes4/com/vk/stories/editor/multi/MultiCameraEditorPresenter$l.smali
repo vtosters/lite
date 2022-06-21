@@ -3,7 +3,7 @@
 .source "MultiCameraEditorPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lkotlin/Pair<",
         "+",
         "Ljava/lang/Integer;",
@@ -120,7 +120,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$l;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->p(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/h;
+    invoke-static {v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->p(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     move-result-object v0
 
@@ -242,7 +242,7 @@
     :goto_2
     const-string v0, "storyMediaData.storyUplo\u2026questionStoryOwnerId ?: 0"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -265,7 +265,7 @@
     :cond_5
     iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$l;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/stories/editor/base/c0;->l()Lcom/vk/stories/editor/base/f0;
+    invoke-virtual {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->l()Lcom/vk/stories/editor/base/CameraEditorContainer;
 
     move-result-object v0
 
@@ -279,7 +279,7 @@
 
     const-string v3, "uploadParams"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, p1, v2}, Lcom/vk/cameraui/entities/StoryMultiData;-><init>(Ljava/util/List;Lcom/vk/dto/stories/model/CommonUploadParams;)V
 
@@ -291,7 +291,7 @@
 
     iget-boolean v2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$l;->c:Z
 
-    invoke-interface {v0, v1, p1, v2}, Lcom/vk/stories/editor/base/f0;->a(Lcom/vk/cameraui/entities/StoryMultiData;Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;Z)V
+    invoke-interface {v0, v1, p1, v2}, Lcom/vk/stories/editor/base/CameraEditorContainer;->a(Lcom/vk/cameraui/entities/StoryMultiData;Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;Z)V
 
     :cond_6
     return-void

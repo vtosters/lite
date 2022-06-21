@@ -3,7 +3,7 @@
 .source "StoriesController.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Lcom/vk/dto/stories/model/GetStoriesResponse;",
         ">;"
     }
@@ -55,7 +55,7 @@
     invoke-static {p1}, Lcom/vk/stories/StoriesController;->c(Lcom/vk/dto/stories/model/GetStoriesResponse;)V
 
     .line 3
-    invoke-static {}, Lcom/vk/stories/StoriesController;->a()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
 
     const/16 v1, 0x65
 
-    invoke-virtual {v0, v1, p1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method

@@ -354,7 +354,7 @@
     if-eqz v2, :cond_1
 
     .line 8
-    invoke-virtual {v2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->F()Landroid/support/v4/media/session/b;
+    invoke-virtual {v2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->F()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v2
 

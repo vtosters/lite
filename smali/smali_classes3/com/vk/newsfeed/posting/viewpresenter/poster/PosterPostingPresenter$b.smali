@@ -1,11 +1,11 @@
 .class public final Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter$b;
-.super Lcom/vk/mentions/l;
+.super Lcom/vk/mentions/MentionUtils1;
 .source "PosterPostingPresenter.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;-><init>(Lcom/vk/newsfeed/posting/j;Lcom/vk/newsfeed/posting/i;)V
+    value = Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;-><init>(Lcom/vk/newsfeed/posting/PostingContracts14;Lcom/vk/newsfeed/posting/PostingContracts8;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/mentions/l<",
-        "Lcom/vk/newsfeed/posting/viewpresenter/poster/b;",
+        "Lcom/vk/mentions/MentionUtils1<",
+        "Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterMentionSpan;",
         ">;"
     }
 .end annotation
@@ -38,37 +38,37 @@
     .line 1
     iput-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter$b;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;
 
-    invoke-direct {p0}, Lcom/vk/mentions/l;-><init>()V
+    invoke-direct {p0}, Lcom/vk/mentions/MentionUtils1;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a(I)Lcom/vk/mentions/k;
+.method public bridge synthetic a(I)Lcom/vk/mentions/Spans;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter$b;->a(I)Lcom/vk/newsfeed/posting/viewpresenter/poster/b;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter$b;->a(I)Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterMentionSpan;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(I)Lcom/vk/newsfeed/posting/viewpresenter/poster/b;
+.method public a(I)Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterMentionSpan;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/poster/b;
+    new-instance v0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterMentionSpan;
 
     iget-object v1, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter$b;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;
 
-    invoke-static {v1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;->b(Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;)Lcom/vk/newsfeed/posting/i;
+    invoke-static {v1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;->b(Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts8;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/newsfeed/posting/i;->y()Landroid/widget/EditText;
+    invoke-interface {v1}, Lcom/vk/newsfeed/posting/PostingContracts8;->y()Landroid/widget/EditText;
 
     move-result-object v1
 
@@ -78,13 +78,13 @@
 
     const-string v2, "view.editTextView.textColors"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
     move-result v1
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/b;-><init>(II)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterMentionSpan;-><init>(II)V
 
     return-object v0
 .end method
@@ -110,11 +110,11 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter$b;->b:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;->b(Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;)Lcom/vk/newsfeed/posting/i;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;->b(Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/posting/i;->y()Landroid/widget/EditText;
+    invoke-interface {v0}, Lcom/vk/newsfeed/posting/PostingContracts8;->y()Landroid/widget/EditText;
 
     move-result-object v0
 
@@ -124,7 +124,7 @@
 
     const-string v1, "view.editTextView.textColors"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 

@@ -3,7 +3,7 @@
 .source "AdsButton.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -395,7 +395,7 @@
     .line 3
     sget p1, Lb/h/z/b;->button_primary_foreground:I
 
-    invoke-static {p0, p1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p0, p1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 4
     iput v0, p0, Lcom/vk/core/view/AdsButton;->h:I
@@ -547,7 +547,7 @@
     .line 5
     sget v0, Lb/h/z/b;->button_primary_foreground:I
 
-    invoke-static {p0, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p0, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     goto :goto_0
 

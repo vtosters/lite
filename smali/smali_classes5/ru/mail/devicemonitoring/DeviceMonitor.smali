@@ -158,7 +158,7 @@
     const-string v0, "start: isBluetoothScoAvailableOffCall - false!"
 
     .line 2
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 
@@ -183,7 +183,7 @@
     const-string v0, "start: BluetoothAdapter.getDefaultAdapter returned NULL"
 
     .line 6
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 
@@ -229,7 +229,7 @@
     const-string v0, "Need bluetooth permission!"
 
     .line 9
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -289,7 +289,7 @@
     const-string v1, "destroy"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -380,7 +380,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
     iget-object v0, p0, Lru/mail/devicemonitoring/DeviceMonitor;->context:Landroid/content/Context;
@@ -429,7 +429,7 @@
     const-string v1, "stop"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v1, p0, Lru/mail/devicemonitoring/DeviceMonitor;->started:Z
@@ -518,7 +518,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 12
     :goto_1

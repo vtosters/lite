@@ -3,7 +3,7 @@
 .source "FeatureManager.java"
 
 # interfaces
-.implements Lcom/facebook/internal/g$c;
+.implements Lcom/facebook/internal/FetchedAppGateKeepersManager$c;
 
 
 # annotations

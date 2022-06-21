@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field private final a:Lkotlin/jvm/b/a;
+.field private final a:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -32,13 +32,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -48,16 +48,16 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$b;->a:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$b;->a:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$b;)Lkotlin/jvm/b/a;
+.method public static final synthetic a(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$b;)Lkotlin/jvm/b/Functions;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$b;->a:Lkotlin/jvm/b/a;
+    iget-object p0, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$b;->a:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method

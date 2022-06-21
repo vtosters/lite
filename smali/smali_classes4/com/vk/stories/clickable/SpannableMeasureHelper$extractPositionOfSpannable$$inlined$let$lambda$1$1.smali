@@ -3,12 +3,12 @@
 .source "SpannableMeasureHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/SpannableMeasureHelper$extractPositionOfSpannable$$inlined$let$lambda$1;->invoke(Ljava/lang/Object;)Lkotlin/sequences/j;
+    value = Lcom/vk/stories/clickable/SpannableMeasureHelper$extractPositionOfSpannable$$inlined$let$lambda$1;->invoke(Ljava/lang/Object;)Lkotlin/sequences/Sequence;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
-        "Lcom/vk/stories/clickable/c<",
+        "Lcom/vk/stories/clickable/SpannableMeasureHelper1<",
         "TT;>;>;"
     }
 .end annotation
@@ -70,12 +70,12 @@
 
 
 # virtual methods
-.method public final a(I)Lcom/vk/stories/clickable/c;
+.method public final a(I)Lcom/vk/stories/clickable/SpannableMeasureHelper1;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lcom/vk/stories/clickable/c<",
+            "Lcom/vk/stories/clickable/SpannableMeasureHelper1<",
             "TT;>;"
         }
     .end annotation
@@ -193,13 +193,13 @@
     iput v0, p1, Landroid/graphics/RectF;->bottom:F
 
     .line 11
-    new-instance v0, Lcom/vk/stories/clickable/c;
+    new-instance v0, Lcom/vk/stories/clickable/SpannableMeasureHelper1;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/SpannableMeasureHelper$extractPositionOfSpannable$$inlined$let$lambda$1$1;->$span:Ljava/lang/Object;
 
     iget-object v2, p0, Lcom/vk/stories/clickable/SpannableMeasureHelper$extractPositionOfSpannable$$inlined$let$lambda$1$1;->$text:Ljava/lang/String;
 
-    invoke-direct {v0, v1, p1, v2}, Lcom/vk/stories/clickable/c;-><init>(Ljava/lang/Object;Landroid/graphics/RectF;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1, v2}, Lcom/vk/stories/clickable/SpannableMeasureHelper1;-><init>(Ljava/lang/Object;Landroid/graphics/RectF;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -214,7 +214,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/SpannableMeasureHelper$extractPositionOfSpannable$$inlined$let$lambda$1$1;->a(I)Lcom/vk/stories/clickable/c;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/SpannableMeasureHelper$extractPositionOfSpannable$$inlined$let$lambda$1$1;->a(I)Lcom/vk/stories/clickable/SpannableMeasureHelper1;
 
     move-result-object p1
 

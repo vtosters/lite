@@ -3,12 +3,12 @@
 .source "AppsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/apps/AppsFragment$searchDataProvider$1;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/apps/AppsFragment$searchDataProvider$1;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lb/h/c/n/f$b;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/api/apps/AppsSearch$b;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lb/h/c/n/f$b;)V
+.method public final a(Lcom/vk/api/apps/AppsSearch$b;)V
     .locals 5
 
     .line 1
@@ -59,7 +59,7 @@
     invoke-direct {v0}, Lcom/vk/dto/common/data/VKList;-><init>()V
 
     .line 2
-    invoke-virtual {p1}, Lb/h/c/n/f$b;->a()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p1}, Lcom/vk/api/apps/AppsSearch$b;->a()Lcom/vk/dto/common/data/VKList;
 
     move-result-object v1
 
@@ -132,15 +132,15 @@
 
     iget-object v0, v0, Lcom/vk/apps/AppsFragment$searchDataProvider$1;->a:Lcom/vk/apps/AppsFragment;
 
-    invoke-static {v0}, Lcom/vk/apps/AppsFragment;->j(Lcom/vk/apps/AppsFragment;)Lcom/vk/lists/t;
+    invoke-static {v0}, Lcom/vk/apps/AppsFragment;->j(Lcom/vk/apps/AppsFragment;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lb/h/c/n/f$b;->b()I
+    invoke-virtual {p1}, Lcom/vk/api/apps/AppsSearch$b;->b()I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/t;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/PaginationHelper;->a(I)V
 
     return-void
 .end method
@@ -149,11 +149,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/c/n/f$b;
+    check-cast p1, Lcom/vk/api/apps/AppsSearch$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/apps/AppsFragment$searchDataProvider$1$onNewData$1;->a(Lb/h/c/n/f$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/apps/AppsFragment$searchDataProvider$1$onNewData$1;->a(Lcom/vk/api/apps/AppsSearch$b;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

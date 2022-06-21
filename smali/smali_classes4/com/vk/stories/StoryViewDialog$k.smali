@@ -1,5 +1,5 @@
 .class Lcom/vk/stories/StoryViewDialog$k;
-.super Lcom/vk/core/widget/a;
+.super Lcom/vk/core/widget/LifecycleListener;
 .source "StoryViewDialog.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/stories/StoryViewDialog$k;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-direct {p0}, Lcom/vk/core/widget/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/widget/LifecycleListener;-><init>()V
 
     return-void
 .end method
@@ -42,7 +42,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/stories/StoryViewDialog$k;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object p1
 
@@ -51,11 +51,11 @@
     .line 5
     iget-object p1, p0, Lcom/vk/stories/StoryViewDialog$k;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/s1;->g()V
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewContainer;->g()V
 
     :cond_0
     return-void
@@ -84,7 +84,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/stories/StoryViewDialog$k;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object p1
 
@@ -93,11 +93,11 @@
     .line 3
     iget-object p1, p0, Lcom/vk/stories/StoryViewDialog$k;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2, p3, p4}, Lcom/vk/stories/view/s1;->a(IILandroid/content/Intent;)V
+    invoke-virtual {p1, p2, p3, p4}, Lcom/vk/stories/view/StoryViewContainer;->a(IILandroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -122,7 +122,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/stories/StoryViewDialog$k;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object p1
 
@@ -131,11 +131,11 @@
     .line 3
     iget-object p1, p0, Lcom/vk/stories/StoryViewDialog$k;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/s1;->h()V
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewContainer;->h()V
 
     .line 4
     :cond_0
@@ -155,7 +155,7 @@
 
     iget-object v0, p0, Lcom/vk/stories/StoryViewDialog$k;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {v0}, Lcom/vk/stories/StoryViewDialog;->k(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/libvideo/live/base/f;
+    invoke-static {v0}, Lcom/vk/stories/StoryViewDialog;->k(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
     move-result-object v0
 
@@ -184,7 +184,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/stories/StoryViewDialog$k;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object p1
 
@@ -193,11 +193,11 @@
     .line 3
     iget-object p1, p0, Lcom/vk/stories/StoryViewDialog$k;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/s1;->i()V
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewContainer;->i()V
 
     .line 4
     :cond_0
@@ -217,7 +217,7 @@
 
     iget-object v0, p0, Lcom/vk/stories/StoryViewDialog$k;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {v0}, Lcom/vk/stories/StoryViewDialog;->k(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/libvideo/live/base/f;
+    invoke-static {v0}, Lcom/vk/stories/StoryViewDialog;->k(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
     move-result-object v0
 

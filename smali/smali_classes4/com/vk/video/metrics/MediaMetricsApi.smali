@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lkotlin/e;
+.field private static final b:Lkotlin/Lazy2;
 
 .field public static final c:Lcom/vk/video/metrics/MediaMetricsApi;
 
@@ -17,13 +17,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/video/metrics/MediaMetricsApi;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -31,15 +31,15 @@
 
     const-string v4, "getSession()Lcom/vigo/metrics/VigoSession;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/video/metrics/MediaMetricsApi;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/video/metrics/MediaMetricsApi;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/video/metrics/MediaMetricsApi;
@@ -51,11 +51,11 @@
     .line 2
     sget-object v0, Lcom/vk/video/metrics/MediaMetricsApi$session$2;->a:Lcom/vk/video/metrics/MediaMetricsApi$session$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/video/metrics/MediaMetricsApi;->b:Lkotlin/e;
+    sput-object v0, Lcom/vk/video/metrics/MediaMetricsApi;->b:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -75,13 +75,13 @@
     .locals 1
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsApi;->c()Lcom/vigo/metrics/x;
+    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsApi;->c()Lcom/vigo/metrics/VigoSession;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vigo/metrics/x;->a()V
+    invoke-virtual {v0}, Lcom/vigo/metrics/VigoSession;->a()V
 
     :cond_0
     return-void
@@ -91,7 +91,7 @@
     .locals 7
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsApi;->c()Lcom/vigo/metrics/x;
+    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsApi;->c()Lcom/vigo/metrics/VigoSession;
 
     move-result-object v0
 
@@ -107,7 +107,7 @@
 
     move-object v6, p6
 
-    invoke-virtual/range {v0 .. v6}, Lcom/vigo/metrics/x;->a(BIIJLjava/lang/String;)V
+    invoke-virtual/range {v0 .. v6}, Lcom/vigo/metrics/VigoSession;->a(BIIJLjava/lang/String;)V
 
     :cond_0
     return-void
@@ -117,13 +117,13 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsApi;->c()Lcom/vigo/metrics/x;
+    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsApi;->c()Lcom/vigo/metrics/VigoSession;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vigo/metrics/x;->a(BIILjava/lang/String;)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vigo/metrics/VigoSession;->a(BIILjava/lang/String;)V
 
     :cond_0
     return-void
@@ -133,13 +133,13 @@
     .locals 1
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsApi;->c()Lcom/vigo/metrics/x;
+    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsApi;->c()Lcom/vigo/metrics/VigoSession;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vigo/metrics/x;->a(BLjava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vigo/metrics/VigoSession;->a(BLjava/lang/String;)V
 
     :cond_0
     return-void
@@ -149,34 +149,34 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsApi;->c()Lcom/vigo/metrics/x;
+    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsApi;->c()Lcom/vigo/metrics/VigoSession;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vigo/metrics/x;->b()V
+    invoke-virtual {v0}, Lcom/vigo/metrics/VigoSession;->b()V
 
     :cond_0
     return-void
 .end method
 
-.method public final c()Lcom/vigo/metrics/x;
+.method public final c()Lcom/vigo/metrics/VigoSession;
     .locals 3
 
-    sget-object v0, Lcom/vk/video/metrics/MediaMetricsApi;->b:Lkotlin/e;
+    sget-object v0, Lcom/vk/video/metrics/MediaMetricsApi;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/video/metrics/MediaMetricsApi;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/video/metrics/MediaMetricsApi;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vigo/metrics/x;
+    check-cast v0, Lcom/vigo/metrics/VigoSession;
 
     return-object v0
 .end method

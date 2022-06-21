@@ -1,5 +1,5 @@
 .class final Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder;
-.super Lcom/vk/profile/adapter/items/w$b;
+.super Lcom/vk/profile/adapter/items/OverviewInfoItem$b;
 .source "StatusInfoItem.kt"
 
 
@@ -23,7 +23,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/profile/adapter/items/w$b;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/profile/adapter/items/OverviewInfoItem$b;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -36,7 +36,7 @@
 
     const-string p2, "itemView.findViewById(R.id.play_pause_btn)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
 
@@ -99,28 +99,28 @@
     invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->r(Landroid/view/View;)V
 
     .line 16
-    sget-object v1, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v1, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v1}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
+    invoke-virtual {v1}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-interface {v1}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v1
 
     .line 17
-    invoke-interface {v1}, Lcom/vk/music/player/d;->S()Lcom/vk/dto/music/MusicTrack;
+    invoke-interface {v1}, Lcom/vk/music/player/PlayerModel;->S()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v2
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    invoke-interface {v1}, Lcom/vk/music/player/d;->A0()Z
+    invoke-interface {v1}, Lcom/vk/music/player/PlayerModel;->A0()Z
 
     move-result v2
 
@@ -139,33 +139,33 @@
     .line 18
     new-instance v2, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;
 
-    invoke-direct {v2, v0, v1, p1}, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;-><init>(Landroidx/appcompat/widget/AppCompatImageView;Lcom/vk/music/player/d;Lcom/vk/dto/music/MusicTrack;)V
+    invoke-direct {v2, v0, v1, p1}, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;-><init>(Landroidx/appcompat/widget/AppCompatImageView;Lcom/vk/music/player/PlayerModel;Lcom/vk/dto/music/MusicTrack;)V
 
-    invoke-static {v0, v2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/profile/adapter/items/w;)V
+.method public a(Lcom/vk/profile/adapter/items/OverviewInfoItem;)V
     .locals 3
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/w;->W()I
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/OverviewInfoItem;->W()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/w;->W()I
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/OverviewInfoItem;->W()I
 
     move-result v0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/w;->X()I
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/OverviewInfoItem;->X()I
 
     move-result v0
 
@@ -175,7 +175,7 @@
 
     .line 2
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/profile/adapter/items/w$b;->h0()Landroid/widget/TextView;
+    invoke-virtual {p0}, Lcom/vk/profile/adapter/items/OverviewInfoItem$b;->h0()Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -205,7 +205,7 @@
     invoke-direct {p0, v0}, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder;->a(Lcom/vk/dto/music/MusicTrack;)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/profile/adapter/items/w$b;->h0()Landroid/widget/TextView;
+    invoke-virtual {p0}, Lcom/vk/profile/adapter/items/OverviewInfoItem$b;->h0()Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -213,7 +213,7 @@
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -221,9 +221,9 @@
 
     const-string v2, "itemView.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/w;->V()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/OverviewInfoItem;->V()Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -242,11 +242,11 @@
     invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/profile/adapter/items/w$b;->h0()Landroid/widget/TextView;
+    invoke-virtual {p0}, Lcom/vk/profile/adapter/items/OverviewInfoItem$b;->h0()Landroid/widget/TextView;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/w;->V()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/OverviewInfoItem;->V()Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -255,17 +255,17 @@
     .line 9
     :cond_2
     :goto_1
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/w;->R()Lcom/vk/profile/adapter/items/w$a;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/OverviewInfoItem;->R()Lcom/vk/profile/adapter/items/OverviewInfoItem$a;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/profile/adapter/items/w$b;->g0()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p0}, Lcom/vk/profile/adapter/items/OverviewInfoItem$b;->g0()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/imageloader/ImageScreenSize;->SIZE_24DP:Lcom/vk/imageloader/ImageScreenSize;
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/profile/adapter/items/w$a;->a(Lcom/vk/imageloader/view/VKImageView;Lcom/vk/imageloader/ImageScreenSize;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/profile/adapter/items/OverviewInfoItem$a;->a(Lcom/vk/imageloader/view/VKImageView;Lcom/vk/imageloader/ImageScreenSize;)V
 
     return-void
 .end method
@@ -274,9 +274,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/profile/adapter/items/w;
+    check-cast p1, Lcom/vk/profile/adapter/items/OverviewInfoItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder;->a(Lcom/vk/profile/adapter/items/w;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder;->a(Lcom/vk/profile/adapter/items/OverviewInfoItem;)V
 
     return-void
 .end method

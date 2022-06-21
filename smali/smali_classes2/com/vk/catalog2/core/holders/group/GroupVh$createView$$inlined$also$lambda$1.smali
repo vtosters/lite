@@ -60,11 +60,11 @@
     if-nez v1, :cond_0
 
     .line 3
-    new-instance v0, Lcom/vk/core/dialogs/actionspopup/a$b;
+    new-instance v0, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v6, 0x1
 
@@ -78,7 +78,7 @@
 
     move-object v5, p1
 
-    invoke-direct/range {v4 .. v9}, Lcom/vk/core/dialogs/actionspopup/a$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 4
     sget v5, Lcom/vk/catalog2/core/u;->group_event_join:I
@@ -93,7 +93,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v4 .. v10}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v4 .. v10}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 5
     sget v5, Lcom/vk/catalog2/core/u;->group_event_join_unsure:I
@@ -102,14 +102,14 @@
 
     invoke-direct {v8, p0}, Lcom/vk/catalog2/core/holders/group/GroupVh$createView$$inlined$also$lambda$1$2;-><init>(Lcom/vk/catalog2/core/holders/group/GroupVh$createView$$inlined$also$lambda$1;)V
 
-    invoke-static/range {v4 .. v10}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v4 .. v10}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/a$b;->a()Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     move-result-object p1
 
-    invoke-virtual {p1, v2}, Lcom/vk/core/dialogs/actionspopup/a;->b(Z)Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {p1, v2}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b(Z)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     goto :goto_0
 

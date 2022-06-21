@@ -3,12 +3,12 @@
 .source "MultiAddStoryHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/editor/multi/list/holders/MultiAddStoryHolder;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/stories/editor/multi/list/holders/MultiAddStoryHolder;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,11 +52,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/editor/multi/list/holders/MultiAddStoryHolder$1;->this$0:Lcom/vk/stories/editor/multi/list/holders/MultiAddStoryHolder;
 
-    invoke-static {p1}, Lcom/vk/stories/editor/multi/list/holders/MultiAddStoryHolder;->a(Lcom/vk/stories/editor/multi/list/holders/MultiAddStoryHolder;)Lkotlin/jvm/b/a;
+    invoke-static {p1}, Lcom/vk/stories/editor/multi/list/holders/MultiAddStoryHolder;->a(Lcom/vk/stories/editor/multi/list/holders/MultiAddStoryHolder;)Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/editor/multi/list/holders/MultiAddStoryHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

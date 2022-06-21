@@ -81,7 +81,7 @@
 
 .field private final f:Landroid/widget/ImageView;
 
-.field private final g:Lcom/vk/libvideo/x/b;
+.field private final g:Lcom/vk/libvideo/x/CustomRippleDrawable;
 
 .field private h:Landroid/text/StaticLayout;
 
@@ -94,7 +94,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/VideoFastSeekView$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/ui/VideoFastSeekView$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v0, 0x10
 
@@ -455,14 +455,14 @@
     invoke-virtual {p0, p2, p3}, Landroid/view/ViewGroup;->setLayerType(ILandroid/graphics/Paint;)V
 
     .line 45
-    new-instance p2, Lcom/vk/libvideo/x/b;
+    new-instance p2, Lcom/vk/libvideo/x/CustomRippleDrawable;
 
-    invoke-direct {p2, p1}, Lcom/vk/libvideo/x/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/libvideo/x/CustomRippleDrawable;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/b;
+    iput-object p2, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/CustomRippleDrawable;
 
     .line 46
-    iget-object p1, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/b;
+    iget-object p1, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/CustomRippleDrawable;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -748,7 +748,7 @@
     goto :goto_4
 
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v14
 
@@ -871,7 +871,7 @@
 
     .line 36
     :goto_7
-    iget-object v1, v9, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/b;
+    iget-object v1, v9, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/CustomRippleDrawable;
 
     if-eqz v0, :cond_12
 
@@ -883,10 +883,10 @@
     const/16 v0, 0x32
 
     :goto_8
-    invoke-virtual {v1, v0}, Lcom/vk/libvideo/x/b;->a(I)V
+    invoke-virtual {v1, v0}, Lcom/vk/libvideo/x/CustomRippleDrawable;->a(I)V
 
     .line 37
-    iget-object v0, v9, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/b;
+    iget-object v0, v9, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/CustomRippleDrawable;
 
     sget-object v1, Lcom/vk/libvideo/ui/VideoFastSeekView$Companion$Type;->SEEK:Lcom/vk/libvideo/ui/VideoFastSeekView$Companion$Type;
 
@@ -902,7 +902,7 @@
     move-object/from16 v1, p2
 
     :goto_9
-    invoke-virtual {v0, v1, v10, v12}, Lcom/vk/libvideo/x/b;->a(Landroid/graphics/PointF;ZZ)V
+    invoke-virtual {v0, v1, v10, v12}, Lcom/vk/libvideo/x/CustomRippleDrawable;->a(Landroid/graphics/PointF;ZZ)V
 
     .line 38
     iget-boolean v0, v9, Lcom/vk/libvideo/ui/VideoFastSeekView;->J:Z
@@ -980,7 +980,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v10}, Lcom/vk/libvideo/ui/VideoFastSeekView$c;->a(Landroid/content/Context;Z)V
 
@@ -1074,9 +1074,9 @@
     invoke-static/range {v0 .. v9}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;JJLjava/lang/Runnable;Landroid/view/animation/Interpolator;ZILjava/lang/Object;)Landroid/view/ViewPropertyAnimator;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/b;
+    iget-object v0, p0, Lcom/vk/libvideo/ui/VideoFastSeekView;->g:Lcom/vk/libvideo/x/CustomRippleDrawable;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/x/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/x/CustomRippleDrawable;->a()V
 
     const/4 v0, 0x0
 
@@ -1467,7 +1467,7 @@
     goto :goto_1
 
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -1590,7 +1590,7 @@
 
     .line 26
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 

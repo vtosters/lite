@@ -22,10 +22,10 @@
     .end annotation
 .end field
 
-.field private static final f:Lcom/vk/dto/common/data/c;
+.field private static final f:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/apps/AppActivities;",
             ">;"
         }
@@ -55,7 +55,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/apps/AppActivities$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/apps/AppActivities$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/apps/AppActivities;->g:Lcom/vk/dto/apps/AppActivities$c;
 
@@ -64,7 +64,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/apps/AppActivities$b;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/apps/AppActivities;->f:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/apps/AppActivities;->f:Lcom/vk/dto/common/data/JsonParser;
 
     .line 2
     new-instance v0, Lcom/vk/dto/apps/AppActivities$a;
@@ -96,11 +96,11 @@
     return-void
 .end method
 
-.method public static final synthetic y1()Lcom/vk/dto/common/data/c;
+.method public static final synthetic y1()Lcom/vk/dto/common/data/JsonParser;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/dto/apps/AppActivities;->f:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/apps/AppActivities;->f:Lcom/vk/dto/common/data/JsonParser;
 
     return-object v0
 .end method
@@ -153,7 +153,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/apps/AppActivities;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -163,7 +163,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/apps/AppActivities;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -173,7 +173,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/apps/AppActivities;->c:Lcom/vk/dto/common/Image;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -183,7 +183,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/apps/AppActivities;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

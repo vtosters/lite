@@ -3,12 +3,12 @@
 .source "StoryBoxConverter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionText;)Lc/a/m;
+    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionText;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lkotlin/text/j;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/text/MatchResult2;",
         "Ljava/lang/CharSequence;",
         ">;"
     }
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/text/j;)Ljava/lang/CharSequence;
+.method public final a(Lkotlin/text/MatchResult2;)Ljava/lang/CharSequence;
     .locals 9
 
     .line 1
     sget-object v0, Lcom/vk/dto/stories/model/clickable/ClickableMention;->C:Lcom/vk/dto/stories/model/clickable/ClickableMention$b;
 
-    invoke-virtual {v0, p1}, Lcom/vk/dto/stories/model/clickable/ClickableMention$b;->a(Lkotlin/text/j;)Lkotlin/Pair;
+    invoke-virtual {v0, p1}, Lcom/vk/dto/stories/model/clickable/ClickableMention$b;->a(Lkotlin/text/MatchResult2;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -105,7 +105,7 @@
 
     move-object v2, v8
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/stories/clickable/StoryMentionSpan;-><init>(IZIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/stories/clickable/StoryMentionSpan;-><init>(IZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 5
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -120,7 +120,7 @@
 
     .line 6
     :cond_0
-    invoke-interface {p1}, Lkotlin/text/j;->a()Ljava/util/List;
+    invoke-interface {p1}, Lkotlin/text/MatchResult2;->a()Ljava/util/List;
 
     move-result-object p1
 
@@ -140,9 +140,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlin/text/j;
+    check-cast p1, Lkotlin/text/MatchResult2;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$createText$mentionReplacer$1;->a(Lkotlin/text/j;)Ljava/lang/CharSequence;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$createText$mentionReplacer$1;->a(Lkotlin/text/MatchResult2;)Ljava/lang/CharSequence;
 
     move-result-object p1
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$events$1;->a(Lcom/vtosters/lite/api/i;)Ljava/util/List;
+    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$events$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/group/Group;Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$events$1;Lcom/vtosters/lite/api/i;)V
+.method constructor <init>(Lcom/vk/dto/group/Group;Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$events$1;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$events$1$a;->a:Lcom/vk/dto/group/Group;
@@ -42,7 +42,7 @@
     .locals 1
 
     .line 1
-    new-instance p1, Lcom/vk/profile/ui/c$z;
+    new-instance p1, Lcom/vk/profile/ui/BaseProfileFragment$z;
 
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$events$1$a;->a:Lcom/vk/dto/group/Group;
 
@@ -50,13 +50,13 @@
 
     neg-int v0, v0
 
-    invoke-direct {p1, v0}, Lcom/vk/profile/ui/c$z;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
 
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$events$1$a;->b:Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$events$1;
 
     iget-object v0, v0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$events$1;->$context:Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

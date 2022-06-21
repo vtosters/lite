@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lkotlin/e;
+.field private static final b:Lkotlin/Lazy2;
 
 .field public static final c:Lcom/vk/contacts/ContactsSyncUtils;
 
@@ -17,13 +17,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/contacts/ContactsSyncUtils;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -31,15 +31,15 @@
 
     const-string v4, "getPrefs()Landroid/content/SharedPreferences;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/contacts/ContactsSyncUtils;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/contacts/ContactsSyncUtils;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/contacts/ContactsSyncUtils;
@@ -51,11 +51,11 @@
     .line 2
     sget-object v0, Lcom/vk/contacts/ContactsSyncUtils$prefs$2;->a:Lcom/vk/contacts/ContactsSyncUtils$prefs$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/contacts/ContactsSyncUtils;->b:Lkotlin/e;
+    sput-object v0, Lcom/vk/contacts/ContactsSyncUtils;->b:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -90,11 +90,11 @@
     .locals 2
 
     .line 5
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->b1()Z
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->b1()Z
 
     move-result v0
 
@@ -107,17 +107,17 @@
 
     .line 7
     :cond_0
-    sget-object v0, Lcom/vk/auth/n;->a:Lcom/vk/auth/n$a;
+    sget-object v0, Lcom/vk/auth/VKAuthUtils;->a:Lcom/vk/auth/VKAuthUtils$a;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lb/h/h/d/c;->Z()Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/auth/n$a;->a(Ljava/lang/String;)Landroid/accounts/Account;
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->Z()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/vk/auth/VKAuthUtils$a;->a(Ljava/lang/String;)Landroid/accounts/Account;
 
     move-result-object v0
 
@@ -230,7 +230,7 @@
 
     .line 4
     :try_start_0
-    sget-object v4, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v4, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-static {v4}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
 
@@ -243,7 +243,7 @@
 
     const-string v6, "am.getAccountsByType(VKAuth.ACCOUNT_TYPE)"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     array-length v6, v5
@@ -267,11 +267,11 @@
     .line 7
     new-instance v5, Landroid/accounts/Account;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lb/h/h/d/c;->Z()Ljava/lang/String;
+    invoke-virtual {v6}, Lcom/vk/auth/api/VKAccount;->Z()Ljava/lang/String;
 
     move-result-object v6
 
@@ -448,15 +448,15 @@
 .method private final c()Landroid/content/SharedPreferences;
     .locals 3
 
-    sget-object v0, Lcom/vk/contacts/ContactsSyncUtils;->b:Lkotlin/e;
+    sget-object v0, Lcom/vk/contacts/ContactsSyncUtils;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/contacts/ContactsSyncUtils;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/contacts/ContactsSyncUtils;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

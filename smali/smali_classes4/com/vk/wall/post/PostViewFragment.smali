@@ -3,8 +3,8 @@
 .source "PostViewFragment.kt"
 
 # interfaces
-.implements Lcom/vk/wall/post/c;
-.implements Lcom/vk/core/ui/v/j/c;
+.implements Lcom/vk/wall/post/PostViewContract;
+.implements Lcom/vk/core/ui/v/j/UiTracking;
 
 
 # annotations
@@ -18,10 +18,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/wall/BaseCommentsFragment<",
-        "Lcom/vk/wall/post/b;",
+        "Lcom/vk/wall/post/PostViewContract1;",
         ">;",
-        "Lcom/vk/wall/post/c;",
-        "Lcom/vk/core/ui/v/j/c;"
+        "Lcom/vk/wall/post/PostViewContract;",
+        "Lcom/vk/core/ui/v/j/UiTracking;"
     }
 .end annotation
 
@@ -29,19 +29,19 @@
 # instance fields
 .field private P:Landroidx/appcompat/widget/Toolbar;
 
-.field private Q:Lcom/vk/newsfeed/adapters/d;
+.field private Q:Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
-.field private R:Lcom/vtosters/lite/o0/a;
+.field private R:Lcom/vtosters/lite/o0/CommentsAdapter;
 
-.field private final S:Ld/a/a/c/b;
+.field private final S:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
-.field private final T:Lcom/vtosters/lite/ui/f0/a;
+.field private final T:Lcom/vtosters/lite/ui/f0/PostDisplayContext;
 
-.field private U:Lcom/vk/wall/e;
+.field private U:Lcom/vk/wall/CommentsListContract;
 
-.field private V:Lcom/vk/wall/post/b;
+.field private V:Lcom/vk/wall/post/PostViewContract1;
 
-.field private W:Lcom/vk/libvideo/autoplay/g;
+.field private W:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
 .field private X:Landroid/app/Dialog;
 
@@ -49,7 +49,7 @@
 
 .field private Z:Ljava/lang/String;
 
-.field private final a0:Lcom/vk/bridges/w;
+.field private final a0:Lcom/vk/bridges/PostsBridge2;
 
 .field private final b0:Lcom/vk/wall/post/PostViewFragment$receiver$1;
 
@@ -57,18 +57,18 @@
 
 .field private final d0:Lcom/vk/wall/post/PostViewFragment$e;
 
-.field private e0:Lcom/vk/common/k/a;
+.field private e0:Lcom/vk/common/k/PodcastTimeCodeClickListener;
 
 .field private f0:I
 
-.field private final g0:Lcom/vk/music/player/d;
+.field private final g0:Lcom/vk/music/player/PlayerModel;
 
 .field private final h0:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/vk/newsfeed/holders/poster/a;",
+            "Lcom/vk/newsfeed/holders/poster/PosterHolder;",
             ">;>;"
         }
     .end annotation
@@ -85,80 +85,80 @@
     invoke-direct {p0}, Lcom/vk/wall/BaseCommentsFragment;-><init>()V
 
     .line 2
-    new-instance v0, Ld/a/a/c/b;
+    new-instance v0, Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
-    invoke-direct {v0}, Ld/a/a/c/b;-><init>()V
+    invoke-direct {v0}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->S:Ld/a/a/c/b;
+    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->S:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
     .line 3
-    new-instance v0, Lcom/vtosters/lite/ui/f0/a$a;
+    new-instance v0, Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/ui/f0/a$a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;-><init>()V
 
     .line 4
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/a$a;->e()Lcom/vtosters/lite/ui/f0/a$a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;->e()Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;
 
     .line 5
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/a$a;->a()Lcom/vtosters/lite/ui/f0/a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/PostDisplayContext$a;->a()Lcom/vtosters/lite/ui/f0/PostDisplayContext;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->T:Lcom/vtosters/lite/ui/f0/a;
+    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->T:Lcom/vtosters/lite/ui/f0/PostDisplayContext;
 
     .line 6
     new-instance v0, Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-direct {v0, p0}, Lcom/vk/wall/post/PostViewPresenter;-><init>(Lcom/vk/wall/post/c;)V
+    invoke-direct {v0, p0}, Lcom/vk/wall/post/PostViewPresenter;-><init>(Lcom/vk/wall/post/PostViewContract;)V
 
     .line 7
-    new-instance v1, Lcom/vk/newsfeed/adapters/d;
+    new-instance v1, Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/wall/post/PostViewPresenter;->c()Lcom/vk/lists/o;
+    invoke-virtual {v0}, Lcom/vk/wall/post/PostViewPresenter;->c()Lcom/vk/lists/ListDataSet;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/vk/newsfeed/adapters/d;-><init>(Lcom/vk/lists/o;)V
+    invoke-direct {v1, v2}, Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;-><init>(Lcom/vk/lists/ListDataSet;)V
 
     .line 8
     new-instance v2, Lcom/vk/wall/post/PostViewFragment$a;
 
     invoke-direct {v2, p0}, Lcom/vk/wall/post/PostViewFragment$a;-><init>(Lcom/vk/wall/post/PostViewFragment;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/newsfeed/adapters/d;->a(Lcom/vk/newsfeed/adapters/g;)V
+    invoke-virtual {v1, v2}, Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;->a(Lcom/vk/newsfeed/adapters/RecyclerViewObserver;)V
 
     .line 9
-    iput-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/d;
+    iput-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
     .line 10
     new-instance v1, Lcom/vk/wall/post/CommentsListPresenter;
 
-    invoke-direct {v1, p0, v0}, Lcom/vk/wall/post/CommentsListPresenter;-><init>(Lcom/vk/wall/post/c;Lcom/vk/wall/post/b;)V
+    invoke-direct {v1, p0, v0}, Lcom/vk/wall/post/CommentsListPresenter;-><init>(Lcom/vk/wall/post/PostViewContract;Lcom/vk/wall/post/PostViewContract1;)V
 
     .line 11
-    invoke-virtual {v0, v1}, Lcom/vk/wall/post/PostViewPresenter;->a(Lcom/vk/wall/e;)V
+    invoke-virtual {v0, v1}, Lcom/vk/wall/post/PostViewPresenter;->a(Lcom/vk/wall/CommentsListContract;)V
 
     .line 12
-    new-instance v2, Lcom/vtosters/lite/o0/a;
+    new-instance v2, Lcom/vtosters/lite/o0/CommentsAdapter;
 
-    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->t()Lcom/vk/lists/o;
+    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->t()Lcom/vk/lists/ListDataSet;
 
     move-result-object v3
 
-    invoke-direct {v2, v1, v3}, Lcom/vtosters/lite/o0/a;-><init>(Lcom/vk/wall/e;Lcom/vk/lists/o;)V
+    invoke-direct {v2, v1, v3}, Lcom/vtosters/lite/o0/CommentsAdapter;-><init>(Lcom/vk/wall/CommentsListContract;Lcom/vk/lists/ListDataSet;)V
 
-    iput-object v2, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/a;
+    iput-object v2, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/CommentsAdapter;
 
     .line 13
-    iput-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/e;
+    iput-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/CommentsListContract;
 
     .line 14
-    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/e;
+    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/CommentsListContract;
 
-    invoke-virtual {p0, v1}, Lcom/vk/wall/BaseCommentsFragment;->a(Lcom/vk/wall/e;)V
+    invoke-virtual {p0, v1}, Lcom/vk/wall/BaseCommentsFragment;->a(Lcom/vk/wall/CommentsListContract;)V
 
     .line 15
-    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->V:Lcom/vk/wall/post/b;
+    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->V:Lcom/vk/wall/post/PostViewContract1;
 
     const-string v0, ""
 
@@ -166,11 +166,11 @@
     iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->Z:Ljava/lang/String;
 
     .line 17
-    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
+    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->a0:Lcom/vk/bridges/w;
+    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->a0:Lcom/vk/bridges/PostsBridge2;
 
     .line 18
     new-instance v0, Lcom/vk/wall/post/PostViewFragment$receiver$1;
@@ -187,17 +187,17 @@
     iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->d0:Lcom/vk/wall/post/PostViewFragment$e;
 
     .line 20
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->g0:Lcom/vk/music/player/d;
+    invoke-interface {v0}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->g0:Lcom/vk/music/player/PlayerModel;
 
     .line 21
     new-instance v0, Ljava/util/ArrayList;
@@ -272,32 +272,32 @@
     move-result-object v1
 
     .line 6
-    instance-of v2, v1, Lcom/vk/navigation/n;
+    instance-of v2, v1, Lcom/vk/navigation/NavigationDelegateProvider;
 
     if-eqz v2, :cond_1
 
     .line 7
-    check-cast v1, Lcom/vk/navigation/n;
+    check-cast v1, Lcom/vk/navigation/NavigationDelegateProvider;
 
-    invoke-interface {v1}, Lcom/vk/navigation/n;->E0()Lcom/vk/navigation/NavigationDelegate;
+    invoke-interface {v1}, Lcom/vk/navigation/NavigationDelegateProvider;->E0()Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object v1
 
     .line 8
-    instance-of v2, v1, Lcom/vk/navigation/y;
+    instance-of v2, v1, Lcom/vk/navigation/VKNavigationDelegate;
 
     if-eqz v2, :cond_2
 
     .line 9
-    check-cast v1, Lcom/vk/navigation/y;
+    check-cast v1, Lcom/vk/navigation/VKNavigationDelegate;
 
-    invoke-virtual {v1, p0, v0}, Lcom/vk/navigation/y;->a(Lcom/vk/core/fragments/b;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-virtual {v1, p0, v0}, Lcom/vk/navigation/VKNavigationDelegate;->a(Lcom/vk/core/fragments/BaseFragment1;Landroidx/appcompat/widget/Toolbar;)V
 
     goto :goto_0
 
     .line 10
     :cond_1
-    invoke-static {p0}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
+    invoke-static {p0}, Lcom/vtosters/lite/m0/ToolbarHelper;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
 
     move-result v1
 
@@ -306,7 +306,7 @@
     const v1, 0x7f080376
 
     .line 11
-    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/ViewUtils;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 12
     :cond_2
@@ -318,7 +318,7 @@
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 13
-    invoke-static {p0, v0}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v0}, Lcom/vtosters/lite/m0/ToolbarHelper;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     :cond_3
     return-void
@@ -509,7 +509,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->a0:Lcom/vk/bridges/w;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->a0:Lcom/vk/bridges/PostsBridge2;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -517,9 +517,9 @@
 
     const-string v2, "requireActivity()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/bridges/w;->a(Landroid/content/Context;)Z
+    invoke-interface {v0, v1}, Lcom/vk/bridges/PostsBridge2;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -562,7 +562,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -601,7 +601,7 @@
 
     const-string v4, "parent.getChildAt(i)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v3, p2}, Lcom/vk/wall/post/PostViewFragment;->a(Landroid/view/View;Ljava/lang/CharSequence;)Landroid/widget/TextView;
 
@@ -620,20 +620,20 @@
     return-object v1
 .end method
 
-.method public static final synthetic a(Lcom/vk/wall/post/PostViewFragment;)Lcom/vk/libvideo/autoplay/g;
+.method public static final synthetic a(Lcom/vk/wall/post/PostViewFragment;)Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/g;
+    iget-object p0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/wall/post/PostViewFragment;)Lcom/vk/wall/e;
+.method public static final synthetic b(Lcom/vk/wall/post/PostViewFragment;)Lcom/vk/wall/CommentsListContract;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/e;
+    iget-object p0, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/CommentsListContract;
 
     return-object p0
 .end method
@@ -651,13 +651,13 @@
     if-eqz p1, :cond_0
 
     .line 3
-    sget-object v0, Lcom/vk/newsfeed/e;->b:Lcom/vk/newsfeed/e;
+    sget-object v0, Lcom/vk/newsfeed/Feed2049;->b:Lcom/vk/newsfeed/Feed2049;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/e;->a()Lcom/vk/navigation/o;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/Feed2049;->a()Lcom/vk/navigation/Navigator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     :cond_0
     return-void
@@ -697,9 +697,9 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/e;
+    iget-object p1, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/CommentsListContract;
 
-    invoke-interface {p1}, Lcom/vk/wall/e;->d()I
+    invoke-interface {p1}, Lcom/vk/wall/CommentsListContract;->d()I
 
     move-result p1
 
@@ -783,23 +783,23 @@
     move-result v1
 
     .line 5
-    iget-object v4, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/a;
+    iget-object v4, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/CommentsAdapter;
 
-    invoke-virtual {v4, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/vk/wall/b;
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v4}, Lcom/vk/wall/b;->a()Lcom/vtosters/lite/q;
+    invoke-virtual {v4, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object v4
 
+    check-cast v4, Lcom/vk/wall/CommentDisplayItem;
+
     if-eqz v4, :cond_1
 
-    invoke-interface {v4}, Lcom/vtosters/lite/q;->getId()I
+    invoke-virtual {v4}, Lcom/vk/wall/CommentDisplayItem;->a()Lcom/vtosters/lite/Comment;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v4}, Lcom/vtosters/lite/Comment;->getId()I
 
     move-result v3
 
@@ -811,19 +811,19 @@
     if-eqz v3, :cond_2
 
     .line 6
-    iget-object v4, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/a;
+    iget-object v4, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/CommentsAdapter;
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
 
-    invoke-virtual {v4, v3}, Lcom/vtosters/lite/o0/a;->H(I)V
+    invoke-virtual {v4, v3}, Lcom/vtosters/lite/o0/CommentsAdapter;->H(I)V
 
     .line 7
     :cond_2
-    iget-object v3, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/d;
+    iget-object v3, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
-    invoke-virtual {v3}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {v3}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result v3
 
@@ -868,7 +868,7 @@
 
     const-wide/16 v1, 0xc8
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/fragments/b;->b(Lkotlin/jvm/b/a;J)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/fragments/BaseFragment1;->b(Lkotlin/jvm/b/Functions;J)V
 
     return-void
 .end method
@@ -877,9 +877,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/d;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result v0
 
@@ -925,9 +925,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/d;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result v0
 
@@ -942,9 +942,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/a;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/CommentsAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/o0/a;->H(I)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/o0/CommentsAdapter;->H(I)V
 
     return-void
 .end method
@@ -963,12 +963,12 @@
 
     const-string p2, "inflater.inflate(R.layou\u2026t_view, container, false)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public a(Ljava/lang/CharSequence;Lcom/vtosters/lite/attachments/PodcastAttachment;Lcom/vtosters/lite/u;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Ljava/lang/CharSequence;
+.method public a(Ljava/lang/CharSequence;Lcom/vtosters/lite/attachments/PodcastAttachment;Lcom/vtosters/lite/LinkParserParams;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Ljava/lang/CharSequence;
     .locals 1
 
     .line 7
@@ -978,10 +978,10 @@
 
     iget v0, v0, Lcom/vk/dto/music/MusicTrack;->h:I
 
-    invoke-virtual {p3, v0}, Lcom/vtosters/lite/u;->a(I)V
+    invoke-virtual {p3, v0}, Lcom/vtosters/lite/LinkParserParams;->a(I)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->e0:Lcom/vk/common/k/a;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->e0:Lcom/vk/common/k/PodcastTimeCodeClickListener;
 
     if-eqz v0, :cond_0
 
@@ -989,7 +989,7 @@
 
     move-result-object p2
 
-    invoke-virtual {v0, p2, p4}, Lcom/vk/common/k/a;->a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Lcom/vk/common/k/a;
+    invoke-virtual {v0, p2, p4}, Lcom/vk/common/k/PodcastTimeCodeClickListener;->a(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Lcom/vk/common/k/PodcastTimeCodeClickListener;
 
     goto :goto_0
 
@@ -997,21 +997,21 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p3, v0}, Lcom/vtosters/lite/u;->a(Lcom/vk/common/k/b;)V
+    invoke-virtual {p3, v0}, Lcom/vtosters/lite/LinkParserParams;->a(Lcom/vk/common/k/TimeCodeClickListener;)V
 
     .line 9
-    invoke-static {p1, p3}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Lcom/vtosters/lite/u;)Ljava/lang/CharSequence;
+    invoke-static {p1, p3}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;Lcom/vtosters/lite/LinkParserParams;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/core/ui/v/g;)V
+.method public a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
     .locals 9
 
     .line 27
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/FragmentImpl;->a(Lcom/vk/core/ui/v/g;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/FragmentImpl;->a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
 
     .line 28
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -1074,10 +1074,10 @@
     move-object v2, v1
 
     .line 34
-    invoke-direct/range {v2 .. v8}, Lcom/vk/stat/scheme/SchemeStat$EventItem;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem$Type;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/stat/scheme/SchemeStat$EventItem;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem$Type;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 35
-    invoke-virtual {p1, v1}, Lcom/vk/core/ui/v/g;->a(Lcom/vk/stat/scheme/SchemeStat$EventItem;)V
+    invoke-virtual {p1, v1}, Lcom/vk/core/ui/v/UiTrackingScreen;->a(Lcom/vk/stat/scheme/SchemeStat$EventItem;)V
 
     :cond_1
     return-void
@@ -1102,15 +1102,15 @@
     if-eqz v0, :cond_1
 
     .line 12
-    sget-object v1, Lcom/vk/video/c/b;->a:Lcom/vk/video/c/b$a;
+    sget-object v1, Lcom/vk/video/c/VideoAlbumsSheet;->a:Lcom/vk/video/c/VideoAlbumsSheet$a;
 
     const-string v2, "activity"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, p1, v2}, Lcom/vk/video/c/b$a;->a(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;Z)Landroid/app/Dialog;
+    invoke-virtual {v1, v0, p1, v2}, Lcom/vk/video/c/VideoAlbumsSheet$a;->a(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;Z)Landroid/app/Dialog;
 
     move-result-object p1
 
@@ -1132,7 +1132,7 @@
 
     const-string v0, "activity ?: return"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     new-instance v0, Landroid/content/Intent;
@@ -1185,7 +1185,7 @@
 
     const-string v4, "com.google.android.youtube"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -1229,7 +1229,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/b0/m/c;)V
+.method public a(Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/holder/comment/BaseCommentViewHolder;)V
     .locals 3
 
     .line 22
@@ -1249,21 +1249,21 @@
 
     const-string v1, "activity ?: return"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 24
-    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/e;
+    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/CommentsListContract;
 
-    invoke-interface {v1, p1}, Lcom/vk/wall/e;->a(Lcom/vtosters/lite/NewsComment;)Lcom/vk/wall/a;
+    invoke-interface {v1, p1}, Lcom/vk/wall/CommentsListContract;->a(Lcom/vtosters/lite/NewsComment;)Lcom/vk/wall/CommentActionsMenuBuilder;
 
     move-result-object v1
 
     .line 25
     new-instance v2, Lcom/vk/wall/post/PostViewFragment$i;
 
-    invoke-direct {v2, p0, p1, p2}, Lcom/vk/wall/post/PostViewFragment$i;-><init>(Lcom/vk/wall/post/PostViewFragment;Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/b0/m/c;)V
+    invoke-direct {v2, p0, p1, p2}, Lcom/vk/wall/post/PostViewFragment$i;-><init>(Lcom/vk/wall/post/PostViewFragment;Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/holder/comment/BaseCommentViewHolder;)V
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/wall/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog;
+    invoke-virtual {v1, v0, v2}, Lcom/vk/wall/CommentActionsMenuBuilder;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog;
 
     move-result-object p1
 
@@ -1286,15 +1286,15 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/a;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/CommentsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
     const-string v1, "commentsAdapter.list"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1315,14 +1315,14 @@
     move-result-object v2
 
     .line 4
-    check-cast v2, Lcom/vk/wall/b;
+    check-cast v2, Lcom/vk/wall/CommentDisplayItem;
 
     .line 5
-    invoke-virtual {v2}, Lcom/vk/wall/b;->a()Lcom/vtosters/lite/q;
+    invoke-virtual {v2}, Lcom/vk/wall/CommentDisplayItem;->a()Lcom/vtosters/lite/Comment;
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -1342,9 +1342,9 @@
     if-ltz v1, :cond_2
 
     .line 6
-    iget-object p1, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/d;
+    iget-object p1, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->size()I
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->size()I
 
     move-result p1
 
@@ -1355,17 +1355,17 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/wall/post/PostViewFragment$ensureCommentVisibleFromBottom$1;-><init>(Lcom/vk/wall/post/PostViewFragment;I)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/wall/BaseCommentsFragment;->f(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p0, v0}, Lcom/vk/wall/BaseCommentsFragment;->f(Lkotlin/jvm/b/Functions;)V
 
     :cond_2
     return-void
 .end method
 
-.method public e()Lcom/vtosters/lite/ui/f0/a;
+.method public e()Lcom/vtosters/lite/ui/f0/PostDisplayContext;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->T:Lcom/vtosters/lite/ui/f0/a;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->T:Lcom/vtosters/lite/ui/f0/PostDisplayContext;
 
     return-object v0
 .end method
@@ -1387,24 +1387,24 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v1, Lcom/vk/newsfeed/a0;
+    new-instance v1, Lcom/vk/newsfeed/PostViewActionsMenuBuilder;
 
-    invoke-direct {v1, p1}, Lcom/vk/newsfeed/a0;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
+    invoke-direct {v1, p1}, Lcom/vk/newsfeed/PostViewActionsMenuBuilder;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
 
     .line 3
     new-instance v2, Lcom/vk/wall/post/PostViewFragment$h;
 
     invoke-direct {v2, p0, p1}, Lcom/vk/wall/post/PostViewFragment$h;-><init>(Lcom/vk/wall/post/PostViewFragment;Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/newsfeed/a0;->a(Lcom/vk/newsfeed/j;)Lcom/vk/newsfeed/a0;
+    invoke-virtual {v1, v2}, Lcom/vk/newsfeed/PostViewActionsMenuBuilder;->a(Lcom/vk/newsfeed/NewsEntryActionsAdapter3;)Lcom/vk/newsfeed/PostViewActionsMenuBuilder;
 
     .line 4
-    invoke-virtual {v1, v0}, Lcom/vk/newsfeed/a0;->a(Landroid/view/View;)Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {v1, v0}, Lcom/vk/newsfeed/PostViewActionsMenuBuilder;->a(Landroid/view/View;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     move-result-object p1
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->d()Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->d()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     :cond_0
     const/4 p1, 0x1
@@ -1416,9 +1416,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/a;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/CommentsAdapter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/o0/a;->j()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/o0/CommentsAdapter;->j()V
 
     return-void
 .end method
@@ -1427,20 +1427,20 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/d;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public getPresenter()Lcom/vk/wall/post/b;
+.method public getPresenter()Lcom/vk/wall/post/PostViewContract1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->V:Lcom/vk/wall/post/b;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->V:Lcom/vk/wall/post/PostViewContract1;
 
     return-object v0
 .end method
@@ -1456,7 +1456,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {v0, p1}, Lcom/vtosters/lite/n;->a(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vtosters/lite/ActivityUtils;->a(Landroid/app/Activity;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -1497,7 +1497,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->S:Ld/a/a/c/b;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->S:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
@@ -1515,13 +1515,13 @@
     if-le p1, v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/wall/BaseCommentsFragment;->S4()Lcom/vk/wall/h/d;
+    invoke-virtual {p0}, Lcom/vk/wall/BaseCommentsFragment;->S4()Lcom/vk/wall/replybar/ReplyBarView;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/wall/h/d;->a(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/wall/replybar/ReplyBarView;->a(IILandroid/content/Intent;)V
 
     :cond_0
     const/16 v0, 0x10e9
@@ -1546,7 +1546,7 @@
     if-eqz v0, :cond_1
 
     .line 4
-    iget-object v2, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/e;
+    iget-object v2, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/CommentsListContract;
 
     invoke-virtual {v0}, Lcom/vk/dto/newsfeed/entries/Post;->P1()I
 
@@ -1560,7 +1560,7 @@
 
     move-result-object v0
 
-    invoke-interface {v2, v3, v4, v0}, Lcom/vk/wall/e;->a(ILjava/lang/String;Ljava/util/ArrayList;)Lcom/vtosters/lite/q;
+    invoke-interface {v2, v3, v4, v0}, Lcom/vk/wall/CommentsListContract;->a(ILjava/lang/String;Ljava/util/ArrayList;)Lcom/vtosters/lite/Comment;
 
     goto :goto_0
 
@@ -1589,9 +1589,9 @@
     if-eqz p1, :cond_3
 
     .line 6
-    iget-object p2, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/e;
+    iget-object p2, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/CommentsListContract;
 
-    invoke-interface {p2, p1}, Lcom/vk/wall/e;->a(Lcom/vk/sharing/target/Target;)V
+    invoke-interface {p2, p1}, Lcom/vk/wall/CommentsListContract;->a(Lcom/vk/sharing/target/Target;)V
 
     nop
 
@@ -1606,13 +1606,13 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/wall/post/b;->p()V
+    invoke-interface {p1}, Lcom/vk/wall/post/PostViewContract1;->p()V
 
     :cond_0
     return-void
@@ -1622,10 +1622,10 @@
     .locals 12
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    new-instance p1, Lcom/vk/libvideo/autoplay/g;
+    new-instance p1, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1633,7 +1633,7 @@
 
     const-string v0, "requireActivity()"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -1657,9 +1657,9 @@
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v11}, Lcom/vk/libvideo/autoplay/g;-><init>(Landroid/content/Context;Lcom/vk/libvideo/autoplay/b;Lcom/vk/libvideo/autoplay/j/a;Lcom/vk/bridges/f;Landroid/os/Handler;Lcom/vk/libvideo/autoplay/j/d;Lcom/vk/libvideo/autoplay/g$c;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v11}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;-><init>(Landroid/content/Context;Lcom/vk/libvideo/autoplay/AutoPlayProvider;Lcom/vk/libvideo/autoplay/j/OnScreenPlayStrategy;Lcom/vk/bridges/AuthBridge3;Landroid/os/Handler;Lcom/vk/libvideo/autoplay/j/VisibilityCalculator;Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper$c;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object p1, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/g;
+    iput-object p1, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     .line 3
     new-instance p1, Landroid/content/IntentFilter;
@@ -1687,7 +1687,7 @@
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 8
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->b0:Lcom/vk/wall/post/PostViewFragment$receiver$1;
 
@@ -1701,12 +1701,12 @@
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     .line 10
-    sget-object v0, Lcom/vtosters/lite/data/r;->a:Ljava/lang/String;
+    sget-object v0, Lcom/vtosters/lite/data/GroupsAdmin;->a:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 11
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-static {v0}, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroidx/localbroadcastmanager/content/LocalBroadcastManager;
 
@@ -1717,185 +1717,185 @@
     invoke-virtual {v0, v1, p1}, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
     .line 12
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
     const/16 v1, 0x65
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 13
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
     const/16 v1, 0x66
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 14
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
     const/16 v1, 0x68
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 15
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
     const/16 v1, 0x64
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 16
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
     const/16 v1, 0x7c
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 17
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
     const/16 v1, 0x7d
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 18
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
     const/16 v1, 0x71
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 19
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
     const/16 v1, 0x75
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 20
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
     const/16 v1, 0x78
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 21
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
     const/16 v1, 0x79
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 22
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/e;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/CommentsListContract;
 
     const/16 v1, 0x74
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 23
-    sget-object p1, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object p1, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/t;->a()V
+    invoke-virtual {p1}, Lcom/vk/stickers/Stickers;->a()V
 
     .line 24
-    iget-object p1, p0, Lcom/vk/wall/post/PostViewFragment;->S:Ld/a/a/c/b;
+    iget-object p1, p0, Lcom/vk/wall/post/PostViewFragment;->S:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
     .line 25
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/d;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
-    invoke-virtual {p1, v0}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p1, v0}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 26
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/a;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->R:Lcom/vtosters/lite/o0/CommentsAdapter;
 
-    invoke-virtual {p1, v0}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p1, v0}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 27
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -1905,7 +1905,7 @@
     if-eqz p1, :cond_0
 
     .line 28
-    sget-object v0, Lcom/vk/navigation/q;->R:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->R:Ljava/lang/String;
 
     const-string v1, ""
 
@@ -1915,7 +1915,7 @@
 
     const-string v0, "args.getString(NavigatorKeys.REFERRER, \"\")"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/wall/post/PostViewFragment;->Z:Ljava/lang/String;
 
@@ -1942,7 +1942,7 @@
     const v0, 0x7f040230
 
     .line 2
-    invoke-static {p2, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {p2, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object p2
 
@@ -1978,15 +1978,15 @@
 
     if-eqz p2, :cond_0
 
-    new-instance v0, Lcom/vk/common/k/a;
+    new-instance v0, Lcom/vk/common/k/PodcastTimeCodeClickListener;
 
     const-string v1, "it"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->g0:Lcom/vk/music/player/d;
+    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->g0:Lcom/vk/music/player/PlayerModel;
 
-    invoke-direct {v0, p2, v1}, Lcom/vk/common/k/a;-><init>(Landroid/content/Context;Lcom/vk/music/player/d;)V
+    invoke-direct {v0, p2, v1}, Lcom/vk/common/k/PodcastTimeCodeClickListener;-><init>(Landroid/content/Context;Lcom/vk/music/player/PlayerModel;)V
 
     goto :goto_0
 
@@ -1994,14 +1994,14 @@
     move-object v0, p3
 
     :goto_0
-    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->e0:Lcom/vk/common/k/a;
+    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->e0:Lcom/vk/common/k/PodcastTimeCodeClickListener;
 
     const p2, 0x7f0a0d9d
 
     const/4 v0, 0x2
 
     .line 3
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -2018,7 +2018,7 @@
 
     const v2, 0x7f040230
 
-    invoke-static {v1, v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v1, v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v1
 
@@ -2044,7 +2044,7 @@
     if-eqz p2, :cond_4
 
     .line 7
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -2076,7 +2076,7 @@
 
     .line 9
     :goto_1
-    new-instance v2, Lme/grishka/appkit/views/a;
+    new-instance v2, Lme/grishka/appkit/views/DividerItemDecoration;
 
     .line 10
     new-instance v3, Landroid/graphics/drawable/ColorDrawable;
@@ -2090,10 +2090,10 @@
     invoke-direct {v3, v4}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
     .line 11
-    invoke-direct {v2, v3, v1}, Lme/grishka/appkit/views/a;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v2, v3, v1}, Lme/grishka/appkit/views/DividerItemDecoration;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     .line 12
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -2106,23 +2106,23 @@
 
     const-string v3, "resources"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v3, 0x41800000    # 16.0f
 
-    invoke-static {v1, v3}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v1, v3}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
 
     move-result v1
 
-    invoke-virtual {v2, v1}, Lme/grishka/appkit/views/a;->a(I)V
+    invoke-virtual {v2, v1}, Lme/grishka/appkit/views/DividerItemDecoration;->a(I)V
 
     .line 14
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v1
 
-    invoke-virtual {v2, v1}, Lme/grishka/appkit/views/a;->a(Lme/grishka/appkit/views/a$a;)Lme/grishka/appkit/views/a;
+    invoke-virtual {v2, v1}, Lme/grishka/appkit/views/DividerItemDecoration;->a(Lme/grishka/appkit/views/DividerItemDecoration$a;)Lme/grishka/appkit/views/DividerItemDecoration;
 
     .line 15
     invoke-virtual {p2, v2}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
@@ -2132,36 +2132,36 @@
 
     .line 17
     :cond_4
-    new-instance p2, Lcom/vk/wall/h/d;
+    new-instance p2, Lcom/vk/wall/replybar/ReplyBarView;
 
-    invoke-direct {p2}, Lcom/vk/wall/h/d;-><init>()V
+    invoke-direct {p2}, Lcom/vk/wall/replybar/ReplyBarView;-><init>()V
 
     .line 18
-    new-instance v1, Lcom/vk/wall/h/c;
+    new-instance v1, Lcom/vk/wall/replybar/ReplyBarPresenter;
 
-    iget-object v2, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/e;
+    iget-object v2, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/CommentsListContract;
 
-    invoke-virtual {p0}, Lcom/vk/wall/BaseCommentsFragment;->Q4()Lcom/vk/mentions/j;
+    invoke-virtual {p0}, Lcom/vk/wall/BaseCommentsFragment;->Q4()Lcom/vk/mentions/MentionSelectInterfaces1;
 
     move-result-object v3
 
-    invoke-direct {v1, v2, p2, v3}, Lcom/vk/wall/h/c;-><init>(Lcom/vk/wall/e;Lcom/vk/wall/h/b;Lcom/vk/mentions/j;)V
+    invoke-direct {v1, v2, p2, v3}, Lcom/vk/wall/replybar/ReplyBarPresenter;-><init>(Lcom/vk/wall/CommentsListContract;Lcom/vk/wall/replybar/ReplyBarContract1;Lcom/vk/mentions/MentionSelectInterfaces1;)V
 
     .line 19
-    iget-object v2, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/e;
+    iget-object v2, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/CommentsListContract;
 
-    invoke-interface {v2, v1}, Lcom/vk/wall/e;->a(Lcom/vk/wall/h/a;)V
+    invoke-interface {v2, v1}, Lcom/vk/wall/CommentsListContract;->a(Lcom/vk/wall/replybar/ReplyBarContract;)V
 
     .line 20
-    invoke-virtual {p2, v1}, Lcom/vk/wall/h/d;->a(Lcom/vk/wall/h/a;)V
+    invoke-virtual {p2, v1}, Lcom/vk/wall/replybar/ReplyBarView;->a(Lcom/vk/wall/replybar/ReplyBarContract;)V
 
     .line 21
-    invoke-virtual {p0, p2}, Lcom/vk/wall/BaseCommentsFragment;->a(Lcom/vk/wall/h/d;)V
+    invoke-virtual {p0, p2}, Lcom/vk/wall/BaseCommentsFragment;->a(Lcom/vk/wall/replybar/ReplyBarView;)V
 
     const p2, 0x7f0a063c
 
     .line 22
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -2170,7 +2170,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/wall/post/PostViewFragment$onCreateView$$inlined$also$lambda$1;-><init>(Lcom/vk/wall/post/PostViewFragment;)V
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 24
     invoke-virtual {p0, p2}, Lcom/vk/wall/BaseCommentsFragment;->a(Landroid/view/View;)V
@@ -2181,7 +2181,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/wall/post/PostViewFragment;->setHasOptionsMenu(Z)V
 
     .line 26
-    iget-object p2, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/g;
+    iget-object p2, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz p2, :cond_5
 
@@ -2208,56 +2208,56 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/g;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->h()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->h()V
 
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/g;
+    iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     .line 4
     :cond_0
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 5
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/e;
+    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/CommentsListContract;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 6
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->b0:Lcom/vk/wall/post/PostViewFragment$receiver$1;
 
     invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;Landroid/content/BroadcastReceiver;)V
 
     .line 7
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-static {v0}, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroidx/localbroadcastmanager/content/LocalBroadcastManager;
 
@@ -2268,14 +2268,14 @@
     invoke-virtual {v0, v1}, Landroidx/localbroadcastmanager/content/LocalBroadcastManager;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 8
-    invoke-static {}, Lcom/vk/sharing/target/n;->c()Lcom/vk/sharing/target/n;
+    invoke-static {}, Lcom/vk/sharing/target/GroupsForCommentsImpersonation;->c()Lcom/vk/sharing/target/GroupsForCommentsImpersonation;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/sharing/target/n;->a()V
+    invoke-virtual {v0}, Lcom/vk/sharing/target/GroupsForCommentsImpersonation;->a()V
 
     .line 9
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onDestroy()V
 
     return-void
 .end method
@@ -2289,15 +2289,15 @@
     iput-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->P:Landroidx/appcompat/widget/Toolbar;
 
     .line 2
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/g;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->h()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->h()V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/g;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz v0, :cond_1
 
@@ -2341,7 +2341,7 @@
 
     const-string v0, "view"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v3, p0, Lcom/vk/wall/post/PostViewFragment;->f0:I
 
@@ -2351,7 +2351,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/extensions/a;->a(Landroid/app/Activity;Landroid/view/View;IZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/extensions/ActivityExt;->a(Landroid/app/Activity;Landroid/view/View;IZILjava/lang/Object;)V
 
     .line 7
     :cond_2
@@ -2364,7 +2364,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
@@ -2376,7 +2376,7 @@
 
     move-result p1
 
-    invoke-interface {v0, p1}, Lcom/vk/wall/post/b;->a(I)Z
+    invoke-interface {v0, p1}, Lcom/vk/wall/post/PostViewContract1;->a(I)Z
 
     move-result p1
 
@@ -2395,21 +2395,21 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/wall/BaseCommentsFragment;->S4()Lcom/vk/wall/h/d;
+    invoke-virtual {p0}, Lcom/vk/wall/BaseCommentsFragment;->S4()Lcom/vk/wall/replybar/ReplyBarView;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/wall/h/d;->i()V
+    invoke-virtual {v0}, Lcom/vk/wall/replybar/ReplyBarView;->i()V
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/g;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->f()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->f()V
 
     .line 3
     :cond_1
@@ -2418,7 +2418,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->i0:Lcom/vk/wall/post/PostViewFragment$b;
 
-    invoke-static {v0}, Lcom/vk/utils/f/b;->c(Lcom/vk/utils/f/c;)V
+    invoke-static {v0}, Lcom/vk/utils/f/RotationSensorEventProvider1;->c(Lcom/vk/utils/f/RotationSensorEventProvider;)V
 
     .line 5
     invoke-super {p0}, Lcom/vk/wall/BaseCommentsFragment;->onPause()V
@@ -2435,14 +2435,14 @@
     .line 2
     iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->i0:Lcom/vk/wall/post/PostViewFragment$b;
 
-    invoke-static {v0}, Lcom/vk/utils/f/b;->a(Lcom/vk/utils/f/c;)V
+    invoke-static {v0}, Lcom/vk/utils/f/RotationSensorEventProvider1;->a(Lcom/vk/utils/f/RotationSensorEventProvider;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/g;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->g()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->g()V
 
     .line 4
     :cond_0
@@ -2497,7 +2497,7 @@
 
     const-string v0, "v"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f040224
 
@@ -2511,7 +2511,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/extensions/a;->a(Landroid/app/Activity;Landroid/view/View;IZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/extensions/ActivityExt;->a(Landroid/app/Activity;Landroid/view/View;IZILjava/lang/Object;)V
 
     :cond_2
     return-void
@@ -2524,20 +2524,20 @@
     invoke-super {p0, p1, p2}, Lcom/vk/wall/BaseCommentsFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/g;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->W:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->k()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->k()V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->S:Ld/a/a/c/b;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->S:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
-    invoke-virtual {p0, v0}, Lcom/vk/wall/BaseCommentsFragment;->a(Lcom/vk/lists/i0;)V
+    invoke-virtual {p0, v0}, Lcom/vk/wall/BaseCommentsFragment;->a(Lcom/vk/lists/SimpleAdapter;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
@@ -2547,7 +2547,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/wall/post/b;->a(Landroid/os/Bundle;)V
+    invoke-interface {v0, v1}, Lcom/vk/wall/post/PostViewContract1;->a(Landroid/os/Bundle;)V
 
     :cond_1
     if-eqz p2, :cond_2
@@ -2566,19 +2566,19 @@
 
     .line 6
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/wall/BaseCommentsFragment;->S4()Lcom/vk/wall/h/d;
+    invoke-virtual {p0}, Lcom/vk/wall/BaseCommentsFragment;->S4()Lcom/vk/wall/replybar/ReplyBarView;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/wall/h/d;->a(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/wall/replybar/ReplyBarView;->a(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 7
     :cond_3
-    iget-object p1, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/e;
+    iget-object p1, p0, Lcom/vk/wall/post/PostViewFragment;->U:Lcom/vk/wall/CommentsListContract;
 
-    invoke-interface {p1}, Lcom/vk/wall/e;->g()Z
+    invoke-interface {p1}, Lcom/vk/wall/CommentsListContract;->g()Z
 
     move-result p1
 
@@ -2697,7 +2697,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
@@ -2705,7 +2705,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/wall/post/b;->s()I
+    invoke-interface {v0}, Lcom/vk/wall/post/PostViewContract1;->s()I
 
     move-result v0
 
@@ -2769,14 +2769,14 @@
 
     const-string v2, "activity?.menuInflater!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0, v1}, Lcom/vk/wall/post/PostViewFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -2822,7 +2822,7 @@
     return-void
 .end method
 
-.method public v(I)Lcom/vk/libvideo/autoplay/a;
+.method public v(I)Lcom/vk/libvideo/autoplay/AutoPlay;
     .locals 2
 
     const/4 v0, 0x0
@@ -2830,9 +2830,9 @@
     if-ltz p1, :cond_1
 
     .line 1
-    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/d;
+    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
-    invoke-virtual {v1}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {v1}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result v1
 
@@ -2842,17 +2842,17 @@
 
     .line 2
     :cond_0
-    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/d;
+    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment;->Q:Lcom/vk/newsfeed/adapters/PostDisplayItemsAdapter;
 
-    invoke-virtual {v1, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->a()Lcom/vk/libvideo/autoplay/a;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->a()Lcom/vk/libvideo/autoplay/AutoPlay;
 
     move-result-object v0
 
@@ -2865,9 +2865,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->S:Ld/a/a/c/b;
+    iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment;->S:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
-    invoke-virtual {v0}, Ld/a/a/c/b;->getItemCount()I
+    invoke-virtual {v0}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->getItemCount()I
 
     move-result v0
 
@@ -2912,13 +2912,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/wall/BaseCommentsFragment;->S4()Lcom/vk/wall/h/d;
+    invoke-virtual {p0}, Lcom/vk/wall/BaseCommentsFragment;->S4()Lcom/vk/wall/replybar/ReplyBarView;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/wall/h/d;->l()V
+    invoke-virtual {v0}, Lcom/vk/wall/replybar/ReplyBarView;->l()V
 
     :cond_0
     return-void

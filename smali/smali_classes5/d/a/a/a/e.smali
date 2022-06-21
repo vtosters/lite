@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # static fields
@@ -36,9 +36,9 @@
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lcom/vk/core/util/q1/a/b;
+    check-cast p1, Lcom/vk/core/util/q1/a/IdlingScope1;
 
-    invoke-static {p1}, Ld/a/a/a/j;->a(Lcom/vk/core/util/q1/a/b;)Lkotlin/m;
+    invoke-static {p1}, Lme/grishka/appkit/fragments/LoaderFragment;->a(Lcom/vk/core/util/q1/a/IdlingScope1;)Lkotlin/Unit;
 
     const/4 p1, 0x0
 

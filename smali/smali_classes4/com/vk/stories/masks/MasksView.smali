@@ -87,7 +87,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/masks/MasksView$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/masks/MasksView$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/stories/masks/MasksView;->F:Lcom/vk/stories/masks/MasksView$b;
 
@@ -271,7 +271,7 @@
 
     const-string v0, "pagindatedView.recyclerView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v4}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
@@ -296,13 +296,13 @@
     .line 22
     iget-object p1, p0, Lcom/vk/stories/masks/MasksView;->b:Lcom/vk/lists/RecyclerPaginatedView;
 
-    new-instance v0, Lcom/vk/lists/l0/c;
+    new-instance v0, Lcom/vk/lists/l0/SpacesItemDecoration;
 
     sget v1, Lcom/vk/stories/masks/MasksView;->E:I
 
     const/4 v3, 0x1
 
-    invoke-direct {v0, v1, v3}, Lcom/vk/lists/l0/c;-><init>(IZ)V
+    invoke-direct {v0, v1, v3}, Lcom/vk/lists/l0/SpacesItemDecoration;-><init>(IZ)V
 
     invoke-virtual {p1, v0}, Lcom/vk/lists/RecyclerPaginatedView;->setItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -483,7 +483,7 @@
 
     const-string p2, "pagindatedView.recyclerView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v3}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
@@ -508,13 +508,13 @@
     .line 48
     iget-object p1, p0, Lcom/vk/stories/masks/MasksView;->b:Lcom/vk/lists/RecyclerPaginatedView;
 
-    new-instance p2, Lcom/vk/lists/l0/c;
+    new-instance p2, Lcom/vk/lists/l0/SpacesItemDecoration;
 
     sget v0, Lcom/vk/stories/masks/MasksView;->E:I
 
     const/4 v2, 0x1
 
-    invoke-direct {p2, v0, v2}, Lcom/vk/lists/l0/c;-><init>(IZ)V
+    invoke-direct {p2, v0, v2}, Lcom/vk/lists/l0/SpacesItemDecoration;-><init>(IZ)V
 
     invoke-virtual {p1, p2}, Lcom/vk/lists/RecyclerPaginatedView;->setItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -695,7 +695,7 @@
 
     const-string p2, "pagindatedView.recyclerView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
@@ -720,13 +720,13 @@
     .line 74
     iget-object p1, p0, Lcom/vk/stories/masks/MasksView;->b:Lcom/vk/lists/RecyclerPaginatedView;
 
-    new-instance p2, Lcom/vk/lists/l0/c;
+    new-instance p2, Lcom/vk/lists/l0/SpacesItemDecoration;
 
     sget p3, Lcom/vk/stories/masks/MasksView;->E:I
 
     const/4 v1, 0x1
 
-    invoke-direct {p2, p3, v1}, Lcom/vk/lists/l0/c;-><init>(IZ)V
+    invoke-direct {p2, p3, v1}, Lcom/vk/lists/l0/SpacesItemDecoration;-><init>(IZ)V
 
     invoke-virtual {p1, p2}, Lcom/vk/lists/RecyclerPaginatedView;->setItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -808,7 +808,7 @@
     throw p1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -824,7 +824,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, p0, v1}, Lcom/vk/stories/masks/MasksView$d;-><init>(Lcom/vk/stories/masks/MasksView;Landroid/content/Context;)V
 
@@ -916,21 +916,21 @@
 
     if-eqz v1, :cond_1b
 
-    check-cast v1, Lcom/vk/lists/s;
+    check-cast v1, Lcom/vk/lists/PaginatedRecyclerAdapter;
 
-    iget-object v1, v1, Lcom/vk/lists/s;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v1, v1, Lcom/vk/lists/PaginatedRecyclerAdapter;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     if-eqz v1, :cond_1a
 
-    check-cast v1, Lcom/vk/stories/masks/a;
+    check-cast v1, Lcom/vk/stories/masks/MasksAdapter;
 
     .line 9
-    invoke-static {p1}, Lcom/vk/lists/h0;->a(Landroidx/recyclerview/widget/RecyclerView;)I
+    invoke-static {p1}, Lcom/vk/lists/RecyclerViewUtil;->a(Landroidx/recyclerview/widget/RecyclerView;)I
 
     move-result v2
 
     .line 10
-    invoke-static {p1}, Lcom/vk/lists/h0;->b(Landroidx/recyclerview/widget/RecyclerView;)I
+    invoke-static {p1}, Lcom/vk/lists/RecyclerViewUtil;->b(Landroidx/recyclerview/widget/RecyclerView;)I
 
     move-result v3
 
@@ -939,7 +939,7 @@
     const/4 v5, 0x0
 
     .line 11
-    invoke-static {v4, v5}, Lkotlin/t/e;->c(II)Lkotlin/t/b;
+    invoke-static {v4, v5}, Lkotlin/t/e;->c(II)Lkotlin/t/Progressions;
 
     move-result-object v4
 
@@ -972,15 +972,15 @@
     move-result v9
 
     .line 13
-    invoke-virtual {v1, v9}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v1, v9}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object v9
 
-    check-cast v9, Lcom/vk/dto/masks/a;
+    check-cast v9, Lcom/vk/dto/masks/MasksListItem;
 
     if-eqz v9, :cond_3
 
-    invoke-virtual {v9}, Lcom/vk/dto/masks/a;->d()Lcom/vk/dto/masks/MaskSection;
+    invoke-virtual {v9}, Lcom/vk/dto/masks/MasksListItem;->d()Lcom/vk/dto/masks/MaskSection;
 
     move-result-object v9
 
@@ -1018,15 +1018,15 @@
 
     move-result v4
 
-    invoke-virtual {v1, v4}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v1, v4}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/dto/masks/a;
+    check-cast v4, Lcom/vk/dto/masks/MasksListItem;
 
     if-eqz v4, :cond_6
 
-    invoke-virtual {v4}, Lcom/vk/dto/masks/a;->d()Lcom/vk/dto/masks/MaskSection;
+    invoke-virtual {v4}, Lcom/vk/dto/masks/MasksListItem;->d()Lcom/vk/dto/masks/MaskSection;
 
     move-result-object v4
 
@@ -1053,16 +1053,16 @@
 
     .line 18
     :goto_4
-    invoke-virtual {v1, v2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/dto/masks/a;
+    check-cast v4, Lcom/vk/dto/masks/MasksListItem;
 
     if-eqz v4, :cond_8
 
     .line 19
-    invoke-virtual {v4}, Lcom/vk/dto/masks/a;->d()Lcom/vk/dto/masks/MaskSection;
+    invoke-virtual {v4}, Lcom/vk/dto/masks/MasksListItem;->d()Lcom/vk/dto/masks/MaskSection;
 
     move-result-object v6
 
@@ -1077,7 +1077,7 @@
     .line 20
     iget-object v6, p0, Lcom/vk/stories/masks/MasksView;->e:Ljava/util/ArrayList;
 
-    invoke-virtual {v4}, Lcom/vk/dto/masks/a;->d()Lcom/vk/dto/masks/MaskSection;
+    invoke-virtual {v4}, Lcom/vk/dto/masks/MasksListItem;->d()Lcom/vk/dto/masks/MaskSection;
 
     move-result-object v9
 
@@ -1086,7 +1086,7 @@
     .line 21
     iget-object v6, p0, Lcom/vk/stories/masks/MasksView;->f:Ljava/util/HashMap;
 
-    invoke-virtual {v4}, Lcom/vk/dto/masks/a;->d()Lcom/vk/dto/masks/MaskSection;
+    invoke-virtual {v4}, Lcom/vk/dto/masks/MasksListItem;->d()Lcom/vk/dto/masks/MaskSection;
 
     move-result-object v4
 
@@ -1137,7 +1137,7 @@
 
     const-string v4, "tempSectionsList[i]"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Lcom/vk/dto/masks/MaskSection;
 
@@ -1215,7 +1215,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Landroid/view/View;
 
@@ -1289,7 +1289,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/View;
 
@@ -1306,7 +1306,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/View;
 
@@ -1343,7 +1343,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Landroid/view/View;
 
@@ -1418,7 +1418,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/view/View;
 
@@ -1460,7 +1460,7 @@
 
     const-string v6, "tempSectionViewList[i + 1]"
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v4, Landroid/view/View;
 
@@ -1526,7 +1526,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/view/View;
 
@@ -1563,14 +1563,14 @@
     const/4 v4, 0x0
 
     .line 58
-    invoke-static {v3, v4, v1}, Lcom/vk/core/util/o0;->a(FFF)F
+    invoke-static {v3, v4, v1}, Lcom/vk/core/util/MathUtils;->a(FFF)F
 
     move-result v3
 
     .line 59
     sget v4, Lcom/vk/stories/masks/MasksView;->C:F
 
-    invoke-static {v4, v1, v3}, Lcom/vk/core/util/h;->a(FFF)F
+    invoke-static {v4, v1, v3}, Lcom/vk/core/util/AnimationUtils;->a(FFF)F
 
     move-result v3
 

@@ -3,12 +3,12 @@
 .source "StoryChooseActivityLoader.kt"
 
 # interfaces
-.implements Lc/a/z/c;
+.implements Lio/reactivex/functions/BiFunction;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/util/StoryChooseActivityLoader;->a(ILcom/vk/dto/stories/model/CommonUploadParams;Ljava/lang/String;I)Lc/a/m;
+    value = Lcom/vk/stories/util/StoryChooseActivityLoader;->a(ILcom/vk/dto/stories/model/CommonUploadParams;Ljava/lang/String;I)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,16 +26,16 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/c<",
+        "Lio/reactivex/functions/BiFunction<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/stories/d1/a;",
+        "Lcom/vk/stories/d1/StoryDialogItem;",
         ">;",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/group/Group;",
         ">;",
-        "Lcom/vk/stories/e1/a;",
+        "Lcom/vk/stories/e1/StoryReceiverTarget;",
         ">;"
     }
 .end annotation
@@ -58,28 +58,28 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/List;Ljava/util/List;)Lcom/vk/stories/e1/a;
+.method public final a(Ljava/util/List;Ljava/util/List;)Lcom/vk/stories/e1/StoryReceiverTarget;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;",
             "Ljava/util/List<",
             "+",
             "Lcom/vk/dto/group/Group;",
             ">;)",
-            "Lcom/vk/stories/e1/a;"
+            "Lcom/vk/stories/e1/StoryReceiverTarget;"
         }
     .end annotation
 
     .line 2
-    new-instance v0, Lcom/vk/stories/e1/a;
+    new-instance v0, Lcom/vk/stories/e1/StoryReceiverTarget;
 
     iget v1, p0, Lcom/vk/stories/util/StoryChooseActivityLoader$d;->a:I
 
-    invoke-direct {v0, v1, p1, p2}, Lcom/vk/stories/e1/a;-><init>(ILjava/util/List;Ljava/util/List;)V
+    invoke-direct {v0, v1, p1, p2}, Lcom/vk/stories/e1/StoryReceiverTarget;-><init>(ILjava/util/List;Ljava/util/List;)V
 
     return-object v0
 .end method
@@ -92,7 +92,7 @@
 
     check-cast p2, Ljava/util/List;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader$d;->a(Ljava/util/List;Ljava/util/List;)Lcom/vk/stories/e1/a;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader$d;->a(Ljava/util/List;Ljava/util/List;)Lcom/vk/stories/e1/StoryReceiverTarget;
 
     move-result-object p1
 

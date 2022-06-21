@@ -48,7 +48,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/promo/PromoDefaultSlideViewController$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/promo/PromoDefaultSlideViewController$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/promo/PromoDefaultSlideViewController$a;
@@ -145,7 +145,7 @@
 
 
 # virtual methods
-.method public a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/f;)Landroid/view/View;
+.method public a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/PromoNavigator;)Landroid/view/View;
     .locals 3
 
     .line 1
@@ -159,7 +159,7 @@
 
     const-string v0, "inflater.inflate(R.layou\u2026atures, container, false)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     sget v0, Lcom/vk/promo/k;->title:I
@@ -236,7 +236,7 @@
     .line 12
     new-instance v1, Lcom/vk/promo/PromoDefaultSlideViewController$c;
 
-    invoke-direct {v1, p0, p3}, Lcom/vk/promo/PromoDefaultSlideViewController$c;-><init>(Lcom/vk/promo/PromoDefaultSlideViewController;Lcom/vk/promo/f;)V
+    invoke-direct {v1, p0, p3}, Lcom/vk/promo/PromoDefaultSlideViewController$c;-><init>(Lcom/vk/promo/PromoDefaultSlideViewController;Lcom/vk/promo/PromoNavigator;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -273,7 +273,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-static {p3, v0}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p3, v0}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     .line 15
     iget v0, p0, Lcom/vk/promo/PromoDefaultSlideViewController;->c:I

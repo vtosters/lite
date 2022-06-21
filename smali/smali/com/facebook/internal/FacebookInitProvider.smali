@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/facebook/e;->c(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/facebook/FacebookSdk;->c(Landroid/content/Context;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

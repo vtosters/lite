@@ -3,11 +3,11 @@
 .source "RealtimeSinceBootClock.java"
 
 # interfaces
-.implements Lcom/facebook/common/time/b;
+.implements Lcom/facebook/common/time/MonotonicClock;
 
 
 # annotations
-.annotation build Lcom/facebook/common/internal/d;
+.annotation build Lcom/facebook/common/internal/DoNotStrip;
 .end annotation
 
 
@@ -40,7 +40,7 @@
 
 .method public static get()Lcom/facebook/common/time/RealtimeSinceBootClock;
     .locals 1
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 
     .line 1

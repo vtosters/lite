@@ -8,7 +8,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/photogallery/dto/n;",
+            "Lcom/vk/photogallery/dto/SelectionState1;",
             ">;"
         }
     .end annotation
@@ -34,7 +34,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/photogallery/dto/c;)I
+.method public final a(Lcom/vk/photogallery/dto/GalleryState2;)I
     .locals 3
 
     .line 2
@@ -59,14 +59,14 @@
     move-result-object v2
 
     .line 4
-    check-cast v2, Lcom/vk/photogallery/dto/n;
+    check-cast v2, Lcom/vk/photogallery/dto/SelectionState1;
 
     .line 5
-    invoke-virtual {v2}, Lcom/vk/photogallery/dto/n;->b()Lcom/vk/photogallery/dto/c;
+    invoke-virtual {v2}, Lcom/vk/photogallery/dto/SelectionState1;->b()Lcom/vk/photogallery/dto/GalleryState2;
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -92,7 +92,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/photogallery/dto/c;",
+            "Lcom/vk/photogallery/dto/GalleryState2;",
             ">;"
         }
     .end annotation
@@ -128,10 +128,10 @@
     move-result-object v2
 
     .line 17
-    check-cast v2, Lcom/vk/photogallery/dto/n;
+    check-cast v2, Lcom/vk/photogallery/dto/SelectionState1;
 
     .line 18
-    invoke-virtual {v2}, Lcom/vk/photogallery/dto/n;->b()Lcom/vk/photogallery/dto/c;
+    invoke-virtual {v2}, Lcom/vk/photogallery/dto/SelectionState1;->b()Lcom/vk/photogallery/dto/GalleryState2;
 
     move-result-object v2
 
@@ -143,12 +143,12 @@
     return-object v1
 .end method
 
-.method public final a(Lcom/vk/photogallery/dto/a;)Ljava/util/List;
+.method public final a(Lcom/vk/photogallery/dto/GalleryState;)Ljava/util/List;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/photogallery/dto/a;",
+            "Lcom/vk/photogallery/dto/GalleryState;",
             ")",
             "Ljava/util/List<",
             "Ljava/lang/Integer;",
@@ -183,14 +183,14 @@
 
     move-object v3, v2
 
-    check-cast v3, Lcom/vk/photogallery/dto/n;
+    check-cast v3, Lcom/vk/photogallery/dto/SelectionState1;
 
     .line 9
-    invoke-virtual {v3}, Lcom/vk/photogallery/dto/n;->a()Lcom/vk/photogallery/dto/a;
+    invoke-virtual {v3}, Lcom/vk/photogallery/dto/SelectionState1;->a()Lcom/vk/photogallery/dto/GalleryState;
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -229,10 +229,10 @@
     move-result-object v1
 
     .line 12
-    check-cast v1, Lcom/vk/photogallery/dto/n;
+    check-cast v1, Lcom/vk/photogallery/dto/SelectionState1;
 
     .line 13
-    invoke-virtual {v1}, Lcom/vk/photogallery/dto/n;->c()I
+    invoke-virtual {v1}, Lcom/vk/photogallery/dto/SelectionState1;->c()I
 
     move-result v1
 
@@ -248,22 +248,22 @@
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/photogallery/dto/c;ILcom/vk/photogallery/dto/a;)V
+.method public final a(Lcom/vk/photogallery/dto/GalleryState2;ILcom/vk/photogallery/dto/GalleryState;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/photogallery/dto/SelectionState;->a:Ljava/util/ArrayList;
 
-    new-instance v1, Lcom/vk/photogallery/dto/n;
+    new-instance v1, Lcom/vk/photogallery/dto/SelectionState1;
 
-    invoke-direct {v1, p1, p3, p2}, Lcom/vk/photogallery/dto/n;-><init>(Lcom/vk/photogallery/dto/c;Lcom/vk/photogallery/dto/a;I)V
+    invoke-direct {v1, p1, p3, p2}, Lcom/vk/photogallery/dto/SelectionState1;-><init>(Lcom/vk/photogallery/dto/GalleryState2;Lcom/vk/photogallery/dto/GalleryState;I)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
-.method public final b(Lcom/vk/photogallery/dto/c;)Z
+.method public final b(Lcom/vk/photogallery/dto/GalleryState2;)Z
     .locals 9
 
     .line 1
@@ -290,17 +290,17 @@
 
     move-object v4, v1
 
-    check-cast v4, Lcom/vk/photogallery/dto/n;
+    check-cast v4, Lcom/vk/photogallery/dto/SelectionState1;
 
-    invoke-virtual {v4}, Lcom/vk/photogallery/dto/n;->b()Lcom/vk/photogallery/dto/c;
+    invoke-virtual {v4}, Lcom/vk/photogallery/dto/SelectionState1;->b()Lcom/vk/photogallery/dto/GalleryState2;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/photogallery/dto/c;->c()J
+    invoke-virtual {v4}, Lcom/vk/photogallery/dto/GalleryState2;->c()J
 
     move-result-wide v4
 
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/c;->c()J
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState2;->c()J
 
     move-result-wide v6
 
@@ -335,7 +335,7 @@
     return v2
 .end method
 
-.method public final c(Lcom/vk/photogallery/dto/c;)V
+.method public final c(Lcom/vk/photogallery/dto/GalleryState2;)V
     .locals 2
 
     .line 1
@@ -343,9 +343,9 @@
 
     new-instance v1, Lcom/vk/photogallery/dto/SelectionState$removeFromSelection$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/photogallery/dto/SelectionState$removeFromSelection$1;-><init>(Lcom/vk/photogallery/dto/c;)V
+    invoke-direct {v1, p1}, Lcom/vk/photogallery/dto/SelectionState$removeFromSelection$1;-><init>(Lcom/vk/photogallery/dto/GalleryState2;)V
 
-    invoke-static {v0, v1}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
+    invoke-static {v0, v1}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method

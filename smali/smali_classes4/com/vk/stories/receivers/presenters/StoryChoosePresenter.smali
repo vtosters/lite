@@ -3,8 +3,8 @@
 .source "StoryChoosePresenter.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$o;
-.implements Lcom/vk/stories/receivers/presenters/a;
+.implements Lcom/vk/lists/PaginationHelper$o;
+.implements Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
 
 # annotations
@@ -17,20 +17,20 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/lists/t$o<",
-        "Lcom/vk/stories/e1/a;",
+        "Lcom/vk/lists/PaginationHelper$o<",
+        "Lcom/vk/stories/e1/StoryReceiverTarget;",
         ">;",
-        "Lcom/vk/stories/receivers/presenters/a;"
+        "Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;"
     }
 .end annotation
 
 
 # instance fields
-.field private B:Lio/reactivex/disposables/b;
+.field private B:Lio/reactivex/disposables/Disposable;
 
-.field private C:Lio/reactivex/disposables/b;
+.field private C:Lio/reactivex/disposables/Disposable;
 
-.field private D:Lio/reactivex/disposables/b;
+.field private D:Lio/reactivex/disposables/Disposable;
 
 .field private E:I
 
@@ -52,29 +52,29 @@
 
 .field private J:Z
 
-.field private K:Lcom/vk/stories/e1/a;
+.field private K:Lcom/vk/stories/e1/StoryReceiverTarget;
 
-.field private L:Lcom/vk/stories/a1/b;
+.field private L:Lcom/vk/stories/a1/AuthorItem;
 
-.field private final M:Lcom/vk/stories/receivers/views/a;
+.field private final M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-.field private final N:Lkotlin/jvm/b/c;
+.field private final N:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Ljava/lang/Boolean;",
             "Landroid/content/Intent;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private a:Lcom/vk/im/engine/a;
+.field private a:Lcom/vk/im/engine/ImEngine;
 
 .field private b:Lcom/vk/stories/util/StoryChooseActivityLoader;
 
-.field private c:Lcom/vk/lists/t;
+.field private c:Lcom/vk/lists/PaginationHelper;
 
 .field private d:Landroid/content/Intent;
 
@@ -95,23 +95,23 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/stories/receivers/views/a;Lkotlin/jvm/b/c;)V
+.method public constructor <init>(Lcom/vk/stories/receivers/views/IStoryChooseView;Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/stories/receivers/views/a;",
-            "Lkotlin/jvm/b/c<",
+            "Lcom/vk/stories/receivers/views/IStoryChooseView;",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/Boolean;",
             "-",
             "Landroid/content/Intent;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -119,9 +119,9 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iput-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    iput-object p2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->N:Lkotlin/jvm/b/c;
+    iput-object p2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->N:Lkotlin/jvm/b/Functions1;
 
     .line 2
     new-instance p1, Landroidx/collection/ArraySet;
@@ -136,22 +136,22 @@
     iput-boolean p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->H:Z
 
     .line 4
-    sget-object p2, Lcom/vk/stories/a1/b;->e:Lcom/vk/stories/a1/b$a;
+    sget-object p2, Lcom/vk/stories/a1/AuthorItem;->e:Lcom/vk/stories/a1/AuthorItem$a;
 
-    invoke-virtual {p2, p1}, Lcom/vk/stories/a1/b$a;->a(Z)Lcom/vk/stories/a1/b;
+    invoke-virtual {p2, p1}, Lcom/vk/stories/a1/AuthorItem$a;->a(Z)Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->L:Lcom/vk/stories/a1/b;
+    iput-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->L:Lcom/vk/stories/a1/AuthorItem;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;)Lcom/vk/lists/t;
+.method public static final synthetic a(Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;)Lcom/vk/lists/PaginationHelper;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->c:Lcom/vk/lists/t;
+    iget-object p0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->c:Lcom/vk/lists/PaginationHelper;
 
     if-eqz p0, :cond_0
 
@@ -160,27 +160,27 @@
     :cond_0
     const-string p0, "paginationHelper"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;Lcom/vk/stories/e1/a;)V
+.method public static final synthetic a(Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;Lcom/vk/stories/e1/StoryReceiverTarget;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->K:Lcom/vk/stories/e1/a;
+    iput-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->K:Lcom/vk/stories/e1/StoryReceiverTarget;
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/stories/e1/a;)Z
+.method private final a(Lcom/vk/stories/e1/StoryReceiverTarget;)Z
     .locals 2
 
     .line 73
-    invoke-virtual {p1}, Lcom/vk/stories/e1/a;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/stories/e1/StoryReceiverTarget;->b()Ljava/util/List;
 
     move-result-object p1
 
@@ -239,14 +239,14 @@
     return-object p0
 .end method
 
-.method private final b(Lcom/vk/stories/e1/a;)V
+.method private final b(Lcom/vk/stories/e1/StoryReceiverTarget;)V
     .locals 4
 
     .line 20
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     .line 21
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/b;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v1
 
@@ -254,21 +254,21 @@
     iget-boolean v2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->J:Z
 
     .line 23
-    invoke-direct {p0, p1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a(Lcom/vk/stories/e1/a;)Z
+    invoke-direct {p0, p1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a(Lcom/vk/stories/e1/StoryReceiverTarget;)Z
 
     move-result v3
 
     .line 24
-    invoke-interface {v0, p1, v1, v2, v3}, Lcom/vk/stories/receivers/views/a;->a(Lcom/vk/stories/e1/a;Lcom/vk/stories/a1/b;ZZ)V
+    invoke-interface {v0, p1, v1, v2, v3}, Lcom/vk/stories/receivers/views/IStoryChooseView;->a(Lcom/vk/stories/e1/StoryReceiverTarget;Lcom/vk/stories/a1/AuthorItem;ZZ)V
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;Lcom/vk/stories/e1/a;)V
+.method public static final synthetic b(Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;Lcom/vk/stories/e1/StoryReceiverTarget;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b(Lcom/vk/stories/e1/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b(Lcom/vk/stories/e1/StoryReceiverTarget;)V
 
     return-void
 .end method
@@ -279,7 +279,7 @@
     const-string v0, "stories_send_screen"
 
     .line 6
-    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v0
 
@@ -290,7 +290,7 @@
     const-string p1, "go_back"
 
     .line 7
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     goto :goto_0
 
@@ -298,7 +298,7 @@
     const-string p1, "send"
 
     .line 8
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 9
     :goto_0
@@ -342,7 +342,7 @@
     const-string v1, "photo"
 
     .line 15
-    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     goto :goto_1
 
@@ -350,13 +350,13 @@
     const-string v1, "video"
 
     .line 16
-    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     :goto_1
     const-string v1, "action_facts"
 
     .line 17
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 18
     iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->G:Landroidx/collection/ArraySet;
@@ -371,10 +371,10 @@
 
     const-string v1, "recipients_count"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 19
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->e()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->e()Lcom/vtosters/lite/data/Analytics$l;
 
     return-void
 .end method
@@ -383,11 +383,11 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/b;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
@@ -452,11 +452,11 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/b;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/a1/b;->d()I
+    invoke-virtual {v1}, Lcom/vk/stories/a1/AuthorItem;->d()I
 
     move-result v1
 
@@ -465,7 +465,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -480,19 +480,19 @@
 
     .line 10
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 11
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 12
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -575,11 +575,11 @@
 
     .line 3
     :cond_0
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object v0
 
@@ -605,7 +605,7 @@
     .line 7
     iget-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->d:Landroid/content/Intent;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/p/a;->b(Landroid/content/Intent;)Ljava/util/List;
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/p/ImBridge1;->b(Landroid/content/Intent;)Ljava/util/List;
 
     move-result-object v0
 
@@ -630,9 +630,9 @@
     check-cast v1, Lcom/vk/im/engine/models/camera/StoryParams;
 
     .line 9
-    sget-object v2, Lcom/vk/im/engine/utils/b;->a:Lcom/vk/im/engine/utils/b;
+    sget-object v2, Lcom/vk/im/engine/utils/ImAttachUtils;->a:Lcom/vk/im/engine/utils/ImAttachUtils;
 
-    invoke-virtual {v2, v1}, Lcom/vk/im/engine/utils/b;->a(Lcom/vk/im/engine/models/camera/StoryParams;)Lcom/vk/im/engine/models/attaches/AttachStory;
+    invoke-virtual {v2, v1}, Lcom/vk/im/engine/utils/ImAttachUtils;->a(Lcom/vk/im/engine/models/camera/StoryParams;)Lcom/vk/im/engine/models/attaches/AttachStory;
 
     move-result-object v1
 
@@ -654,17 +654,17 @@
     invoke-virtual {v1, v2}, Lcom/vk/im/ui/ImUiPrefs;->a(Lcom/vk/im/engine/models/camera/CameraState;)V
 
     .line 12
-    sget-object v1, Lcom/vk/im/engine/utils/b;->a:Lcom/vk/im/engine/utils/b;
+    sget-object v1, Lcom/vk/im/engine/utils/ImAttachUtils;->a:Lcom/vk/im/engine/utils/ImAttachUtils;
 
     iget-object v2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->d:Landroid/content/Intent;
 
-    invoke-interface {v0, v2}, Lcom/vk/im/ui/p/a;->c(Landroid/content/Intent;)Lcom/vk/im/engine/models/camera/PhotoParams;
+    invoke-interface {v0, v2}, Lcom/vk/im/ui/p/ImBridge1;->c(Landroid/content/Intent;)Lcom/vk/im/engine/models/camera/PhotoParams;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/utils/b;->a(Lcom/vk/im/engine/models/camera/PhotoParams;)Lcom/vk/im/engine/models/attaches/AttachImage;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/utils/ImAttachUtils;->a(Lcom/vk/im/engine/models/camera/PhotoParams;)Lcom/vk/im/engine/models/attaches/AttachImage;
 
     move-result-object v0
 
@@ -673,7 +673,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v7
 
@@ -691,17 +691,17 @@
     invoke-virtual {v1, v2}, Lcom/vk/im/ui/ImUiPrefs;->a(Lcom/vk/im/engine/models/camera/CameraState;)V
 
     .line 15
-    sget-object v1, Lcom/vk/im/engine/utils/b;->a:Lcom/vk/im/engine/utils/b;
+    sget-object v1, Lcom/vk/im/engine/utils/ImAttachUtils;->a:Lcom/vk/im/engine/utils/ImAttachUtils;
 
     iget-object v2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->d:Landroid/content/Intent;
 
-    invoke-interface {v0, v2}, Lcom/vk/im/ui/p/a;->a(Landroid/content/Intent;)Lcom/vk/im/engine/models/camera/VideoParams;
+    invoke-interface {v0, v2}, Lcom/vk/im/ui/p/ImBridge1;->a(Landroid/content/Intent;)Lcom/vk/im/engine/models/camera/VideoParams;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/utils/b;->a(Lcom/vk/im/engine/models/camera/VideoParams;)Lcom/vk/im/engine/models/attaches/AttachVideo;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/utils/ImAttachUtils;->a(Lcom/vk/im/engine/models/camera/VideoParams;)Lcom/vk/im/engine/models/attaches/AttachVideo;
 
     move-result-object v0
 
@@ -710,14 +710,14 @@
     goto :goto_1
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v7
 
     .line 16
     :cond_5
     :goto_1
-    sget-object v1, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
+    sget-object v1, Lcom/vtosters/lite/im/ImSendHelper;->b:Lcom/vtosters/lite/im/ImSendHelper;
 
     iget-object v5, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->G:Landroidx/collection/ArraySet;
 
@@ -727,14 +727,14 @@
 
     const-string v6, "camera"
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vtosters/lite/im/i;->a(Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;Ljava/util/Set;Ljava/lang/String;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vtosters/lite/im/ImSendHelper;->a(Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;Ljava/util/Set;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
     const/4 v1, 0x2
 
     .line 17
-    invoke-static {p0, v0, v7, v1, v7}, Lcom/vk/stories/receivers/presenters/a$a;->a(Lcom/vk/stories/receivers/presenters/a;ZLandroid/content/Intent;ILjava/lang/Object;)V
+    invoke-static {p0, v0, v7, v1, v7}, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter$a;->a(Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;ZLandroid/content/Intent;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -743,9 +743,9 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->C:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->C:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/Disposable;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->e:Lcom/vk/dto/stories/model/CommonUploadParams;
@@ -764,20 +764,20 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/b;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v3
 
-    invoke-interface {v0, v3}, Lcom/vk/stories/receivers/views/a;->a(Lcom/vk/stories/a1/b;)V
+    invoke-interface {v0, v3}, Lcom/vk/stories/receivers/views/IStoryChooseView;->a(Lcom/vk/stories/a1/AuthorItem;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/b;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
@@ -801,67 +801,67 @@
     if-le v0, v2, :cond_2
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     const v3, 0x7f1208b9
 
     const v4, 0x7f1208ba
 
-    invoke-interface {v0, v3, v4}, Lcom/vk/stories/receivers/views/a;->b(II)V
+    invoke-interface {v0, v3, v4}, Lcom/vk/stories/receivers/views/IStoryChooseView;->b(II)V
 
     goto :goto_0
 
     .line 7
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 8
     :cond_2
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     const v3, 0x7f1208bb
 
     const v4, 0x7f1208be
 
-    invoke-interface {v0, v3, v4}, Lcom/vk/stories/receivers/views/a;->b(II)V
+    invoke-interface {v0, v3, v4}, Lcom/vk/stories/receivers/views/IStoryChooseView;->b(II)V
 
     .line 9
     :goto_0
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {v0, v2}, Lcom/vk/stories/receivers/views/a;->o0(Z)V
+    invoke-interface {v0, v2}, Lcom/vk/stories/receivers/views/IStoryChooseView;->o0(Z)V
 
     goto :goto_2
 
     .line 10
     :cond_3
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     const v3, 0x7f12055a
 
     const v4, 0x7f12055b
 
-    invoke-interface {v0, v3, v4}, Lcom/vk/stories/receivers/views/a;->b(II)V
+    invoke-interface {v0, v3, v4}, Lcom/vk/stories/receivers/views/IStoryChooseView;->b(II)V
 
     .line 11
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     invoke-direct {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->t()Z
 
     move-result v3
 
-    invoke-interface {v0, v3}, Lcom/vk/stories/receivers/views/a;->o0(Z)V
+    invoke-interface {v0, v3}, Lcom/vk/stories/receivers/views/IStoryChooseView;->o0(Z)V
 
     goto :goto_2
 
     .line 12
     :cond_4
     :goto_1
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {v0}, Lcom/vk/stories/receivers/views/a;->I0()V
+    invoke-interface {v0}, Lcom/vk/stories/receivers/views/IStoryChooseView;->I0()V
 
     .line 13
     :goto_2
@@ -871,11 +871,11 @@
 
     if-nez v0, :cond_6
 
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/b;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
@@ -894,29 +894,29 @@
 
     .line 14
     :goto_4
-    iget-object v3, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v3, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     xor-int/2addr v0, v2
 
-    invoke-interface {v3, v0}, Lcom/vk/stories/receivers/views/a;->m0(Z)V
+    invoke-interface {v3, v0}, Lcom/vk/stories/receivers/views/IStoryChooseView;->m0(Z)V
 
     .line 15
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->K:Lcom/vk/stories/e1/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->K:Lcom/vk/stories/e1/StoryReceiverTarget;
 
     if-eqz v0, :cond_7
 
     .line 16
-    invoke-direct {p0, v0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b(Lcom/vk/stories/e1/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b(Lcom/vk/stories/e1/StoryReceiverTarget;)V
 
     goto :goto_5
 
     .line 17
     :cond_7
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->c:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->c:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v0, :cond_8
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->h()V
 
     :goto_5
     return-void
@@ -924,18 +924,18 @@
     :cond_8
     const-string v0, "paginationHelper"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
 
 # virtual methods
-.method public B()Lcom/vk/stories/a1/b;
+.method public B()Lcom/vk/stories/a1/AuthorItem;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->L:Lcom/vk/stories/a1/b;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->L:Lcom/vk/stories/a1/AuthorItem;
 
     return-object v0
 .end method
@@ -944,9 +944,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {v0}, Lcom/vk/stories/receivers/views/a;->N0()V
+    invoke-interface {v0}, Lcom/vk/stories/receivers/views/IStoryChooseView;->N0()V
 
     return-void
 .end method
@@ -1029,7 +1029,7 @@
     iput-boolean v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->J:Z
 
     .line 2
-    iget-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->K:Lcom/vk/stories/e1/a;
+    iget-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->K:Lcom/vk/stories/e1/StoryReceiverTarget;
 
     if-eqz v1, :cond_0
 
@@ -1044,21 +1044,21 @@
     const/4 v6, 0x0
 
     .line 3
-    invoke-static/range {v1 .. v6}, Lcom/vk/stories/e1/a;->a(Lcom/vk/stories/e1/a;ILjava/util/List;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/stories/e1/a;
+    invoke-static/range {v1 .. v6}, Lcom/vk/stories/e1/StoryReceiverTarget;->a(Lcom/vk/stories/e1/StoryReceiverTarget;ILjava/util/List;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/stories/e1/StoryReceiverTarget;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b(Lcom/vk/stories/e1/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b(Lcom/vk/stories/e1/StoryReceiverTarget;)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->c:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->c:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->h()V
 
     :goto_0
     return-void
@@ -1066,7 +1066,7 @@
     :cond_1
     const-string v0, "paginationHelper"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1082,29 +1082,29 @@
     iput-boolean v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->J:Z
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     const-string v1, ""
 
-    invoke-interface {v0, v1}, Lcom/vk/stories/receivers/views/a;->setQuery(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/stories/receivers/views/IStoryChooseView;->setQuery(Ljava/lang/String;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->K:Lcom/vk/stories/e1/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->K:Lcom/vk/stories/e1/StoryReceiverTarget;
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-direct {p0, v0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b(Lcom/vk/stories/e1/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b(Lcom/vk/stories/e1/StoryReceiverTarget;)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->c:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->c:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->h()V
 
     :goto_0
     return-void
@@ -1112,7 +1112,7 @@
     :cond_1
     const-string v0, "paginationHelper"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1168,18 +1168,18 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {v0}, Lcom/vk/stories/receivers/views/a;->e1()Z
+    invoke-interface {v0}, Lcom/vk/stories/receivers/views/IStoryChooseView;->e1()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {v0}, Lcom/vk/stories/receivers/views/a;->N0()V
+    invoke-interface {v0}, Lcom/vk/stories/receivers/views/IStoryChooseView;->N0()V
 
     goto :goto_0
 
@@ -1196,7 +1196,7 @@
     const/4 v2, 0x0
 
     .line 4
-    invoke-static {p0, v0, v2, v1, v2}, Lcom/vk/stories/receivers/presenters/a$a;->a(Lcom/vk/stories/receivers/presenters/a;ZLandroid/content/Intent;ILjava/lang/Object;)V
+    invoke-static {p0, v0, v2, v1, v2}, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter$a;->a(Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;ZLandroid/content/Intent;ILjava/lang/Object;)V
 
     :goto_0
     return-void
@@ -1213,41 +1213,41 @@
     iput-boolean v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->H:Z
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     iget-boolean v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->H:Z
 
-    invoke-interface {v0, v1}, Lcom/vk/stories/receivers/views/a;->setShareCheckbox(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/stories/receivers/views/IStoryChooseView;->setShareCheckbox(Z)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/stories/receivers/views/a;->q(I)V
+    invoke-interface {v0, v1}, Lcom/vk/stories/receivers/views/IStoryChooseView;->q(I)V
 
     return-void
 .end method
 
-.method public a(ILcom/vk/lists/t;)Lc/a/m;
+.method public a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/stories/e1/a;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/stories/e1/StoryReceiverTarget;",
             ">;"
         }
     .end annotation
 
     .line 46
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->C:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->C:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/Disposable;)V
 
     .line 47
     iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b:Lcom/vk/stories/util/StoryChooseActivityLoader;
@@ -1258,19 +1258,19 @@
     iget-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->e:Lcom/vk/dto/stories/model/CommonUploadParams;
 
     .line 49
-    iget-object v2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {v2}, Lcom/vk/stories/receivers/views/a;->getQuery()Ljava/lang/String;
+    invoke-interface {v2}, Lcom/vk/stories/receivers/views/IStoryChooseView;->getQuery()Ljava/lang/String;
 
     move-result-object v2
 
     .line 50
-    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result p2
 
     .line 51
-    invoke-virtual {v0, p1, v1, v2, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(ILcom/vk/dto/stories/model/CommonUploadParams;Ljava/lang/String;I)Lc/a/m;
+    invoke-virtual {v0, p1, v1, v2, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(ILcom/vk/dto/stories/model/CommonUploadParams;Ljava/lang/String;I)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1279,22 +1279,22 @@
     :cond_0
     const-string p1, "loader"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
-            "Lcom/vk/stories/e1/a;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/stories/e1/StoryReceiverTarget;",
             ">;"
         }
     .end annotation
@@ -1313,7 +1313,7 @@
     :cond_0
     const-string p1, "loader"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1324,7 +1324,7 @@
     const/4 p2, 0x0
 
     .line 45
-    invoke-virtual {p0, p2, p1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a(ILcom/vk/lists/t;)Lc/a/m;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1375,12 +1375,12 @@
     const/4 v0, 0x0
 
     .line 68
-    invoke-static {p2, v2, p3, v0}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p2, v2, p3, v0}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 69
-    iget-object p2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object p2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {p2, p1}, Lcom/vk/stories/receivers/views/a;->i(I)V
+    invoke-interface {p2, p1}, Lcom/vk/stories/receivers/views/IStoryChooseView;->i(I)V
 
     goto :goto_0
 
@@ -1419,13 +1419,13 @@
     if-eqz v1, :cond_3
 
     .line 72
-    iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b()I
 
     move-result p2
 
-    invoke-interface {p1, p2}, Lcom/vk/stories/receivers/views/a;->q(I)V
+    invoke-interface {p1, p2}, Lcom/vk/stories/receivers/views/IStoryChooseView;->q(I)V
 
     :cond_3
     return-void
@@ -1535,19 +1535,19 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 14
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 15
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
@@ -1586,13 +1586,13 @@
     if-eqz v1, :cond_5
 
     .line 20
-    sget-object v2, Lcom/vk/stories/a1/b;->e:Lcom/vk/stories/a1/b$a;
+    sget-object v2, Lcom/vk/stories/a1/AuthorItem;->e:Lcom/vk/stories/a1/AuthorItem$a;
 
-    invoke-virtual {v2, v1, v4}, Lcom/vk/stories/a1/b$a;->a(Lcom/vk/dto/group/Group;Z)Lcom/vk/stories/a1/b;
+    invoke-virtual {v2, v1, v4}, Lcom/vk/stories/a1/AuthorItem$a;->a(Lcom/vk/dto/group/Group;Z)Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b(Lcom/vk/stories/a1/b;)V
+    invoke-virtual {p0, v1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b(Lcom/vk/stories/a1/AuthorItem;)V
 
     goto :goto_1
 
@@ -1600,11 +1600,11 @@
     if-eqz v1, :cond_5
 
     .line 21
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v1
 
@@ -1613,16 +1613,16 @@
     .line 22
     :cond_5
     :goto_1
-    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a:Lcom/vk/im/engine/a;
+    iput-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a:Lcom/vk/im/engine/ImEngine;
 
     .line 23
     new-instance v1, Lcom/vk/stories/util/StoryChooseActivityLoader;
 
-    iget-object v2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a:Lcom/vk/im/engine/a;
+    iget-object v2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a:Lcom/vk/im/engine/ImEngine;
 
     if-eqz v2, :cond_9
 
@@ -1630,59 +1630,59 @@
 
     invoke-direct {v5, p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter$onCreate$1;-><init>(Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;)V
 
-    invoke-direct {v1, v2, v5}, Lcom/vk/stories/util/StoryChooseActivityLoader;-><init>(Lcom/vk/im/engine/a;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, v2, v5}, Lcom/vk/stories/util/StoryChooseActivityLoader;-><init>(Lcom/vk/im/engine/ImEngine;Lkotlin/jvm/b/Functions;)V
 
     iput-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b:Lcom/vk/stories/util/StoryChooseActivityLoader;
 
     .line 24
-    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
+    invoke-static {p0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object v1
 
     const-wide/16 v5, 0x12c
 
     .line 25
-    invoke-virtual {v1, v5, v6}, Lcom/vk/lists/t$k;->a(J)Lcom/vk/lists/t$k;
+    invoke-virtual {v1, v5, v6}, Lcom/vk/lists/PaginationHelper$k;->a(J)Lcom/vk/lists/PaginationHelper$k;
 
     .line 26
-    invoke-virtual {v1, v0}, Lcom/vk/lists/t$k;->b(Z)Lcom/vk/lists/t$k;
+    invoke-virtual {v1, v0}, Lcom/vk/lists/PaginationHelper$k;->b(Z)Lcom/vk/lists/PaginationHelper$k;
 
     const-string v2, "PaginationHelper.createW\u2026ngEnabledByDefault(false)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {v2}, Lcom/vk/stories/receivers/views/a;->getRecycler()Lcom/vk/lists/RecyclerPaginatedView;
+    invoke-interface {v2}, Lcom/vk/stories/receivers/views/IStoryChooseView;->getRecycler()Lcom/vk/lists/RecyclerPaginatedView;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {v1, v2}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->c:Lcom/vk/lists/t;
+    iput-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->c:Lcom/vk/lists/PaginationHelper;
 
     .line 27
-    iget-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {v1}, Lcom/vk/stories/receivers/views/a;->getQueryChanges()Lc/a/m;
+    invoke-interface {v1}, Lcom/vk/stories/receivers/views/IStoryChooseView;->getQueryChanges()Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 28
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v1, v5, v6, v2}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v1, v5, v6, v2}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 29
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -1694,14 +1694,14 @@
     sget-object v5, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter$c;->a:Lcom/vk/stories/receivers/presenters/StoryChoosePresenter$c;
 
     .line 31
-    invoke-virtual {v1, v2, v5}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v5}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->D:Lio/reactivex/disposables/b;
+    iput-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->D:Lio/reactivex/disposables/Disposable;
 
     .line 32
-    iget-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     .line 33
     invoke-direct {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->t()Z
@@ -1730,7 +1730,7 @@
 
     .line 35
     :goto_2
-    invoke-interface {v1, v2, v5}, Lcom/vk/stories/receivers/views/a;->a(ZLcom/vk/dto/stories/model/StoryOwner;)V
+    invoke-interface {v1, v2, v5}, Lcom/vk/stories/receivers/views/IStoryChooseView;->a(ZLcom/vk/dto/stories/model/StoryOwner;)V
 
     const-string v1, "instant"
 
@@ -1746,35 +1746,35 @@
 
     .line 38
     :cond_7
-    iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {p1, v4}, Lcom/vk/stories/receivers/views/a;->setShareCheckbox(Z)V
+    invoke-interface {p1, v4}, Lcom/vk/stories/receivers/views/IStoryChooseView;->setShareCheckbox(Z)V
 
     .line 39
     invoke-direct {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->v()V
 
     .line 40
-    iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b()I
 
     move-result v0
 
-    invoke-interface {p1, v0}, Lcom/vk/stories/receivers/views/a;->q(I)V
+    invoke-interface {p1, v0}, Lcom/vk/stories/receivers/views/IStoryChooseView;->q(I)V
 
     .line 41
-    iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->c:Lcom/vk/lists/t;
+    iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->c:Lcom/vk/lists/PaginationHelper;
 
     if-eqz p1, :cond_8
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
 
     return-void
 
     :cond_8
     const-string p1, "paginationHelper"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -1782,20 +1782,20 @@
     const-string p1, "imEngine"
 
     .line 42
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
-            "Lcom/vk/stories/e1/a;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/stories/e1/StoryReceiverTarget;",
             ">;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -1813,31 +1813,31 @@
     invoke-direct {v0, p0, p2}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter$e;-><init>(Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;Z)V
 
     .line 54
-    invoke-virtual {p1, p3, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p3, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->C:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->C:Lio/reactivex/disposables/Disposable;
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public a(Lcom/vk/stories/a1/b;)V
+.method public a(Lcom/vk/stories/a1/AuthorItem;)V
     .locals 3
 
     .line 55
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/b;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1848,14 +1848,14 @@
     if-eqz v0, :cond_2
 
     .line 56
-    invoke-virtual {p0, p1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b(Lcom/vk/stories/a1/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b(Lcom/vk/stories/a1/AuthorItem;)V
 
     .line 57
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/b;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {p1}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result p1
 
@@ -1863,11 +1863,11 @@
     iput-boolean v1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->H:Z
 
     .line 59
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/b;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
@@ -1892,39 +1892,39 @@
 
     .line 60
     :goto_1
-    iget-object v2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v2, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {v2, v0}, Lcom/vk/stories/receivers/views/a;->setClickableAuthorLayout(Z)V
+    invoke-interface {v2, v0}, Lcom/vk/stories/receivers/views/IStoryChooseView;->setClickableAuthorLayout(Z)V
 
     .line 61
     invoke-direct {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->v()V
 
     .line 62
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->b()I
 
     move-result v2
 
-    invoke-interface {v0, v2}, Lcom/vk/stories/receivers/views/a;->q(I)V
+    invoke-interface {v0, v2}, Lcom/vk/stories/receivers/views/IStoryChooseView;->q(I)V
 
     .line 63
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/b;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
     if-eq p1, v0, :cond_2
 
     .line 64
-    iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     xor-int/2addr v0, v1
 
-    invoke-interface {p1, v0}, Lcom/vk/stories/receivers/views/a;->p0(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/stories/receivers/views/IStoryChooseView;->p0(Z)V
 
     :cond_2
     return-void
@@ -1934,13 +1934,13 @@
     .locals 1
 
     .line 43
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->N:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->N:Lkotlin/jvm/b/Functions1;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    invoke-interface {v0, p1, p2}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -1966,13 +1966,13 @@
     return v0
 .end method
 
-.method public a(Lcom/vk/stories/d1/a;)Z
+.method public a(Lcom/vk/stories/d1/StoryDialogItem;)Z
     .locals 1
 
     .line 65
     iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->G:Landroidx/collection/ArraySet;
 
-    invoke-virtual {p1}, Lcom/vk/stories/d1/a;->b()I
+    invoke-virtual {p1}, Lcom/vk/stories/d1/StoryDialogItem;->b()I
 
     move-result p1
 
@@ -1991,11 +1991,11 @@
     .locals 3
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/b;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
@@ -2038,20 +2038,20 @@
     return v0
 .end method
 
-.method public b(Lcom/vk/stories/a1/b;)V
+.method public b(Lcom/vk/stories/a1/AuthorItem;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->L:Lcom/vk/stories/a1/b;
+    iput-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->L:Lcom/vk/stories/a1/AuthorItem;
 
     return-void
 .end method
 
-.method public final e()Lcom/vk/stories/receivers/views/a;
+.method public final e()Lcom/vk/stories/receivers/views/IStoryChooseView;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     return-object v0
 .end method
@@ -2067,9 +2067,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->M:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {v0}, Lcom/vk/stories/receivers/views/a;->N0()V
+    invoke-interface {v0}, Lcom/vk/stories/receivers/views/IStoryChooseView;->N0()V
 
     goto :goto_0
 
@@ -2087,19 +2087,19 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/Disposable;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->C:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->C:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/Disposable;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->D:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->D:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -2146,22 +2146,22 @@
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/b;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->h()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->h()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a:Lcom/vk/im/engine/ImEngine;
 
     if-eqz v0, :cond_0
 
-    new-instance v4, Lcom/vk/im/engine/commands/contacts/a;
+    new-instance v4, Lcom/vk/im/engine/commands/contacts/AddDialogsToRecentCmd;
 
     new-instance v5, Ljava/util/ArrayList;
 
@@ -2169,16 +2169,16 @@
 
     invoke-direct {v5, v6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-direct {v4, v5}, Lcom/vk/im/engine/commands/contacts/a;-><init>(Ljava/util/List;)V
+    invoke-direct {v4, v5}, Lcom/vk/im/engine/commands/contacts/AddDialogsToRecentCmd;-><init>(Ljava/util/List;)V
 
-    invoke-virtual {v0, v4}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
+    invoke-virtual {v0, v4}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
 
     goto :goto_0
 
     :cond_0
     const-string v0, "imEngine"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -2192,25 +2192,25 @@
     const v0, 0x7f120ee2
 
     .line 8
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :cond_2
     const/4 v0, 0x1
 
     .line 9
-    invoke-static {p0, v0, v3, v2, v3}, Lcom/vk/stories/receivers/presenters/a$a;->a(Lcom/vk/stories/receivers/presenters/a;ZLandroid/content/Intent;ILjava/lang/Object;)V
+    invoke-static {p0, v0, v3, v2, v3}, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter$a;->a(Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;ZLandroid/content/Intent;ILjava/lang/Object;)V
 
     return-void
 
     .line 10
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 11
     :cond_4
-    invoke-static {p0, v1, v3, v2, v3}, Lcom/vk/stories/receivers/presenters/a$a;->a(Lcom/vk/stories/receivers/presenters/a;ZLandroid/content/Intent;ILjava/lang/Object;)V
+    invoke-static {p0, v1, v3, v2, v3}, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter$a;->a(Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;ZLandroid/content/Intent;ILjava/lang/Object;)V
 
     return-void
 .end method

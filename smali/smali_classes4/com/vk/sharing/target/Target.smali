@@ -3,8 +3,8 @@
 .source "Target.java"
 
 # interfaces
-.implements Lcom/vk/dto/common/c;
-.implements Lcom/vk/core/serialize/a;
+.implements Lcom/vk/dto/common/Indexable;
+.implements Lcom/vk/core/serialize/JSONSerialize;
 
 
 # static fields
@@ -314,11 +314,11 @@
     .line 30
     iget v1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v2
 

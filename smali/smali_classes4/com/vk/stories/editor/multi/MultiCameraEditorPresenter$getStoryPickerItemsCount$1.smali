@@ -3,7 +3,7 @@
 .source "MultiCameraEditorPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/common/i/b;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/common/i/RecyclerItem;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/common/i/b;)V
+.method public final a(Lcom/vk/common/i/RecyclerItem;)V
     .locals 1
 
     .line 1
-    instance-of p1, p1, Lcom/vk/stories/editor/multi/k/b/b;
+    instance-of p1, p1, Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;
 
     if-eqz p1, :cond_0
 
@@ -71,11 +71,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/common/i/b;
+    check-cast p1, Lcom/vk/common/i/RecyclerItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$getStoryPickerItemsCount$1;->a(Lcom/vk/common/i/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$getStoryPickerItemsCount$1;->a(Lcom/vk/common/i/RecyclerItem;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

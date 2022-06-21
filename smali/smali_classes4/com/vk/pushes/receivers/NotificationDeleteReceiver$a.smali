@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -55,7 +55,7 @@
     .locals 8
 
     .line 2
-    invoke-static {}, Lcom/vk/pushes/f;->a()Lcom/vk/pushes/e;
+    invoke-static {}, Lcom/vk/pushes/PushBridge1;->a()Lcom/vk/pushes/PushBridge;
 
     move-result-object v0
 
@@ -71,11 +71,11 @@
 
     move-result-object v3
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {p1}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result p1
 
@@ -91,7 +91,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/pushes/e$a;->a(Lcom/vk/pushes/e;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v7}, Lcom/vk/pushes/PushBridge$a;->a(Lcom/vk/pushes/PushBridge;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -126,7 +126,7 @@
 
     const-string p2, "Intent(ctx, Notification\u2026(PUSH_TYPE_KEY, pushType)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p3, :cond_0
 

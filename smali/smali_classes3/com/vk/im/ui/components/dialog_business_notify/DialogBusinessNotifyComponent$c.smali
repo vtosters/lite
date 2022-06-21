@@ -3,12 +3,12 @@
 .source "DialogBusinessNotifyComponent.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;->a(ILcom/vk/im/engine/models/Source;)Lc/a/t;
+    value = Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;->a(ILcom/vk/im/engine/models/Source;)Lio/reactivex/Single;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -47,15 +47,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/a;)Lcom/vk/im/engine/models/b;
+.method public final a(Lcom/vk/im/engine/models/EntityIntMap;)Lcom/vk/im/engine/models/EntityValue;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;)",
-            "Lcom/vk/im/engine/models/b<",
+            "Lcom/vk/im/engine/models/EntityValue<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;"
         }
@@ -64,7 +64,7 @@
     .line 1
     iget v0, p0, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent$c;->a:I
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/a;->e(I)Lcom/vk/im/engine/models/b;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;->e(I)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object p1
 
@@ -75,9 +75,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/a;
+    check-cast p1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent$c;->a(Lcom/vk/im/engine/models/a;)Lcom/vk/im/engine/models/b;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent$c;->a(Lcom/vk/im/engine/models/EntityIntMap;)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object p1
 

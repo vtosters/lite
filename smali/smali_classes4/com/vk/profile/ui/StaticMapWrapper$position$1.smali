@@ -48,7 +48,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/profile/ui/StaticMapWrapper$position$1$1;-><init>(Lcom/vk/profile/ui/StaticMapWrapper$position$1;Lcom/google/android/gms/maps/c;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/StaticMapWrapper;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/StaticMapWrapper;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/profile/ui/StaticMapWrapper$position$1;->a:Lcom/vk/profile/ui/StaticMapWrapper;

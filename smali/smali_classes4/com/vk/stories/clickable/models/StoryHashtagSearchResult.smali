@@ -20,7 +20,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/stories/clickable/models/e;",
+            "Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;",
             ">;"
         }
     .end annotation
@@ -35,7 +35,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/models/StoryHashtagSearchResult$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/models/StoryHashtagSearchResult$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/stories/clickable/models/StoryHashtagSearchResult;->b:Lcom/vk/stories/clickable/models/StoryHashtagSearchResult$Companion;
 
@@ -48,7 +48,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/stories/clickable/models/e;",
+            "Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;",
             ">;)V"
         }
     .end annotation
@@ -69,7 +69,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/stories/clickable/models/e;",
+            "Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;",
             ">;"
         }
     .end annotation
@@ -95,7 +95,7 @@
 
     iget-object p1, p1, Lcom/vk/stories/clickable/models/StoryHashtagSearchResult;->a:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -4,85 +4,85 @@
 
 
 # static fields
-.field static final synthetic l:[Lkotlin/u/j;
+.field static final synthetic l:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lkotlin/e;
+.field private final a:Lkotlin/Lazy2;
 
 .field private final b:Lcom/vk/profile/ui/community/CommunityFragment;
 
-.field private final c:Lkotlin/jvm/b/a;
+.field private final c:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/lists/RecyclerPaginatedView;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Lkotlin/jvm/b/a;
+.field private final d:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/profile/ui/community/CommunityParallax;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final e:Lkotlin/jvm/b/a;
+.field private final e:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/profile/ui/ProfileContentBoundsController;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final f:Lkotlin/jvm/b/a;
+.field private final f:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Landroidx/appcompat/widget/Toolbar;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final g:Lkotlin/jvm/b/a;
+.field private final g:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/google/android/material/appbar/AppBarLayout;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final h:Lkotlin/jvm/b/a;
+.field private final h:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Landroid/view/View;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final i:Lkotlin/jvm/b/a;
+.field private final i:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Landroid/view/View;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final j:Lcom/vk/profile/ui/cover/b;
+.field private final j:Lcom/vk/profile/ui/cover/CoverViewController;
 
 .field private final k:Lcom/vk/profile/ui/community/FloatActionButtonsController;
 
@@ -93,13 +93,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -107,52 +107,52 @@
 
     const-string v4, "getToolbarTitle()Landroid/widget/TextView;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->l:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->l:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/profile/ui/community/CommunityFragment;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lcom/vk/profile/ui/cover/b;Lcom/vk/profile/ui/community/FloatActionButtonsController;)V
+.method public constructor <init>(Lcom/vk/profile/ui/community/CommunityFragment;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lcom/vk/profile/ui/cover/CoverViewController;Lcom/vk/profile/ui/community/FloatActionButtonsController;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/profile/ui/community/CommunityFragment;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Lcom/vk/lists/RecyclerPaginatedView;",
             ">;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/profile/ui/community/CommunityParallax;",
             ">;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/profile/ui/ProfileContentBoundsController;",
             ">;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Landroidx/appcompat/widget/Toolbar;",
             ">;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Lcom/google/android/material/appbar/AppBarLayout;",
             ">;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Landroid/view/View;",
             ">;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Landroid/view/View;",
             ">;",
-            "Lcom/vk/profile/ui/cover/b;",
+            "Lcom/vk/profile/ui/cover/CoverViewController;",
             "Lcom/vk/profile/ui/community/FloatActionButtonsController;",
             ")V"
         }
@@ -163,21 +163,21 @@
 
     iput-object p1, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->b:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->c:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->c:Lkotlin/jvm/b/Functions;
 
-    iput-object p3, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->d:Lkotlin/jvm/b/a;
+    iput-object p3, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->d:Lkotlin/jvm/b/Functions;
 
-    iput-object p4, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->e:Lkotlin/jvm/b/a;
+    iput-object p4, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->e:Lkotlin/jvm/b/Functions;
 
-    iput-object p5, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->f:Lkotlin/jvm/b/a;
+    iput-object p5, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->f:Lkotlin/jvm/b/Functions;
 
-    iput-object p6, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->g:Lkotlin/jvm/b/a;
+    iput-object p6, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->g:Lkotlin/jvm/b/Functions;
 
-    iput-object p7, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->h:Lkotlin/jvm/b/a;
+    iput-object p7, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->h:Lkotlin/jvm/b/Functions;
 
-    iput-object p8, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->i:Lkotlin/jvm/b/a;
+    iput-object p8, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->i:Lkotlin/jvm/b/Functions;
 
-    iput-object p9, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->j:Lcom/vk/profile/ui/cover/b;
+    iput-object p9, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->j:Lcom/vk/profile/ui/cover/CoverViewController;
 
     iput-object p10, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->k:Lcom/vk/profile/ui/community/FloatActionButtonsController;
 
@@ -186,11 +186,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope$toolbarTitle$2;-><init>(Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->a:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->a:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -214,9 +214,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->g:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->g:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -229,9 +229,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->e:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->e:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -254,12 +254,12 @@
 
     const-string v1, "fragment.context!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -284,11 +284,11 @@
     return-object v0
 .end method
 
-.method public final g()Lcom/vk/profile/ui/cover/b;
+.method public final g()Lcom/vk/profile/ui/cover/CoverViewController;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->j:Lcom/vk/profile/ui/cover/b;
+    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->j:Lcom/vk/profile/ui/cover/CoverViewController;
 
     return-object v0
 .end method
@@ -297,9 +297,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->c:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->c:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -312,9 +312,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->d:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->d:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -350,9 +350,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->i:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->i:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -365,9 +365,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->h:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->h:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -380,9 +380,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->f:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->f:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -394,15 +394,15 @@
 .method public final n()Landroid/widget/TextView;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->a:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->a:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->l:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->l:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

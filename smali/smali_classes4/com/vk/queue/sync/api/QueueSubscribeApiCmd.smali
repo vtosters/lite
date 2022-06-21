@@ -1,5 +1,5 @@
 .class public final Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;
-.super Lcom/vk/api/internal/f;
+.super Lcom/vk/api/internal/InternalApiCommand;
 .source "QueueSubscribeApiCmd.kt"
 
 
@@ -13,8 +13,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/internal/f<",
-        "Lcom/vk/queue/sync/models/d;",
+        "Lcom/vk/api/internal/InternalApiCommand<",
+        "Lcom/vk/queue/sync/models/QueueSubscribeResponse;",
         ">;"
     }
 .end annotation
@@ -23,7 +23,7 @@
 # static fields
 .field private static final d:[I
 
-.field private static final e:Lcom/vk/core/util/d1;
+.field private static final e:Lcom/vk/core/util/ThreadLocalDelegate;
 
 .field public static final f:Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$a;
 
@@ -52,7 +52,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->f:Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$a;
 
@@ -76,11 +76,11 @@
     .line 2
     sget-object v0, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$Companion$STRING_BUILDER$2;->a:Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$Companion$STRING_BUILDER$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->e:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->e:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-void
 .end method
@@ -97,7 +97,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/api/internal/f;-><init>()V
+    invoke-direct {p0}, Lcom/vk/api/internal/InternalApiCommand;-><init>()V
 
     iput-object p1, p0, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->a:Ljava/util/Collection;
 
@@ -108,11 +108,11 @@
     return-void
 .end method
 
-.method public static final synthetic a()Lcom/vk/core/util/d1;
+.method public static final synthetic a()Lcom/vk/core/util/ThreadLocalDelegate;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->e:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->e:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-object v0
 .end method
@@ -344,12 +344,12 @@
 
     const-string p2, "STRING_BUILDER.toString()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method private final b(Lcom/vk/api/internal/ApiManager;Ljava/util/List;)Lcom/vk/queue/sync/models/d;
+.method private final b(Lcom/vk/api/internal/ApiManager;Ljava/util/List;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -358,19 +358,19 @@
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;)",
-            "Lcom/vk/queue/sync/models/d;"
+            "Lcom/vk/queue/sync/models/QueueSubscribeResponse;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vk/api/internal/k$a;
+    new-instance v0, Lcom/vk/api/internal/MethodCall$a;
 
-    invoke-direct {v0}, Lcom/vk/api/internal/k$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
 
     const-string v1, "execute"
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 3
     invoke-direct {p0, p1, p2}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->a(Lcom/vk/api/internal/ApiManager;Ljava/util/List;)Ljava/lang/String;
@@ -379,17 +379,17 @@
 
     const-string v1, "code"
 
-    invoke-virtual {v0, v1, p2}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1, p2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 4
     iget p2, p0, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->b:I
 
-    invoke-virtual {v0, p2}, Lcom/vk/api/internal/k$a;->a(I)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, p2}, Lcom/vk/api/internal/MethodCall$a;->a(I)Lcom/vk/api/internal/MethodCall$a;
 
     .line 5
     iget-boolean p2, p0, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->c:Z
 
-    invoke-virtual {v0, p2}, Lcom/vk/api/internal/k$a;->b(Z)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, p2}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
 
     .line 6
     invoke-virtual {p1}, Lcom/vk/api/sdk/VKApiManager;->a()Lcom/vk/api/sdk/VKApiConfig;
@@ -400,33 +400,33 @@
 
     move-result-object p2
 
-    invoke-virtual {v0, p2}, Lcom/vk/api/internal/k$a;->b(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, p2}, Lcom/vk/api/internal/MethodCall$a;->b(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 7
     sget-object p2, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->d:[I
 
-    invoke-virtual {v0, p2}, Lcom/vk/api/internal/k$a;->a([I)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, p2}, Lcom/vk/api/internal/MethodCall$a;->a([I)Lcom/vk/api/internal/MethodCall$a;
 
     .line 8
-    invoke-virtual {v0}, Lcom/vk/api/internal/k$a;->a()Lcom/vk/api/internal/k;
+    invoke-virtual {v0}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
 
     move-result-object p2
 
     .line 9
     sget-object v0, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$b;->a:Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$b;
 
-    invoke-virtual {p1, p2, v0}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/l;Lcom/vk/api/sdk/h;)Ljava/lang/Object;
+    invoke-virtual {p1, p2, v0}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/VKMethodCall;Lcom/vk/api/sdk/VKApiResponseParser;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/queue/sync/models/d;
+    check-cast p1, Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
     return-object p1
 .end method
 
 
 # virtual methods
-.method protected a(Lcom/vk/api/internal/ApiManager;)Lcom/vk/queue/sync/models/d;
+.method protected a(Lcom/vk/api/internal/ApiManager;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
     .locals 5
 
     .line 3
@@ -439,9 +439,9 @@
     if-eqz v0, :cond_0
 
     .line 4
-    sget-object p1, Lcom/vk/queue/sync/models/d;->d:Lcom/vk/queue/sync/models/d$a;
+    sget-object p1, Lcom/vk/queue/sync/models/QueueSubscribeResponse;->d:Lcom/vk/queue/sync/models/QueueSubscribeResponse$a;
 
-    invoke-virtual {p1}, Lcom/vk/queue/sync/models/d$a;->a()Lcom/vk/queue/sync/models/d;
+    invoke-virtual {p1}, Lcom/vk/queue/sync/models/QueueSubscribeResponse$a;->a()Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
     move-result-object p1
 
@@ -475,7 +475,7 @@
 
     check-cast v0, Ljava/util/List;
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->b(Lcom/vk/api/internal/ApiManager;Ljava/util/List;)Lcom/vk/queue/sync/models/d;
+    invoke-direct {p0, p1, v0}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->b(Lcom/vk/api/internal/ApiManager;Ljava/util/List;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
     move-result-object p1
 
@@ -511,19 +511,19 @@
     check-cast v3, Ljava/util/List;
 
     .line 11
-    invoke-direct {p0, p1, v3}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->b(Lcom/vk/api/internal/ApiManager;Ljava/util/List;)Lcom/vk/queue/sync/models/d;
+    invoke-direct {p0, p1, v3}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->b(Lcom/vk/api/internal/ApiManager;Ljava/util/List;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
     move-result-object v3
 
     .line 12
-    invoke-virtual {v3}, Lcom/vk/queue/sync/models/d;->a()Ljava/util/Map;
+    invoke-virtual {v3}, Lcom/vk/queue/sync/models/QueueSubscribeResponse;->a()Ljava/util/Map;
 
     move-result-object v4
 
     invoke-virtual {v1, v4}, Landroidx/collection/ArrayMap;->putAll(Ljava/util/Map;)V
 
     .line 13
-    invoke-virtual {v3}, Lcom/vk/queue/sync/models/d;->b()Ljava/util/Map;
+    invoke-virtual {v3}, Lcom/vk/queue/sync/models/QueueSubscribeResponse;->b()Ljava/util/Map;
 
     move-result-object v3
 
@@ -533,9 +533,9 @@
 
     .line 14
     :cond_2
-    new-instance p1, Lcom/vk/queue/sync/models/d;
+    new-instance p1, Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
-    invoke-direct {p1, v1, v2}, Lcom/vk/queue/sync/models/d;-><init>(Ljava/util/Map;Ljava/util/Map;)V
+    invoke-direct {p1, v1, v2}, Lcom/vk/queue/sync/models/QueueSubscribeResponse;-><init>(Ljava/util/Map;Ljava/util/Map;)V
 
     return-object p1
 .end method
@@ -544,7 +544,7 @@
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->a(Lcom/vk/api/internal/ApiManager;)Lcom/vk/queue/sync/models/d;
+    invoke-virtual {p0, p1}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd;->a(Lcom/vk/api/internal/ApiManager;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
     move-result-object p1
 

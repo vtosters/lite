@@ -3,7 +3,7 @@
 .source "DiscoverSearchFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/app/Activity;",
         "Lcom/vk/search/SearchParamsDialogSheet;",
         ">;"
@@ -52,7 +52,7 @@
     .line 1
     new-instance v0, Lcom/vk/search/SearchParamsDialogSheet;
 
-    new-instance v1, Lcom/vk/search/view/a;
+    new-instance v1, Lcom/vk/search/view/GroupsSearchParamsView;
 
     iget-object v2, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$4;->this$0:Lcom/vk/search/fragment/DiscoverSearchFragment;
 
@@ -64,7 +64,7 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2, p1}, Lcom/vk/search/view/a;-><init>(Lcom/vk/search/GroupsSearchParams;Landroid/app/Activity;)V
+    invoke-direct {v1, v2, p1}, Lcom/vk/search/view/GroupsSearchParamsView;-><init>(Lcom/vk/search/GroupsSearchParams;Landroid/app/Activity;)V
 
     invoke-direct {v0, p1, v1}, Lcom/vk/search/SearchParamsDialogSheet;-><init>(Landroid/app/Activity;Landroid/view/View;)V
 

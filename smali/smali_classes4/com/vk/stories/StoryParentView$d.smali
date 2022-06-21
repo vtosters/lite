@@ -3,7 +3,7 @@
 .source "StoryParentView.java"
 
 # interfaces
-.implements Lcom/vk/stories/n0$c;
+.implements Lcom/vk/stories/ParentStoriesLoader$c;
 
 
 # annotations

@@ -3,12 +3,12 @@
 .source "StoriesBlockAuthorsHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/holders/StoriesAuthorHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/stories/holders/StoriesAuthorHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $onClick:Lkotlin/jvm/b/b;
+.field final synthetic $onClick:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic this$0:Lcom/vk/stories/holders/StoriesAuthorHolder;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/holders/StoriesAuthorHolder;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lcom/vk/stories/holders/StoriesAuthorHolder;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stories/holders/StoriesAuthorHolder$1;->this$0:Lcom/vk/stories/holders/StoriesAuthorHolder;
 
-    iput-object p2, p0, Lcom/vk/stories/holders/StoriesAuthorHolder$1;->$onClick:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/stories/holders/StoriesAuthorHolder$1;->$onClick:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x1
 
@@ -54,25 +54,25 @@
     .locals 2
 
     .line 1
-    iget-object p1, p0, Lcom/vk/stories/holders/StoriesAuthorHolder$1;->$onClick:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/stories/holders/StoriesAuthorHolder$1;->$onClick:Lkotlin/jvm/b/Functions2;
 
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/vk/stories/holders/StoriesAuthorHolder$1;->this$0:Lcom/vk/stories/holders/StoriesAuthorHolder;
 
-    invoke-static {v0}, Lcom/vk/stories/holders/StoriesAuthorHolder;->a(Lcom/vk/stories/holders/StoriesAuthorHolder;)Lcom/vk/stories/a1/b;
+    invoke-static {v0}, Lcom/vk/stories/holders/StoriesAuthorHolder;->a(Lcom/vk/stories/holders/StoriesAuthorHolder;)Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v0
 
     const-string v1, "item"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -86,7 +86,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/holders/StoriesAuthorHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

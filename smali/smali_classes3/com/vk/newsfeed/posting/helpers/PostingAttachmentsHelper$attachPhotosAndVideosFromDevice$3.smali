@@ -3,7 +3,7 @@
 .source "PostingAttachmentsHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
         "Lcom/vtosters/lite/attachments/PendingVideoAttachment;",
         ">;"
@@ -52,13 +52,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper$attachPhotosAndVideosFromDevice$3;->this$0:Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;)Lcom/vk/newsfeed/posting/a;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;->a(Lcom/vk/newsfeed/posting/helpers/PostingAttachmentsHelper;)Lcom/vk/newsfeed/posting/PostingContracts1;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/a;->i(Ljava/lang/String;)Lcom/vtosters/lite/attachments/PendingVideoAttachment;
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts1;->i(Ljava/lang/String;)Lcom/vtosters/lite/attachments/PendingVideoAttachment;
 
     move-result-object p1
 

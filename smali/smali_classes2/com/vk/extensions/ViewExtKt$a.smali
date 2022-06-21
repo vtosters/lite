@@ -3,12 +3,12 @@
 .source "ViewExt.kt"
 
 # interfaces
-.implements Lc/a/o;
+.implements Lio/reactivex/ObservableOnSubscribe;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/extensions/ViewExtKt;->a(Landroid/widget/EditText;)Lc/a/m;
+    value = Lcom/vk/extensions/ViewExtKt;->a(Landroid/widget/EditText;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/o<",
+        "Lio/reactivex/ObservableOnSubscribe<",
         "TT;>;"
     }
 .end annotation
@@ -45,12 +45,12 @@
 
 
 # virtual methods
-.method public final a(Lc/a/n;)V
+.method public final a(Lio/reactivex/ObservableEmitter;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/n<",
+            "Lio/reactivex/ObservableEmitter<",
             "Ljava/lang/String;",
             ">;)V"
         }
@@ -59,7 +59,7 @@
     .line 1
     new-instance v0, Lcom/vk/extensions/ViewExtKt$a$b;
 
-    invoke-direct {v0, p1}, Lcom/vk/extensions/ViewExtKt$a$b;-><init>(Lc/a/n;)V
+    invoke-direct {v0, p1}, Lcom/vk/extensions/ViewExtKt$a$b;-><init>(Lio/reactivex/ObservableEmitter;)V
 
     .line 2
     iget-object v1, p0, Lcom/vk/extensions/ViewExtKt$a;->a:Landroid/widget/EditText;
@@ -71,7 +71,7 @@
 
     invoke-direct {v1, p0, v0}, Lcom/vk/extensions/ViewExtKt$a$a;-><init>(Lcom/vk/extensions/ViewExtKt$a;Lcom/vk/extensions/ViewExtKt$a$b;)V
 
-    invoke-interface {p1, v1}, Lc/a/n;->a(Lc/a/z/f;)V
+    invoke-interface {p1, v1}, Lio/reactivex/ObservableEmitter;->a(Lio/reactivex/functions/Cancellable;)V
 
     return-void
 .end method

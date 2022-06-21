@@ -3,7 +3,7 @@
 .source "PollEditorFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$o;
+.implements Lcom/vk/lists/PaginationHelper$o;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/lists/t$o<",
+        "Lcom/vk/lists/PaginationHelper$o<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/polls/PollBackground;",
@@ -51,14 +51,14 @@
 
 
 # virtual methods
-.method public a(ILcom/vk/lists/t;)Lc/a/m;
+.method public a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/polls/PollBackground;",
             ">;>;"
@@ -66,29 +66,29 @@
     .end annotation
 
     .line 1
-    new-instance p1, Lb/h/c/v/b;
+    new-instance p1, Lcom/vk/api/polls/PollBackgrounds;
 
-    invoke-direct {p1}, Lb/h/c/v/b;-><init>()V
+    invoke-direct {p1}, Lcom/vk/api/polls/PollBackgrounds;-><init>()V
 
     const/4 p2, 0x0
 
     const/4 v0, 0x1
 
-    invoke-static {p1, p2, v0, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, p2, v0, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/polls/PollBackground;",
             ">;>;"
@@ -96,31 +96,31 @@
     .end annotation
 
     .line 2
-    new-instance p1, Lb/h/c/v/b;
+    new-instance p1, Lcom/vk/api/polls/PollBackgrounds;
 
-    invoke-direct {p1}, Lb/h/c/v/b;-><init>()V
+    invoke-direct {p1}, Lcom/vk/api/polls/PollBackgrounds;-><init>()V
 
     const/4 p2, 0x0
 
     const/4 v0, 0x1
 
-    invoke-static {p1, p2, v0, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, p2, v0, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/polls/PollBackground;",
             ">;>;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -130,7 +130,7 @@
     const/4 p2, 0x0
 
     .line 3
-    invoke-virtual {p3, p2}, Lcom/vk/lists/t;->a(I)V
+    invoke-virtual {p3, p2}, Lcom/vk/lists/PaginationHelper;->a(I)V
 
     :cond_0
     if-eqz p1, :cond_2
@@ -145,17 +145,17 @@
 
     if-eqz p3, :cond_1
 
-    new-instance v0, Lcom/vk/poll/fragments/a;
+    new-instance v0, Lcom/vk/poll/fragments/PollEditorFragment1;
 
-    invoke-direct {v0, p3}, Lcom/vk/poll/fragments/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p3}, Lcom/vk/poll/fragments/PollEditorFragment1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object p3, v0
 
     :cond_1
-    check-cast p3, Lc/a/z/g;
+    check-cast p3, Lio/reactivex/functions/Consumer;
 
     .line 6
-    invoke-virtual {p1, p2, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
@@ -164,11 +164,11 @@
     .line 7
     iget-object p2, p0, Lcom/vk/poll/fragments/PollEditorScreen$dataProvider$1;->a:Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {p2}, Lcom/vk/poll/fragments/PollEditorScreen;->f(Lcom/vk/poll/fragments/PollEditorScreen;)Lio/reactivex/disposables/a;
+    invoke-static {p2}, Lcom/vk/poll/fragments/PollEditorScreen;->f(Lcom/vk/poll/fragments/PollEditorScreen;)Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     :cond_2
     return-void

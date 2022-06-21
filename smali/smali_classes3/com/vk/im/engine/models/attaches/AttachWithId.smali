@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/vk/im/engine/models/attaches/Attach;
-.implements Lcom/vk/im/engine/models/u;
+.implements Lcom/vk/im/engine/models/WithId;
 
 
 # annotations

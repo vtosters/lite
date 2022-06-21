@@ -144,12 +144,12 @@
 
     .line 2
     :cond_0
-    invoke-static {p0}, Landroid/support/v4/media/a$c;->b(Ljava/lang/Object;)I
+    invoke-static {p0}, Landroid/support/v4/media/MediaBrowserCompatApi21$c;->b(Ljava/lang/Object;)I
 
     move-result v0
 
     .line 3
-    invoke-static {p0}, Landroid/support/v4/media/a$c;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroid/support/v4/media/MediaBrowserCompatApi21$c;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 

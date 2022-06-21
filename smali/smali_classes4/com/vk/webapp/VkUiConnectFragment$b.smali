@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/webapp/cache/a$a;
+.field private final a:Lcom/vk/webapp/cache/AppsCache$a;
 
 .field private final b:Z
 
@@ -23,13 +23,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/webapp/cache/a$a;ZZ)V
+.method public constructor <init>(Lcom/vk/webapp/cache/AppsCache$a;ZZ)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment$b;->a:Lcom/vk/webapp/cache/a$a;
+    iput-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment$b;->a:Lcom/vk/webapp/cache/AppsCache$a;
 
     iput-boolean p2, p0, Lcom/vk/webapp/VkUiConnectFragment$b;->b:Z
 
@@ -40,11 +40,11 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/webapp/cache/a$a;
+.method public final a()Lcom/vk/webapp/cache/AppsCache$a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment$b;->a:Lcom/vk/webapp/cache/a$a;
+    iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment$b;->a:Lcom/vk/webapp/cache/AppsCache$a;
 
     return-object v0
 .end method

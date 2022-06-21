@@ -3,7 +3,7 @@
 .source "GroupedNotificationsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/n;
+.implements Lcom/vk/core/ui/MilkshakeProvider;
 
 
 # annotations
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object v0
 

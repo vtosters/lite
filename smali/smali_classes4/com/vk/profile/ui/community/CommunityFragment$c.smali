@@ -58,12 +58,12 @@
 
     const-string p3, "recyclerView.findViewHol\u2026on(0)?.itemView ?: return"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     iget-object p3, p0, Lcom/vk/profile/ui/community/CommunityFragment$c;->a:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-static {p3}, Lcom/vk/profile/ui/community/CommunityFragment;->h(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/profile/ui/cover/b;
+    invoke-static {p3}, Lcom/vk/profile/ui/community/CommunityFragment;->h(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/profile/ui/cover/CoverViewController;
 
     move-result-object p3
 
@@ -92,7 +92,7 @@
     const/4 p2, 0x1
 
     :cond_0
-    invoke-virtual {p3, p2}, Lcom/vk/profile/ui/cover/b;->a(Z)V
+    invoke-virtual {p3, p2}, Lcom/vk/profile/ui/cover/CoverViewController;->a(Z)V
 
     :cond_1
     return-void

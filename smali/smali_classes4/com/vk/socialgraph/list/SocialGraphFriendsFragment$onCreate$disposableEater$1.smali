@@ -3,7 +3,7 @@
 .source "SocialGraphFriendsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lio/reactivex/disposables/b;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lio/reactivex/disposables/Disposable;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/disposables/b;)V
+.method public final a(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$onCreate$disposableEater$1;->this$0:Lcom/vk/socialgraph/list/SocialGraphFriendsFragment;
 
-    invoke-static {v0}, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment;->b(Lcom/vk/socialgraph/list/SocialGraphFriendsFragment;)Lio/reactivex/disposables/a;
+    invoke-static {v0}, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment;->b(Lcom/vk/socialgraph/list/SocialGraphFriendsFragment;)Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -65,11 +65,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lio/reactivex/disposables/b;
+    check-cast p1, Lio/reactivex/disposables/Disposable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$onCreate$disposableEater$1;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$onCreate$disposableEater$1;->a(Lio/reactivex/disposables/Disposable;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

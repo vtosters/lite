@@ -3,7 +3,7 @@
 .source "MusicBottomSheetDisplayer.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$d;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
 
 
 # annotations
@@ -41,11 +41,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer$a;->a:Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;
 
-    invoke-virtual {v0}, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->b()Lkotlin/jvm/b/a;
+    invoke-virtual {v0}, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->b()Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

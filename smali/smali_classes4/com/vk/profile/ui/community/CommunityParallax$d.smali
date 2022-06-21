@@ -42,7 +42,7 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -77,7 +77,7 @@
 
     move-result v1
 
-    invoke-static {p1, v0, v1}, Lcom/vk/core/util/p;->a(IIF)I
+    invoke-static {p1, v0, v1}, Lcom/vk/core/util/ColorUtils;->a(IIF)I
 
     move-result p1
 
@@ -112,9 +112,9 @@
 
     const-string v4, "ColorStateList.valueOf(color)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v1, v2, p1, v3}, Lcom/vk/extensions/t/a;->a(Landroidx/appcompat/widget/Toolbar;IIILandroid/content/res/ColorStateList;)V
+    invoke-static {v0, v1, v2, p1, v3}, Lcom/vk/extensions/t/ToolbarExt;->a(Landroidx/appcompat/widget/Toolbar;IIILandroid/content/res/ColorStateList;)V
 
     :cond_0
     return-void

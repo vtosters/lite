@@ -3,12 +3,12 @@
 .source "LiveVideoState.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/live/views/live/LiveVideoState$b;->e(Lcom/vk/libvideo/autoplay/a;)V
+    value = Lcom/vk/libvideo/live/views/live/LiveVideoState$b;->e(Lcom/vk/libvideo/autoplay/AutoPlay;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Long;",
         ">;"
     }
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/libvideo/autoplay/a;
+.field final synthetic a:Lcom/vk/libvideo/autoplay/AutoPlay;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/libvideo/autoplay/a;)V
+.method constructor <init>(Lcom/vk/libvideo/autoplay/AutoPlay;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveVideoState$b$a;->a:Lcom/vk/libvideo/autoplay/a;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveVideoState$b$a;->a:Lcom/vk/libvideo/autoplay/AutoPlay;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,7 +62,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveVideoState$b$a;->a:Lcom/vk/libvideo/autoplay/a;
+    iget-object v1, p0, Lcom/vk/libvideo/live/views/live/LiveVideoState$b$a;->a:Lcom/vk/libvideo/autoplay/AutoPlay;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -77,11 +77,11 @@
     invoke-static {p1}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveVideoState$b$a;->a:Lcom/vk/libvideo/autoplay/a;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveVideoState$b$a;->a:Lcom/vk/libvideo/autoplay/AutoPlay;
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/libvideo/autoplay/a;->a(J)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/libvideo/autoplay/AutoPlay;->a(J)V
 
     return-void
 .end method

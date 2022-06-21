@@ -116,7 +116,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/polls/ui/views/AbstractPollView$e;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/polls/ui/views/AbstractPollView$e;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/polls/ui/views/AbstractPollView;->p0:Lcom/vk/polls/ui/views/AbstractPollView$e;
 
@@ -278,7 +278,7 @@
     .line 5
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->POLL:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v0}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -314,7 +314,7 @@
 
     const-string v1, "findViewById(R.id.poll_actions)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroidx/appcompat/widget/AppCompatImageView;
 
@@ -344,7 +344,7 @@
     const-string v2, "findViewById<AdaptiveSiz\u2026MAX_SIZE_PARAMS\n        }"
 
     .line 13
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/polls/ui/views/AbstractPollView;->J:Lcom/vk/core/ui/AdaptiveSizeTextView;
 
@@ -357,7 +357,7 @@
 
     const-string v1, "findViewById(R.id.poll_info)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -372,7 +372,7 @@
 
     const-string v1, "findViewById(R.id.options_container)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/LinearLayout;
 
@@ -387,7 +387,7 @@
 
     const-string v1, "findViewById(R.id.poll_multiple_vote_button)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -402,7 +402,7 @@
 
     const-string v1, "findViewById(R.id.poll_results)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/view/ViewGroup;
 
@@ -417,7 +417,7 @@
 
     const-string v1, "findViewById(R.id.photo_strip_view)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/core/view/PhotoStripView;
 
@@ -432,7 +432,7 @@
 
     const-string v1, "findViewById(R.id.votes_count)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -447,7 +447,7 @@
 
     const-string v1, "findViewById(R.id.multiple_progress)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ProgressBar;
 
@@ -462,7 +462,7 @@
 
     const-string v1, "findViewById(R.id.poll_background)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/imageloader/view/VKImageView;
 
@@ -477,7 +477,7 @@
 
     const-string v1, "findViewById(R.id.poll_author_name)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -492,7 +492,7 @@
 
     const-string v1, "findViewById(R.id.poll_small_rect_view)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/polls/ui/views/AbstractPollView;->N:Landroid/view/View;
 
@@ -522,7 +522,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/polls/ui/views/AbstractPollView$6;-><init>(Lcom/vk/polls/ui/views/AbstractPollView;)V
 
-    invoke-static {p0, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p0, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 28
     new-instance v0, Lcom/vk/polls/ui/views/AbstractPollView$c;
@@ -587,7 +587,7 @@
 
     invoke-direct {v5, p1}, Lcom/vk/polls/ui/views/AbstractPollView$1;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p2, v4, v5}, Lcom/vk/core/extensions/b0;->a(Landroid/content/res/TypedArray;ILkotlin/jvm/b/a;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p2, v4, v5}, Lcom/vk/core/extensions/TypedArrayExt;->a(Landroid/content/res/TypedArray;ILkotlin/jvm/b/Functions;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -600,7 +600,7 @@
 
     invoke-direct {v5, p1}, Lcom/vk/polls/ui/views/AbstractPollView$2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p2, v4, v5}, Lcom/vk/core/extensions/b0;->a(Landroid/content/res/TypedArray;ILkotlin/jvm/b/a;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p2, v4, v5}, Lcom/vk/core/extensions/TypedArrayExt;->a(Landroid/content/res/TypedArray;ILkotlin/jvm/b/Functions;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -760,7 +760,7 @@
 
     int-to-float p3, p3
 
-    invoke-static {p1, p3}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;F)V
+    invoke-static {p1, p3}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;F)V
 
     .line 52
     iget-object p1, p0, Lcom/vk/polls/ui/views/AbstractPollView;->K:Landroid/widget/TextView;
@@ -769,7 +769,7 @@
 
     int-to-float p3, p3
 
-    invoke-static {p1, p3}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;F)V
+    invoke-static {p1, p3}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;F)V
 
     .line 53
     iget-object p1, p0, Lcom/vk/polls/ui/views/AbstractPollView;->T:Landroid/widget/TextView;
@@ -778,7 +778,7 @@
 
     int-to-float p3, p3
 
-    invoke-static {p1, p3}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;F)V
+    invoke-static {p1, p3}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;F)V
 
     if-eqz p2, :cond_2
 
@@ -801,7 +801,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v0
 
@@ -822,9 +822,9 @@
 
     move-object v2, v0
 
-    check-cast v2, Lkotlin/collections/a0;
+    check-cast v2, Lkotlin/collections/Iterators1;
 
-    invoke-virtual {v2}, Lkotlin/collections/a0;->a()I
+    invoke-virtual {v2}, Lkotlin/collections/Iterators1;->a()I
 
     move-result v2
 
@@ -836,7 +836,7 @@
     move-result-object v3
 
     .line 57
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -898,16 +898,16 @@
     throw p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/polls/ui/views/AbstractPollView;Lcom/vk/polls/ui/views/c;)V
+.method public static final synthetic a(Lcom/vk/polls/ui/views/AbstractPollView;Lcom/vk/polls/ui/views/PollOptionView;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lcom/vk/polls/ui/views/c;)V
+    invoke-direct {p0, p1}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lcom/vk/polls/ui/views/PollOptionView;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/polls/ui/views/c;)V
+.method private final a(Lcom/vk/polls/ui/views/PollOptionView;)V
     .locals 12
 
     .line 42
@@ -955,7 +955,7 @@
     if-nez v3, :cond_7
 
     .line 46
-    invoke-virtual {p1}, Lcom/vk/polls/ui/views/c;->b()V
+    invoke-virtual {p1}, Lcom/vk/polls/ui/views/PollOptionView;->b()V
 
     .line 47
     invoke-direct {p0}, Lcom/vk/polls/ui/views/AbstractPollView;->m()V
@@ -976,7 +976,7 @@
     check-cast p1, Lcom/vk/dto/polls/PollOption;
 
     .line 49
-    invoke-virtual {p0}, Lcom/vk/polls/ui/views/AbstractPollView;->getPollVoteController()Lb/h/t/k/d;
+    invoke-virtual {p0}, Lcom/vk/polls/ui/views/AbstractPollView;->getPollVoteController()Lb/h/t/k/PollVoteController1;
 
     move-result-object v3
 
@@ -1028,41 +1028,41 @@
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/polls/ui/views/AbstractPollView$f;->G()Lb/h/t/k/c;
+    invoke-interface {p1}, Lcom/vk/polls/ui/views/AbstractPollView$f;->G()Lb/h/t/k/PollVoteController;
 
     move-result-object v2
 
     :cond_2
     move-object v11, v2
 
-    invoke-interface/range {v3 .. v11}, Lb/h/t/k/d;->a(IILjava/util/List;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lb/h/t/k/c;)V
+    invoke-interface/range {v3 .. v11}, Lb/h/t/k/PollVoteController1;->a(IILjava/util/List;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lb/h/t/k/PollVoteController;)V
 
     goto :goto_0
 
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 50
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 51
     :cond_7
-    invoke-virtual {p1}, Lcom/vk/polls/ui/views/c;->c()V
+    invoke-virtual {p1}, Lcom/vk/polls/ui/views/PollOptionView;->c()V
 
     :cond_8
     :goto_0
@@ -1070,13 +1070,13 @@
 
     .line 52
     :cond_9
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 53
     :cond_a
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -1406,7 +1406,7 @@
     sub-int/2addr v1, v0
 
     .line 30
-    invoke-static {v2, v1}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {v2, v1}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v0
 
@@ -1424,9 +1424,9 @@
 
     move-object v1, v0
 
-    check-cast v1, Lkotlin/collections/a0;
+    check-cast v1, Lkotlin/collections/Iterators1;
 
-    invoke-virtual {v1}, Lkotlin/collections/a0;->a()I
+    invoke-virtual {v1}, Lkotlin/collections/Iterators1;->a()I
 
     .line 32
     invoke-direct {p0}, Lcom/vk/polls/ui/views/AbstractPollView;->k()V
@@ -1437,7 +1437,7 @@
     if-le v0, v1, :cond_1
 
     .line 33
-    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v0
 
@@ -1455,9 +1455,9 @@
 
     move-object v1, v0
 
-    check-cast v1, Lkotlin/collections/a0;
+    check-cast v1, Lkotlin/collections/Iterators1;
 
-    invoke-virtual {v1}, Lkotlin/collections/a0;->a()I
+    invoke-virtual {v1}, Lkotlin/collections/Iterators1;->a()I
 
     move-result v1
 
@@ -1470,7 +1470,7 @@
 
     const-string v2, "optionsContainer.getChildAt(it)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v2, 0x8
 
@@ -1484,7 +1484,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/polls/ui/views/AbstractPollView$prepareOptionViews$3;-><init>(Lcom/vk/polls/ui/views/AbstractPollView;Z)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lkotlin/jvm/b/c;)V
+    invoke-virtual {p0, v0}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lkotlin/jvm/b/Functions1;)V
 
     return-void
 
@@ -1492,7 +1492,7 @@
     const-string p1, "poll"
 
     .line 37
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1640,7 +1640,7 @@
 
     const-string v9, "context"
 
-    invoke-static {v8, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v9, p0, Lcom/vk/polls/ui/views/AbstractPollView;->c:Lcom/vk/dto/polls/Poll;
 
@@ -1679,7 +1679,7 @@
 
     .line 7
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1760,12 +1760,12 @@
     goto :goto_4
 
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1882,25 +1882,25 @@
     invoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V
 
     .line 19
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/polls/ui/views/AbstractPollView$bindFooter$photos$1;->a:Lcom/vk/polls/ui/views/AbstractPollView$bindFooter$photos$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/sequences/m;->g(Lkotlin/sequences/j;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/sequences/m;->g(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
-    invoke-static {v0, v3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
+    invoke-static {v0, v3}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {v0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v0
 
@@ -1913,17 +1913,17 @@
 
     .line 21
     :cond_9
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_a
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_b
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1941,31 +1941,31 @@
 
     .line 23
     :cond_d
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 24
     :cond_e
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 25
     :cond_f
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 26
     :cond_10
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 27
     :cond_11
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1974,7 +1974,7 @@
     .locals 4
 
     .line 1
-    new-instance v0, Lcom/vk/polls/ui/views/c;
+    new-instance v0, Lcom/vk/polls/ui/views/PollOptionView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
@@ -1982,9 +1982,9 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/polls/ui/views/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/polls/ui/views/PollOptionView;-><init>(Landroid/content/Context;)V
 
     .line 2
     new-instance v1, Lcom/vk/polls/ui/views/AbstractPollView$g;
@@ -2005,7 +2005,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/polls/ui/views/AbstractPollView$i;-><init>(Lcom/vk/polls/ui/views/AbstractPollView;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/polls/ui/views/c;->setOnOptionCheckedListenerListener(Lcom/vk/polls/ui/views/c$b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/polls/ui/views/PollOptionView;->setOnOptionCheckedListenerListener(Lcom/vk/polls/ui/views/PollOptionView$b;)V
 
     .line 5
     iget-object v1, p0, Lcom/vk/polls/ui/views/AbstractPollView;->L:Landroid/widget/LinearLayout;
@@ -2038,7 +2038,7 @@
     if-eqz v0, :cond_4
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/polls/ui/views/AbstractPollView;->getPollVoteController()Lb/h/t/k/d;
+    invoke-virtual {p0}, Lcom/vk/polls/ui/views/AbstractPollView;->getPollVoteController()Lb/h/t/k/PollVoteController1;
 
     move-result-object v3
 
@@ -2076,29 +2076,29 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/polls/ui/views/AbstractPollView$f;->G()Lb/h/t/k/c;
+    invoke-interface {v0}, Lcom/vk/polls/ui/views/AbstractPollView$f;->G()Lb/h/t/k/PollVoteController;
 
     move-result-object v2
 
     :cond_0
     move-object v9, v2
 
-    invoke-interface/range {v3 .. v9}, Lb/h/t/k/d;->a(IIZLjava/lang/String;Ljava/lang/String;Lb/h/t/k/c;)V
+    invoke-interface/range {v3 .. v9}, Lb/h/t/k/PollVoteController1;->a(IIZLjava/lang/String;Ljava/lang/String;Lb/h/t/k/PollVoteController;)V
 
     goto :goto_0
 
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2108,7 +2108,7 @@
 
     .line 3
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -2119,7 +2119,7 @@
     .line 1
     sget-object v0, Lcom/vk/polls/ui/views/AbstractPollView$disableOptions$1;->a:Lcom/vk/polls/ui/views/AbstractPollView$disableOptions$1;
 
-    invoke-virtual {p0, v0}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lkotlin/jvm/b/c;)V
+    invoke-virtual {p0, v0}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lkotlin/jvm/b/Functions1;)V
 
     return-void
 .end method
@@ -2128,7 +2128,7 @@
     .locals 10
 
     .line 1
-    new-instance v7, Lcom/vk/core/dialogs/actionspopup/a$b;
+    new-instance v7, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     iget-object v1, p0, Lcom/vk/polls/ui/views/AbstractPollView;->I:Landroidx/appcompat/widget/AppCompatImageView;
 
@@ -2142,7 +2142,7 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/a$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/polls/ui/views/AbstractPollView;->c:Lcom/vk/dto/polls/Poll;
@@ -2176,7 +2176,7 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 4
     :cond_0
@@ -2211,7 +2211,7 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 6
     :cond_1
@@ -2242,7 +2242,7 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 8
     :cond_2
@@ -2262,7 +2262,7 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 9
     iget-object v0, p0, Lcom/vk/polls/ui/views/AbstractPollView;->c:Lcom/vk/dto/polls/Poll;
@@ -2292,35 +2292,35 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 11
     :cond_3
-    invoke-virtual {v7}, Lcom/vk/core/dialogs/actionspopup/a$b;->c()Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {v7}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     return-void
 
     .line 12
     :cond_4
-    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v8
 
     .line 13
     :cond_5
-    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v8
 
     .line 14
     :cond_6
-    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v8
 
     .line 15
     :cond_7
-    invoke-static {v9}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v9}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v8
 .end method
@@ -2378,7 +2378,7 @@
     invoke-direct {p0}, Lcom/vk/polls/ui/views/AbstractPollView;->m()V
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/polls/ui/views/AbstractPollView;->getPollVoteController()Lb/h/t/k/d;
+    invoke-virtual {p0}, Lcom/vk/polls/ui/views/AbstractPollView;->getPollVoteController()Lb/h/t/k/PollVoteController1;
 
     move-result-object v4
 
@@ -2430,34 +2430,34 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/polls/ui/views/AbstractPollView$f;->G()Lb/h/t/k/c;
+    invoke-interface {v0}, Lcom/vk/polls/ui/views/AbstractPollView$f;->G()Lb/h/t/k/PollVoteController;
 
     move-result-object v2
 
     :cond_1
     move-object v12, v2
 
-    invoke-interface/range {v4 .. v12}, Lb/h/t/k/d;->a(IILjava/util/List;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lb/h/t/k/c;)V
+    invoke-interface/range {v4 .. v12}, Lb/h/t/k/PollVoteController1;->a(IILjava/util/List;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lb/h/t/k/PollVoteController;)V
 
     goto :goto_0
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2467,7 +2467,7 @@
 
     .line 6
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2476,7 +2476,7 @@
     return-void
 
     :cond_9
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -2517,7 +2517,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -2527,7 +2527,7 @@
 
     .line 3
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -2755,31 +2755,31 @@
     return-void
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 22
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 23
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 24
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 25
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -2792,7 +2792,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/polls/ui/views/AbstractPollView$onVoteFailed$1;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-static {p1, v0}, Lcom/vk/api/base/j;->a(Ljava/lang/Throwable;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/api/base/ThrowableExt;->a(Ljava/lang/Throwable;Lkotlin/jvm/b/Functions2;)V
 
     .line 31
     iget-object p1, p0, Lcom/vk/polls/ui/views/AbstractPollView;->c:Lcom/vk/dto/polls/Poll;
@@ -2850,7 +2850,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -2861,7 +2861,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -2872,28 +2872,28 @@
 
     invoke-direct {p1, p0}, Lcom/vk/polls/ui/views/AbstractPollView$onVoteFailed$2;-><init>(Lcom/vk/polls/ui/views/AbstractPollView;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lkotlin/jvm/b/c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lkotlin/jvm/b/Functions1;)V
 
     return-void
 
     .line 35
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
 
-.method protected final a(Lkotlin/jvm/b/c;)V
+.method protected final a(Lkotlin/jvm/b/Functions1;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
-            "Lcom/vk/polls/ui/views/c;",
+            "Lcom/vk/polls/ui/views/PollOptionView;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -2913,7 +2913,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v0
 
@@ -2932,9 +2932,9 @@
 
     move-object v1, v0
 
-    check-cast v1, Lkotlin/collections/a0;
+    check-cast v1, Lkotlin/collections/Iterators1;
 
-    invoke-virtual {v1}, Lkotlin/collections/a0;->a()I
+    invoke-virtual {v1}, Lkotlin/collections/Iterators1;->a()I
 
     move-result v1
 
@@ -2948,7 +2948,7 @@
     if-eqz v2, :cond_0
 
     .line 39
-    instance-of v3, v2, Lcom/vk/polls/ui/views/c;
+    instance-of v3, v2, Lcom/vk/polls/ui/views/PollOptionView;
 
     if-eqz v3, :cond_0
 
@@ -2957,7 +2957,7 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v2, v1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v2, v1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -2968,7 +2968,7 @@
     const-string p1, "poll"
 
     .line 41
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -2983,7 +2983,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/polls/ui/views/AbstractPollView$enableClicks$1;-><init>(Z)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lkotlin/jvm/b/c;)V
+    invoke-virtual {p0, v0}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lkotlin/jvm/b/Functions1;)V
 
     .line 27
     iget-object v0, p0, Lcom/vk/polls/ui/views/AbstractPollView;->I:Landroidx/appcompat/widget/AppCompatImageView;
@@ -3017,7 +3017,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -3026,7 +3026,7 @@
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3071,12 +3071,12 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3143,7 +3143,7 @@
     move-result-object v0
 
     .line 6
-    sget-object v1, Lcom/vk/core/util/h;->f:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
+    sget-object v1, Lcom/vk/core/util/AnimationUtils;->f:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/transition/Transition;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/transition/Transition;
 
@@ -3171,7 +3171,7 @@
 
     invoke-direct {v3, v2, v0}, Lcom/vk/polls/ui/views/AbstractPollView$prepareAddVoteAnimation$1;-><init>(Ljava/util/List;Landroid/transition/Transition;)V
 
-    invoke-virtual {p0, v3}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lkotlin/jvm/b/c;)V
+    invoke-virtual {p0, v3}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lkotlin/jvm/b/Functions1;)V
 
     .line 11
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
@@ -3205,7 +3205,7 @@
     invoke-direct {v0}, Landroid/transition/AutoTransition;-><init>()V
 
     .line 4
-    sget-object v1, Lcom/vk/core/util/h;->f:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
+    sget-object v1, Lcom/vk/core/util/AnimationUtils;->f:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/transition/AutoTransition;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/transition/TransitionSet;
 
@@ -3239,7 +3239,7 @@
 
     invoke-direct {v1, v0}, Lcom/vk/polls/ui/views/AbstractPollView$prepareDeleteVoteAnimation$1;-><init>(Landroid/transition/Transition;)V
 
-    invoke-virtual {p0, v1}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lkotlin/jvm/b/c;)V
+    invoke-virtual {p0, v1}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lkotlin/jvm/b/Functions1;)V
 
     .line 9
     invoke-static {p0, v0}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
@@ -3341,7 +3341,7 @@
     :cond_0
     const-string v0, "poll"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -3384,7 +3384,7 @@
     return-object v0
 .end method
 
-.method public abstract getPollVoteController()Lb/h/t/k/d;
+.method public abstract getPollVoteController()Lb/h/t/k/PollVoteController1;
 .end method
 
 .method public final getRef()Ljava/lang/String;
@@ -3530,7 +3530,7 @@
     return-void
 .end method
 
-.method public abstract setPollVoteController(Lb/h/t/k/d;)V
+.method public abstract setPollVoteController(Lb/h/t/k/PollVoteController1;)V
 .end method
 
 .method public final setRef(Ljava/lang/String;)V

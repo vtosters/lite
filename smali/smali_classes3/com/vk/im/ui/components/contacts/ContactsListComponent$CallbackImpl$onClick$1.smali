@@ -3,12 +3,12 @@
 .source "ContactsListComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;->a(Lcom/vk/im/ui/components/contacts/vc/button/b;)V
+    value = Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;->a(Lcom/vk/im/ui/components/contacts/vc/button/ButtonItem;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl$onClick$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -64,28 +64,28 @@
 
     iget-object v0, v0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->d(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/engine/a;
+    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->d(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/im/engine/commands/contacts/h;
+    new-instance v1, Lcom/vk/im/engine/commands/contacts/ContactsHideNewLocalContacts;
 
     const-string v2, "ContactsListComponent"
 
-    invoke-direct {v1, v2}, Lcom/vk/im/engine/commands/contacts/h;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v1, v2}, Lcom/vk/im/engine/commands/contacts/ContactsHideNewLocalContacts;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl$onClick$1;->this$0:Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;
 
     iget-object v0, v0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/p/b;
+    invoke-static {v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->e()Lcom/vk/bridges/i0;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->e()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v0
 
@@ -93,11 +93,11 @@
 
     iget-object v1, v1, Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->f(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/navigation/a;
+    invoke-static {v1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->f(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/navigation/ActivityLauncher;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/bridges/i0;->a(Lcom/vk/navigation/a;)V
+    invoke-interface {v0, v1}, Lcom/vk/bridges/UsersBridge;->a(Lcom/vk/navigation/ActivityLauncher;)V
 
     return-void
 .end method

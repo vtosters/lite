@@ -82,7 +82,7 @@
 
     .line 4
     :cond_0
-    sget-object v4, Lcom/vk/core/widget/b;->b:Lcom/vk/core/widget/b;
+    sget-object v4, Lcom/vk/core/widget/LikeAnimator;->b:Lcom/vk/core/widget/LikeAnimator;
 
     iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController$b;->b:Lcom/vk/ui/photoviewer/BottomPanelController;
 
@@ -110,7 +110,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v4 .. v11}, Lcom/vk/core/widget/b;->a(Lcom/vk/core/widget/b;Landroid/view/View;Landroid/view/View;ZZFILjava/lang/Object;)V
+    invoke-static/range {v4 .. v11}, Lcom/vk/core/widget/LikeAnimator;->a(Lcom/vk/core/widget/LikeAnimator;Landroid/view/View;Landroid/view/View;ZZFILjava/lang/Object;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController$b;->b:Lcom/vk/ui/photoviewer/BottomPanelController;
@@ -119,7 +119,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController$b;->a:Lcom/vk/dto/photo/Photo;
 
@@ -162,7 +162,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController$b;->a:Lcom/vk/dto/photo/Photo;
 
@@ -185,7 +185,7 @@
     if-ne v0, v1, :cond_4
 
     .line 10
-    invoke-static {}, Lcom/vk/bridges/a0;->a()Lcom/vk/bridges/z;
+    invoke-static {}, Lcom/vk/bridges/SharingBridge;->a()Lcom/vk/bridges/SharingBridge1;
 
     move-result-object v0
 
@@ -193,7 +193,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
@@ -201,7 +201,7 @@
 
     invoke-direct {v1, v2}, Lcom/vtosters/lite/attachments/PhotoAttachment;-><init>(Lcom/vk/dto/photo/Photo;)V
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/bridges/SharingBridge1;->a(Landroid/content/Context;Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -226,7 +226,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController$b;->a:Lcom/vk/dto/photo/Photo;
 
@@ -255,7 +255,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController$b;->a:Lcom/vk/dto/photo/Photo;
 
@@ -284,7 +284,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController$b;->a:Lcom/vk/dto/photo/Photo;
 

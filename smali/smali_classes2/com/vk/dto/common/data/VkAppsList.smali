@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/common/data/VkAppsList$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/common/data/VkAppsList$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/common/data/VkAppsList;->c:Lcom/vk/dto/common/data/VkAppsList$b;
 
@@ -72,7 +72,7 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {p0, v0, v0, v1, v0}, Lcom/vk/dto/common/data/VkAppsList;-><init>(Ljava/util/List;Lcom/vk/dto/common/data/VkAppsFeatured;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v0, v1, v0}, Lcom/vk/dto/common/data/VkAppsList;-><init>(Ljava/util/List;Lcom/vk/dto/common/data/VkAppsFeatured;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -101,7 +101,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/List;Lcom/vk/dto/common/data/VkAppsFeatured;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/util/List;Lcom/vk/dto/common/data/VkAppsFeatured;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 6
 
     and-int/lit8 p4, p3, 0x1
@@ -133,7 +133,7 @@
 
     move-object v0, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/dto/common/data/VkAppsFeatured;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/dto/common/data/VkAppsFeatured;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     :cond_1
     invoke-direct {p0, p1, p2}, Lcom/vk/dto/common/data/VkAppsList;-><init>(Ljava/util/List;Lcom/vk/dto/common/data/VkAppsFeatured;)V
@@ -185,7 +185,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/common/data/VkAppsList;->a:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -195,7 +195,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/common/data/VkAppsList;->b:Lcom/vk/dto/common/data/VkAppsFeatured;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

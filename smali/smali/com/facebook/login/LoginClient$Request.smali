@@ -394,7 +394,7 @@
     const-string v0, "permissions"
 
     .line 1
-    invoke-static {p1, v0}, Lcom/facebook/internal/s;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/facebook/internal/Validate;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iput-object p1, p0, Lcom/facebook/login/LoginClient$Request;->b:Ljava/util/Set;

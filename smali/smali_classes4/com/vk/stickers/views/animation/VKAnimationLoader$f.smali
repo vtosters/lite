@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stickers/views/animation/VKAnimationLoader;->a(Ljava/lang/String;)Lc/a/m;
+    value = Lcom/vk/stickers/views/animation/VKAnimationLoader;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -80,7 +80,7 @@
 
     iget-object v3, p0, Lcom/vk/stickers/views/animation/VKAnimationLoader$f;->a:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -128,7 +128,7 @@
 
     .line 5
     :cond_3
-    sget-object v1, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v1, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     sget-object v2, Lcom/vk/stickers/views/animation/VKAnimationLoader;->d:Lcom/vk/stickers/views/animation/VKAnimationLoader;
 
@@ -140,28 +140,28 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Z)Lc/a/m;
+    invoke-virtual {v1, v2, v3}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Z)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 6
-    invoke-static {}, Lc/a/f0/b;->c()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->c()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 7
     sget-object v2, Lcom/vk/stickers/views/animation/VKAnimationLoader$f$a;->a:Lcom/vk/stickers/views/animation/VKAnimationLoader$f$a;
 
-    invoke-virtual {v1, v2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 8
-    invoke-virtual {v1}, Lc/a/m;->a()Ljava/lang/Object;
+    invoke-virtual {v1}, Lio/reactivex/Observable;->a()Ljava/lang/Object;
 
     move-result-object v1
 

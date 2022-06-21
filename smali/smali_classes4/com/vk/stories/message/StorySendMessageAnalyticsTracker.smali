@@ -3,11 +3,11 @@
 .source "StorySendMessagePresenter.kt"
 
 # interfaces
-.implements Lcom/vk/stories/message/c;
+.implements Lcom/vk/stories/message/StorySendMessageContract1;
 
 
 # instance fields
-.field private a:Lcom/vk/stories/analytics/c;
+.field private a:Lcom/vk/stories/analytics/StoryViewAnalyticsParams;
 
 
 # direct methods
@@ -28,11 +28,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/stories/analytics/c;)V
+.method public a(Lcom/vk/stories/analytics/StoryViewAnalyticsParams;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;->a:Lcom/vk/stories/analytics/c;
+    iput-object p1, p0, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;->a:Lcom/vk/stories/analytics/StoryViewAnalyticsParams;
 
     return-void
 .end method
@@ -113,7 +113,7 @@
     .line 6
     sget-object v0, Lcom/vk/stories/analytics/StoryAnalytics;->c:Lcom/vk/stories/analytics/StoryAnalytics;
 
-    iget-object v1, p0, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;->a:Lcom/vk/stories/analytics/c;
+    iget-object v1, p0, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;->a:Lcom/vk/stories/analytics/StoryViewAnalyticsParams;
 
     if-eqz v1, :cond_4
 
@@ -121,14 +121,14 @@
 
     invoke-direct {v2, p0, p2}, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker$trackStickerSend$$inlined$let$lambda$1;-><init>(Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/stories/analytics/StoryAnalytics;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vk/stories/analytics/c;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/stories/analytics/StoryAnalytics;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vk/stories/analytics/StoryViewAnalyticsParams;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_2
 
     :cond_4
     const-string p1, "analytics"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -143,18 +143,18 @@
     .line 1
     sget-object v0, Lcom/vk/attachpicker/fragment/StoryReporter;->a:Lcom/vk/attachpicker/fragment/StoryReporter;
 
-    iget-object v1, p0, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;->a:Lcom/vk/stories/analytics/c;
+    iget-object v1, p0, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;->a:Lcom/vk/stories/analytics/StoryViewAnalyticsParams;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/fragment/StoryReporter;->b(Lcom/vk/stories/analytics/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/fragment/StoryReporter;->b(Lcom/vk/stories/analytics/StoryViewAnalyticsParams;)V
 
     return-void
 
     :cond_0
     const-string v0, "analytics"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -167,18 +167,18 @@
     .line 1
     sget-object v0, Lcom/vk/attachpicker/fragment/StoryReporter;->a:Lcom/vk/attachpicker/fragment/StoryReporter;
 
-    iget-object v1, p0, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;->a:Lcom/vk/stories/analytics/c;
+    iget-object v1, p0, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;->a:Lcom/vk/stories/analytics/StoryViewAnalyticsParams;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/fragment/StoryReporter;->c(Lcom/vk/stories/analytics/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/fragment/StoryReporter;->c(Lcom/vk/stories/analytics/StoryViewAnalyticsParams;)V
 
     return-void
 
     :cond_0
     const-string v0, "analytics"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

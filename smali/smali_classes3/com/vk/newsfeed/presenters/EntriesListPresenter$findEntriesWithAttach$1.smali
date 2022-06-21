@@ -3,12 +3,12 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Lcom/vk/dto/common/Attachment;)Lkotlin/sequences/j;
+    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Lcom/vk/dto/common/Attachment;)Lkotlin/sequences/Sequence;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -50,7 +50,7 @@
     .locals 3
 
     .line 1
-    instance-of v0, p1, Lcom/vk/dto/newsfeed/h;
+    instance-of v0, p1, Lcom/vk/dto/newsfeed/WithAttachments;
 
     const/4 v1, 0x1
 
@@ -58,9 +58,9 @@
 
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/dto/newsfeed/h;
+    check-cast v0, Lcom/vk/dto/newsfeed/WithAttachments;
 
-    invoke-interface {v0}, Lcom/vk/dto/newsfeed/h;->k1()Ljava/util/List;
+    invoke-interface {v0}, Lcom/vk/dto/newsfeed/WithAttachments;->k1()Ljava/util/List;
 
     move-result-object v0
 

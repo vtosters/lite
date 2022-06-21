@@ -21,13 +21,13 @@
 
 .field private final c:Ljava/lang/String;
 
-.field private final d:Lcom/vk/common/view/settings/a$a;
+.field private final d:Lcom/vk/common/view/settings/SettingsInfoView$a;
 
 .field private final e:Z
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;Ljava/lang/String;Lcom/vk/common/view/settings/a$a;Z)V
+.method public constructor <init>(Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;Ljava/lang/String;Lcom/vk/common/view/settings/SettingsInfoView$a;Z)V
     .locals 0
 
     .line 1
@@ -37,14 +37,14 @@
 
     iput-object p2, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->c:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d:Lcom/vk/common/view/settings/a$a;
+    iput-object p3, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d:Lcom/vk/common/view/settings/SettingsInfoView$a;
 
     iput-boolean p4, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->e:Z
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;Ljava/lang/String;Lcom/vk/common/view/settings/a$a;ZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;Ljava/lang/String;Lcom/vk/common/view/settings/SettingsInfoView$a;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x8
@@ -55,7 +55,7 @@
 
     .line 2
     :cond_0
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;-><init>(Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;Ljava/lang/String;Lcom/vk/common/view/settings/a$a;Z)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;-><init>(Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;Ljava/lang/String;Lcom/vk/common/view/settings/SettingsInfoView$a;Z)V
 
     return-void
 .end method
@@ -98,11 +98,11 @@
     return-object v0
 .end method
 
-.method public final d()Lcom/vk/common/view/settings/a$a;
+.method public final d()Lcom/vk/common/view/settings/SettingsInfoView$a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d:Lcom/vk/common/view/settings/a$a;
+    iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d:Lcom/vk/common/view/settings/SettingsInfoView$a;
 
     return-object v0
 .end method
@@ -131,7 +131,7 @@
 
     .line 3
     :cond_1
-    iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d:Lcom/vk/common/view/settings/a$a;
+    iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d:Lcom/vk/common/view/settings/SettingsInfoView$a;
 
     if-eqz v0, :cond_2
 
@@ -180,7 +180,7 @@
     :goto_0
     const-class v2, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -203,7 +203,7 @@
 
     iget-object v3, p1, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->b:Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -219,7 +219,7 @@
 
     iget-object v3, p1, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->c:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -231,11 +231,11 @@
 
     .line 5
     :cond_4
-    iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d:Lcom/vk/common/view/settings/a$a;
+    iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d:Lcom/vk/common/view/settings/SettingsInfoView$a;
 
-    iget-object p1, p1, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d:Lcom/vk/common/view/settings/a$a;
+    iget-object p1, p1, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d:Lcom/vk/common/view/settings/SettingsInfoView$a;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -301,11 +301,11 @@
     mul-int/lit8 v0, v0, 0x1f
 
     .line 3
-    iget-object v2, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d:Lcom/vk/common/view/settings/a$a;
+    iget-object v2, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$a;->d:Lcom/vk/common/view/settings/SettingsInfoView$a;
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {v2}, Lcom/vk/common/view/settings/a$a;->hashCode()I
+    invoke-virtual {v2}, Lcom/vk/common/view/settings/SettingsInfoView$a;->hashCode()I
 
     move-result v1
 

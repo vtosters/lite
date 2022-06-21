@@ -3,7 +3,7 @@
 .source "SocialGraphFriendsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$l;
+.implements Lcom/vk/lists/PaginationHelper$l;
 
 
 # annotations
@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     return-void
 .end method

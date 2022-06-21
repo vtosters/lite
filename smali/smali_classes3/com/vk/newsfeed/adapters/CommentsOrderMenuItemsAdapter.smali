@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/adapters/CommentsOrderMenuItemsAdapter;
-.super Lcom/vk/lists/i0;
+.super Lcom/vk/lists/SimpleAdapter;
 .source "CommentsOrderMenuItemsAdapter.kt"
 
 
@@ -13,7 +13,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/i0<",
+        "Lcom/vk/lists/SimpleAdapter<",
         "Lcom/vk/api/comments/CommentsOrder$Item;",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
         ">;"
@@ -40,7 +40,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
 
     const/4 v0, 0x1
 
@@ -108,7 +108,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {p0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     return-void
 .end method
@@ -125,7 +125,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -167,13 +167,13 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/newsfeed/adapters/CommentsOrderMenuItemsAdapter$onCreateViewHolder$$inlined$apply$lambda$1;
 
     invoke-direct {v0, p2, p0}, Lcom/vk/newsfeed/adapters/CommentsOrderMenuItemsAdapter$onCreateViewHolder$$inlined$apply$lambda$1;-><init>(Lcom/vk/newsfeed/adapters/CommentsOrderMenuItemsAdapter$b;Lcom/vk/newsfeed/adapters/CommentsOrderMenuItemsAdapter;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-object p2
 .end method

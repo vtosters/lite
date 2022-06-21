@@ -62,7 +62,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stickers/views/animation/VKAnimationLoader$g;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/vk/core/util/f0;->a(Ljava/lang/String;)[B
+    invoke-static {v0}, Lcom/vk/core/util/GZIPCompression;->a(Ljava/lang/String;)[B
 
     move-result-object v0
 

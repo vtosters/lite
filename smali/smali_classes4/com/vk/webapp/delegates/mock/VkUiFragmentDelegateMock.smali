@@ -3,7 +3,7 @@
 .source "VkUiFragmentDelegateMock.kt"
 
 # interfaces
-.implements Lcom/vk/webapp/o/c;
+.implements Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
 
 # instance fields
@@ -97,7 +97,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/webapp/p/a/a;)V
+.method public a(Lcom/vk/webapp/p/a/StatusNavBarController;)V
     .locals 0
 
     return-void
@@ -205,7 +205,7 @@
     return v0
 .end method
 
-.method public u()Lcom/vk/webapp/p/a/a;
+.method public u()Lcom/vk/webapp/p/a/StatusNavBarController;
     .locals 1
 
     .line 1

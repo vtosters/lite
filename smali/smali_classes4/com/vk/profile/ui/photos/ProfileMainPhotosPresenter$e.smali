@@ -3,12 +3,12 @@
 .source "ProfileMainPhotosPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->k()Lc/a/m;
+    value = Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->k()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,23 +57,23 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/photos/p$a;)Lcom/vk/core/util/q0;
+.method public final a(Lcom/vk/api/photos/PhotosGetNewTags$a;)Lcom/vk/core/util/Optional;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/api/photos/p$a;",
+            "Lcom/vk/api/photos/PhotosGetNewTags$a;",
             ")",
-            "Lcom/vk/core/util/q0<",
-            "Lcom/vk/api/photos/p$a;",
+            "Lcom/vk/core/util/Optional<",
+            "Lcom/vk/api/photos/PhotosGetNewTags$a;",
             ">;"
         }
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/q0;->b:Lcom/vk/core/util/q0$a;
+    sget-object v0, Lcom/vk/core/util/Optional;->b:Lcom/vk/core/util/Optional$a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/util/q0$a;->a(Ljava/lang/Object;)Lcom/vk/core/util/q0;
+    invoke-virtual {v0, p1}, Lcom/vk/core/util/Optional$a;->a(Ljava/lang/Object;)Lcom/vk/core/util/Optional;
 
     move-result-object p1
 
@@ -84,9 +84,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/photos/p$a;
+    check-cast p1, Lcom/vk/api/photos/PhotosGetNewTags$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$e;->a(Lcom/vk/api/photos/p$a;)Lcom/vk/core/util/q0;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$e;->a(Lcom/vk/api/photos/PhotosGetNewTags$a;)Lcom/vk/core/util/Optional;
 
     move-result-object p1
 

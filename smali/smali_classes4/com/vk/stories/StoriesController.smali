@@ -24,7 +24,7 @@
 # static fields
 .field private static a:Lcom/vk/dto/stories/model/GetStoriesResponse;
 
-.field private static final b:Lb/h/g/l/d;
+.field private static final b:Lb/h/g/l/NotificationCenter;
 
 .field private static final c:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
@@ -88,7 +88,7 @@
 
 .field private static final i:Lcom/vk/stories/StoriesController$h;
 
-.field private static final j:Lcom/vk/stories/q0;
+.field private static final j:Lcom/vk/stories/StoriesAdsController;
 
 .field private static final k:Lcom/vk/stories/StoriesPixelsController;
 
@@ -100,11 +100,11 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lb/h/g/l/d;
+    new-instance v0, Lb/h/g/l/NotificationCenter;
 
-    invoke-direct {v0}, Lb/h/g/l/d;-><init>()V
+    invoke-direct {v0}, Lb/h/g/l/NotificationCenter;-><init>()V
 
-    sput-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sput-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     .line 2
     new-instance v0, Ljava/util/HashSet;
@@ -156,11 +156,11 @@
     sput-object v0, Lcom/vk/stories/StoriesController;->i:Lcom/vk/stories/StoriesController$h;
 
     .line 9
-    new-instance v0, Lcom/vk/stories/q0;
+    new-instance v0, Lcom/vk/stories/StoriesAdsController;
 
-    invoke-direct {v0}, Lcom/vk/stories/q0;-><init>()V
+    invoke-direct {v0}, Lcom/vk/stories/StoriesAdsController;-><init>()V
 
-    sput-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/q0;
+    sput-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/StoriesAdsController;
 
     .line 10
     new-instance v0, Lcom/vk/stories/StoriesPixelsController;
@@ -198,9 +198,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/stickers/bridge/g;->c:Lcom/vk/stickers/bridge/g;
+    sget-object v0, Lcom/vk/stickers/bridge/RLottieWrapper;->c:Lcom/vk/stickers/bridge/RLottieWrapper;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/bridge/g;->b()Z
+    invoke-virtual {v0}, Lcom/vk/stickers/bridge/RLottieWrapper;->b()Z
 
     move-result v0
 
@@ -241,27 +241,27 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/api/stories/l;
+    new-instance v0, Lcom/vk/api/stories/StoriesGet;
 
-    invoke-static {}, Lcom/vtosters/lite/utils/b;->a()Lb/h/c/b/a;
+    invoke-static {}, Lcom/vtosters/lite/utils/AdsUtil;->a()Lb/h/c/b/AdsParams;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v2, v1}, Lcom/vk/api/stories/l;-><init>(ZLb/h/c/b/a;)V
+    invoke-direct {v0, v2, v1}, Lcom/vk/api/stories/StoriesGet;-><init>(ZLb/h/c/b/AdsParams;)V
 
     new-instance v1, Lcom/vk/stories/StoriesController$e;
 
     invoke-direct {v1}, Lcom/vk/stories/StoriesController$e;-><init>()V
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, v1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -292,11 +292,11 @@
     return v0
 .end method
 
-.method public static H()Lb/h/g/l/d;
+.method public static H()Lb/h/g/l/NotificationCenter;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     return-object v0
 .end method
@@ -305,9 +305,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/q0;
+    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/StoriesAdsController;
 
-    invoke-virtual {v0}, Lcom/vk/stories/q0;->b()V
+    invoke-virtual {v0}, Lcom/vk/stories/StoriesAdsController;->b()V
 
     return-void
 .end method
@@ -338,9 +338,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/q0;
+    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/StoriesAdsController;
 
-    invoke-virtual {v0}, Lcom/vk/stories/q0;->c()V
+    invoke-virtual {v0}, Lcom/vk/stories/StoriesAdsController;->c()V
 
     return-void
 .end method
@@ -404,11 +404,11 @@
     return v0
 .end method
 
-.method static synthetic a()Lb/h/g/l/d;
+.method static synthetic a()Lb/h/g/l/NotificationCenter;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     return-object v0
 .end method
@@ -428,17 +428,17 @@
     .end annotation
 
     .line 254
-    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/q0;
+    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/StoriesAdsController;
 
-    invoke-virtual {v0, p0}, Lcom/vk/stories/q0;->a(Lcom/vk/stories/StoriesController$SourceType;)Z
+    invoke-virtual {v0, p0}, Lcom/vk/stories/StoriesAdsController;->a(Lcom/vk/stories/StoriesController$SourceType;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    sget-object p0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/q0;
+    sget-object p0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/StoriesAdsController;
 
-    invoke-virtual {p0}, Lcom/vk/stories/q0;->a()Lcom/vk/dto/stories/model/StoriesContainer;
+    invoke-virtual {p0}, Lcom/vk/stories/StoriesAdsController;->a()Lcom/vk/dto/stories/model/StoriesContainer;
 
     move-result-object p0
 
@@ -522,7 +522,7 @@
 
     .line 143
     :goto_0
-    invoke-static {p0}, Lcom/vk/core/util/o;->c(Ljava/util/Collection;)Z
+    invoke-static {p0}, Lcom/vk/core/util/CollectionUtils;->c(Ljava/util/Collection;)Z
 
     move-result v0
 
@@ -554,28 +554,28 @@
 
     .line 146
     :cond_1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v0, p1}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
     .line 147
-    sget-object p1, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
+    sget-object p1, Lcom/vtosters/lite/bridges/VkAuthBridge;->a:Lcom/vtosters/lite/bridges/VkAuthBridge;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/vk/bridges/f;->h()Lcom/vk/bridges/Account;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/bridges/h;->a(Lcom/vk/bridges/Account;)Lcom/vk/dto/user/UserProfile;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->h()Lcom/vk/bridges/Account;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/bridges/VkAuthBridge;->a(Lcom/vk/bridges/Account;)Lcom/vk/dto/user/UserProfile;
 
     move-result-object p1
 
@@ -813,11 +813,11 @@
     .line 89
     new-instance p2, Lcom/vk/dto/stories/model/StoryOwner;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->e1()Lcom/vk/dto/user/UserProfile;
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->e1()Lcom/vk/dto/user/UserProfile;
 
     move-result-object v1
 
@@ -934,13 +934,13 @@
 
     if-eqz v6, :cond_8
 
-    invoke-static {v1}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v6
 
     if-nez v6, :cond_7
 
-    invoke-static {v1}, Lcom/vk/dto/stories/d/a;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v6
 
@@ -986,17 +986,17 @@
 
     .line 101
     :cond_a
-    sget-object p3, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
+    sget-object p3, Lcom/vtosters/lite/bridges/VkAuthBridge;->a:Lcom/vtosters/lite/bridges/VkAuthBridge;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/vk/bridges/f;->h()Lcom/vk/bridges/Account;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-virtual {p3, v1}, Lcom/vtosters/lite/bridges/h;->a(Lcom/vk/bridges/Account;)Lcom/vk/dto/user/UserProfile;
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->h()Lcom/vk/bridges/Account;
+
+    move-result-object v1
+
+    invoke-virtual {p3, v1}, Lcom/vtosters/lite/bridges/VkAuthBridge;->a(Lcom/vk/bridges/Account;)Lcom/vk/dto/user/UserProfile;
 
     move-result-object p3
 
@@ -1077,17 +1077,17 @@
 
     .line 110
     :cond_e
-    sget-object v1, Lcom/vtosters/lite/bridges/h;->a:Lcom/vtosters/lite/bridges/h;
+    sget-object v1, Lcom/vtosters/lite/bridges/VkAuthBridge;->a:Lcom/vtosters/lite/bridges/VkAuthBridge;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Lcom/vk/bridges/f;->h()Lcom/vk/bridges/Account;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v4
 
-    invoke-virtual {v1, v4}, Lcom/vtosters/lite/bridges/h;->a(Lcom/vk/bridges/Account;)Lcom/vk/dto/user/UserProfile;
+    invoke-interface {v4}, Lcom/vk/bridges/AuthBridge3;->h()Lcom/vk/bridges/Account;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Lcom/vtosters/lite/bridges/VkAuthBridge;->a(Lcom/vk/bridges/Account;)Lcom/vk/dto/user/UserProfile;
 
     move-result-object v1
 
@@ -1174,13 +1174,13 @@
 
     if-ne v6, v7, :cond_11
 
-    invoke-static {v4}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v4}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v6
 
     if-nez v6, :cond_11
 
-    invoke-static {v4}, Lcom/vk/dto/stories/d/a;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v4}, Lcom/vk/dto/stories/d/StoriesContainerExt;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v6
 
@@ -1323,13 +1323,13 @@
     check-cast p3, Lcom/vk/dto/stories/model/StoriesContainer;
 
     .line 134
-    invoke-static {p3}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p3}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v0
 
     if-nez v0, :cond_17
 
-    invoke-static {p3}, Lcom/vk/dto/stories/d/a;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p3}, Lcom/vk/dto/stories/d/StoriesContainerExt;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v0
 
@@ -1399,19 +1399,19 @@
     return-object p0
 .end method
 
-.method public static a(IIIILandroid/content/Context;Lcom/vk/api/base/a;)V
+.method public static a(IIIILandroid/content/Context;Lcom/vk/api/base/ApiCallback;)V
     .locals 7
 
     .line 70
-    new-instance v0, Lcom/vk/api/stories/v;
+    new-instance v0, Lcom/vk/api/stories/StoriesHideAllReplies;
 
-    invoke-direct {v0, p0}, Lcom/vk/api/stories/v;-><init>(I)V
+    invoke-direct {v0, p0}, Lcom/vk/api/stories/StoriesHideAllReplies;-><init>(I)V
 
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object v0
 
-    invoke-static {v0, p4}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;)Lc/a/m;
+    invoke-static {v0, p4}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;)Lio/reactivex/Observable;
 
     move-result-object p4
 
@@ -1429,19 +1429,19 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/stories/i;-><init>(IIIILcom/vk/api/base/a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/stories/i;-><init>(IIIILcom/vk/api/base/ApiCallback;)V
 
     new-instance p0, Lcom/vk/stories/j;
 
-    invoke-direct {p0, p5}, Lcom/vk/stories/j;-><init>(Lcom/vk/api/base/a;)V
+    invoke-direct {p0, p5}, Lcom/vk/stories/j;-><init>(Lcom/vk/api/base/ApiCallback;)V
 
     .line 71
-    invoke-virtual {p4, v6, p0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p4, v6, p0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method static synthetic a(IIIILcom/vk/api/base/a;Ljava/lang/Integer;)V
+.method static synthetic a(IIIILcom/vk/api/base/ApiCallback;Ljava/lang/Integer;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1450,7 +1450,7 @@
     .end annotation
 
     .line 72
-    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     new-instance v1, Lcom/vk/stories/StoriesController$g;
 
@@ -1458,12 +1458,12 @@
 
     const/16 p0, 0x6f
 
-    invoke-virtual {v0, p0, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, p0, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     if-eqz p4, :cond_0
 
     .line 73
-    invoke-interface {p4, p5}, Lcom/vk/api/base/a;->a(Ljava/lang/Object;)V
+    invoke-interface {p4, p5}, Lcom/vk/api/base/ApiCallback;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -1491,47 +1491,47 @@
     invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$j;->a(F)V
 
     .line 182
-    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 p2, 0x67
 
-    invoke-virtual {p1, p2, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, p2, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static a(ILandroid/content/Context;Lcom/vk/api/base/a;)V
+.method public static a(ILandroid/content/Context;Lcom/vk/api/base/ApiCallback;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Landroid/content/Context;",
-            "Lcom/vk/api/base/a<",
+            "Lcom/vk/api/base/ApiCallback<",
             "Lcom/vk/dto/stories/model/GetStoriesResponse;",
             ">;)V"
         }
     .end annotation
 
     .line 75
-    new-instance v0, Lcom/vk/api/stories/i;
+    new-instance v0, Lcom/vk/api/stories/StoriesDeleteBan;
 
-    invoke-direct {v0, p0}, Lcom/vk/api/stories/i;-><init>(I)V
+    invoke-direct {v0, p0}, Lcom/vk/api/stories/StoriesDeleteBan;-><init>(I)V
 
     new-instance p0, Lcom/vk/stories/StoriesController$b;
 
-    invoke-direct {p0, p2}, Lcom/vk/stories/StoriesController$b;-><init>(Lcom/vk/api/base/a;)V
+    invoke-direct {p0, p2}, Lcom/vk/stories/StoriesController$b;-><init>(Lcom/vk/api/base/ApiCallback;)V
 
     .line 76
-    invoke-virtual {v0, p0}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, p0}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p0
 
     .line 77
-    invoke-virtual {p0, p1}, Lcom/vk/api/base/b;->a(Landroid/content/Context;)Lcom/vk/api/base/b;
+    invoke-virtual {p0, p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     .line 78
-    invoke-virtual {p0}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p0}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1550,11 +1550,11 @@
     invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$j;->a(Ljava/io/File;)V
 
     .line 185
-    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v0, 0x69
 
-    invoke-virtual {p1, v0, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -1592,18 +1592,18 @@
     invoke-virtual {v0, p0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
     .line 170
-    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v1, 0x6e
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(I)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(I)V
 
     .line 171
-    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v1, 0x66
 
-    invoke-virtual {v0, v1, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 172
     invoke-static {p0}, Lcom/vk/stories/StoriesController$j;->a(Lcom/vk/stories/StoriesController$j;)Lcom/vk/dto/stories/model/CommonUploadParams;
@@ -1617,9 +1617,9 @@
     if-eqz v0, :cond_0
 
     .line 173
-    sget-object v0, Lcom/vk/sharing/q/a;->a:Lcom/vk/sharing/q/a;
+    sget-object v0, Lcom/vk/sharing/q/StorySharingHelper;->a:Lcom/vk/sharing/q/StorySharingHelper;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/q/a;->b()V
+    invoke-virtual {v0}, Lcom/vk/sharing/q/StorySharingHelper;->b()V
 
     .line 174
     :cond_0
@@ -1657,11 +1657,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/g/m/d;->e(Ljava/io/File;)V
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->e(Ljava/io/File;)V
 
     .line 178
     :cond_2
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
@@ -1671,7 +1671,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 179
     invoke-static {p0, p1}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/stories/StoriesController$j;Lcom/vk/dto/stories/model/StoryEntry;)V
@@ -1680,7 +1680,7 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;ILjava/lang/String;Lcom/vk/api/base/a;)V
+.method public static a(Landroid/content/Context;ILjava/lang/String;Lcom/vk/api/base/ApiCallback;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1688,42 +1688,42 @@
             "Landroid/content/Context;",
             "I",
             "Ljava/lang/String;",
-            "Lcom/vk/api/base/a<",
+            "Lcom/vk/api/base/ApiCallback<",
             "Lcom/vk/dto/stories/model/GetStoriesResponse;",
             ">;)V"
         }
     .end annotation
 
     .line 61
-    new-instance v0, Lcom/vk/api/stories/c;
+    new-instance v0, Lcom/vk/api/stories/StoriesAddBan;
 
-    invoke-direct {v0, p1}, Lcom/vk/api/stories/c;-><init>(I)V
+    invoke-direct {v0, p1}, Lcom/vk/api/stories/StoriesAddBan;-><init>(I)V
 
     .line 62
-    invoke-virtual {v0, p2}, Lcom/vk/api/stories/c;->d(Ljava/lang/String;)Lcom/vk/api/stories/c;
+    invoke-virtual {v0, p2}, Lcom/vk/api/stories/StoriesAddBan;->d(Ljava/lang/String;)Lcom/vk/api/stories/StoriesAddBan;
 
     new-instance p1, Lcom/vk/stories/StoriesController$a;
 
-    invoke-direct {p1, p3}, Lcom/vk/stories/StoriesController$a;-><init>(Lcom/vk/api/base/a;)V
+    invoke-direct {p1, p3}, Lcom/vk/stories/StoriesController$a;-><init>(Lcom/vk/api/base/ApiCallback;)V
 
     .line 63
-    invoke-virtual {v0, p1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, p1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
     if-eqz p0, :cond_0
 
     .line 64
-    invoke-virtual {p1, p0}, Lcom/vk/api/base/b;->a(Landroid/content/Context;)Lcom/vk/api/base/b;
+    invoke-virtual {p1, p0}, Lcom/vk/api/base/ApiCallbackDisposable;->a(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     .line 65
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/api/base/a;Ljava/lang/Throwable;)V
+.method static synthetic a(Lcom/vk/api/base/ApiCallback;Ljava/lang/Throwable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1736,7 +1736,7 @@
     const/4 p1, 0x0
 
     .line 74
-    invoke-interface {p0, p1}, Lcom/vk/api/base/a;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-interface {p0, p1}, Lcom/vk/api/base/ApiCallback;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     :cond_0
     return-void
@@ -1899,9 +1899,9 @@
     .end param
 
     .line 255
-    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/q0;
+    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/StoriesAdsController;
 
-    invoke-virtual {v0, p0}, Lcom/vk/stories/q0;->a(Lcom/vk/dto/stories/model/StoriesAds;)V
+    invoke-virtual {v0, p0}, Lcom/vk/stories/StoriesAdsController;->a(Lcom/vk/dto/stories/model/StoriesAds;)V
 
     .line 256
     sget-object p0, Lcom/vk/stories/StoriesController;->c:Ljava/util/HashSet;
@@ -1946,7 +1946,7 @@
     move-result-object p0
 
     .line 44
-    new-instance v8, Lcom/vk/api/stories/y;
+    new-instance v8, Lcom/vk/api/stories/StoriesMarkAsSeen;
 
     iget v1, p1, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
@@ -1966,10 +1966,10 @@
 
     move-object v0, v8
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/api/stories/y;-><init>(IJZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/api/stories/StoriesMarkAsSeen;-><init>(IJZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 45
-    invoke-virtual {v8}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v8}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1980,7 +1980,7 @@
     sget-object p0, Lcom/vk/stories/o;->a:Lcom/vk/stories/o;
 
     .line 46
-    invoke-virtual {p1, p2, p0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, p0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_1
     :goto_0
@@ -2093,12 +2093,12 @@
     if-eqz v3, :cond_7
 
     .line 14
-    new-instance v0, Lcom/vk/api/stories/b;
+    new-instance v0, Lcom/vk/api/stories/PublishStoryTrackSeen;
 
-    invoke-direct {v0}, Lcom/vk/api/stories/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/stories/PublishStoryTrackSeen;-><init>()V
 
     .line 15
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -2111,7 +2111,7 @@
     invoke-direct {v3, v2}, Lcom/vk/stories/n;-><init>(Ljava/lang/String;)V
 
     .line 16
-    invoke-virtual {v0, v1, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 
@@ -2164,7 +2164,7 @@
     iput-boolean v3, v0, Lcom/vk/dto/stories/model/StoryEntry;->V:Z
 
     .line 23
-    sget-object v3, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v3, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v4, 0x73
 
@@ -2172,14 +2172,14 @@
 
     move-result-object v5
 
-    invoke-virtual {v3, v4, v5}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v3, v4, v5}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 24
     :cond_9
     invoke-static/range {p0 .. p1}, Lcom/vk/narratives/NarrativeController;->a(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/dto/stories/model/StoryEntry;)V
 
     .line 25
-    new-instance v3, Lcom/vk/api/stories/y;
+    new-instance v3, Lcom/vk/api/stories/StoriesMarkAsSeen;
 
     iget v7, v0, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
@@ -2214,10 +2214,10 @@
     :goto_2
     move-object v6, v3
 
-    invoke-direct/range {v6 .. v14}, Lcom/vk/api/stories/y;-><init>(IJZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v6 .. v14}, Lcom/vk/api/stories/StoriesMarkAsSeen;-><init>(IJZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 27
-    invoke-virtual {v3}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v3}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -2230,7 +2230,7 @@
     invoke-direct {v4, v2, v0}, Lcom/vk/stories/b;-><init>(Ljava/lang/String;Lcom/vk/dto/stories/model/StoryEntry;)V
 
     .line 28
-    invoke-virtual {v1, v3, v4}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v3, v4}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_b
     :goto_3
@@ -2250,17 +2250,17 @@
     move-result-object v0
 
     .line 268
-    invoke-static {p0}, Lcom/vk/dto/stories/d/a;->a(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->a(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v1
 
     .line 269
-    invoke-static {p0}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v2
 
     .line 270
-    invoke-static {p0}, Lcom/vk/dto/stories/d/a;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result p0
 
@@ -2313,7 +2313,7 @@
     const-string v0, "stories_preview"
 
     .line 274
-    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v0
 
@@ -2322,7 +2322,7 @@
     const-string v2, "view"
 
     .line 275
-    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 276
     invoke-static {p1}, Lcom/vk/stories/StoriesController$SourceType;->a(Lcom/vk/stories/StoriesController$SourceType;)Ljava/lang/String;
@@ -2331,18 +2331,18 @@
 
     const-string v1, "source"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 277
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->a()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->a()Lcom/vtosters/lite/data/Analytics$l;
 
     const-string p1, "story_ids"
 
     .line 278
-    invoke-virtual {v0, p1, p0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, p1, p0}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 279
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     :cond_1
     :goto_0
@@ -2417,18 +2417,18 @@
     invoke-virtual {v0, p0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
     .line 192
-    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v1, 0x6e
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(I)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(I)V
 
     .line 193
-    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v1, 0x6d
 
-    invoke-virtual {v0, v1, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 194
     invoke-static {p0}, Lcom/vk/stories/StoriesController;->b(Lcom/vk/stories/StoriesController$j;)V
@@ -2442,11 +2442,11 @@
     return-void
 .end method
 
-.method public static a(Lcom/vk/dto/stories/model/StoryEntry;Landroid/content/Context;Lcom/vk/api/base/a;)V
+.method public static a(Lcom/vk/dto/stories/model/StoryEntry;Landroid/content/Context;Lcom/vk/api/base/ApiCallback;)V
     .locals 4
 
     .line 66
-    new-instance v0, Lcom/vk/api/stories/w;
+    new-instance v0, Lcom/vk/api/stories/StoriesHideReply;
 
     iget v1, p0, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
@@ -2454,37 +2454,37 @@
 
     iget-object v3, p0, Lcom/vk/dto/stories/model/StoryEntry;->G:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/api/stories/w;-><init>(IILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/api/stories/StoriesHideReply;-><init>(IILjava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;)Lc/a/m;
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     new-instance v0, Lcom/vk/stories/m;
 
-    invoke-direct {v0, p0, p2}, Lcom/vk/stories/m;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/api/base/a;)V
+    invoke-direct {v0, p0, p2}, Lcom/vk/stories/m;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/api/base/ApiCallback;)V
 
     new-instance p0, Lcom/vk/stories/p;
 
-    invoke-direct {p0, p2}, Lcom/vk/stories/p;-><init>(Lcom/vk/api/base/a;)V
+    invoke-direct {p0, p2}, Lcom/vk/stories/p;-><init>(Lcom/vk/api/base/ApiCallback;)V
 
     .line 67
-    invoke-virtual {p1, v0, p0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, p0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public static a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/api/base/a;)V
+.method public static a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/api/base/ApiCallback;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/StoryEntry;",
-            "Lcom/vk/api/base/a<",
+            "Lcom/vk/api/base/ApiCallback<",
             "Lcom/vk/dto/stories/model/GetStoriesResponse;",
             ">;)V"
         }
@@ -2496,7 +2496,7 @@
 
     .line 79
     :cond_0
-    new-instance v0, Lcom/vk/api/stories/h;
+    new-instance v0, Lcom/vk/api/stories/StoriesDelete;
 
     iget v1, p0, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
@@ -2504,24 +2504,24 @@
 
     int-to-long v2, v2
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/api/stories/h;-><init>(IJ)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/api/stories/StoriesDelete;-><init>(IJ)V
 
     new-instance v1, Lcom/vk/stories/StoriesController$d;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/stories/StoriesController$d;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/api/base/a;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/stories/StoriesController$d;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/api/base/ApiCallback;)V
 
     .line 80
-    invoke-virtual {v0, v1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, v1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p0
 
     .line 81
-    invoke-virtual {p0}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p0}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/api/base/a;Ljava/lang/Integer;)V
+.method static synthetic a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/api/base/ApiCallback;Ljava/lang/Integer;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -2530,16 +2530,16 @@
     .end annotation
 
     .line 68
-    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v1, 0x6c
 
-    invoke-virtual {v0, v1, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     if-eqz p1, :cond_0
 
     .line 69
-    invoke-interface {p1, p2}, Lcom/vk/api/base/a;->a(Ljava/lang/Object;)V
+    invoke-interface {p1, p2}, Lcom/vk/api/base/ApiCallback;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -2549,9 +2549,9 @@
     .locals 1
 
     .line 245
-    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/q0;
+    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/StoriesAdsController;
 
-    invoke-virtual {v0, p0, p1}, Lcom/vk/stories/q0;->b(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
+    invoke-virtual {v0, p0, p1}, Lcom/vk/stories/StoriesAdsController;->b(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
     .line 246
     sget-object p0, Lcom/vk/stories/StoriesController$f;->a:[I
@@ -2658,11 +2658,11 @@
     .end annotation
 
     .line 59
-    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v0, 0x6a
 
-    invoke-virtual {p1, v0, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -2689,7 +2689,7 @@
     invoke-virtual {p2, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
     .line 35
-    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -2697,7 +2697,7 @@
 
     const/16 p2, 0x64
 
-    invoke-virtual {p1, p2, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, p2, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -2734,14 +2734,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
 
     .line 262
     invoke-static {p0}, Lcom/vk/stories/StoriesController$j;->b(Lcom/vk/stories/StoriesController$j;)Ljava/io/File;
 
     move-result-object p0
 
-    invoke-static {p0}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
+    invoke-static {p0}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
 
     return-void
 .end method
@@ -2772,11 +2772,11 @@
     if-eqz p0, :cond_0
 
     .line 287
-    invoke-static {}, Lcom/vk/webapp/k;->a()Lb/h/v/d;
+    invoke-static {}, Lcom/vk/webapp/VkUiRxEvent;->a()Lb/h/v/RxBus;
 
     move-result-object v1
 
-    new-instance v2, Lcom/vk/webapp/m;
+    new-instance v2, Lcom/vk/webapp/VkUiRxEvent1;
 
     .line 288
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -2787,10 +2787,10 @@
 
     iget p1, p1, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
-    invoke-direct {v2, v0, p0, v3, p1}, Lcom/vk/webapp/m;-><init>(ILjava/lang/String;II)V
+    invoke-direct {v2, v0, p0, v3, p1}, Lcom/vk/webapp/VkUiRxEvent1;-><init>(ILjava/lang/String;II)V
 
     .line 289
-    invoke-virtual {v1, v2}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -2826,21 +2826,21 @@
     if-eqz p0, :cond_0
 
     .line 292
-    invoke-static {}, Lcom/vk/webapp/k;->a()Lb/h/v/d;
+    invoke-static {}, Lcom/vk/webapp/VkUiRxEvent;->a()Lb/h/v/RxBus;
 
     move-result-object v1
 
-    new-instance v2, Lcom/vk/webapp/l;
+    new-instance v2, Lcom/vk/webapp/VkUiRxEvent2;
 
     .line 293
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    invoke-direct {v2, v0, p0, p1}, Lcom/vk/webapp/l;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, p0, p1}, Lcom/vk/webapp/VkUiRxEvent2;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     .line 294
-    invoke-virtual {v1, v2}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -2881,23 +2881,23 @@
     move-result v2
 
     .line 225
-    new-instance v3, Lcom/vtosters/lite/upload/l/q;
+    new-instance v3, Lcom/vtosters/lite/upload/l/VideoStoryUploadTask;
 
-    invoke-direct {v3, v1, v2, v0}, Lcom/vtosters/lite/upload/l/q;-><init>(Ljava/lang/String;ILcom/vk/stories/StoriesController$i;)V
+    invoke-direct {v3, v1, v2, v0}, Lcom/vtosters/lite/upload/l/VideoStoryUploadTask;-><init>(Ljava/lang/String;ILcom/vk/stories/StoriesController$i;)V
 
     .line 226
-    new-instance v0, Lcom/vtosters/lite/fragments/t2/c/b$h;
+    new-instance v0, Lcom/vtosters/lite/fragments/t2/c/DialogsFragment$h;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/fragments/t2/c/b$h;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/t2/c/DialogsFragment$h;-><init>()V
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/t2/c/b$h;->b(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/t2/c/DialogsFragment$h;->b(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
     .line 227
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const/4 v2, 0x0
 
@@ -2910,7 +2910,7 @@
     .line 228
     new-instance v1, Lcom/vtosters/lite/upload/UploadNotification$a;
 
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v4, 0x7f120f5a
 
@@ -2922,17 +2922,17 @@
 
     invoke-direct {v1, v2, v4, v0}, Lcom/vtosters/lite/upload/UploadNotification$a;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
 
-    invoke-static {v3, v1}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
+    invoke-static {v3, v1}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/UploadTask;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
 
     .line 229
-    invoke-static {v3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
+    invoke-static {v3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/UploadTask;)I
 
     .line 230
     invoke-virtual {p0}, Lcom/vk/stories/util/CameraVideoEncoder$Parameters;->H1()Ljava/io/File;
 
     move-result-object v0
 
-    invoke-virtual {v3}, Lcom/vtosters/lite/upload/j;->m()I
+    invoke-virtual {v3}, Lcom/vtosters/lite/upload/UploadTask;->m()I
 
     move-result v1
 
@@ -2946,18 +2946,18 @@
     invoke-virtual {p1, p0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     .line 232
-    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 p2, 0x6e
 
-    invoke-virtual {p1, p2}, Lb/h/g/l/d;->a(I)V
+    invoke-virtual {p1, p2}, Lb/h/g/l/NotificationCenter;->a(I)V
 
     .line 233
-    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 p2, 0x6b
 
-    invoke-virtual {p1, p2, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, p2, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 234
     invoke-static {p0}, Lcom/vk/stories/StoriesController;->b(Lcom/vk/stories/StoriesController$j;)V
@@ -2965,20 +2965,20 @@
     return-void
 .end method
 
-.method public static a(Lcom/vk/stories/view/e1;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
+.method public static a(Lcom/vk/stories/view/BaseStoryView;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
     .locals 1
 
     if-eqz p1, :cond_0
 
     .line 235
-    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/q0;
+    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/StoriesAdsController;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/stories/q0;->a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/stories/StoriesAdsController;->a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
     if-eqz p0, :cond_0
 
     .line 236
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->E()V
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->E()V
 
     .line 237
     :cond_0
@@ -3089,18 +3089,18 @@
     move-result v1
 
     .line 212
-    new-instance v2, Lcom/vtosters/lite/fragments/t2/c/b$h;
+    new-instance v2, Lcom/vtosters/lite/fragments/t2/c/DialogsFragment$h;
 
-    invoke-direct {v2}, Lcom/vtosters/lite/fragments/t2/c/b$h;-><init>()V
+    invoke-direct {v2}, Lcom/vtosters/lite/fragments/t2/c/DialogsFragment$h;-><init>()V
 
-    sget-object v3, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v3, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-virtual {v2, v3}, Lcom/vtosters/lite/fragments/t2/c/b$h;->b(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v2, v3}, Lcom/vtosters/lite/fragments/t2/c/DialogsFragment$h;->b(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v2
 
     .line 213
-    sget-object v3, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v3, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const/4 v4, 0x0
 
@@ -3111,18 +3111,18 @@
     move-result-object v2
 
     .line 214
-    new-instance v3, Lcom/vtosters/lite/upload/l/l;
+    new-instance v3, Lcom/vtosters/lite/upload/l/PhotoStoryUploadTask;
 
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-direct {v3, v4, v1, v0}, Lcom/vtosters/lite/upload/l/l;-><init>(Ljava/lang/String;ILcom/vk/stories/StoriesController$i;)V
+    invoke-direct {v3, v4, v1, v0}, Lcom/vtosters/lite/upload/l/PhotoStoryUploadTask;-><init>(Ljava/lang/String;ILcom/vk/stories/StoriesController$i;)V
 
     .line 215
     new-instance v0, Lcom/vtosters/lite/upload/UploadNotification$a;
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v4, 0x7f120f5a
 
@@ -3134,13 +3134,13 @@
 
     invoke-direct {v0, v1, v4, v2}, Lcom/vtosters/lite/upload/UploadNotification$a;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
 
-    invoke-static {v3, v0}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
+    invoke-static {v3, v0}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/UploadTask;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
 
     .line 216
-    invoke-static {v3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
+    invoke-static {v3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/UploadTask;)I
 
     .line 217
-    invoke-virtual {v3}, Lcom/vtosters/lite/upload/j;->m()I
+    invoke-virtual {v3}, Lcom/vtosters/lite/upload/UploadTask;->m()I
 
     move-result v0
 
@@ -3154,18 +3154,18 @@
     invoke-virtual {p1, p0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     .line 219
-    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 p2, 0x6e
 
-    invoke-virtual {p1, p2}, Lb/h/g/l/d;->a(I)V
+    invoke-virtual {p1, p2}, Lb/h/g/l/NotificationCenter;->a(I)V
 
     .line 220
-    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 p2, 0x6b
 
-    invoke-virtual {p1, p2, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, p2, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 221
     invoke-static {p0}, Lcom/vk/stories/StoriesController;->b(Lcom/vk/stories/StoriesController$j;)V
@@ -3228,7 +3228,7 @@
     if-eqz v0, :cond_0
 
     .line 38
-    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v1, 0x76
 
@@ -3236,7 +3236,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 39
     check-cast p2, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;
@@ -3358,13 +3358,13 @@
 
     if-eqz v3, :cond_0
 
-    invoke-static {v2}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v2}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    invoke-static {v2}, Lcom/vk/dto/stories/d/a;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v2}, Lcom/vk/dto/stories/d/StoriesContainerExt;->d(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v3
 
@@ -3420,9 +3420,9 @@
 
     .line 50
     :cond_0
-    new-instance v1, Lcom/vk/im/engine/utils/collection/c;
+    new-instance v1, Lcom/vk/im/engine/utils/collection/IntArraySet;
 
-    invoke-direct {v1}, Lcom/vk/im/engine/utils/collection/c;-><init>()V
+    invoke-direct {v1}, Lcom/vk/im/engine/utils/collection/IntArraySet;-><init>()V
 
     const/4 v2, 0x0
 
@@ -3444,7 +3444,7 @@
     .line 53
     iget v3, v3, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
-    invoke-virtual {v1, v3}, Lcom/vk/im/engine/utils/collection/c;->add(I)V
+    invoke-virtual {v1, v3}, Lcom/vk/im/engine/utils/collection/IntArraySet;->add(I)V
 
     :cond_1
     add-int/lit8 v2, v2, 0x1
@@ -3453,7 +3453,7 @@
 
     .line 54
     :cond_2
-    invoke-virtual {v1}, Lcom/vk/im/engine/utils/collection/c;->isEmpty()Z
+    invoke-virtual {v1}, Lcom/vk/im/engine/utils/collection/IntArraySet;->isEmpty()Z
 
     move-result v0
 
@@ -3463,19 +3463,19 @@
 
     .line 55
     :cond_3
-    new-instance v0, Lcom/vk/api/stories/z;
+    new-instance v0, Lcom/vk/api/stories/StoriesMarkOwnersSeen;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/utils/collection/c;->toArray()[I
+    invoke-virtual {v1}, Lcom/vk/im/engine/utils/collection/IntArraySet;->toArray()[I
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/api/stories/z;-><init>([I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/stories/StoriesMarkOwnersSeen;-><init>([I)V
 
     .line 56
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->h()Lcom/vk/api/base/ApiRequest;
 
     .line 57
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -3486,7 +3486,7 @@
     sget-object p0, Lcom/vk/stories/c;->a:Lcom/vk/stories/c;
 
     .line 58
-    invoke-virtual {v0, v1, p0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -3500,11 +3500,11 @@
     .end annotation
 
     .line 47
-    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v0, 0x64
 
-    invoke-virtual {p1, v0, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -3667,7 +3667,7 @@
     check-cast v1, Lcom/vk/dto/stories/model/StoriesContainer;
 
     .line 11
-    invoke-static {v1}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v1
 
@@ -3790,7 +3790,7 @@
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/vk/api/base/a;Ljava/lang/Throwable;)V
+.method static synthetic b(Lcom/vk/api/base/ApiCallback;Ljava/lang/Throwable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3803,7 +3803,7 @@
     const/4 p1, 0x0
 
     .line 3
-    invoke-interface {p0, p1}, Lcom/vk/api/base/a;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-interface {p0, p1}, Lcom/vk/api/base/ApiCallback;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     :cond_0
     return-void
@@ -3820,7 +3820,7 @@
     if-eqz p0, :cond_0
 
     .line 7
-    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v1, 0x65
 
@@ -3832,7 +3832,7 @@
     move-result-object p0
 
     .line 9
-    invoke-virtual {v0, v1, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -3853,14 +3853,14 @@
     if-eqz p0, :cond_0
 
     .line 5
-    invoke-static {}, Lcom/vk/stories/StoriesController;->j()Lc/a/m;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->j()Lio/reactivex/Observable;
 
     move-result-object p0
 
     sget-object v0, Lcom/vk/stories/g;->a:Lcom/vk/stories/g;
 
     .line 6
-    invoke-virtual {p0, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p0, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -3896,9 +3896,9 @@
     .end annotation
 
     .line 21
-    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/q0;
+    sget-object v0, Lcom/vk/stories/StoriesController;->j:Lcom/vk/stories/StoriesAdsController;
 
-    invoke-virtual {v0}, Lcom/vk/stories/q0;->b()V
+    invoke-virtual {v0}, Lcom/vk/stories/StoriesAdsController;->b()V
 
     const/4 v0, 0x0
 
@@ -3943,7 +3943,7 @@
     if-eqz v0, :cond_3
 
     .line 26
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object p0
 
@@ -3955,7 +3955,7 @@
     move-result-object v0
 
     .line 28
-    invoke-virtual {p0, v1, v0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p0, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     :cond_3
     return-void
@@ -3970,11 +3970,11 @@
     .end annotation
 
     .line 1
-    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object p1, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v0, 0x64
 
-    invoke-virtual {p1, v0, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -4069,7 +4069,7 @@
     sput-object p0, Lcom/vk/stories/StoriesController;->a:Lcom/vk/dto/stories/model/GetStoriesResponse;
 
     .line 3
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     new-instance v1, Lcom/vk/dto/stories/model/GetStoriesResponse;
 
@@ -4077,7 +4077,7 @@
 
     const-string p0, "stories:cache"
 
-    invoke-virtual {v0, p0, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
+    invoke-virtual {v0, p0, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
     return-void
 .end method
@@ -4145,11 +4145,11 @@
     invoke-virtual {p0, v0}, Lcom/vk/stories/StoriesController$j;->a(Z)V
 
     .line 8
-    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v1, 0x68
 
-    invoke-virtual {v0, v1, p0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 9
     invoke-static {p0}, Lcom/vk/stories/StoriesController;->b(Lcom/vk/stories/StoriesController$j;)V
@@ -4157,7 +4157,7 @@
     const v0, 0x7f120ebe
 
     .line 10
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     const/4 v0, 0x0
 
@@ -4177,28 +4177,28 @@
 
     .line 2
     :cond_0
-    new-instance v0, Lcom/vk/api/stories/a0;
+    new-instance v0, Lcom/vk/api/stories/StoriesMarkQuestionsSeen;
 
     iget v1, p0, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
     iget p0, p0, Lcom/vk/dto/stories/model/StoryEntry;->b:I
 
-    invoke-direct {v0, v1, p0}, Lcom/vk/api/stories/a0;-><init>(II)V
+    invoke-direct {v0, v1, p0}, Lcom/vk/api/stories/StoriesMarkQuestionsSeen;-><init>(II)V
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object p0
 
     sget-object v0, Lcom/vk/stories/k;->a:Lcom/vk/stories/k;
 
     .line 4
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
 
     .line 5
-    invoke-virtual {p0, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p0, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -4212,16 +4212,16 @@
 
     .line 1
     :cond_0
-    new-instance v0, Lcom/vk/api/stories/d0;
+    new-instance v0, Lcom/vk/api/stories/StoriesSeenReplies;
 
     iget v1, p0, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
     iget v2, p0, Lcom/vk/dto/stories/model/StoryEntry;->b:I
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/api/stories/d0;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/api/stories/StoriesSeenReplies;-><init>(II)V
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -4230,12 +4230,12 @@
     invoke-direct {v1, p0}, Lcom/vk/stories/d;-><init>(Lcom/vk/dto/stories/model/StoryEntry;)V
 
     .line 3
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object p0
 
     .line 4
-    invoke-virtual {v0, v1, p0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -4277,11 +4277,11 @@
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
     .line 5
-    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/d;
+    sget-object v0, Lcom/vk/stories/StoriesController;->b:Lb/h/g/l/NotificationCenter;
 
     const/16 v1, 0x6e
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(I)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(I)V
 
     const-string v0, "stories_default"
 
@@ -4291,7 +4291,7 @@
     invoke-static {v0, v1}, Lcom/vk/core/preference/Preference;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "stories:cache"
 
@@ -4299,7 +4299,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a([Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a([Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -4307,14 +4307,14 @@
     sput-object v0, Lcom/vk/stories/StoriesController;->a:Lcom/vk/dto/stories/model/GetStoriesResponse;
 
     .line 9
-    sget-object v0, Lcom/vk/stories/a1/d;->e:Lcom/vk/stories/a1/d;
+    sget-object v0, Lcom/vk/stories/a1/StoryGroups;->e:Lcom/vk/stories/a1/StoryGroups;
 
-    invoke-virtual {v0}, Lb/h/g/h/a;->a()V
+    invoke-virtual {v0}, Lb/h/g/h/MemoryPreloadableCache;->a()V
 
     .line 10
-    sget-object v0, Lcom/vk/stories/editor/background/e;->e:Lcom/vk/stories/editor/background/e;
+    sget-object v0, Lcom/vk/stories/editor/background/StoryBackgroundsCache;->e:Lcom/vk/stories/editor/background/StoryBackgroundsCache;
 
-    invoke-virtual {v0}, Lb/h/g/h/a;->a()V
+    invoke-virtual {v0}, Lb/h/g/h/MemoryPreloadableCache;->a()V
 
     return-void
 .end method
@@ -4542,25 +4542,25 @@
     return-object v0
 .end method
 
-.method public static j()Lc/a/m;
+.method public static j()Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/stories/model/GetStoriesResponse;",
             ">;"
         }
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "stories:cache"
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Z)Lc/a/m;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Z)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -4568,7 +4568,7 @@
 
     invoke-direct {v1}, Lcom/vk/stories/StoriesController$c;-><init>()V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -4579,11 +4579,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->x0()I
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->x0()I
 
     move-result v0
 
@@ -4631,11 +4631,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->y0()Z
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->y0()Z
 
     move-result v0
 
@@ -4740,7 +4740,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/media/camera/e;->w()Z
+    invoke-static {}, Lcom/vk/media/camera/CameraProcessRender;->w()Z
 
     move-result v0
 

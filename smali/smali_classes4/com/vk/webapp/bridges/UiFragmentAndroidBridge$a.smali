@@ -58,7 +58,7 @@
     const-string v2, "alert"
 
     .line 3
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -67,11 +67,11 @@
     .line 4
     iget-object v1, p0, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$a;->a:Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
-    invoke-static {v1}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;->a(Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;)Lcom/vk/webapp/o/c;
+    invoke-static {v1}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;->a(Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;)Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lcom/vk/webapp/o/c;->a(Lorg/json/JSONObject;)V
+    invoke-interface {v1, v0}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->a(Lorg/json/JSONObject;)V
 
     goto :goto_0
 
@@ -79,7 +79,7 @@
     const-string v2, "actionSheet"
 
     .line 5
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -88,11 +88,11 @@
     .line 6
     iget-object v1, p0, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$a;->a:Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
-    invoke-static {v1}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;->a(Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;)Lcom/vk/webapp/o/c;
+    invoke-static {v1}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;->a(Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;)Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lcom/vk/webapp/o/c;->b(Lorg/json/JSONObject;)V
+    invoke-interface {v1, v0}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->b(Lorg/json/JSONObject;)V
 
     :cond_1
     :goto_0

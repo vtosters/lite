@@ -3,12 +3,12 @@
 .source "BaseCommentsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/BaseCommentsFragment;->a(Lcom/vk/sharing/l;)V
+    value = Lcom/vk/wall/BaseCommentsFragment;->a(Lcom/vk/sharing/Picking;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $builder:Lcom/vk/sharing/l;
+.field final synthetic $builder:Lcom/vk/sharing/Picking;
 
 .field final synthetic this$0:Lcom/vk/wall/BaseCommentsFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/wall/BaseCommentsFragment;Lcom/vk/sharing/l;)V
+.method constructor <init>(Lcom/vk/wall/BaseCommentsFragment;Lcom/vk/sharing/Picking;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/wall/BaseCommentsFragment$showGroupPicker$lambda$1;->this$0:Lcom/vk/wall/BaseCommentsFragment;
 
-    iput-object p2, p0, Lcom/vk/wall/BaseCommentsFragment$showGroupPicker$lambda$1;->$builder:Lcom/vk/sharing/l;
+    iput-object p2, p0, Lcom/vk/wall/BaseCommentsFragment$showGroupPicker$lambda$1;->$builder:Lcom/vk/sharing/Picking;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/wall/BaseCommentsFragment$showGroupPicker$lambda$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -65,13 +65,13 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment$showGroupPicker$lambda$1;->$builder:Lcom/vk/sharing/l;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment$showGroupPicker$lambda$1;->$builder:Lcom/vk/sharing/Picking;
 
     iget-object v1, p0, Lcom/vk/wall/BaseCommentsFragment$showGroupPicker$lambda$1;->this$0:Lcom/vk/wall/BaseCommentsFragment;
 
     const/16 v2, 0x10eb
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/sharing/l;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/sharing/Picking;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

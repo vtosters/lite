@@ -3,7 +3,7 @@
 .source "DiscoverSearchFragment.kt"
 
 # interfaces
-.implements Lc/a/z/l;
+.implements Lio/reactivex/functions/Predicate;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/l<",
+        "Lio/reactivex/functions/Predicate<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 1
-    instance-of p1, p1, Lcom/vk/search/view/a$a;
+    instance-of p1, p1, Lcom/vk/search/view/GroupsSearchParamsView$a;
 
     return p1
 .end method

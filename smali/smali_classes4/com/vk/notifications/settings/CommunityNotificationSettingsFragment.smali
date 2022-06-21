@@ -1,5 +1,5 @@
 .class public final Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "CommunityNotificationSettingsFragment.kt"
 
 
@@ -21,7 +21,7 @@
 
 .field public H:Lcom/vk/lists/RecyclerPaginatedView;
 
-.field private final I:Lcom/vk/profile/adapter/a;
+.field private final I:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
 .field private J:Z
 
@@ -31,18 +31,18 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/profile/adapter/a;
+    new-instance v0, Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v1}, Lcom/vk/profile/adapter/a;-><init>(Lcom/vk/lists/o;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v1}, Lcom/vk/profile/adapter/InfoItemsAdapter;-><init>(Lcom/vk/lists/ListDataSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v0, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->I:Lcom/vk/profile/adapter/a;
+    iput-object v0, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->I:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     return-void
 .end method
@@ -51,17 +51,17 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lb/h/c/q/h;
+    new-instance v0, Lcom/vk/api/notifications/NotificationsGetGroupSettings;
 
     iget v1, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->F:I
 
-    invoke-direct {v0, v1}, Lb/h/c/q/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/notifications/NotificationsGetGroupSettings;-><init>(I)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
     invoke-direct {v2, p0}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$e;-><init>(Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;)V
 
     .line 4
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -92,11 +92,11 @@
 
 
 # virtual methods
-.method public final P4()Lcom/vk/profile/adapter/a;
+.method public final P4()Lcom/vk/profile/adapter/InfoItemsAdapter;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->I:Lcom/vk/profile/adapter/a;
+    iget-object v0, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->I:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     return-object v0
 .end method
@@ -132,7 +132,7 @@
     :cond_0
     const-string v0, "recyclerPaginatedView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -152,7 +152,7 @@
     :cond_0
     const-string v0, "toolbar"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -163,7 +163,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -174,7 +174,7 @@
 
     if-eqz p1, :cond_0
 
-    sget-object v1, Lcom/vk/navigation/q;->h:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->h:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -234,13 +234,13 @@
     return-void
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 4
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -262,7 +262,7 @@
 
     const-string p2, "menu.findItem(R.id.done)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-boolean p2, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->J:Z
 
@@ -294,7 +294,7 @@
 
     const-string v0, "view.findViewById(R.id.rpb_list)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/lists/RecyclerPaginatedView;
 
@@ -309,7 +309,7 @@
 
     if-eqz p2, :cond_b
 
-    iget-object v2, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->I:Lcom/vk/profile/adapter/a;
+    iget-object v2, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->I:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     invoke-virtual {p2, v2}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -325,7 +325,7 @@
     const-string v2, "rv"
 
     .line 5
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -338,36 +338,36 @@
     invoke-virtual {p2, v2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     .line 6
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 7
-    sget-object v2, Lcom/vk/profile/adapter/b/a;->c:Lcom/vk/profile/adapter/b/a$d;
+    sget-object v2, Lcom/vk/profile/adapter/b/BaseItemsFactory;->c:Lcom/vk/profile/adapter/b/BaseItemsFactory$d;
 
     new-instance v3, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$onCreateView$$inlined$also$lambda$1;
 
     invoke-direct {v3, p0}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$onCreateView$$inlined$also$lambda$1;-><init>(Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;)V
 
-    invoke-virtual {v2, p2, v3}, Lcom/vk/profile/adapter/b/a$d;->b(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v2, p2, v3}, Lcom/vk/profile/adapter/b/BaseItemsFactory$d;->b(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
     .line 8
     :cond_0
-    sget-object v2, Lcom/vk/profile/adapter/b/a;->c:Lcom/vk/profile/adapter/b/a$d;
+    sget-object v2, Lcom/vk/profile/adapter/b/BaseItemsFactory;->c:Lcom/vk/profile/adapter/b/BaseItemsFactory$d;
 
     new-instance v3, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$onCreateView$$inlined$also$lambda$2;
 
     invoke-direct {v3, p0}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$onCreateView$$inlined$also$lambda$2;-><init>(Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;)V
 
-    invoke-virtual {v2, p2, v3}, Lcom/vk/profile/adapter/b/a$d;->a(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v2, p2, v3}, Lcom/vk/profile/adapter/b/BaseItemsFactory$d;->a(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions;)V
 
     .line 9
     :goto_0
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p2
 
@@ -388,40 +388,40 @@
 
     const-string v3, "context!!"
 
-    invoke-static {p3, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Landroid/content/Context;)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Landroid/content/Context;)V
 
     .line 11
     iget-object p2, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->H:Lcom/vk/lists/RecyclerPaginatedView;
 
     if-eqz p2, :cond_1
 
-    new-instance p3, Lcom/vk/core/ui/m;
+    new-instance p3, Lcom/vk/core/ui/MilkshakeDecoration;
 
-    invoke-direct {p3}, Lcom/vk/core/ui/m;-><init>()V
+    invoke-direct {p3}, Lcom/vk/core/ui/MilkshakeDecoration;-><init>()V
 
-    iget-object v3, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->I:Lcom/vk/profile/adapter/a;
+    iget-object v3, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->I:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-    invoke-virtual {p3, v3}, Lcom/vk/core/ui/m;->a(Lcom/vk/core/ui/n;)Lcom/vk/core/ui/m;
+    invoke-virtual {p3, v3}, Lcom/vk/core/ui/MilkshakeDecoration;->a(Lcom/vk/core/ui/MilkshakeProvider;)Lcom/vk/core/ui/MilkshakeDecoration;
 
     invoke-virtual {p2, p3}, Lcom/vk/lists/RecyclerPaginatedView;->setItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 12
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     :cond_3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -431,12 +431,12 @@
 
     if-eqz p2, :cond_9
 
-    invoke-static {p2, v1, v2, v1}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
+    invoke-static {p2, v1, v2, v1}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
 
     move-result-object p2
 
     .line 14
-    invoke-virtual {p2, p3}, Lcom/vk/core/ui/d;->b(Z)V
+    invoke-virtual {p2, p3}, Lcom/vk/core/ui/CardItemDecorator;->b(Z)V
 
     .line 15
     :goto_1
@@ -448,7 +448,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$onCreateView$3;-><init>(Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/lists/RecyclerPaginatedView;->setOnRefreshListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, p3}, Lcom/vk/lists/RecyclerPaginatedView;->setOnRefreshListener(Lkotlin/jvm/b/Functions;)V
 
     .line 16
     iget-object p2, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->H:Lcom/vk/lists/RecyclerPaginatedView;
@@ -459,7 +459,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$onCreateView$4;-><init>(Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/lists/AbstractPaginatedView;->setOnReloadRetryClickListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, p3}, Lcom/vk/lists/AbstractPaginatedView;->setOnReloadRetryClickListener(Lkotlin/jvm/b/Functions;)V
 
     const p2, 0x7f0a0d9d
 
@@ -479,7 +479,7 @@
 
     if-eqz v0, :cond_5
 
-    sget-object v3, Lcom/vk/navigation/q;->d:Ljava/lang/String;
+    sget-object v3, Lcom/vk/navigation/NavigatorKeys;->d:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -499,7 +499,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$onCreateView$$inlined$apply$lambda$1;-><init>(Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;)V
 
-    invoke-static {p3, p0, v0}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {p3, p0, v0}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     .line 21
     new-instance v0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$f;
@@ -515,7 +515,7 @@
 
     const-string v3, "menu"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -525,7 +525,7 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/app/Activity;->getMenuInflater()Landroid/view/MenuInflater;
 
@@ -533,14 +533,14 @@
 
     const-string v3, "activity!!.menuInflater"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0, v1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     const-string v0, "view.findViewById<Toolba\u2026!.menuInflater)\n        }"
 
     .line 23
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->G:Landroidx/appcompat/widget/Toolbar;
 
@@ -554,37 +554,37 @@
 
     .line 26
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 27
     :cond_7
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 28
     :cond_8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 29
     :cond_9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 30
     :cond_a
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 31
     :cond_b
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -607,15 +607,15 @@
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->I:Lcom/vk/profile/adapter/a;
+    iget-object v0, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->I:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
     const-string v1, "adapter.list"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -650,12 +650,12 @@
     .line 6
     check-cast v1, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;
 
-    invoke-virtual {v1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/b;
+    invoke-virtual {v1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/SettingsSectionItem;
 
     move-result-object v1
 
     .line 7
-    invoke-virtual {v1}, Lb/h/h/g/b;->b()I
+    invoke-virtual {v1}, Lb/h/h/g/SettingsSectionItem;->b()I
 
     move-result v2
 
@@ -663,7 +663,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1}, Lb/h/h/g/b;->d()Z
+    invoke-virtual {v1}, Lb/h/h/g/SettingsSectionItem;->d()Z
 
     move-result v1
 
@@ -687,18 +687,18 @@
 
     .line 9
     :cond_2
-    new-instance v0, Lb/h/c/q/d;
+    new-instance v0, Lcom/vk/api/notifications/NotificationsAddGroupSource;
 
     iget v1, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->F:I
 
-    invoke-direct {v0, v1, p1}, Lb/h/c/q/d;-><init>(ILjava/util/HashMap;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/api/notifications/NotificationsAddGroupSource;-><init>(ILjava/util/HashMap;)V
 
     const/4 p1, 0x1
 
     const/4 v1, 0x0
 
     .line 10
-    invoke-static {v0, v1, p1, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, p1, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -719,7 +719,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -732,7 +732,7 @@
     sget-object v2, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$g;->a:Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$g;
 
     .line 14
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return p1
 

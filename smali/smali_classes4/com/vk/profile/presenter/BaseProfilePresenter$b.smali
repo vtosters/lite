@@ -3,7 +3,7 @@
 .source "BaseProfilePresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/music/MusicTrack;",
         ">;>;"
@@ -63,7 +63,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->a(Lcom/vk/profile/presenter/BaseProfilePresenter;Lio/reactivex/disposables/b;)V
+    invoke-static {v0, v1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->a(Lcom/vk/profile/presenter/BaseProfilePresenter;Lio/reactivex/disposables/Disposable;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$b;->a:Lcom/vk/profile/presenter/BaseProfilePresenter;
@@ -105,7 +105,7 @@
 
     .line 6
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method

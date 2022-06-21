@@ -3,7 +3,7 @@
 .source "ScribeFilesSender.java"
 
 # interfaces
-.implements Lcom/twitter/sdk/android/core/internal/scribe/o$d;
+.implements Lcom/twitter/sdk/android/core/internal/scribe/QueueFile$d;
 
 
 # annotations

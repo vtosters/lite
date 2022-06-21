@@ -3,7 +3,7 @@
 .source "InAppUpdatesManager.kt"
 
 # interfaces
-.implements Lcom/vk/updates/core/a;
+.implements Lcom/vk/updates/core/InAppUpdatesCallbacks;
 
 
 # annotations
@@ -44,7 +44,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/core/util/i1;->a()J
+    invoke-static {}, Lcom/vk/core/util/TimeUtils;->a()J
 
     move-result-wide v0
 
@@ -86,7 +86,7 @@
 
     const/4 v5, 0x0
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-wide/16 v2, 0x1770
 
@@ -105,7 +105,7 @@
 
     invoke-direct {v3, p0, p1}, Lcom/vk/updates/InAppUpdatesManager$Callbacks$onInAppUpdateDownloaded$1;-><init>(Lcom/vk/updates/InAppUpdatesManager$Callbacks;I)V
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(ILkotlin/jvm/b/b;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
+    invoke-virtual {v1, v2, v3}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(ILkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
     .line 8
     invoke-virtual {v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->d()Lcom/vk/core/dialogs/snackbar/VkSnackbar;
@@ -117,11 +117,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/updates/core/a$a;)V
+.method public a(Lcom/vk/updates/core/InAppUpdatesCallbacks$a;)V
     .locals 2
 
     .line 9
-    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     iget-object v0, p0, Lcom/vk/updates/InAppUpdatesManager$Callbacks;->a:Lcom/vk/updates/InAppUpdatesManager;
 
@@ -133,17 +133,17 @@
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 10
     sget v0, Lcom/vk/updates/b;->update_title:I
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 11
     sget v0, Lcom/vk/updates/a;->ic_launcher:I
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->h(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->h(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 12
     sget v0, Lcom/vk/updates/b;->update_later:I
@@ -152,7 +152,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/updates/InAppUpdatesManager$Callbacks$a;-><init>(Lcom/vk/updates/InAppUpdatesManager$Callbacks;)V
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(ILcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(ILcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 13
     sget v0, Lcom/vk/updates/b;->update_now:I
@@ -161,14 +161,14 @@
 
     invoke-direct {v1, p0}, Lcom/vk/updates/InAppUpdatesManager$Callbacks$b;-><init>(Lcom/vk/updates/InAppUpdatesManager$Callbacks;)V
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(ILcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(ILcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     .line 14
-    invoke-static {p1, v0, v1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {p1, v0, v1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method

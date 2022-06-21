@@ -3,12 +3,12 @@
 .source "ImUiModule.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/ImUiModule;->c(I)Lcom/vk/core/ui/w/b;
+    value = Lcom/vk/im/ui/ImUiModule;->c(I)Lcom/vk/core/ui/w/VkViewPoolProvider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/content/Context;",
-        "Lcom/vk/im/ui/components/bot_keyboard/b;",
+        "Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;)Lcom/vk/im/ui/components/bot_keyboard/b;
+.method public final a(Landroid/content/Context;)Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/im/ui/components/bot_keyboard/b;
+    new-instance v0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;
 
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -68,9 +68,9 @@
 
     const-string v1, "LayoutInflater.from(it)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, p1}, Lcom/vk/im/ui/components/bot_keyboard/b;-><init>(Landroid/view/LayoutInflater;)V
+    invoke-direct {v0, p1}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;-><init>(Landroid/view/LayoutInflater;)V
 
     return-object v0
 .end method
@@ -81,7 +81,7 @@
     .line 1
     check-cast p1, Landroid/content/Context;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/ImUiModule$getKeyboardViewPool$1;->a(Landroid/content/Context;)Lcom/vk/im/ui/components/bot_keyboard/b;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/ImUiModule$getKeyboardViewPool$1;->a(Landroid/content/Context;)Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;
 
     move-result-object p1
 

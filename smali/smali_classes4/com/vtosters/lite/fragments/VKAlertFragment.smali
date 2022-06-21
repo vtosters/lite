@@ -1,5 +1,5 @@
 .class public Lcom/vtosters/lite/fragments/VKAlertFragment;
-.super Ld/a/a/a/h;
+.super Lme/grishka/appkit/fragments/AppKitFragment;
 .source "VKAlertFragment.java"
 
 
@@ -16,7 +16,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ld/a/a/a/h;-><init>()V
+    invoke-direct {p0}, Lme/grishka/appkit/fragments/AppKitFragment;-><init>()V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2}, Ld/a/a/a/h;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lme/grishka/appkit/fragments/AppKitFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/VKAlertFragment;->b(Landroid/view/View;)V

@@ -44,7 +44,7 @@
 
     iget-object v1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$e;->a:Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method

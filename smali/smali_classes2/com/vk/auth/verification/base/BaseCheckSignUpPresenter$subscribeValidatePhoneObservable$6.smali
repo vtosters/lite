@@ -3,12 +3,12 @@
 .source "BaseCheckSignUpPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lc/a/m;)V
+    value = Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lio/reactivex/Observable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -71,7 +71,7 @@
 
     iget-object p1, p0, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$subscribeValidatePhoneObservable$6;->a:Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;
 
-    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/c$a;
+    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/CheckView$a;
 
     move-result-object p1
 
@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -101,7 +101,7 @@
 
     iget-object p1, p0, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$subscribeValidatePhoneObservable$6;->a:Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;
 
-    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/c$a;
+    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/CheckView$a;
 
     move-result-object p1
 
@@ -113,7 +113,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/base/b;->g(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/base/AuthView;->g(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -129,7 +129,7 @@
 
     iget-object p1, p0, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$subscribeValidatePhoneObservable$6;->a:Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;
 
-    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/c$a;
+    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/CheckView$a;
 
     move-result-object v0
 
@@ -178,7 +178,7 @@
     const/4 v9, 0x0
 
     .line 9
-    invoke-static/range {v0 .. v9}, Lcom/vk/auth/base/b$a;->a(Lcom/vk/auth/base/b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v9}, Lcom/vk/auth/base/AuthView$a;->a(Lcom/vk/auth/base/AuthView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -198,7 +198,7 @@
 
     iget-object v0, p0, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$subscribeValidatePhoneObservable$6;->a:Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;
 
-    invoke-static {v0}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/c$a;
+    invoke-static {v0}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/CheckView$a;
 
     move-result-object v0
 
@@ -210,12 +210,12 @@
 
     if-eqz p1, :cond_3
 
-    invoke-interface {v0, p1}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -225,13 +225,13 @@
     :cond_4
     iget-object p1, p0, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$subscribeValidatePhoneObservable$6;->a:Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;
 
-    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/c$a;
+    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/CheckView$a;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1, v1}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
+    invoke-interface {p1, v1}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -239,13 +239,13 @@
     :cond_5
     iget-object p1, p0, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter$subscribeValidatePhoneObservable$6;->a:Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;
 
-    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/c$a;
+    invoke-static {p1}, Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->g(Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;)Lcom/vk/auth/verification/base/CheckView$a;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1, v1}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
+    invoke-interface {p1, v1}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
 
     :cond_6
     :goto_0

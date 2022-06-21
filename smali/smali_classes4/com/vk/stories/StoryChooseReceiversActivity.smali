@@ -3,8 +3,8 @@
 .source "StoryChooseReceiversActivity.java"
 
 # interfaces
-.implements Lcom/vk/lists/t$o;
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/lists/PaginationHelper$o;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -18,17 +18,17 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vtosters/lite/VKActivity;",
-        "Lcom/vk/lists/t$o<",
+        "Lcom/vk/lists/PaginationHelper$o<",
         "Ljava/util/List<",
-        "Lcom/vk/stories/d1/a;",
+        "Lcom/vk/stories/d1/StoryDialogItem;",
         ">;>;",
-        "Lcom/vk/core/ui/themes/f;"
+        "Lcom/vk/core/ui/themes/Themable;"
     }
 .end annotation
 
 
 # instance fields
-.field private G:Lcom/vk/im/engine/a;
+.field private G:Lcom/vk/im/engine/ImEngine;
 
 .field private H:Lcom/vk/stories/util/StoryChooseActivityLoader;
 
@@ -76,7 +76,7 @@
 
 .field private X:Lcom/vk/stories/StoryChooseReceiversActivity$s;
 
-.field private Y:Lcom/vk/lists/t;
+.field private Y:Lcom/vk/lists/PaginationHelper;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -95,9 +95,9 @@
 
 .field private f0:Landroid/view/View;
 
-.field private g0:Lcom/vk/stories/a1/c;
+.field private g0:Lcom/vk/stories/a1/StoryAuthorsAdapter;
 
-.field private h0:Lcom/vtosters/lite/ui/x;
+.field private h0:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
 .field private i0:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -109,7 +109,7 @@
     .end annotation
 .end field
 
-.field private j0:Lcom/vk/stories/a1/b;
+.field private j0:Lcom/vk/stories/a1/AuthorItem;
 
 .field private k0:Lio/reactivex/subjects/PublishSubject;
     .annotation system Ldalvik/annotation/Signature;
@@ -121,11 +121,11 @@
     .end annotation
 .end field
 
-.field private l0:Lio/reactivex/disposables/b;
+.field private l0:Lio/reactivex/disposables/Disposable;
 
-.field private m0:Lio/reactivex/disposables/b;
+.field private m0:Lio/reactivex/disposables/Disposable;
 
-.field private n0:Lio/reactivex/disposables/b;
+.field private n0:Lio/reactivex/disposables/Disposable;
 
 .field private o0:I
 
@@ -149,7 +149,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;"
         }
     .end annotation
@@ -193,9 +193,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
@@ -250,9 +250,9 @@
     .line 8
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->I:Lcom/vk/dto/stories/model/CommonUploadParams;
 
-    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v1}, Lcom/vk/stories/a1/b;->d()I
+    invoke-virtual {v1}, Lcom/vk/stories/a1/AuthorItem;->d()I
 
     move-result v1
 
@@ -297,9 +297,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
@@ -348,7 +348,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->i0:Ljava/util/List;
 
-    invoke-static {v0}, Lcom/vk/core/util/o;->d(Ljava/util/Collection;)Z
+    invoke-static {v0}, Lcom/vk/core/util/CollectionUtils;->d(Ljava/util/Collection;)Z
 
     move-result v0
 
@@ -632,18 +632,18 @@
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     .line 10
-    new-instance v1, Lcom/vk/stories/a1/c;
+    new-instance v1, Lcom/vk/stories/a1/StoryAuthorsAdapter;
 
     new-instance v2, Lcom/vk/stories/StoryChooseReceiversActivity$c;
 
     invoke-direct {v2, p0}, Lcom/vk/stories/StoryChooseReceiversActivity$c;-><init>(Lcom/vk/stories/StoryChooseReceiversActivity;)V
 
-    invoke-direct {v1, v2}, Lcom/vk/stories/a1/c;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, v2}, Lcom/vk/stories/a1/StoryAuthorsAdapter;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    iput-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/c;
+    iput-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/StoryAuthorsAdapter;
 
     .line 11
-    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/c;
+    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/StoryAuthorsAdapter;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -684,18 +684,18 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->h()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->h()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->G:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->G:Lcom/vk/im/engine/ImEngine;
 
-    new-instance v1, Lcom/vk/im/engine/commands/contacts/a;
+    new-instance v1, Lcom/vk/im/engine/commands/contacts/AddDialogsToRecentCmd;
 
     new-instance v2, Ljava/util/ArrayList;
 
@@ -703,9 +703,9 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-direct {v1, v2}, Lcom/vk/im/engine/commands/contacts/a;-><init>(Ljava/util/List;)V
+    invoke-direct {v1, v2}, Lcom/vk/im/engine/commands/contacts/AddDialogsToRecentCmd;-><init>(Ljava/util/List;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
 
     .line 7
     :cond_0
@@ -716,7 +716,7 @@
     const v0, 0x7f120ee2
 
     .line 8
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     :cond_1
     const/4 v0, -0x1
@@ -744,11 +744,11 @@
 
     .line 3
     :cond_0
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object v0
 
@@ -774,7 +774,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/p/a;->b(Landroid/content/Intent;)Ljava/util/List;
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/p/ImBridge1;->b(Landroid/content/Intent;)Ljava/util/List;
 
     move-result-object v0
 
@@ -799,9 +799,9 @@
     check-cast v1, Lcom/vk/im/engine/models/camera/StoryParams;
 
     .line 9
-    sget-object v2, Lcom/vk/im/engine/utils/b;->a:Lcom/vk/im/engine/utils/b;
+    sget-object v2, Lcom/vk/im/engine/utils/ImAttachUtils;->a:Lcom/vk/im/engine/utils/ImAttachUtils;
 
-    invoke-virtual {v2, v1}, Lcom/vk/im/engine/utils/b;->a(Lcom/vk/im/engine/models/camera/StoryParams;)Lcom/vk/im/engine/models/attaches/AttachStory;
+    invoke-virtual {v2, v1}, Lcom/vk/im/engine/utils/ImAttachUtils;->a(Lcom/vk/im/engine/models/camera/StoryParams;)Lcom/vk/im/engine/models/attaches/AttachStory;
 
     move-result-object v1
 
@@ -823,17 +823,17 @@
     invoke-virtual {v1, v2}, Lcom/vk/im/ui/ImUiPrefs;->a(Lcom/vk/im/engine/models/camera/CameraState;)V
 
     .line 12
-    sget-object v1, Lcom/vk/im/engine/utils/b;->a:Lcom/vk/im/engine/utils/b;
+    sget-object v1, Lcom/vk/im/engine/utils/ImAttachUtils;->a:Lcom/vk/im/engine/utils/ImAttachUtils;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    invoke-interface {v0, v2}, Lcom/vk/im/ui/p/a;->c(Landroid/content/Intent;)Lcom/vk/im/engine/models/camera/PhotoParams;
+    invoke-interface {v0, v2}, Lcom/vk/im/ui/p/ImBridge1;->c(Landroid/content/Intent;)Lcom/vk/im/engine/models/camera/PhotoParams;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/utils/b;->a(Lcom/vk/im/engine/models/camera/PhotoParams;)Lcom/vk/im/engine/models/attaches/AttachImage;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/utils/ImAttachUtils;->a(Lcom/vk/im/engine/models/camera/PhotoParams;)Lcom/vk/im/engine/models/attaches/AttachImage;
 
     move-result-object v0
 
@@ -855,17 +855,17 @@
     invoke-virtual {v1, v2}, Lcom/vk/im/ui/ImUiPrefs;->a(Lcom/vk/im/engine/models/camera/CameraState;)V
 
     .line 15
-    sget-object v1, Lcom/vk/im/engine/utils/b;->a:Lcom/vk/im/engine/utils/b;
+    sget-object v1, Lcom/vk/im/engine/utils/ImAttachUtils;->a:Lcom/vk/im/engine/utils/ImAttachUtils;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    invoke-interface {v0, v2}, Lcom/vk/im/ui/p/a;->a(Landroid/content/Intent;)Lcom/vk/im/engine/models/camera/VideoParams;
+    invoke-interface {v0, v2}, Lcom/vk/im/ui/p/ImBridge1;->a(Landroid/content/Intent;)Lcom/vk/im/engine/models/camera/VideoParams;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/utils/b;->a(Lcom/vk/im/engine/models/camera/VideoParams;)Lcom/vk/im/engine/models/attaches/AttachVideo;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/utils/ImAttachUtils;->a(Lcom/vk/im/engine/models/camera/VideoParams;)Lcom/vk/im/engine/models/attaches/AttachVideo;
 
     move-result-object v0
 
@@ -874,7 +874,7 @@
     .line 16
     :cond_3
     :goto_1
-    sget-object v1, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
+    sget-object v1, Lcom/vtosters/lite/im/ImSendHelper;->b:Lcom/vtosters/lite/im/ImSendHelper;
 
     iget-object v5, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->q0:Ljava/util/Set;
 
@@ -884,7 +884,7 @@
 
     const-string v6, "camera"
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vtosters/lite/im/i;->a(Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;Ljava/util/Set;Ljava/lang/String;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vtosters/lite/im/ImSendHelper;->a(Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;Ljava/util/Set;Ljava/lang/String;)V
 
     const/4 v0, -0x1
 
@@ -1044,9 +1044,9 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    sget-object v6, Lcom/vk/stories/y0;->a:Lcom/vk/stories/y0;
+    sget-object v6, Lcom/vk/stories/StoryViewHelper;->a:Lcom/vk/stories/StoryViewHelper;
 
-    invoke-virtual {v6, v0}, Lcom/vk/stories/y0;->d(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
+    invoke-virtual {v6, v0}, Lcom/vk/stories/StoryViewHelper;->d(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1068,9 +1068,9 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    sget-object v6, Lcom/vk/stories/y0;->a:Lcom/vk/stories/y0;
+    sget-object v6, Lcom/vk/stories/StoryViewHelper;->a:Lcom/vk/stories/StoryViewHelper;
 
-    invoke-virtual {v6, v0}, Lcom/vk/stories/y0;->d(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
+    invoke-virtual {v6, v0}, Lcom/vk/stories/StoryViewHelper;->d(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1280,9 +1280,9 @@
     .line 3
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->c0:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v2}, Lcom/vk/stories/a1/b;->c()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/stories/a1/AuthorItem;->c()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1308,11 +1308,11 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 7
-    sget-object v2, Lcom/vk/stories/a1/b;->e:Lcom/vk/stories/a1/b$a;
+    sget-object v2, Lcom/vk/stories/a1/AuthorItem;->e:Lcom/vk/stories/a1/AuthorItem$a;
 
-    iget-object v3, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v3, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v3}, Lcom/vk/stories/a1/b;->d()I
+    invoke-virtual {v3}, Lcom/vk/stories/a1/AuthorItem;->d()I
 
     move-result v3
 
@@ -1328,7 +1328,7 @@
     const/4 v3, 0x0
 
     :goto_0
-    invoke-virtual {v2, v3}, Lcom/vk/stories/a1/b$a;->a(Z)Lcom/vk/stories/a1/b;
+    invoke-virtual {v2, v3}, Lcom/vk/stories/a1/AuthorItem$a;->a(Z)Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v2
 
@@ -1355,11 +1355,11 @@
     check-cast v3, Lcom/vk/dto/group/Group;
 
     .line 9
-    sget-object v5, Lcom/vk/stories/a1/b;->e:Lcom/vk/stories/a1/b$a;
+    sget-object v5, Lcom/vk/stories/a1/AuthorItem;->e:Lcom/vk/stories/a1/AuthorItem$a;
 
-    iget-object v6, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v6, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v6}, Lcom/vk/stories/a1/b;->d()I
+    invoke-virtual {v6}, Lcom/vk/stories/a1/AuthorItem;->d()I
 
     move-result v6
 
@@ -1375,7 +1375,7 @@
     const/4 v6, 0x0
 
     :goto_2
-    invoke-virtual {v5, v3, v6}, Lcom/vk/stories/a1/b$a;->a(Lcom/vk/dto/group/Group;Z)Lcom/vk/stories/a1/b;
+    invoke-virtual {v5, v3, v6}, Lcom/vk/stories/a1/AuthorItem$a;->a(Lcom/vk/dto/group/Group;Z)Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v3
 
@@ -1386,12 +1386,12 @@
 
     .line 11
     :cond_2
-    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/c;
+    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/StoryAuthorsAdapter;
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v1, v0}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 12
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/c;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/StoryAuthorsAdapter;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
@@ -1442,9 +1442,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->m0:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->m0:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/Disposable;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->I:Lcom/vk/dto/stories/model/CommonUploadParams;
@@ -1461,18 +1461,18 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->Z:Lcom/vk/imageloader/view/VKImageView;
 
-    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v1}, Lcom/vk/stories/a1/b;->e()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/stories/a1/AuthorItem;->e()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->a(Ljava/lang/String;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
@@ -1540,7 +1540,7 @@
     .line 12
     iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->X:Lcom/vk/stories/StoryChooseReceiversActivity$s;
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v1, v0}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     goto :goto_2
 
@@ -1575,7 +1575,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     goto :goto_2
 
@@ -1618,7 +1618,7 @@
     .line 21
     iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->X:Lcom/vk/stories/StoryChooseReceiversActivity$s;
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v1, v0}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     :cond_4
     :goto_2
@@ -1634,11 +1634,11 @@
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/vk/stories/StoryChooseReceiversActivity;Lcom/vk/stories/a1/b;)V
+.method static synthetic a(Lcom/vk/stories/StoryChooseReceiversActivity;Lcom/vk/stories/a1/AuthorItem;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/stories/StoryChooseReceiversActivity;->a(Lcom/vk/stories/a1/b;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/StoryChooseReceiversActivity;->a(Lcom/vk/stories/a1/AuthorItem;)V
 
     return-void
 .end method
@@ -1652,20 +1652,20 @@
     return-void
 .end method
 
-.method private a(Lcom/vk/stories/a1/b;)V
+.method private a(Lcom/vk/stories/a1/AuthorItem;)V
     .locals 5
 
     .line 16
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/a1/b;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/stories/a1/AuthorItem;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_5
 
     .line 17
-    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
     const/4 v0, 0x0
 
@@ -1673,9 +1673,9 @@
 
     .line 18
     :goto_0
-    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/c;
+    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/StoryAuthorsAdapter;
 
-    invoke-virtual {v2}, Lcom/vk/lists/i0;->size()I
+    invoke-virtual {v2}, Lcom/vk/lists/SimpleAdapter;->size()I
 
     move-result v2
 
@@ -1684,52 +1684,52 @@
     if-ge v1, v2, :cond_2
 
     .line 19
-    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/c;
+    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/StoryAuthorsAdapter;
 
-    invoke-virtual {v2, v1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/common/i/b;
+    check-cast v2, Lcom/vk/common/i/RecyclerItem;
 
     .line 20
-    instance-of v4, v2, Lcom/vk/stories/a1/b;
+    instance-of v4, v2, Lcom/vk/stories/a1/AuthorItem;
 
     if-eqz v4, :cond_1
 
     .line 21
-    check-cast v2, Lcom/vk/stories/a1/b;
+    check-cast v2, Lcom/vk/stories/a1/AuthorItem;
 
     .line 22
-    invoke-virtual {v2}, Lcom/vk/stories/a1/b;->g()Z
+    invoke-virtual {v2}, Lcom/vk/stories/a1/AuthorItem;->g()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
     .line 23
-    invoke-virtual {v2, v0}, Lcom/vk/stories/a1/b;->a(Z)V
+    invoke-virtual {v2, v0}, Lcom/vk/stories/a1/AuthorItem;->a(Z)V
 
     .line 24
-    iget-object v4, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/c;
+    iget-object v4, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/StoryAuthorsAdapter;
 
     invoke-virtual {v4, v1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
 
     .line 25
     :cond_0
-    iget-object v4, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v4, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v2, v4}, Lcom/vk/stories/a1/b;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v4}, Lcom/vk/stories/a1/AuthorItem;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
     .line 26
-    invoke-virtual {p1, v3}, Lcom/vk/stories/a1/b;->a(Z)V
+    invoke-virtual {p1, v3}, Lcom/vk/stories/a1/AuthorItem;->a(Z)V
 
     .line 27
-    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/c;
+    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->g0:Lcom/vk/stories/a1/StoryAuthorsAdapter;
 
     invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
 
@@ -1745,9 +1745,9 @@
     .line 29
     iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->c0:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v1}, Lcom/vk/stories/a1/b;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/stories/a1/AuthorItem;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1759,9 +1759,9 @@
     invoke-virtual {p1, v3}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 31
-    iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {p1}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {p1}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result p1
 
@@ -1790,9 +1790,9 @@
     .line 34
     iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->W:Landroid/view/MenuItem;
 
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
@@ -1803,9 +1803,9 @@
     .line 35
     iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->O:Lcom/vk/lists/RecyclerPaginatedView;
 
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
@@ -1895,11 +1895,11 @@
     return-object p0
 .end method
 
-.method static synthetic f(Lcom/vk/stories/StoryChooseReceiversActivity;)Lcom/vk/stories/a1/b;
+.method static synthetic f(Lcom/vk/stories/StoryChooseReceiversActivity;)Lcom/vk/stories/a1/AuthorItem;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iget-object p0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
     return-object p0
 .end method
@@ -2043,18 +2043,18 @@
 
     if-eqz p1, :cond_4
 
-    sget-object p1, Lcom/vk/stories/y0;->a:Lcom/vk/stories/y0;
+    sget-object p1, Lcom/vk/stories/StoryViewHelper;->a:Lcom/vk/stories/StoryViewHelper;
 
-    invoke-virtual {p1, v0}, Lcom/vk/stories/y0;->e(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lcom/vk/stories/StoryViewHelper;->e(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
 
     move-result-object p1
 
     goto :goto_1
 
     :cond_4
-    sget-object p1, Lcom/vk/stories/y0;->a:Lcom/vk/stories/y0;
+    sget-object p1, Lcom/vk/stories/StoryViewHelper;->a:Lcom/vk/stories/StoryViewHelper;
 
-    invoke-virtual {p1, v0}, Lcom/vk/stories/y0;->c(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lcom/vk/stories/StoryViewHelper;->c(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2098,7 +2098,7 @@
     const-string v0, "stories_send_screen"
 
     .line 2
-    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v0
 
@@ -2109,7 +2109,7 @@
     const-string p1, "go_back"
 
     .line 3
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     goto :goto_0
 
@@ -2117,7 +2117,7 @@
     const-string p1, "send"
 
     .line 4
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 5
     :goto_0
@@ -2161,7 +2161,7 @@
     const-string v1, "photo"
 
     .line 11
-    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     goto :goto_1
 
@@ -2169,13 +2169,13 @@
     const-string v1, "video"
 
     .line 12
-    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     :goto_1
     const-string v1, "action_facts"
 
     .line 13
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 14
     iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->q0:Ljava/util/Set;
@@ -2190,10 +2190,10 @@
 
     const-string v1, "recipients_count"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 15
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->e()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->e()Lcom/vtosters/lite/data/Analytics$l;
 
     return-void
 .end method
@@ -2243,11 +2243,11 @@
     return-object p0
 .end method
 
-.method static synthetic q(Lcom/vk/stories/StoryChooseReceiversActivity;)Lcom/vk/lists/t;
+.method static synthetic q(Lcom/vk/stories/StoryChooseReceiversActivity;)Lcom/vk/lists/PaginationHelper;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->Y:Lcom/vk/lists/t;
+    iget-object p0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->Y:Lcom/vk/lists/PaginationHelper;
 
     return-object p0
 .end method
@@ -2326,7 +2326,7 @@
 
     const v1, 0x7f0400df
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->U:Landroid/widget/TextView;
@@ -2383,9 +2383,9 @@
     invoke-direct {p0}, Lcom/vk/stories/StoryChooseReceiversActivity;->R1()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->Y:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->Y:Lcom/vk/lists/PaginationHelper;
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->h()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->i0:Ljava/util/List;
@@ -2397,9 +2397,9 @@
     if-nez v0, :cond_0
 
     .line 4
-    sget-object v0, Lcom/vk/stories/a1/d;->e:Lcom/vk/stories/a1/d;
+    sget-object v0, Lcom/vk/stories/a1/StoryGroups;->e:Lcom/vk/stories/a1/StoryGroups;
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/d;->c()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/stories/a1/StoryGroups;->c()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -2410,11 +2410,11 @@
     sget-object v2, Lcom/vk/stories/q;->a:Lcom/vk/stories/q;
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->l0:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->l0:Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -2422,24 +2422,24 @@
 
 
 # virtual methods
-.method public a(ILcom/vk/lists/t;)Lc/a/m;
+.method public a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;>;"
         }
     .end annotation
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->m0:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->m0:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/Disposable;)V
 
     .line 7
     iget v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->o0:I
@@ -2451,7 +2451,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -2461,33 +2461,33 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->H:Lcom/vk/stories/util/StoryChooseActivityLoader;
 
-    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/x;
+    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/x;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/SearchViewWrapper;->c()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result p2
 
-    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Ljava/lang/String;II)Lc/a/m;
+    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Ljava/lang/String;II)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;>;"
         }
     .end annotation
@@ -2503,23 +2503,23 @@
     const/4 p2, 0x0
 
     .line 5
-    invoke-virtual {p0, p2, p1}, Lcom/vk/stories/StoryChooseReceiversActivity;->a(ILcom/vk/lists/t;)Lc/a/m;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/stories/StoryChooseReceiversActivity;->a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;>;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -2533,11 +2533,11 @@
 
     invoke-direct {v0, p0, p2}, Lcom/vk/stories/s;-><init>(Lcom/vk/stories/StoryChooseReceiversActivity;Z)V
 
-    invoke-virtual {p1, p3, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p3, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->m0:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->m0:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -2657,7 +2657,7 @@
     .line 12
     iget-object p2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->X:Lcom/vk/stories/StoryChooseReceiversActivity$s;
 
-    invoke-virtual {p2}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {p2}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     const/4 p2, 0x0
 
@@ -2665,14 +2665,14 @@
     iput-object p2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->t0:Ljava/util/List;
 
     .line 14
-    invoke-static {p0}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
 
     if-eqz p1, :cond_0
 
     const p1, 0x7f120365
 
     .line 15
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     :cond_0
     return-void
@@ -2689,14 +2689,14 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->X:Lcom/vk/stories/StoryChooseReceiversActivity$s;
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 3
     new-instance p1, Ljava/util/ArrayList;
 
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->X:Lcom/vk/stories/StoryChooseReceiversActivity$s;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -2926,13 +2926,13 @@
     iput-boolean v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->r0:Z
 
     .line 15
-    sget-object v2, Lcom/vk/stories/a1/b;->e:Lcom/vk/stories/a1/b$a;
+    sget-object v2, Lcom/vk/stories/a1/AuthorItem;->e:Lcom/vk/stories/a1/AuthorItem$a;
 
-    invoke-virtual {v2, v3}, Lcom/vk/stories/a1/b$a;->a(Z)Lcom/vk/stories/a1/b;
+    invoke-virtual {v2, v3}, Lcom/vk/stories/a1/AuthorItem$a;->a(Z)Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iput-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
     .line 16
     iget v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->o0:I
@@ -2949,13 +2949,13 @@
     if-eqz v1, :cond_3
 
     .line 18
-    sget-object v2, Lcom/vk/stories/a1/b;->e:Lcom/vk/stories/a1/b$a;
+    sget-object v2, Lcom/vk/stories/a1/AuthorItem;->e:Lcom/vk/stories/a1/AuthorItem$a;
 
-    invoke-virtual {v2, v1, v3}, Lcom/vk/stories/a1/b$a;->a(Lcom/vk/dto/group/Group;Z)Lcom/vk/stories/a1/b;
+    invoke-virtual {v2, v1, v3}, Lcom/vk/stories/a1/AuthorItem$a;->a(Lcom/vk/dto/group/Group;Z)Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/b;
+    iput-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->j0:Lcom/vk/stories/a1/AuthorItem;
 
     goto :goto_1
 
@@ -2963,11 +2963,11 @@
     if-eqz v1, :cond_3
 
     .line 19
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v1
 
@@ -3001,25 +3001,25 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/view/Window;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/Window;)V
 
     .line 25
-    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vtosters/lite/im/ImEngineProvider;->b()Lcom/vk/im/engine/ImEngine;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->G:Lcom/vk/im/engine/a;
+    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->G:Lcom/vk/im/engine/ImEngine;
 
     .line 26
     new-instance p1, Lcom/vk/stories/util/StoryChooseActivityLoader;
 
-    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->G:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->G:Lcom/vk/im/engine/ImEngine;
 
     new-instance v2, Lcom/vk/stories/u;
 
     invoke-direct {v2, p0}, Lcom/vk/stories/u;-><init>(Lcom/vk/stories/StoryChooseReceiversActivity;)V
 
-    invoke-direct {p1, v1, v2}, Lcom/vk/stories/util/StoryChooseActivityLoader;-><init>(Lcom/vk/im/engine/a;Lkotlin/jvm/b/a;)V
+    invoke-direct {p1, v1, v2}, Lcom/vk/stories/util/StoryChooseActivityLoader;-><init>(Lcom/vk/im/engine/ImEngine;Lkotlin/jvm/b/Functions;)V
 
     iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->H:Lcom/vk/stories/util/StoryChooseActivityLoader;
 
@@ -3079,26 +3079,26 @@
     invoke-virtual {p1, v2}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
     .line 34
-    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
+    invoke-static {p0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object p1
 
     const-wide/16 v4, 0x12c
 
     .line 35
-    invoke-virtual {p1, v4, v5}, Lcom/vk/lists/t$k;->a(J)Lcom/vk/lists/t$k;
+    invoke-virtual {p1, v4, v5}, Lcom/vk/lists/PaginationHelper$k;->a(J)Lcom/vk/lists/PaginationHelper$k;
 
     .line 36
-    invoke-virtual {p1, v0}, Lcom/vk/lists/t$k;->b(Z)Lcom/vk/lists/t$k;
+    invoke-virtual {p1, v0}, Lcom/vk/lists/PaginationHelper$k;->b(Z)Lcom/vk/lists/PaginationHelper$k;
 
     iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->O:Lcom/vk/lists/RecyclerPaginatedView;
 
     .line 37
-    invoke-static {p1, v2}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p1, v2}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->Y:Lcom/vk/lists/t;
+    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->Y:Lcom/vk/lists/PaginationHelper;
 
     const p1, 0x7f0a0d9d
 
@@ -3118,7 +3118,7 @@
 
     const v6, 0x7f040231
 
-    invoke-static {v2, v6}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v2, v6}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v2
 
@@ -3148,15 +3148,15 @@
     iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->k0:Lio/reactivex/subjects/PublishSubject;
 
     .line 43
-    new-instance p1, Lcom/vtosters/lite/ui/x;
+    new-instance p1, Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     new-instance v2, Lcom/vk/stories/StoryChooseReceiversActivity$k;
 
     invoke-direct {v2, p0}, Lcom/vk/stories/StoryChooseReceiversActivity$k;-><init>(Lcom/vk/stories/StoryChooseReceiversActivity;)V
 
-    invoke-direct {p1, p0, v2}, Lcom/vtosters/lite/ui/x;-><init>(Landroid/app/Activity;Lcom/vtosters/lite/ui/x$i;)V
+    invoke-direct {p1, p0, v2}, Lcom/vtosters/lite/ui/SearchViewWrapper;-><init>(Landroid/app/Activity;Lcom/vtosters/lite/ui/SearchViewWrapper$i;)V
 
-    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/x;
+    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     .line 44
     iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->k0:Lio/reactivex/subjects/PublishSubject;
@@ -3164,16 +3164,16 @@
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     .line 45
-    invoke-virtual {p1, v4, v5, v2}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {p1, v4, v5, v2}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 46
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {p1, v2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -3186,11 +3186,11 @@
     invoke-direct {v4, p0}, Lcom/vk/stories/StoryChooseReceiversActivity$m;-><init>(Lcom/vk/stories/StoryChooseReceiversActivity;)V
 
     .line 47
-    invoke-virtual {p1, v2, v4}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v2, v4}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->n0:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->n0:Lio/reactivex/disposables/Disposable;
 
     .line 48
     iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->M:Landroidx/appcompat/widget/Toolbar;
@@ -3200,21 +3200,21 @@
     move-result-object p1
 
     .line 49
-    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/x;
+    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->getMenuInflater()Landroid/view/MenuInflater;
 
     move-result-object v4
 
-    invoke-virtual {v2, p1, v4}, Lcom/vtosters/lite/ui/x;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-virtual {v2, p1, v4}, Lcom/vtosters/lite/ui/SearchViewWrapper;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     .line 50
-    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/x;
+    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
-    invoke-virtual {v2, v0}, Lcom/vtosters/lite/ui/x;->g(Z)V
+    invoke-virtual {v2, v0}, Lcom/vtosters/lite/ui/SearchViewWrapper;->g(Z)V
 
     .line 51
-    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/x;
+    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     iget v4, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->o0:I
 
@@ -3228,16 +3228,16 @@
     const/4 v4, 0x0
 
     :goto_2
-    invoke-virtual {v2, v4}, Lcom/vtosters/lite/ui/x;->e(Z)V
+    invoke-virtual {v2, v4}, Lcom/vtosters/lite/ui/SearchViewWrapper;->e(Z)V
 
     .line 52
-    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/x;
+    iget-object v2, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->h0:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     new-instance v4, Lcom/vk/stories/StoryChooseReceiversActivity$n;
 
     invoke-direct {v4, p0}, Lcom/vk/stories/StoryChooseReceiversActivity$n;-><init>(Lcom/vk/stories/StoryChooseReceiversActivity;)V
 
-    invoke-virtual {v2, v4}, Lcom/vtosters/lite/ui/x;->a(Lcom/vtosters/lite/ui/x$j;)V
+    invoke-virtual {v2, v4}, Lcom/vtosters/lite/ui/SearchViewWrapper;->a(Lcom/vtosters/lite/ui/SearchViewWrapper$j;)V
 
     const v2, 0x7f0a0baa
 
@@ -3434,7 +3434,7 @@
     invoke-direct {p0}, Lcom/vk/stories/StoryChooseReceiversActivity;->z1()V
 
     .line 75
-    invoke-static {p0}, Lcom/vk/extensions/b;->a(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/vk/extensions/ActivityExt;->a(Landroid/app/Activity;)V
 
     .line 76
     invoke-static {}, Lcom/vk/core/util/OsUtil;->b()Z
@@ -3475,12 +3475,12 @@
 
     .line 78
     :goto_4
-    invoke-static {p0, p1}, Lcom/vk/core/extensions/a;->a(Landroid/app/Activity;I)V
+    invoke-static {p0, p1}, Lcom/vk/core/extensions/ActivityExt;->a(Landroid/app/Activity;I)V
 
     .line 79
     iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->M:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {p1}, Lcom/vk/extensions/t/a;->b(Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p1}, Lcom/vk/extensions/t/ToolbarExt;->b(Landroidx/appcompat/widget/Toolbar;)V
 
     .line 80
     invoke-static {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(Landroid/app/Activity;)V
@@ -3495,19 +3495,19 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->l0:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->l0:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/Disposable;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->m0:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->m0:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/Disposable;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->n0:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity;->n0:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/Disposable;)V
 
     .line 4
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V

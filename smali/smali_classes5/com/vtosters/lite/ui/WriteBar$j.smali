@@ -3,7 +3,7 @@
 .source "WriteBar.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lb/h/c/k/a$a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/api/gifts/GiftGetByStickerId$a;",
         ">;"
     }
 .end annotation
@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public a(Lb/h/c/k/a$a;)V
+.method public a(Lcom/vk/api/gifts/GiftGetByStickerId$a;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -53,7 +53,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/fragments/gifts/f;->P0:Lcom/vtosters/lite/fragments/gifts/f$e;
+    sget-object v0, Lcom/vtosters/lite/fragments/gifts/GiftSendFragment;->P0:Lcom/vtosters/lite/fragments/gifts/GiftSendFragment$e;
 
     iget-object v1, p0, Lcom/vtosters/lite/ui/WriteBar$j;->a:Lcom/vtosters/lite/ui/WriteBar;
 
@@ -71,13 +71,13 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iget-object v3, p1, Lb/h/c/k/a$a;->b:Lcom/vk/dto/gift/CatalogedGift;
+    iget-object v3, p1, Lcom/vk/api/gifts/GiftGetByStickerId$a;->b:Lcom/vk/dto/gift/CatalogedGift;
 
-    iget v4, p1, Lb/h/c/k/a$a;->a:I
+    iget v4, p1, Lcom/vk/api/gifts/GiftGetByStickerId$a;->a:I
 
     const-string v5, "sticker_longtap_suggestion"
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/fragments/gifts/f$e;->a(Landroid/content/Context;Ljava/util/ArrayList;Lcom/vk/dto/gift/CatalogedGift;ILjava/lang/String;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/fragments/gifts/GiftSendFragment$e;->a(Landroid/content/Context;Ljava/util/ArrayList;Lcom/vk/dto/gift/CatalogedGift;ILjava/lang/String;)V
 
     return-void
 .end method
@@ -91,9 +91,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lb/h/c/k/a$a;
+    check-cast p1, Lcom/vk/api/gifts/GiftGetByStickerId$a;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/WriteBar$j;->a(Lb/h/c/k/a$a;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/WriteBar$j;->a(Lcom/vk/api/gifts/GiftGetByStickerId$a;)V
 
     return-void
 .end method

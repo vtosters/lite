@@ -48,7 +48,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$f;->b:Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;
 
-    invoke-static {p1}, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->a(Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;)Lcom/vk/superapp/holders/b;
+    invoke-static {p1}, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->a(Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;)Lcom/vk/superapp/holders/SuperAppClickListener;
 
     move-result-object v0
 
@@ -58,7 +58,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -66,11 +66,11 @@
 
     const-string p1, "itemView.context"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$f;->b:Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/h/f/a;->c0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/core/ui/v/j/h/f/UiViewTimeRecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -78,7 +78,7 @@
 
     move-object v2, p1
 
-    check-cast v2, Lcom/vk/superapp/g/a;
+    check-cast v2, Lcom/vk/superapp/g/SuperAppItems;
 
     const/4 v3, -0x1
 
@@ -96,12 +96,12 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/superapp/holders/b$a;->a(Lcom/vk/superapp/holders/b;Landroid/content/Context;Lcom/vk/superapp/g/a;ILcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Lcom/vk/superapp/holders/SuperAppRequestCodes;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v8}, Lcom/vk/superapp/holders/SuperAppClickListener$a;->a(Lcom/vk/superapp/holders/SuperAppClickListener;Landroid/content/Context;Lcom/vk/superapp/g/SuperAppItems;ILcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Lcom/vk/superapp/holders/SuperAppRequestCodes;ILjava/lang/Object;)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

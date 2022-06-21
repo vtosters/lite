@@ -1,10 +1,10 @@
 .class public final Lcom/vk/menu/MenuFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "MenuFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/v;
-.implements Lcom/vk/navigation/b0/h;
+.implements Lcom/vk/navigation/ScrolledToTop;
+.implements Lcom/vk/navigation/b0/FragmentWithMiniAudioPlayer;
 
 
 # annotations
@@ -51,19 +51,19 @@
 
 .field private G:Lcom/vk/menu/MenuFragment$a;
 
-.field private final H:Lcom/vk/music/view/t;
+.field private final H:Lcom/vk/music/view/SmallPlayerHelper;
 
 .field private I:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private J:Lio/reactivex/disposables/b;
+.field private J:Lio/reactivex/disposables/Disposable;
 
 .field private K:Z
 
@@ -78,7 +78,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/menu/MenuFragment$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/menu/MenuFragment$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/menu/MenuFragment;->T:Lcom/vk/menu/MenuFragment$Companion;
 
@@ -152,10 +152,10 @@
     .locals 4
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/music/view/t;
+    new-instance v0, Lcom/vk/music/view/SmallPlayerHelper;
 
     const/4 v1, 0x0
 
@@ -163,9 +163,9 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/music/view/t;-><init>(ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/music/view/SmallPlayerHelper;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v0, p0, Lcom/vk/menu/MenuFragment;->H:Lcom/vk/music/view/t;
+    iput-object v0, p0, Lcom/vk/menu/MenuFragment;->H:Lcom/vk/music/view/SmallPlayerHelper;
 
     .line 3
     new-instance v0, Lcom/vk/menu/MenuFragment$receiver$1;
@@ -251,7 +251,7 @@
         value = {
             "()",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;"
         }
     .end annotation
@@ -262,7 +262,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/menu/MenuFragment;->Y4()Lcom/vk/menu/d;
+    invoke-direct {p0}, Lcom/vk/menu/MenuFragment;->Y4()Lcom/vk/menu/MenuViewItem;
 
     move-result-object v1
 
@@ -292,7 +292,7 @@
 
     const-string v5, "activity!!"
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/app/Activity;->getMenuInflater()Landroid/view/MenuInflater;
 
@@ -377,7 +377,7 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/vk/menu/c;->a(Ljava/lang/String;)I
+    invoke-static {v6}, Lcom/vk/menu/MenuUtils;->a(Ljava/lang/String;)I
 
     move-result v6
 
@@ -399,9 +399,9 @@
 
     move-object v10, v9
 
-    check-cast v10, Lcom/vk/menu/d;
+    check-cast v10, Lcom/vk/menu/MenuViewItem;
 
-    invoke-virtual {v10}, Lcom/vk/menu/d;->c()I
+    invoke-virtual {v10}, Lcom/vk/menu/MenuViewItem;->c()I
 
     move-result v10
 
@@ -423,7 +423,7 @@
     move-object v9, v4
 
     :goto_2
-    check-cast v9, Lcom/vk/menu/d;
+    check-cast v9, Lcom/vk/menu/MenuViewItem;
 
     if-eqz v9, :cond_1
 
@@ -456,20 +456,20 @@
     move-result-object v5
 
     .line 15
-    new-instance v6, Lcom/vk/menu/d;
+    new-instance v6, Lcom/vk/menu/MenuViewItem;
 
     const-string v8, "menuShowMore"
 
-    invoke-static {v5, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v5}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v8
 
-    invoke-direct {v6, v7, v8, v5}, Lcom/vk/menu/d;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v6, v7, v8, v5}, Lcom/vk/menu/MenuViewItem;-><init>(IILjava/lang/Object;)V
 
     .line 16
-    invoke-virtual {v6, v7}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v6, v7}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     .line 17
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -518,7 +518,7 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/vk/menu/c;->a(Ljava/lang/String;)I
+    invoke-static {v6}, Lcom/vk/menu/MenuUtils;->a(Ljava/lang/String;)I
 
     move-result v6
 
@@ -540,9 +540,9 @@
 
     move-object v10, v9
 
-    check-cast v10, Lcom/vk/menu/d;
+    check-cast v10, Lcom/vk/menu/MenuViewItem;
 
-    invoke-virtual {v10}, Lcom/vk/menu/d;->c()I
+    invoke-virtual {v10}, Lcom/vk/menu/MenuViewItem;->c()I
 
     move-result v10
 
@@ -564,7 +564,7 @@
     move-object v9, v4
 
     :goto_5
-    check-cast v9, Lcom/vk/menu/d;
+    check-cast v9, Lcom/vk/menu/MenuViewItem;
 
     if-eqz v9, :cond_6
 
@@ -587,19 +587,19 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/menu/d;
+    check-cast v2, Lcom/vk/menu/MenuViewItem;
 
     if-eqz v2, :cond_c
 
     const/4 v3, 0x4
 
-    invoke-virtual {v2, v3}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v2, v3}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     goto :goto_6
 
     .line 25
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
@@ -613,24 +613,24 @@
     move-result-object v1
 
     .line 27
-    new-instance v2, Lcom/vk/menu/d;
+    new-instance v2, Lcom/vk/menu/MenuViewItem;
 
     const/16 v3, 0x9
 
     const-string v4, "menuVkPay"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v4
 
-    invoke-direct {v2, v3, v4, v1}, Lcom/vk/menu/d;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v2, v3, v4, v1}, Lcom/vk/menu/MenuViewItem;-><init>(IILjava/lang/Object;)V
 
     const/4 v1, 0x6
 
     .line 28
-    invoke-virtual {v2, v1}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v2, v1}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     .line 29
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -639,13 +639,13 @@
 
     .line 30
     :cond_d
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 31
     :cond_e
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
@@ -658,18 +658,18 @@
 
     .line 33
     :cond_10
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 34
     :cond_11
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 .end method
 
-.method private final Y4()Lcom/vk/menu/d;
+.method private final Y4()Lcom/vk/menu/MenuViewItem;
     .locals 5
 
     .line 1
@@ -686,13 +686,13 @@
     move-result v0
 
     .line 2
-    new-instance v2, Lcom/vk/menu/d;
+    new-instance v2, Lcom/vk/menu/MenuViewItem;
 
     const v3, 0x7f0a07e3
 
     const/4 v4, 0x0
 
-    invoke-direct {v2, v4, v3, v1}, Lcom/vk/menu/d;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v2, v4, v3, v1}, Lcom/vk/menu/MenuViewItem;-><init>(IILjava/lang/Object;)V
 
     if-eqz v0, :cond_0
 
@@ -703,13 +703,13 @@
 
     .line 3
     :goto_0
-    invoke-virtual {v2, v4}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v2, v4}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     return-object v2
 
     .line 4
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -733,16 +733,16 @@
     sget-object v2, Lcom/vk/menu/MenuFragment$n;->a:Lcom/vk/menu/MenuFragment$n;
 
     .line 4
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "MenuApiApplicationsCache\u2026L.e(e)\n                })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 6
     sget-object v0, Lcom/vk/menu/MenuApiApplicationsCache;->g:Lcom/vk/menu/MenuApiApplicationsCache;
@@ -769,7 +769,7 @@
             "Landroidx/appcompat/view/menu/MenuBuilder;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;"
         }
     .end annotation
@@ -798,7 +798,7 @@
     const-string v5, "it"
 
     .line 5
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v4}, Landroid/view/MenuItem;->getItemId()I
 
@@ -812,9 +812,9 @@
 
     const-string v7, "activity!!"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v5, v6}, Lcom/vk/menu/c;->a(ILandroid/content/Context;)Z
+    invoke-static {v5, v6}, Lcom/vk/menu/MenuUtils;->a(ILandroid/content/Context;)Z
 
     move-result v5
 
@@ -856,23 +856,23 @@
 
     .line 7
     :goto_2
-    new-instance v8, Lcom/vk/menu/d;
+    new-instance v8, Lcom/vk/menu/MenuViewItem;
 
     invoke-interface {v4}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v9
 
-    invoke-direct {v8, v6, v9, v4}, Lcom/vk/menu/d;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v8, v6, v9, v4}, Lcom/vk/menu/MenuViewItem;-><init>(IILjava/lang/Object;)V
 
     .line 8
-    invoke-virtual {v8, v7}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v8, v7}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     if-eqz v5, :cond_2
 
     const/4 v4, 0x6
 
     .line 9
-    invoke-virtual {v8, v4}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v8, v4}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     .line 10
     :cond_2
@@ -885,7 +885,7 @@
 
     .line 11
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -910,25 +910,25 @@
     .line 1
     sget-object v0, Lcom/vk/menu/MenuFragment$o;->a:Lcom/vk/menu/MenuFragment$o;
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 2
-    invoke-static {}, Lc/a/f0/b;->c()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->c()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -941,16 +941,16 @@
     sget-object v2, Lcom/vk/menu/MenuFragment$q;->a:Lcom/vk/menu/MenuFragment$q;
 
     .line 6
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "Observable.fromCallable \u2026      }, { e -> L.e(e) })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -970,7 +970,7 @@
     .line 1
     sget-object v0, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;
 
-    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->f()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->f()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -983,25 +983,25 @@
     sget-object v2, Lcom/vk/menu/MenuFragment$s;->a:Lcom/vk/menu/MenuFragment$s;
 
     .line 4
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "MenuCache.menuGames\n    \u2026L.e(e)\n                })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 6
     sget-object v0, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;
 
-    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->k()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->k()Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1021,7 +1021,7 @@
         value = {
             "()",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;"
         }
     .end annotation
@@ -1047,22 +1047,22 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/menu/d;
+    check-cast v1, Lcom/vk/menu/MenuViewItem;
 
     const/4 v2, 0x4
 
-    invoke-virtual {v1, v2}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v1, v2}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     .line 4
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/menu/d;
+    check-cast v1, Lcom/vk/menu/MenuViewItem;
 
     const/4 v4, 0x2
 
-    invoke-virtual {v1, v4}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v1, v4}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     .line 5
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1072,11 +1072,11 @@
     sub-int/2addr v1, v3
 
     .line 6
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lb/h/h/d/c;->P0()Z
+    invoke-virtual {v3}, Lcom/vk/auth/api/VKAccount;->P0()Z
 
     move-result v3
 
@@ -1095,9 +1095,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/menu/d;
+    check-cast v1, Lcom/vk/menu/MenuViewItem;
 
-    invoke-virtual {v1, v2}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v1, v2}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     goto :goto_0
 
@@ -1114,11 +1114,11 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/menu/d;
+    check-cast v1, Lcom/vk/menu/MenuViewItem;
 
     const/4 v2, 0x6
 
-    invoke-virtual {v1, v2}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v1, v2}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     :cond_2
     :goto_0
@@ -1202,7 +1202,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v2, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v0, v2, v4, v3, v4}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1246,14 +1246,14 @@
     if-eqz v0, :cond_0
 
     .line 2
-    instance-of v2, v0, Lcom/vk/navigation/n;
+    instance-of v2, v0, Lcom/vk/navigation/NavigationDelegateProvider;
 
     if-eqz v2, :cond_0
 
     .line 3
-    check-cast v0, Lcom/vk/navigation/n;
+    check-cast v0, Lcom/vk/navigation/NavigationDelegateProvider;
 
-    invoke-interface {v0}, Lcom/vk/navigation/n;->E0()Lcom/vk/navigation/NavigationDelegate;
+    invoke-interface {v0}, Lcom/vk/navigation/NavigationDelegateProvider;->E0()Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object v0
 
@@ -1263,7 +1263,7 @@
     return-object v1
 .end method
 
-.method public final c1()Lkotlin/m;
+.method public final c1()Lkotlin/Unit;
     .locals 1
 
     .line 1
@@ -1271,9 +1271,9 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/vk/extensions/i;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-static {v0}, Lcom/vk/extensions/RecyclerViewExt;->b(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_0
 
@@ -1288,7 +1288,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     new-instance p1, Ljava/util/ArrayList;
@@ -1302,11 +1302,11 @@
     iput-object v0, p0, Lcom/vk/menu/MenuFragment;->G:Lcom/vk/menu/MenuFragment$a;
 
     .line 3
-    sget-object p1, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
+    sget-object p1, Lcom/vk/menu/MenuUtils;->c:Lcom/vk/menu/MenuUtils;
 
     iget-object v0, p0, Lcom/vk/menu/MenuFragment;->G:Lcom/vk/menu/MenuFragment$a;
 
-    invoke-virtual {p1, v0}, Lcom/vk/menu/c;->a(Lcom/vk/menu/c$a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/menu/MenuUtils$a;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/menu/MenuFragment;->a5()V
@@ -1315,11 +1315,11 @@
     invoke-direct {p0}, Lcom/vk/menu/MenuFragment;->b5()V
 
     .line 6
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/h/d/c;->M0()Z
+    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->M0()Z
 
     move-result p1
 
@@ -1361,7 +1361,7 @@
     if-eqz p2, :cond_3
 
     .line 2
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -1372,9 +1372,9 @@
     if-nez v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vk/menu/MenuFragment;->H:Lcom/vk/music/view/t;
+    iget-object v0, p0, Lcom/vk/menu/MenuFragment;->H:Lcom/vk/music/view/SmallPlayerHelper;
 
-    invoke-static {v0, p2, p3, v1, v2}, Lcom/vk/music/view/t;->a(Lcom/vk/music/view/t;Landroid/view/View;ZILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v0, p2, p3, v1, v2}, Lcom/vk/music/view/SmallPlayerHelper;->a(Lcom/vk/music/view/SmallPlayerHelper;Landroid/view/View;ZILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -1382,7 +1382,7 @@
     const v0, 0x7f0a0d9d
 
     .line 4
-    invoke-static {p2, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p2, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1407,7 +1407,7 @@
 
     const-string v3, "toolbar.menu"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1417,7 +1417,7 @@
 
     const-string v4, "activity!!"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/app/Activity;->getMenuInflater()Landroid/view/MenuInflater;
 
@@ -1425,14 +1425,14 @@
 
     const-string v4, "activity!!.menuInflater"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0, v3}, Lcom/vk/menu/MenuFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     const v0, 0x7f0a0b45
 
     .line 8
-    invoke-static {p2, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p2, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1472,11 +1472,11 @@
 
     const-string v9, "resources"
 
-    invoke-static {v1, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v2, 0x41000000    # 8.0f
 
-    invoke-static {v1, v2}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v1, v2}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
 
     move-result v2
 
@@ -1505,18 +1505,18 @@
 
     move-object v8, p1
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/menu/MenuFragment$t;-><init>(ILandroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/o;ZLcom/vk/menu/MenuFragment;Landroid/view/LayoutInflater;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/menu/MenuFragment$t;-><init>(ILandroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/Provider;ZLcom/vk/menu/MenuFragment;Landroid/view/LayoutInflater;)V
 
     .line 15
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    invoke-static {p1, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v1, 0x40000000    # 2.0f
 
-    invoke-static {p1, v1}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
+    invoke-static {p1, v1}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
 
     move-result p1
 
@@ -1524,11 +1524,11 @@
 
     move-result-object v1
 
-    invoke-static {v1, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v2, 0x40400000    # 3.0f
 
-    invoke-static {v1, v2}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v1, v2}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
 
     move-result v1
 
@@ -1536,13 +1536,13 @@
 
     move-result-object v3
 
-    invoke-static {v3, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3, v2}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v3, v2}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
 
     move-result v2
 
-    invoke-virtual {v10, p1, v1, p3, v2}, Lcom/vk/core/ui/d;->a(IIII)V
+    invoke-virtual {v10, p1, v1, p3, v2}, Lcom/vk/core/ui/CardItemDecorator;->a(IIII)V
 
     .line 16
     invoke-virtual {v0, v10}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
@@ -1551,7 +1551,7 @@
 
     .line 17
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -1578,14 +1578,14 @@
     iput-object v0, p0, Lcom/vk/menu/MenuFragment;->F:Landroidx/recyclerview/widget/RecyclerView;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/menu/MenuFragment;->H:Lcom/vk/music/view/t;
+    iget-object v1, p0, Lcom/vk/menu/MenuFragment;->H:Lcom/vk/music/view/SmallPlayerHelper;
 
-    invoke-virtual {v1}, Lcom/vk/music/view/t;->f()V
+    invoke-virtual {v1}, Lcom/vk/music/view/SmallPlayerHelper;->f()V
 
     .line 4
-    sget-object v1, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
+    sget-object v1, Lcom/vk/menu/MenuUtils;->c:Lcom/vk/menu/MenuUtils;
 
-    invoke-virtual {v1, v0}, Lcom/vk/menu/c;->a(Lcom/vk/menu/c$a;)V
+    invoke-virtual {v1, v0}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/menu/MenuUtils$a;)V
 
     return-void
 .end method
@@ -1621,7 +1621,7 @@
 
     move-result p1
 
-    invoke-static {v0, p1}, Lcom/vk/menu/c;->a(Lcom/vk/navigation/NavigationDelegate;I)V
+    invoke-static {v0, p1}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/navigation/NavigationDelegate;I)V
 
     :cond_1
     const/4 p1, 0x1
@@ -1662,20 +1662,20 @@
     invoke-virtual {v0, v1, p0}, Lcom/vk/stats/AppUseTime;->a(Lcom/vk/stats/AppUseTime$Section;Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/menu/MenuFragment;->J:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/menu/MenuFragment;->J:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_1
     const/4 v0, 0x0
 
     .line 4
-    iput-object v0, p0, Lcom/vk/menu/MenuFragment;->J:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/menu/MenuFragment;->J:Lio/reactivex/disposables/Disposable;
 
     .line 5
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onPause()V
 
     return-void
 .end method
@@ -1684,7 +1684,7 @@
     .locals 5
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
     new-instance v0, Landroid/content/IntentFilter;
@@ -1737,7 +1737,7 @@
     .line 9
     sget-object v0, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;
 
-    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->e()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/menu/MenuCache;->e()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1746,16 +1746,16 @@
     invoke-direct {v1, p0}, Lcom/vk/menu/MenuFragment$v;-><init>(Lcom/vk/menu/MenuFragment;)V
 
     .line 10
-    invoke-static {}, Lcom/vk/core/util/z0;->c()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->c()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 11
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/menu/MenuFragment;->J:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/menu/MenuFragment;->J:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

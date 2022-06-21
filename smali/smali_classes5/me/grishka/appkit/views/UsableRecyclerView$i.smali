@@ -1,5 +1,5 @@
 .class Lme/grishka/appkit/views/UsableRecyclerView$i;
-.super Lme/grishka/appkit/views/b;
+.super Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;
 .source "UsableRecyclerView.java"
 
 
@@ -39,7 +39,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lme/grishka/appkit/views/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {p0, p1}, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 2
     new-instance p1, Ljava/util/ArrayList;
@@ -66,7 +66,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
 
@@ -87,7 +87,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
 
@@ -96,7 +96,7 @@
     if-ge p1, v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemId(I)J
 
@@ -114,7 +114,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
 
@@ -123,7 +123,7 @@
     if-ge p1, v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemViewType(I)I
 
@@ -135,7 +135,7 @@
     add-int/lit16 p1, p1, -0x3e8
 
     .line 3
-    iget-object v0, p0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
 
@@ -150,7 +150,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
 
@@ -159,7 +159,7 @@
     if-ge p2, v0, :cond_0
 
     .line 2
-    invoke-super {p0, p1, p2}, Lme/grishka/appkit/views/b;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
+    invoke-super {p0, p1, p2}, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
 
     :cond_0
     return-void
@@ -202,7 +202,7 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
@@ -219,7 +219,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onFailedToRecycleView(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
 
@@ -247,7 +247,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onViewAttachedToWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
@@ -264,7 +264,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onViewDetachedFromWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
@@ -281,7 +281,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lme/grishka/appkit/views/b;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lme/grishka/appkit/views/RecyclerViewAdapterWrapper;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 

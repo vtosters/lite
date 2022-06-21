@@ -3,12 +3,12 @@
 .source "MsgStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->b(ILcom/vk/im/engine/models/q;)Lcom/vk/im/engine/models/i;
+    value = Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->b(ILcom/vk/im/engine/models/Weight;)Lcom/vk/im/engine/models/Nearest;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-        "Lcom/vk/im/engine/models/i<",
-        "Lcom/vk/im/engine/internal/storage/models/e;",
+        "Lcom/vk/im/engine/models/Nearest<",
+        "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
         ">;>;"
     }
 .end annotation
@@ -31,20 +31,20 @@
 # instance fields
 .field final synthetic $dialogId:I
 
-.field final synthetic $weight:Lcom/vk/im/engine/models/q;
+.field final synthetic $weight:Lcom/vk/im/engine/models/Weight;
 
 .field final synthetic this$0:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;ILcom/vk/im/engine/models/q;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;ILcom/vk/im/engine/models/Weight;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->this$0:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;
 
     iput p2, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$dialogId:I
 
-    iput-object p3, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$weight:Lcom/vk/im/engine/models/q;
+    iput-object p3, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$weight:Lcom/vk/im/engine/models/Weight;
 
     const/4 p1, 0x1
 
@@ -55,15 +55,15 @@
 
 
 # virtual methods
-.method public final a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lcom/vk/im/engine/models/i;
+.method public final a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lcom/vk/im/engine/models/Nearest;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lio/requery/android/database/sqlite/SQLiteDatabase;",
             ")",
-            "Lcom/vk/im/engine/models/i<",
-            "Lcom/vk/im/engine/internal/storage/models/e;",
+            "Lcom/vk/im/engine/models/Nearest<",
+            "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
             ">;"
         }
     .end annotation
@@ -73,7 +73,7 @@
 
     iget v1, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$dialogId:I
 
-    iget-object v2, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$weight:Lcom/vk/im/engine/models/q;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$weight:Lcom/vk/im/engine/models/Weight;
 
     sget-object v3, Lcom/vk/im/engine/models/Direction;->BEFORE:Lcom/vk/im/engine/models/Direction;
 
@@ -85,7 +85,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;IIILjava/lang/Object;)Ljava/util/List;
+    invoke-static/range {v0 .. v7}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;IIILjava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
@@ -94,11 +94,11 @@
 
     iget v1, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$dialogId:I
 
-    iget-object v2, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$weight:Lcom/vk/im/engine/models/q;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$weight:Lcom/vk/im/engine/models/Weight;
 
     sget-object v3, Lcom/vk/im/engine/models/Direction;->AFTER:Lcom/vk/im/engine/models/Direction;
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;IIILjava/lang/Object;)Ljava/util/List;
+    invoke-static/range {v0 .. v7}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;IIILjava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
@@ -122,27 +122,27 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast v1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     .line 5
     invoke-static {p1, v2}, Lkotlin/collections/l;->c(Ljava/util/List;I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     .line 6
-    iget-object v5, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$weight:Lcom/vk/im/engine/models/q;
+    iget-object v5, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$weight:Lcom/vk/im/engine/models/Weight;
 
-    invoke-virtual {v5}, Lcom/vk/im/engine/models/q;->c()J
+    invoke-virtual {v5}, Lcom/vk/im/engine/models/Weight;->c()J
 
     move-result-wide v5
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/e;->f()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->f()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lcom/vk/im/engine/models/q;->c()J
+    invoke-virtual {v7}, Lcom/vk/im/engine/models/Weight;->c()J
 
     move-result-wide v7
 
@@ -175,27 +175,27 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast v1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     .line 9
     invoke-static {v0, v2}, Lkotlin/collections/l;->c(Ljava/util/List;I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast v0, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     .line 10
-    iget-object v2, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$weight:Lcom/vk/im/engine/models/q;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->$weight:Lcom/vk/im/engine/models/Weight;
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/models/q;->c()J
+    invoke-virtual {v2}, Lcom/vk/im/engine/models/Weight;->c()J
 
     move-result-wide v2
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/e;->f()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->f()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/models/q;->c()J
+    invoke-virtual {v4}, Lcom/vk/im/engine/models/Weight;->c()J
 
     move-result-wide v4
 
@@ -213,9 +213,9 @@
     .line 11
     :cond_3
     :goto_1
-    new-instance v0, Lcom/vk/im/engine/models/i;
+    new-instance v0, Lcom/vk/im/engine/models/Nearest;
 
-    invoke-direct {v0, p1, v4}, Lcom/vk/im/engine/models/i;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, p1, v4}, Lcom/vk/im/engine/models/Nearest;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object v0
 .end method
@@ -226,7 +226,7 @@
     .line 1
     check-cast p1, Lio/requery/android/database/sqlite/SQLiteDatabase;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lcom/vk/im/engine/models/i;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$2;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lcom/vk/im/engine/models/Nearest;
 
     move-result-object p1
 

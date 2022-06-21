@@ -3,7 +3,7 @@
 .source "StoryElongatedViewHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
-        "Lcom/vk/stories/holders/k;",
+        "Lcom/vk/stories/holders/StoryPreview;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(I)Lcom/vk/stories/holders/k;
+.method public final a(I)Lcom/vk/stories/holders/StoryPreview;
     .locals 1
 
     .line 1
@@ -60,14 +60,14 @@
 
     move-result-object p1
 
-    instance-of v0, p1, Lcom/vk/stories/holders/k;
+    instance-of v0, p1, Lcom/vk/stories/holders/StoryPreview;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vk/stories/holders/k;
+    check-cast p1, Lcom/vk/stories/holders/StoryPreview;
 
     return-object p1
 .end method
@@ -82,7 +82,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/search/holder/StoryElongatedViewHolder$1$1$getAnimationTargetView$1;->a(I)Lcom/vk/stories/holders/k;
+    invoke-virtual {p0, p1}, Lcom/vk/search/holder/StoryElongatedViewHolder$1$1$getAnimationTargetView$1;->a(I)Lcom/vk/stories/holders/StoryPreview;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "CommunityAddressesFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lb/d/b/a/f/a<",
-        "Lcom/vk/profile/data/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lb/d/b/a/f/Cluster<",
+        "Lcom/vk/profile/data/AddressClusterAdapter;",
         ">;>;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final invoke()Lb/d/b/a/f/a;
+.method public final invoke()Lb/d/b/a/f/Cluster;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lb/d/b/a/f/a<",
-            "Lcom/vk/profile/data/a;",
+            "Lb/d/b/a/f/Cluster<",
+            "Lcom/vk/profile/data/AddressClusterAdapter;",
             ">;"
         }
     .end annotation
@@ -60,7 +60,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$initMap$2;->this$0:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->t(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lb/d/b/a/f/a;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->t(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lb/d/b/a/f/Cluster;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$initMap$2;->invoke()Lb/d/b/a/f/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$initMap$2;->invoke()Lb/d/b/a/f/Cluster;
 
     move-result-object v0
 

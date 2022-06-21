@@ -25,13 +25,13 @@
     .end annotation
 .end field
 
-.field private b:Lcom/vk/ui/photoviewer/e;
+.field private b:Lcom/vk/ui/photoviewer/PhotoUpdater;
 
-.field private c:Lcom/vk/ui/photoviewer/i;
+.field private c:Lcom/vk/ui/photoviewer/TagsShower;
 
 .field private final d:Landroid/content/Context;
 
-.field private final e:Lio/reactivex/disposables/a;
+.field private final e:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private final f:Landroid/view/View;
 
@@ -55,10 +55,10 @@
 
 .field private final p:Landroid/view/View;
 
-.field private final q:Lb/h/g/l/e;
+.field private final q:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/dto/photo/Photo;",
             ">;"
         }
@@ -76,7 +76,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/ui/photoviewer/BottomPanelController$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/ui/photoviewer/BottomPanelController$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/ui/photoviewer/BottomPanelController;->s:Lcom/vk/ui/photoviewer/BottomPanelController$a;
 
@@ -104,7 +104,7 @@
 
     const-string v1, "LayoutInflater.from(cont\u2026hoto_viewer_bottom, null)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->a:Landroid/view/View;
 
@@ -116,18 +116,18 @@
     iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->d:Landroid/content/Context;
 
     .line 4
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->e:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->e:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 5
     new-instance p1, Lcom/vk/ui/photoviewer/BottomPanelController$m;
 
     invoke-direct {p1, p0}, Lcom/vk/ui/photoviewer/BottomPanelController$m;-><init>(Lcom/vk/ui/photoviewer/BottomPanelController;)V
 
-    iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->q:Lb/h/g/l/e;
+    iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->q:Lb/h/g/l/NotificationListener;
 
     .line 6
     iget-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->a:Landroid/view/View;
@@ -140,7 +140,7 @@
 
     const-string v0, "bottomPanel.findViewById(R.id.likes)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->f:Landroid/view/View;
 
@@ -155,7 +155,7 @@
 
     const-string v0, "bottomPanel.findViewById(R.id.iv_likes)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -172,7 +172,7 @@
 
     const-string v0, "bottomPanel.findViewById(R.id.tv_likes)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -189,7 +189,7 @@
 
     const-string v0, "bottomPanel.findViewById\u2026id.photo_viewer_comments)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/view/OverlayTextView;
 
@@ -206,7 +206,7 @@
 
     const-string v0, "bottomPanel.findViewById\u2026d.photo_viewer_save_docs)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/view/OverlayTextView;
 
@@ -223,7 +223,7 @@
 
     const-string v0, "bottomPanel.findViewById(R.id.photo_viewer_tags)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/view/OverlayTextView;
 
@@ -240,7 +240,7 @@
 
     const-string v0, "bottomPanel.findViewById\u2026.id.photo_viewer_reposts)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/view/OverlayTextView;
 
@@ -257,7 +257,7 @@
 
     const-string v0, "bottomPanel.findViewById(R.id.photo_viewer_descr)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -274,7 +274,7 @@
 
     const-string v0, "bottomPanel.findViewById(R.id.show_attached_goods)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -291,7 +291,7 @@
 
     const-string v0, "bottomPanel.findViewById\u2026id.photo_viewer_location)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -308,23 +308,23 @@
 
     const-string v0, "bottomPanel.findViewById(R.id.bottom_divider)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->p:Landroid/view/View;
 
     .line 17
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
     .line 18
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->q:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->q:Lb/h/g/l/NotificationListener;
 
     const/16 v1, 0x71
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     return-void
 .end method
@@ -362,7 +362,7 @@
 
     .line 95
     :cond_0
-    new-instance v0, Lcom/vk/api/photos/s;
+    new-instance v0, Lcom/vk/api/photos/PhotosGetTags;
 
     iget v2, p2, Lcom/vk/dto/photo/Photo;->c:I
 
@@ -370,12 +370,12 @@
 
     iget-object v4, p2, Lcom/vk/dto/photo/Photo;->M:Ljava/lang/String;
 
-    invoke-direct {v0, v2, v3, v4}, Lcom/vk/api/photos/s;-><init>(IILjava/lang/String;)V
+    invoke-direct {v0, v2, v3, v4}, Lcom/vk/api/photos/PhotosGetTags;-><init>(IILjava/lang/String;)V
 
     const/4 v2, 0x1
 
     .line 96
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -394,7 +394,7 @@
     move-object v4, p1
 
     .line 97
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -403,7 +403,7 @@
 
     invoke-direct {v0, p2}, Lcom/vk/ui/photoviewer/BottomPanelController$f;-><init>(Lcom/vk/dto/photo/Photo;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -416,18 +416,18 @@
     sget-object p2, Lcom/vk/ui/photoviewer/BottomPanelController$h;->a:Lcom/vk/ui/photoviewer/BottomPanelController$h;
 
     .line 101
-    invoke-virtual {p1, v0, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "PhotosGetTags(photo.owne\u2026 { it.showToastError() })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 102
-    iget-object p2, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->e:Lio/reactivex/disposables/a;
+    iget-object p2, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->e:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
 
@@ -450,7 +450,7 @@
     const/4 v0, 0x2
 
     .line 105
-    invoke-static {p1, p2, v0, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, p2, v0, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :goto_0
     return-void
@@ -460,11 +460,11 @@
     .locals 11
 
     .line 73
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result v0
 
@@ -481,7 +481,7 @@
     if-nez v0, :cond_2
 
     .line 75
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->b:Lcom/vk/ui/photoviewer/e;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->b:Lcom/vk/ui/photoviewer/PhotoUpdater;
 
     if-eqz v0, :cond_1
 
@@ -489,7 +489,7 @@
 
     invoke-direct {v2, p0, p1, p3}, Lcom/vk/ui/photoviewer/BottomPanelController$like$1;-><init>(Lcom/vk/ui/photoviewer/BottomPanelController;Landroid/content/Context;Z)V
 
-    invoke-interface {v0, p2, v1, v2}, Lcom/vk/ui/photoviewer/e;->a(Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/b;)V
+    invoke-interface {v0, p2, v1, v2}, Lcom/vk/ui/photoviewer/PhotoUpdater;->a(Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/Functions2;)V
 
     :cond_1
     return-void
@@ -518,7 +518,7 @@
 
     .line 80
     :goto_0
-    new-instance v2, Lcom/vtosters/lite/api/wall/h;
+    new-instance v2, Lcom/vtosters/lite/api/wall/WallLike;
 
     iget v5, p2, Lcom/vk/dto/photo/Photo;->c:I
 
@@ -536,12 +536,12 @@
 
     move v4, p3
 
-    invoke-direct/range {v3 .. v10}, Lcom/vtosters/lite/api/wall/h;-><init>(ZIIZIILjava/lang/String;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vtosters/lite/api/wall/WallLike;-><init>(ZIIZIILjava/lang/String;)V
 
     const/4 v3, 0x0
 
     .line 81
-    invoke-static {v2, v3, v1, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v2, v3, v1, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -550,7 +550,7 @@
 
     invoke-direct {v2, p0, p2, p3, p1}, Lcom/vk/ui/photoviewer/BottomPanelController$i;-><init>(Lcom/vk/ui/photoviewer/BottomPanelController;Lcom/vk/dto/photo/Photo;ZLandroid/content/Context;)V
 
-    invoke-virtual {v1, v2}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -559,7 +559,7 @@
 
     invoke-direct {v1, p2, p3, v0}, Lcom/vk/ui/photoviewer/BottomPanelController$j;-><init>(Lcom/vk/dto/photo/Photo;ZI)V
 
-    invoke-virtual {p1, v1}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p1, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -568,29 +568,29 @@
 
     invoke-direct {p3, p0, p2}, Lcom/vk/ui/photoviewer/BottomPanelController$k;-><init>(Lcom/vk/ui/photoviewer/BottomPanelController;Lcom/vk/dto/photo/Photo;)V
 
-    invoke-virtual {p1, p3}, Lc/a/m;->e(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {p1, p3}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 85
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object p2
 
     sget-object p3, Lcom/vk/ui/photoviewer/BottomPanelController$l;->a:Lcom/vk/ui/photoviewer/BottomPanelController$l;
 
-    invoke-virtual {p1, p2, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "WallLike(liked, photo.ow\u2026 { it.showToastError() })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 86
-    iget-object p2, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->e:Lio/reactivex/disposables/a;
+    iget-object p2, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->e:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -625,7 +625,7 @@
     invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 31
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->c:Lcom/vk/ui/photoviewer/i;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->c:Lcom/vk/ui/photoviewer/TagsShower;
 
     if-eqz v0, :cond_1
 
@@ -633,9 +633,9 @@
 
     const-string v2, "photo.tags"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/ui/photoviewer/i;->a(Ljava/util/List;)V
+    invoke-interface {v0, v1}, Lcom/vk/ui/photoviewer/TagsShower;->a(Ljava/util/List;)V
 
     .line 32
     :cond_1
@@ -681,16 +681,16 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 37
-    sget-object v0, Lcom/vk/ui/photoviewer/a;->a:Lcom/vk/ui/photoviewer/a;
+    sget-object v0, Lcom/vk/ui/photoviewer/AddressGetter;->a:Lcom/vk/ui/photoviewer/AddressGetter;
 
     .line 38
     iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->d:Landroid/content/Context;
 
     const-string v2, "appContext"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/ui/photoviewer/a;->a(Landroid/content/Context;Lcom/vk/dto/photo/Photo;)Lc/a/m;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/ui/photoviewer/AddressGetter;->a(Landroid/content/Context;Lcom/vk/dto/photo/Photo;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -699,18 +699,18 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/ui/photoviewer/BottomPanelController$e;-><init>(Lcom/vk/ui/photoviewer/BottomPanelController;Lcom/vk/dto/photo/Photo;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "AddressGetter\n          \u2026                        }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 40
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->e:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->e:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
 
@@ -838,19 +838,19 @@
     .line 66
     iget-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->m:Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
-    invoke-static {p2}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {p2}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
-    invoke-virtual {v0, p2}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p2}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
-    invoke-static {p2, v1}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Z)Ljava/lang/CharSequence;
+    invoke-static {p2, v1}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;Z)Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -1004,11 +1004,11 @@
     .locals 4
 
     .line 18
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v0
 
@@ -1051,7 +1051,7 @@
 
     invoke-direct {v3, p1}, Lcom/vk/ui/photoviewer/BottomPanelController$bindDocument$1;-><init>(Lcom/vtosters/lite/attachments/DocumentAttachment;)V
 
-    invoke-static {v1, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v1, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 26
     iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->j:Lcom/vk/core/view/OverlayTextView;
@@ -1074,7 +1074,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/ui/photoviewer/BottomPanelController$bindDocument$2;-><init>(Lcom/vk/ui/photoviewer/BottomPanelController;Lcom/vtosters/lite/attachments/DocumentAttachment;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1083,7 +1083,7 @@
     .locals 11
 
     .line 87
-    new-instance v0, Lb/h/c/i/b;
+    new-instance v0, Lcom/vk/api/docs/DocsAdd;
 
     iget v1, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;->D:I
 
@@ -1091,14 +1091,14 @@
 
     iget-object p1, p1, Lcom/vtosters/lite/attachments/DocumentAttachment;->B:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, p1}, Lb/h/c/i/b;-><init>(IILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, p1}, Lcom/vk/api/docs/DocsAdd;-><init>(IILjava/lang/String;)V
 
     const/4 p1, 0x0
 
     const/4 v1, 0x1
 
     .line 88
-    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -1119,7 +1119,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1132,18 +1132,18 @@
     sget-object v0, Lcom/vk/ui/photoviewer/BottomPanelController$d;->a:Lcom/vk/ui/photoviewer/BottomPanelController$d;
 
     .line 92
-    invoke-virtual {p1, p2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "DocsAdd(attach.oid, atta\u2026rror()\n                })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 93
-    iget-object p2, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->e:Lio/reactivex/disposables/a;
+    iget-object p2, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->e:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1161,17 +1161,17 @@
     .locals 1
 
     .line 7
-    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
+    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
 
     move-result-object v0
 
-    invoke-interface {v0, p2}, Lcom/vk/bridges/w;->a(Lcom/vk/dto/photo/Photo;)Lcom/vk/bridges/y;
+    invoke-interface {v0, p2}, Lcom/vk/bridges/PostsBridge2;->a(Lcom/vk/dto/photo/Photo;)Lcom/vk/bridges/PostsBridge;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/bridges/y;->h()Lcom/vk/bridges/y;
+    invoke-virtual {p2}, Lcom/vk/bridges/PostsBridge;->h()Lcom/vk/bridges/PostsBridge;
 
-    invoke-virtual {p2, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p2, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -1180,15 +1180,15 @@
     .locals 2
 
     .line 6
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
     const/16 v1, 0x71
 
-    invoke-virtual {v0, v1, p1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1336,7 +1336,7 @@
     .line 8
     invoke-virtual {p1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1346,7 +1346,7 @@
     const/4 p2, 0x0
 
     .line 9
-    invoke-static {p1, p2}, Lcom/vtosters/lite/n;->a(Landroid/app/Activity;Z)Z
+    invoke-static {p1, p2}, Lcom/vtosters/lite/ActivityUtils;->a(Landroid/app/Activity;Z)Z
 
     move-result p1
 
@@ -1378,7 +1378,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/dto/common/j;->getId()I
+    invoke-interface {v0}, Lcom/vk/dto/common/WithId;->getId()I
 
     move-result v0
 
@@ -1390,7 +1390,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/dto/common/k;->b()I
+    invoke-interface {v0}, Lcom/vk/dto/common/WithOwner;->b()I
 
     move-result v0
 
@@ -1449,7 +1449,7 @@
 
     move-object v1, p1
 
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/market/attached/TaggedGoodsHelper;->a(Landroid/content/Context;IILjava/lang/String;Lcom/vk/dto/tags/Tag$ContentType;Lkotlin/jvm/b/b;)V
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/market/attached/TaggedGoodsHelper;->a(Landroid/content/Context;IILjava/lang/String;Lcom/vk/dto/tags/Tag$ContentType;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1465,7 +1465,7 @@
     if-eqz v0, :cond_1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->c:Lcom/vk/ui/photoviewer/i;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->c:Lcom/vk/ui/photoviewer/TagsShower;
 
     if-eqz v0, :cond_0
 
@@ -1473,17 +1473,17 @@
 
     const-string v1, "photo.tags"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lcom/vk/ui/photoviewer/i;->a(Ljava/util/List;)V
+    invoke-interface {v0, p1}, Lcom/vk/ui/photoviewer/TagsShower;->a(Ljava/util/List;)V
 
     .line 6
     :cond_0
-    iget-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->c:Lcom/vk/ui/photoviewer/i;
+    iget-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->c:Lcom/vk/ui/photoviewer/TagsShower;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/ui/photoviewer/i;->a()V
+    invoke-interface {p1}, Lcom/vk/ui/photoviewer/TagsShower;->a()V
 
     :cond_1
     return-void
@@ -1573,7 +1573,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/dto/common/k;->b()I
+    invoke-interface {p1}, Lcom/vk/dto/common/WithOwner;->b()I
 
     move-result v1
 
@@ -1589,7 +1589,7 @@
 
     const-string v1, "attach.photo"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vk/dto/photo/Photo;)V
 
@@ -1643,20 +1643,20 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/ui/photoviewer/e;)V
+.method public final a(Lcom/vk/ui/photoviewer/PhotoUpdater;)V
     .locals 0
 
     .line 7
-    iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->b:Lcom/vk/ui/photoviewer/e;
+    iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->b:Lcom/vk/ui/photoviewer/PhotoUpdater;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/ui/photoviewer/i;)V
+.method public final a(Lcom/vk/ui/photoviewer/TagsShower;)V
     .locals 0
 
     .line 8
-    iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->c:Lcom/vk/ui/photoviewer/i;
+    iput-object p1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->c:Lcom/vk/ui/photoviewer/TagsShower;
 
     return-void
 .end method
@@ -1665,20 +1665,20 @@
     .locals 2
 
     .line 4
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->e:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->e:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 5
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->q:Lb/h/g/l/e;
+    iget-object v1, p0, Lcom/vk/ui/photoviewer/BottomPanelController;->q:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     return-void
 .end method

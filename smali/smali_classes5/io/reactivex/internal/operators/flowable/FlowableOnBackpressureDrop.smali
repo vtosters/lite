@@ -1,9 +1,9 @@
 .class public final Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop;
-.super Lio/reactivex/internal/operators/flowable/a;
+.super Lio/reactivex/internal/operators/flowable/AbstractFlowableWithUpstream;
 .source "FlowableOnBackpressureDrop.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -18,19 +18,19 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/internal/operators/flowable/a<",
+        "Lio/reactivex/internal/operators/flowable/AbstractFlowableWithUpstream<",
         "TT;TT;>;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final c:Lc/a/z/g;
+.field final c:Lio/reactivex/functions/Consumer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-TT;>;"
         }
     .end annotation
@@ -38,21 +38,21 @@
 
 
 # direct methods
-.method public constructor <init>(Lc/a/g;)V
+.method public constructor <init>(Lio/reactivex/Flowable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/g<",
+            "Lio/reactivex/Flowable<",
             "TT;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/flowable/a;-><init>(Lc/a/g;)V
+    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/flowable/AbstractFlowableWithUpstream;-><init>(Lio/reactivex/Flowable;)V
 
     .line 2
-    iput-object p0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop;->c:Lc/a/z/g;
+    iput-object p0, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop;->c:Lio/reactivex/functions/Consumer;
 
     return-void
 .end method
@@ -70,26 +70,26 @@
     return-void
 .end method
 
-.method protected b(Le/b/c;)V
+.method protected b(Le/b/Subscriber;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/a;->b:Lc/a/g;
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/AbstractFlowableWithUpstream;->b:Lio/reactivex/Flowable;
 
     new-instance v1, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;
 
-    iget-object v2, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop;->c:Lc/a/z/g;
+    iget-object v2, p0, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop;->c:Lio/reactivex/functions/Consumer;
 
-    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;-><init>(Le/b/c;Lc/a/z/g;)V
+    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/flowable/FlowableOnBackpressureDrop$BackpressureDropSubscriber;-><init>(Le/b/Subscriber;Lio/reactivex/functions/Consumer;)V
 
-    invoke-virtual {v0, v1}, Lc/a/g;->a(Lc/a/h;)V
+    invoke-virtual {v0, v1}, Lio/reactivex/Flowable;->a(Lio/reactivex/FlowableSubscriber;)V
 
     return-void
 .end method

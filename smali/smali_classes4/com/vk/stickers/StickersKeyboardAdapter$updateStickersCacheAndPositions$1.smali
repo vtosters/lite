@@ -3,7 +3,7 @@
 .source "StickersKeyboardAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/Integer;",
-        "Lcom/vk/stickers/e0/a;",
-        "Lkotlin/m;",
+        "Lcom/vk/stickers/e0/StickerBaseRecyclerItem;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -57,20 +57,20 @@
     .line 1
     check-cast p1, Ljava/lang/Integer;
 
-    check-cast p2, Lcom/vk/stickers/e0/a;
+    check-cast p2, Lcom/vk/stickers/e0/StickerBaseRecyclerItem;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/stickers/StickersKeyboardAdapter$updateStickersCacheAndPositions$1;->a(Ljava/lang/Integer;Lcom/vk/stickers/e0/a;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/stickers/StickersKeyboardAdapter$updateStickersCacheAndPositions$1;->a(Ljava/lang/Integer;Lcom/vk/stickers/e0/StickerBaseRecyclerItem;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public final a(Ljava/lang/Integer;Lcom/vk/stickers/e0/a;)V
+.method public final a(Ljava/lang/Integer;Lcom/vk/stickers/e0/StickerBaseRecyclerItem;)V
     .locals 2
 
     .line 2
-    instance-of v0, p2, Lcom/vk/stickers/e0/f;
+    instance-of v0, p2, Lcom/vk/stickers/e0/StickerRecyclerItem;
 
     if-eqz v0, :cond_0
 
@@ -83,7 +83,7 @@
 
     const-string v1, "i"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
@@ -95,14 +95,14 @@
 
     move-result v1
 
-    invoke-static {v0, p1, v1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v0, p1, v1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/stickers/StickersKeyboardAdapter$updateStickersCacheAndPositions$1;->$localStickers:Ljava/util/List;
 
-    check-cast p2, Lcom/vk/stickers/e0/f;
+    check-cast p2, Lcom/vk/stickers/e0/StickerRecyclerItem;
 
-    invoke-virtual {p2}, Lcom/vk/stickers/e0/f;->f()Lcom/vk/dto/stickers/StickerItem;
+    invoke-virtual {p2}, Lcom/vk/stickers/e0/StickerRecyclerItem;->f()Lcom/vk/dto/stickers/StickerItem;
 
     move-result-object p2
 

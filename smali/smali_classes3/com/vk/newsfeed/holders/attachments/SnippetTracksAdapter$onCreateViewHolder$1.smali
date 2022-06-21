@@ -3,12 +3,12 @@
 .source "AudioPlaylistHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/holders/attachments/SnippetTracksAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/o;
+    value = Lcom/vk/newsfeed/holders/attachments/SnippetTracksAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/MusicViewHolder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/music/MusicTrack;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -28,7 +28,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/model/t;)V
+.method constructor <init>(Lcom/vk/music/model/PlaylistSnippetModel;)V
     .locals 1
 
     const/4 v0, 0x1
@@ -45,10 +45,10 @@
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vk/music/model/t;
+    check-cast v0, Lcom/vk/music/model/PlaylistSnippetModel;
 
     .line 1
-    invoke-virtual {v0, p1}, Lcom/vk/music/model/t;->b(Lcom/vk/dto/music/MusicTrack;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/music/model/PlaylistSnippetModel;->b(Lcom/vk/dto/music/MusicTrack;)Z
 
     move-result p1
 
@@ -63,12 +63,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
-    const-class v0, Lcom/vk/music/model/t;
+    const-class v0, Lcom/vk/music/model/PlaylistSnippetModel;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 

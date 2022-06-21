@@ -68,7 +68,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p2, v0, p1}, Lcom/vk/attachpicker/util/f;->b(IIF)I
+    invoke-static {p2, v0, p1}, Lcom/vk/attachpicker/util/Utils;->b(IIF)I
 
     move-result p1
 
@@ -106,7 +106,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/j/b/b;->e()Lcom/vk/core/fragments/j/b/a;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->e()Lcom/vk/core/fragments/j/b/ParentSupportFragment;
 
     move-result-object p1
 
@@ -129,13 +129,13 @@
 
     if-nez v0, :cond_1
 
-    instance-of v0, p1, Lcom/vk/newsfeed/posting/attachments/b;
+    instance-of v0, p1, Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vk/newsfeed/posting/attachments/b;
+    check-cast p1, Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/attachments/b;->h4()Z
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;->h4()Z
 
     move-result v0
 
@@ -144,7 +144,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity$a;->a:Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;
 
-    invoke-static {v0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->a(Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;Lcom/vk/newsfeed/posting/attachments/b;)V
+    invoke-static {v0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->a(Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;)V
 
     goto :goto_0
 
@@ -163,14 +163,14 @@
 
     move-result-object p1
 
-    instance-of v0, p1, Lcom/vk/newsfeed/posting/attachments/gallery/e;
+    instance-of v0, p1, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryFragment;
 
     if-nez v0, :cond_3
 
     const/4 p1, 0x0
 
     :cond_3
-    check-cast p1, Lcom/vk/newsfeed/posting/attachments/gallery/e;
+    check-cast p1, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryFragment;
 
     if-eqz p1, :cond_5
 
@@ -187,7 +187,7 @@
 
     .line 6
     :goto_1
-    invoke-virtual {p1, p2}, Lcom/vk/newsfeed/posting/attachments/gallery/e;->x0(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/newsfeed/posting/attachments/gallery/PostingAttachGalleryFragment;->x0(Z)V
 
     :cond_5
     return-void

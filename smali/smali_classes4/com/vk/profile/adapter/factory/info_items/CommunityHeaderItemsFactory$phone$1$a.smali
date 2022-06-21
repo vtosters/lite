@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$phone$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/d;
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$phone$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/community/CommunityDetailsItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$phone$1;
 
-.field final synthetic b:Lcom/vtosters/lite/api/i;
+.field final synthetic b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$phone$1;Lcom/vtosters/lite/api/i;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$phone$1;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$phone$1$a;->a:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$phone$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$phone$1$a;->b:Lcom/vtosters/lite/api/i;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$phone$1$a;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,7 +57,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$phone$1$a;->b:Lcom/vtosters/lite/api/i;
+    iget-object v2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$phone$1$a;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget-object v2, v2, Lcom/vtosters/lite/api/ExtendedUserProfile;->k0:Ljava/lang/String;
 
@@ -81,12 +81,12 @@
 
     iget-object v1, v1, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$phone$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->i(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;)Lc/a/z/g;
+    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->i(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;)Lio/reactivex/functions/Consumer;
 
     move-result-object v1
 
     .line 5
-    invoke-static {p1, v0, v1}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;Landroid/content/Intent;Lc/a/z/g;)V
+    invoke-static {p1, v0, v1}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;Landroid/content/Intent;Lio/reactivex/functions/Consumer;)V
 
     return-void
 .end method

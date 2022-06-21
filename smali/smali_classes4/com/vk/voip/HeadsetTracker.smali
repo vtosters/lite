@@ -56,17 +56,17 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v0, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/v;->F()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/DeviceState;->F()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v0, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/v;->G()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/DeviceState;->G()Z
 
     move-result v0
 
@@ -96,7 +96,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     sget-object v1, Lcom/vk/voip/HeadsetTracker;->a:Lcom/vk/voip/HeadsetTracker$HeadsetActionReceiver;
 
@@ -126,7 +126,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     sget-object v1, Lcom/vk/voip/HeadsetTracker;->a:Lcom/vk/voip/HeadsetTracker$HeadsetActionReceiver;
 

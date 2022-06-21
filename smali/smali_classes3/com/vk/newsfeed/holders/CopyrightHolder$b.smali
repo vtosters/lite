@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lio/reactivex/disposables/b;
+.field final synthetic a:Lio/reactivex/disposables/Disposable;
 
 
 # direct methods
-.method constructor <init>(Lio/reactivex/disposables/b;)V
+.method constructor <init>(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$b;->a:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$b;->a:Lio/reactivex/disposables/Disposable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,9 +38,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$b;->a:Lio/reactivex/disposables/b;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder$b;->a:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     return-void
 .end method

@@ -3,13 +3,13 @@
 .source "VkVideoBridge.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/k0;
+.implements Lcom/vk/bridges/VideoBridge1;
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lkotlin/e;
+.field private static final b:Lkotlin/Lazy2;
 
 .field private static c:Ljava/lang/Long;
 
@@ -24,13 +24,13 @@
 
     const/4 v0, 0x1
 
-    new-array v1, v0, [Lkotlin/u/j;
+    new-array v1, v0, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v3, Lcom/vtosters/lite/bridges/VkVideoBridge;
 
-    invoke-static {v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -38,15 +38,15 @@
 
     const-string v5, "getAutoPlayHolder()Lcom/vk/libvideo/autoplay/AutoPlayInstanceHolder;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    sput-object v1, Lcom/vtosters/lite/bridges/VkVideoBridge;->a:[Lkotlin/u/j;
+    sput-object v1, Lcom/vtosters/lite/bridges/VkVideoBridge;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v1, Lcom/vtosters/lite/bridges/VkVideoBridge;
@@ -58,11 +58,11 @@
     .line 2
     sget-object v1, Lcom/vtosters/lite/bridges/VkVideoBridge$autoPlayHolder$2;->a:Lcom/vtosters/lite/bridges/VkVideoBridge$autoPlayHolder$2;
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v1
 
-    sput-object v1, Lcom/vtosters/lite/bridges/VkVideoBridge;->b:Lkotlin/e;
+    sput-object v1, Lcom/vtosters/lite/bridges/VkVideoBridge;->b:Lkotlin/Lazy2;
 
     .line 3
     sput-boolean v0, Lcom/vtosters/lite/bridges/VkVideoBridge;->d:Z
@@ -70,9 +70,9 @@
     .line 4
     sget-object v0, Lcom/vk/media/player/VideoHelper;->c:Lcom/vk/media/player/VideoHelper;
 
-    sget-object v1, Lcom/vtosters/lite/media/a;->b:Lcom/vtosters/lite/media/a;
+    sget-object v1, Lcom/vtosters/lite/media/VideoAnalytics;->b:Lcom/vtosters/lite/media/VideoAnalytics;
 
-    invoke-virtual {v0, v1}, Lcom/vk/media/player/VideoHelper;->a(Lcom/vk/media/player/b$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/player/VideoHelper;->a(Lcom/vk/media/player/PlayerAnalytics$a;)V
 
     return-void
 .end method
@@ -89,15 +89,15 @@
 .method private final m()Lcom/vk/libvideo/autoplay/AutoPlayInstanceHolder;
     .locals 3
 
-    sget-object v0, Lcom/vtosters/lite/bridges/VkVideoBridge;->b:Lkotlin/e;
+    sget-object v0, Lcom/vtosters/lite/bridges/VkVideoBridge;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vtosters/lite/bridges/VkVideoBridge;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/bridges/VkVideoBridge;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -108,11 +108,11 @@
 
 
 # virtual methods
-.method public a(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;ILcom/vk/navigation/k;)Lcom/vk/core/util/w;
+.method public a(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;ILcom/vk/navigation/ModalDialogCallback;)Lcom/vk/core/util/Dismissable;
     .locals 6
 
     .line 8
-    sget-object v0, Lcom/vk/video/c/b;->a:Lcom/vk/video/c/b$a;
+    sget-object v0, Lcom/vk/video/c/VideoAlbumsSheet;->a:Lcom/vk/video/c/VideoAlbumsSheet$a;
 
     const/4 v4, 0x0
 
@@ -124,7 +124,7 @@
 
     move-object v5, p4
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/video/c/b$a;->a(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;IZLcom/vk/navigation/k;)Lcom/vk/core/util/w;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/video/c/VideoAlbumsSheet$a;->a(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;IZLcom/vk/navigation/ModalDialogCallback;)Lcom/vk/core/util/Dismissable;
 
     move-result-object p1
 
@@ -135,13 +135,13 @@
     .locals 1
 
     .line 63
-    invoke-static {p1}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {p1}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     const-string v0, "LinkParser.parseLinks(input)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -187,7 +187,7 @@
 
     move-object v1, v0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->a(Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;ILkotlin/jvm/b/c;ZILjava/lang/Object;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->a(Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;ILkotlin/jvm/b/Functions1;ZILjava/lang/Object;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;
 
     .line 47
     invoke-virtual {v0}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->f()Landroidx/appcompat/app/AlertDialog;
@@ -199,7 +199,7 @@
     .locals 0
 
     .line 62
-    invoke-static/range {p1 .. p6}, Lcom/vtosters/lite/utils/n;->a(Landroid/app/Activity;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {p1 .. p6}, Lcom/vtosters/lite/utils/VKLiveUtils;->a(Landroid/app/Activity;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -222,7 +222,7 @@
     invoke-direct {p1, p2}, Lcom/vtosters/lite/attachments/VideoAttachment;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
     .line 11
-    new-instance v8, Lcom/vk/fave/entities/e;
+    new-instance v8, Lcom/vk/fave/entities/FaveMetaInfo;
 
     iget-object v2, p2, Lcom/vk/dto/common/VideoFile;->w0:Ljava/lang/String;
 
@@ -238,10 +238,10 @@
 
     move-object v3, p3
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/fave/entities/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/fave/entities/FaveMetaInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 12
-    invoke-static {v0, p1, v8}, Lcom/vk/fave/FaveController;->b(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;)V
+    invoke-static {v0, p1, v8}, Lcom/vk/fave/FaveController;->b(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)V
 
     return-void
 .end method
@@ -299,11 +299,11 @@
     const/4 p2, 0x0
 
     .line 59
-    invoke-static {v0, p2}, Lcom/vtosters/lite/fragments/y2/t;->a(Lcom/vk/dto/common/VideoAlbum;Z)Lcom/vk/navigation/o;
+    invoke-static {v0, p2}, Lcom/vtosters/lite/fragments/y2/VideoAlbumFragment;->a(Lcom/vk/dto/common/VideoAlbum;Z)Lcom/vk/navigation/Navigator;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p2, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -312,16 +312,16 @@
     .locals 0
 
     .line 30
-    invoke-static {p2}, Lcom/vtosters/lite/fragments/y2/s;->s0(I)Lcom/vtosters/lite/fragments/y2/s$c;
+    invoke-static {p2}, Lcom/vtosters/lite/fragments/y2/VideoAlbumEditorFragment;->s0(I)Lcom/vtosters/lite/fragments/y2/VideoAlbumEditorFragment$c;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p2, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method public a(Landroid/content/Context;IILkotlin/jvm/b/a;)V
+.method public a(Landroid/content/Context;IILkotlin/jvm/b/Functions;)V
     .locals 10
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -334,22 +334,22 @@
             "(",
             "Landroid/content/Context;",
             "II",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 32
-    new-instance v0, Lcom/vk/api/video/f;
+    new-instance v0, Lcom/vk/api/video/VideoDeleteAlbum;
 
-    invoke-direct {v0, p3, p2}, Lcom/vk/api/video/f;-><init>(II)V
+    invoke-direct {v0, p3, p2}, Lcom/vk/api/video/VideoDeleteAlbum;-><init>(II)V
 
     const/4 p2, 0x0
 
     const/4 p3, 0x1
 
-    invoke-static {v0, p2, p3, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p2, p3, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -367,13 +367,13 @@
 
     move-object v2, p1
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     new-instance p3, Lcom/vtosters/lite/bridges/VkVideoBridge$e;
 
-    invoke-direct {p3, p4}, Lcom/vtosters/lite/bridges/VkVideoBridge$e;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {p3, p4}, Lcom/vtosters/lite/bridges/VkVideoBridge$e;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 33
     new-instance p4, Lcom/vtosters/lite/bridges/VkVideoBridge$f;
@@ -381,7 +381,7 @@
     invoke-direct {p4, p1}, Lcom/vtosters/lite/bridges/VkVideoBridge$f;-><init>(Landroid/content/Context;)V
 
     .line 34
-    invoke-virtual {p2, p3, p4}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, p3, p4}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -390,7 +390,7 @@
     .locals 0
 
     .line 31
-    invoke-static {p4}, Lcom/vtosters/lite/fragments/y2/s;->a(Lcom/vk/dto/video/VideoAlbum;)Lcom/vtosters/lite/fragments/y2/s$c;
+    invoke-static {p4}, Lcom/vtosters/lite/fragments/y2/VideoAlbumEditorFragment;->a(Lcom/vk/dto/video/VideoAlbum;)Lcom/vtosters/lite/fragments/y2/VideoAlbumEditorFragment$c;
 
     move-result-object p4
 
@@ -398,9 +398,9 @@
 
     move-result-object p2
 
-    invoke-virtual {p4, p2}, Lcom/vtosters/lite/fragments/y2/s$c;->a(Ljava/lang/Long;)Lcom/vtosters/lite/fragments/y2/s$c;
+    invoke-virtual {p4, p2}, Lcom/vtosters/lite/fragments/y2/VideoAlbumEditorFragment$c;->a(Ljava/lang/Long;)Lcom/vtosters/lite/fragments/y2/VideoAlbumEditorFragment$c;
 
-    invoke-virtual {p4, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p4, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -409,13 +409,13 @@
     .locals 2
 
     .line 48
-    invoke-static {p2}, Lcom/vtosters/lite/upload/k;->d(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/vtosters/lite/upload/UploadUtils;->d(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p2
 
     const-string v0, "UploadUtils.resolvePath(uri)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 49
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -433,7 +433,7 @@
     const/4 v0, 0x0
 
     .line 50
-    invoke-static {p1, p2, p3, v0}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, p2, p3, v0}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -447,7 +447,7 @@
 
     const-string v1, "Uri.parse(path)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1, p3, p2}, Lcom/vtosters/lite/VideoUploadDialog$a;->a(Landroid/content/Context;ILandroid/net/Uri;)V
 
@@ -464,7 +464,7 @@
     .end annotation
 
     .line 67
-    new-instance v0, Lcom/vk/api/video/j0;
+    new-instance v0, Lcom/vk/api/video/VideoRemoveActionButton;
 
     iget v1, p2, Lcom/vk/dto/common/VideoFile;->a:I
 
@@ -478,14 +478,14 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/api/video/j0;-><init>(Ljava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/api/video/VideoRemoveActionButton;-><init>(Ljava/lang/Integer;Ljava/lang/Integer;)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 68
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -500,7 +500,7 @@
     invoke-direct {p2, p1}, Lcom/vtosters/lite/bridges/VkVideoBridge$d;-><init>(Landroid/content/Context;)V
 
     .line 71
-    invoke-virtual {v0, v1, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -509,36 +509,36 @@
     .locals 1
 
     .line 25
-    new-instance p3, Lcom/vk/webapp/fragments/j$a;
+    new-instance p3, Lcom/vk/webapp/fragments/ReportFragment$a;
 
-    invoke-direct {p3}, Lcom/vk/webapp/fragments/j$a;-><init>()V
+    invoke-direct {p3}, Lcom/vk/webapp/fragments/ReportFragment$a;-><init>()V
 
     const-string v0, "comment"
 
     .line 26
-    invoke-virtual {p3, v0}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {p3, v0}, Lcom/vk/webapp/fragments/ReportFragment$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 27
     iget v0, p2, Lcom/vk/dto/common/VideoFile;->a:I
 
-    invoke-virtual {p3, v0}, Lcom/vk/webapp/fragments/j$a;->e(I)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {p3, v0}, Lcom/vk/webapp/fragments/ReportFragment$a;->e(I)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 28
     iget p2, p2, Lcom/vk/dto/common/VideoFile;->b:I
 
-    invoke-virtual {p3, p2}, Lcom/vk/webapp/fragments/j$a;->d(I)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {p3, p2}, Lcom/vk/webapp/fragments/ReportFragment$a;->d(I)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     const/4 p2, 0x1
 
     .line 29
-    invoke-virtual {p3, p2}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;
+    invoke-virtual {p3, p2}, Lcom/vk/navigation/Navigator;->b(Z)Lcom/vk/navigation/Navigator;
 
-    invoke-virtual {p3, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p3, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method public a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;ILjava/lang/String;Lkotlin/jvm/b/a;)V
+.method public a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;ILjava/lang/String;Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -547,8 +547,8 @@
             "Lcom/vk/dto/common/VideoFile;",
             "I",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -560,12 +560,12 @@
 
     invoke-direct {v0, p2, p4, v1}, Lcom/vk/libvideo/VideoFileController;-><init>(Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1, p3, p5}, Lcom/vk/libvideo/VideoFileController;->a(Landroid/content/Context;ILkotlin/jvm/b/a;)V
+    invoke-virtual {v0, p1, p3, p5}, Lcom/vk/libvideo/VideoFileController;->a(Landroid/content/Context;ILkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method public a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Lcom/vk/navigation/k;)V
+.method public a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Lcom/vk/navigation/ModalDialogCallback;)V
     .locals 7
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -585,11 +585,11 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v0
 
@@ -610,7 +610,7 @@
 
     move-object v6, p3
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;->a(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/k;)Lcom/vtosters/lite/actionlinks/views/selection/Selection$a;
+    invoke-virtual/range {v1 .. v6}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;->a(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/ModalDialogCallback;)Lcom/vtosters/lite/actionlinks/views/selection/Selection$a;
 
     return-void
 .end method
@@ -619,7 +619,7 @@
     .locals 0
 
     .line 14
-    invoke-static {p2}, Lcom/vtosters/lite/fragments/y2/y;->b(Lcom/vk/dto/common/VideoFile;)Lcom/vtosters/lite/fragments/y2/y$b;
+    invoke-static {p2}, Lcom/vtosters/lite/fragments/y2/VideoEditorFragment;->b(Lcom/vk/dto/common/VideoFile;)Lcom/vtosters/lite/fragments/y2/VideoEditorFragment$b;
 
     move-result-object p2
 
@@ -628,11 +628,11 @@
     .line 15
     invoke-virtual {p3}, Ljava/lang/Number;->longValue()J
 
-    invoke-virtual {p2, p3}, Lcom/vtosters/lite/fragments/y2/y$b;->a(Ljava/lang/Long;)Lcom/vtosters/lite/fragments/y2/y$b;
+    invoke-virtual {p2, p3}, Lcom/vtosters/lite/fragments/y2/VideoEditorFragment$b;->a(Ljava/lang/Long;)Lcom/vtosters/lite/fragments/y2/VideoEditorFragment$b;
 
     .line 16
     :cond_0
-    invoke-virtual {p2, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p2, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -641,24 +641,24 @@
     .locals 3
 
     .line 18
-    new-instance v0, Lcom/vk/webapp/fragments/j$a;
+    new-instance v0, Lcom/vk/webapp/fragments/ReportFragment$a;
 
-    invoke-direct {v0}, Lcom/vk/webapp/fragments/j$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/webapp/fragments/ReportFragment$a;-><init>()V
 
     const-string v1, "video"
 
     .line 19
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 20
     iget v1, p2, Lcom/vk/dto/common/VideoFile;->a:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->e(I)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->e(I)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 21
     iget p2, p2, Lcom/vk/dto/common/VideoFile;->b:I
 
-    invoke-virtual {v0, p2}, Lcom/vk/webapp/fragments/j$a;->d(I)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, p2}, Lcom/vk/webapp/fragments/ReportFragment$a;->d(I)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     if-eqz p4, :cond_0
 
@@ -667,21 +667,21 @@
 
     move-result-wide v1
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/fragments/j$a;->a(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/fragments/ReportFragment$a;->a(J)V
 
     :cond_0
     if-eqz p3, :cond_1
 
     .line 23
-    invoke-virtual {v0, p3}, Lcom/vk/webapp/fragments/j$a;->a(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, p3}, Lcom/vk/webapp/fragments/ReportFragment$a;->a(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     :cond_1
     const/4 p2, 0x1
 
     .line 24
-    invoke-virtual {v0, p2}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;
+    invoke-virtual {v0, p2}, Lcom/vk/navigation/Navigator;->b(Z)Lcom/vk/navigation/Navigator;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -732,7 +732,7 @@
     const v4, 0x7f120a1d
 
     .line 40
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
@@ -741,11 +741,11 @@
     .locals 1
 
     .line 60
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->k()Lcom/vk/dto/account/VideoConfig;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->k()Lcom/vk/dto/account/VideoConfig;
 
     move-result-object v0
 
@@ -756,9 +756,9 @@
     if-eqz v0, :cond_0
 
     .line 61
-    sget-object v0, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
+    sget-object v0, Lcom/vk/core/util/MediaLoadingInfo;->b:Lcom/vk/core/util/MediaLoadingInfo;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/p0;->a()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/MediaLoadingInfo;->a()Z
 
     move-result v0
 
@@ -789,7 +789,7 @@
 
     const-string v2, "video?.restriction ?: return false"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     sget-object v2, Lcom/vtosters/lite/bridges/VkVideoBridge;->c:Ljava/lang/Long;
@@ -958,7 +958,7 @@
     move-object v4, p4
 
     .line 9
-    invoke-static/range {v0 .. v10}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/f;Ljava/lang/Integer;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/OpenCallback;Ljava/lang/Integer;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1042,9 +1042,9 @@
     invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/AutoPlayInstanceHolder;->b()V
 
     .line 8
-    sget-object p1, Lcom/vk/libvideo/y/j;->a:Lcom/vk/libvideo/y/j;
+    sget-object p1, Lcom/vk/libvideo/y/VideoEvents12;->a:Lcom/vk/libvideo/y/VideoEvents12;
 
-    invoke-static {p1}, Lcom/vk/libvideo/y/m;->a(Lcom/vk/libvideo/y/a;)V
+    invoke-static {p1}, Lcom/vk/libvideo/y/VideoEventBus;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
 
     return-void
 .end method
@@ -1061,11 +1061,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->k()Lcom/vk/dto/account/VideoConfig;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->k()Lcom/vk/dto/account/VideoConfig;
 
     move-result-object v0
 
@@ -1076,9 +1076,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
+    sget-object v0, Lcom/vk/core/util/MediaLoadingInfo;->b:Lcom/vk/core/util/MediaLoadingInfo;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/p0;->d()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/MediaLoadingInfo;->d()Z
 
     move-result v0
 
@@ -1114,11 +1114,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->k()Lcom/vk/dto/account/VideoConfig;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->k()Lcom/vk/dto/account/VideoConfig;
 
     move-result-object v0
 
@@ -1133,11 +1133,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->k()Lcom/vk/dto/account/VideoConfig;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->k()Lcom/vk/dto/account/VideoConfig;
 
     move-result-object v0
 
@@ -1161,11 +1161,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->M()Z
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->M()Z
 
     move-result v0
 
@@ -1176,11 +1176,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->k()Lcom/vk/dto/account/VideoConfig;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->k()Lcom/vk/dto/account/VideoConfig;
 
     move-result-object v0
 
@@ -1195,11 +1195,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->k()Lcom/vk/dto/account/VideoConfig;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->k()Lcom/vk/dto/account/VideoConfig;
 
     move-result-object v0
 

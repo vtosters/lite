@@ -1,9 +1,9 @@
 .class public Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;
-.super Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;
+.super Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;
 .source "VhMsg.java"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/viewcontrollers/msg_list/h$b;
+.implements Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback$b;
 
 
 # annotations
@@ -28,9 +28,9 @@
 
 
 # instance fields
-.field private final B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+.field private final B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-.field private final C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;
+.field private final C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;
 
 .field private final D:Landroid/graphics/Rect;
 
@@ -64,7 +64,7 @@
 
 .field private S:I
 
-.field private final T:Lcom/vk/im/ui/formatters/d;
+.field private final T:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
 .field private final U:Ljava/lang/StringBuilder;
 
@@ -89,7 +89,7 @@
 
 .field private final c:Lcom/vk/im/ui/views/avatars/AvatarView;
 
-.field private c0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+.field private c0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
 
 .field private final d:Landroid/widget/Space;
 
@@ -678,18 +678,18 @@
     .end array-data
 .end method
 
-.method public constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;)V
     .locals 4
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;-><init>(Landroid/view/View;)V
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;
+    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;
 
     .line 3
     new-instance v0, Landroid/graphics/Rect;
@@ -720,11 +720,11 @@
     iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->G:Landroid/graphics/Rect;
 
     .line 7
-    new-instance v0, Lcom/vk/im/ui/formatters/d;
+    new-instance v0, Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/formatters/d;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->T:Lcom/vk/im/ui/formatters/d;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->T:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     .line 8
     new-instance v0, Ljava/lang/StringBuilder;
@@ -844,7 +844,7 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;
 
     .line 21
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
     .line 22
     new-instance p1, Landroid/graphics/drawable/ColorDrawable;
@@ -938,9 +938,9 @@
     .line 31
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->e:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;
 
-    iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-    invoke-virtual {p2, v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {p2, v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
@@ -1041,7 +1041,7 @@
     iput p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->S:I
 
     .line 44
-    iput-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+    iput-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
 
     .line 45
     iput-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->d0:Lcom/vk/im/engine/models/messages/Msg;
@@ -1094,20 +1094,20 @@
     return p1
 .end method
 
-.method static synthetic a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+.method static synthetic a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
 
     return-object p0
 .end method
 
-.method private a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$Style;
+.method private a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$Style;
     .locals 3
 
     .line 104
-    iget v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
+    iget v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
 
     const/16 v1, 0x10
 
@@ -1246,7 +1246,7 @@
     .end packed-switch
 .end method
 
-.method public static a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;
+.method public static a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;
     .locals 2
 
     .line 3
@@ -1261,35 +1261,35 @@
     .line 4
     new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;
 
-    invoke-direct {p1, p0, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;)V
+    invoke-direct {p1, p0, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;)V
 
     return-object p1
 .end method
 
-.method private a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;Landroid/graphics/Rect;)V
+.method private a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Landroid/graphics/Rect;)V
     .locals 8
 
     .line 81
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$Style;
+    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$Style;
 
     move-result-object v0
 
     .line 82
-    iget-object v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->f()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->f()Z
 
     move-result v1
 
     .line 83
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->C()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->C()Z
 
     move-result v2
 
     .line 84
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->z()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->z()Z
 
     move-result v3
 
@@ -1317,20 +1317,20 @@
     if-eqz v2, :cond_1
 
     .line 90
-    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget v5, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i:I
+    iget v5, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i:I
 
     if-lez v5, :cond_0
 
-    iget-object v5, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v5, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget v5, v5, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i:I
+    iget v5, v5, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i:I
 
     if-nez v5, :cond_0
 
     .line 91
-    invoke-direct {p0, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$Style;
+    invoke-direct {p0, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$Style;
 
     move-result-object v2
 
@@ -1349,18 +1349,18 @@
     if-eqz v3, :cond_4
 
     .line 93
-    iget-object v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget v1, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i:I
+    iget v1, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i:I
 
-    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget v3, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i:I
+    iget v3, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i:I
 
     if-ne v1, v3, :cond_2
 
     .line 94
-    invoke-direct {p0, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$Style;
+    invoke-direct {p0, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$Style;
 
     move-result-object v1
 
@@ -1377,7 +1377,7 @@
     if-ge v1, v3, :cond_3
 
     .line 96
-    invoke-direct {p0, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$Style;
+    invoke-direct {p0, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$Style;
 
     move-result-object v1
 
@@ -1394,20 +1394,20 @@
     .line 98
     :cond_4
     :goto_1
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->w()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->w()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->k()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->k()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
     .line 99
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->G()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->G()Z
 
     move-result v0
 
@@ -1427,7 +1427,7 @@
 
     .line 101
     :cond_5
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->e()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->e()Z
 
     move-result p1
 
@@ -1450,40 +1450,40 @@
     return-void
 .end method
 
-.method private a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+.method private a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
     .locals 1
 
     .line 61
     iget v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->R:I
 
-    iput v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->k:I
+    iput v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->k:I
 
     .line 62
-    iput v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->i:I
+    iput v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->i:I
 
     .line 63
-    iput v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->j:I
+    iput v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->j:I
 
     .line 64
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i:I
+    iget p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i:I
 
     if-lez p1, :cond_0
 
     .line 65
-    iput v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->i:I
+    iput v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->i:I
 
     .line 66
-    iput v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->j:I
+    iput v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->j:I
 
     goto :goto_2
 
     .line 67
     :cond_0
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->C()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->C()Z
 
     move-result p1
 
@@ -1497,12 +1497,12 @@
     iget p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->S:I
 
     :goto_0
-    iput p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->i:I
+    iput p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->i:I
 
     .line 68
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->z()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->z()Z
 
     move-result p1
 
@@ -1516,28 +1516,28 @@
     iget p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->S:I
 
     :goto_1
-    iput p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->j:I
+    iput p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->j:I
 
     .line 69
     :goto_2
-    iget p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->i:I
+    iget p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->i:I
 
-    iget v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->j:I
+    iget v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->j:I
 
     invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
-    iput p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->h:I
+    iput p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->h:I
 
     return-void
 .end method
 
-.method private a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;Z)V
+.method private a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Z)V
     .locals 6
 
     .line 30
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->l()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->l()Z
 
     move-result v0
 
@@ -1549,7 +1549,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->f()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->f()Z
 
     move-result v0
 
@@ -1568,7 +1568,7 @@
     .line 33
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->g:Landroid/widget/ImageView;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->z()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->z()Z
 
     move-result v0
 
@@ -1583,7 +1583,7 @@
     invoke-virtual {p2, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 34
-    iget-boolean p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->k:Z
+    iget-boolean p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->k:Z
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1605,7 +1605,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/Space;->setVisibility(I)V
 
     .line 37
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->z()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->z()Z
 
     move-result v0
 
@@ -1622,11 +1622,11 @@
 
     .line 39
     :cond_2
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     if-eqz v0, :cond_c
 
-    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     if-eqz v0, :cond_c
 
@@ -1635,7 +1635,7 @@
 
     move-result v4
 
-    iget-object v5, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->g:Lcom/vk/im/engine/models/Member;
+    iget-object v5, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->g:Lcom/vk/im/engine/models/Member;
 
     invoke-virtual {v5}, Lcom/vk/im/engine/models/Member;->t1()I
 
@@ -1690,7 +1690,7 @@
     if-nez v4, :cond_5
 
     .line 44
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->J()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->J()Z
 
     move-result p2
 
@@ -1707,7 +1707,7 @@
     move-object v0, p2
 
     .line 45
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->I()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->I()Z
 
     move-result p2
 
@@ -1719,7 +1719,7 @@
 
     move-result v0
 
-    iget v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->i:I
+    iget v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->i:I
 
     if-gt v0, v1, :cond_7
 
@@ -1749,7 +1749,7 @@
 
     .line 48
     :goto_5
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->F()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->F()Z
 
     move-result p1
 
@@ -1760,7 +1760,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->g0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$h;
 
-    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
 
     const/4 v2, 0x0
 
@@ -1975,36 +1975,36 @@
     return-object p0
 .end method
 
-.method private b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;
+.method private b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;
     .locals 5
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->C()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->C()Z
 
     move-result v0
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->z()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->z()Z
 
     move-result v1
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->B()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->B()Z
 
     move-result v2
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->A()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->A()Z
 
     move-result v3
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->x()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->x()Z
 
     move-result v4
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->D()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->D()Z
 
     move-result p1
 
@@ -2107,16 +2107,16 @@
     return-object p1
 .end method
 
-.method private b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;Landroid/graphics/Rect;)V
+.method private b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Landroid/graphics/Rect;)V
     .locals 2
 
     .line 50
     invoke-virtual {p2}, Landroid/graphics/Rect;->setEmpty()V
 
     .line 51
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->f()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->f()Z
 
     move-result v0
 
@@ -2139,7 +2139,7 @@
 
     .line 53
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->C()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->C()Z
 
     move-result v0
 
@@ -2162,19 +2162,19 @@
 
     .line 55
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->w()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->w()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->k()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->k()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->e()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->e()Z
 
     move-result p1
 
@@ -2193,83 +2193,83 @@
     return-void
 .end method
 
-.method private b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+.method private b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
     .locals 3
 
     .line 14
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     .line 15
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)Lcom/vk/im/ui/views/msg/bubble/b;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
 
     move-result-object v1
 
     .line 16
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
-    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->a:Lcom/vk/im/engine/models/messages/Msg;
+    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->a:Lcom/vk/im/engine/models/messages/Msg;
 
     .line 17
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->d:Lcom/vk/im/engine/models/messages/NestedMsg;
+    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->d:Lcom/vk/im/engine/models/messages/NestedMsg;
 
-    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->b:Lcom/vk/im/engine/models/messages/NestedMsg;
+    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->b:Lcom/vk/im/engine/models/messages/NestedMsg;
 
     .line 18
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->e:Ljava/lang/CharSequence;
+    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->e:Ljava/lang/CharSequence;
 
-    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->c:Ljava/lang/CharSequence;
+    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->c:Ljava/lang/CharSequence;
 
     .line 19
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->f:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->f:Lcom/vk/im/engine/models/attaches/Attach;
 
-    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->d:Lcom/vk/im/engine/models/attaches/Attach;
+    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->d:Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 20
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->g:Ljava/util/List;
+    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->g:Ljava/util/List;
 
-    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->e:Ljava/util/List;
+    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->e:Ljava/util/List;
 
     .line 21
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->m(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->m(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)Z
 
     move-result v2
 
-    iput-boolean v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->f:Z
+    iput-boolean v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->f:Z
 
     .line 22
-    iget v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->p:I
+    iget v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->p:I
 
-    iput v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->g:I
+    iput v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->g:I
 
     .line 23
-    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->g:Lcom/vk/im/engine/models/Member;
+    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->g:Lcom/vk/im/engine/models/Member;
 
-    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->m:Lcom/vk/im/engine/models/Member;
+    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->m:Lcom/vk/im/engine/models/Member;
 
     .line 24
-    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->h:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->h:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
-    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->n:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->n:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     .line 25
-    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->n:Lcom/vk/im/engine/models/f;
+    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->n:Lcom/vk/im/engine/models/ImExperimentsProvider;
 
-    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->o:Lcom/vk/im/engine/models/f;
+    iput-object v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->o:Lcom/vk/im/engine/models/ImExperimentsProvider;
 
     .line 26
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->v()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->v()Z
 
     move-result v2
 
-    iput-boolean v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->s:Z
+    iput-boolean v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->s:Z
 
     .line 27
-    iget-boolean v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->q:Z
+    iget-boolean v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->q:Z
 
-    iput-boolean v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->t:Z
+    iput-boolean v2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->t:Z
 
     .line 28
-    invoke-virtual {v1}, Lcom/vk/im/ui/views/msg/bubble/b;->b()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->b()Z
 
     move-result v1
 
@@ -2277,10 +2277,10 @@
 
     xor-int/2addr v1, v2
 
-    iput-boolean v1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->u:Z
+    iput-boolean v1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->u:Z
 
     .line 29
-    iget v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i:I
+    iget v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i:I
 
     if-lez v0, :cond_0
 
@@ -2292,79 +2292,79 @@
     const/4 v0, 0x0
 
     :goto_0
-    iput-boolean v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->v:Z
+    iput-boolean v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->v:Z
 
     .line 30
-    iget-boolean v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->k:Z
+    iget-boolean v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->k:Z
 
-    iput-boolean v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->w:Z
+    iput-boolean v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->w:Z
 
     .line 31
-    iget-boolean v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->l:Z
+    iget-boolean v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->l:Z
 
-    iput-boolean v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->x:Z
+    iput-boolean v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->x:Z
 
     .line 32
     iget-boolean v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->Z:Z
 
     xor-int/2addr v0, v2
 
-    iput-boolean v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->y:Z
+    iput-boolean v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->y:Z
 
     .line 33
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->s:Landroid/util/SparseIntArray;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->s:Landroid/util/SparseIntArray;
 
-    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->z:Landroid/util/SparseIntArray;
+    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->z:Landroid/util/SparseIntArray;
 
     .line 34
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->t:Landroid/util/SparseIntArray;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->t:Landroid/util/SparseIntArray;
 
-    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->A:Landroid/util/SparseIntArray;
+    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->A:Landroid/util/SparseIntArray;
 
     .line 35
     iget v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b0:I
 
-    iput v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->l:I
+    iput v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->l:I
 
     .line 36
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->u:Lcom/vk/im/ui/media/audio/AudioTrack;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->u:Lcom/vk/im/ui/media/audio/AudioTrack;
 
-    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->B:Lcom/vk/im/ui/media/audio/AudioTrack;
+    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->B:Lcom/vk/im/ui/media/audio/AudioTrack;
 
     .line 37
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->v:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->v:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;
 
-    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;
+    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;
 
     .line 38
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->w:Lcom/vk/im/ui/views/sticker/StickerAnimationState;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->w:Lcom/vk/im/ui/views/sticker/StickerAnimationState;
 
-    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->D:Lcom/vk/im/ui/views/sticker/StickerAnimationState;
+    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->D:Lcom/vk/im/ui/views/sticker/StickerAnimationState;
 
     .line 39
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->x:Lcom/vk/im/engine/j/g;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->x:Lcom/vk/im/engine/j/StickersAnimationLoader;
 
-    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->E:Lcom/vk/im/engine/j/g;
+    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->E:Lcom/vk/im/engine/j/StickersAnimationLoader;
 
     .line 40
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->y:Lcom/vk/im/ui/views/span/b;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->y:Lcom/vk/im/ui/views/span/OnSpanClickListener;
 
-    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->F:Lcom/vk/im/ui/views/span/b;
+    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->F:Lcom/vk/im/ui/views/span/OnSpanClickListener;
 
     .line 41
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->z:Lcom/vk/im/ui/views/span/c;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->z:Lcom/vk/im/ui/views/span/OnSpanLongPressListener;
 
-    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->G:Lcom/vk/im/ui/views/span/c;
+    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->G:Lcom/vk/im/ui/views/span/OnSpanLongPressListener;
 
     .line 42
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
 
-    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->H:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+    iput-object v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->H:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
 
     .line 43
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->B:Lcom/vk/im/ui/q/h/b;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->B:Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
-    iput-object p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->I:Lcom/vk/im/ui/q/h/b;
+    iput-object p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->I:Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
     .line 44
     invoke-static {}, Lcom/vk/core/util/Screen;->i()I
@@ -2387,12 +2387,12 @@
 
     move-result p1
 
-    iput p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->p:I
+    iput p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->p:I
 
     .line 47
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->i()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->i()Z
 
     move-result p1
 
@@ -2415,22 +2415,22 @@
     iget p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->L:I
 
     :goto_1
-    iput p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->q:I
+    iput p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->q:I
 
     .line 49
     invoke-static {}, Lcom/vk/core/util/Screen;->i()I
 
     move-result p1
 
-    iget v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->p:I
+    iget v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->p:I
 
     sub-int/2addr p1, v0
 
-    iget v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->q:I
+    iget v0, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->q:I
 
     sub-int/2addr p1, v0
 
-    iput p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->r:I
+    iput p1, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->r:I
 
     return-void
 .end method
@@ -2444,27 +2444,27 @@
     return-object p0
 .end method
 
-.method private c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)Lcom/vk/im/ui/views/msg/bubble/b;
+.method private c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
     .locals 2
 
     .line 2
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->c()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->c()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->t()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->t()Z
 
     move-result p1
 
     iget-boolean v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->Z:Z
 
-    invoke-static {p1, v0}, Lcom/vk/im/ui/views/msg/bubble/b;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/b;
+    invoke-static {p1, v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
 
     move-result-object p1
 
@@ -2472,19 +2472,19 @@
 
     .line 5
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->g()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->g()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->E()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->E()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->r()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->r()Z
 
     move-result v1
 
@@ -2492,13 +2492,13 @@
 
     .line 6
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->t()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->t()Z
 
     move-result p1
 
     iget-boolean v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->Z:Z
 
-    invoke-static {p1, v0}, Lcom/vk/im/ui/views/msg/bubble/b;->a(ZZ)Lcom/vk/im/ui/views/msg/bubble/b;
+    invoke-static {p1, v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->a(ZZ)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
 
     move-result-object p1
 
@@ -2506,20 +2506,20 @@
 
     .line 7
     :cond_2
-    iget v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
+    iget v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
 
     const/16 v1, 0x53
 
     if-eq v0, v1, :cond_8
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->E()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->E()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->F()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->F()Z
 
     move-result v0
 
@@ -2529,12 +2529,12 @@
 
     .line 9
     :cond_3
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->C()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->C()Z
 
     move-result v0
 
     .line 10
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->z()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->z()Z
 
     move-result v1
 
@@ -2546,18 +2546,18 @@
 
     .line 11
     :cond_4
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->n()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->n()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
     .line 12
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->t()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->t()Z
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vk/im/ui/views/msg/bubble/b;->a(Z)Lcom/vk/im/ui/views/msg/bubble/b;
+    invoke-static {p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->a(Z)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
 
     move-result-object p1
 
@@ -2565,18 +2565,18 @@
 
     .line 13
     :cond_5
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->o()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->o()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
     .line 14
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->t()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->t()Z
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vk/im/ui/views/msg/bubble/b;->a(Z)Lcom/vk/im/ui/views/msg/bubble/b;
+    invoke-static {p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->a(Z)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
 
     move-result-object p1
 
@@ -2584,13 +2584,13 @@
 
     .line 15
     :cond_6
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->t()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->t()Z
 
     move-result p1
 
     iget-boolean v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->Z:Z
 
-    invoke-static {p1, v0}, Lcom/vk/im/ui/views/msg/bubble/b;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/b;
+    invoke-static {p1, v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
 
     move-result-object p1
 
@@ -2599,13 +2599,13 @@
     .line 16
     :cond_7
     :goto_0
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->t()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->t()Z
 
     move-result p1
 
     iget-boolean v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->Z:Z
 
-    invoke-static {p1, v0}, Lcom/vk/im/ui/views/msg/bubble/b;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/b;
+    invoke-static {p1, v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->b(ZZ)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
 
     move-result-object p1
 
@@ -2614,11 +2614,11 @@
     .line 17
     :cond_8
     :goto_1
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->t()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->t()Z
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vk/im/ui/views/msg/bubble/b;->a(Z)Lcom/vk/im/ui/views/msg/bubble/b;
+    invoke-static {p1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->a(Z)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
 
     move-result-object p1
 
@@ -2634,7 +2634,7 @@
     return-object p0
 .end method
 
-.method private d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+.method private d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
     .locals 5
 
     .line 2
@@ -2645,23 +2645,23 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->T:Lcom/vk/im/ui/formatters/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->T:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
-    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget-object v2, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v2, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     .line 4
     invoke-virtual {v2}, Lcom/vk/im/engine/models/messages/Msg;->getFrom()Lcom/vk/im/engine/models/Member;
 
     move-result-object v2
 
-    iget-object v3, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->h:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    iget-object v3, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->h:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     iget-object v4, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->U:Ljava/lang/StringBuilder;
 
     .line 5
-    invoke-virtual {v0, v2, v3, v4, v1}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/lang/StringBuilder;Z)V
+    invoke-virtual {v0, v2, v3, v4, v1}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/lang/StringBuilder;Z)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c:Lcom/vk/im/ui/views/avatars/AvatarView;
@@ -2671,7 +2671,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->C()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->C()Z
 
     move-result v0
 
@@ -2688,7 +2688,7 @@
 
     .line 9
     :cond_0
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->h(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->h(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
 
     :goto_0
     return-void
@@ -2703,11 +2703,11 @@
     return-object p0
 .end method
 
-.method private e(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+.method private e(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
     .locals 4
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->i()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->i()Z
 
     move-result v0
 
@@ -2716,7 +2716,7 @@
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->j()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->j()Z
 
     move-result v0
 
@@ -2727,16 +2727,16 @@
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c:Lcom/vk/im/ui/views/avatars/AvatarView;
 
-    iget-object v3, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v3, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget-object v3, v3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v3, v3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     .line 5
     invoke-virtual {v3}, Lcom/vk/im/engine/models/messages/Msg;->getFrom()Lcom/vk/im/engine/models/Member;
 
     move-result-object v3
 
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->h:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->h:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     .line 6
     invoke-virtual {v0, v3, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
@@ -2791,13 +2791,13 @@
     return-void
 .end method
 
-.method private f(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+.method private f(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
     .locals 8
 
     .line 1
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     if-nez v0, :cond_0
 
@@ -2835,7 +2835,7 @@
 
     .line 5
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->z()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->z()Z
 
     move-result v1
 
@@ -2887,7 +2887,7 @@
     invoke-virtual {v5, v6, v7, v1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/BombView;->a(JLjava/lang/Long;Lcom/vk/im/engine/models/messages/MsgSyncState;)V
 
     .line 11
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->k()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->k()Z
 
     move-result v0
 
@@ -2899,7 +2899,7 @@
     .line 13
     :cond_4
     :goto_0
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)Lcom/vk/im/ui/views/msg/bubble/b;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
 
     move-result-object v0
 
@@ -2916,7 +2916,7 @@
     move-result v2
 
     .line 16
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/msg/bubble/b;->b()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->b()Z
 
     move-result v0
 
@@ -2933,9 +2933,9 @@
 
     .line 18
     :cond_5
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$Style;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg$Style;
 
     move-result-object p1
 
@@ -2992,23 +2992,23 @@
     return-void
 .end method
 
-.method private g(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+.method private g(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->e:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;
 
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)Lcom/vk/im/ui/views/msg/bubble/b;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
 
     move-result-object v1
 
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;
 
     move-result-object p1
 
     iget v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b0:I
 
-    invoke-virtual {v0, v1, p1, v2}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a(Lcom/vk/im/ui/views/msg/bubble/b;Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;I)V
+    invoke-virtual {v0, v1, p1, v2}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a(Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;I)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->e:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;
@@ -3063,7 +3063,7 @@
     return-object v0
 .end method
 
-.method private h(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+.method private h(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
     .locals 5
 
     .line 1
@@ -3074,29 +3074,29 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->T:Lcom/vk/im/ui/formatters/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->T:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
-    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v2, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget-object v2, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v2, v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     .line 3
     invoke-virtual {v2}, Lcom/vk/im/engine/models/messages/Msg;->getFrom()Lcom/vk/im/engine/models/Member;
 
     move-result-object v2
 
-    iget-object v3, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->h:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    iget-object v3, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->h:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     iget-object v4, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->V:Ljava/lang/StringBuilder;
 
     .line 4
-    invoke-virtual {v0, v2, v3, v4, v1}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/lang/StringBuilder;Z)V
+    invoke-virtual {v0, v2, v3, v4, v1}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/lang/StringBuilder;Z)V
 
     .line 5
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     .line 6
-    iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     .line 7
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->V:Ljava/lang/StringBuilder;
@@ -3106,7 +3106,7 @@
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 8
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->e:Ljava/lang/CharSequence;
+    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->e:Ljava/lang/CharSequence;
 
     if-eqz v2, :cond_0
 
@@ -3119,11 +3119,11 @@
 
     .line 10
     :cond_0
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->g:Ljava/util/List;
+    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->g:Ljava/util/List;
 
     if-nez v2, :cond_1
 
-    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->f:Lcom/vk/im/engine/models/attaches/Attach;
+    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->f:Lcom/vk/im/engine/models/attaches/Attach;
 
     if-eqz v0, :cond_2
 
@@ -3145,7 +3145,7 @@
     if-eqz v1, :cond_4
 
     .line 13
-    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->e:Lcom/vk/im/engine/models/dialogs/Dialog;
+    iget-object p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->e:Lcom/vk/im/engine/models/dialogs/Dialog;
 
     if-eqz p1, :cond_4
 
@@ -3209,7 +3209,7 @@
     return-object v0
 .end method
 
-.method private i(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+.method private i(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
     .locals 4
 
     .line 1
@@ -3250,11 +3250,11 @@
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
 
     .line 9
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b:Lcom/vk/core/widget/FluidHorizontalLayout;
@@ -3266,21 +3266,21 @@
     .line 10
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->e:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->t()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->t()Z
 
     move-result v2
 
-    invoke-static {v2}, Lcom/vk/im/ui/views/msg/bubble/b;->a(Z)Lcom/vk/im/ui/views/msg/bubble/b;
+    invoke-static {v2}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;->a(Z)Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;
 
     move-result-object v2
 
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;
 
     move-result-object p1
 
     iget v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b0:I
 
-    invoke-virtual {v0, v2, p1, v3}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a(Lcom/vk/im/ui/views/msg/bubble/b;Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;I)V
+    invoke-virtual {v0, v2, p1, v3}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->a(Lcom/vk/im/ui/views/msg/bubble/MsgBubbleStyle;Lcom/vk/im/ui/views/msg/bubble/MsgBubblePart;I)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->e:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;
@@ -3347,11 +3347,11 @@
     return-void
 .end method
 
-.method private j(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+.method private j(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
     .locals 5
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->i()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->i()Z
 
     move-result v0
 
@@ -3375,19 +3375,19 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->D:Landroid/graphics/Rect;
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;Landroid/graphics/Rect;)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Landroid/graphics/Rect;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->E:Landroid/graphics/Rect;
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;Landroid/graphics/Rect;)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Landroid/graphics/Rect;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->e:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;
 
-    iget-object v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget v1, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i:I
+    iget v1, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i:I
 
     invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setFwdNestLevel(I)V
 
@@ -3406,9 +3406,9 @@
     invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setContentPadding(Landroid/graphics/Rect;)V
 
     .line 8
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
+    iget v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
 
     const/16 v1, 0x53
 
@@ -3425,9 +3425,9 @@
 
     .line 9
     :goto_1
-    iget-object v4, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v4, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget v4, v4, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
+    iget v4, v4, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
 
     if-ne v4, v1, :cond_2
 
@@ -3440,7 +3440,7 @@
 
     .line 10
     :goto_2
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->F()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->F()Z
 
     move-result v4
 
@@ -3468,19 +3468,19 @@
     if-eqz v1, :cond_6
 
     .line 12
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->C()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->C()Z
 
     move-result v1
 
     if-nez v1, :cond_5
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->z()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->z()Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->x()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->x()Z
 
     move-result v1
 
@@ -3494,31 +3494,31 @@
     invoke-virtual {v4, v2}, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;->setContentFitAllWidth(Z)V
 
     .line 14
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;
 
-    invoke-direct {p0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+    invoke-direct {p0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
 
     .line 15
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;
 
-    invoke-direct {p0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+    invoke-direct {p0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
 
     .line 16
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;
+    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
 
     .line 17
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a0:Lcom/vk/im/engine/models/dialogs/BubbleColors;
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(Lcom/vk/im/engine/models/dialogs/BubbleColors;)V
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(Lcom/vk/im/engine/models/dialogs/BubbleColors;)V
 
     .line 18
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->d()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->d()Z
 
     move-result v1
 
@@ -3535,7 +3535,7 @@
 
     .line 20
     :cond_7
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->E()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->E()Z
 
     move-result v1
 
@@ -3554,7 +3554,7 @@
 
     .line 22
     :cond_8
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->h()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->h()Z
 
     move-result v1
 
@@ -3563,7 +3563,7 @@
     if-nez v0, :cond_a
 
     .line 23
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->a()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->a()I
 
     move-result v0
 
@@ -3572,7 +3572,7 @@
     move-result v0
 
     .line 24
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->g()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->g()Z
 
     move-result p1
 
@@ -3611,11 +3611,11 @@
     return-void
 .end method
 
-.method private k(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+.method private k(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->s()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->s()Z
 
     move-result p1
 
@@ -3642,11 +3642,11 @@
     return-void
 .end method
 
-.method private l(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+.method private l(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->u()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->u()Z
 
     move-result p1
 
@@ -3701,14 +3701,14 @@
     return-void
 .end method
 
-.method private m(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)Z
+.method private m(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)Z
     .locals 5
 
     .line 1
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->k()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->k()Z
 
     move-result v1
 
@@ -3720,7 +3720,7 @@
 
     .line 3
     :cond_0
-    iget v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
+    iget v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
 
     const/16 v3, 0x32
 
@@ -3737,13 +3737,13 @@
 
     .line 4
     :goto_0
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->z()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->z()Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    iget v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->i:I
+    iget v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->i:I
 
     if-nez v0, :cond_2
 
@@ -3760,14 +3760,14 @@
     if-nez v0, :cond_3
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->y()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->y()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->x()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->x()Z
 
     move-result p1
 
@@ -3868,10 +3868,10 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v2, Lcom/vk/im/engine/utils/h;->b:Lcom/vk/im/engine/utils/h;
+    sget-object v2, Lcom/vk/im/engine/utils/MsgPermissionHelper;->b:Lcom/vk/im/engine/utils/MsgPermissionHelper;
 
     .line 2
-    invoke-virtual {v2, v1, v0}, Lcom/vk/im/engine/utils/h;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/messages/Msg;)Z
+    invoke-virtual {v2, v1, v0}, Lcom/vk/im/engine/utils/MsgPermissionHelper;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/messages/Msg;)Z
 
     move-result v0
 
@@ -3892,14 +3892,14 @@
     .locals 1
 
     .line 77
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(III)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(III)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/models/j;)V
+.method public a(Lcom/vk/im/engine/models/Profile;)V
     .locals 3
 
     .line 70
@@ -3914,11 +3914,11 @@
     if-eqz v0, :cond_0
 
     .line 71
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->S()Lcom/vk/im/engine/models/MemberType;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->S()Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/u;->getId()I
+    invoke-interface {p1}, Lcom/vk/im/engine/models/WithId;->getId()I
 
     move-result v2
 
@@ -3929,24 +3929,24 @@
     if-eqz v0, :cond_0
 
     .line 72
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;
 
-    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->e(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->e(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
 
     .line 73
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;
 
-    iget-object v1, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->h:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    iget-object v1, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->h:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->n:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->n:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     .line 74
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(Lcom/vk/im/engine/models/Profile;)V
 
     return-void
 .end method
@@ -3966,7 +3966,7 @@
     if-eqz v0, :cond_0
 
     .line 76
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
     check-cast v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;
 
@@ -3976,18 +3976,18 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;)V
+.method public a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;)V
     .locals 1
 
     .line 79
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/a;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/AudioMsgInfo;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+.method public a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
     .locals 9
 
     .line 5
@@ -4012,52 +4012,52 @@
     iput-boolean v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->Z:Z
 
     .line 6
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
-    iget v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->a:I
+    iget v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->a:I
 
     iput v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->f0:I
 
     .line 7
-    iget-object v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+    iget-object v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
 
-    iput-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+    iput-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
 
     .line 8
-    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->d0:Lcom/vk/im/engine/models/messages/Msg;
 
     .line 9
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->e:Lcom/vk/im/engine/models/dialogs/Dialog;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->e:Lcom/vk/im/engine/models/dialogs/Dialog;
 
     iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->e0:Lcom/vk/im/engine/models/dialogs/Dialog;
 
     .line 10
-    iget-object v3, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->f:Lcom/vk/im/engine/models/dialogs/DialogTheme;
+    iget-object v3, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->f:Lcom/vk/im/engine/models/dialogs/DialogTheme;
 
     .line 11
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->b()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->b()I
 
     move-result v4
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->t()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->t()Z
 
     move-result v5
 
     .line 12
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->H()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->H()I
 
     move-result v6
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->q()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->q()Z
 
     move-result v7
 
-    iget-boolean v8, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->k:Z
+    iget-boolean v8, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->k:Z
 
     .line 13
-    invoke-static/range {v3 .. v8}, Lcom/vk/im/ui/themes/a;->a(Lcom/vk/im/engine/models/dialogs/DialogTheme;IZIZZ)Lcom/vk/im/engine/models/dialogs/BubbleColors;
+    invoke-static/range {v3 .. v8}, Lcom/vk/im/ui/themes/DialogThemesExt;->a(Lcom/vk/im/engine/models/dialogs/DialogTheme;IZIZZ)Lcom/vk/im/engine/models/dialogs/BubbleColors;
 
     move-result-object v0
 
@@ -4066,24 +4066,24 @@
     .line 14
     iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a0:Lcom/vk/im/engine/models/dialogs/BubbleColors;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->p()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->p()Z
 
     move-result v4
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->v()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->v()Z
 
     move-result v5
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->H()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->H()I
 
     move-result v6
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->q()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->q()Z
 
     move-result v7
 
-    iget-boolean v8, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;->k:Z
+    iget-boolean v8, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->k:Z
 
     .line 16
     invoke-virtual/range {v3 .. v8}, Lcom/vk/im/engine/models/dialogs/BubbleColors;->a(ZZIZZ)I
@@ -4111,12 +4111,12 @@
     invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/msg/MsgStatusView;->setUnreadIconsColor(I)V
 
     .line 19
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
 
     .line 20
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->l(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->l(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
 
     .line 21
     invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->f0()Z
@@ -4126,31 +4126,31 @@
     if-eqz v0, :cond_1
 
     .line 22
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->i(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->i(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
 
     goto :goto_1
 
     .line 23
     :cond_1
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->e(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->e(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
 
     .line 24
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->g(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->g(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
 
     .line 25
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->k(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->k(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
 
     .line 26
-    invoke-direct {p0, p1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;Z)V
+    invoke-direct {p0, p1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Z)V
 
     .line 27
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->j(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->j(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
 
     .line 28
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->d(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
 
     .line 29
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->f(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->f(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
 
     :goto_1
     return-void
@@ -4160,9 +4160,9 @@
     .locals 1
 
     .line 78
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(Lcom/vk/im/ui/media/audio/AudioTrack;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(Lcom/vk/im/ui/media/audio/AudioTrack;)V
 
     return-void
 .end method
@@ -4175,9 +4175,9 @@
     .end param
 
     .line 80
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(Lcom/vk/im/ui/views/sticker/StickerAnimationState;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(Lcom/vk/im/ui/views/sticker/StickerAnimationState;)V
 
     return-void
 .end method
@@ -4204,11 +4204,11 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/f;Z)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Z)V
 
     :cond_0
     return-void
@@ -4220,17 +4220,17 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
 
     .line 2
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->C:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;
 
-    iput-object v0, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->H:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+    iput-object v0, v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->H:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->b()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->b()V
 
     return-void
 .end method
@@ -4271,9 +4271,9 @@
     .locals 1
 
     .line 16
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->a(I)Landroid/view/View;
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->a(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -4284,9 +4284,9 @@
     .locals 1
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->b(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->b(I)V
 
     return-void
 .end method
@@ -4295,9 +4295,9 @@
     .locals 1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->B:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;->c(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;->c(I)V
 
     return-void
 .end method

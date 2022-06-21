@@ -1,12 +1,12 @@
 .class public final Lkotlin/q/a;
-.super Lkotlin/q/c;
+.super Lkotlin/q/MathJVM;
 
 
 # direct methods
 .method public static bridge synthetic a(D)I
     .locals 0
 
-    invoke-static {p0, p1}, Lkotlin/q/c;->a(D)I
+    invoke-static {p0, p1}, Lkotlin/q/MathJVM;->a(D)I
 
     move-result p0
 
@@ -16,7 +16,7 @@
 .method public static bridge synthetic a(F)I
     .locals 0
 
-    invoke-static {p0}, Lkotlin/q/c;->a(F)I
+    invoke-static {p0}, Lkotlin/q/MathJVM;->a(F)I
 
     move-result p0
 
@@ -26,7 +26,7 @@
 .method public static bridge synthetic a(I)I
     .locals 0
 
-    invoke-static {p0}, Lkotlin/q/c;->a(I)I
+    invoke-static {p0}, Lkotlin/q/MathJVM;->a(I)I
 
     move-result p0
 
@@ -36,7 +36,7 @@
 .method public static bridge synthetic b(D)J
     .locals 0
 
-    invoke-static {p0, p1}, Lkotlin/q/c;->b(D)J
+    invoke-static {p0, p1}, Lkotlin/q/MathJVM;->b(D)J
 
     move-result-wide p0
 

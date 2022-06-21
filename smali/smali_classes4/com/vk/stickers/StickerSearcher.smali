@@ -12,13 +12,13 @@
 
 
 # static fields
-.field static final synthetic e:[Lkotlin/u/j;
+.field static final synthetic e:[Lkotlin/u/KProperty5;
 
 
 # instance fields
 .field private final a:Ljava/lang/String;
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
 .field private volatile c:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
@@ -47,13 +47,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/stickers/StickerSearcher;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -61,15 +61,15 @@
 
     const-string v4, "getCalculationObservable()Lio/reactivex/Observable;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/stickers/StickerSearcher;->e:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/stickers/StickerSearcher;->e:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -99,7 +99,7 @@
 
     const-string v0, "StickerSearcher::class.java.simpleName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/stickers/StickerSearcher;->a:Ljava/lang/String;
 
@@ -108,11 +108,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/stickers/StickerSearcher$calculationObservable$2;-><init>(Lcom/vk/stickers/StickerSearcher;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stickers/StickerSearcher;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stickers/StickerSearcher;->b:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -164,7 +164,7 @@
 
     move-result v5
 
-    invoke-static {v2, v5, v4}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v2, v5, v4}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
 
     add-int/lit8 v4, v4, 0x1
 
@@ -228,7 +228,7 @@
     move-result-wide v0
 
     .line 8
-    invoke-static {p1}, Lcom/vk/stickers/s;->a(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/vk/stickers/StickerSearchUtils;->a(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -245,14 +245,14 @@
 
     .line 10
     :cond_0
-    invoke-static {p1}, Lcom/vk/stickers/s;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/stickers/StickerSearchUtils;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 11
-    sget-object v3, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v3, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v3, v2}, Lcom/vk/stickers/t;->b(Ljava/lang/String;)Lcom/vk/dto/stickers/StickersDictionaryItem;
+    invoke-virtual {v3, v2}, Lcom/vk/stickers/Stickers;->b(Ljava/lang/String;)Lcom/vk/dto/stickers/StickersDictionaryItem;
 
     move-result-object v2
 
@@ -358,7 +358,7 @@
     .end annotation
 
     .line 20
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
@@ -367,31 +367,31 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/util/Comparator;)Lkotlin/sequences/j;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/util/Comparator;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 22
-    invoke-static {p1}, Lkotlin/sequences/m;->g(Lkotlin/sequences/j;)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/sequences/m;->g(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 23
     sget-object v0, Lcom/vk/stickers/StickerSearcher$clarify$1;->a:Lcom/vk/stickers/StickerSearcher$clarify$1;
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 24
     sget-object v0, Lcom/vk/stickers/StickerSearcher$clarify$2;->a:Lcom/vk/stickers/StickerSearcher$clarify$2;
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 25
-    invoke-static {p1}, Lkotlin/sequences/m;->m(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {p1}, Lkotlin/sequences/m;->m(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object p1
 
@@ -401,67 +401,67 @@
     const-string p1, "recentComparator"
 
     .line 26
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method private final b()Lc/a/m;
+.method private final b()Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/util/SparseIntArray;",
             ">;"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/vk/stickers/StickerSearcher;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/stickers/StickerSearcher;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/stickers/StickerSearcher;->e:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/stickers/StickerSearcher;->e:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lc/a/m;
+    check-cast v0, Lio/reactivex/Observable;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lc/a/m;
+.method public final a(Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/stickers/StickerSearcher$a;",
             ">;"
         }
     .end annotation
 
     .line 3
-    invoke-direct {p0}, Lcom/vk/stickers/StickerSearcher;->b()Lc/a/m;
+    invoke-direct {p0}, Lcom/vk/stickers/StickerSearcher;->b()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lc/a/f0/b;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -470,13 +470,13 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/stickers/StickerSearcher$c;-><init>(Lcom/vk/stickers/StickerSearcher;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "calculationObservable\n  \u2026entIds)\n                }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

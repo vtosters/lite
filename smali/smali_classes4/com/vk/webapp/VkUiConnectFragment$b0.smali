@@ -3,7 +3,7 @@
 .source "VkUiConnectFragment.kt"
 
 # interfaces
-.implements Lcom/vk/webapp/b;
+.implements Lcom/vk/webapp/SharingController1;
 
 
 # annotations

@@ -3,7 +3,7 @@
 .source "VideoCoverItem.kt"
 
 # interfaces
-.implements Lcom/vk/media/player/i;
+.implements Lcom/vk/media/player/StateListener;
 
 
 # annotations
@@ -94,7 +94,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -169,11 +169,11 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/profile/ui/cover/c;
+    check-cast p1, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getForgegroundView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getForgegroundView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object p1
 
@@ -223,14 +223,14 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/profile/ui/cover/c;
+    check-cast p2, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz p2, :cond_0
 
     .line 3
     new-instance p3, Lcom/vk/profile/data/cover/model/VideoCoverItem$b$a;
 
-    invoke-direct {p3, p2, p0, p1}, Lcom/vk/profile/data/cover/model/VideoCoverItem$b$a;-><init>(Lcom/vk/profile/ui/cover/c;Lcom/vk/profile/data/cover/model/VideoCoverItem$b;Lcom/vk/media/player/ExoPlayerBase;)V
+    invoke-direct {p3, p2, p0, p1}, Lcom/vk/profile/data/cover/model/VideoCoverItem$b$a;-><init>(Lcom/vk/profile/ui/cover/CoverViewItem;Lcom/vk/profile/data/cover/model/VideoCoverItem$b;Lcom/vk/media/player/ExoPlayerBase;)V
 
     invoke-virtual {p2, p3}, Landroid/widget/FrameLayout;->post(Ljava/lang/Runnable;)Z
 
@@ -264,17 +264,17 @@
 
     iget-object v0, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem$b;->a:Lcom/vk/profile/data/cover/model/VideoCoverItem;
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->f()Lkotlin/jvm/b/a;
+    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->f()Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_0
     return-void

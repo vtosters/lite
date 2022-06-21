@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photoviewer/ContextMenuDelegate;->a(Landroid/widget/EditText;Ljava/util/List;Lkotlin/jvm/b/c;)Landroid/view/ViewGroup;
+    value = Lcom/vk/photoviewer/ContextMenuDelegate;->a(Landroid/widget/EditText;Ljava/util/List;Lkotlin/jvm/b/Functions1;)Landroid/view/ViewGroup;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

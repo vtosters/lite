@@ -96,7 +96,7 @@
 
     .line 3
     :goto_2
-    invoke-static {v0, v1, v2}, Lcom/vk/extensions/b;->a(Landroid/app/Activity;Landroid/view/View;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vk/extensions/ActivityExt;->a(Landroid/app/Activity;Landroid/view/View;Z)V
 
     return-void
 .end method

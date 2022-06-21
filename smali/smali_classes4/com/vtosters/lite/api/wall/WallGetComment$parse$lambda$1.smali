@@ -3,7 +3,7 @@
 .source "WallGetComment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Lcom/vk/dto/newsfeed/Owner;",
         "Lorg/json/JSONObject;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -59,14 +59,14 @@
 
     check-cast p2, Lorg/json/JSONObject;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/api/wall/WallGetComment$parse$lambda$1;->a(Lcom/vk/dto/newsfeed/Owner;Lorg/json/JSONObject;)Lkotlin/m;
+    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/api/wall/WallGetComment$parse$lambda$1;->a(Lcom/vk/dto/newsfeed/Owner;Lorg/json/JSONObject;)Lkotlin/Unit;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/dto/newsfeed/Owner;Lorg/json/JSONObject;)Lkotlin/m;
+.method public final a(Lcom/vk/dto/newsfeed/Owner;Lorg/json/JSONObject;)Lkotlin/Unit;
     .locals 2
 
     .line 2
@@ -124,7 +124,7 @@
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
     .line 6
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_1
 

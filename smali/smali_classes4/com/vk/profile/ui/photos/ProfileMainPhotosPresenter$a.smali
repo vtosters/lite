@@ -21,7 +21,7 @@
 .method public abstract F(I)V
 .end method
 
-.method public abstract a(Lcom/vk/api/photos/PhotosGetAlbums$b;Lcom/vk/api/photos/p$a;)V
+.method public abstract a(Lcom/vk/api/photos/PhotosGetAlbums$b;Lcom/vk/api/photos/PhotosGetNewTags$a;)V
 .end method
 
 .method public abstract a(Lcom/vk/dto/photo/PhotoAlbum;)V

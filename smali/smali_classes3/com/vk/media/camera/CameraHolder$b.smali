@@ -20,17 +20,17 @@
 # instance fields
 .field final synthetic a:Lcom/vk/media/camera/CameraHolder$d;
 
-.field final synthetic b:Lcom/vk/media/camera/d$c;
+.field final synthetic b:Lcom/vk/media/camera/CameraManager$c;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/media/camera/CameraHolder;Lcom/vk/media/camera/CameraHolder$d;Lcom/vk/media/camera/d$c;)V
+.method constructor <init>(Lcom/vk/media/camera/CameraHolder;Lcom/vk/media/camera/CameraHolder$d;Lcom/vk/media/camera/CameraManager$c;)V
     .locals 0
 
     .line 1
     iput-object p2, p0, Lcom/vk/media/camera/CameraHolder$b;->a:Lcom/vk/media/camera/CameraHolder$d;
 
-    iput-object p3, p0, Lcom/vk/media/camera/CameraHolder$b;->b:Lcom/vk/media/camera/d$c;
+    iput-object p3, p0, Lcom/vk/media/camera/CameraHolder$b;->b:Lcom/vk/media/camera/CameraManager$c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
     .line 1
     iget-object v0, p0, Lcom/vk/media/camera/CameraHolder$b;->a:Lcom/vk/media/camera/CameraHolder$d;
 
-    iget-object v1, p0, Lcom/vk/media/camera/CameraHolder$b;->b:Lcom/vk/media/camera/d$c;
+    iget-object v1, p0, Lcom/vk/media/camera/CameraHolder$b;->b:Lcom/vk/media/camera/CameraManager$c;
 
-    invoke-interface {v0, v1}, Lcom/vk/media/camera/CameraHolder$d;->a(Lcom/vk/media/camera/d$c;)V
+    invoke-interface {v0, v1}, Lcom/vk/media/camera/CameraHolder$d;->a(Lcom/vk/media/camera/CameraManager$c;)V
 
     return-void
 .end method

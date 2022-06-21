@@ -36,7 +36,7 @@
     const v2, 0x7f03001d
 
     .line 4
-    invoke-static {v2}, Lcom/vk/core/util/y0;->a(I)[Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/core/util/ResUtils;->a(I)[Ljava/lang/String;
 
     move-result-object v2
 
@@ -71,13 +71,13 @@
 
     const p0, 0x7f120eb7
 
-    invoke-static {p0, v2}, Lcom/vk/core/util/y0;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0, v2}, Lcom/vk/core/util/ResUtils;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "ResUtils.str(R.string.st\u2026tle, day, monthStr, year)"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
@@ -121,13 +121,13 @@
     const p0, 0x7f120f98
 
     .line 4
-    invoke-static {p0, v0}, Lcom/vk/core/util/y0;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/vk/core/util/ResUtils;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "ResUtils.str(R.string.st\u2026t_format, hours, minutes)"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method

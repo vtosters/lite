@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -39,13 +39,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveCategory;->b()Lcom/vk/fave/entities/g;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveCategory;->b()Lcom/vk/fave/entities/FaveType1;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2}, Lcom/vk/fave/entities/g;->a()Ljava/lang/String;
+    invoke-interface {p2}, Lcom/vk/fave/entities/FaveType1;->a()Ljava/lang/String;
 
     move-result-object p2
 

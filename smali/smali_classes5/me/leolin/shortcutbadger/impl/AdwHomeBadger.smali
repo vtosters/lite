@@ -3,7 +3,7 @@
 .source "AdwHomeBadger.java"
 
 # interfaces
-.implements Lme/leolin/shortcutbadger/a;
+.implements Lme/leolin/shortcutbadger/Badger;
 
 
 # direct methods
@@ -84,7 +84,7 @@
     invoke-virtual {v0, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 5
-    invoke-static {p1, v0}, Lme/leolin/shortcutbadger/c/a;->a(Landroid/content/Context;Landroid/content/Intent;)Z
+    invoke-static {p1, v0}, Lme/leolin/shortcutbadger/c/BroadcastHelper;->a(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result p2
 

@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
 
     .line 3
     iget v0, p0, Lcom/my/tracker/DefaultTracker$b;->b:I
@@ -100,7 +100,7 @@
     const-string v0, "Install referrer setup is finished"
 
     .line 1
-    invoke-static {v0}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/my/tracker/DefaultTracker$b;->a:Lcom/my/tracker/DefaultTracker;

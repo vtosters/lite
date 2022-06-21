@@ -3,7 +3,7 @@
 .source "CommunityAddressesFragment.kt"
 
 # interfaces
-.implements Lb/d/b/a/f/c$c;
+.implements Lb/d/b/a/f/ClusterManager$c;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T::",
-        "Lb/d/b/a/f/b;",
+        "Lb/d/b/a/f/ClusterItem;",
         ">",
         "Ljava/lang/Object;",
-        "Lb/d/b/a/f/c$c<",
-        "Lcom/vk/profile/data/a;",
+        "Lb/d/b/a/f/ClusterManager$c<",
+        "Lcom/vk/profile/data/AddressClusterAdapter;",
         ">;"
     }
 .end annotation
@@ -50,13 +50,13 @@
 
 
 # virtual methods
-.method public final a(Lb/d/b/a/f/a;)Z
+.method public final a(Lb/d/b/a/f/Cluster;)Z
     .locals 18
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb/d/b/a/f/a<",
-            "Lcom/vk/profile/data/a;",
+            "Lb/d/b/a/f/Cluster<",
+            "Lcom/vk/profile/data/AddressClusterAdapter;",
             ">;)Z"
         }
     .end annotation
@@ -68,23 +68,23 @@
     const-string v2, "it"
 
     .line 1
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface/range {p1 .. p1}, Lb/d/b/a/f/a;->a()Ljava/util/Collection;
+    invoke-interface/range {p1 .. p1}, Lb/d/b/a/f/Cluster;->a()Ljava/util/Collection;
 
     move-result-object v2
 
     const-string v3, "it.items"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v2}, Lkotlin/collections/l;->h(Ljava/lang/Iterable;)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/profile/data/a;
+    check-cast v2, Lcom/vk/profile/data/AddressClusterAdapter;
 
-    invoke-virtual {v2}, Lcom/vk/profile/data/a;->b()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v2}, Lcom/vk/profile/data/AddressClusterAdapter;->b()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v2
 
@@ -95,11 +95,11 @@
     iget-wide v6, v2, Lcom/google/android/gms/maps/model/LatLng;->b:D
 
     .line 4
-    invoke-interface/range {p1 .. p1}, Lb/d/b/a/f/a;->a()Ljava/util/Collection;
+    invoke-interface/range {p1 .. p1}, Lb/d/b/a/f/Cluster;->a()Ljava/util/Collection;
 
     move-result-object v2
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -127,10 +127,10 @@
 
     move-result-object v7
 
-    check-cast v7, Lcom/vk/profile/data/a;
+    check-cast v7, Lcom/vk/profile/data/AddressClusterAdapter;
 
     .line 6
-    invoke-virtual {v7}, Lcom/vk/profile/data/a;->b()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v7}, Lcom/vk/profile/data/AddressClusterAdapter;->b()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v15
 
@@ -142,7 +142,7 @@
 
     if-lez v10, :cond_0
 
-    invoke-virtual {v7}, Lcom/vk/profile/data/a;->b()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v7}, Lcom/vk/profile/data/AddressClusterAdapter;->b()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v5
 
@@ -150,7 +150,7 @@
 
     .line 7
     :cond_0
-    invoke-virtual {v7}, Lcom/vk/profile/data/a;->b()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v7}, Lcom/vk/profile/data/AddressClusterAdapter;->b()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v8
 
@@ -160,7 +160,7 @@
 
     if-gez v10, :cond_1
 
-    invoke-virtual {v7}, Lcom/vk/profile/data/a;->b()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v7}, Lcom/vk/profile/data/AddressClusterAdapter;->b()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v8
 
@@ -175,7 +175,7 @@
 
     .line 8
     :goto_1
-    invoke-virtual {v7}, Lcom/vk/profile/data/a;->b()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v7}, Lcom/vk/profile/data/AddressClusterAdapter;->b()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v8
 
@@ -187,7 +187,7 @@
 
     if-lez v10, :cond_2
 
-    invoke-virtual {v7}, Lcom/vk/profile/data/a;->b()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v7}, Lcom/vk/profile/data/AddressClusterAdapter;->b()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v8
 
@@ -197,7 +197,7 @@
 
     .line 9
     :cond_2
-    invoke-virtual {v7}, Lcom/vk/profile/data/a;->b()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v7}, Lcom/vk/profile/data/AddressClusterAdapter;->b()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v8
 
@@ -207,7 +207,7 @@
 
     if-gez v10, :cond_3
 
-    invoke-virtual {v7}, Lcom/vk/profile/data/a;->b()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v7}, Lcom/vk/profile/data/AddressClusterAdapter;->b()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v8
 
@@ -219,7 +219,7 @@
     if-eqz v4, :cond_5
 
     .line 10
-    invoke-virtual {v7}, Lcom/vk/profile/data/a;->b()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v7}, Lcom/vk/profile/data/AddressClusterAdapter;->b()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v8
 
@@ -229,7 +229,7 @@
 
     if-nez v10, :cond_4
 
-    invoke-virtual {v7}, Lcom/vk/profile/data/a;->b()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v7}, Lcom/vk/profile/data/AddressClusterAdapter;->b()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v7
 
@@ -255,19 +255,19 @@
     .line 11
     iget-object v2, v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$i;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-static {v2}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->t(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lb/d/b/a/f/a;
+    invoke-static {v2}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->t(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lb/d/b/a/f/Cluster;
 
     move-result-object v2
 
     if-eqz v2, :cond_7
 
-    invoke-interface {v2}, Lb/d/b/a/f/a;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-interface {v2}, Lb/d/b/a/f/Cluster;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v2
 
     if-eqz v2, :cond_7
 
-    invoke-interface/range {p1 .. p1}, Lb/d/b/a/f/a;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-interface/range {p1 .. p1}, Lb/d/b/a/f/Cluster;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v4
 
@@ -290,7 +290,7 @@
     :cond_7
     iget-object v2, v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$i;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-static {v2, v1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lb/d/b/a/f/a;)V
+    invoke-static {v2, v1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lb/d/b/a/f/Cluster;)V
 
     .line 14
     iget-object v2, v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$i;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
@@ -300,17 +300,17 @@
     invoke-static {v2, v4}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;I)V
 
     .line 15
-    invoke-interface/range {p1 .. p1}, Lb/d/b/a/f/a;->a()Ljava/util/Collection;
+    invoke-interface/range {p1 .. p1}, Lb/d/b/a/f/Cluster;->a()Ljava/util/Collection;
 
     move-result-object v1
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1}, Lkotlin/collections/l;->h(Ljava/lang/Iterable;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/profile/data/a;
+    check-cast v1, Lcom/vk/profile/data/AddressClusterAdapter;
 
     .line 16
     iget-object v2, v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$i;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
@@ -319,7 +319,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1}, Lcom/vk/profile/data/a;->a()Lcom/vk/dto/profile/PlainAddress;
+    invoke-virtual {v1}, Lcom/vk/profile/data/AddressClusterAdapter;->a()Lcom/vk/dto/profile/PlainAddress;
 
     move-result-object v3
 
@@ -328,7 +328,7 @@
     .line 17
     iget-object v2, v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$i;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-static {v2, v1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lcom/vk/profile/data/a;)V
+    invoke-static {v2, v1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lcom/vk/profile/data/AddressClusterAdapter;)V
 
     goto :goto_2
 
@@ -338,7 +338,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v2}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lb/d/b/a/f/a;)V
+    invoke-static {v1, v2}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lb/d/b/a/f/Cluster;)V
 
     .line 19
     iget-object v1, v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$i;->b:Lcom/google/android/gms/maps/c;
@@ -361,7 +361,7 @@
 
     const/4 v4, 0x4
 
-    invoke-static {v3, v1, v2, v4, v2}, Lcom/vk/profile/utils/a;->a(Lcom/google/android/gms/maps/model/LatLngBounds;Lcom/google/android/gms/maps/c;Lcom/google/android/gms/maps/c$a;ILjava/lang/Object;)V
+    invoke-static {v3, v1, v2, v4, v2}, Lcom/vk/profile/utils/AddressesUtils;->a(Lcom/google/android/gms/maps/model/LatLngBounds;Lcom/google/android/gms/maps/c;Lcom/google/android/gms/maps/c$a;ILjava/lang/Object;)V
 
     :cond_9
     :goto_2

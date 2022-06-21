@@ -38,30 +38,30 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
+.method public static final synthetic a(Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;->b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;->b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
+.method private final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
     .locals 2
 
     .line 49
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;
 
-    invoke-direct {v1, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;-><init>(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)V
+    invoke-direct {v1, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;-><init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -81,27 +81,27 @@
     xor-int/lit8 v1, p1, 0x1
 
     .line 45
-    iput-boolean v1, v0, Lcom/vk/im/engine/models/d;->hasHistoryAfter:Z
+    iput-boolean v1, v0, Lcom/vk/im/engine/models/History;->hasHistoryAfter:Z
 
     xor-int/lit8 v1, p1, 0x1
 
     .line 46
-    iput-boolean v1, v0, Lcom/vk/im/engine/models/d;->hasHistoryAfterCached:Z
+    iput-boolean v1, v0, Lcom/vk/im/engine/models/History;->hasHistoryAfterCached:Z
 
     xor-int/lit8 v1, p1, 0x1
 
     .line 47
-    iput-boolean v1, v0, Lcom/vk/im/engine/models/d;->hasHistoryBefore:Z
+    iput-boolean v1, v0, Lcom/vk/im/engine/models/History;->hasHistoryBefore:Z
 
     xor-int/lit8 p1, p1, 0x1
 
     .line 48
-    iput-boolean p1, v0, Lcom/vk/im/engine/models/d;->hasHistoryBeforeCached:Z
+    iput-boolean p1, v0, Lcom/vk/im/engine/models/History;->hasHistoryBeforeCached:Z
 
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/im/engine/internal/storage/models/c;Lcom/vk/im/engine/internal/storage/models/c;)Z
+.method private final a(Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;)Z
     .locals 1
 
     const/4 v0, 0x0
@@ -109,7 +109,7 @@
     if-eqz p1, :cond_0
 
     .line 50
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/c;->b()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;->b()I
 
     move-result p1
 
@@ -125,7 +125,7 @@
     :goto_0
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/c;->b()I
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;->b()I
 
     move-result p2
 
@@ -134,14 +134,14 @@
     move-result-object v0
 
     :cond_1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method private final b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
+.method private final b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
     .locals 21
 
     move-object/from16 v0, p0
@@ -151,35 +151,35 @@
     move/from16 v2, p4
 
     .line 1
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->c()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;
 
     move-result-object v3
 
     .line 2
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
 
     move-result v12
 
     move-object/from16 v10, p3
 
     .line 3
-    invoke-virtual {v3, v10}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->b(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)Lcom/vk/im/engine/internal/storage/models/d;
+    invoke-virtual {v3, v10}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->b(Lcom/vk/im/engine/models/dialogs/DialogsFilter;)Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
     move-result-object v11
 
@@ -198,17 +198,17 @@
 
     const/4 v9, 0x0
 
-    new-instance v10, Lcom/vk/im/engine/models/a;
+    new-instance v10, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {v10}, Lcom/vk/im/engine/models/a;-><init>()V
+    invoke-direct {v10}, Lcom/vk/im/engine/models/EntityIntMap;-><init>()V
 
-    new-instance v11, Lcom/vk/im/engine/models/a;
+    new-instance v11, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-direct {v11}, Lcom/vk/im/engine/models/a;-><init>()V
+    invoke-direct {v11}, Lcom/vk/im/engine/models/EntityIntMap;-><init>()V
 
     move-object v5, v1
 
-    invoke-direct/range {v5 .. v12}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;-><init>(Ljava/util/List;Lcom/vk/im/engine/internal/storage/models/d;ZZLcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;I)V
+    invoke-direct/range {v5 .. v12}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;-><init>(Ljava/util/List;Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;ZZLcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;I)V
 
     return-object v1
 
@@ -217,7 +217,7 @@
     sget-object v7, Lcom/vk/im/engine/models/Direction;->BEFORE:Lcom/vk/im/engine/models/Direction;
 
     .line 6
-    invoke-virtual {v11}, Lcom/vk/im/engine/internal/storage/models/d;->c()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v11}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->c()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v8
 
@@ -230,7 +230,7 @@
     move-object/from16 v6, p3
 
     .line 7
-    invoke-virtual/range {v4 .. v9}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/q;I)Ljava/util/List;
+    invoke-virtual/range {v4 .. v9}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/Weight;I)Ljava/util/List;
 
     move-result-object v13
 
@@ -238,9 +238,9 @@
     sget-object v7, Lcom/vk/im/engine/models/Direction;->AFTER:Lcom/vk/im/engine/models/Direction;
 
     .line 9
-    sget-object v4, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v4, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v4}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v8
 
@@ -249,7 +249,7 @@
     move-object v4, v3
 
     .line 10
-    invoke-virtual/range {v4 .. v9}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/q;I)Ljava/util/List;
+    invoke-virtual/range {v4 .. v9}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsHistoryStorageManager;->a(Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;Lcom/vk/im/engine/models/Direction;Lcom/vk/im/engine/models/Weight;I)Ljava/util/List;
 
     move-result-object v3
 
@@ -292,15 +292,15 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/im/engine/internal/storage/models/c;
+    check-cast v3, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;
 
     invoke-static {v13}, Lkotlin/collections/l;->h(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/im/engine/internal/storage/models/c;
+    check-cast v4, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;
 
-    invoke-direct {v0, v3, v4}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;->a(Lcom/vk/im/engine/internal/storage/models/c;Lcom/vk/im/engine/internal/storage/models/c;)Z
+    invoke-direct {v0, v3, v4}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;->a(Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;)Z
 
     move-result v3
 
@@ -366,17 +366,17 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/im/engine/internal/storage/models/c;
+    check-cast v4, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;
 
     .line 19
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/c;->a()I
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;->a()I
 
     move-result v5
 
     invoke-virtual {v2, v5}, Lcom/vk/im/engine/utils/collection/IntArrayList;->add(I)V
 
     .line 20
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/c;->b()I
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;->b()I
 
     move-result v4
 
@@ -388,7 +388,7 @@
     :cond_5
     sget-object v3, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper;->a:Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper;
 
-    invoke-virtual {v3, v1, v2}, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/engine/models/a;
+    invoke-virtual {v3, v1, v2}, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v10
 
@@ -409,20 +409,20 @@
 
     move-object v13, v2
 
-    invoke-direct/range {v13 .. v20}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v13 .. v20}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-interface {v1, v0, v2}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+    invoke-interface {v1, v0, v2}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/models/a;
+    check-cast v1, Lcom/vk/im/engine/models/EntityIntMap;
 
     .line 23
     new-instance v2, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
 
     const-string v3, "msgMap"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v5, v2
 
@@ -430,18 +430,18 @@
 
     move-object v11, v1
 
-    invoke-direct/range {v5 .. v12}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;-><init>(Ljava/util/List;Lcom/vk/im/engine/internal/storage/models/d;ZZLcom/vk/im/engine/models/a;Lcom/vk/im/engine/models/a;I)V
+    invoke-direct/range {v5 .. v12}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;-><init>(Ljava/util/List;Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;ZZLcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/models/EntityIntMap;I)V
 
     return-object v2
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/commands/dialogs/w;)Lcom/vk/im/engine/models/dialogs/DialogsHistory;
+.method public final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;)Lcom/vk/im/engine/models/dialogs/DialogsHistory;
     .locals 13
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->Z()Lcom/vk/im/engine/models/Member;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->Z()Lcom/vk/im/engine/models/Member;
 
     move-result-object v0
 
@@ -462,24 +462,24 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p2}, Lcom/vk/im/engine/commands/dialogs/w;->d()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p2}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;->d()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/commands/dialogs/w;->b()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
+    invoke-virtual {p2}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;->b()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     move-result-object v2
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/commands/dialogs/w;->c()I
+    invoke-virtual {p2}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;->c()I
 
     move-result p2
 
-    invoke-direct {p0, p1, v0, v2, p2}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
+    invoke-direct {p0, p1, v0, v2, p2}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
 
     move-result-object p1
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->f()Lcom/vk/im/engine/internal/storage/models/d;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->f()Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
     move-result-object p2
 
@@ -513,11 +513,11 @@
 
     if-eqz p2, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->f()Lcom/vk/im/engine/internal/storage/models/d;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->f()Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/d;->b()Z
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->b()Z
 
     move-result p1
 
@@ -576,9 +576,9 @@
     invoke-direct {v4, v2}, Landroid/util/SparseArray;-><init>(I)V
 
     .line 14
-    new-instance v5, Lcom/vk/im/engine/utils/collection/c;
+    new-instance v5, Lcom/vk/im/engine/utils/collection/IntArraySet;
 
-    invoke-direct {v5}, Lcom/vk/im/engine/utils/collection/c;-><init>()V
+    invoke-direct {v5}, Lcom/vk/im/engine/utils/collection/IntArraySet;-><init>()V
 
     const/4 v6, 0x0
 
@@ -594,19 +594,19 @@
 
     move-result-object v7
 
-    check-cast v7, Lcom/vk/im/engine/internal/storage/models/c;
+    check-cast v7, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;
 
     .line 16
-    invoke-virtual {v7}, Lcom/vk/im/engine/internal/storage/models/c;->a()I
+    invoke-virtual {v7}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;->a()I
 
     move-result v8
 
     .line 17
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->b()Lcom/vk/im/engine/models/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->b()Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v9
 
-    invoke-virtual {v9, v8}, Lcom/vk/im/engine/models/a;->d(I)Ljava/lang/Object;
+    invoke-virtual {v9, v8}, Lcom/vk/im/engine/models/EntityIntMap;->d(I)Ljava/lang/Object;
 
     move-result-object v9
 
@@ -616,30 +616,30 @@
 
     const-string v11, "info.dialogMap.getCached(dialogId)!!"
 
-    invoke-static {v9, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v9, Lcom/vk/im/engine/models/dialogs/Dialog;
 
     .line 18
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->b()Lcom/vk/im/engine/models/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->b()Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v11
 
-    invoke-virtual {v11, v8}, Lcom/vk/im/engine/models/a;->g(I)Z
+    invoke-virtual {v11, v8}, Lcom/vk/im/engine/models/EntityIntMap;->g(I)Z
 
     move-result v11
 
     .line 19
-    invoke-virtual {v7}, Lcom/vk/im/engine/internal/storage/models/c;->b()I
+    invoke-virtual {v7}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryEntryStorageModel;->b()I
 
     move-result v7
 
     .line 20
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->h()Lcom/vk/im/engine/models/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->h()Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v12
 
-    invoke-virtual {v12, v7}, Lcom/vk/im/engine/models/a;->d(I)Ljava/lang/Object;
+    invoke-virtual {v12, v7}, Lcom/vk/im/engine/models/EntityIntMap;->d(I)Ljava/lang/Object;
 
     move-result-object v12
 
@@ -647,16 +647,16 @@
 
     const-string v10, "info.msgMap.getCached(msgId)!!"
 
-    invoke-static {v12, v10}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v12, v10}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v12, Lcom/vk/im/engine/models/messages/Msg;
 
     .line 21
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->h()Lcom/vk/im/engine/models/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->h()Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v10
 
-    invoke-virtual {v10, v7}, Lcom/vk/im/engine/models/a;->g(I)Z
+    invoke-virtual {v10, v7}, Lcom/vk/im/engine/models/EntityIntMap;->g(I)Z
 
     move-result v7
 
@@ -683,7 +683,7 @@
 
     .line 24
     :goto_3
-    invoke-virtual {v5, v8, v7}, Lcom/vk/im/engine/utils/collection/c;->a(IZ)V
+    invoke-virtual {v5, v8, v7}, Lcom/vk/im/engine/utils/collection/IntArraySet;->a(IZ)V
 
     add-int/lit8 v6, v6, 0x1
 
@@ -691,13 +691,13 @@
 
     .line 25
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 26
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
@@ -725,12 +725,12 @@
     move-result v6
 
     .line 29
-    invoke-virtual {v5, v2}, Lcom/vk/im/engine/utils/collection/c;->a(I)Z
+    invoke-virtual {v5, v2}, Lcom/vk/im/engine/utils/collection/IntArraySet;->a(I)Z
 
     move-result v2
 
     .line 30
-    invoke-virtual {v5, v6}, Lcom/vk/im/engine/utils/collection/c;->a(I)Z
+    invoke-virtual {v5, v6}, Lcom/vk/im/engine/utils/collection/IntArraySet;->a(I)Z
 
     move-result v6
 
@@ -751,11 +751,11 @@
 
     if-eqz v7, :cond_c
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->f()Lcom/vk/im/engine/internal/storage/models/d;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;->f()Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lcom/vk/im/engine/internal/storage/models/d;->b()Z
+    invoke-virtual {v7}, Lcom/vk/im/engine/internal/storage/models/DialogsHistoryMetaStorageModel;->b()Z
 
     move-result v7
 
@@ -838,7 +838,7 @@
     invoke-direct {p1}, Lcom/vk/im/engine/models/dialogs/DialogsHistory;-><init>()V
 
     .line 37
-    iget-object p2, p1, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
+    iget-object p2, p1, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
 
     invoke-interface {p2, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
@@ -846,21 +846,21 @@
     iput-object v4, p1, Lcom/vk/im/engine/models/dialogs/DialogsHistory;->latestMsg:Landroid/util/SparseArray;
 
     .line 39
-    iget-object p2, p1, Lcom/vk/im/engine/models/d;->expired:Lcom/vk/im/engine/utils/collection/c;
+    iget-object p2, p1, Lcom/vk/im/engine/models/History;->expired:Lcom/vk/im/engine/utils/collection/IntArraySet;
 
-    invoke-virtual {p2, v5}, Lcom/vk/im/engine/utils/collection/c;->a(Lcom/vk/im/engine/utils/collection/d;)V
+    invoke-virtual {p2, v5}, Lcom/vk/im/engine/utils/collection/IntArraySet;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)V
 
     .line 40
-    iput-boolean v2, p1, Lcom/vk/im/engine/models/d;->hasHistoryAfter:Z
+    iput-boolean v2, p1, Lcom/vk/im/engine/models/History;->hasHistoryAfter:Z
 
     .line 41
-    iput-boolean v8, p1, Lcom/vk/im/engine/models/d;->hasHistoryAfterCached:Z
+    iput-boolean v8, p1, Lcom/vk/im/engine/models/History;->hasHistoryAfterCached:Z
 
     .line 42
-    iput-boolean v6, p1, Lcom/vk/im/engine/models/d;->hasHistoryBefore:Z
+    iput-boolean v6, p1, Lcom/vk/im/engine/models/History;->hasHistoryBefore:Z
 
     .line 43
-    iput-boolean v0, p1, Lcom/vk/im/engine/models/d;->hasHistoryBeforeCached:Z
+    iput-boolean v0, p1, Lcom/vk/im/engine/models/History;->hasHistoryBeforeCached:Z
 
     return-object p1
 .end method

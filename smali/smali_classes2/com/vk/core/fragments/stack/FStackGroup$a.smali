@@ -68,17 +68,17 @@
 
     invoke-direct {v1, p1}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
 
-    invoke-direct {v0, v1, v3}, Lcom/vk/core/fragments/stack/FStackGroup;-><init>(Ljava/util/LinkedList;Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v3}, Lcom/vk/core/fragments/stack/FStackGroup;-><init>(Ljava/util/LinkedList;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 .end method

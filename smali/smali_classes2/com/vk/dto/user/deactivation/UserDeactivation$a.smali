@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -101,7 +101,7 @@
     .line 14
     new-instance v1, Lcom/vk/dto/user/deactivation/UserDeactivation;
 
-    invoke-direct {v1, p1, p2, p3, v0}, Lcom/vk/dto/user/deactivation/UserDeactivation;-><init>(Lcom/vk/dto/user/deactivation/Deactivation$Reason;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/i;)V
+    invoke-direct {v1, p1, p2, p3, v0}, Lcom/vk/dto/user/deactivation/UserDeactivation;-><init>(Lcom/vk/dto/user/deactivation/Deactivation$Reason;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object v0, v1
 

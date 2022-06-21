@@ -3,7 +3,7 @@
 .source "SocialGraphLoginFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$onViewCreated$3;->this$0:Lcom/vk/socialgraph/init/SocialGraphLoginFragment;
 
-    invoke-virtual {p1}, Lcom/vk/socialgraph/init/a;->D4()Lcom/vk/socialgraph/SocialGraphStrategy;
+    invoke-virtual {p1}, Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;->D4()Lcom/vk/socialgraph/SocialGraphStrategy;
 
     move-result-object p1
 
@@ -76,7 +76,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$onViewCreated$3;->this$0:Lcom/vk/socialgraph/init/SocialGraphLoginFragment;
 
-    invoke-virtual {p1}, Lcom/vk/socialgraph/init/a;->C4()Lcom/vk/socialgraph/SocialStatSender;
+    invoke-virtual {p1}, Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;->C4()Lcom/vk/socialgraph/SocialStatSender;
 
     move-result-object p1
 
@@ -110,7 +110,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$onViewCreated$3;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

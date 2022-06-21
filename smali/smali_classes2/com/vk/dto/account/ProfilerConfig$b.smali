@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -49,14 +49,14 @@
 
     const/4 v2, 0x3
 
-    invoke-direct {p1, v1, v0, v2, v0}, Lcom/vk/dto/account/ProfilerConfig;-><init>(ZLjava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v1, v0, v2, v0}, Lcom/vk/dto/account/ProfilerConfig;-><init>(ZLjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_0
 
     :cond_0
     new-instance v1, Lcom/vk/dto/account/ProfilerConfig;
 
-    invoke-direct {v1, p1, v0}, Lcom/vk/dto/account/ProfilerConfig;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/internal/i;)V
+    invoke-direct {v1, p1, v0}, Lcom/vk/dto/account/ProfilerConfig;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object p1, v1
 

@@ -1,11 +1,11 @@
 .class Lcom/vtosters/lite/fragments/market/GoodFragment$a;
-.super Lcom/vtosters/lite/api/k;
+.super Lcom/vtosters/lite/api/ResultlessCallback;
 .source "GoodFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/market/GoodFragment;->f(Lcom/vtosters/lite/q;)V
+    value = Lcom/vtosters/lite/fragments/market/GoodFragment;->f(Lcom/vtosters/lite/Comment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field final synthetic c:Lcom/vtosters/lite/q;
+.field final synthetic c:Lcom/vtosters/lite/Comment;
 
 .field final synthetic d:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lcom/vk/core/fragments/FragmentImpl;Lcom/vtosters/lite/q;)V
+.method constructor <init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lcom/vk/core/fragments/FragmentImpl;Lcom/vtosters/lite/Comment;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$a;->d:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    iput-object p3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$a;->c:Lcom/vtosters/lite/q;
+    iput-object p3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$a;->c:Lcom/vtosters/lite/Comment;
 
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/k;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/ResultlessCallback;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
@@ -46,25 +46,25 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$a;->c:Lcom/vtosters/lite/q;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$a;->c:Lcom/vtosters/lite/Comment;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$a;->d:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/v;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/b0/j;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->b(Z)V
 
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$a;->d:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/v;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     move-result-object v0
 
@@ -74,12 +74,12 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/ui/b0/j;->a(Ljava/util/Collection;Z)V
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->a(Ljava/util/Collection;Z)V
 
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$a;->d:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/v;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     move-result-object v0
 
@@ -101,12 +101,12 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/ui/b0/j;->a(Ljava/util/Collection;Z)V
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->a(Ljava/util/Collection;Z)V
 
     .line 5
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$a;->d:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/v;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     move-result-object v0
 

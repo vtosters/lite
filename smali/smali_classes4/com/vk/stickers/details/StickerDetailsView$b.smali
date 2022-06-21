@@ -67,7 +67,7 @@
 
     if-eqz p4, :cond_5
 
-    check-cast p4, Lcom/vk/stickers/details/a;
+    check-cast p4, Lcom/vk/stickers/details/StickerDetailsAdapter;
 
     .line 2
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -81,7 +81,7 @@
     move-result p2
 
     .line 3
-    invoke-virtual {p4, p2}, Lcom/vk/stickers/details/a;->I(I)Z
+    invoke-virtual {p4, p2}, Lcom/vk/stickers/details/StickerDetailsAdapter;->I(I)Z
 
     move-result p3
 
@@ -101,7 +101,7 @@
 
     .line 6
     :cond_0
-    invoke-virtual {p4}, Lcom/vk/stickers/details/a;->k()I
+    invoke-virtual {p4}, Lcom/vk/stickers/details/StickerDetailsAdapter;->k()I
 
     move-result p3
 
@@ -123,14 +123,14 @@
 
     .line 7
     :cond_1
-    invoke-virtual {p4}, Lcom/vk/stickers/details/a;->m()I
+    invoke-virtual {p4}, Lcom/vk/stickers/details/StickerDetailsAdapter;->m()I
 
     move-result p3
 
     if-ne p2, p3, :cond_3
 
     .line 8
-    invoke-virtual {p4}, Lcom/vk/stickers/details/a;->v()Z
+    invoke-virtual {p4}, Lcom/vk/stickers/details/StickerDetailsAdapter;->v()Z
 
     move-result p2
 
@@ -167,7 +167,7 @@
 
     .line 12
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -194,7 +194,7 @@
 
     if-eqz p3, :cond_3
 
-    check-cast p3, Lcom/vk/stickers/details/a;
+    check-cast p3, Lcom/vk/stickers/details/StickerDetailsAdapter;
 
     .line 2
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getChildCount()I
@@ -219,7 +219,7 @@
     move-result v4
 
     .line 5
-    invoke-virtual {p3}, Lcom/vk/stickers/details/a;->j()I
+    invoke-virtual {p3}, Lcom/vk/stickers/details/StickerDetailsAdapter;->j()I
 
     move-result v5
 
@@ -244,7 +244,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

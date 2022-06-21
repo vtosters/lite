@@ -3,7 +3,7 @@
 .source "MusicSubscriptionDetailsContainer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -47,14 +47,14 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 2
 
-    const-class v0, Lcom/vk/core/extensions/k;
+    const-class v0, Lcom/vk/core/extensions/GeneralFunctions;
 
     const-string v1, "libmusic-ui_release"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/e;
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;Ljava/lang/String;)Lkotlin/u/KDeclarationContainer;
 
     move-result-object v0
 
@@ -88,7 +88,7 @@
     check-cast v0, Lcom/vk/music/subscription/MusicSubscriptionDetailsContainer;
 
     .line 2
-    invoke-static {v0}, Lcom/vk/core/extensions/k;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/extensions/GeneralFunctions;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "LinkRedirActivity.java"
 
 # interfaces
-.implements Lcom/vk/common/links/f;
+.implements Lcom/vk/common/links/OpenCallback;
 
 
 # annotations
@@ -20,7 +20,7 @@
 # instance fields
 .field final synthetic a:Z
 
-.field final synthetic b:Lcom/vk/common/links/c$b;
+.field final synthetic b:Lcom/vk/common/links/LinkProcessor$b;
 
 .field final synthetic c:Ljava/lang/String;
 
@@ -28,7 +28,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/LinkRedirActivity;ZLcom/vk/common/links/c$b;Ljava/lang/String;)V
+.method constructor <init>(Lcom/vtosters/lite/LinkRedirActivity;ZLcom/vk/common/links/LinkProcessor$b;Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -36,7 +36,7 @@
 
     iput-boolean p2, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->a:Z
 
-    iput-object p3, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->b:Lcom/vk/common/links/c$b;
+    iput-object p3, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->b:Lcom/vk/common/links/LinkProcessor$b;
 
     iput-object p4, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->c:Ljava/lang/String;
 
@@ -83,27 +83,27 @@
     if-eqz v0, :cond_0
 
     .line 5
-    sget-object v0, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
+    sget-object v0, Lcom/vk/core/ui/v/UiTracker;->g:Lcom/vk/core/ui/v/UiTracker;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/a;->h()Lcom/vk/core/ui/v/f;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTracker;->h()Lcom/vk/core/ui/v/UiTrackingListeners4;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Lcom/vk/core/ui/v/f;->a(Lcom/vk/core/ui/v/g;)V
+    invoke-interface {v0, v1}, Lcom/vk/core/ui/v/UiTrackingListeners4;->a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
 
     goto :goto_0
 
     .line 6
     :cond_0
-    sget-object v0, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
+    sget-object v0, Lcom/vk/core/ui/v/UiTracker;->g:Lcom/vk/core/ui/v/UiTracker;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/a;->h()Lcom/vk/core/ui/v/f;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTracker;->h()Lcom/vk/core/ui/v/UiTrackingListeners4;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/core/ui/v/f;->a()V
+    invoke-interface {v0}, Lcom/vk/core/ui/v/UiTrackingListeners4;->a()V
 
     .line 7
     :goto_0
@@ -122,9 +122,9 @@
     .end param
 
     .line 8
-    iget-object v0, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->b:Lcom/vk/common/links/c$b;
+    iget-object v0, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->b:Lcom/vk/common/links/LinkProcessor$b;
 
-    invoke-virtual {v0}, Lcom/vk/common/links/c$b;->i()Z
+    invoke-virtual {v0}, Lcom/vk/common/links/LinkProcessor$b;->i()Z
 
     move-result v0
 
@@ -162,7 +162,7 @@
 
     const v0, 0x7f120031
 
-    invoke-static {p1, v0, v1}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;II)Lkotlin/m;
+    invoke-static {p1, v0, v1}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;II)Lkotlin/Unit;
 
     goto :goto_1
 
@@ -180,9 +180,9 @@
 
     iget-object v0, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->c:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->b:Lcom/vk/common/links/c$b;
+    iget-object v2, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->b:Lcom/vk/common/links/LinkProcessor$b;
 
-    invoke-static {p1, v0, v2}, Lcom/vk/common/links/BrowserUtils;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;)V
+    invoke-static {p1, v0, v2}, Lcom/vk/common/links/BrowserUtils;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;)V
 
     .line 13
     :cond_3
@@ -209,9 +209,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->b:Lcom/vk/common/links/c$b;
+    iget-object v0, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->b:Lcom/vk/common/links/LinkProcessor$b;
 
-    invoke-virtual {v0}, Lcom/vk/common/links/c$b;->i()Z
+    invoke-virtual {v0}, Lcom/vk/common/links/LinkProcessor$b;->i()Z
 
     move-result v0
 
@@ -222,9 +222,9 @@
 
     iget-object v1, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->c:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->b:Lcom/vk/common/links/c$b;
+    iget-object v2, p0, Lcom/vtosters/lite/LinkRedirActivity$c;->b:Lcom/vk/common/links/LinkProcessor$b;
 
-    invoke-static {v0, v1, v2}, Lcom/vk/common/links/BrowserUtils;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;)V
+    invoke-static {v0, v1, v2}, Lcom/vk/common/links/BrowserUtils;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;)V
 
     .line 3
     :cond_0

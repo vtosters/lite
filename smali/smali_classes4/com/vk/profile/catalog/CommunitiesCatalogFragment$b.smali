@@ -3,7 +3,7 @@
 .source "CommunitiesCatalogFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/catalog2/core/w/e/k;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/catalog2/core/w/e/CatalogCommand;",
         ">;"
     }
 .end annotation
@@ -56,21 +56,21 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/w/e/k;)V
+.method public final a(Lcom/vk/catalog2/core/w/e/CatalogCommand;)V
     .locals 2
 
     .line 1
-    new-instance p1, Lcom/vk/api/base/d;
+    new-instance p1, Lcom/vk/api/base/ApiRequest;
 
     const-string v0, "groups.removeRecents"
 
-    invoke-direct {p1, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    invoke-static {p1, v0, v1, v0}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, v0, v1, v0}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -78,7 +78,7 @@
 
     sget-object v1, Lcom/vk/profile/catalog/CommunitiesCatalogFragment$b$b;->a:Lcom/vk/profile/catalog/CommunitiesCatalogFragment$b$b;
 
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -87,9 +87,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/catalog2/core/w/e/k;
+    check-cast p1, Lcom/vk/catalog2/core/w/e/CatalogCommand;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/catalog/CommunitiesCatalogFragment$b;->a(Lcom/vk/catalog2/core/w/e/k;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/catalog/CommunitiesCatalogFragment$b;->a(Lcom/vk/catalog2/core/w/e/CatalogCommand;)V
 
     return-void
 .end method

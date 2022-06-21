@@ -3,12 +3,12 @@
 .source "FriendsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/api/friends/i$b;
+.implements Lcom/vk/api/friends/FriendsGetRequests$b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/friends/FriendsFragment$b;->a()Lcom/vk/api/friends/i$b;
+    value = Lcom/vtosters/lite/fragments/friends/FriendsFragment$b;->a()Lcom/vk/api/friends/FriendsGetRequests$b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,11 +33,11 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -59,7 +59,7 @@
 
     const-string v0, "AppContextHolder.context\u2026nds_recommend_from, name)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

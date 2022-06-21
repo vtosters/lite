@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/n;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes4;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,16 +19,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $action$inlined:Lcom/vk/qrcode/n;
+.field final synthetic $action$inlined:Lcom/vk/qrcode/QRTypes4;
 
 .field final synthetic $buttonsClickListener$inlined:Lcom/vk/qrcode/QRViewUtils$p;
 
@@ -44,12 +44,12 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Lcom/vk/qrcode/n;Lcom/vk/qrcode/QRViewUtils$p;Ljava/lang/String;ILjava/lang/CharSequence;Lkotlin/jvm/internal/Ref$ObjectRef;)V
+.method constructor <init>(Landroid/app/Activity;Lcom/vk/qrcode/QRTypes4;Lcom/vk/qrcode/QRViewUtils$p;Ljava/lang/String;ILjava/lang/CharSequence;Lkotlin/jvm/internal/Ref$ObjectRef;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forText$$inlined$apply$lambda$1;->$context$inlined:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$forText$$inlined$apply$lambda$1;->$action$inlined:Lcom/vk/qrcode/n;
+    iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$forText$$inlined$apply$lambda$1;->$action$inlined:Lcom/vk/qrcode/QRTypes4;
 
     iput-object p3, p0, Lcom/vk/qrcode/QRViewUtils$forText$$inlined$apply$lambda$1;->$buttonsClickListener$inlined:Lcom/vk/qrcode/QRViewUtils$p;
 
@@ -78,12 +78,12 @@
 
     iget-object p1, p1, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/e;
+    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->D4()Landroid/widget/TextView;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->D4()Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -111,7 +111,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->C4()Landroid/view/ViewGroup;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->C4()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -139,7 +139,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/qrcode/QRViewUtils$forText$$inlined$apply$lambda$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

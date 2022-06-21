@@ -1,9 +1,9 @@
 .class public Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment;
-.super Lcom/vk/auth/base/d;
+.super Lcom/vk/auth/base/FacebookAuthFragment;
 .source "EnterLoginPasswordFragment.kt"
 
 # interfaces
-.implements Lcom/vk/auth/init/loginpass/a;
+.implements Lcom/vk/auth/init/loginpass/LoginPassView;
 
 
 # annotations
@@ -15,10 +15,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/auth/base/d<",
+        "Lcom/vk/auth/base/FacebookAuthFragment<",
         "Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;",
         ">;",
-        "Lcom/vk/auth/init/loginpass/a;"
+        "Lcom/vk/auth/init/loginpass/LoginPassView;"
     }
 .end annotation
 
@@ -55,7 +55,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment;->J:Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment$a;
 
@@ -66,7 +66,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/auth/base/d;-><init>()V
+    invoke-direct {p0}, Lcom/vk/auth/base/FacebookAuthFragment;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment$b;
@@ -89,7 +89,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p0
 
@@ -173,10 +173,10 @@
     const/4 v0, 0x0
 
     .line 5
-    invoke-virtual {p0, v0}, Lcom/vk/auth/base/d;->t0(Z)V
+    invoke-virtual {p0, v0}, Lcom/vk/auth/base/FacebookAuthFragment;->t0(Z)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/auth/base/d;->J4()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/vk/auth/base/FacebookAuthFragment;->J4()Landroid/view/View;
 
     move-result-object v0
 
@@ -205,7 +205,7 @@
     :cond_2
     const-string v0, "loginEditText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -220,7 +220,7 @@
     :cond_4
     const-string v0, "loginButton"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -277,10 +277,10 @@
     const/4 v0, 0x1
 
     .line 5
-    invoke-virtual {p0, v0}, Lcom/vk/auth/base/d;->t0(Z)V
+    invoke-virtual {p0, v0}, Lcom/vk/auth/base/FacebookAuthFragment;->t0(Z)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/auth/base/d;->J4()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/vk/auth/base/FacebookAuthFragment;->J4()Landroid/view/View;
 
     move-result-object v0
 
@@ -309,7 +309,7 @@
     :cond_2
     const-string v0, "loginEditText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -324,7 +324,7 @@
     :cond_4
     const-string v0, "loginButton"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -355,7 +355,7 @@
     .locals 3
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/auth/base/e;->I4()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/LandingFragment;->I4()Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -394,7 +394,7 @@
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/auth/base/e;->I4()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/LandingFragment;->I4()Landroid/widget/ImageView;
 
     move-result-object v0
 
@@ -461,13 +461,13 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 5
     :cond_1
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -485,36 +485,36 @@
     return-void
 
     :cond_3
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 7
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 8
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
 
-.method public c(Lkotlin/jvm/b/a;)V
+.method public c(Lkotlin/jvm/b/Functions;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/i;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/AuthUiManager;
 
     move-result-object v0
 
@@ -524,9 +524,9 @@
 
     const-string v2, "requireContext()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/auth/main/i;->a(Landroid/content/Context;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-interface {v0, v1}, Lcom/vk/auth/main/AuthUiManager;->a(Landroid/content/Context;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
@@ -542,7 +542,7 @@
 
     new-instance v2, Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment$f;
 
-    invoke-direct {v2, p1}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment$f;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, p1}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment$f;-><init>(Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v0, v1, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -586,7 +586,7 @@
     return-void
 .end method
 
-.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/auth/base/a;
+.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/auth/base/AuthPresenter;
     .locals 0
 
     .line 1
@@ -612,7 +612,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/auth/base/d;->m(Z)V
+    invoke-super {p0, p1}, Lcom/vk/auth/base/FacebookAuthFragment;->m(Z)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment;->B:Landroid/widget/EditText;
@@ -639,7 +639,7 @@
     :cond_0
     const-string p1, "passEditText"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -647,7 +647,7 @@
     const-string p1, "loginEditText"
 
     .line 4
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -669,7 +669,7 @@
     :cond_0
     const-string v0, "loginEditText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -683,7 +683,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
-    sget-object p1, Lcom/vk/auth/a;->b:Lcom/vk/auth/a;
+    sget-object p1, Lcom/vk/auth/AlignmentHelper;->b:Lcom/vk/auth/AlignmentHelper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
@@ -693,7 +693,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    invoke-virtual {p1, v0}, Lcom/vk/auth/a;->a(Landroid/view/ViewGroup;)V
+    invoke-virtual {p1, v0}, Lcom/vk/auth/AlignmentHelper;->a(Landroid/view/ViewGroup;)V
 
     return-void
 
@@ -776,7 +776,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 3
-    sget-object v0, Lcom/vk/auth/a;->b:Lcom/vk/auth/a;
+    sget-object v0, Lcom/vk/auth/AlignmentHelper;->b:Lcom/vk/auth/AlignmentHelper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
@@ -786,10 +786,10 @@
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v1}, Lcom/vk/auth/a;->b(Landroid/view/ViewGroup;)V
+    invoke-virtual {v0, v1}, Lcom/vk/auth/AlignmentHelper;->b(Landroid/view/ViewGroup;)V
 
     .line 4
-    invoke-super {p0}, Lcom/vk/auth/base/d;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/auth/base/FacebookAuthFragment;->onDestroyView()V
 
     return-void
 
@@ -807,7 +807,7 @@
     const-string v0, "passEditText"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -815,7 +815,7 @@
     const-string v0, "loginEditText"
 
     .line 7
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -824,10 +824,10 @@
     .locals 4
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/auth/base/d;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/auth/base/FacebookAuthFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/auth/base/e;->I4()Landroid/widget/ImageView;
+    invoke-virtual {p0}, Lcom/vk/auth/base/LandingFragment;->I4()Landroid/widget/ImageView;
 
     move-result-object p2
 
@@ -877,7 +877,7 @@
 
     const-string v2, "view.findViewById(R.id.title)"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -892,7 +892,7 @@
 
     const-string v2, "view.findViewById(R.id.email_or_phone)"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/EditText;
 
@@ -907,7 +907,7 @@
 
     const-string v2, "view.findViewById(R.id.password)"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/EditText;
 
@@ -922,7 +922,7 @@
 
     const-string v2, "view.findViewById(R.id.continue_btn)"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment;->D:Landroid/view/View;
 
@@ -935,7 +935,7 @@
 
     const-string v2, "view.findViewById(R.id.password_container)"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout;
 
@@ -973,20 +973,20 @@
     goto :goto_2
 
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 11
     :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 12
     :cond_5
     :goto_2
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/i;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/AuthUiManager;
 
     move-result-object p2
 
@@ -996,9 +996,9 @@
 
     const-string v2, "requireContext()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, v1}, Lcom/vk/auth/main/i;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-interface {p2, v1}, Lcom/vk/auth/main/AuthUiManager;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -1023,13 +1023,13 @@
     goto :goto_3
 
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 15
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -1136,7 +1136,7 @@
 
     .line 23
     :cond_b
-    sget-object p2, Lcom/vk/auth/a;->b:Lcom/vk/auth/a;
+    sget-object p2, Lcom/vk/auth/AlignmentHelper;->b:Lcom/vk/auth/AlignmentHelper;
 
     check-cast p1, Landroid/view/ViewGroup;
 
@@ -1148,16 +1148,16 @@
 
     invoke-direct {v1, p0}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment$onViewCreated$5;-><init>(Lcom/vk/auth/init/loginpass/EnterLoginPasswordFragment;)V
 
-    invoke-virtual {p2, p1, v0, v1}, Lcom/vk/auth/a;->a(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, p1, v0, v1}, Lcom/vk/auth/AlignmentHelper;->a(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     .line 24
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p1
 
     check-cast p1, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;
 
-    invoke-virtual {p1, p0}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->a(Lcom/vk/auth/init/loginpass/a;)V
+    invoke-virtual {p1, p0}, Lcom/vk/auth/init/loginpass/EnterLoginPasswordPresenter;->a(Lcom/vk/auth/init/loginpass/LoginPassView;)V
 
     return-void
 
@@ -1165,7 +1165,7 @@
     const-string p1, "passwordContainer"
 
     .line 25
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -1173,13 +1173,13 @@
     const-string p1, "loginButton"
 
     .line 26
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 27
     :cond_e
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -1187,13 +1187,13 @@
     const-string p1, "loginEditText"
 
     .line 28
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 29
     :cond_10
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -1215,7 +1215,7 @@
     :cond_0
     const-string p1, "loginButton"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/api/base/persistent/PersistentRequest$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/base/persistent/PersistentRequest$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/api/base/persistent/PersistentRequest;->d:Lcom/vk/api/base/persistent/PersistentRequest$b;
 
@@ -120,7 +120,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/util/Map;Ljava/lang/reflect/Method;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/util/Map;Ljava/lang/reflect/Method;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x4
@@ -188,7 +188,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -211,7 +211,7 @@
 
     iget-object v3, p1, Lcom/vk/api/base/persistent/PersistentRequest;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -227,7 +227,7 @@
 
     iget-object v3, p1, Lcom/vk/api/base/persistent/PersistentRequest;->b:Ljava/util/Map;
 
-    invoke-static {v1, v3}, Lcom/vk/core/extensions/c;->a(Ljava/util/Map;Ljava/util/Map;)Z
+    invoke-static {v1, v3}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Map;Ljava/util/Map;)Z
 
     move-result v1
 
@@ -241,7 +241,7 @@
 
     iget-object p1, p1, Lcom/vk/api/base/persistent/PersistentRequest;->c:Ljava/lang/reflect/Method;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -349,23 +349,23 @@
     return-object v0
 .end method
 
-.method public final u1()Lcom/vk/api/base/d;
+.method public final u1()Lcom/vk/api/base/ApiRequest;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/api/base/d<",
+            "Lcom/vk/api/base/ApiRequest<",
             "Lorg/json/JSONObject;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vk/api/base/d;
+    new-instance v0, Lcom/vk/api/base/ApiRequest;
 
     iget-object v1, p0, Lcom/vk/api/base/persistent/PersistentRequest;->a:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     .line 2
     iget-object v1, p0, Lcom/vk/api/base/persistent/PersistentRequest;->b:Ljava/util/Map;
@@ -405,7 +405,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    invoke-virtual {v0, v3, v2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {v0, v3, v2}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     goto :goto_0
 

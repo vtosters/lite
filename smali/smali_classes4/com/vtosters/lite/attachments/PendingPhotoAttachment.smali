@@ -3,9 +3,9 @@
 .source "PendingPhotoAttachment.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/attachments/c;
-.implements Lcom/vtosters/lite/attachments/b;
-.implements Lcom/vk/newsfeed/i0/b;
+.implements Lcom/vtosters/lite/attachments/ThumbAttachment;
+.implements Lcom/vtosters/lite/attachments/PendingAttachment;
+.implements Lcom/vk/newsfeed/i0/PostingDraftJsonItem;
 
 
 # static fields
@@ -138,7 +138,7 @@
     move-result-object v2
 
     .line 8
-    sget-object v3, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v3, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     .line 9
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -166,9 +166,9 @@
     invoke-virtual {v4}, Landroid/os/ParcelFileDescriptor;->close()V
 
     .line 12
-    sget-object v4, Lb/h/g/n/a;->a:Lb/h/g/n/a;
+    sget-object v4, Lb/h/g/n/ImageHelper;->a:Lb/h/g/n/ImageHelper;
 
-    invoke-virtual {v4, v3, v2}, Lb/h/g/n/a;->c(Landroid/content/Context;Landroid/net/Uri;)I
+    invoke-virtual {v4, v3, v2}, Lb/h/g/n/ImageHelper;->c(Landroid/content/Context;Landroid/net/Uri;)I
 
     move-result v2
     :try_end_0
@@ -290,9 +290,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/i0/b;->w:Lcom/vk/newsfeed/i0/b$a;
+    sget-object v0, Lcom/vk/newsfeed/i0/PostingDraftJsonItem;->w:Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;
 
-    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/b$a;->a(Lcom/vk/newsfeed/i0/b;)Lorg/json/JSONObject;
+    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;->a(Lcom/vk/newsfeed/i0/PostingDraftJsonItem;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -327,23 +327,23 @@
     return v0
 .end method
 
-.method public bridge synthetic V0()Lcom/vtosters/lite/upload/j;
+.method public bridge synthetic V0()Lcom/vtosters/lite/upload/UploadTask;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->V0()Lcom/vtosters/lite/upload/l/m;
+    invoke-virtual {p0}, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->V0()Lcom/vtosters/lite/upload/l/PhotoUploadTask;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public V0()Lcom/vtosters/lite/upload/l/m;
+.method public V0()Lcom/vtosters/lite/upload/l/PhotoUploadTask;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vtosters/lite/upload/l/m<",
+            "Lcom/vtosters/lite/upload/l/PhotoUploadTask<",
             "Lcom/vtosters/lite/attachments/PhotoAttachment;",
             ">;"
         }
@@ -355,32 +355,32 @@
     if-eqz v0, :cond_0
 
     .line 3
-    new-instance v0, Lcom/vtosters/lite/upload/l/s;
+    new-instance v0, Lcom/vtosters/lite/upload/l/WallPhotoUploadTask;
 
     iget-object v1, p0, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->e:Ljava/lang/String;
 
     iget v2, p0, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->C:I
 
-    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/upload/l/s;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/upload/l/WallPhotoUploadTask;-><init>(Ljava/lang/String;I)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    new-instance v0, Lcom/vtosters/lite/upload/l/k;
+    new-instance v0, Lcom/vtosters/lite/upload/l/MessagesPhotoUploadTask;
 
     iget-object v1, p0, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->e:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/upload/l/k;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/upload/l/MessagesPhotoUploadTask;-><init>(Ljava/lang/String;)V
 
     .line 5
     iget v1, p0, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;->B:I
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/upload/j;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/upload/UploadTask;->a(I)V
 
     .line 6
     :goto_0
-    invoke-virtual {v0}, Lcom/vtosters/lite/upload/j;->m()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/upload/UploadTask;->m()I
 
     move-result v1
 
@@ -553,7 +553,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/a;->b:I
+    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->b:I
 
     return v0
 .end method

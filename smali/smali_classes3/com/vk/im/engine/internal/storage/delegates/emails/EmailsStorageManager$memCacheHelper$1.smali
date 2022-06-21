@@ -3,12 +3,12 @@
 .source "EmailsStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/b;)V
+    value = Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;-><init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/models/emails/Email;",
         "Ljava/lang/Integer;",
         ">;"

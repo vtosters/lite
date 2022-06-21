@@ -3,13 +3,13 @@
 .source "StorySettingsActivity.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # instance fields
-.field private final G:Lcom/vk/bridges/a;
+.field private final G:Lcom/vk/bridges/AuthBridge1;
 
-.field private final H:Lcom/vk/stories/v0;
+.field private final H:Lcom/vk/stories/StoryPrivacySettingsController;
 
 .field private I:Landroid/view/View;
 
@@ -26,19 +26,19 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lb/h/w/a;",
+            "Lb/h/w/PrivacySettingView;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private O:Lio/reactivex/disposables/b;
+.field private O:Lio/reactivex/disposables/Disposable;
 
 .field private P:Z
 
 .field private Q:Z
 
-.field private R:Lio/reactivex/disposables/b;
+.field private R:Lio/reactivex/disposables/Disposable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -52,22 +52,22 @@
     invoke-direct {p0}, Lcom/vtosters/lite/VKActivity;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/stories/StorySettingsActivity;->G:Lcom/vk/bridges/a;
+    iput-object v0, p0, Lcom/vk/stories/StorySettingsActivity;->G:Lcom/vk/bridges/AuthBridge1;
 
     .line 3
-    new-instance v0, Lcom/vk/stories/v0;
+    new-instance v0, Lcom/vk/stories/StoryPrivacySettingsController;
 
-    invoke-direct {v0}, Lcom/vk/stories/v0;-><init>()V
+    invoke-direct {v0}, Lcom/vk/stories/StoryPrivacySettingsController;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/stories/StorySettingsActivity;->H:Lcom/vk/stories/v0;
+    iput-object v0, p0, Lcom/vk/stories/StorySettingsActivity;->H:Lcom/vk/stories/StoryPrivacySettingsController;
 
     .line 4
     new-instance v0, Ljava/util/HashMap;
@@ -79,7 +79,7 @@
     return-void
 .end method
 
-.method private a(Lcom/vk/dto/common/data/PrivacySetting;)Lb/h/w/a;
+.method private a(Lcom/vk/dto/common/data/PrivacySetting;)Lb/h/w/PrivacySettingView;
     .locals 4
 
     if-eqz p1, :cond_1
@@ -93,14 +93,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lb/h/w/a;
+    check-cast v0, Lb/h/w/PrivacySettingView;
 
     if-nez v0, :cond_0
 
     .line 15
-    new-instance v0, Lb/h/w/a;
+    new-instance v0, Lb/h/w/PrivacySettingView;
 
-    invoke-direct {v0, p0}, Lb/h/w/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lb/h/w/PrivacySettingView;-><init>(Landroid/content/Context;)V
 
     .line 16
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
@@ -129,7 +129,7 @@
     const/16 v1, 0x2703
 
     .line 19
-    invoke-virtual {v0, p1, v1}, Lb/h/w/a;->a(Lcom/vk/dto/common/data/PrivacySetting;I)V
+    invoke-virtual {v0, p1, v1}, Lb/h/w/PrivacySettingView;->a(Lcom/vk/dto/common/data/PrivacySetting;I)V
 
     return-object v0
 
@@ -139,11 +139,11 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/vk/stories/StorySettingsActivity;Lcom/vk/dto/common/data/PrivacySetting;)Lb/h/w/a;
+.method static synthetic a(Lcom/vk/stories/StorySettingsActivity;Lcom/vk/dto/common/data/PrivacySetting;)Lb/h/w/PrivacySettingView;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/stories/StorySettingsActivity;->a(Lcom/vk/dto/common/data/PrivacySetting;)Lb/h/w/a;
+    invoke-direct {p0, p1}, Lcom/vk/stories/StorySettingsActivity;->a(Lcom/vk/dto/common/data/PrivacySetting;)Lb/h/w/PrivacySettingView;
 
     move-result-object p0
 
@@ -215,11 +215,11 @@
     return p1
 .end method
 
-.method static synthetic b(Lcom/vk/stories/StorySettingsActivity;)Lcom/vk/bridges/a;
+.method static synthetic b(Lcom/vk/stories/StorySettingsActivity;)Lcom/vk/bridges/AuthBridge1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/StorySettingsActivity;->G:Lcom/vk/bridges/a;
+    iget-object p0, p0, Lcom/vk/stories/StorySettingsActivity;->G:Lcom/vk/bridges/AuthBridge1;
 
     return-object p0
 .end method
@@ -249,11 +249,11 @@
     return-void
 .end method
 
-.method static synthetic c(Lcom/vk/stories/StorySettingsActivity;)Lcom/vk/stories/v0;
+.method static synthetic c(Lcom/vk/stories/StorySettingsActivity;)Lcom/vk/stories/StoryPrivacySettingsController;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/StorySettingsActivity;->H:Lcom/vk/stories/v0;
+    iget-object p0, p0, Lcom/vk/stories/StorySettingsActivity;->H:Lcom/vk/stories/StoryPrivacySettingsController;
 
     return-object p0
 .end method
@@ -307,7 +307,7 @@
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/SwitchCompat;->setChecked(Z)V
 
     .line 3
-    invoke-static {}, Lcom/vk/libvideo/a0/h/f;->l()Lcom/vk/libvideo/a0/h/f;
+    invoke-static {}, Lcom/vk/libvideo/a0/h/LiveVideoController;->l()Lcom/vk/libvideo/a0/h/LiveVideoController;
 
     move-result-object p1
 
@@ -315,7 +315,7 @@
 
     move-result p0
 
-    invoke-virtual {p1, p0}, Lcom/vk/libvideo/a0/h/f;->c(Z)V
+    invoke-virtual {p1, p0}, Lcom/vk/libvideo/a0/h/LiveVideoController;->c(Z)V
 
     .line 4
     invoke-static {}, Lcom/vk/stories/analytics/CameraAnalytics;->b()V
@@ -345,7 +345,7 @@
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/SwitchCompat;->setChecked(Z)V
 
     .line 3
-    invoke-static {}, Lcom/vk/libvideo/a0/h/f;->l()Lcom/vk/libvideo/a0/h/f;
+    invoke-static {}, Lcom/vk/libvideo/a0/h/LiveVideoController;->l()Lcom/vk/libvideo/a0/h/LiveVideoController;
 
     move-result-object p1
 
@@ -353,7 +353,7 @@
 
     move-result p0
 
-    invoke-virtual {p1, p0}, Lcom/vk/libvideo/a0/h/f;->b(Z)V
+    invoke-virtual {p1, p0}, Lcom/vk/libvideo/a0/h/LiveVideoController;->b(Z)V
 
     .line 4
     invoke-static {}, Lcom/vk/stories/analytics/CameraAnalytics;->b()V
@@ -383,7 +383,7 @@
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/SwitchCompat;->setChecked(Z)V
 
     .line 3
-    invoke-static {}, Lcom/vk/libvideo/a0/h/f;->l()Lcom/vk/libvideo/a0/h/f;
+    invoke-static {}, Lcom/vk/libvideo/a0/h/LiveVideoController;->l()Lcom/vk/libvideo/a0/h/LiveVideoController;
 
     move-result-object p1
 
@@ -391,7 +391,7 @@
 
     move-result p0
 
-    invoke-virtual {p1, p0}, Lcom/vk/libvideo/a0/h/f;->a(Z)V
+    invoke-virtual {p1, p0}, Lcom/vk/libvideo/a0/h/LiveVideoController;->a(Z)V
 
     .line 4
     invoke-static {}, Lcom/vk/stories/analytics/CameraAnalytics;->b()V
@@ -449,7 +449,7 @@
     aput-object v0, v2, v3
 
     .line 3
-    invoke-static {v1, v2}, Lcom/vk/core/util/y0;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/vk/core/util/ResUtils;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -484,15 +484,15 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 4
-    new-instance v0, Lcom/vk/api/account/m;
+    new-instance v0, Lcom/vk/api/account/AccountGetPrivacySettings;
 
     invoke-static {}, Lcom/vk/stories/StoriesController;->m()Z
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/api/account/m;-><init>(Z)V
+    invoke-direct {v0, v1}, Lcom/vk/api/account/AccountGetPrivacySettings;-><init>(Z)V
 
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -501,11 +501,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stories/StorySettingsActivity$a;-><init>(Lcom/vk/stories/StorySettingsActivity;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/r;)Lc/a/r;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/Observer;)Lio/reactivex/Observer;
 
-    check-cast v1, Lio/reactivex/disposables/b;
+    check-cast v1, Lio/reactivex/disposables/Disposable;
 
-    iput-object v1, p0, Lcom/vk/stories/StorySettingsActivity;->O:Lio/reactivex/disposables/b;
+    iput-object v1, p0, Lcom/vk/stories/StorySettingsActivity;->O:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -547,7 +547,7 @@
     const p1, 0x7f12032b
 
     .line 11
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     :goto_0
     return-void
@@ -566,11 +566,11 @@
     .locals 0
 
     .line 5
-    new-instance p1, Lcom/vk/stories/s0$c;
+    new-instance p1, Lcom/vk/stories/StoriesFilterListFragment$c;
 
-    invoke-direct {p1}, Lcom/vk/stories/s0$c;-><init>()V
+    invoke-direct {p1}, Lcom/vk/stories/StoriesFilterListFragment$c;-><init>()V
 
-    invoke-virtual {p1, p0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, p0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -583,7 +583,7 @@
 
     invoke-direct {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment$a;-><init>()V
 
-    invoke-virtual {p1, p0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, p0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -610,7 +610,7 @@
     check-cast p1, Lcom/vk/dto/common/data/PrivacySetting;
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/stories/StorySettingsActivity;->a(Lcom/vk/dto/common/data/PrivacySetting;)Lb/h/w/a;
+    invoke-direct {p0, p1}, Lcom/vk/stories/StorySettingsActivity;->a(Lcom/vk/dto/common/data/PrivacySetting;)Lb/h/w/PrivacySettingView;
 
     :cond_0
     return-void
@@ -839,11 +839,11 @@
     move-result-object p1
 
     .line 26
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->a1()Z
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->a1()Z
 
     move-result v1
 
@@ -851,7 +851,7 @@
 
     if-nez v1, :cond_2
 
-    invoke-static {}, Lb/h/g/g/b;->j()Z
+    invoke-static {}, Lb/h/g/g/BuildInfo;->j()Z
 
     move-result v1
 
@@ -914,11 +914,11 @@
     invoke-virtual {v1, v0}, Landroid/widget/CompoundButton;->setClickable(Z)V
 
     .line 35
-    invoke-static {}, Lcom/vk/libvideo/a0/h/f;->l()Lcom/vk/libvideo/a0/h/f;
+    invoke-static {}, Lcom/vk/libvideo/a0/h/LiveVideoController;->l()Lcom/vk/libvideo/a0/h/LiveVideoController;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/libvideo/a0/h/f;->g()Z
+    invoke-virtual {v3}, Lcom/vk/libvideo/a0/h/LiveVideoController;->g()Z
 
     move-result v3
 
@@ -932,9 +932,9 @@
     invoke-virtual {p1, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 37
-    iget-object v1, p0, Lcom/vk/stories/StorySettingsActivity;->G:Lcom/vk/bridges/a;
+    iget-object v1, p0, Lcom/vk/stories/StorySettingsActivity;->G:Lcom/vk/bridges/AuthBridge1;
 
-    invoke-virtual {v1}, Lcom/vk/bridges/a;->k()Z
+    invoke-virtual {v1}, Lcom/vk/bridges/AuthBridge1;->k()Z
 
     move-result v1
 
@@ -964,11 +964,11 @@
     invoke-virtual {v1, v0}, Landroid/widget/CompoundButton;->setClickable(Z)V
 
     .line 42
-    invoke-static {}, Lcom/vk/libvideo/a0/h/f;->l()Lcom/vk/libvideo/a0/h/f;
+    invoke-static {}, Lcom/vk/libvideo/a0/h/LiveVideoController;->l()Lcom/vk/libvideo/a0/h/LiveVideoController;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/libvideo/a0/h/f;->d()Z
+    invoke-virtual {v3}, Lcom/vk/libvideo/a0/h/LiveVideoController;->d()Z
 
     move-result v3
 
@@ -1003,11 +1003,11 @@
     invoke-virtual {v1, v0}, Landroid/widget/CompoundButton;->setClickable(Z)V
 
     .line 47
-    invoke-static {}, Lcom/vk/libvideo/a0/h/f;->l()Lcom/vk/libvideo/a0/h/f;
+    invoke-static {}, Lcom/vk/libvideo/a0/h/LiveVideoController;->l()Lcom/vk/libvideo/a0/h/LiveVideoController;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/libvideo/a0/h/f;->b()Z
+    invoke-virtual {v3}, Lcom/vk/libvideo/a0/h/LiveVideoController;->b()Z
 
     move-result v3
 
@@ -1026,9 +1026,9 @@
 
     if-eqz v1, :cond_5
 
-    iget-object v1, p0, Lcom/vk/stories/StorySettingsActivity;->G:Lcom/vk/bridges/a;
+    iget-object v1, p0, Lcom/vk/stories/StorySettingsActivity;->G:Lcom/vk/bridges/AuthBridge1;
 
-    invoke-virtual {v1}, Lcom/vk/bridges/a;->k()Z
+    invoke-virtual {v1}, Lcom/vk/bridges/AuthBridge1;->k()Z
 
     move-result v1
 
@@ -1115,25 +1115,25 @@
     .line 61
     sget-object v0, Lcom/vk/stories/e0;->a:Lcom/vk/stories/e0;
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 62
-    invoke-static {}, Lc/a/f0/b;->c()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->c()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 63
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1150,11 +1150,11 @@
     invoke-direct {v2, p1}, Lcom/vk/stories/a;-><init>(Lcom/vk/metrics/eventtracking/VkTracker;)V
 
     .line 64
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/StorySettingsActivity;->R:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/stories/StorySettingsActivity;->R:Lio/reactivex/disposables/Disposable;
 
     goto :goto_3
 
@@ -1164,7 +1164,7 @@
 
     .line 66
     :goto_3
-    invoke-static {p0}, Lcom/vk/extensions/b;->a(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/vk/extensions/ActivityExt;->a(Landroid/app/Activity;)V
 
     .line 67
     invoke-static {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(Landroid/app/Activity;)V
@@ -1197,26 +1197,26 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStop()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/StorySettingsActivity;->O:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/StorySettingsActivity;->O:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     const/4 v0, 0x0
 
     .line 4
-    iput-object v0, p0, Lcom/vk/stories/StorySettingsActivity;->O:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/stories/StorySettingsActivity;->O:Lio/reactivex/disposables/Disposable;
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/StorySettingsActivity;->R:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/StorySettingsActivity;->R:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_1
 
     .line 6
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_1
     return-void

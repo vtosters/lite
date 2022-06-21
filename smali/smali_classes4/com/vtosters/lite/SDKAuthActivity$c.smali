@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/SDKAuthActivity$c;
-.super Lcom/vk/webapp/helpers/f;
+.super Lcom/vk/webapp/helpers/WebClients4;
 .source "SDKAuthActivity.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/SDKAuthActivity$c;->f:Lcom/vtosters/lite/SDKAuthActivity;
 
-    invoke-direct {p0}, Lcom/vk/webapp/helpers/f;-><init>()V
+    invoke-direct {p0}, Lcom/vk/webapp/helpers/WebClients4;-><init>()V
 
     return-void
 .end method

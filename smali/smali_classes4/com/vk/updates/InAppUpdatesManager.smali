@@ -17,7 +17,7 @@
 
 .field private final b:Lcom/vk/updates/core/InAppUpdates;
 
-.field private final c:Lio/reactivex/disposables/a;
+.field private final c:Lio/reactivex/disposables/CompositeDisposable;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/updates/InAppUpdatesManager$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/updates/InAppUpdatesManager$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     .line 3
     sget-object v0, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->m()Lc/a/s;
+    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->m()Lio/reactivex/Scheduler;
 
     move-result-object v3
 
@@ -64,16 +64,16 @@
     move-object v1, p1
 
     .line 4
-    invoke-direct/range {v0 .. v6}, Lcom/vk/updates/core/InAppUpdates;-><init>(Landroid/app/Activity;Lcom/vk/updates/core/a;Lc/a/s;JZ)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/updates/core/InAppUpdates;-><init>(Landroid/app/Activity;Lcom/vk/updates/core/InAppUpdatesCallbacks;Lio/reactivex/Scheduler;JZ)V
 
     iput-object v7, p0, Lcom/vk/updates/InAppUpdatesManager;->b:Lcom/vk/updates/core/InAppUpdates;
 
     .line 5
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/updates/InAppUpdatesManager;->c:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/updates/InAppUpdatesManager;->c:Lio/reactivex/disposables/CompositeDisposable;
 
     return-void
 .end method
@@ -146,7 +146,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -154,7 +154,7 @@
 
     :cond_1
     :try_start_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -188,15 +188,15 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/updates/InAppUpdatesManager;->c:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/updates/InAppUpdatesManager;->c:Lio/reactivex/disposables/CompositeDisposable;
 
     iget-object v1, p0, Lcom/vk/updates/InAppUpdatesManager;->b:Lcom/vk/updates/core/InAppUpdates;
 
-    invoke-virtual {v1}, Lcom/vk/updates/core/InAppUpdates;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {v1}, Lcom/vk/updates/core/InAppUpdates;->a()Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, v1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -261,9 +261,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/updates/InAppUpdatesManager;->c:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/updates/InAppUpdatesManager;->c:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     return-void
 .end method

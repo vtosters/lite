@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/PostViewFragment;->a(Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/b0/m/c;)V
+    value = Lcom/vk/wall/post/PostViewFragment;->a(Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/holder/comment/BaseCommentViewHolder;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,18 +22,18 @@
 
 .field final synthetic b:Lcom/vtosters/lite/NewsComment;
 
-.field final synthetic c:Lcom/vtosters/lite/ui/b0/m/c;
+.field final synthetic c:Lcom/vtosters/lite/ui/holder/comment/BaseCommentViewHolder;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/wall/post/PostViewFragment;Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/b0/m/c;)V
+.method constructor <init>(Lcom/vk/wall/post/PostViewFragment;Lcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/holder/comment/BaseCommentViewHolder;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/wall/post/PostViewFragment$i;->a:Lcom/vk/wall/post/PostViewFragment;
 
     iput-object p2, p0, Lcom/vk/wall/post/PostViewFragment$i;->b:Lcom/vtosters/lite/NewsComment;
 
-    iput-object p3, p0, Lcom/vk/wall/post/PostViewFragment$i;->c:Lcom/vtosters/lite/ui/b0/m/c;
+    iput-object p3, p0, Lcom/vk/wall/post/PostViewFragment$i;->c:Lcom/vtosters/lite/ui/holder/comment/BaseCommentViewHolder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,15 +55,15 @@
     .line 2
     iget-object p1, p0, Lcom/vk/wall/post/PostViewFragment$i;->a:Lcom/vk/wall/post/PostViewFragment;
 
-    invoke-static {p1}, Lcom/vk/wall/post/PostViewFragment;->b(Lcom/vk/wall/post/PostViewFragment;)Lcom/vk/wall/e;
+    invoke-static {p1}, Lcom/vk/wall/post/PostViewFragment;->b(Lcom/vk/wall/post/PostViewFragment;)Lcom/vk/wall/CommentsListContract;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment$i;->b:Lcom/vtosters/lite/NewsComment;
 
-    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment$i;->c:Lcom/vtosters/lite/ui/b0/m/c;
+    iget-object v1, p0, Lcom/vk/wall/post/PostViewFragment$i;->c:Lcom/vtosters/lite/ui/holder/comment/BaseCommentViewHolder;
 
-    invoke-interface {p1, p2, v0, v1}, Lcom/vk/wall/e;->a(ILcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/b0/m/c;)V
+    invoke-interface {p1, p2, v0, v1}, Lcom/vk/wall/CommentsListContract;->a(ILcom/vtosters/lite/NewsComment;Lcom/vtosters/lite/ui/holder/comment/BaseCommentViewHolder;)V
 
     :cond_0
     return-void

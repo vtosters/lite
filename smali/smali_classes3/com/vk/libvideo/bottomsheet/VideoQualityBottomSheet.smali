@@ -14,7 +14,7 @@
 # static fields
 .field private static a:Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;
 
-.field private static b:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private static b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 .field public static final c:Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;
 
@@ -63,9 +63,9 @@
     .line 19
     sget v1, Lcom/vk/libvideo/h;->actions_popup_item:I
 
-    sget-object v2, Lcom/vk/libvideo/bottomsheet/a;->a:Lcom/vk/libvideo/bottomsheet/a;
+    sget-object v2, Lcom/vk/libvideo/bottomsheet/DarkThemeHelper;->a:Lcom/vk/libvideo/bottomsheet/DarkThemeHelper;
 
-    invoke-virtual {v2, p1}, Lcom/vk/libvideo/bottomsheet/a;->a(Landroid/content/Context;)Landroid/content/Context;
+    invoke-virtual {v2, p1}, Lcom/vk/libvideo/bottomsheet/DarkThemeHelper;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -75,7 +75,7 @@
 
     const-string v3, "LayoutInflater.from(Dark\u2026.getDarkContext(context))"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(ILandroid/view/LayoutInflater;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
@@ -84,7 +84,7 @@
 
     invoke-direct {v1}, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet$b;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter1;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 21
     new-instance v1, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet$c;
@@ -110,27 +110,27 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method public static final synthetic a(Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 0
 
     .line 2
-    sput-object p1, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object p1, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
+.method public static final synthetic b(Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
     .locals 0
 
     .line 1
-    sget-object p0, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/e;
+    sget-object p0, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/app/Activity;ILjava/util/List;Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;Lcom/vk/navigation/k;)Lcom/vk/core/util/w;
+.method public final a(Landroid/app/Activity;ILjava/util/List;Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;Lcom/vk/navigation/ModalDialogCallback;)Lcom/vk/core/util/Dismissable;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -141,9 +141,9 @@
             "Ljava/lang/Integer;",
             ">;",
             "Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;",
-            "Lcom/vk/navigation/k;",
+            "Lcom/vk/navigation/ModalDialogCallback;",
             ")",
-            "Lcom/vk/core/util/w;"
+            "Lcom/vk/core/util/Dismissable;"
         }
     .end annotation
 
@@ -178,16 +178,16 @@
     move-result v0
 
     .line 6
-    sget-object v1, Lcom/vk/libvideo/t;->a:Lcom/vk/libvideo/t;
+    sget-object v1, Lcom/vk/libvideo/VideoUtils;->a:Lcom/vk/libvideo/VideoUtils;
 
-    invoke-virtual {v1, v0}, Lcom/vk/libvideo/t;->a(I)I
+    invoke-virtual {v1, v0}, Lcom/vk/libvideo/VideoUtils;->a(I)I
 
     move-result v1
 
     .line 7
-    sget-object v2, Lcom/vk/libvideo/t;->a:Lcom/vk/libvideo/t;
+    sget-object v2, Lcom/vk/libvideo/VideoUtils;->a:Lcom/vk/libvideo/VideoUtils;
 
-    invoke-virtual {v2, v0}, Lcom/vk/libvideo/t;->b(I)I
+    invoke-virtual {v2, v0}, Lcom/vk/libvideo/VideoUtils;->b(I)I
 
     move-result v2
 
@@ -220,23 +220,23 @@
     invoke-virtual {v5, p4}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->setItems(Ljava/util/List;)V
 
     .line 11
-    new-instance p2, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance p2, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 12
     new-instance p1, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet$d;
 
-    invoke-direct {p1, p5}, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet$d;-><init>(Lcom/vk/navigation/k;)V
+    invoke-direct {p1, p5}, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet$d;-><init>(Lcom/vk/navigation/ModalDialogCallback;)V
 
-    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 13
     new-instance p1, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet$e;
 
-    invoke-direct {p1, p5}, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet$e;-><init>(Lcom/vk/navigation/k;)V
+    invoke-direct {p1, p5}, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet$e;-><init>(Lcom/vk/navigation/ModalDialogCallback;)V
 
-    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$f;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v6, 0x1
 
@@ -249,22 +249,22 @@
     move-object v4, p2
 
     .line 14
-    invoke-static/range {v4 .. v9}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static/range {v4 .. v9}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 15
     sget-object p1, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet$show$dialog$3;->a:Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet$show$dialog$3;
 
-    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const-string p1, "video_quality"
 
     .line 16
-    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
     .line 17
-    sput-object p1, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object p1, Lcom/vk/libvideo/bottomsheet/VideoQualityBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-object p1
 .end method

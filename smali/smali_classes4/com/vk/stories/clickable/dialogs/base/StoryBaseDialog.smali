@@ -3,7 +3,7 @@
 .source "StoryBaseDialog.kt"
 
 # interfaces
-.implements Lcom/vk/stories/clickable/dialogs/base/b;
+.implements Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialogContract1;
 .implements Landroid/view/View$OnClickListener;
 
 
@@ -11,10 +11,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<P::",
-        "Lcom/vk/stories/clickable/dialogs/base/a;",
+        "Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialogContract;",
         ">",
         "Landroid/app/Dialog;",
-        "Lcom/vk/stories/clickable/dialogs/base/b<",
+        "Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialogContract1<",
         "TP;>;",
         "Landroid/view/View$OnClickListener;"
     }
@@ -24,7 +24,7 @@
 # instance fields
 .field private final a:Landroid/view/ViewGroup;
 
-.field private b:Lcom/vk/core/util/d;
+.field private b:Lcom/vk/core/util/AndroidBug5497Workaround2;
 
 .field private final c:Landroid/view/View;
 
@@ -44,7 +44,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v2, v1}, Lcom/vk/attachpicker/stickers/j0;->b(ZLandroid/content/Context;)I
+    invoke-static {v2, v1}, Lcom/vk/attachpicker/stickers/StickerDialogUtils;->b(ZLandroid/content/Context;)I
 
     move-result v1
 
@@ -58,7 +58,7 @@
     iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog;->a:Landroid/view/ViewGroup;
 
     .line 3
-    new-instance v0, Lcom/vk/core/util/d;
+    new-instance v0, Lcom/vk/core/util/AndroidBug5497Workaround2;
 
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
@@ -66,9 +66,9 @@
 
     if-eqz v1, :cond_1
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/core/util/d;-><init>(Landroid/view/Window;Landroid/view/View;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/core/util/AndroidBug5497Workaround2;-><init>(Landroid/view/Window;Landroid/view/View;)V
 
-    iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog;->b:Lcom/vk/core/util/d;
+    iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog;->b:Lcom/vk/core/util/AndroidBug5497Workaround2;
 
     .line 4
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
@@ -91,7 +91,7 @@
 
     const-string v2, "rootViewGroup.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f060217
 
@@ -113,14 +113,14 @@
     const-string v1, "it"
 
     .line 7
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     const-string v1, "rootViewGroup.findViewBy\u2026rWithLock(this)\n        }"
 
     .line 8
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog;->c:Landroid/view/View;
 
@@ -136,7 +136,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog$2;-><init>(Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
 
     .line 11
     invoke-virtual {p0, p1}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
@@ -145,7 +145,7 @@
 
     .line 12
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -197,15 +197,15 @@
     .locals 1
 
     .line 1
-    invoke-interface {p0}, Lb/h/r/b;->getPresenter()Lb/h/r/a;
+    invoke-interface {p0}, Lb/h/r/BaseContract1;->getPresenter()Lb/h/r/BaseContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stories/clickable/dialogs/base/a;
+    check-cast v0, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialogContract;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lb/h/r/a;->onPause()V
+    invoke-interface {v0}, Lb/h/r/BaseContract;->onPause()V
 
     :cond_0
     return-void
@@ -215,21 +215,21 @@
     .locals 1
 
     .line 1
-    invoke-interface {p0}, Lb/h/r/b;->getPresenter()Lb/h/r/a;
+    invoke-interface {p0}, Lb/h/r/BaseContract1;->getPresenter()Lb/h/r/BaseContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stories/clickable/dialogs/base/a;
+    check-cast v0, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialogContract;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/base/a;->onStop()V
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialogContract;->onStop()V
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog;->b:Lcom/vk/core/util/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog;->b:Lcom/vk/core/util/AndroidBug5497Workaround2;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/d;->a()V
+    invoke-virtual {v0}, Lcom/vk/core/util/AndroidBug5497Workaround2;->a()V
 
     .line 3
     invoke-super {p0}, Landroid/app/Dialog;->dismiss()V
@@ -241,15 +241,15 @@
     .locals 1
 
     .line 1
-    invoke-interface {p0}, Lb/h/r/b;->getPresenter()Lb/h/r/a;
+    invoke-interface {p0}, Lb/h/r/BaseContract1;->getPresenter()Lb/h/r/BaseContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stories/clickable/dialogs/base/a;
+    check-cast v0, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialogContract;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lb/h/r/a;->onResume()V
+    invoke-interface {v0}, Lb/h/r/BaseContract;->onResume()V
 
     :cond_0
     return-void
@@ -308,15 +308,15 @@
 
     if-ne p1, v0, :cond_2
 
-    invoke-interface {p0}, Lb/h/r/b;->getPresenter()Lb/h/r/a;
+    invoke-interface {p0}, Lb/h/r/BaseContract1;->getPresenter()Lb/h/r/BaseContract;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/stories/clickable/dialogs/base/a;
+    check-cast p1, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialogContract;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/base/a;->t1()V
+    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialogContract;->t1()V
 
     :cond_2
     :goto_1
@@ -330,15 +330,15 @@
     invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-interface {p0}, Lb/h/r/b;->getPresenter()Lb/h/r/a;
+    invoke-interface {p0}, Lb/h/r/BaseContract1;->getPresenter()Lb/h/r/BaseContract;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/stories/clickable/dialogs/base/a;
+    check-cast p1, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialogContract;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/base/a;->onStart()V
+    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialogContract;->onStart()V
 
     :cond_0
     return-void
@@ -351,9 +351,9 @@
     invoke-super {p0}, Landroid/app/Dialog;->show()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog;->b:Lcom/vk/core/util/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog;->b:Lcom/vk/core/util/AndroidBug5497Workaround2;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/d;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/util/AndroidBug5497Workaround2;->b()V
 
     return-void
 .end method

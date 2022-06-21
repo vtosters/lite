@@ -29,7 +29,7 @@
 
 .field private e:Lcom/vk/media/render/RenderTexture$Renderer;
 
-.field private final f:Lb/h/p/f/e;
+.field private final f:Lb/h/p/f/Logger;
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/media/render/RenderTexture$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/media/render/RenderTexture$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     const-class v0, Lcom/vk/media/render/RenderTexture;
@@ -51,20 +51,20 @@
 
     const-string v1, "RenderTexture::class.java.simpleName"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/media/render/RenderTexture;->g:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lb/h/p/f/e;)V
+.method public constructor <init>(Lb/h/p/f/Logger;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/media/render/RenderTexture;->f:Lb/h/p/f/e;
+    iput-object p1, p0, Lcom/vk/media/render/RenderTexture;->f:Lb/h/p/f/Logger;
 
     .line 2
     new-instance p1, Ljava/lang/Object;
@@ -129,7 +129,7 @@
 
     const-string v1, "EglBase.lock"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     monitor-enter v0
 
@@ -141,7 +141,7 @@
 
     invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -161,11 +161,11 @@
 
 
 # virtual methods
-.method public final a()Lb/h/p/f/e;
+.method public final a()Lb/h/p/f/Logger;
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/media/render/RenderTexture;->f:Lb/h/p/f/e;
+    iget-object v0, p0, Lcom/vk/media/render/RenderTexture;->f:Lb/h/p/f/Logger;
 
     return-object v0
 .end method
@@ -174,7 +174,7 @@
     .locals 4
 
     .line 5
-    iget-object v0, p0, Lcom/vk/media/render/RenderTexture;->f:Lb/h/p/f/e;
+    iget-object v0, p0, Lcom/vk/media/render/RenderTexture;->f:Lb/h/p/f/Logger;
 
     sget-object v1, Lcom/vk/media/render/RenderTexture;->g:Ljava/lang/String;
 
@@ -192,7 +192,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lb/h/p/f/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lb/h/p/f/Logger;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     iput p1, p0, Lcom/vk/media/render/RenderTexture;->d:I
@@ -275,17 +275,17 @@
 
     .line 14
     :try_start_1
-    iget-object v1, p0, Lcom/vk/media/render/RenderTexture;->f:Lb/h/p/f/e;
+    iget-object v1, p0, Lcom/vk/media/render/RenderTexture;->f:Lb/h/p/f/Logger;
 
     sget-object v2, Lcom/vk/media/render/RenderTexture;->g:Ljava/lang/String;
 
     const-string v3, "can\'t update texture"
 
-    invoke-virtual {v1, v2, v3, p1}, Lb/h/p/f/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v2, v3, p1}, Lb/h/p/f/Logger;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 15
     :goto_0
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -328,7 +328,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -351,7 +351,7 @@
 
     .line 2
     :try_start_0
-    iget-object v1, p0, Lcom/vk/media/render/RenderTexture;->f:Lb/h/p/f/e;
+    iget-object v1, p0, Lcom/vk/media/render/RenderTexture;->f:Lb/h/p/f/Logger;
 
     sget-object v2, Lcom/vk/media/render/RenderTexture;->g:Ljava/lang/String;
 
@@ -371,7 +371,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Lb/h/p/f/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Lb/h/p/f/Logger;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/media/render/RenderTexture;->b:Lcom/vk/media/render/RenderTexture$c;
@@ -392,7 +392,7 @@
     iput-boolean v1, p0, Lcom/vk/media/render/RenderTexture;->c:Z
 
     .line 6
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

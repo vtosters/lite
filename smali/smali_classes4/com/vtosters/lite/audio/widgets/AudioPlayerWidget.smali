@@ -25,7 +25,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget;->b:Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget$a;
 
@@ -102,14 +102,14 @@
     return-object p0
 .end method
 
-.method protected static final a(Lcom/vk/dto/music/MusicTrack;F)Lc/a/m;
+.method protected static final a(Lcom/vk/dto/music/MusicTrack;F)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/music/MusicTrack;",
             "F)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -117,7 +117,7 @@
 
     sget-object v0, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget;->b:Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget$a;
 
-    invoke-virtual {v0, p0, p1}, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget$a;->a(Lcom/vk/dto/music/MusicTrack;F)Lc/a/m;
+    invoke-virtual {v0, p0, p1}, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget$a;->a(Lcom/vk/dto/music/MusicTrack;F)Lio/reactivex/Observable;
 
     move-result-object p0
 
@@ -133,12 +133,12 @@
     return-void
 .end method
 
-.method protected static final a(Lcom/vk/music/player/d;)Z
+.method protected static final a(Lcom/vk/music/player/PlayerModel;)Z
     .locals 1
 
     sget-object v0, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget;->b:Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget$a;
 
-    invoke-virtual {v0, p0}, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget$a;->a(Lcom/vk/music/player/d;)Z
+    invoke-virtual {v0, p0}, Lcom/vtosters/lite/audio/widgets/AudioPlayerWidget$a;->a(Lcom/vk/music/player/PlayerModel;)Z
 
     move-result p0
 

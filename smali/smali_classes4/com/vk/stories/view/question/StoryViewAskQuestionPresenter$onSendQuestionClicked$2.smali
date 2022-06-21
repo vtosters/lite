@@ -3,7 +3,7 @@
 .source "StoryViewAskQuestionPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Throwable;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -79,11 +79,11 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onSendQuestionClicked$2;->this$0:Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/c;
+    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->y0()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->y0()V
 
     goto :goto_1
 
@@ -91,20 +91,20 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onSendQuestionClicked$2;->this$0:Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/c;
+    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->y0()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->y0()V
 
     .line 5
     iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onSendQuestionClicked$2;->this$0:Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/c;
+    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->dismiss()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->dismiss()V
 
     goto :goto_1
 
@@ -118,11 +118,11 @@
     .line 6
     iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onSendQuestionClicked$2;->this$0:Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/c;
+    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/stories/view/question/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->a(Ljava/lang/Throwable;)V
 
     :cond_3
     return-void
@@ -136,7 +136,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onSendQuestionClicked$2;->a(Ljava/lang/Throwable;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # instance fields
@@ -36,7 +36,7 @@
 
     check-cast p1, Landroid/graphics/Bitmap;
 
-    invoke-static {v0, v1, p1}, Lcom/vk/stories/editor/base/k0;->a(ZLjava/lang/String;Landroid/graphics/Bitmap;)Lcom/vk/stories/editor/base/k0$c;
+    invoke-static {v0, v1, p1}, Lcom/vk/stories/editor/base/StickerEditorViewListener;->a(ZLjava/lang/String;Landroid/graphics/Bitmap;)Lcom/vk/stories/editor/base/StickerEditorViewListener$c;
 
     move-result-object p1
 

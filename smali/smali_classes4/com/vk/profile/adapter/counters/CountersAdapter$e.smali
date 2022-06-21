@@ -16,14 +16,14 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/profile/adapter/counters/CountersAdapter$c<",
-        "Lcom/vk/profile/adapter/counters/e$b;",
+        "Lcom/vk/profile/adapter/counters/CountersCacheManager$b;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private final h:Lcom/vk/imageloader/view/b;
+.field private final h:Lcom/vk/imageloader/view/VKLayerImageView;
 
 
 # direct methods
@@ -49,7 +49,7 @@
 
     const-string p2, "contentFrame"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
@@ -57,20 +57,20 @@
 
     const-string p2, "contentFrame.context"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lcom/vk/profile/d;->b(Landroid/content/Context;)Lcom/vk/imageloader/view/b;
+    invoke-static {p1}, Lcom/vk/profile/ProfileViewsFactory;->b(Landroid/content/Context;)Lcom/vk/imageloader/view/VKLayerImageView;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$e;->h:Lcom/vk/imageloader/view/b;
+    iput-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$e;->h:Lcom/vk/imageloader/view/VKLayerImageView;
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/profile/adapter/counters/CountersAdapter$c;->g0()Landroid/widget/FrameLayout;
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$e;->h:Lcom/vk/imageloader/view/b;
+    iget-object p2, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$e;->h:Lcom/vk/imageloader/view/VKLayerImageView;
 
     const/4 v0, -0x1
 
@@ -81,22 +81,22 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/profile/adapter/counters/e$b;)V
+.method public a(Lcom/vk/profile/adapter/counters/CountersCacheManager$b;)V
     .locals 2
 
     .line 1
     invoke-super {p0, p1}, Lcom/vk/profile/adapter/counters/CountersAdapter$c;->c(Ljava/lang/Object;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$e;->h:Lcom/vk/imageloader/view/b;
+    iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$e;->h:Lcom/vk/imageloader/view/VKLayerImageView;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/e$b;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersCacheManager$b;->a()Ljava/util/List;
 
     move-result-object p1
 
     const/4 v1, 0x3
 
-    invoke-static {v0, p1, v1}, Lcom/vk/profile/adapter/counters/d;->a(Lcom/vk/imageloader/view/b;Ljava/util/List;I)V
+    invoke-static {v0, p1, v1}, Lcom/vk/profile/adapter/counters/CountersAdapter1;->a(Lcom/vk/imageloader/view/VKLayerImageView;Ljava/util/List;I)V
 
     return-void
 .end method
@@ -105,9 +105,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/profile/adapter/counters/e$b;
+    check-cast p1, Lcom/vk/profile/adapter/counters/CountersCacheManager$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/counters/CountersAdapter$e;->a(Lcom/vk/profile/adapter/counters/e$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/counters/CountersAdapter$e;->a(Lcom/vk/profile/adapter/counters/CountersCacheManager$b;)V
 
     return-void
 .end method

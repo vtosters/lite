@@ -3,7 +3,7 @@
 .source "StickerStockItem.kt"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/e;
+.implements Lcom/vk/dto/common/data/Purchase1;
 .implements Ljava/lang/Comparable;
 
 
@@ -17,7 +17,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;",
-        "Lcom/vk/dto/common/data/e;",
+        "Lcom/vk/dto/common/data/Purchase1;",
         "Ljava/lang/Comparable<",
         "Lcom/vk/dto/stickers/StickerStockItem;",
         ">;"
@@ -145,7 +145,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/stickers/StickerStockItem$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/stickers/StickerStockItem$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/stickers/StickerStockItem;->h0:Lcom/vk/dto/stickers/StickerStockItem$b;
 
@@ -369,7 +369,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ZZZZZZILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/NotificationImage;Ljava/util/List;ZLjava/lang/String;JZIZLjava/lang/String;Lcom/vk/dto/common/NotificationImage;Ljava/lang/String;Lcom/vk/dto/stickers/Badge;Lcom/vk/dto/stickers/PurchaseDetails;ZLjava/lang/String;Ljava/lang/String;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ZZZZZZILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/NotificationImage;Ljava/util/List;ZLjava/lang/String;JZIZLjava/lang/String;Lcom/vk/dto/common/NotificationImage;Ljava/lang/String;Lcom/vk/dto/stickers/Badge;Lcom/vk/dto/stickers/PurchaseDetails;ZLjava/lang/String;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 44
 
     move/from16 v0, p43
@@ -1275,13 +1275,13 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lb/h/h/a;->b:Lb/h/h/a$a;
+    sget-object v1, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
 
     const-string v2, "ModelConfig.callback"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1}, Lb/h/h/a$a;->c()I
+    invoke-interface {v1}, Lb/h/h/ModelConfig$a;->c()I
 
     move-result v1
 
@@ -1309,11 +1309,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lb/h/h/a;->b:Lb/h/h/a$a;
+    sget-object v1, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1}, Lb/h/h/a$a;->c()I
+    invoke-interface {v1}, Lb/h/h/ModelConfig$a;->c()I
 
     move-result v1
 
@@ -1506,18 +1506,18 @@
     .locals 2
 
     .line 1
-    sget-boolean v0, Lb/h/h/a;->a:Z
+    sget-boolean v0, Lb/h/h/ModelConfig;->a:Z
 
     if-eqz v0, :cond_1
 
     .line 2
-    sget-object v0, Lb/h/h/a;->b:Lb/h/h/a$a;
+    sget-object v0, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
 
     const-string v1, "ModelConfig.callback"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lb/h/h/a$a;->a()F
+    invoke-interface {v0}, Lb/h/h/ModelConfig$a;->a()F
 
     move-result v0
 
@@ -1543,11 +1543,11 @@
 
     .line 5
     :cond_1
-    sget-object v0, Lb/h/h/a;->b:Lb/h/h/a$a;
+    sget-object v0, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
 
     const/high16 v1, 0x42880000    # 68.0f
 
-    invoke-interface {v0, v1}, Lb/h/h/a$a;->a(F)I
+    invoke-interface {v0, v1}, Lb/h/h/ModelConfig$a;->a(F)I
 
     move-result v0
 
@@ -2392,7 +2392,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 

@@ -3,7 +3,7 @@
 .source "VkAppCallback.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/g;
+.implements Lcom/vk/navigation/Dismissed;
 
 
 # annotations
@@ -56,7 +56,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/g$a;->a(Lcom/vk/navigation/g;)V
+    invoke-static {p0}, Lcom/vk/navigation/Dismissed$a;->a(Lcom/vk/navigation/Dismissed;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "BaseAuthPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     iget-object p1, p1, Lcom/vk/auth/base/BaseAuthPresenter$onFailedSignUp$6;->this$0:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
+    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
 
     move-result-object p1
 
@@ -70,7 +70,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
 
     :cond_0
     return-void

@@ -1,11 +1,11 @@
 .class public final Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$a;
-.super Lb/h/n/c$a;
+.super Lb/h/n/AppLifecycleDispatcher$a;
 .source "SearchMenuPresenter.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->a(Lb/h/c/p/k;)V
+    value = Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->a(Lcom/vk/api/money/MoneyGetWalletStatus;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$a;->a:Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;
 
-    invoke-direct {p0}, Lb/h/n/c$a;-><init>()V
+    invoke-direct {p0}, Lb/h/n/AppLifecycleDispatcher$a;-><init>()V
 
     return-void
 .end method

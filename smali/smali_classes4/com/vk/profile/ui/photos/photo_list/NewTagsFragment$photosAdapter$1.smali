@@ -3,7 +3,7 @@
 .source "NewTagsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/photo/Photo;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -78,11 +78,11 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
+    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Lcom/vk/bridges/w;->a(Lcom/vk/dto/photo/Photo;)Lcom/vk/bridges/y;
+    invoke-interface {v1, p1}, Lcom/vk/bridges/PostsBridge2;->a(Lcom/vk/dto/photo/Photo;)Lcom/vk/bridges/PostsBridge;
 
     move-result-object p1
 
@@ -100,16 +100,16 @@
 
     const-string v2, "newTagsProfiles.get(tp.tagPlacerID)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/vk/dto/user/UserProfile;
 
-    invoke-virtual {p1, v1}, Lcom/vk/bridges/y;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vk/bridges/y;
+    invoke-virtual {p1, v1}, Lcom/vk/bridges/PostsBridge;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vk/bridges/PostsBridge;
 
     .line 5
     iget v0, v0, Lcom/vk/dto/photo/TaggedPhoto;->e0:I
 
-    invoke-virtual {p1, v0}, Lcom/vk/bridges/y;->d(I)Lcom/vk/bridges/y;
+    invoke-virtual {p1, v0}, Lcom/vk/bridges/PostsBridge;->d(I)Lcom/vk/bridges/PostsBridge;
 
     iget-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment$photosAdapter$1;->this$0:Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment;
 
@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -130,7 +130,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment$photosAdapter$1;->a(Lcom/vk/dto/photo/Photo;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

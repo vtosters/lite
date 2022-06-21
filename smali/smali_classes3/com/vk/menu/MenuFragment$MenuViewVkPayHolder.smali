@@ -45,7 +45,7 @@
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x0
 
@@ -53,7 +53,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {p1, v0, p2, v1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p2, v1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -62,7 +62,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/menu/MenuFragment$MenuViewVkPayHolder$1;-><init>(Lcom/vk/menu/MenuFragment$MenuViewVkPayHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->d(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->d(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 5
     sget-object p2, Lcom/vk/toggle/Features$Type;->FEATURE_VKPAY_PAY_WITH_QR:Lcom/vk/toggle/Features$Type;
@@ -112,9 +112,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v1, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
+    sget-object v1, Lcom/vk/menu/MenuUtils;->c:Lcom/vk/menu/MenuUtils;
 
-    invoke-virtual {v1, v0}, Lcom/vk/menu/c;->a(Lcom/vk/navigation/NavigationDelegate;)V
+    invoke-virtual {v1, v0}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/navigation/NavigationDelegate;)V
 
     :cond_0
     return-void
@@ -122,14 +122,14 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/menu/d;)V
+.method public a(Lcom/vk/menu/MenuViewItem;)V
     .locals 2
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/menu/MenuFragment$k;->a(Lcom/vk/menu/d;)V
+    invoke-super {p0, p1}, Lcom/vk/menu/MenuFragment$k;->a(Lcom/vk/menu/MenuViewItem;)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/menu/d;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/menu/MenuViewItem;->a()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -148,18 +148,18 @@
 
     const-string v1, "item.icon"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f040022
 
-    invoke-static {v0, p1, v1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {v0, p1, v1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;Landroid/graphics/drawable/Drawable;I)V
 
     .line 5
     invoke-virtual {p0}, Lcom/vk/menu/MenuFragment$k;->j0()Landroid/widget/TextView;
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     return-void
 
@@ -178,9 +178,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/menu/d;
+    check-cast p1, Lcom/vk/menu/MenuViewItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuFragment$MenuViewVkPayHolder;->a(Lcom/vk/menu/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuFragment$MenuViewVkPayHolder;->a(Lcom/vk/menu/MenuViewItem;)V
 
     return-void
 .end method
@@ -198,15 +198,15 @@
     if-eqz p1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vk/menu/d;
+    check-cast v0, Lcom/vk/menu/MenuViewItem;
 
-    invoke-virtual {v0}, Lcom/vk/menu/d;->c()I
+    invoke-virtual {v0}, Lcom/vk/menu/MenuViewItem;->c()I
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/vk/menu/c;->a(Lcom/vk/navigation/NavigationDelegate;I)V
+    invoke-static {p1, v0}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/navigation/NavigationDelegate;I)V
 
     :cond_0
     return-void

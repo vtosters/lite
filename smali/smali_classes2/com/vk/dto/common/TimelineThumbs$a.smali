@@ -1,5 +1,5 @@
 .class public final Lcom/vk/dto/common/TimelineThumbs$a;
-.super Lcom/vk/dto/common/data/c;
+.super Lcom/vk/dto/common/data/JsonParser;
 .source "JsonParser.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/dto/common/data/c<",
+        "Lcom/vk/dto/common/data/JsonParser<",
         "Lcom/vk/dto/common/TimelineThumbs;",
         ">;"
     }
@@ -27,7 +27,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/data/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/data/JsonParser;-><init>()V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
     .line 1
     sget-object v0, Lcom/vk/dto/common/TimelineThumbs;->h:Lcom/vk/dto/common/TimelineThumbs$c;
 
-    invoke-static {v0, p1}, Lcom/vk/dto/common/h;->a(Lcom/vk/dto/common/TimelineThumbs$c;Lorg/json/JSONObject;)Lcom/vk/dto/common/TimelineThumbs;
+    invoke-static {v0, p1}, Lcom/vk/dto/common/TimelineThumbs1;->a(Lcom/vk/dto/common/TimelineThumbs$c;Lorg/json/JSONObject;)Lcom/vk/dto/common/TimelineThumbs;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/im/engine/events/n;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/im/engine/events/OnConversationOpenedEvent;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/n;)V
+.method public final a(Lcom/vk/im/engine/events/OnConversationOpenedEvent;)V
     .locals 1
 
     .line 1
     sget-object v0, Lcom/vtosters/lite/im/ImEngineProvider;->j:Lcom/vtosters/lite/im/ImEngineProvider;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/events/n;->c()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/events/OnConversationOpenedEvent;->c()I
 
     move-result p1
 
@@ -75,9 +75,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/n;
+    check-cast p1, Lcom/vk/im/engine/events/OnConversationOpenedEvent;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider$g;->a(Lcom/vk/im/engine/events/n;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider$g;->a(Lcom/vk/im/engine/events/OnConversationOpenedEvent;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SpecialEventSpan.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/dto/stickers/SpecialEvent;",
         ">;"
     }
@@ -49,9 +49,9 @@
     .locals 5
 
     .line 2
-    sget-object v0, Lcom/vk/newsfeed/e0;->e:Lcom/vk/newsfeed/e0;
+    sget-object v0, Lcom/vk/newsfeed/SpecialEventController;->e:Lcom/vk/newsfeed/SpecialEventController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/e0;->b()Lcom/vk/dto/stickers/SpecialEvents;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/SpecialEventController;->b()Lcom/vk/dto/stickers/SpecialEvents;
 
     move-result-object v0
 
@@ -96,7 +96,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 

@@ -1,5 +1,5 @@
 .class public Lcom/vk/api/stats/StatsTrackUploadServerStateAPIRequest;
-.super Lcom/vk/api/base/h;
+.super Lcom/vk/api/base/BooleanApiRequest;
 .source "StatsTrackUploadServerStateAPIRequest.java"
 
 
@@ -19,7 +19,7 @@
     const-string v0, "stats.trackUploadServerState"
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/api/base/h;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/BooleanApiRequest;-><init>(Ljava/lang/String;)V
 
     if-eqz p1, :cond_c
 
@@ -46,14 +46,14 @@
     const-string v1, "method_name"
 
     .line 6
-    invoke-virtual {p0, v1, v0}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v1, v0}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 7
     iget-object v0, p1, Lcom/vk/api/stats/StatsTrackUploadServerStateAPIRequest$b;->b:Ljava/lang/String;
 
     const-string v1, "upload_url"
 
-    invoke-virtual {p0, v1, v0}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v1, v0}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 8
     sget-object v0, Lcom/vk/api/stats/StatsTrackUploadServerStateAPIRequest$a;->a:[I
@@ -117,14 +117,14 @@
     const-string v1, "state"
 
     .line 9
-    invoke-virtual {p0, v1, v0}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v1, v0}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 10
     iget v0, p1, Lcom/vk/api/stats/StatsTrackUploadServerStateAPIRequest$b;->d:I
 
     const-string v1, "http_status"
 
-    invoke-virtual {p0, v1, v0}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v1, v0}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     .line 11
     iget-object v0, p1, Lcom/vk/api/stats/StatsTrackUploadServerStateAPIRequest$b;->e:Ljava/lang/String;
@@ -138,7 +138,7 @@
     :cond_5
     const-string v2, "http_error"
 
-    invoke-virtual {p0, v2, v0}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v2, v0}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 12
     iget-wide v2, p1, Lcom/vk/api/stats/StatsTrackUploadServerStateAPIRequest$b;->f:J
@@ -152,7 +152,7 @@
     const-string v0, "file_size"
 
     .line 13
-    invoke-virtual {p0, v0, v2, v3}, Lcom/vk/api/base/d;->a(Ljava/lang/String;J)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, v2, v3}, Lcom/vk/api/base/ApiRequest;->a(Ljava/lang/String;J)Lcom/vk/api/base/ApiRequest;
 
     .line 14
     :cond_6
@@ -165,7 +165,7 @@
     :cond_7
     const-string v0, "file_name"
 
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     return-void
 

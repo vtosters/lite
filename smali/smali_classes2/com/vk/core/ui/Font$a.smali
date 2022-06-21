@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -40,7 +40,7 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     sget v1, Lb/h/z/f;->fortun_af_led7seg_3:I
 
@@ -121,7 +121,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -204,7 +204,7 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     sget v1, Lb/h/z/f;->roboto_medium:I
 
@@ -244,7 +244,7 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     sget v1, Lb/h/z/f;->russoone_regular:I
 
@@ -281,7 +281,7 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     sget v1, Lb/h/z/f;->tt_commons_demi_bold:I
 
@@ -318,7 +318,7 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     sget v1, Lb/h/z/f;->tt_commons_medium:I
 

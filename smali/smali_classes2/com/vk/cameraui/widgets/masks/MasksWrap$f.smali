@@ -42,11 +42,11 @@
     .locals 0
 
     .line 1
-    new-instance p1, Lcom/vtosters/lite/fragments/j2$g;
+    new-instance p1, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
     iget-object p2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$f;->b:Ljava/lang/String;
 
-    invoke-direct {p1, p2}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;-><init>(Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$f;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
@@ -54,7 +54,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, p2}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "BaseCmdSerializeManager.kt"
 
 # interfaces
-.implements Lcom/vk/audioipc/core/m;
+.implements Lcom/vk/audioipc/core/SerializeManager;
 
 
 # annotations
@@ -16,15 +16,15 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/audioipc/core/m<",
-        "Lcom/vk/audioipc/communication/r;",
+        "Lcom/vk/audioipc/core/SerializeManager<",
+        "Lcom/vk/audioipc/communication/ServiceCmd;",
         ">;"
     }
 .end annotation
 
 
 # static fields
-.field private static final a:Lkotlin/e;
+.field private static final a:Lkotlin/Lazy2;
 
 .field public static final b:Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager$a;
 
@@ -37,18 +37,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager;->b:Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager$a;
 
     .line 1
     sget-object v0, Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager$Companion$INSTANCE$2;->a:Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager$Companion$INSTANCE$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager;->a:Lkotlin/e;
+    sput-object v0, Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager;->a:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -62,18 +62,18 @@
     return-void
 .end method
 
-.method public static final synthetic a()Lkotlin/e;
+.method public static final synthetic a()Lkotlin/Lazy2;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager;->a:Lkotlin/e;
+    sget-object v0, Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager;->a:Lkotlin/Lazy2;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/audioipc/communication/r;)Landroid/os/Bundle;
+.method public a(Lcom/vk/audioipc/communication/ServiceCmd;)Landroid/os/Bundle;
     .locals 17
 
     move-object/from16 v0, p1
@@ -113,7 +113,7 @@
     invoke-virtual {v2, v1, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 8
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/h;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/PlayCmd;
 
     const-string v3, "cmd"
 
@@ -127,7 +127,7 @@
 
     .line 9
     :cond_0
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/g;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/PauseCmd;
 
     if-eqz v1, :cond_1
 
@@ -139,7 +139,7 @@
 
     .line 10
     :cond_1
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/x;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/StopCmd;
 
     if-eqz v1, :cond_2
 
@@ -151,7 +151,7 @@
 
     .line 11
     :cond_2
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/k;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/PlayPreviousCmd;
 
     if-eqz v1, :cond_3
 
@@ -163,7 +163,7 @@
 
     .line 12
     :cond_3
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/i;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/PlayNextCmd;
 
     if-eqz v1, :cond_4
 
@@ -175,7 +175,7 @@
 
     .line 13
     :cond_4
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/b;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/AddToMyMusicCmd;
 
     const-string v4, "secureMid"
 
@@ -187,9 +187,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/b;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/AddToMyMusicCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/b;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/AddToMyMusicCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -199,7 +199,7 @@
 
     .line 16
     :cond_5
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/m;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/RemoveFromMyMusicCmd;
 
     if-eqz v1, :cond_6
 
@@ -209,9 +209,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 18
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/m;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/RemoveFromMyMusicCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/m;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/RemoveFromMyMusicCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -221,7 +221,7 @@
 
     .line 19
     :cond_6
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/u;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/SetSpeedCmd;
 
     const-string v5, "speed"
 
@@ -233,9 +233,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 21
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/u;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/SetSpeedCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/u;->a()F
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/SetSpeedCmd;->a()F
 
     move-result v0
 
@@ -245,7 +245,7 @@
 
     .line 22
     :cond_7
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/w;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/SetVolumeCmd;
 
     const-string v6, "volume"
 
@@ -257,9 +257,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 24
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/w;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/SetVolumeCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/w;->a()F
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/SetVolumeCmd;->a()F
 
     move-result v0
 
@@ -269,7 +269,7 @@
 
     .line 25
     :cond_8
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/t;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/SetShuffleStateCmd;
 
     const-string v7, "shuffled"
 
@@ -281,9 +281,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 27
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/t;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/SetShuffleStateCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/t;->a()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/SetShuffleStateCmd;->a()Z
 
     move-result v0
 
@@ -293,7 +293,7 @@
 
     .line 28
     :cond_9
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/c;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/AddToTrackListAsNextCmd;
 
     const-string v8, "secureMidList"
 
@@ -307,9 +307,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 30
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/c;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/AddToTrackListAsNextCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/c;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/AddToTrackListAsNextCmd;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -330,7 +330,7 @@
 
     .line 31
     :cond_b
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/o;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/SeekToCmd;
 
     const-string v10, "playbackPosition"
 
@@ -342,9 +342,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 33
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/o;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/SeekToCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/o;->a()F
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/SeekToCmd;->a()F
 
     move-result v0
 
@@ -354,7 +354,7 @@
 
     .line 34
     :cond_c
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/y;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/TrackingBackgroundCmd;
 
     const-string v11, "isTrackingEnabled"
 
@@ -366,9 +366,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 36
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/y;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/TrackingBackgroundCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/y;->a()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/TrackingBackgroundCmd;->a()Z
 
     move-result v0
 
@@ -378,7 +378,7 @@
 
     .line 37
     :cond_d
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/v;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/SetTrackListCmd;
 
     if-eqz v1, :cond_f
 
@@ -388,9 +388,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 39
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/v;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/SetTrackListCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/v;->b()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/SetTrackListCmd;->b()Ljava/util/List;
 
     move-result-object v1
 
@@ -401,7 +401,7 @@
     invoke-virtual {v2, v8, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     .line 40
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/v;->a()Lcom/vk/music/player/PlayerMode;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/SetTrackListCmd;->a()Lcom/vk/music/player/PlayerMode;
 
     move-result-object v0
 
@@ -425,7 +425,7 @@
 
     .line 42
     :cond_f
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/q;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/SetCurrentTrackCmd;
 
     const-string v12, "position"
 
@@ -437,16 +437,16 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 44
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/q;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/SetCurrentTrackCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/q;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/SetCurrentTrackCmd;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v4, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 45
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/q;->a()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/SetCurrentTrackCmd;->a()I
 
     move-result v0
 
@@ -456,7 +456,7 @@
 
     .line 46
     :cond_10
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/i;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayerStoppedCmd;
 
     if-eqz v1, :cond_11
 
@@ -468,7 +468,7 @@
 
     .line 47
     :cond_11
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/l;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnSpeedChangedCmd;
 
     if-eqz v1, :cond_12
 
@@ -478,9 +478,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 49
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/l;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/OnSpeedChangedCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/l;->a()F
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnSpeedChangedCmd;->a()F
 
     move-result v0
 
@@ -490,7 +490,7 @@
 
     .line 50
     :cond_12
-    instance-of v1, v0, Lb/b/a/a/a/a/a/a/a;
+    instance-of v1, v0, Lb/b/a/a/a/a/a/a/OnVolumeChangedCmd;
 
     if-eqz v1, :cond_13
 
@@ -500,9 +500,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 52
-    check-cast v0, Lb/b/a/a/a/a/a/a/a;
+    check-cast v0, Lb/b/a/a/a/a/a/a/OnVolumeChangedCmd;
 
-    invoke-virtual {v0}, Lb/b/a/a/a/a/a/a/a;->a()F
+    invoke-virtual {v0}, Lb/b/a/a/a/a/a/a/OnVolumeChangedCmd;->a()F
 
     move-result v0
 
@@ -512,7 +512,7 @@
 
     .line 53
     :cond_13
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/n;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackListChangedCmd;
 
     if-eqz v1, :cond_15
 
@@ -522,9 +522,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 55
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/n;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackListChangedCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/n;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackListChangedCmd;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -547,7 +547,7 @@
 
     .line 56
     :cond_15
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/o;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackListCompleteCmd;
 
     if-eqz v1, :cond_16
 
@@ -559,7 +559,7 @@
 
     .line 57
     :cond_16
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/f;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayCmd;
 
     if-eqz v1, :cond_17
 
@@ -569,16 +569,16 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 59
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/f;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/f;->a()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayCmd;->a()I
 
     move-result v1
 
     invoke-virtual {v2, v12, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 60
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/f;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayCmd;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -588,7 +588,7 @@
 
     .line 61
     :cond_17
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/e;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnPauseCmd;
 
     if-eqz v1, :cond_18
 
@@ -598,23 +598,23 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 63
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/e;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/OnPauseCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/e;->b()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnPauseCmd;->b()I
 
     move-result v1
 
     invoke-virtual {v2, v12, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 64
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/e;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnPauseCmd;->c()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v4, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 65
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/e;->a()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnPauseCmd;->a()Z
 
     move-result v1
 
@@ -623,7 +623,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 66
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/e;->d()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnPauseCmd;->d()Z
 
     move-result v0
 
@@ -635,7 +635,7 @@
 
     .line 67
     :cond_18
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/g;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayProgressChangedCmd;
 
     if-eqz v1, :cond_19
 
@@ -645,23 +645,23 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 69
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/g;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayProgressChangedCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/g;->b()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayProgressChangedCmd;->b()I
 
     move-result v1
 
     invoke-virtual {v2, v12, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 70
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/g;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayProgressChangedCmd;->c()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v4, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 71
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/g;->a()F
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayProgressChangedCmd;->a()F
 
     move-result v0
 
@@ -671,7 +671,7 @@
 
     .line 72
     :cond_19
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/a;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnBufferingProgressChangedCmd;
 
     if-eqz v1, :cond_1a
 
@@ -681,23 +681,23 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 74
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/a;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/OnBufferingProgressChangedCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/a;->b()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnBufferingProgressChangedCmd;->b()I
 
     move-result v1
 
     invoke-virtual {v2, v12, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 75
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/a;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnBufferingProgressChangedCmd;->c()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v4, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 76
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/a;->a()F
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnBufferingProgressChangedCmd;->a()F
 
     move-result v1
 
@@ -706,7 +706,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
     .line 77
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/a;->d()F
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnBufferingProgressChangedCmd;->d()F
 
     move-result v0
 
@@ -718,7 +718,7 @@
 
     .line 78
     :cond_1a
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/b;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnCompleteCmd;
 
     if-eqz v1, :cond_1b
 
@@ -728,16 +728,16 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 80
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/b;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/OnCompleteCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/b;->a()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnCompleteCmd;->a()I
 
     move-result v1
 
     invoke-virtual {v2, v12, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 81
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/b;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnCompleteCmd;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -747,7 +747,7 @@
 
     .line 82
     :cond_1b
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/d/f;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/d/OnTrackRestrictedExceptionCmd;
 
     if-eqz v1, :cond_1c
 
@@ -757,9 +757,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 84
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/f;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/OnTrackRestrictedExceptionCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/f;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/OnTrackRestrictedExceptionCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -769,7 +769,7 @@
 
     .line 85
     :cond_1c
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/d/c;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/d/OnNetworkExceptionCmd;
 
     const-string v13, "message"
 
@@ -781,9 +781,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 87
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/c;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/OnNetworkExceptionCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/c;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/OnNetworkExceptionCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -793,7 +793,7 @@
 
     .line 88
     :cond_1d
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/m;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackChangedCmd;
 
     if-eqz v1, :cond_1e
 
@@ -803,23 +803,23 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 90
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/m;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackChangedCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/m;->b()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackChangedCmd;->b()I
 
     move-result v1
 
     invoke-virtual {v2, v12, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 91
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/m;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackChangedCmd;->c()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v4, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 92
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/m;->a()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackChangedCmd;->a()Z
 
     move-result v0
 
@@ -831,7 +831,7 @@
 
     .line 93
     :cond_1e
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/j;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnRepeatStateChangedCmd;
 
     const-string v14, "repeatState"
 
@@ -843,9 +843,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 95
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/j;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/OnRepeatStateChangedCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/j;->a()Lcom/vk/music/player/LoopMode;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnRepeatStateChangedCmd;->a()Lcom/vk/music/player/LoopMode;
 
     move-result-object v0
 
@@ -859,7 +859,7 @@
 
     .line 96
     :cond_1f
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/k;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnShuffleStateChangeCmd;
 
     if-eqz v1, :cond_20
 
@@ -869,9 +869,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 98
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/k;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/OnShuffleStateChangeCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/k;->a()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnShuffleStateChangeCmd;->a()Z
 
     move-result v0
 
@@ -881,7 +881,7 @@
 
     .line 99
     :cond_20
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/g/b;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;
 
     const-string v15, "timePlayedInBackgroundMs"
 
@@ -897,9 +897,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 101
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/g/b;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/b;->i()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;->i()I
 
     move-result v1
 
@@ -908,14 +908,14 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 102
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/b;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;->g()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v13, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 103
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/b;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -924,7 +924,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 104
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/b;->d()Landroid/os/Messenger;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;->d()Landroid/os/Messenger;
 
     move-result-object v1
 
@@ -933,7 +933,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 105
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/b;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -942,7 +942,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 106
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/b;->c()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;->c()I
 
     move-result v1
 
@@ -951,7 +951,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 107
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/b;->e()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;->e()I
 
     move-result v1
 
@@ -960,7 +960,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 108
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;->f()Z
 
     move-result v1
 
@@ -969,7 +969,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 109
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/b;->h()J
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;->h()J
 
     move-result-wide v0
 
@@ -979,7 +979,7 @@
 
     .line 110
     :cond_21
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/s;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/SetRepeatStateCmd;
 
     if-eqz v1, :cond_22
 
@@ -989,9 +989,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 112
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/s;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/SetRepeatStateCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/s;->a()Lcom/vk/music/player/LoopMode;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/SetRepeatStateCmd;->a()Lcom/vk/music/player/LoopMode;
 
     move-result-object v0
 
@@ -1005,7 +1005,7 @@
 
     .line 113
     :cond_22
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/g/c;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/g/SyncWithServiceCmd;
 
     if-eqz v1, :cond_23
 
@@ -1015,9 +1015,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 115
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/g/c;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/g/SyncWithServiceCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/c;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/SyncWithServiceCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1027,7 +1027,7 @@
 
     .line 116
     :cond_23
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/f/d;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;
 
     if-eqz v1, :cond_25
 
@@ -1037,9 +1037,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 118
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/f/d;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->g()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->g()Ljava/util/List;
 
     move-result-object v1
 
@@ -1050,21 +1050,21 @@
     invoke-virtual {v2, v8, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     .line 119
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->f()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v4, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 120
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->k()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->k()I
 
     move-result v1
 
     invoke-virtual {v2, v12, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 121
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->b()Lcom/vk/music/player/PlayState;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->b()Lcom/vk/music/player/PlayState;
 
     move-result-object v1
 
@@ -1077,28 +1077,28 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 122
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->l()F
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->l()F
 
     move-result v1
 
     invoke-virtual {v2, v6, v1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
     .line 123
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->i()F
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->i()F
 
     move-result v1
 
     invoke-virtual {v2, v5, v1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
     .line 124
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->a()F
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->a()F
 
     move-result v1
 
     invoke-virtual {v2, v10, v1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
     .line 125
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->d()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->d()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v1
 
@@ -1111,14 +1111,14 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 126
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->h()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->h()Z
 
     move-result v1
 
     invoke-virtual {v2, v7, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 127
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->e()Lcom/vk/music/player/LoopMode;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->e()Lcom/vk/music/player/LoopMode;
 
     move-result-object v1
 
@@ -1129,21 +1129,21 @@
     invoke-virtual {v2, v14, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 128
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->j()J
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->j()J
 
     move-result-wide v3
 
     invoke-virtual {v2, v15, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     .line 129
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->m()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->m()Z
 
     move-result v1
 
     invoke-virtual {v2, v11, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 130
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/d;->c()Lcom/vk/music/player/PlayerMode;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;->c()Lcom/vk/music/player/PlayerMode;
 
     move-result-object v0
 
@@ -1167,7 +1167,7 @@
 
     .line 132
     :cond_25
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/f/c;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncEmptySuccessCmd;
 
     if-eqz v1, :cond_26
 
@@ -1177,44 +1177,44 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 134
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/f/c;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncEmptySuccessCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/c;->e()F
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncEmptySuccessCmd;->e()F
 
     move-result v1
 
     invoke-virtual {v2, v6, v1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
     .line 135
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/c;->c()F
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncEmptySuccessCmd;->c()F
 
     move-result v1
 
     invoke-virtual {v2, v5, v1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
     .line 136
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/c;->b()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncEmptySuccessCmd;->b()Z
 
     move-result v1
 
     invoke-virtual {v2, v7, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 137
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/c;->f()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncEmptySuccessCmd;->f()Z
 
     move-result v1
 
     invoke-virtual {v2, v11, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 138
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/c;->d()J
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncEmptySuccessCmd;->d()J
 
     move-result-wide v3
 
     invoke-virtual {v2, v15, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     .line 139
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/c;->a()Lcom/vk/music/player/LoopMode;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncEmptySuccessCmd;->a()Lcom/vk/music/player/LoopMode;
 
     move-result-object v0
 
@@ -1228,7 +1228,7 @@
 
     .line 140
     :cond_26
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/n;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/RemoveFromTrackListCmd;
 
     if-eqz v1, :cond_27
 
@@ -1238,16 +1238,16 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 142
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/n;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/RemoveFromTrackListCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/n;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/RemoveFromTrackListCmd;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v4, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 143
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/n;->a()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/RemoveFromTrackListCmd;->a()I
 
     move-result v0
 
@@ -1257,7 +1257,7 @@
 
     .line 144
     :cond_27
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/d/d;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/d/OnPermissionExceptionCmd;
 
     if-eqz v1, :cond_28
 
@@ -1267,9 +1267,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 146
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/d;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/OnPermissionExceptionCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/d;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/OnPermissionExceptionCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1283,7 +1283,7 @@
     move-object/from16 v1, v16
 
     .line 147
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/d/b;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/d/OnIllegalActionExceptionCmd;
 
     if-eqz v5, :cond_29
 
@@ -1293,9 +1293,9 @@
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 149
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/b;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/OnIllegalActionExceptionCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/b;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/OnIllegalActionExceptionCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1305,7 +1305,7 @@
 
     .line 150
     :cond_29
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/g/a;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/g/CaptureServiceCmd;
 
     if-eqz v5, :cond_2a
 
@@ -1315,9 +1315,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 152
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/g/a;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/g/CaptureServiceCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/CaptureServiceCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1327,7 +1327,7 @@
 
     .line 153
     :cond_2a
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/f/a;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/f/OnCapturedCmd;
 
     if-eqz v5, :cond_2b
 
@@ -1337,9 +1337,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 155
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/f/a;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/f/OnCapturedCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnCapturedCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1349,7 +1349,7 @@
 
     .line 156
     :cond_2b
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/f/b;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/f/OnRegisterSuccessCmd;
 
     if-eqz v5, :cond_2c
 
@@ -1359,9 +1359,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 158
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/f/b;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/f/OnRegisterSuccessCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/b;->b()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnRegisterSuccessCmd;->b()Z
 
     move-result v1
 
@@ -1370,7 +1370,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 159
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/b;->a()J
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/f/OnRegisterSuccessCmd;->a()J
 
     move-result-wide v0
 
@@ -1380,7 +1380,7 @@
 
     .line 160
     :cond_2c
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/b;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/OnBackgroundTimePlayedCmd;
 
     if-eqz v5, :cond_2d
 
@@ -1390,9 +1390,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 162
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/b;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/OnBackgroundTimePlayedCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/b;->a()J
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/OnBackgroundTimePlayedCmd;->a()J
 
     move-result-wide v0
 
@@ -1402,7 +1402,7 @@
 
     .line 163
     :cond_2d
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/a;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/OnBackgroundTimeOverCmd;
 
     if-eqz v5, :cond_2e
 
@@ -1414,7 +1414,7 @@
 
     .line 164
     :cond_2e
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/d/e;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/d/OnPlayerExceptionCmd;
 
     if-eqz v5, :cond_2f
 
@@ -1424,9 +1424,9 @@
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 166
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/e;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/OnPlayerExceptionCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/e;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/OnPlayerExceptionCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1436,7 +1436,7 @@
 
     .line 167
     :cond_2f
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/d/g;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/d/OnUnknownExceptionCmd;
 
     if-eqz v5, :cond_30
 
@@ -1446,9 +1446,9 @@
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 169
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/g;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/OnUnknownExceptionCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/g;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/OnUnknownExceptionCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1458,7 +1458,7 @@
 
     .line 170
     :cond_30
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/e;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/MoveTrackCmd;
 
     if-eqz v5, :cond_31
 
@@ -1468,16 +1468,16 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 172
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/e;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/MoveTrackCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/e;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/MoveTrackCmd;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v4, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 173
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/e;->a()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/MoveTrackCmd;->a()I
 
     move-result v1
 
@@ -1486,7 +1486,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 174
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/e;->c()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/MoveTrackCmd;->c()I
 
     move-result v0
 
@@ -1498,7 +1498,7 @@
 
     .line 175
     :cond_31
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/a;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/AddToCurrentTrackListCmd;
 
     if-eqz v5, :cond_33
 
@@ -1508,9 +1508,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 177
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/a;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/AddToCurrentTrackListCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/a;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/AddToCurrentTrackListCmd;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -1531,7 +1531,7 @@
 
     .line 178
     :cond_33
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/l;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/PlayPreviousMsCmd;
 
     if-eqz v5, :cond_34
 
@@ -1541,9 +1541,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 180
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/l;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/PlayPreviousMsCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/l;->a()J
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/PlayPreviousMsCmd;->a()J
 
     move-result-wide v0
 
@@ -1555,7 +1555,7 @@
 
     .line 181
     :cond_34
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/j;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/PlayNextMsCmd;
 
     if-eqz v5, :cond_35
 
@@ -1565,9 +1565,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 183
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/j;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/PlayNextMsCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/j;->a()J
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/PlayNextMsCmd;->a()J
 
     move-result-wide v0
 
@@ -1579,7 +1579,7 @@
 
     .line 184
     :cond_35
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/r;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/SetPlayingContextCmd;
 
     if-eqz v5, :cond_36
 
@@ -1589,9 +1589,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 186
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/r;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/SetPlayingContextCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/r;->a()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/SetPlayingContextCmd;->a()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v0
 
@@ -1607,7 +1607,7 @@
 
     .line 187
     :cond_36
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/d;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/ForcePauseCmd;
 
     if-eqz v5, :cond_37
 
@@ -1617,9 +1617,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 189
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/d;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/ForcePauseCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/d;->a()Lcom/vk/music/player/PauseReason;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/ForcePauseCmd;->a()Lcom/vk/music/player/PauseReason;
 
     move-result-object v0
 
@@ -1635,7 +1635,7 @@
 
     .line 190
     :cond_37
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/e/p/c;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/e/p/OnLoadingModeChangedCmd;
 
     if-eqz v5, :cond_38
 
@@ -1647,7 +1647,7 @@
 
     .line 191
     :cond_38
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/e/p/d;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/e/p/OnPodcastModeChangedCmd;
 
     if-eqz v5, :cond_39
 
@@ -1659,7 +1659,7 @@
 
     .line 192
     :cond_39
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/e/p/b;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/e/p/OnAudioModeChangedCmd;
 
     if-eqz v5, :cond_3a
 
@@ -1671,7 +1671,7 @@
 
     .line 193
     :cond_3a
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/e/p/a;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/e/e/p/OnAdvertisementModeChangedCmd;
 
     if-eqz v5, :cond_3b
 
@@ -1681,9 +1681,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 195
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/p/a;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/p/OnAdvertisementModeChangedCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/p/a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/p/OnAdvertisementModeChangedCmd;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1692,7 +1692,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 196
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/p/a;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/p/OnAdvertisementModeChangedCmd;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1701,7 +1701,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 197
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/p/a;->c()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/p/OnAdvertisementModeChangedCmd;->c()I
 
     move-result v1
 
@@ -1710,15 +1710,15 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 198
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/p/a;->d()Landroid/util/SparseArray;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/p/OnAdvertisementModeChangedCmd;->d()Landroid/util/SparseArray;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/core/extensions/x;->d(Landroid/util/SparseArray;)Ljava/util/Set;
+    invoke-static {v1}, Lcom/vk/core/extensions/SparseArrayExt1;->d(Landroid/util/SparseArray;)Ljava/util/Set;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -1727,15 +1727,15 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     .line 199
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/p/a;->d()Landroid/util/SparseArray;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/p/OnAdvertisementModeChangedCmd;->d()Landroid/util/SparseArray;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/x;->h(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/SparseArrayExt1;->h(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -1747,7 +1747,7 @@
 
     .line 200
     :cond_3b
-    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/a0;
+    instance-of v5, v0, Lcom/vk/audioipc/communication/u/b/f/UpdateMusicTrackCmd;
 
     if-eqz v5, :cond_3c
 
@@ -1757,16 +1757,16 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 202
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/a0;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/UpdateMusicTrackCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/a0;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/UpdateMusicTrackCmd;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v4, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 203
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/a0;->a()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/UpdateMusicTrackCmd;->a()I
 
     move-result v0
 
@@ -1776,7 +1776,7 @@
 
     .line 204
     :cond_3c
-    instance-of v4, v0, Lcom/vk/audioipc/communication/u/b/f/z;
+    instance-of v4, v0, Lcom/vk/audioipc/communication/u/b/f/UpdateAccountSettingsCmd;
 
     if-eqz v4, :cond_3d
 
@@ -1786,9 +1786,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 206
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/z;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/UpdateAccountSettingsCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/z;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/UpdateAccountSettingsCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1798,7 +1798,7 @@
 
     .line 207
     :cond_3d
-    instance-of v4, v0, Lcom/vk/audioipc/communication/u/b/g/d;
+    instance-of v4, v0, Lcom/vk/audioipc/communication/u/b/g/UnregisterOnServiceCmd;
 
     if-eqz v4, :cond_3e
 
@@ -1808,9 +1808,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 209
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/g/d;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/g/UnregisterOnServiceCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/d;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/g/UnregisterOnServiceCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1820,7 +1820,7 @@
 
     .line 210
     :cond_3e
-    instance-of v4, v0, Lcom/vk/audioipc/communication/u/b/e/f/e;
+    instance-of v4, v0, Lcom/vk/audioipc/communication/u/b/e/f/OnUnregisterOnServiceCmd;
 
     if-eqz v4, :cond_3f
 
@@ -1833,7 +1833,7 @@
 
     .line 212
     :cond_3f
-    instance-of v4, v0, Lcom/vk/audioipc/communication/u/b/e/e/c;
+    instance-of v4, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnDeviceRestrictionCmd;
 
     if-eqz v4, :cond_40
 
@@ -1843,9 +1843,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 214
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/c;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/OnDeviceRestrictionCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/c;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnDeviceRestrictionCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1857,7 +1857,7 @@
 
     .line 215
     :cond_40
-    instance-of v4, v0, Lcom/vk/audioipc/communication/u/b/f/p;
+    instance-of v4, v0, Lcom/vk/audioipc/communication/u/b/f/SetBackgroundTimePlayedMsCmd;
 
     if-eqz v4, :cond_41
 
@@ -1867,9 +1867,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 217
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/p;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/SetBackgroundTimePlayedMsCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/p;->a()J
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/SetBackgroundTimePlayedMsCmd;->a()J
 
     move-result-wide v0
 
@@ -1879,7 +1879,7 @@
 
     .line 218
     :cond_41
-    instance-of v4, v0, Lcom/vk/audioipc/communication/u/b/e/d/a;
+    instance-of v4, v0, Lcom/vk/audioipc/communication/u/b/e/d/OnBackgroundRestrictedExceptionCmd;
 
     if-eqz v4, :cond_42
 
@@ -1889,9 +1889,9 @@
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 220
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/a;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/d/OnBackgroundRestrictedExceptionCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/d/OnBackgroundRestrictedExceptionCmd;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1901,7 +1901,7 @@
 
     .line 221
     :cond_42
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/d;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/e/OnLikeGetCmd;
 
     if-eqz v1, :cond_43
 
@@ -1911,9 +1911,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 223
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/d;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/e/OnLikeGetCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/d;->b()I
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnLikeGetCmd;->b()I
 
     move-result v1
 
@@ -1922,7 +1922,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 224
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/d;->a()J
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnLikeGetCmd;->a()J
 
     move-result-wide v0
 
@@ -1932,7 +1932,7 @@
 
     .line 225
     :cond_43
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/d/a;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/d/LocalSettingChangeCmd;
 
     if-eqz v1, :cond_44
 
@@ -1942,16 +1942,16 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 227
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/d/a;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/d/LocalSettingChangeCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/d/a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/d/LocalSettingChangeCmd;->a()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v13, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 228
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/d/a;->b()Lcom/vk/music/player/LocalSetting;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/d/LocalSettingChangeCmd;->b()Lcom/vk/music/player/LocalSetting;
 
     move-result-object v1
 
@@ -1964,7 +1964,7 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 229
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/d/a;->c()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/d/LocalSettingChangeCmd;->c()Z
 
     move-result v0
 
@@ -1976,7 +1976,7 @@
 
     .line 230
     :cond_44
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/f;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/f/OnUpdateSubscriptionStateCmd;
 
     if-eqz v1, :cond_45
 
@@ -1986,9 +1986,9 @@
     invoke-virtual {v2, v3, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 232
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/f;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/f/OnUpdateSubscriptionStateCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/f;->a()Z
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/f/OnUpdateSubscriptionStateCmd;->a()Z
 
     move-result v0
 
@@ -2000,7 +2000,7 @@
 
     .line 233
     :cond_45
-    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/c;
+    instance-of v1, v0, Lcom/vk/audioipc/communication/u/b/e/SyncCacheCmd;
 
     if-eqz v1, :cond_46
 
@@ -2012,9 +2012,9 @@
     .line 235
     sget-object v1, Lcom/vk/core/serialize/Serializer;->c:Lcom/vk/core/serialize/Serializer$b;
 
-    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/c;
+    check-cast v0, Lcom/vk/audioipc/communication/u/b/e/SyncCacheCmd;
 
-    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/c;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audioipc/communication/u/b/e/SyncCacheCmd;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -2023,7 +2023,7 @@
     move-result-object v0
 
     .line 236
-    invoke-static {v0}, Lcom/vk/core/util/f0;->a([B)[B
+    invoke-static {v0}, Lcom/vk/core/util/GZIPCompression;->a([B)[B
 
     move-result-object v0
 
@@ -2035,7 +2035,7 @@
     .line 238
     :cond_46
     :goto_0
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v2
 .end method
@@ -2044,16 +2044,16 @@
     .locals 0
 
     .line 3
-    check-cast p1, Lcom/vk/audioipc/communication/r;
+    check-cast p1, Lcom/vk/audioipc/communication/ServiceCmd;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager;->a(Lcom/vk/audioipc/communication/r;)Landroid/os/Bundle;
+    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager;->a(Lcom/vk/audioipc/communication/ServiceCmd;)Landroid/os/Bundle;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Landroid/os/Bundle;)Lcom/vk/audioipc/communication/r;
+.method public a(Landroid/os/Bundle;)Lcom/vk/audioipc/communication/ServiceCmd;
     .locals 31
 
     move-object/from16 v0, p1
@@ -2157,7 +2157,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 244
     invoke-virtual {v0, v15}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -2165,17 +2165,17 @@
     move-result v0
 
     .line 245
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/b;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/OnCompleteCmd;
 
-    invoke-direct {v2, v0, v1}, Lcom/vk/audioipc/communication/u/b/e/e/b;-><init>(ILjava/lang/String;)V
+    invoke-direct {v2, v0, v1}, Lcom/vk/audioipc/communication/u/b/e/e/OnCompleteCmd;-><init>(ILjava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 246
     :cond_1
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -2189,9 +2189,9 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/p/d;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/p/OnPodcastModeChangedCmd;
 
-    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/e/p/d;-><init>()V
+    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/e/p/OnPodcastModeChangedCmd;-><init>()V
 
     goto/16 :goto_b
 
@@ -2212,20 +2212,20 @@
 
     if-eqz v1, :cond_2
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 250
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/c;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/OnNetworkExceptionCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/d/c;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/d/OnNetworkExceptionCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 251
     :cond_2
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -2239,9 +2239,9 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/i;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/PlayNextCmd;
 
-    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/f/i;-><init>()V
+    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/f/PlayNextCmd;-><init>()V
 
     goto/16 :goto_b
 
@@ -2357,17 +2357,17 @@
     move-result-object v0
 
     .line 268
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/e/f/d;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;
 
     .line 269
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object/from16 v16, v1
 
     move-object/from16 v24, v0
 
     .line 270
-    invoke-direct/range {v16 .. v30}, Lcom/vk/audioipc/communication/u/b/e/f/d;-><init>(Ljava/util/List;Ljava/lang/String;ILcom/vk/music/player/PlayState;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;ZLcom/vk/music/player/LoopMode;JZLcom/vk/music/player/PlayerMode;)V
+    invoke-direct/range {v16 .. v30}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncSuccessCmd;-><init>(Ljava/util/List;Ljava/lang/String;ILcom/vk/music/player/PlayState;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;ZLcom/vk/music/player/LoopMode;JZLcom/vk/music/player/PlayerMode;)V
 
     move-object v2, v1
 
@@ -2376,9 +2376,9 @@
     .line 271
     :cond_4
     :goto_0
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -2409,12 +2409,12 @@
     :goto_1
     const-string v1, "bundle.getString(Fields.DEVICE_NAME) ?: \"\""
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 274
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/c;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/OnDeviceRestrictionCmd;
 
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/e/e/c;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnDeviceRestrictionCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
@@ -2428,7 +2428,7 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/k;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/OnShuffleStateChangeCmd;
 
     .line 276
     invoke-virtual {v0, v8}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -2436,7 +2436,7 @@
     move-result v0
 
     .line 277
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/e/e/k;-><init>(Z)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnShuffleStateChangeCmd;-><init>(Z)V
 
     goto/16 :goto_b
 
@@ -2450,9 +2450,9 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/i;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayerStoppedCmd;
 
-    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/e/i;-><init>()V
+    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayerStoppedCmd;-><init>()V
 
     goto/16 :goto_b
 
@@ -2479,9 +2479,9 @@
     move-result-wide v2
 
     .line 282
-    new-instance v0, Lcom/vk/audioipc/communication/u/b/e/e/d;
+    new-instance v0, Lcom/vk/audioipc/communication/u/b/e/e/OnLikeGetCmd;
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/audioipc/communication/u/b/e/e/d;-><init>(IJ)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/audioipc/communication/u/b/e/e/OnLikeGetCmd;-><init>(IJ)V
 
     goto/16 :goto_9
 
@@ -2495,7 +2495,7 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/j;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/PlayNextMsCmd;
 
     const-string v1, "ms"
 
@@ -2503,7 +2503,7 @@
 
     move-result-wide v0
 
-    invoke-direct {v2, v0, v1}, Lcom/vk/audioipc/communication/u/b/f/j;-><init>(J)V
+    invoke-direct {v2, v0, v1}, Lcom/vk/audioipc/communication/u/b/f/PlayNextMsCmd;-><init>(J)V
 
     goto/16 :goto_b
 
@@ -2517,13 +2517,13 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/u;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/SetSpeedCmd;
 
     invoke-virtual {v0, v7}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;)F
 
     move-result v0
 
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/u;-><init>(F)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/SetSpeedCmd;-><init>(F)V
 
     goto/16 :goto_b
 
@@ -2546,20 +2546,20 @@
 
     move-object/from16 v2, v17
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 287
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/a;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/AddToCurrentTrackListCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/f/a;-><init>(Ljava/util/List;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/f/AddToCurrentTrackListCmd;-><init>(Ljava/util/List;)V
 
     goto/16 :goto_b
 
     .line 288
     :cond_6
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -2580,20 +2580,20 @@
 
     if-eqz v1, :cond_7
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 291
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/d;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/OnPermissionExceptionCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/d/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/d/OnPermissionExceptionCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 292
     :cond_7
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -2716,12 +2716,12 @@
 
     .line 303
     :cond_b
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     .line 304
-    new-instance v0, Lcom/vk/audioipc/communication/u/b/e/e/p/a;
+    new-instance v0, Lcom/vk/audioipc/communication/u/b/e/e/p/OnAdvertisementModeChangedCmd;
 
-    invoke-direct {v0, v2, v3, v1, v5}, Lcom/vk/audioipc/communication/u/b/e/e/p/a;-><init>(Ljava/lang/String;Ljava/lang/String;ILandroid/util/SparseArray;)V
+    invoke-direct {v0, v2, v3, v1, v5}, Lcom/vk/audioipc/communication/u/b/e/e/p/OnAdvertisementModeChangedCmd;-><init>(Ljava/lang/String;Ljava/lang/String;ILandroid/util/SparseArray;)V
 
     goto/16 :goto_9
 
@@ -2742,7 +2742,7 @@
 
     if-eqz v1, :cond_c
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "toPosition"
 
@@ -2759,17 +2759,17 @@
     move-result v0
 
     .line 309
-    new-instance v3, Lcom/vk/audioipc/communication/u/b/f/e;
+    new-instance v3, Lcom/vk/audioipc/communication/u/b/f/MoveTrackCmd;
 
-    invoke-direct {v3, v1, v0, v2}, Lcom/vk/audioipc/communication/u/b/f/e;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v3, v1, v0, v2}, Lcom/vk/audioipc/communication/u/b/f/MoveTrackCmd;-><init>(Ljava/lang/String;II)V
 
     goto/16 :goto_6
 
     .line 310
     :cond_c
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -2792,20 +2792,20 @@
 
     if-eqz v1, :cond_d
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 313
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/c;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/AddToTrackListAsNextCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/f/c;-><init>(Ljava/util/List;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/f/AddToTrackListAsNextCmd;-><init>(Ljava/util/List;)V
 
     goto/16 :goto_b
 
     .line 314
     :cond_d
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -2826,20 +2826,20 @@
 
     if-eqz v1, :cond_e
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 317
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/e;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/OnPlayerExceptionCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/d/e;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/d/OnPlayerExceptionCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 318
     :cond_e
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -2853,7 +2853,7 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/f/b;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/f/OnRegisterSuccessCmd;
 
     const-string v1, "isCaptured"
 
@@ -2868,7 +2868,7 @@
     move-result-wide v3
 
     .line 322
-    invoke-direct {v2, v1, v3, v4}, Lcom/vk/audioipc/communication/u/b/e/f/b;-><init>(ZJ)V
+    invoke-direct {v2, v1, v3, v4}, Lcom/vk/audioipc/communication/u/b/e/f/OnRegisterSuccessCmd;-><init>(ZJ)V
 
     goto/16 :goto_b
 
@@ -2891,7 +2891,7 @@
 
     if-eqz v1, :cond_11
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "is_enable"
 
@@ -2918,36 +2918,36 @@
 
     if-eqz v3, :cond_f
 
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 328
-    new-instance v0, Lcom/vk/audioipc/communication/u/b/d/a;
+    new-instance v0, Lcom/vk/audioipc/communication/u/b/d/LocalSettingChangeCmd;
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/vk/audioipc/communication/u/b/d/a;-><init>(Ljava/lang/String;Lcom/vk/music/player/LocalSetting;Z)V
+    invoke-direct {v0, v3, v1, v2}, Lcom/vk/audioipc/communication/u/b/d/LocalSettingChangeCmd;-><init>(Ljava/lang/String;Lcom/vk/music/player/LocalSetting;Z)V
 
     goto/16 :goto_9
 
     .line 329
     :cond_f
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
     .line 330
     :cond_10
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
     .line 331
     :cond_11
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -2961,7 +2961,7 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/l;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/PlayPreviousMsCmd;
 
     const-string v1, "ms"
 
@@ -2969,7 +2969,7 @@
 
     move-result-wide v0
 
-    invoke-direct {v2, v0, v1}, Lcom/vk/audioipc/communication/u/b/f/l;-><init>(J)V
+    invoke-direct {v2, v0, v1}, Lcom/vk/audioipc/communication/u/b/f/PlayPreviousMsCmd;-><init>(J)V
 
     goto/16 :goto_b
 
@@ -2990,7 +2990,7 @@
 
     if-eqz v1, :cond_12
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 335
     invoke-virtual {v0, v15}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -2998,17 +2998,17 @@
     move-result v0
 
     .line 336
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/f;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayCmd;
 
-    invoke-direct {v2, v0, v1}, Lcom/vk/audioipc/communication/u/b/e/e/f;-><init>(ILjava/lang/String;)V
+    invoke-direct {v2, v0, v1}, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayCmd;-><init>(ILjava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 337
     :cond_12
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3022,13 +3022,13 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/w;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/SetVolumeCmd;
 
     invoke-virtual {v0, v10}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;)F
 
     move-result v0
 
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/w;-><init>(F)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/SetVolumeCmd;-><init>(F)V
 
     goto/16 :goto_b
 
@@ -3042,13 +3042,13 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/y;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/TrackingBackgroundCmd;
 
     invoke-virtual {v0, v5}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
 
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/y;-><init>(Z)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/TrackingBackgroundCmd;-><init>(Z)V
 
     goto/16 :goto_b
 
@@ -3069,7 +3069,7 @@
 
     if-eqz v1, :cond_13
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 342
     invoke-virtual {v0, v15}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -3077,7 +3077,7 @@
     move-result v2
 
     .line 343
-    new-instance v3, Lcom/vk/audioipc/communication/u/b/e/e/m;
+    new-instance v3, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackChangedCmd;
 
     const-string v4, "byUser"
 
@@ -3085,15 +3085,15 @@
 
     move-result v0
 
-    invoke-direct {v3, v2, v1, v0}, Lcom/vk/audioipc/communication/u/b/e/e/m;-><init>(ILjava/lang/String;Z)V
+    invoke-direct {v3, v2, v1, v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackChangedCmd;-><init>(ILjava/lang/String;Z)V
 
     goto/16 :goto_6
 
     .line 344
     :cond_13
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3118,10 +3118,10 @@
 
     const-string v2, "bundle.getByteArray(Fiel\u2026return UnknownCmd(bundle)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 347
-    invoke-static {v1}, Lcom/vk/core/util/f0;->b([B)[B
+    invoke-static {v1}, Lcom/vk/core/util/GZIPCompression;->b([B)[B
 
     move-result-object v1
 
@@ -3143,33 +3143,33 @@
     if-eqz v1, :cond_14
 
     .line 349
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/c;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/SyncCacheCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/c;-><init>(Ljava/util/List;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/SyncCacheCmd;-><init>(Ljava/util/List;)V
 
     goto/16 :goto_b
 
     .line 350
     :cond_14
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
     .line 351
     :cond_15
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
     .line 352
     :cond_16
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3260,20 +3260,20 @@
 
     .line 363
     :cond_17
-    new-instance v0, Lcom/vk/audioipc/communication/u/b/g/b;
+    new-instance v0, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;
 
     move-object v13, v0
 
-    invoke-direct/range {v13 .. v23}, Lcom/vk/audioipc/communication/u/b/g/b;-><init>(ILjava/lang/String;Ljava/lang/String;Landroid/os/Messenger;Ljava/lang/String;IIZJ)V
+    invoke-direct/range {v13 .. v23}, Lcom/vk/audioipc/communication/u/b/g/RegisterOnServiceCmd;-><init>(ILjava/lang/String;Ljava/lang/String;Landroid/os/Messenger;Ljava/lang/String;IIZJ)V
 
     goto/16 :goto_9
 
     .line 364
     :cond_18
     :goto_5
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3287,9 +3287,9 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/p/c;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/p/OnLoadingModeChangedCmd;
 
-    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/e/p/c;-><init>()V
+    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/e/p/OnLoadingModeChangedCmd;-><init>()V
 
     goto/16 :goto_b
 
@@ -3303,7 +3303,7 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/l;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/OnSpeedChangedCmd;
 
     .line 367
     invoke-virtual {v0, v7}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;)F
@@ -3311,7 +3311,7 @@
     move-result v0
 
     .line 368
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/e/e/l;-><init>(F)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnSpeedChangedCmd;-><init>(F)V
 
     goto/16 :goto_b
 
@@ -3334,20 +3334,20 @@
 
     if-eqz v1, :cond_19
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 371
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/g/a;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/g/CaptureServiceCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/g/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/g/CaptureServiceCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 372
     :cond_19
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3368,7 +3368,7 @@
 
     if-eqz v1, :cond_1a
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 375
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;)F
@@ -3381,9 +3381,9 @@
     move-result v0
 
     .line 377
-    new-instance v3, Lcom/vk/audioipc/communication/u/b/e/e/g;
+    new-instance v3, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayProgressChangedCmd;
 
-    invoke-direct {v3, v0, v1, v2}, Lcom/vk/audioipc/communication/u/b/e/e/g;-><init>(ILjava/lang/String;F)V
+    invoke-direct {v3, v0, v1, v2}, Lcom/vk/audioipc/communication/u/b/e/e/OnPlayProgressChangedCmd;-><init>(ILjava/lang/String;F)V
 
     :goto_6
     move-object v2, v3
@@ -3392,9 +3392,9 @@
 
     .line 378
     :cond_1a
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3415,7 +3415,7 @@
 
     if-eqz v1, :cond_1b
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 381
     invoke-virtual {v0, v15}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -3437,17 +3437,17 @@
     move-result v0
 
     .line 384
-    new-instance v4, Lcom/vk/audioipc/communication/u/b/e/e/e;
+    new-instance v4, Lcom/vk/audioipc/communication/u/b/e/e/OnPauseCmd;
 
-    invoke-direct {v4, v2, v1, v3, v0}, Lcom/vk/audioipc/communication/u/b/e/e/e;-><init>(ILjava/lang/String;ZZ)V
+    invoke-direct {v4, v2, v1, v3, v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnPauseCmd;-><init>(ILjava/lang/String;ZZ)V
 
     goto :goto_7
 
     .line 385
     :cond_1b
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3468,7 +3468,7 @@
 
     if-eqz v1, :cond_1c
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "bufferingPosition"
 
@@ -3490,9 +3490,9 @@
     move-result v0
 
     .line 391
-    new-instance v4, Lcom/vk/audioipc/communication/u/b/e/e/a;
+    new-instance v4, Lcom/vk/audioipc/communication/u/b/e/e/OnBufferingProgressChangedCmd;
 
-    invoke-direct {v4, v0, v1, v2, v3}, Lcom/vk/audioipc/communication/u/b/e/e/a;-><init>(ILjava/lang/String;FF)V
+    invoke-direct {v4, v0, v1, v2, v3}, Lcom/vk/audioipc/communication/u/b/e/e/OnBufferingProgressChangedCmd;-><init>(ILjava/lang/String;FF)V
 
     :goto_7
     move-object v2, v4
@@ -3501,9 +3501,9 @@
 
     .line 392
     :cond_1c
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3517,7 +3517,7 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/d;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/ForcePauseCmd;
 
     sget-object v1, Lcom/vk/music/player/PauseReason;->Companion:Lcom/vk/music/player/PauseReason$a;
 
@@ -3531,7 +3531,7 @@
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/d;-><init>(Lcom/vk/music/player/PauseReason;)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/ForcePauseCmd;-><init>(Lcom/vk/music/player/PauseReason;)V
 
     goto/16 :goto_b
 
@@ -3545,9 +3545,9 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/g;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/PauseCmd;
 
-    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/f/g;-><init>()V
+    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/f/PauseCmd;-><init>()V
 
     goto/16 :goto_b
 
@@ -3570,20 +3570,20 @@
 
     if-eqz v1, :cond_1d
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 397
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/g/c;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/g/SyncWithServiceCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/g/c;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/g/SyncWithServiceCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 398
     :cond_1d
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3597,9 +3597,9 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/x;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/StopCmd;
 
-    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/f/x;-><init>()V
+    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/f/StopCmd;-><init>()V
 
     goto/16 :goto_b
 
@@ -3613,9 +3613,9 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/h;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/PlayCmd;
 
-    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/f/h;-><init>()V
+    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/f/PlayCmd;-><init>()V
 
     goto/16 :goto_b
 
@@ -3636,7 +3636,7 @@
 
     if-eqz v1, :cond_1e
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 403
     invoke-virtual {v0, v15}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -3644,17 +3644,17 @@
     move-result v0
 
     .line 404
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/q;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/SetCurrentTrackCmd;
 
-    invoke-direct {v2, v1, v0}, Lcom/vk/audioipc/communication/u/b/f/q;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v2, v1, v0}, Lcom/vk/audioipc/communication/u/b/f/SetCurrentTrackCmd;-><init>(Ljava/lang/String;I)V
 
     goto/16 :goto_b
 
     .line 405
     :cond_1e
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3675,20 +3675,20 @@
 
     if-eqz v1, :cond_1f
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 408
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/b;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/AddToMyMusicCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/f/b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/f/AddToMyMusicCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 409
     :cond_1f
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3717,12 +3717,12 @@
     :goto_8
     const-string v1, "bundle.getString(Fields.MESSAGE) ?: \"\""
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 412
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/a;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/OnBackgroundRestrictedExceptionCmd;
 
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/e/d/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/e/d/OnBackgroundRestrictedExceptionCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
@@ -3736,9 +3736,9 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/f/e;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/f/OnUnregisterOnServiceCmd;
 
-    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/f/e;-><init>()V
+    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/f/OnUnregisterOnServiceCmd;-><init>()V
 
     goto/16 :goto_b
 
@@ -3759,20 +3759,20 @@
 
     if-eqz v1, :cond_21
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 416
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/m;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/RemoveFromMyMusicCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/f/m;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/f/RemoveFromMyMusicCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 417
     :cond_21
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3786,7 +3786,7 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/s;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/SetRepeatStateCmd;
 
     sget-object v1, Lcom/vk/music/player/LoopMode;->Companion:Lcom/vk/music/player/LoopMode$a;
 
@@ -3798,7 +3798,7 @@
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/s;-><init>(Lcom/vk/music/player/LoopMode;)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/SetRepeatStateCmd;-><init>(Lcom/vk/music/player/LoopMode;)V
 
     goto/16 :goto_b
 
@@ -3812,13 +3812,13 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/b;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/OnBackgroundTimePlayedCmd;
 
     invoke-virtual {v0, v12}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    invoke-direct {v2, v0, v1}, Lcom/vk/audioipc/communication/u/b/e/b;-><init>(J)V
+    invoke-direct {v2, v0, v1}, Lcom/vk/audioipc/communication/u/b/e/OnBackgroundTimePlayedCmd;-><init>(J)V
 
     goto/16 :goto_b
 
@@ -3832,9 +3832,9 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/o;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackListCompleteCmd;
 
-    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/e/o;-><init>()V
+    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackListCompleteCmd;-><init>()V
 
     goto/16 :goto_b
 
@@ -3848,9 +3848,9 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/p/b;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/p/OnAudioModeChangedCmd;
 
-    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/e/p/b;-><init>()V
+    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/e/p/OnAudioModeChangedCmd;-><init>()V
 
     goto/16 :goto_b
 
@@ -3864,13 +3864,13 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/o;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/SeekToCmd;
 
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;)F
 
     move-result v0
 
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/o;-><init>(F)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/SeekToCmd;-><init>(F)V
 
     goto/16 :goto_b
 
@@ -3895,20 +3895,20 @@
 
     const-string v0, "bundle.getString(Fields.\u2026eturn  UnknownCmd(bundle)"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 425
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/z;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/UpdateAccountSettingsCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/f/z;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/f/UpdateAccountSettingsCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 426
     :cond_22
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3929,10 +3929,10 @@
 
     if-eqz v1, :cond_23
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 429
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/r;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/SetPlayingContextCmd;
 
     invoke-static {v1}, Lcom/vk/music/common/MusicPlaybackLaunchContext;->i(Ljava/lang/String;)Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
@@ -3940,17 +3940,17 @@
 
     const-string v1, "MusicPlaybackLaunchConte\u2026mpleParse(playingContext)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/r;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/SetPlayingContextCmd;-><init>(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     goto/16 :goto_b
 
     .line 430
     :cond_23
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -3964,9 +3964,9 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/a;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/OnBackgroundTimeOverCmd;
 
-    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/a;-><init>()V
+    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/e/OnBackgroundTimeOverCmd;-><init>()V
 
     goto/16 :goto_b
 
@@ -3988,9 +3988,9 @@
     move-result v0
 
     .line 434
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/f;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/OnUpdateSubscriptionStateCmd;
 
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/f;-><init>(Z)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/OnUpdateSubscriptionStateCmd;-><init>(Z)V
 
     goto/16 :goto_b
 
@@ -4011,20 +4011,20 @@
 
     if-eqz v1, :cond_24
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 437
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/f;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/OnTrackRestrictedExceptionCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/d/f;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/d/OnTrackRestrictedExceptionCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 438
     :cond_24
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -4075,11 +4075,11 @@
     move-result v20
 
     .line 446
-    new-instance v0, Lcom/vk/audioipc/communication/u/b/e/f/c;
+    new-instance v0, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncEmptySuccessCmd;
 
     move-object v13, v0
 
-    invoke-direct/range {v13 .. v20}, Lcom/vk/audioipc/communication/u/b/e/f/c;-><init>(FFZLcom/vk/music/player/LoopMode;JZ)V
+    invoke-direct/range {v13 .. v20}, Lcom/vk/audioipc/communication/u/b/e/f/OnSyncEmptySuccessCmd;-><init>(FFZLcom/vk/music/player/LoopMode;JZ)V
 
     :goto_9
     move-object v2, v0
@@ -4103,7 +4103,7 @@
 
     if-eqz v1, :cond_25
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 449
     invoke-virtual {v0, v15}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -4111,17 +4111,17 @@
     move-result v0
 
     .line 450
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/n;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/RemoveFromTrackListCmd;
 
-    invoke-direct {v2, v1, v0}, Lcom/vk/audioipc/communication/u/b/f/n;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v2, v1, v0}, Lcom/vk/audioipc/communication/u/b/f/RemoveFromTrackListCmd;-><init>(Ljava/lang/String;I)V
 
     goto/16 :goto_b
 
     .line 451
     :cond_25
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -4135,13 +4135,13 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/t;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/SetShuffleStateCmd;
 
     invoke-virtual {v0, v8}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
 
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/t;-><init>(Z)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/f/SetShuffleStateCmd;-><init>(Z)V
 
     goto/16 :goto_b
 
@@ -4155,7 +4155,7 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/j;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/OnRepeatStateChangedCmd;
 
     .line 454
     sget-object v1, Lcom/vk/music/player/LoopMode;->Companion:Lcom/vk/music/player/LoopMode$a;
@@ -4169,7 +4169,7 @@
     move-result-object v0
 
     .line 455
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/e/e/j;-><init>(Lcom/vk/music/player/LoopMode;)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/e/e/OnRepeatStateChangedCmd;-><init>(Lcom/vk/music/player/LoopMode;)V
 
     goto/16 :goto_b
 
@@ -4190,20 +4190,20 @@
 
     if-eqz v1, :cond_26
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 458
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/g;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/OnUnknownExceptionCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/d/g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/d/OnUnknownExceptionCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 459
     :cond_26
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -4217,7 +4217,7 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lb/b/a/a/a/a/a/a/a;
+    new-instance v2, Lb/b/a/a/a/a/a/a/OnVolumeChangedCmd;
 
     .line 461
     invoke-virtual {v0, v10}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;)F
@@ -4225,7 +4225,7 @@
     move-result v0
 
     .line 462
-    invoke-direct {v2, v0}, Lb/b/a/a/a/a/a/a/a;-><init>(F)V
+    invoke-direct {v2, v0}, Lb/b/a/a/a/a/a/a/OnVolumeChangedCmd;-><init>(F)V
 
     goto/16 :goto_b
 
@@ -4248,20 +4248,20 @@
 
     if-eqz v1, :cond_27
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 465
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/f/a;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/f/OnCapturedCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/f/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/f/OnCapturedCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 466
     :cond_27
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -4286,20 +4286,20 @@
 
     if-eqz v1, :cond_28
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 469
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/n;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackListChangedCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/e/n;-><init>(Ljava/util/List;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/e/OnTrackListChangedCmd;-><init>(Ljava/util/List;)V
 
     goto/16 :goto_b
 
     .line 470
     :cond_28
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -4319,9 +4319,9 @@
     move-result-wide v0
 
     .line 473
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/p;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/SetBackgroundTimePlayedMsCmd;
 
-    invoke-direct {v2, v0, v1}, Lcom/vk/audioipc/communication/u/b/f/p;-><init>(J)V
+    invoke-direct {v2, v0, v1}, Lcom/vk/audioipc/communication/u/b/f/SetBackgroundTimePlayedMsCmd;-><init>(J)V
 
     goto/16 :goto_b
 
@@ -4344,20 +4344,20 @@
 
     if-eqz v1, :cond_29
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 476
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/g/d;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/g/UnregisterOnServiceCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/g/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/g/UnregisterOnServiceCmd;-><init>(Ljava/lang/String;)V
 
     goto/16 :goto_b
 
     .line 477
     :cond_29
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -4378,20 +4378,20 @@
 
     if-eqz v1, :cond_2a
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 480
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/b;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/e/d/OnIllegalActionExceptionCmd;
 
-    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/d/b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/vk/audioipc/communication/u/b/e/d/OnIllegalActionExceptionCmd;-><init>(Ljava/lang/String;)V
 
     goto :goto_b
 
     .line 481
     :cond_2a
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -4405,9 +4405,9 @@
 
     if-eqz v1, :cond_2d
 
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/k;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/PlayPreviousCmd;
 
-    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/f/k;-><init>()V
+    invoke-direct {v2}, Lcom/vk/audioipc/communication/u/b/f/PlayPreviousCmd;-><init>()V
 
     goto :goto_b
 
@@ -4430,7 +4430,7 @@
 
     if-eqz v1, :cond_2b
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 485
     sget-object v2, Lcom/vk/music/player/PlayerMode;->Companion:Lcom/vk/music/player/PlayerMode$a;
@@ -4446,17 +4446,17 @@
     move-result-object v0
 
     .line 486
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/v;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/SetTrackListCmd;
 
-    invoke-direct {v2, v1, v0}, Lcom/vk/audioipc/communication/u/b/f/v;-><init>(Ljava/util/List;Lcom/vk/music/player/PlayerMode;)V
+    invoke-direct {v2, v1, v0}, Lcom/vk/audioipc/communication/u/b/f/SetTrackListCmd;-><init>(Ljava/util/List;Lcom/vk/music/player/PlayerMode;)V
 
     goto :goto_b
 
     .line 487
     :cond_2b
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
@@ -4477,7 +4477,7 @@
 
     if-eqz v1, :cond_2c
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 490
     invoke-virtual {v0, v15}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -4485,26 +4485,26 @@
     move-result v0
 
     .line 491
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/a0;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/f/UpdateMusicTrackCmd;
 
-    invoke-direct {v2, v1, v0}, Lcom/vk/audioipc/communication/u/b/f/a0;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v2, v1, v0}, Lcom/vk/audioipc/communication/u/b/f/UpdateMusicTrackCmd;-><init>(Ljava/lang/String;I)V
 
     goto :goto_b
 
     .line 492
     :cond_2c
-    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v1, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     return-object v1
 
     .line 493
     :cond_2d
     :goto_a
-    new-instance v2, Lcom/vk/audioipc/communication/u/b/d/c;
+    new-instance v2, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;
 
-    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/d/c;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v2, v0}, Lcom/vk/audioipc/communication/u/b/d/UnknownCmd;-><init>(Landroid/os/Bundle;)V
 
     :goto_b
     return-object v2
@@ -4608,7 +4608,7 @@
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager;->a(Landroid/os/Bundle;)Lcom/vk/audioipc/communication/r;
+    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/commands/serializer/BaseCmdSerializeManager;->a(Landroid/os/Bundle;)Lcom/vk/audioipc/communication/ServiceCmd;
 
     move-result-object p1
 

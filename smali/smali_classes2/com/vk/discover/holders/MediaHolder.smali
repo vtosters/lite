@@ -1,5 +1,5 @@
 .class public final Lcom/vk/discover/holders/MediaHolder;
-.super Lcom/vk/discover/holders/e;
+.super Lcom/vk/discover/holders/BasePostHolder;
 .source "MediaHolder.kt"
 
 
@@ -18,7 +18,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/discover/holders/e$a;Lcom/vk/discover/DiscoverUiConfig;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/discover/holders/BasePostHolder$a;Lcom/vk/discover/DiscoverUiConfig;)V
     .locals 8
 
     const v1, 0x7f0d0193
@@ -36,7 +36,7 @@
     move-object v3, p2
 
     .line 1
-    invoke-direct/range {v0 .. v6}, Lcom/vk/discover/holders/e;-><init>(ILandroid/view/ViewGroup;Lcom/vk/discover/holders/e$a;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/discover/holders/BasePostHolder;-><init>(ILandroid/view/ViewGroup;Lcom/vk/discover/holders/BasePostHolder$a;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p3, p0, Lcom/vk/discover/holders/MediaHolder;->F:Lcom/vk/discover/DiscoverUiConfig;
 
@@ -45,7 +45,7 @@
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p3, 0x2
 
@@ -53,7 +53,7 @@
 
     const v1, 0x7f0a05fb
 
-    invoke-static {p1, v1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -77,7 +77,7 @@
     const v6, 0x7f040397
 
     .line 4
-    invoke-static {v5, v6}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v5, v6}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v5
 
@@ -86,7 +86,7 @@
     new-array v3, v4, [I
 
     .line 5
-    new-instance v4, Lcom/vk/core/drawable/i;
+    new-instance v4, Lcom/vk/core/drawable/RecoloredDrawable;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
 
@@ -102,7 +102,7 @@
 
     long-to-int v7, v6
 
-    invoke-direct {v4, v5, v7}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v4, v5, v7}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     invoke-virtual {v1, v3, v4}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
@@ -115,7 +115,7 @@
     .line 8
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f0a0688
 
@@ -128,11 +128,11 @@
     .line 9
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f0a0689
 
-    invoke-static {p1, v1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -141,11 +141,11 @@
     .line 10
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f0a057f
 
-    invoke-static {p1, v1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p3, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -164,7 +164,7 @@
 
     const-string p3, "itemView.findViewById(R.id.hidden_text)"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/discover/holders/MediaHolder;->E:Landroid/view/View;
 
@@ -183,7 +183,7 @@
 
     iget-object p3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -208,13 +208,13 @@
     .line 1
     sget-object v0, Lcom/vk/discover/DiscoverLayoutParams;->e:Lcom/vk/discover/DiscoverLayoutParams$b;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
     const-string v2, "resources"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -222,7 +222,7 @@
 
     const-string v2, "resources.displayMetrics"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, p1}, Lcom/vk/discover/DiscoverLayoutParams$b;->a(Landroid/util/DisplayMetrics;Lcom/vk/dto/discover/DiscoverItem;)Lcom/vk/dto/common/ImageSize;
 
@@ -277,15 +277,15 @@
     :cond_3
     iget-object v2, p0, Lcom/vk/discover/holders/MediaHolder;->D:Lcom/vk/imageloader/view/VKImageView;
 
-    new-instance v4, Lcom/vk/discover/m;
+    new-instance v4, Lcom/vk/discover/ScaleTypeCropRect;
 
     invoke-virtual {p1}, Lcom/vk/dto/discover/DiscoverItem;->y1()Landroid/graphics/RectF;
 
     move-result-object v5
 
-    invoke-direct {v4, v5}, Lcom/vk/discover/m;-><init>(Landroid/graphics/RectF;)V
+    invoke-direct {v4, v5}, Lcom/vk/discover/ScaleTypeCropRect;-><init>(Landroid/graphics/RectF;)V
 
-    invoke-virtual {v2, v4}, Lcom/vk/imageloader/view/a;->setActualScaleType(Lcom/facebook/drawee/drawable/r$b;)V
+    invoke-virtual {v2, v4}, Lcom/vk/imageloader/view/GenericVKImageView;->setActualScaleType(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
 
     .line 4
     iget-object v2, p0, Lcom/vk/discover/holders/MediaHolder;->D:Lcom/vk/imageloader/view/VKImageView;
@@ -311,7 +311,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/a;->setAspectRatio(F)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setAspectRatio(F)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/discover/holders/MediaHolder;->E:Landroid/view/View;
@@ -350,7 +350,7 @@
 
     move-result-object v1
 
-    instance-of v1, v1, Lcom/vk/dto/newsfeed/c;
+    instance-of v1, v1, Lcom/vk/dto/newsfeed/Likable;
 
     if-eqz v1, :cond_6
 
@@ -358,9 +358,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/dto/newsfeed/c;
+    check-cast p1, Lcom/vk/dto/newsfeed/Likable;
 
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->M0()Z
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->M0()Z
 
     move-result p1
 
@@ -397,7 +397,7 @@
 
     .line 13
     :goto_6
-    invoke-virtual {p0}, Lcom/vk/discover/holders/e;->i0()Lkotlin/m;
+    invoke-virtual {p0}, Lcom/vk/discover/holders/BasePostHolder;->i0()Lkotlin/Unit;
 
     return-void
 .end method
@@ -426,13 +426,13 @@
     if-eq v0, v1, :cond_0
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/discover/holders/e;->onClick(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lcom/vk/discover/holders/BasePostHolder;->onClick(Landroid/view/View;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/discover/DiscoverItem;
 
@@ -440,7 +440,7 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/dto/newsfeed/c;
+    instance-of v1, v0, Lcom/vk/dto/newsfeed/Likable;
 
     if-nez v1, :cond_1
 
@@ -449,18 +449,18 @@
     :cond_1
     move-object v2, v0
 
-    check-cast v2, Lcom/vk/dto/newsfeed/c;
+    check-cast v2, Lcom/vk/dto/newsfeed/Likable;
 
     if-eqz v2, :cond_3
 
     .line 4
-    sget-object v3, Lcom/vk/core/widget/b;->b:Lcom/vk/core/widget/b;
+    sget-object v3, Lcom/vk/core/widget/LikeAnimator;->b:Lcom/vk/core/widget/LikeAnimator;
 
     iget-object v4, p0, Lcom/vk/discover/holders/MediaHolder;->B:Landroid/view/View;
 
     iget-object v5, p0, Lcom/vk/discover/holders/MediaHolder;->h:Landroid/widget/ImageView;
 
-    invoke-interface {v2}, Lcom/vk/dto/newsfeed/c;->M0()Z
+    invoke-interface {v2}, Lcom/vk/dto/newsfeed/Likable;->M0()Z
 
     move-result v0
 
@@ -474,12 +474,12 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v3 .. v10}, Lcom/vk/core/widget/b;->a(Lcom/vk/core/widget/b;Landroid/view/View;Landroid/view/View;ZZFILjava/lang/Object;)V
+    invoke-static/range {v3 .. v10}, Lcom/vk/core/widget/LikeAnimator;->a(Lcom/vk/core/widget/LikeAnimator;Landroid/view/View;Landroid/view/View;ZZFILjava/lang/Object;)V
 
     .line 5
     sget-object v1, Lcom/vk/newsfeed/controllers/PostsController;->c:Lcom/vk/newsfeed/controllers/PostsController;
 
-    invoke-interface {v2}, Lcom/vk/dto/newsfeed/c;->M0()Z
+    invoke-interface {v2}, Lcom/vk/dto/newsfeed/Likable;->M0()Z
 
     move-result v0
 
@@ -500,7 +500,7 @@
     invoke-direct {v6, p0}, Lcom/vk/discover/holders/MediaHolder$onClick$1;-><init>(Lcom/vk/discover/holders/MediaHolder;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast p1, Lcom/vk/dto/discover/DiscoverItem;
 
@@ -511,7 +511,7 @@
     const-string v5, "discover"
 
     .line 7
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/dto/newsfeed/c;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;)V
+    invoke-virtual/range {v1 .. v7}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/dto/newsfeed/Likable;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;)V
 
     :goto_0
     return-void

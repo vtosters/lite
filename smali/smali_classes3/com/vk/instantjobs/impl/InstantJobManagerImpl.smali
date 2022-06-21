@@ -18,27 +18,27 @@
 
 
 # static fields
-.field static final synthetic s:[Lkotlin/u/j;
+.field static final synthetic s:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lcom/vk/instantjobs/g/a/a;
+.field private final a:Lcom/vk/instantjobs/g/a/DefaultSerializersProvider;
 
-.field private final b:Lcom/vk/instantjobs/g/c/a;
+.field private final b:Lcom/vk/instantjobs/g/c/DefaultStorageManager;
 
-.field private final c:Lcom/vk/instantjobs/g/b/a;
+.field private final c:Lcom/vk/instantjobs/g/b/DefaultSleeper;
 
-.field private final d:Lcom/vk/instantjobs/utils/f;
+.field private final d:Lcom/vk/instantjobs/utils/LoggerController;
 
 .field private final e:Lcom/vk/instantjobs/impl/InstantJobManagerImpl$a;
 
-.field private final f:Lkotlin/e;
+.field private final f:Lkotlin/Lazy2;
 
-.field private final g:Lkotlin/e;
+.field private final g:Lkotlin/Lazy2;
 
-.field private final h:Lkotlin/e;
+.field private final h:Lkotlin/Lazy2;
 
-.field private i:Lcom/vk/instantjobs/impl/a;
+.field private i:Lcom/vk/instantjobs/impl/InstantJobController;
     .annotation build Landroidx/annotation/GuardedBy;
         value = "this"
     .end annotation
@@ -72,7 +72,7 @@
 
 .field private final q:Ljava/lang/String;
 
-.field private final r:Lcom/vk/instantjobs/g/d/b;
+.field private final r:Lcom/vk/instantjobs/g/d/TimeProvider;
 
 
 # direct methods
@@ -83,11 +83,11 @@
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -95,9 +95,9 @@
 
     const-string v5, "getInternalExecutor()Ljava/util/concurrent/ExecutorService;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -105,7 +105,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -113,9 +113,9 @@
 
     const-string v5, "getNotifyBuilderExecutor()Ljava/util/concurrent/ExecutorService;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x1
 
@@ -123,7 +123,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -131,20 +131,20 @@
 
     const-string v4, "getAsyncExecutor()Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x2
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->s:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->s:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;Ljava/lang/String;Ljava/lang/String;Lcom/vk/instantjobs/g/d/b;Lcom/vk/instantjobs/a;Lcom/vk/instantjobs/InstantJobLogLevel;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;Ljava/lang/String;Ljava/lang/String;Lcom/vk/instantjobs/g/d/TimeProvider;Lcom/vk/instantjobs/InstantJobLogger;Lcom/vk/instantjobs/InstantJobLogLevel;)V
     .locals 0
 
     .line 1
@@ -158,39 +158,39 @@
 
     iput-object p4, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->q:Ljava/lang/String;
 
-    iput-object p5, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->r:Lcom/vk/instantjobs/g/d/b;
+    iput-object p5, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->r:Lcom/vk/instantjobs/g/d/TimeProvider;
 
     .line 2
-    new-instance p1, Lcom/vk/instantjobs/g/a/a;
+    new-instance p1, Lcom/vk/instantjobs/g/a/DefaultSerializersProvider;
 
-    invoke-direct {p1}, Lcom/vk/instantjobs/g/a/a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/instantjobs/g/a/DefaultSerializersProvider;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a:Lcom/vk/instantjobs/g/a/a;
+    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a:Lcom/vk/instantjobs/g/a/DefaultSerializersProvider;
 
     .line 3
-    new-instance p1, Lcom/vk/instantjobs/g/c/a;
+    new-instance p1, Lcom/vk/instantjobs/g/c/DefaultStorageManager;
 
     iget-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->n:Landroid/content/Context;
 
     iget-object p3, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->p:Ljava/lang/String;
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/instantjobs/g/c/a;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/instantjobs/g/c/DefaultStorageManager;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->b:Lcom/vk/instantjobs/g/c/a;
+    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->b:Lcom/vk/instantjobs/g/c/DefaultStorageManager;
 
     .line 4
-    new-instance p1, Lcom/vk/instantjobs/g/b/a;
+    new-instance p1, Lcom/vk/instantjobs/g/b/DefaultSleeper;
 
-    invoke-direct {p1}, Lcom/vk/instantjobs/g/b/a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/instantjobs/g/b/DefaultSleeper;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->c:Lcom/vk/instantjobs/g/b/a;
+    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->c:Lcom/vk/instantjobs/g/b/DefaultSleeper;
 
     .line 5
-    new-instance p1, Lcom/vk/instantjobs/utils/f;
+    new-instance p1, Lcom/vk/instantjobs/utils/LoggerController;
 
-    invoke-direct {p1, p6, p7}, Lcom/vk/instantjobs/utils/f;-><init>(Lcom/vk/instantjobs/a;Lcom/vk/instantjobs/InstantJobLogLevel;)V
+    invoke-direct {p1, p6, p7}, Lcom/vk/instantjobs/utils/LoggerController;-><init>(Lcom/vk/instantjobs/InstantJobLogger;Lcom/vk/instantjobs/InstantJobLogLevel;)V
 
-    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->d:Lcom/vk/instantjobs/utils/f;
+    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->d:Lcom/vk/instantjobs/utils/LoggerController;
 
     .line 6
     new-instance p1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$a;
@@ -204,33 +204,33 @@
 
     invoke-direct {p1, p0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$internalExecutor$2;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->f:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->f:Lkotlin/Lazy2;
 
     .line 8
     new-instance p1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$notifyBuilderExecutor$2;
 
     invoke-direct {p1, p0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$notifyBuilderExecutor$2;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->g:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->g:Lkotlin/Lazy2;
 
     .line 9
     new-instance p1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$asyncExecutor$2;
 
-    invoke-direct {p1, p0, p6}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$asyncExecutor$2;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Lcom/vk/instantjobs/a;)V
+    invoke-direct {p1, p0, p6}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$asyncExecutor$2;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Lcom/vk/instantjobs/InstantJobLogger;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->h:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->h:Lkotlin/Lazy2;
 
     .line 10
     new-instance p1, Ljava/util/concurrent/CountDownLatch;
@@ -244,18 +244,18 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/a;
+.method public static final synthetic a(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/InstantJobController;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/a;
+    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/InstantJobController;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/a;
+.method private final a(Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/InstantJobController;
     .locals 3
 
     .line 28
@@ -268,16 +268,16 @@
 
     .line 30
     :try_start_0
-    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->i:Lcom/vk/instantjobs/impl/a;
+    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->i:Lcom/vk/instantjobs/impl/InstantJobController;
 
     if-nez v1, :cond_0
 
     .line 31
-    invoke-direct {p0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->g()Lcom/vk/instantjobs/impl/a;
+    invoke-direct {p0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->g()Lcom/vk/instantjobs/impl/InstantJobController;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->i:Lcom/vk/instantjobs/impl/a;
+    iput-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->i:Lcom/vk/instantjobs/impl/InstantJobController;
 
     const/4 v1, 0x1
 
@@ -288,12 +288,12 @@
 
     .line 32
     :goto_0
-    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->i:Lcom/vk/instantjobs/impl/a;
+    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->i:Lcom/vk/instantjobs/impl/InstantJobController;
 
     iput-object v2, v0, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
     .line 33
-    sget-object v2, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v2, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -307,16 +307,16 @@
     .line 35
     iget-object v1, v0, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    check-cast v1, Lcom/vk/instantjobs/impl/a;
+    check-cast v1, Lcom/vk/instantjobs/impl/InstantJobController;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1, p1}, Lcom/vk/instantjobs/impl/a;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v1, p1}, Lcom/vk/instantjobs/impl/InstantJobController;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -325,14 +325,14 @@
     :goto_1
     iget-object p1, v0, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    check-cast p1, Lcom/vk/instantjobs/impl/a;
+    check-cast p1, Lcom/vk/instantjobs/impl/InstantJobController;
 
     if-eqz p1, :cond_3
 
     return-object p1
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -356,14 +356,14 @@
     return-object p0
 .end method
 
-.method private final declared-synchronized a(Lkotlin/jvm/b/a;)Ljava/util/concurrent/Future;
+.method private final declared-synchronized a(Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Future;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+TT;>;)",
             "Ljava/util/concurrent/Future<",
             "TT;>;"
@@ -380,9 +380,9 @@
 
     if-eqz p1, :cond_0
 
-    new-instance v1, Lcom/vk/instantjobs/impl/d;
+    new-instance v1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl1;
 
-    invoke-direct {v1, p1}, Lcom/vk/instantjobs/impl/d;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     move-object p1, v1
 
@@ -395,7 +395,7 @@
 
     const-string v0, "internalExecutor.submit(task)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -432,7 +432,7 @@
     .line 41
     :cond_0
     :try_start_1
-    sget-object v0, Lcom/vk/instantjobs/utils/h;->a:Lcom/vk/instantjobs/utils/h;
+    sget-object v0, Lcom/vk/instantjobs/utils/ThrowableUtils;->a:Lcom/vk/instantjobs/utils/ThrowableUtils;
 
     .line 42
     new-instance v1, Ljava/lang/StringBuilder;
@@ -454,7 +454,7 @@
     const/4 v3, 0x1
 
     .line 43
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/instantjobs/utils/h;->a(Ljava/lang/String;Ljava/lang/Throwable;I)Ljava/lang/Throwable;
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/instantjobs/utils/ThrowableUtils;->a(Ljava/lang/String;Ljava/lang/Throwable;I)Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -533,9 +533,9 @@
     .locals 1
 
     .line 49
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->d:Lcom/vk/instantjobs/utils/f;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->d:Lcom/vk/instantjobs/utils/LoggerController;
 
-    invoke-virtual {v0, p1}, Lcom/vk/instantjobs/utils/f;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/instantjobs/utils/LoggerController;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -617,7 +617,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$restoreControllerIfStarted$1;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/a;)Ljava/util/concurrent/Future;
+    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Future;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -748,11 +748,11 @@
     throw v0
 .end method
 
-.method public static final synthetic f(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;)Lcom/vk/instantjobs/g/c/a;
+.method public static final synthetic f(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;)Lcom/vk/instantjobs/g/c/DefaultStorageManager;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->b:Lcom/vk/instantjobs/g/c/a;
+    iget-object p0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->b:Lcom/vk/instantjobs/g/c/DefaultStorageManager;
 
     return-object p0
 .end method
@@ -772,19 +772,19 @@
 
     const-string v1, "Executors.newSingleThreadExecutor(threadFactory)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method private final declared-synchronized g()Lcom/vk/instantjobs/impl/a;
+.method private final declared-synchronized g()Lcom/vk/instantjobs/impl/InstantJobController;
     .locals 13
 
     monitor-enter p0
 
     .line 2
     :try_start_0
-    new-instance v12, Lcom/vk/instantjobs/impl/a;
+    new-instance v12, Lcom/vk/instantjobs/impl/InstantJobController;
 
     .line 3
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->n:Landroid/content/Context;
@@ -793,11 +793,11 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a:Lcom/vk/instantjobs/g/a/a;
+    iget-object v3, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a:Lcom/vk/instantjobs/g/a/DefaultSerializersProvider;
 
     iget-object v4, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->o:Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;
 
-    iget-object v5, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->b:Lcom/vk/instantjobs/g/c/a;
+    iget-object v5, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->b:Lcom/vk/instantjobs/g/c/DefaultStorageManager;
 
     .line 4
     invoke-direct {p0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->i()Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;
@@ -809,18 +809,18 @@
     move-result-object v7
 
     .line 5
-    iget-object v8, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->r:Lcom/vk/instantjobs/g/d/b;
+    iget-object v8, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->r:Lcom/vk/instantjobs/g/d/TimeProvider;
 
-    iget-object v9, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->c:Lcom/vk/instantjobs/g/b/a;
+    iget-object v9, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->c:Lcom/vk/instantjobs/g/b/DefaultSleeper;
 
-    iget-object v10, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->d:Lcom/vk/instantjobs/utils/f;
+    iget-object v10, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->d:Lcom/vk/instantjobs/utils/LoggerController;
 
     iget-object v11, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->j:Ljava/lang/Object;
 
     move-object v0, v12
 
     .line 6
-    invoke-direct/range {v0 .. v11}, Lcom/vk/instantjobs/impl/a;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/instantjobs/g/a/b;Lcom/vk/instantjobs/components/appstate/a;Lcom/vk/instantjobs/g/c/c;Lcom/vk/instantjobs/components/async/a;Ljava/util/concurrent/ExecutorService;Lcom/vk/instantjobs/g/d/b;Lcom/vk/instantjobs/g/b/b;Lcom/vk/instantjobs/a;Ljava/lang/Object;)V
+    invoke-direct/range {v0 .. v11}, Lcom/vk/instantjobs/impl/InstantJobController;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/instantjobs/g/a/SerializersProvider;Lcom/vk/instantjobs/components/appstate/AppStateDetector;Lcom/vk/instantjobs/g/c/StorageManager;Lcom/vk/instantjobs/components/async/AsyncExecutor;Ljava/util/concurrent/ExecutorService;Lcom/vk/instantjobs/g/d/TimeProvider;Lcom/vk/instantjobs/g/b/Sleeper;Lcom/vk/instantjobs/InstantJobLogger;Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -860,7 +860,7 @@
 
     const-string v1, "Executors.newSingleThreadExecutor(threadFactory)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -877,15 +877,15 @@
 .method private final i()Lcom/vk/instantjobs/components/async/DefaultAsyncExecutor;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->h:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->h:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->s:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->s:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -897,15 +897,15 @@
 .method private final j()Ljava/util/concurrent/ExecutorService;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->f:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->s:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->s:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -917,15 +917,15 @@
 .method private final k()Ljava/util/concurrent/ExecutorService;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->g:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->g:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->s:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->s:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -947,17 +947,17 @@
 
     .line 3
     :try_start_0
-    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->i:Lcom/vk/instantjobs/impl/a;
+    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->i:Lcom/vk/instantjobs/impl/InstantJobController;
 
     iput-object v1, v0, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
     const/4 v1, 0x0
 
     .line 4
-    iput-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->i:Lcom/vk/instantjobs/impl/a;
+    iput-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->i:Lcom/vk/instantjobs/impl/InstantJobController;
 
     .line 5
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -967,11 +967,11 @@
     .line 7
     iget-object v0, v0, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vk/instantjobs/impl/a;
+    check-cast v0, Lcom/vk/instantjobs/impl/InstantJobController;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/instantjobs/impl/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/instantjobs/impl/InstantJobController;->a()V
 
     :cond_0
     return-void
@@ -1004,7 +1004,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$releaseControllerIfStarted$1;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/a;)Ljava/util/concurrent/Future;
+    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Future;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1052,14 +1052,14 @@
 
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->e:Lcom/vk/instantjobs/impl/InstantJobManagerImpl$a;
 
-    invoke-virtual {v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->b(Lcom/vk/instantjobs/components/appstate/a$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->b(Lcom/vk/instantjobs/components/appstate/AppStateDetector$a;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->o:Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;
 
-    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->d:Lcom/vk/instantjobs/utils/f;
+    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->d:Lcom/vk/instantjobs/utils/LoggerController;
 
-    invoke-virtual {v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->b(Lcom/vk/instantjobs/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->b(Lcom/vk/instantjobs/InstantJobLogger;)V
 
     const/4 v0, 0x0
 
@@ -1076,7 +1076,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$releaseImpl$1;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/a;)Ljava/util/concurrent/Future;
+    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Future;
 
     .line 9
     invoke-direct {p0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->j()Ljava/util/concurrent/ExecutorService;
@@ -1167,7 +1167,7 @@
 
     invoke-direct {v0, p0, p2, p1}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$submit$1;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;Lcom/vk/instantjobs/InstantJob;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/a;)Ljava/util/concurrent/Future;
+    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Future;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1184,7 +1184,7 @@
     throw p1
 .end method
 
-.method public final a(Ljava/lang/Class;Lcom/vk/instantjobs/c;)V
+.method public final a(Ljava/lang/Class;Lcom/vk/instantjobs/InstantJobSerializer;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1193,15 +1193,15 @@
             ">(",
             "Ljava/lang/Class<",
             "TT;>;",
-            "Lcom/vk/instantjobs/c<",
+            "Lcom/vk/instantjobs/InstantJobSerializer<",
             "TT;>;)V"
         }
     .end annotation
 
     .line 5
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a:Lcom/vk/instantjobs/g/a/a;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a:Lcom/vk/instantjobs/g/a/DefaultSerializersProvider;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/instantjobs/g/a/a;->a(Ljava/lang/Class;Lcom/vk/instantjobs/c;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/instantjobs/g/a/DefaultSerializersProvider;->a(Ljava/lang/Class;Lcom/vk/instantjobs/InstantJobSerializer;)V
 
     return-void
 .end method
@@ -1268,23 +1268,23 @@
     .line 16
     iget-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->o:Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;
 
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->d:Lcom/vk/instantjobs/utils/f;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->d:Lcom/vk/instantjobs/utils/LoggerController;
 
-    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/InstantJobLogger;)V
 
     .line 17
     iget-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->o:Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;
 
     iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->e:Lcom/vk/instantjobs/impl/InstantJobManagerImpl$a;
 
-    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/a$a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/components/appstate/DefaultAppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppStateDetector$a;)V
 
     .line 18
     new-instance p1, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$start$1;
 
     invoke-direct {p1, p0, p2}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$start$1;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;)V
 
-    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/a;)Ljava/util/concurrent/Future;
+    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Future;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1324,14 +1324,14 @@
     throw p1
 .end method
 
-.method public final declared-synchronized a(Ljava/lang/String;Ljava/lang/Throwable;Lkotlin/jvm/b/b;)V
+.method public final declared-synchronized a(Ljava/lang/String;Ljava/lang/Throwable;Lkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Ljava/lang/Throwable;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/instantjobs/InstantJob;",
             "Ljava/lang/Boolean;",
@@ -1348,9 +1348,9 @@
     .line 26
     new-instance v0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$cancel$1;
 
-    invoke-direct {v0, p0, p2, p1, p3}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$cancel$1;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p0, p2, p1, p3}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$cancel$1;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/a;)Ljava/util/concurrent/Future;
+    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Future;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1376,14 +1376,14 @@
     return-object v0
 .end method
 
-.method public final b(Ljava/lang/String;Ljava/lang/Throwable;Lkotlin/jvm/b/b;)V
+.method public final b(Ljava/lang/String;Ljava/lang/Throwable;Lkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Ljava/lang/Throwable;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/instantjobs/InstantJob;",
             "Ljava/lang/Boolean;",
@@ -1401,9 +1401,9 @@
     .line 6
     new-instance v0, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$cancelAndAwait$$inlined$synchronized$lambda$1;
 
-    invoke-direct {v0, p0, p2, p1, p3}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$cancelAndAwait$$inlined$synchronized$lambda$1;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p0, p2, p1, p3}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl$cancelAndAwait$$inlined$synchronized$lambda$1;-><init>(Lcom/vk/instantjobs/impl/InstantJobManagerImpl;Ljava/lang/Throwable;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/a;)Ljava/util/concurrent/Future;
+    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobManagerImpl;->a(Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Future;
 
     move-result-object p1
     :try_end_0
@@ -1419,7 +1419,7 @@
 
     const-string p2, "future.get()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Ljava/lang/Iterable;
 

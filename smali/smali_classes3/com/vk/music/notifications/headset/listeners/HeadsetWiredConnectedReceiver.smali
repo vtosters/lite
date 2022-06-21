@@ -14,7 +14,7 @@
 # instance fields
 .field private final a:Ljava/lang/String;
 
-.field private final b:Lcom/vk/music/common/b;
+.field private final b:Lcom/vk/music/common/HeadsetConnectionStateChangedListener;
 
 
 # direct methods
@@ -25,18 +25,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/notifications/headset/listeners/HeadsetWiredConnectedReceiver$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/notifications/headset/listeners/HeadsetWiredConnectedReceiver$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/music/common/b;)V
+.method public constructor <init>(Lcom/vk/music/common/HeadsetConnectionStateChangedListener;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/vk/music/notifications/headset/listeners/HeadsetBaseReceiver;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/notifications/headset/listeners/HeadsetWiredConnectedReceiver;->b:Lcom/vk/music/common/b;
+    iput-object p1, p0, Lcom/vk/music/notifications/headset/listeners/HeadsetWiredConnectedReceiver;->b:Lcom/vk/music/common/HeadsetConnectionStateChangedListener;
 
     const-string p1, "android.intent.action.HEADSET_PLUG"
 
@@ -81,7 +81,7 @@
     move-result p2
 
     .line 4
-    iget-object v0, p0, Lcom/vk/music/notifications/headset/listeners/HeadsetWiredConnectedReceiver;->b:Lcom/vk/music/common/b;
+    iget-object v0, p0, Lcom/vk/music/notifications/headset/listeners/HeadsetWiredConnectedReceiver;->b:Lcom/vk/music/common/HeadsetConnectionStateChangedListener;
 
     if-eqz p2, :cond_0
 
@@ -91,7 +91,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-interface {v0, p1}, Lcom/vk/music/common/b;->a(Z)V
+    invoke-interface {v0, p1}, Lcom/vk/music/common/HeadsetConnectionStateChangedListener;->a(Z)V
 
     return-void
 .end method

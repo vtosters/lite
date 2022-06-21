@@ -3,12 +3,12 @@
 .source "ScopesController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/webapp/ScopesController;->a(Landroid/app/Activity;Ljava/util/List;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/webapp/ScopesController;->a(Landroid/app/Activity;Ljava/util/List;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/Map<",
         "Ljava/lang/String;",
         "+",
@@ -37,24 +37,24 @@
 
 .field final synthetic b:Ljava/lang/ref/WeakReference;
 
-.field final synthetic c:Lkotlin/jvm/b/b;
+.field final synthetic c:Lkotlin/jvm/b/Functions2;
 
-.field final synthetic d:Lkotlin/jvm/b/a;
+.field final synthetic d:Lkotlin/jvm/b/Functions;
 
 .field final synthetic e:Ljava/util/List;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/webapp/ScopesController;Ljava/lang/ref/WeakReference;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Ljava/util/List;)V
+.method constructor <init>(Lcom/vk/webapp/ScopesController;Ljava/lang/ref/WeakReference;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Ljava/util/List;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/webapp/ScopesController$e;->a:Lcom/vk/webapp/ScopesController;
 
     iput-object p2, p0, Lcom/vk/webapp/ScopesController$e;->b:Ljava/lang/ref/WeakReference;
 
-    iput-object p3, p0, Lcom/vk/webapp/ScopesController$e;->c:Lkotlin/jvm/b/b;
+    iput-object p3, p0, Lcom/vk/webapp/ScopesController$e;->c:Lkotlin/jvm/b/Functions2;
 
-    iput-object p4, p0, Lcom/vk/webapp/ScopesController$e;->d:Lkotlin/jvm/b/a;
+    iput-object p4, p0, Lcom/vk/webapp/ScopesController$e;->d:Lkotlin/jvm/b/Functions;
 
     iput-object p5, p0, Lcom/vk/webapp/ScopesController$e;->e:Ljava/util/List;
 
@@ -88,11 +88,11 @@
 
     iget-object v1, p0, Lcom/vk/webapp/ScopesController$e;->a:Lcom/vk/webapp/ScopesController;
 
-    invoke-virtual {v1}, Lcom/vk/webapp/ScopesController;->a()Lcom/vk/webapp/internal/data/d;
+    invoke-virtual {v1}, Lcom/vk/webapp/ScopesController;->a()Lcom/vk/webapp/internal/data/ScopeType2;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/webapp/internal/data/d;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/webapp/internal/data/ScopeType2;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -113,11 +113,11 @@
 
     iget-object v1, p0, Lcom/vk/webapp/ScopesController$e;->a:Lcom/vk/webapp/ScopesController;
 
-    invoke-virtual {v1}, Lcom/vk/webapp/ScopesController;->a()Lcom/vk/webapp/internal/data/d;
+    invoke-virtual {v1}, Lcom/vk/webapp/ScopesController;->a()Lcom/vk/webapp/internal/data/ScopeType2;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/webapp/internal/data/d;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/webapp/internal/data/ScopeType2;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -151,11 +151,11 @@
 
     iget-object v2, p0, Lcom/vk/webapp/ScopesController$e;->a:Lcom/vk/webapp/ScopesController;
 
-    invoke-virtual {v2}, Lcom/vk/webapp/ScopesController;->a()Lcom/vk/webapp/internal/data/d;
+    invoke-virtual {v2}, Lcom/vk/webapp/ScopesController;->a()Lcom/vk/webapp/internal/data/ScopeType2;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/webapp/internal/data/d;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/webapp/internal/data/ScopeType2;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -170,22 +170,22 @@
     check-cast v2, Ljava/util/Map;
 
     .line 6
-    iget-object v3, p0, Lcom/vk/webapp/ScopesController$e;->c:Lkotlin/jvm/b/b;
+    iget-object v3, p0, Lcom/vk/webapp/ScopesController$e;->c:Lkotlin/jvm/b/Functions2;
 
     .line 7
-    iget-object v4, p0, Lcom/vk/webapp/ScopesController$e;->d:Lkotlin/jvm/b/a;
+    iget-object v4, p0, Lcom/vk/webapp/ScopesController$e;->d:Lkotlin/jvm/b/Functions;
 
     .line 8
     iget-object v5, p0, Lcom/vk/webapp/ScopesController$e;->e:Ljava/util/List;
 
     .line 9
-    invoke-static/range {v0 .. v5}, Lcom/vk/webapp/ScopesController;->a(Lcom/vk/webapp/ScopesController;Landroid/app/Activity;Ljava/util/Map;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Ljava/util/List;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/webapp/ScopesController;->a(Lcom/vk/webapp/ScopesController;Landroid/app/Activity;Ljava/util/Map;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Ljava/util/List;)V
 
     goto :goto_0
 
     .line 10
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

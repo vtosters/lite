@@ -3,7 +3,7 @@
 .source "ReefFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/reef/c;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/reef/ReefStateSource;",
         "Ljava/lang/String;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/reef/c;)Ljava/lang/String;
+.method public final a(Lcom/vk/reef/ReefStateSource;)Ljava/lang/String;
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lcom/vk/core/extensions/k;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/extensions/GeneralFunctions;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/reef/c;
+    check-cast p1, Lcom/vk/reef/ReefStateSource;
 
-    invoke-virtual {p0, p1}, Lcom/vk/reef/ReefFactory$build$1$1;->a(Lcom/vk/reef/c;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/vk/reef/ReefFactory$build$1$1;->a(Lcom/vk/reef/ReefStateSource;)Ljava/lang/String;
 
     move-result-object p1
 

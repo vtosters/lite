@@ -3,7 +3,7 @@
 .source "StickersKeyboardNavigationAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder$1;->this$0:Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;
 
-    invoke-static {p1}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;->a(Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;)Lcom/vk/stickers/e0/d;
+    invoke-static {p1}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;->a(Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;)Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/d;->e()I
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->e()I
 
     move-result p1
 
@@ -73,11 +73,11 @@
 
     iget-object v0, p0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder$1;->this$0:Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;
 
-    invoke-static {v0}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;->a(Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;)Lcom/vk/stickers/e0/d;
+    invoke-static {v0}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;->a(Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;)Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stickers/e0/d;->e()I
+    invoke-virtual {v0}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->e()I
 
     move-result v0
 
@@ -103,7 +103,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

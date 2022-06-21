@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 .field private final b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -16,11 +16,11 @@
     .end annotation
 .end field
 
-.field private final c:Lkotlin/jvm/b/a;
+.field private final c:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -28,7 +28,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Ljava/util/List;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -37,8 +37,8 @@
             "+",
             "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
             "*>;>;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -48,7 +48,7 @@
 
     iput-object p1, p0, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->b:Ljava/util/List;
 
-    iput-object p2, p0, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->c:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->c:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -83,42 +83,42 @@
     check-cast v0, [Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     .line 3
-    invoke-static {v0}, Lcom/vk/lists/p;->a([Landroidx/recyclerview/widget/RecyclerView$Adapter;)Lcom/vk/lists/p;
+    invoke-static {v0}, Lcom/vk/lists/MergedAdapter;->a([Landroidx/recyclerview/widget/RecyclerView$Adapter;)Lcom/vk/lists/MergedAdapter;
 
     move-result-object v0
 
     .line 4
-    new-instance v2, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v2, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     const-string p1, "adapter"
 
     .line 5
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
-    invoke-virtual {v2, v0, p1, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZ)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v2, v0, p1, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;ZZ)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 6
     sget-object p1, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer$show$1$1;->a:Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer$show$1$1;
 
-    invoke-virtual {v2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 7
     new-instance p1, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer$a;
 
     invoke-direct {p1, p0}, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer$a;-><init>(Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;)V
 
-    invoke-virtual {v2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 8
-    invoke-virtual {v2, p2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {v2, p2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->a:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object p1, p0, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-object p0
 
@@ -137,34 +137,34 @@
     .locals 1
 
     .line 10
-    iget-object v0, p0, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->a:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object v0, p0, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->dismissAllowingStateLoss()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismissAllowingStateLoss()V
 
     .line 11
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->c:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->c:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final b()Lkotlin/jvm/b/a;
+.method public final b()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->c:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/music/bottomsheets/MusicBottomSheetDisplayer;->c:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method

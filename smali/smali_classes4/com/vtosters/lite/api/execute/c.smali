@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # static fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Lcom/vk/dto/user/UserProfile;
 
-    invoke-static {p1}, Lcom/vtosters/lite/api/execute/f;->a(Lcom/vk/dto/user/UserProfile;)Ljava/lang/Integer;
+    invoke-static {p1}, Lcom/vtosters/lite/api/execute/GetFullCommunity;->a(Lcom/vk/dto/user/UserProfile;)Ljava/lang/Integer;
 
     move-result-object p1
 

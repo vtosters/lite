@@ -61,7 +61,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -70,7 +70,7 @@
     if-eqz v1, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->a()Lkotlin/jvm/b/c;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;->a()Lkotlin/jvm/b/Functions1;
 
     move-result-object v1
 
@@ -78,17 +78,17 @@
 
     move-result-object p1
 
-    invoke-interface {v1, p1, v0}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, p1, v0}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 4
     :cond_0
     iget-object p1, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$b;->a:Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->c(Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;)Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-static {p1}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;->c(Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
 
     :cond_1
     return-void

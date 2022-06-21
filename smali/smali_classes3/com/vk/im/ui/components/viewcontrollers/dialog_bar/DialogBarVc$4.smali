@@ -3,7 +3,7 @@
 .source "DialogBarVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/models/dialogs/ConversationBar$Button;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -80,7 +80,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$4;->this$0:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
 
     sget-object v1, Lcom/vk/im/engine/models/dialogs/ConversationBar$ButtonType;->GIFTS_LINK:Lcom/vk/im/engine/models/dialogs/ConversationBar$ButtonType;
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;->a(Ljava/lang/String;Lcom/vk/im/engine/models/dialogs/ConversationBar$ButtonType;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;->a(Ljava/lang/String;Lcom/vk/im/engine/models/dialogs/ConversationBar$ButtonType;)V
 
     goto :goto_0
 
@@ -100,7 +100,7 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$4;->this$0:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;
 
     move-result-object v0
 
@@ -110,7 +110,7 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;->a(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -118,7 +118,7 @@
     :cond_2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$4;->this$0:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->d()Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;
 
     move-result-object v0
 
@@ -130,7 +130,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, p1, v1, v2, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b$a;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;Ljava/lang/String;Lcom/vk/im/engine/models/dialogs/ConversationBar$ButtonType;ILjava/lang/Object;)V
+    invoke-static {v0, p1, v1, v2, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback$a;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;Ljava/lang/String;Lcom/vk/im/engine/models/dialogs/ConversationBar$ButtonType;ILjava/lang/Object;)V
 
     :cond_3
     :goto_0
@@ -145,7 +145,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$4;->a(Lcom/vk/im/engine/models/dialogs/ConversationBar$Button;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

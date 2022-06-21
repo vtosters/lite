@@ -32,13 +32,13 @@
     if-eqz p1, :cond_0
 
     .line 6
-    check-cast p1, Lcom/vk/common/widget/d;
+    check-cast p1, Lcom/vk/common/widget/HeaderHolder;
 
     invoke-virtual {p0}, Lcom/vk/notifications/NotificationsAdapter$c;->d()Ljava/lang/Integer;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/common/widget/d;->a(Ljava/lang/Integer;)V
+    invoke-virtual {p1, p2}, Lcom/vk/common/widget/HeaderHolder;->a(Ljava/lang/Integer;)V
 
     return-void
 

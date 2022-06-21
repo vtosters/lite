@@ -3,8 +3,8 @@
 .source "StoryGeoStickerDelegate.kt"
 
 # interfaces
-.implements Lcom/vk/stories/clickable/l/a/e/a$b;
-.implements Lpub/devrel/easypermissions/b$a;
+.implements Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView$b;
+.implements Lpub/devrel/easypermissions/EasyPermissions$a;
 .implements Landroidx/core/app/ActivityCompat$OnRequestPermissionsResultCallback;
 
 
@@ -13,19 +13,19 @@
 
 .field private final b:Lcom/vk/permission/RequiredPermissionHelper;
 
-.field private c:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private c:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 .field private final d:Landroid/app/Activity;
 
 .field private final e:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
-.field private final f:Lcom/vk/stories/editor/base/e0;
+.field private final f:Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;
 
 .field private final g:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;Lcom/vk/stories/editor/base/e0;Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;)V
     .locals 11
 
     .line 1
@@ -35,7 +35,7 @@
 
     iput-object p2, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->e:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
-    iput-object p3, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->f:Lcom/vk/stories/editor/base/e0;
+    iput-object p3, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->f:Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;
 
     iput-object p4, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->g:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
@@ -84,7 +84,7 @@
     const/4 v10, 0x1
 
     .line 8
-    invoke-virtual/range {v0 .. v10}, Lcom/vk/permission/RequiredPermissionHelper$a;->b(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/a;Z)Lcom/vk/permission/RequiredPermissionHelper;
+    invoke-virtual/range {v0 .. v10}, Lcom/vk/permission/RequiredPermissionHelper$a;->b(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)Lcom/vk/permission/RequiredPermissionHelper;
 
     move-result-object p1
 
@@ -93,20 +93,20 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;)Lcom/vk/core/dialogs/bottomsheet/e;
+.method public static final synthetic a(Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->c:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object p0, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->c:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/dto/geo/GeoLocation;Lcom/vk/stories/clickable/models/geo/d;)Lcom/vk/stories/clickable/models/geo/d;
+.method private final a(Lcom/vk/dto/geo/GeoLocation;Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;)Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;
     .locals 4
 
     .line 20
-    sget-object v0, Lcom/vk/stories/clickable/models/geo/d;->q:Lcom/vk/stories/clickable/models/geo/d$a;
+    sget-object v0, Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;->q:Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo$a;
 
     invoke-virtual {p1}, Lcom/vk/dto/geo/GeoLocation;->getTitle()Ljava/lang/String;
 
@@ -118,7 +118,7 @@
 
     const-string v3, "Locale.US"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v1, :cond_1
 
@@ -128,11 +128,11 @@
 
     const-string v2, "(this as java.lang.String).toUpperCase(locale)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/stories/clickable/models/geo/d;->k()Lcom/vk/stories/clickable/models/geo/GeoStickerStyle;
+    invoke-virtual {p2}, Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;->k()Lcom/vk/stories/clickable/models/geo/GeoStickerStyle;
 
     move-result-object p2
 
@@ -162,7 +162,7 @@
     move-result-object p1
 
     .line 22
-    invoke-virtual {v0, v1, p2, v2, p1}, Lcom/vk/stories/clickable/models/geo/d$a;->a(Ljava/lang/String;Lcom/vk/stories/clickable/models/geo/GeoStickerStyle;ILjava/lang/Integer;)Lcom/vk/stories/clickable/models/geo/d;
+    invoke-virtual {v0, v1, p2, v2, p1}, Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo$a;->a(Ljava/lang/String;Lcom/vk/stories/clickable/models/geo/GeoStickerStyle;ILjava/lang/Integer;)Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;
 
     move-result-object p1
 
@@ -178,14 +178,14 @@
     throw p1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method static synthetic a(Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;Lcom/vk/dto/geo/GeoLocation;Lcom/vk/stories/clickable/models/geo/d;ILjava/lang/Object;)Lcom/vk/stories/clickable/models/geo/d;
+.method static synthetic a(Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;Lcom/vk/dto/geo/GeoLocation;Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;ILjava/lang/Object;)Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -196,7 +196,7 @@
 
     .line 19
     :cond_0
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->a(Lcom/vk/dto/geo/GeoLocation;Lcom/vk/stories/clickable/models/geo/d;)Lcom/vk/stories/clickable/models/geo/d;
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->a(Lcom/vk/dto/geo/GeoLocation;Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;)Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;
 
     move-result-object p0
 
@@ -216,75 +216,75 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/stories/clickable/l/a/e/a;
+    new-instance v0, Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->d:Landroid/app/Activity;
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/stories/clickable/l/a/e/a;-><init>(Landroid/content/Context;Landroid/location/Location;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;-><init>(Landroid/content/Context;Landroid/location/Location;)V
 
     .line 3
-    invoke-virtual {v0, p0}, Lcom/vk/stories/clickable/l/a/e/a;->setCallback(Lcom/vk/stories/clickable/l/a/e/a$b;)V
+    invoke-virtual {v0, p0}, Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;->setCallback(Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView$b;)V
 
     .line 4
-    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->d:Landroid/app/Activity;
 
-    invoke-direct {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     const v1, 0x7f120ecd
 
     .line 5
-    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 6
     new-instance v1, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$b;
 
-    invoke-direct {v1, v0}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$b;-><init>(Lcom/vk/stories/clickable/l/a/e/a;)V
+    invoke-direct {v1, v0}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$b;-><init>(Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;)V
 
-    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior$c;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior$c;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 7
     new-instance v1, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$c;
 
     invoke-direct {v1, p0}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$c;-><init>(Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;)V
 
-    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 8
     new-instance v1, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$d;
 
-    invoke-direct {v1, v0}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$d;-><init>(Lcom/vk/stories/clickable/l/a/e/a;)V
+    invoke-direct {v1, v0}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$d;-><init>(Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;)V
 
-    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 9
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 10
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/j;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy4;
 
     const v1, 0x3f59999a    # 0.85f
 
-    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/j;-><init>(F)V
+    invoke-direct {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy4;-><init>(F)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v0, 0x0
 
     .line 11
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->h(Z)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->h(Z)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     .line 12
-    invoke-static {p1, v0, v1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {p1, v0, v1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->c:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->c:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method
@@ -320,7 +320,7 @@
     invoke-direct {v3, p0}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$askToEnableLocation$2;-><init>(Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;)V
 
     .line 5
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/location/LocationUtils;->a(Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/location/LocationUtils;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -407,17 +407,17 @@
     .locals 4
 
     .line 7
-    iget-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->c:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->c:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 8
-    iput-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->c:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->c:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     .line 9
     iget-object v1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->e:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
@@ -444,14 +444,14 @@
     check-cast v2, Lcom/vk/attachpicker/stickers/ISticker;
 
     .line 10
-    instance-of v3, v2, Lcom/vk/stories/clickable/stickers/a;
+    instance-of v3, v2, Lcom/vk/stories/clickable/stickers/StoryGeoSticker;
 
     if-eqz v3, :cond_1
 
     .line 11
     move-object v1, v2
 
-    check-cast v1, Lcom/vk/stories/clickable/stickers/a;
+    check-cast v1, Lcom/vk/stories/clickable/stickers/StoryGeoSticker;
 
     goto :goto_0
 
@@ -462,15 +462,15 @@
     if-nez v1, :cond_3
 
     .line 12
-    new-instance v1, Lcom/vk/stories/clickable/stickers/a;
+    new-instance v1, Lcom/vk/stories/clickable/stickers/StoryGeoSticker;
 
     const/4 v2, 0x2
 
-    invoke-static {p0, p1, v0, v2, v0}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->a(Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;Lcom/vk/dto/geo/GeoLocation;Lcom/vk/stories/clickable/models/geo/d;ILjava/lang/Object;)Lcom/vk/stories/clickable/models/geo/d;
+    invoke-static {p0, p1, v0, v2, v0}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->a(Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;Lcom/vk/dto/geo/GeoLocation;Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;ILjava/lang/Object;)Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;
 
     move-result-object p1
 
-    invoke-direct {v1, p1}, Lcom/vk/stories/clickable/stickers/a;-><init>(Lcom/vk/stories/clickable/models/geo/d;)V
+    invoke-direct {v1, p1}, Lcom/vk/stories/clickable/stickers/StoryGeoSticker;-><init>(Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;)V
 
     .line 13
     iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->e:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
@@ -481,15 +481,15 @@
 
     .line 14
     :cond_3
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/stickers/a;->o()Lcom/vk/stories/clickable/models/geo/d;
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/stickers/StoryGeoSticker;->o()Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;
 
     move-result-object v0
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->a(Lcom/vk/dto/geo/GeoLocation;Lcom/vk/stories/clickable/models/geo/d;)Lcom/vk/stories/clickable/models/geo/d;
+    invoke-direct {p0, p1, v0}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->a(Lcom/vk/dto/geo/GeoLocation;Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;)Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/vk/stories/clickable/stickers/a;->a(Lcom/vk/stories/clickable/models/geo/d;)V
+    invoke-virtual {v1, p1}, Lcom/vk/stories/clickable/stickers/StoryGeoSticker;->a(Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;)V
 
     .line 15
     iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->e:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
@@ -498,9 +498,9 @@
 
     .line 16
     :goto_1
-    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->f:Lcom/vk/stories/editor/base/e0;
+    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->f:Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;
 
-    invoke-virtual {p1}, Lcom/vk/stories/editor/base/e0;->p()V
+    invoke-virtual {p1}, Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;->p()V
 
     .line 17
     iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->g:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;

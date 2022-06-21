@@ -3,7 +3,7 @@
 .source "VKApplication.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/im/engine/events/b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/im/engine/events/LongPollEvent;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/b;)V
+.method public final a(Lcom/vk/im/engine/events/LongPollEvent;)V
     .locals 3
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/events/b;->e()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/im/engine/events/LongPollEvent;->e()Ljava/util/List;
 
     move-result-object p1
 
@@ -80,21 +80,21 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/models/x/t;
+    check-cast v0, Lcom/vk/im/engine/models/x/LpEvent;
 
     .line 2
-    instance-of v1, v0, Lcom/vk/im/engine/models/x/l0;
+    instance-of v1, v0, Lcom/vk/im/engine/models/x/VoipSignalingEvent;
 
     if-eqz v1, :cond_0
 
     .line 3
     sget-object v1, Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper;->b:Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v2
 
@@ -107,9 +107,9 @@
     .line 4
     sget-object v1, Lcom/vk/voip/VoipWrapper;->j0:Lcom/vk/voip/VoipWrapper;
 
-    check-cast v0, Lcom/vk/im/engine/models/x/l0;
+    check-cast v0, Lcom/vk/im/engine/models/x/VoipSignalingEvent;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/x/l0;->a()Lorg/json/JSONObject;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/x/VoipSignalingEvent;->a()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -127,9 +127,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/b;
+    check-cast p1, Lcom/vk/im/engine/events/LongPollEvent;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/VKApplication$h$b;->a(Lcom/vk/im/engine/events/b;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/VKApplication$h$b;->a(Lcom/vk/im/engine/events/LongPollEvent;)V
 
     return-void
 .end method

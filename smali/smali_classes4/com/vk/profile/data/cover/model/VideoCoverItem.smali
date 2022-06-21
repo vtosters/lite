@@ -3,7 +3,7 @@
 .source "VideoCoverItem.kt"
 
 # interfaces
-.implements Lcom/vk/mediastore/a/c$c;
+.implements Lcom/vk/mediastore/a/VideoCache$c;
 
 
 # annotations
@@ -25,7 +25,7 @@
 
 .field private k:Z
 
-.field private final l:Lcom/vk/core/util/b0;
+.field private final l:Lcom/vk/core/util/ElapsedTimeCounter;
 
 .field private m:Z
 
@@ -35,7 +35,7 @@
 
 .field private p:F
 
-.field private final q:Lcom/vk/media/player/i;
+.field private final q:Lcom/vk/media/player/StateListener;
 
 
 # direct methods
@@ -46,7 +46,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/data/cover/model/VideoCoverItem$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/data/cover/model/VideoCoverItem$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Ljava/lang/Object;
@@ -70,34 +70,34 @@
     iput-wide p1, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->i:J
 
     .line 3
-    new-instance p1, Lcom/vk/core/util/b0;
+    new-instance p1, Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-direct {p1}, Lcom/vk/core/util/b0;-><init>()V
+    invoke-direct {p1}, Lcom/vk/core/util/ElapsedTimeCounter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->l:Lcom/vk/core/util/b0;
+    iput-object p1, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->l:Lcom/vk/core/util/ElapsedTimeCounter;
 
     .line 4
     new-instance p1, Lcom/vk/profile/data/cover/model/VideoCoverItem$b;
 
     invoke-direct {p1, p0}, Lcom/vk/profile/data/cover/model/VideoCoverItem$b;-><init>(Lcom/vk/profile/data/cover/model/VideoCoverItem;)V
 
-    iput-object p1, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->q:Lcom/vk/media/player/i;
+    iput-object p1, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->q:Lcom/vk/media/player/StateListener;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/data/cover/model/VideoCoverItem;Ljava/lang/String;)Lcom/vk/media/player/video/e;
+.method public static final synthetic a(Lcom/vk/profile/data/cover/model/VideoCoverItem;Ljava/lang/String;)Lcom/vk/media/player/video/ExoVideoSource2;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->a(Ljava/lang/String;)Lcom/vk/media/player/video/e;
+    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->a(Ljava/lang/String;)Lcom/vk/media/player/video/ExoVideoSource2;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Ljava/lang/String;)Lcom/vk/media/player/video/e;
+.method private final a(Ljava/lang/String;)Lcom/vk/media/player/video/ExoVideoSource2;
     .locals 12
 
     .line 9
@@ -111,7 +111,7 @@
 
     const-string v0, "entry.video!!"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -131,25 +131,25 @@
 
     move-object v2, p1
 
-    invoke-static/range {v1 .. v11}, Lcom/vk/libvideo/t;->a(Lcom/vk/dto/common/VideoFile;Ljava/lang/String;IZZZLjava/lang/String;JILjava/lang/Object;)Lcom/vk/media/player/video/e;
+    invoke-static/range {v1 .. v11}, Lcom/vk/libvideo/VideoUtils;->a(Lcom/vk/dto/common/VideoFile;Ljava/lang/String;IZZZLjava/lang/String;JILjava/lang/Object;)Lcom/vk/media/player/video/ExoVideoSource2;
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/data/cover/model/VideoCoverItem;Lcom/vk/profile/ui/cover/c;)V
+.method public static final synthetic a(Lcom/vk/profile/data/cover/model/VideoCoverItem;Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->d(Lcom/vk/profile/ui/cover/c;)V
+    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->d(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     return-void
 .end method
@@ -181,11 +181,11 @@
     return-void
 .end method
 
-.method private final d(Lcom/vk/profile/ui/cover/c;)V
+.method private final d(Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 3
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getVideoTextureView()Lcom/vk/media/player/video/view/VideoTextureView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getVideoTextureView()Lcom/vk/media/player/video/view/VideoTextureView;
 
     move-result-object v0
 
@@ -208,7 +208,7 @@
     iput-boolean v2, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->o:Z
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getVideoTextureView()Lcom/vk/media/player/video/view/VideoTextureView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getVideoTextureView()Lcom/vk/media/player/video/view/VideoTextureView;
 
     move-result-object p1
 
@@ -323,7 +323,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/profile/data/cover/model/VideoCoverItem$load$1;-><init>(Lcom/vk/profile/data/cover/model/VideoCoverItem;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->a(Ljava/lang/String;Lkotlin/jvm/b/c;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions1;)V
 
     return-void
 .end method
@@ -359,18 +359,18 @@
 
     const/4 v2, -0x1
 
-    invoke-static {v1, v2}, Lcom/vk/libvideo/t;->a(Lcom/vk/dto/common/VideoFile;I)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/vk/libvideo/VideoUtils;->a(Lcom/vk/dto/common/VideoFile;I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->a(Ljava/lang/String;)Lcom/vk/media/player/video/e;
+    invoke-direct {p0, v1}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->a(Ljava/lang/String;)Lcom/vk/media/player/video/ExoVideoSource2;
 
     move-result-object v1
 
     .line 4
-    sget-object v2, Lcom/vk/media/player/c;->e:Lcom/vk/media/player/c;
+    sget-object v2, Lcom/vk/media/player/PlayerFactory;->e:Lcom/vk/media/player/PlayerFactory;
 
-    invoke-virtual {v2, v1}, Lcom/vk/media/player/c;->a(Lcom/vk/media/player/video/b;)Lcom/vk/media/player/ExoPlayerBase;
+    invoke-virtual {v2, v1}, Lcom/vk/media/player/PlayerFactory;->a(Lcom/vk/media/player/video/ExoVideoSource1;)Lcom/vk/media/player/ExoPlayerBase;
 
     move-result-object v1
 
@@ -381,13 +381,13 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v2, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->q:Lcom/vk/media/player/i;
+    iget-object v2, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->q:Lcom/vk/media/player/StateListener;
 
-    invoke-virtual {v1, v2}, Lcom/vk/media/player/ExoPlayerBase;->a(Lcom/vk/media/player/i;)V
+    invoke-virtual {v1, v2}, Lcom/vk/media/player/ExoPlayerBase;->a(Lcom/vk/media/player/StateListener;)V
 
     .line 6
     :cond_1
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -406,7 +406,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/profile/ui/cover/c;)V
+.method public a(Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 1
 
     .line 5
@@ -436,13 +436,13 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/profile/ui/cover/c;
+    check-cast p1, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz p1, :cond_1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/c;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/CoverViewItem;->a(Z)V
 
     :cond_1
     return-void
@@ -460,11 +460,11 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->k()Lcom/vk/profile/data/cover/model/a;
+    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->k()Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/a;->a()V
+    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;->a()V
 
     :cond_0
     return-void
@@ -514,9 +514,9 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 14
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->l:Lcom/vk/core/util/b0;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->l:Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/b0;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/util/ElapsedTimeCounter;->b()V
 
     const/4 v0, 0x0
 
@@ -534,11 +534,11 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/profile/ui/cover/c;
+    check-cast v1, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/c;->getForgegroundView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getForgegroundView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v1
 
@@ -558,11 +558,11 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/profile/ui/cover/c;
+    check-cast v1, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v1
 
@@ -591,7 +591,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/profile/ui/cover/c;)V
+.method public b(Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 3
 
     .line 2
@@ -651,15 +651,15 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->k()Lcom/vk/profile/data/cover/model/a;
+    invoke-virtual {v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->k()Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;
 
     move-result-object v1
 
     const-string v2, "it"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Lcom/vk/profile/data/cover/model/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;->a(Ljava/lang/String;)V
 
     .line 5
     :cond_0
@@ -672,7 +672,7 @@
     const/4 v0, 0x0
 
     .line 6
-    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/c;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/CoverViewItem;->a(Z)V
 
     goto :goto_0
 
@@ -680,7 +680,7 @@
     const/4 v0, 0x1
 
     .line 7
-    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/c;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/CoverViewItem;->a(Z)V
 
     .line 8
     :goto_0
@@ -723,14 +723,14 @@
 
     .line 9
     :goto_1
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lcom/vk/imageloader/view/VKImageView;->a(Ljava/lang/String;)V
 
     .line 10
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getForgegroundView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getForgegroundView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object p1
 
@@ -781,11 +781,11 @@
     return v0
 .end method
 
-.method public c(Lcom/vk/profile/ui/cover/c;)V
+.method public c(Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 4
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->c(Lcom/vk/profile/ui/cover/c;)V
+    invoke-super {p0, p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->c(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     .line 3
     new-instance v0, Ljava/lang/StringBuilder;
@@ -806,7 +806,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getVideoTextureView()Lcom/vk/media/player/video/view/VideoTextureView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getVideoTextureView()Lcom/vk/media/player/video/view/VideoTextureView;
 
     move-result-object v1
 
@@ -815,7 +815,7 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getVideoTextureView()Lcom/vk/media/player/video/view/VideoTextureView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getVideoTextureView()Lcom/vk/media/player/video/view/VideoTextureView;
 
     move-result-object v0
 
@@ -866,7 +866,7 @@
 
     .line 7
     :cond_2
-    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->d(Lcom/vk/profile/ui/cover/c;)V
+    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->d(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     .line 8
     :cond_3
@@ -876,7 +876,7 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/c;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/CoverViewItem;->a(Z)V
 
     .line 9
     iget-boolean v0, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->k:Z
@@ -902,7 +902,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/profile/data/cover/model/VideoCoverItem$setView$2;-><init>(Lcom/vk/profile/data/cover/model/VideoCoverItem;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/c;->setOnRetry(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/CoverViewItem;->setOnRetry(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -945,12 +945,12 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/profile/ui/cover/c;
+    check-cast v2, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz v2, :cond_2
 
     .line 5
-    invoke-virtual {v2}, Lcom/vk/profile/ui/cover/c;->getForgegroundView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {v2}, Lcom/vk/profile/ui/cover/CoverViewItem;->getForgegroundView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v2
 
@@ -1065,9 +1065,9 @@
 
     .line 14
     :cond_6
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->l:Lcom/vk/core/util/b0;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->l:Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/b0;->a()J
+    invoke-virtual {v0}, Lcom/vk/core/util/ElapsedTimeCounter;->a()J
 
     move-result-wide v2
 
@@ -1088,17 +1088,17 @@
     if-lez v2, :cond_8
 
     .line 15
-    invoke-virtual {p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->f()Lkotlin/jvm/b/a;
+    invoke-virtual {p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->f()Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_7
     const/high16 v0, 0x3f800000    # 1.0f
@@ -1142,9 +1142,9 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->l:Lcom/vk/core/util/b0;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->l:Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/b0;->d()V
+    invoke-virtual {v0}, Lcom/vk/core/util/ElapsedTimeCounter;->d()V
 
     .line 4
     iget-object v0, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->j:Lcom/vk/media/player/ExoPlayerBase;
@@ -1201,7 +1201,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/profile/ui/cover/c;
+    check-cast v1, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz v1, :cond_2
 
@@ -1226,21 +1226,21 @@
     const-string v2, "view"
 
     .line 8
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v1}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->d(Lcom/vk/profile/ui/cover/c;)V
+    invoke-direct {p0, v1}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->d(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     :goto_0
     const/4 v2, 0x0
 
     .line 9
-    invoke-virtual {v1, v2}, Lcom/vk/profile/ui/cover/c;->a(Z)V
+    invoke-virtual {v1, v2}, Lcom/vk/profile/ui/cover/CoverViewItem;->a(Z)V
 
     goto :goto_1
 
     .line 10
     :cond_1
-    invoke-virtual {v1, v0}, Lcom/vk/profile/ui/cover/c;->a(Z)V
+    invoke-virtual {v1, v0}, Lcom/vk/profile/ui/cover/CoverViewItem;->a(Z)V
 
     .line 11
     :cond_2
@@ -1262,17 +1262,17 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/profile/ui/cover/c;
+    check-cast v1, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v1, v0}, Lcom/vk/profile/ui/cover/c;->a(Z)V
+    invoke-virtual {v1, v0}, Lcom/vk/profile/ui/cover/CoverViewItem;->a(Z)V
 
     .line 13
     :cond_3
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->l:Lcom/vk/core/util/b0;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem;->l:Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/b0;->c()V
+    invoke-virtual {v0}, Lcom/vk/core/util/ElapsedTimeCounter;->c()V
 
     :cond_4
     return-void
@@ -1320,7 +1320,7 @@
     invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->d()V
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/media/player/ExoPlayerBase;->a(Lcom/vk/media/player/i;)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/player/ExoPlayerBase;->a(Lcom/vk/media/player/StateListener;)V
 
     .line 6
     :cond_0
@@ -1347,7 +1347,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p0, v1}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b(Lcom/vk/mediastore/a/c$c;Ljava/lang/String;)V
+    invoke-virtual {v0, p0, v1}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->b(Lcom/vk/mediastore/a/VideoCache$c;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1384,15 +1384,15 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->k()Lcom/vk/profile/data/cover/model/a;
+    invoke-virtual {v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->k()Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;
 
     move-result-object v1
 
     const-string v2, "it"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Lcom/vk/profile/data/cover/model/a;->b(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;->b(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -1414,9 +1414,9 @@
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
+    sget-object v0, Lcom/vk/core/util/MediaLoadingInfo;->b:Lcom/vk/core/util/MediaLoadingInfo;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/p0;->d()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/MediaLoadingInfo;->d()Z
 
     move-result v0
 

@@ -3,7 +3,7 @@
 .source "ImEngineSyncService.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/synchelper/a;
+.implements Lcom/vk/im/engine/synchelper/SyncCmdHandler;
 
 
 # annotations
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private a:Lio/reactivex/disposables/b;
+.field private a:Lio/reactivex/disposables/Disposable;
 
 .field private b:Lcom/vk/im/engine/synchelper/SyncCmdReader;
 
@@ -136,11 +136,11 @@
     .locals 1
 
     .line 19
-    invoke-direct {p0}, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->c()Lcom/vk/im/engine/a;
+    invoke-direct {p0}, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->c()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/models/sync/ImBgSyncMode;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/models/sync/ImBgSyncMode;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -158,11 +158,11 @@
     .locals 1
 
     .line 20
-    invoke-direct {p0}, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->c()Lcom/vk/im/engine/a;
+    invoke-direct {p0}, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->c()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/ImEngine;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -171,24 +171,24 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->c()Lcom/vk/im/engine/a;
+    invoke-direct {p0}, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->c()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/a;->i()Z
+    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->i()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method private final c()Lcom/vk/im/engine/a;
+.method private final c()Lcom/vk/im/engine/ImEngine;
     .locals 1
 
     .line 1
     sget-object v0, Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;->l:Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;->b()Lcom/vk/im/engine/a;
+    invoke-virtual {v0}, Lcom/vk/im/engine/synchelper/ImEngineSyncHelper;->b()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
@@ -415,7 +415,7 @@
     .line 1
     new-instance p1, Lcom/vk/im/engine/synchelper/SyncCmdReader;
 
-    invoke-direct {p1, p0}, Lcom/vk/im/engine/synchelper/SyncCmdReader;-><init>(Lcom/vk/im/engine/synchelper/a;)V
+    invoke-direct {p1, p0}, Lcom/vk/im/engine/synchelper/SyncCmdReader;-><init>(Lcom/vk/im/engine/synchelper/SyncCmdHandler;)V
 
     iput-object p1, p0, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->b:Lcom/vk/im/engine/synchelper/SyncCmdReader;
 
@@ -431,7 +431,7 @@
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -445,27 +445,27 @@
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->c()Lcom/vk/im/engine/a;
+    invoke-direct {p0}, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->c()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/a;->j()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
     sget-object v1, Lcom/vk/im/engine/synchelper/ImEngineSyncService$b;->a:Lcom/vk/im/engine/synchelper/ImEngineSyncService$b;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -474,11 +474,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/engine/synchelper/ImEngineSyncService$c;-><init>(Lcom/vk/im/engine/synchelper/ImEngineSyncService;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->a:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->a:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -503,15 +503,15 @@
     iput-object v0, p0, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->b:Lcom/vk/im/engine/synchelper/SyncCmdReader;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->a:Lio/reactivex/disposables/b;
+    iget-object v1, p0, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->a:Lio/reactivex/disposables/Disposable;
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v1}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 5
     :cond_1
-    iput-object v0, p0, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->a:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->a:Lio/reactivex/disposables/Disposable;
 
     .line 6
     iget-object v0, p0, Lcom/vk/im/engine/synchelper/ImEngineSyncService;->c:Ljava/util/Map;

@@ -1,9 +1,9 @@
 .class public final Lcom/vk/profile/catalog/CommunitiesCatalogFragment;
-.super Lcom/vk/catalog2/core/x/b;
+.super Lcom/vk/catalog2/core/x/CatalogFragment;
 .source "CommunitiesCatalogFragment.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/util/g;
+.implements Lcom/vk/catalog2/core/util/CatalogOnClickListener;
 
 
 # annotations
@@ -15,24 +15,24 @@
 
 
 # instance fields
-.field private J:Lio/reactivex/disposables/b;
+.field private J:Lio/reactivex/disposables/Disposable;
 
 .field private K:Lcom/vk/profile/catalog/CommunitiesCatalogVh;
 
-.field private final L:Lkotlin/e;
+.field private final L:Lkotlin/Lazy2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/e<",
+            "Lkotlin/Lazy2<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final M:Lkotlin/e;
+.field private final M:Lkotlin/Lazy2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/e<",
+            "Lkotlin/Lazy2<",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -45,42 +45,42 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/catalog2/core/x/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/catalog2/core/x/CatalogFragment;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment$ref$1;
 
     invoke-direct {v0, p0}, Lcom/vk/profile/catalog/CommunitiesCatalogFragment$ref$1;-><init>(Lcom/vk/profile/catalog/CommunitiesCatalogFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->L:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->L:Lkotlin/Lazy2;
 
     .line 3
     new-instance v0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment$uid$1;
 
     invoke-direct {v0, p0}, Lcom/vk/profile/catalog/CommunitiesCatalogFragment$uid$1;-><init>(Lcom/vk/profile/catalog/CommunitiesCatalogFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->M:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->M:Lkotlin/Lazy2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;)Lcom/vk/catalog2/core/holders/common/n;
+.method public a(Landroid/content/Context;Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;)Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
     .locals 0
 
     .line 1
     new-instance p1, Lcom/vk/profile/catalog/CommunitiesCatalogVh;
 
-    invoke-direct {p1, p3, p0, p4}, Lcom/vk/profile/catalog/CommunitiesCatalogVh;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/e;)V
+    invoke-direct {p1, p3, p0, p4}, Lcom/vk/profile/catalog/CommunitiesCatalogVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/CatalogEntryPointParams;)V
 
     iput-object p1, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->K:Lcom/vk/profile/catalog/CommunitiesCatalogVh;
 
@@ -93,26 +93,26 @@
     return-void
 .end method
 
-.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/catalog2/core/a;
+.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/catalog2/core/CatalogConfiguration;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->e(Landroid/os/Bundle;)Lcom/vk/profile/catalog/c;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->e(Landroid/os/Bundle;)Lcom/vk/profile/catalog/CommunitiesCatalogConfiguration;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected e(Landroid/os/Bundle;)Lcom/vk/profile/catalog/c;
+.method protected e(Landroid/os/Bundle;)Lcom/vk/profile/catalog/CommunitiesCatalogConfiguration;
     .locals 2
 
     .line 2
-    new-instance p1, Lcom/vk/profile/catalog/c;
+    new-instance p1, Lcom/vk/profile/catalog/CommunitiesCatalogConfiguration;
 
-    iget-object v0, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->M:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->M:Lkotlin/Lazy2;
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -122,15 +122,15 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->L:Lkotlin/e;
+    iget-object v1, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->L:Lkotlin/Lazy2;
 
-    invoke-interface {v1}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/profile/catalog/c;-><init>(ILjava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/profile/catalog/CommunitiesCatalogConfiguration;-><init>(ILjava/lang/String;)V
 
     return-object p1
 .end method
@@ -176,7 +176,7 @@
     :cond_0
     const-string v0, "rootViewHolder"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -187,7 +187,7 @@
     .locals 3
 
     .line 1
-    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/i;->a(IILandroid/content/Intent;)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/VoiceUtils;->a(IILandroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -198,22 +198,22 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/profile/catalog/CommunitiesCatalogVh;->f()Lcom/vk/catalog2/core/holders/headers/a;
+    invoke-virtual {v1}, Lcom/vk/profile/catalog/CommunitiesCatalogVh;->f()Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;
 
     move-result-object v1
 
     const-string v2, "it"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, v0}, Lcom/vk/catalog2/core/holders/headers/a;->a(Ljava/lang/String;)V
+    invoke-interface {v1, v0}, Lcom/vk/catalog2/core/holders/headers/CatalogSearchQueryViewHolder;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_0
     const-string p1, "rootViewHolder"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -222,7 +222,7 @@
     .line 3
     :cond_1
     :goto_0
-    invoke-super {p0, p1, p2, p3}, Lcom/vk/catalog2/core/x/b;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vk/catalog2/core/x/CatalogFragment;->onActivityResult(IILandroid/content/Intent;)V
 
     return-void
 .end method
@@ -234,7 +234,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/a;->R4()Lcom/vk/catalog2/core/holders/common/n;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/BaseCatalogFragment;->R4()Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     move-result-object p1
 
@@ -259,36 +259,36 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/catalog2/core/x/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/catalog2/core/x/CatalogFragment;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/b;->Q4()Lcom/vk/catalog2/core/e;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/x/CatalogFragment;->Q4()Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/e;->e()Lcom/vk/catalog2/core/w/a;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/CatalogEntryPointParams;->e()Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/a;->a()Lc/a/m;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/CatalogCommandsBus;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 3
-    const-class v0, Lcom/vk/catalog2/core/w/e/k;
+    const-class v0, Lcom/vk/catalog2/core/w/e/CatalogCommand;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 4
     sget-object v0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment$b;->a:Lcom/vk/profile/catalog/CommunitiesCatalogFragment$b;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->J:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->J:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -297,14 +297,14 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/catalog2/core/x/b;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/catalog2/core/x/CatalogFragment;->onDestroy()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->J:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/profile/catalog/CommunitiesCatalogFragment;->J:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void

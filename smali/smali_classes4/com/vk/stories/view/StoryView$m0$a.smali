@@ -3,7 +3,7 @@
 .source "StoryView.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -48,14 +48,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/view/StoryView$m0$a;->invoke()Lkotlin/m;
+    invoke-virtual {p0}, Lcom/vk/stories/view/StoryView$m0$a;->invoke()Lkotlin/Unit;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public invoke()Lkotlin/m;
+.method public invoke()Lkotlin/Unit;
     .locals 3
 
     .line 2
@@ -106,12 +106,12 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v2, v0}, Lcom/vk/core/util/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcom/vk/core/util/DownloadUtils;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     const v0, 0x7f120f53
 
     .line 6
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$m0$a;->a:Lcom/vk/stories/view/StoryView$m0;
@@ -121,7 +121,7 @@
     invoke-virtual {v0}, Lcom/vk/stories/view/StoryView;->f()V
 
     .line 8
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method

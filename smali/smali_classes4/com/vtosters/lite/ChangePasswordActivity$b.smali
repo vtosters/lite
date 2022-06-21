@@ -41,7 +41,7 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/ChangePasswordActivity$b;->a:Landroid/widget/TextView;
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     return-void
 .end method

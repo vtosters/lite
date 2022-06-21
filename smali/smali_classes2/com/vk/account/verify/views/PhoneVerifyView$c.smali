@@ -3,7 +3,7 @@
 .source "PhoneVerifyView.kt"
 
 # interfaces
-.implements Lcom/vk/common/view/j/c$a;
+.implements Lcom/vk/common/view/j/ConfirmationBottomSheetDialog$a;
 
 
 # annotations
@@ -39,7 +39,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/common/view/j/c$a$a;->b(Lcom/vk/common/view/j/c$a;)V
+    invoke-static {p0}, Lcom/vk/common/view/j/ConfirmationBottomSheetDialog$a$a;->b(Lcom/vk/common/view/j/ConfirmationBottomSheetDialog$a;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/account/verify/views/PhoneVerifyView$c;->a:Lcom/vk/account/verify/views/PhoneVerifyView;
@@ -64,7 +64,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/common/view/j/c$a$a;->a(Lcom/vk/common/view/j/c$a;)V
+    invoke-static {p0}, Lcom/vk/common/view/j/ConfirmationBottomSheetDialog$a$a;->a(Lcom/vk/common/view/j/ConfirmationBottomSheetDialog$a;)V
 
     return-void
 .end method

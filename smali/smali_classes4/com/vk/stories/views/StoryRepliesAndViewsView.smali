@@ -4,17 +4,17 @@
 
 
 # static fields
-.field static final synthetic e:[Lkotlin/u/j;
+.field static final synthetic e:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lkotlin/e;
+.field private final a:Lkotlin/Lazy2;
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
-.field private final c:Lkotlin/e;
+.field private final c:Lkotlin/Lazy2;
 
-.field private final d:Lkotlin/e;
+.field private final d:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -23,13 +23,13 @@
 
     const/4 v0, 0x4
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/stories/views/StoryRepliesAndViewsView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -37,9 +37,9 @@
 
     const-string v4, "getViewersRepliesWrap()Landroid/view/View;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -49,7 +49,7 @@
 
     const-class v2, Lcom/vk/stories/views/StoryRepliesAndViewsView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -57,9 +57,9 @@
 
     const-string v4, "getRepliesCountText()Landroid/widget/TextView;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x1
 
@@ -69,7 +69,7 @@
 
     const-class v2, Lcom/vk/stories/views/StoryRepliesAndViewsView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -77,9 +77,9 @@
 
     const-string v4, "getViewsCountText()Landroid/widget/TextView;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x2
 
@@ -89,7 +89,7 @@
 
     const-class v2, Lcom/vk/stories/views/StoryRepliesAndViewsView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -97,15 +97,15 @@
 
     const-string v4, "getNewRepliesBadge()Landroid/view/View;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->e:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->e:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -121,44 +121,44 @@
 
     invoke-direct {p1, p0}, Lcom/vk/stories/views/StoryRepliesAndViewsView$viewersRepliesWrap$2;-><init>(Lcom/vk/stories/views/StoryRepliesAndViewsView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->a:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->a:Lkotlin/Lazy2;
 
     .line 3
     new-instance p1, Lcom/vk/stories/views/StoryRepliesAndViewsView$repliesCountText$2;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/views/StoryRepliesAndViewsView$repliesCountText$2;-><init>(Lcom/vk/stories/views/StoryRepliesAndViewsView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->b:Lkotlin/Lazy2;
 
     .line 4
     new-instance p1, Lcom/vk/stories/views/StoryRepliesAndViewsView$viewsCountText$2;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/views/StoryRepliesAndViewsView$viewsCountText$2;-><init>(Lcom/vk/stories/views/StoryRepliesAndViewsView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->c:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->c:Lkotlin/Lazy2;
 
     .line 5
     new-instance p1, Lcom/vk/stories/views/StoryRepliesAndViewsView$newRepliesBadge$2;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/views/StoryRepliesAndViewsView$newRepliesBadge$2;-><init>(Lcom/vk/stories/views/StoryRepliesAndViewsView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->d:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->d:Lkotlin/Lazy2;
 
     .line 6
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -187,44 +187,44 @@
 
     invoke-direct {p1, p0}, Lcom/vk/stories/views/StoryRepliesAndViewsView$viewersRepliesWrap$2;-><init>(Lcom/vk/stories/views/StoryRepliesAndViewsView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->a:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->a:Lkotlin/Lazy2;
 
     .line 9
     new-instance p1, Lcom/vk/stories/views/StoryRepliesAndViewsView$repliesCountText$2;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/views/StoryRepliesAndViewsView$repliesCountText$2;-><init>(Lcom/vk/stories/views/StoryRepliesAndViewsView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->b:Lkotlin/Lazy2;
 
     .line 10
     new-instance p1, Lcom/vk/stories/views/StoryRepliesAndViewsView$viewsCountText$2;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/views/StoryRepliesAndViewsView$viewsCountText$2;-><init>(Lcom/vk/stories/views/StoryRepliesAndViewsView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->c:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->c:Lkotlin/Lazy2;
 
     .line 11
     new-instance p1, Lcom/vk/stories/views/StoryRepliesAndViewsView$newRepliesBadge$2;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/views/StoryRepliesAndViewsView$newRepliesBadge$2;-><init>(Lcom/vk/stories/views/StoryRepliesAndViewsView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->d:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->d:Lkotlin/Lazy2;
 
     .line 12
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -253,44 +253,44 @@
 
     invoke-direct {p1, p0}, Lcom/vk/stories/views/StoryRepliesAndViewsView$viewersRepliesWrap$2;-><init>(Lcom/vk/stories/views/StoryRepliesAndViewsView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->a:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->a:Lkotlin/Lazy2;
 
     .line 15
     new-instance p1, Lcom/vk/stories/views/StoryRepliesAndViewsView$repliesCountText$2;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/views/StoryRepliesAndViewsView$repliesCountText$2;-><init>(Lcom/vk/stories/views/StoryRepliesAndViewsView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->b:Lkotlin/Lazy2;
 
     .line 16
     new-instance p1, Lcom/vk/stories/views/StoryRepliesAndViewsView$viewsCountText$2;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/views/StoryRepliesAndViewsView$viewsCountText$2;-><init>(Lcom/vk/stories/views/StoryRepliesAndViewsView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->c:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->c:Lkotlin/Lazy2;
 
     .line 17
     new-instance p1, Lcom/vk/stories/views/StoryRepliesAndViewsView$newRepliesBadge$2;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/views/StoryRepliesAndViewsView$newRepliesBadge$2;-><init>(Lcom/vk/stories/views/StoryRepliesAndViewsView;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->d:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->d:Lkotlin/Lazy2;
 
     .line 18
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -311,15 +311,15 @@
 .method private final getNewRepliesBadge()Landroid/view/View;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->d:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/stories/views/StoryRepliesAndViewsView;->e:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/stories/views/StoryRepliesAndViewsView;->e:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -331,15 +331,15 @@
 .method private final getRepliesCountText()Landroid/widget/TextView;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/stories/views/StoryRepliesAndViewsView;->e:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/stories/views/StoryRepliesAndViewsView;->e:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -351,15 +351,15 @@
 .method private final getViewersRepliesWrap()Landroid/view/View;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->a:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->a:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/stories/views/StoryRepliesAndViewsView;->e:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/stories/views/StoryRepliesAndViewsView;->e:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -371,15 +371,15 @@
 .method private final getViewsCountText()Landroid/widget/TextView;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->c:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/stories/views/StoryRepliesAndViewsView;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/stories/views/StoryRepliesAndViewsView;->e:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/stories/views/StoryRepliesAndViewsView;->e:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -406,7 +406,7 @@
 
     const-string v3, "viewersRepliesWrap"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -472,15 +472,15 @@
 
     move-result-object v6
 
-    invoke-static {v6, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v11, v1, Lcom/vk/dto/stories/model/StoryEntry;->B:I
 
     if-lez v11, :cond_1
 
-    sget-object v9, Lcom/vk/stories/util/k;->a:Lcom/vk/stories/util/k;
+    sget-object v9, Lcom/vk/stories/util/StoriesUtil;->a:Lcom/vk/stories/util/StoriesUtil;
 
-    invoke-virtual {v9, v11}, Lcom/vk/stories/util/k;->a(I)Ljava/lang/String;
+    invoke-virtual {v9, v11}, Lcom/vk/stories/util/StoriesUtil;->a(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -497,7 +497,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v9, v1, Lcom/vk/dto/stories/model/StoryEntry;->B:I
 
@@ -522,7 +522,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -571,7 +571,7 @@
 
     move-result-object v9
 
-    invoke-static {v9, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v9, v6}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -622,7 +622,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v13}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v13}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Lcom/vk/dto/stories/model/StoryEntry;->H1()Z
 
@@ -647,11 +647,11 @@
 
     move-result-object v6
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v8, Lcom/vk/stories/util/k;->a:Lcom/vk/stories/util/k;
+    sget-object v8, Lcom/vk/stories/util/StoriesUtil;->a:Lcom/vk/stories/util/StoriesUtil;
 
-    invoke-virtual {v8, v4}, Lcom/vk/stories/util/k;->a(I)Ljava/lang/String;
+    invoke-virtual {v8, v4}, Lcom/vk/stories/util/StoriesUtil;->a(I)Ljava/lang/String;
 
     move-result-object v8
 
@@ -674,7 +674,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6, v15}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -693,7 +693,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-boolean v8, v1, Lcom/vk/dto/stories/model/StoryEntry;->W:Z
 
@@ -777,7 +777,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -786,7 +786,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v15}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -828,7 +828,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v13}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v13}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Lcom/vk/dto/stories/model/StoryEntry;->H1()Z
 
@@ -851,7 +851,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6, v10}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -860,7 +860,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -871,9 +871,9 @@
 
     move-result-object v6
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v4}, Lcom/vk/core/util/b1;->a(I)Ljava/lang/String;
+    invoke-static {v4}, Lcom/vk/core/util/StringUtils;->a(I)Ljava/lang/String;
 
     move-result-object v7
 
@@ -916,7 +916,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6, v15}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -979,7 +979,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 

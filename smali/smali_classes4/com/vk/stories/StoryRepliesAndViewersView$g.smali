@@ -1,5 +1,5 @@
 .class final Lcom/vk/stories/StoryRepliesAndViewersView$g;
-.super Lcom/vk/lists/i0;
+.super Lcom/vk/lists/SimpleAdapter;
 .source "StoryRepliesAndViewersView.kt"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/i0<",
-        "Lcom/vk/stories/d1/c;",
-        "Lcom/vk/stories/holders/m;",
+        "Lcom/vk/lists/SimpleAdapter<",
+        "Lcom/vk/stories/d1/StoryStatItem;",
+        "Lcom/vk/stories/holders/StoryStatHolder;",
         ">;"
     }
 .end annotation
@@ -28,22 +28,22 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/stories/holders/m;I)V
+.method public a(Lcom/vk/stories/holders/StoryStatHolder;I)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -52,9 +52,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stories/holders/m;
+    check-cast p1, Lcom/vk/stories/holders/StoryStatHolder;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/StoryRepliesAndViewersView$g;->a(Lcom/vk/stories/holders/m;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/StoryRepliesAndViewersView$g;->a(Lcom/vk/stories/holders/StoryStatHolder;I)V
 
     return-void
 .end method
@@ -63,20 +63,20 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/StoryRepliesAndViewersView$g;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/stories/holders/m;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/StoryRepliesAndViewersView$g;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/stories/holders/StoryStatHolder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/stories/holders/m;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/stories/holders/StoryStatHolder;
     .locals 0
 
     .line 2
-    new-instance p2, Lcom/vk/stories/holders/m;
+    new-instance p2, Lcom/vk/stories/holders/StoryStatHolder;
 
-    invoke-direct {p2, p1}, Lcom/vk/stories/holders/m;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/stories/holders/StoryStatHolder;-><init>(Landroid/view/ViewGroup;)V
 
     return-object p2
 .end method

@@ -17,13 +17,13 @@
 
 
 # static fields
-.field static final synthetic d0:[Lkotlin/u/j;
+.field static final synthetic d0:[Lkotlin/u/KProperty5;
 
 .field public static final e0:Lcom/vk/profile/ui/header/UserHeaderView$a;
 
 
 # instance fields
-.field private final U:Lkotlin/e;
+.field private final U:Lkotlin/Lazy2;
 
 .field private final V:I
 
@@ -42,13 +42,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/profile/ui/header/UserHeaderView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -56,21 +56,21 @@
 
     const-string v4, "getOnlineStatusFormatter()Lcom/vk/core/formatters/OnlineFormatter;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/profile/ui/header/UserHeaderView;->d0:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/profile/ui/header/UserHeaderView;->d0:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/profile/ui/header/UserHeaderView$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/header/UserHeaderView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/header/UserHeaderView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/profile/ui/header/UserHeaderView;->e0:Lcom/vk/profile/ui/header/UserHeaderView$a;
 
@@ -88,11 +88,11 @@
 
     invoke-direct {v0, p1}, Lcom/vk/profile/ui/header/UserHeaderView$onlineStatusFormatter$2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/profile/ui/header/UserHeaderView;->U:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/profile/ui/header/UserHeaderView;->U:Lkotlin/Lazy2;
 
     const p1, 0x7f080924
 
@@ -120,7 +120,7 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/imageloader/o/d;
+    new-instance v1, Lcom/vk/imageloader/o/ProfileHeaderTransform;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getWidth()I
 
@@ -130,9 +130,9 @@
 
     iget-object v3, p0, Lcom/vk/profile/ui/header/UserHeaderView;->b0:Landroid/graphics/RectF;
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/imageloader/o/d;-><init>(FLandroid/graphics/RectF;)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/imageloader/o/ProfileHeaderTransform;-><init>(FLandroid/graphics/RectF;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/profile/ui/header/BaseHeaderView;->getProfilePhoto()Lcom/vk/imageloader/view/VKImageView;
@@ -149,15 +149,15 @@
 .method private final getOnlineStatusFormatter()Lcom/vk/core/formatters/OnlineFormatter;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/profile/ui/header/UserHeaderView;->U:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/profile/ui/header/UserHeaderView;->U:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/profile/ui/header/UserHeaderView;->d0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/profile/ui/header/UserHeaderView;->d0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -175,11 +175,11 @@
     invoke-super {p0, p1}, Lcom/vk/profile/ui/header/BaseHeaderView;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v0
 
@@ -197,7 +197,7 @@
 
     .line 3
     :cond_0
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -228,7 +228,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 7
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v2
 
@@ -344,7 +344,7 @@
 
     const-string v2, "context.getString(R.string.profile_btn_is_friend)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -362,7 +362,7 @@
 
     const-string v2, "context.getString(R.string.profile_btn_req_rcvd)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -390,7 +390,7 @@
 
     const-string v2, "context.getString(if (pr\u2026g.profile_btn_subscribed)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 22
     :goto_2
@@ -404,7 +404,7 @@
     invoke-virtual {v2, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     .line 24
-    invoke-static {}, Lcom/vk/profile/utils/f;->a()Landroid/text/Spannable;
+    invoke-static {}, Lcom/vk/profile/utils/UiUtilites;->a()Landroid/text/Spannable;
 
     move-result-object p1
 
@@ -480,7 +480,7 @@
 
     const-string v0, "profile.photo.getImageByWidth(807)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
@@ -500,7 +500,7 @@
 
     const-string v0, "profile.photo.getImageByWidth(604)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
@@ -556,7 +556,7 @@
     invoke-virtual {p0, p0}, Landroid/widget/LinearLayout;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     .line 2
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -731,7 +731,7 @@
     move-result-object v0
 
     .line 22
-    sget v4, Lcom/vk/profile/ui/c;->W0:I
+    sget v4, Lcom/vk/profile/ui/BaseProfileFragment;->W0:I
 
     const-string v5, "context"
 
@@ -746,13 +746,13 @@
 
     iget-object v7, v7, Lcom/vk/dto/user/UserProfile;->Q:Lcom/vk/dto/common/VerifyInfo;
 
-    invoke-static {v7, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-static {v6, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v5, Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;->ultraLight:Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;
 
@@ -770,13 +770,13 @@
 
     iget-object v7, v7, Lcom/vk/dto/user/UserProfile;->Q:Lcom/vk/dto/common/VerifyInfo;
 
-    invoke-static {v7, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v8
 
-    invoke-static {v8, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v9, 0x0
 
@@ -840,7 +840,7 @@
     invoke-virtual {v3, v0, v4, v2}, Lcom/vk/common/view/TextViewEllipsizeEnd;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
     .line 30
-    sget v0, Lcom/vk/profile/ui/c;->W0:I
+    sget v0, Lcom/vk/profile/ui/BaseProfileFragment;->W0:I
 
     const/16 v3, 0x8
 
@@ -853,7 +853,7 @@
 
     if-eqz v0, :cond_8
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v5
 
@@ -885,9 +885,9 @@
 
     const-string v7, "extProfile.profile"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v5, v6}, Lcom/vk/profile/utils/c;->a(Lcom/vk/core/formatters/OnlineFormatter;Lcom/vk/dto/user/UserProfile;)Ljava/lang/CharSequence;
+    invoke-static {v5, v6}, Lcom/vk/profile/utils/OnlineFormatterExt;->a(Lcom/vk/core/formatters/OnlineFormatter;Lcom/vk/dto/user/UserProfile;)Ljava/lang/CharSequence;
 
     move-result-object v5
 

@@ -3,7 +3,7 @@
 .source "StoryChooseView.kt"
 
 # interfaces
-.implements Lcom/vk/stories/receivers/views/a;
+.implements Lcom/vk/stories/receivers/views/IStoryChooseView;
 
 
 # annotations
@@ -41,7 +41,7 @@
 
 .field public N:Lcom/vk/lists/RecyclerPaginatedView;
 
-.field private a:Lcom/vk/stories/receivers/presenters/a;
+.field private a:Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
 .field private b:Lcom/vk/core/view/search/RoundedSearchView;
 
@@ -66,7 +66,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/receivers/views/StoryChooseView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/receivers/views/StoryChooseView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -90,7 +90,7 @@
 
     const-string v1, "AutoTransition().setDura\u2026AUTO_TRANSITION_DURATION)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->L:Landroidx/transition/TransitionSet;
 
@@ -112,7 +112,7 @@
 
     const-string v0, "findViewById(R.id.list)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/lists/RecyclerPaginatedView;
 
@@ -127,7 +127,7 @@
 
     const-string v0, "findViewById(R.id.toolbar)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/appcompat/widget/Toolbar;
 
@@ -142,7 +142,7 @@
 
     const-string v0, "findViewById(R.id.btn_send)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -157,7 +157,7 @@
 
     const-string v0, "findViewById(R.id.tv_counter)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -172,7 +172,7 @@
 
     const-string v0, "findViewById(R.id.fl_send)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/FrameLayout;
 
@@ -187,7 +187,7 @@
 
     const-string v0, "findViewById(R.id.fl_search_btn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -202,7 +202,7 @@
 
     const-string v0, "findViewById(R.id.rsv_search_view)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/view/search/RoundedSearchView;
 
@@ -244,7 +244,7 @@
 
     const-string v0, "myBlockView.findViewById(R.id.tv_empty)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -263,7 +263,7 @@
 
     const-string v0, "myBlockView.findViewById\u2026.id.tv_send_with_message)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -282,7 +282,7 @@
 
     const-string v0, "myBlockView.findViewById(R.id.v_top_separator)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->h:Landroid/view/View;
 
@@ -299,7 +299,7 @@
 
     const-string v0, "myBlockView.findViewById(R.id.v_bottom_separator)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->B:Landroid/view/View;
 
@@ -316,7 +316,7 @@
 
     const-string v0, "myBlockView.findViewById(R.id.author_photo)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/imageloader/view/VKImageView;
 
@@ -335,7 +335,7 @@
 
     const-string v0, "myBlockView.findViewById(R.id.author_title)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -354,7 +354,7 @@
 
     const-string v0, "myBlockView.findViewById(R.id.author_subtitle)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -373,7 +373,7 @@
 
     const-string v0, "myBlockView.findViewById(R.id.check)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/CheckBox;
 
@@ -392,7 +392,7 @@
 
     const-string v0, "myBlockView.findViewById(R.id.fl_check_container)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/FrameLayout;
 
@@ -411,7 +411,7 @@
 
     const-string v0, "myBlockView.findViewById\u2026ory_upload_author_layout)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->c:Landroid/view/View;
 
@@ -440,7 +440,7 @@
     return-object p0
 .end method
 
-.method private final a(Ljava/util/List;Lcom/vk/stories/a1/b;)Ljava/util/ArrayList;
+.method private final a(Ljava/util/List;Lcom/vk/stories/a1/AuthorItem;)Ljava/util/ArrayList;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -449,10 +449,10 @@
             "+",
             "Lcom/vk/dto/group/Group;",
             ">;",
-            "Lcom/vk/stories/a1/b;",
+            "Lcom/vk/stories/a1/AuthorItem;",
             ")",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/stories/a1/b;",
+            "Lcom/vk/stories/a1/AuthorItem;",
             ">;"
         }
     .end annotation
@@ -463,9 +463,9 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 31
-    sget-object v1, Lcom/vk/stories/a1/b;->e:Lcom/vk/stories/a1/b$a;
+    sget-object v1, Lcom/vk/stories/a1/AuthorItem;->e:Lcom/vk/stories/a1/AuthorItem$a;
 
-    invoke-virtual {p2}, Lcom/vk/stories/a1/b;->d()I
+    invoke-virtual {p2}, Lcom/vk/stories/a1/AuthorItem;->d()I
 
     move-result v2
 
@@ -483,7 +483,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-virtual {v1, v2}, Lcom/vk/stories/a1/b$a;->a(Z)Lcom/vk/stories/a1/b;
+    invoke-virtual {v1, v2}, Lcom/vk/stories/a1/AuthorItem$a;->a(Z)Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v1
 
@@ -509,9 +509,9 @@
     check-cast v1, Lcom/vk/dto/group/Group;
 
     .line 34
-    sget-object v2, Lcom/vk/stories/a1/b;->e:Lcom/vk/stories/a1/b$a;
+    sget-object v2, Lcom/vk/stories/a1/AuthorItem;->e:Lcom/vk/stories/a1/AuthorItem$a;
 
-    invoke-virtual {p2}, Lcom/vk/stories/a1/b;->d()I
+    invoke-virtual {p2}, Lcom/vk/stories/a1/AuthorItem;->d()I
 
     move-result v5
 
@@ -527,7 +527,7 @@
     const/4 v5, 0x0
 
     :goto_2
-    invoke-virtual {v2, v1, v5}, Lcom/vk/stories/a1/b$a;->a(Lcom/vk/dto/group/Group;Z)Lcom/vk/stories/a1/b;
+    invoke-virtual {v2, v1, v5}, Lcom/vk/stories/a1/AuthorItem$a;->a(Lcom/vk/dto/group/Group;Z)Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v1
 
@@ -643,7 +643,7 @@
 
     const v2, 0x7f080376
 
-    invoke-static {v2, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v2, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v2
 
@@ -676,7 +676,7 @@
 
     const v2, 0x7f08074b
 
-    invoke-static {v2, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v2, v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v1
 
@@ -689,7 +689,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stories/receivers/views/StoryChooseView$initToolbar$1;-><init>(Lcom/vk/stories/receivers/views/StoryChooseView;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->J:Landroidx/appcompat/widget/Toolbar;
@@ -743,12 +743,12 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stories/receivers/views/StoryChooseView$initViews$3;-><init>(Lcom/vk/stories/receivers/views/StoryChooseView;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 4
     new-instance v0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;
 
-    invoke-direct {v0, p0}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;-><init>(Lcom/vk/stories/receivers/views/a;)V
+    invoke-direct {v0, p0}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;-><init>(Lcom/vk/stories/receivers/views/IStoryChooseView;)V
 
     iput-object v0, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->K:Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;
 
@@ -786,7 +786,7 @@
     const-string v1, "recyclerView"
 
     .line 8
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -797,7 +797,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stories/receivers/views/StoryChooseView$initViews$4;-><init>(Lcom/vk/stories/receivers/views/StoryChooseView;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/i;->b(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/RecyclerViewExt;->b(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -889,13 +889,13 @@
     invoke-virtual {v1}, Lcom/vk/core/view/search/RoundedSearchView;->c()V
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/views/StoryChooseView;->getPresenter()Lcom/vk/stories/receivers/presenters/a;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/views/StoryChooseView;->getPresenter()Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    invoke-interface {v1}, Lcom/vk/stories/receivers/presenters/a;->P3()V
+    invoke-interface {v1}, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;->P3()V
 
     goto :goto_1
 
@@ -906,13 +906,13 @@
     invoke-virtual {v1}, Lcom/vk/core/view/search/RoundedSearchView;->b()V
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/views/StoryChooseView;->getPresenter()Lcom/vk/stories/receivers/presenters/a;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/views/StoryChooseView;->getPresenter()Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    invoke-interface {v1}, Lcom/vk/stories/receivers/presenters/a;->Q3()V
+    invoke-interface {v1}, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;->Q3()V
 
     .line 8
     :cond_2
@@ -922,13 +922,13 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/stories/a1/b;)V
+.method public a(Lcom/vk/stories/a1/AuthorItem;)V
     .locals 1
 
     .line 4
     iget-object v0, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->C:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/a1/b;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/a1/AuthorItem;->e()Ljava/lang/String;
 
     move-result-object p1
 
@@ -937,16 +937,16 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/stories/e1/a;Lcom/vk/stories/a1/b;ZZ)V
+.method public a(Lcom/vk/stories/e1/StoryReceiverTarget;Lcom/vk/stories/a1/AuthorItem;ZZ)V
     .locals 2
 
     .line 22
-    invoke-virtual {p2}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {p2}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
     .line 23
-    invoke-virtual {p1}, Lcom/vk/stories/e1/a;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/stories/e1/StoryReceiverTarget;->b()Ljava/util/List;
 
     move-result-object v1
 
@@ -954,7 +954,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1, p2}, Lcom/vk/stories/receivers/views/StoryChooseView;->a(Ljava/util/List;Lcom/vk/stories/a1/b;)Ljava/util/ArrayList;
+    invoke-direct {p0, v1, p2}, Lcom/vk/stories/receivers/views/StoryChooseView;->a(Ljava/util/List;Lcom/vk/stories/a1/AuthorItem;)Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -963,7 +963,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/stories/e1/a;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/stories/e1/StoryReceiverTarget;->a()Ljava/util/List;
 
     move-result-object p1
 
@@ -982,7 +982,7 @@
     if-nez p3, :cond_1
 
     .line 25
-    sget-object v0, Lcom/vk/stories/d1/b;->a:Lcom/vk/stories/d1/b;
+    sget-object v0, Lcom/vk/stories/d1/StoryMyItem;->a:Lcom/vk/stories/d1/StoryMyItem;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
@@ -1015,20 +1015,20 @@
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1, v1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {p1, v1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     :cond_3
     return-void
 .end method
 
-.method public a(Lcom/vk/stories/receivers/presenters/a;)V
+.method public a(Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;)V
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/stories/receivers/views/StoryChooseView;->setPresenter(Lcom/vk/stories/receivers/presenters/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/receivers/views/StoryChooseView;->setPresenter(Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;)V
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/stories/receivers/presenters/a;->R3()I
+    invoke-interface {p1}, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;->R3()I
 
     move-result p1
 
@@ -1054,7 +1054,7 @@
     const-string v1, "parentStoryContainer"
 
     .line 6
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -1094,16 +1094,16 @@
     new-array v0, v2, [Ljava/lang/Object;
 
     .line 10
-    sget-object v2, Lcom/vk/stories/y0;->a:Lcom/vk/stories/y0;
+    sget-object v2, Lcom/vk/stories/StoryViewHelper;->a:Lcom/vk/stories/StoryViewHelper;
 
-    invoke-virtual {v2, p2}, Lcom/vk/stories/y0;->d(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
+    invoke-virtual {v2, p2}, Lcom/vk/stories/StoryViewHelper;->d(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
 
     move-result-object p2
 
     aput-object p2, v0, v1
 
     .line 11
-    invoke-static {p1, v0}, Lcom/vk/core/util/y0;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/vk/core/util/ResUtils;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1120,16 +1120,16 @@
     new-array v0, v2, [Ljava/lang/Object;
 
     .line 13
-    sget-object v2, Lcom/vk/stories/y0;->a:Lcom/vk/stories/y0;
+    sget-object v2, Lcom/vk/stories/StoryViewHelper;->a:Lcom/vk/stories/StoryViewHelper;
 
-    invoke-virtual {v2, p2}, Lcom/vk/stories/y0;->d(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
+    invoke-virtual {v2, p2}, Lcom/vk/stories/StoryViewHelper;->d(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
 
     move-result-object p2
 
     aput-object p2, v0, v1
 
     .line 14
-    invoke-static {p1, v0}, Lcom/vk/core/util/y0;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/vk/core/util/ResUtils;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1144,7 +1144,7 @@
     const p1, 0x7f120e4d
 
     .line 16
-    invoke-static {p1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1159,7 +1159,7 @@
     const p1, 0x7f120e52
 
     .line 18
-    invoke-static {p1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1172,7 +1172,7 @@
     const-string p2, "when {\n                o\u2026 else -> \"\"\n            }"
 
     .line 19
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
     invoke-virtual {p0}, Lcom/vk/stories/receivers/views/StoryChooseView;->getMyBlockView()Landroid/view/ViewGroup;
@@ -1190,7 +1190,7 @@
     const-string v0, "subtitle"
 
     .line 21
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -1230,7 +1230,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     :cond_0
     return-void
@@ -1272,29 +1272,29 @@
     :cond_0
     const-string v0, "myBlockView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/a;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseContract;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/views/StoryChooseView;->getPresenter()Lcom/vk/stories/receivers/presenters/a;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/views/StoryChooseView;->getPresenter()Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/stories/receivers/presenters/a;
+.method public getPresenter()Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->a:Lcom/vk/stories/receivers/presenters/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->a:Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
     return-object v0
 .end method
@@ -1320,12 +1320,12 @@
     return-object v0
 .end method
 
-.method public getQueryChanges()Lc/a/m;
+.method public getQueryChanges()Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/CharSequence;",
             ">;"
         }
@@ -1334,19 +1334,19 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->b:Lcom/vk/core/view/search/RoundedSearchView;
 
-    invoke-virtual {v0}, Lcom/vk/core/view/search/RoundedSearchView;->d()Lb/h/v/c;
+    invoke-virtual {v0}, Lcom/vk/core/view/search/RoundedSearchView;->d()Lb/h/v/InitialValueObservable;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/stories/receivers/views/StoryChooseView$b;->a:Lcom/vk/stories/receivers/views/StoryChooseView$b;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "searchView.queryChangeEvents().map { it.text() }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -1364,7 +1364,7 @@
     :cond_0
     const-string v0, "recycler"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1484,7 +1484,7 @@
 
     const v1, 0x7f0400df
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->G:Landroid/widget/TextView;
@@ -1555,19 +1555,19 @@
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/views/StoryChooseView;->getPresenter()Lcom/vk/stories/receivers/presenters/a;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/views/StoryChooseView;->getPresenter()Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stories/receivers/presenters/a;->B()Lcom/vk/stories/a1/b;
+    invoke-interface {v0}, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
@@ -1586,19 +1586,19 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/receivers/views/StoryChooseView;->getPresenter()Lcom/vk/stories/receivers/presenters/a;
+    invoke-virtual {p0}, Lcom/vk/stories/receivers/views/StoryChooseView;->getPresenter()Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/stories/receivers/presenters/a;->B()Lcom/vk/stories/a1/b;
+    invoke-interface {v0}, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;->B()Lcom/vk/stories/a1/AuthorItem;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/b;->f()Z
+    invoke-virtual {v0}, Lcom/vk/stories/a1/AuthorItem;->f()Z
 
     move-result v0
 
@@ -1650,22 +1650,22 @@
     return-void
 .end method
 
-.method public bridge synthetic setPresenter(Lb/h/r/a;)V
+.method public bridge synthetic setPresenter(Lb/h/r/BaseContract;)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stories/receivers/presenters/a;
+    check-cast p1, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/receivers/views/StoryChooseView;->setPresenter(Lcom/vk/stories/receivers/presenters/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/receivers/views/StoryChooseView;->setPresenter(Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;)V
 
     return-void
 .end method
 
-.method public setPresenter(Lcom/vk/stories/receivers/presenters/a;)V
+.method public setPresenter(Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->a:Lcom/vk/stories/receivers/presenters/a;
+    iput-object p1, p0, Lcom/vk/stories/receivers/views/StoryChooseView;->a:Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
     return-void
 .end method

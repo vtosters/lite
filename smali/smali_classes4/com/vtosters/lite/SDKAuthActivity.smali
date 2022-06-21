@@ -82,7 +82,7 @@
 
     .line 3
     :try_start_0
-    invoke-static {v0, v3}, Lb/h/g/g/c;->a(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-static {v0, v3}, Lb/h/g/g/PackageManagerHelper;->a(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v3
 
@@ -225,11 +225,11 @@
     invoke-virtual {v3, v2, v4}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 17
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lb/h/h/d/c;->b()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -252,7 +252,7 @@
     invoke-virtual {v3, v1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 20
-    invoke-static {}, Lcom/vk/core/util/m0;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/util/LangUtils;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -462,11 +462,11 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/h/d/c;->l0()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->l0()Ljava/lang/String;
 
     move-result-object p1
 
@@ -530,7 +530,7 @@
     const-string p1, "Be sure to call this using startActivityForResult()"
 
     .line 3
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
 
     .line 4
     invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
@@ -688,11 +688,11 @@
     invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/ErrorView;->setOnRetryListener(Landroid/view/View$OnClickListener;)V
 
     .line 22
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/h/d/c;->b1()Z
+    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->b1()Z
 
     move-result p1
 

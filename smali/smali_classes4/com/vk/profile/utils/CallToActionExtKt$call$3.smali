@@ -3,12 +3,12 @@
 .source "CallToActionExt.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/utils/CallToActionExtKt;->a(Lcom/vtosters/lite/api/d;Lcom/vk/core/fragments/b;Lcom/vtosters/lite/api/i;Ljava/lang/String;)V
+    value = Lcom/vk/profile/utils/CallToActionExtKt;->a(Lcom/vtosters/lite/api/CallToAction;Lcom/vk/core/fragments/BaseFragment1;Lcom/vtosters/lite/api/ExtendedCommunityProfile;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,24 +19,24 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $profile:Lcom/vtosters/lite/api/i;
+.field final synthetic $profile:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
 .field final synthetic $source:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/api/i;Ljava/lang/String;)V
+.method constructor <init>(Lcom/vtosters/lite/api/ExtendedCommunityProfile;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/profile/utils/CallToActionExtKt$call$3;->$profile:Lcom/vtosters/lite/api/i;
+    iput-object p1, p0, Lcom/vk/profile/utils/CallToActionExtKt$call$3;->$profile:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iput-object p2, p0, Lcom/vk/profile/utils/CallToActionExtKt$call$3;->$source:Ljava/lang/String;
 
@@ -54,7 +54,7 @@
 
     invoke-virtual {p0}, Lcom/vk/profile/utils/CallToActionExtKt$call$3;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -63,7 +63,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/utils/CallToActionExtKt$call$3;->$profile:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/utils/CallToActionExtKt$call$3;->$profile:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
@@ -73,7 +73,7 @@
 
     const-string v2, "vk_call_confirm"
 
-    invoke-static {v2, v0, v1}, Lcom/vk/profile/e/f;->a(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {v2, v0, v1}, Lcom/vk/profile/e/ProfileTracker1;->a(Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
 .end method

@@ -63,11 +63,11 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/camera/j/c;->b(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/vk/camera/j/CadreUtils1;->b(Landroid/content/Context;)Z
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vk/camera/j/c;->a(Landroid/view/View;Z)Lcom/vk/camera/j/b;
+    invoke-static {v0, v1}, Lcom/vk/camera/j/CadreUtils1;->a(Landroid/view/View;Z)Lcom/vk/camera/j/CadreUtils2;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vk/camera/j/b;->a(II)Lcom/vk/camera/j/b;
+    invoke-static {v0, v1}, Lcom/vk/camera/j/CadreUtils2;->a(II)Lcom/vk/camera/j/CadreUtils2;
 
     move-result-object v0
 
@@ -99,10 +99,10 @@
 
     new-instance v8, Lcom/vk/stories/util/ClickableStickerDelegate;
 
-    iget-object v2, v0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v2, v0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     .line 6
-    invoke-static {v0}, Lcom/vk/stories/view/StoryView;->c(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/view/question/b;
+    invoke-static {v0}, Lcom/vk/stories/view/StoryView;->c(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
     move-result-object v5
 
@@ -116,7 +116,7 @@
     iget-object v1, p0, Lcom/vk/stories/view/StoryView$n;->a:Lcom/vk/stories/view/StoryView;
 
     .line 8
-    invoke-static {v1}, Lcom/vk/stories/view/StoryView;->d(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/view/u1;
+    invoke-static {v1}, Lcom/vk/stories/view/StoryView;->d(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/view/StoryViewPollDelegate;
 
     move-result-object v7
 
@@ -124,7 +124,7 @@
 
     move-object v3, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/stories/util/ClickableStickerDelegate;-><init>(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/util/ClickableStickerDelegate$a;Lcom/vk/camera/j/b;Lcom/vk/stories/view/r1;Lcom/vk/stories/view/r1;Lcom/vk/stories/view/r1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/stories/util/ClickableStickerDelegate;-><init>(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/util/ClickableStickerDelegate$a;Lcom/vk/camera/j/CadreUtils2;Lcom/vk/stories/view/StoryViewClickableStickerListener;Lcom/vk/stories/view/StoryViewClickableStickerListener;Lcom/vk/stories/view/StoryViewClickableStickerListener;)V
 
     .line 9
     invoke-static {v0, v8}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryView;Lcom/vk/stories/util/ClickableStickerDelegate;)Lcom/vk/stories/util/ClickableStickerDelegate;
@@ -132,15 +132,15 @@
     .line 10
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$n;->a:Lcom/vk/stories/view/StoryView;
 
-    new-instance v1, Lcom/vk/stories/util/q;
+    new-instance v1, Lcom/vk/stories/util/StoryViewTooltipDelegate;
 
     invoke-static {v0}, Lcom/vk/stories/view/StoryView;->u(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/util/ClickableStickerDelegate;
 
     move-result-object v2
 
-    invoke-direct {v1, v0, v2}, Lcom/vk/stories/util/q;-><init>(Lcom/vk/stories/view/StoryView;Lcom/vk/stories/util/ClickableStickerDelegate;)V
+    invoke-direct {v1, v0, v2}, Lcom/vk/stories/util/StoryViewTooltipDelegate;-><init>(Lcom/vk/stories/view/StoryView;Lcom/vk/stories/util/ClickableStickerDelegate;)V
 
-    invoke-static {v0, v1}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryView;Lcom/vk/stories/util/q;)Lcom/vk/stories/util/q;
+    invoke-static {v0, v1}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryView;Lcom/vk/stories/util/StoryViewTooltipDelegate;)Lcom/vk/stories/util/StoryViewTooltipDelegate;
 
     const/4 v0, 0x0
 

@@ -1,5 +1,5 @@
 .class public Lcom/vk/dto/gift/GiftSentResponse;
-.super Lcom/vk/dto/common/e;
+.super Lcom/vk/dto/common/Model;
 .source "GiftSentResponse.java"
 
 # interfaces
@@ -44,7 +44,7 @@
     .locals 2
 
     .line 6
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     .line 7
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -90,7 +90,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const-string v0, "success"
 

@@ -3,12 +3,12 @@
 .source "MsgUpdateFromServerMergeTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask;->b(Lcom/vk/im/engine/d;)Ljava/util/List;
+    value = Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Ljava/util/List<",
         "+",
@@ -30,18 +30,18 @@
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/d;
+.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
 
 .field final synthetic this$0:Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask;Lcom/vk/im/engine/d;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask;Lcom/vk/im/engine/ImEnvironment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/d;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     const/4 p1, 0x1
 
@@ -66,18 +66,18 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
 
     move-result v0
 
     .line 2
-    sget-object v1, Lcom/vk/im/engine/internal/merge/messages/a;->a:Lcom/vk/im/engine/internal/merge/messages/a;
+    sget-object v1, Lcom/vk/im/engine/internal/merge/messages/MsgPrepareUtils;->a:Lcom/vk/im/engine/internal/merge/messages/MsgPrepareUtils;
 
-    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask$onMerge$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     iget-object v3, p0, Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgUpdateFromServerMergeTask;
 
@@ -85,7 +85,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3, v0}, Lcom/vk/im/engine/internal/merge/messages/a;->a(Lcom/vk/im/engine/d;Ljava/util/List;I)Ljava/util/List;
+    invoke-virtual {v1, v2, v3, v0}, Lcom/vk/im/engine/internal/merge/messages/MsgPrepareUtils;->a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;I)Ljava/util/List;
 
     move-result-object v0
 

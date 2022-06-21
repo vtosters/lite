@@ -1,5 +1,5 @@
 .class Lcom/vk/stories/StoryViewDialog$c;
-.super Lcom/vk/stories/util/n;
+.super Lcom/vk/stories/util/StoryCallbackWrap;
 .source "StoryViewDialog.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/stories/StoryViewDialog$c;->a:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-direct {p0}, Lcom/vk/stories/util/n;-><init>()V
+    invoke-direct {p0}, Lcom/vk/stories/util/StoryCallbackWrap;-><init>()V
 
     return-void
 .end method
@@ -49,11 +49,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/z;->i(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/vk/core/extensions/StringExt;->i(Ljava/lang/String;)I
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/vk/stories/util/k;->a(Lcom/vk/dto/stories/model/StoriesContainer;I)I
+    invoke-static {p1, v0}, Lcom/vk/stories/util/StoriesUtil;->a(Lcom/vk/dto/stories/model/StoriesContainer;I)I
 
     move-result p1
 

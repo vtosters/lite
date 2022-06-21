@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/a;J)V
+    value = Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions;J)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,19 +20,19 @@
 # instance fields
 .field final synthetic a:Landroid/view/View;
 
-.field final synthetic b:Lkotlin/jvm/b/a;
+.field final synthetic b:Lkotlin/jvm/b/Functions;
 
 .field final synthetic c:J
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;Lkotlin/jvm/b/a;J)V
+.method constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions;J)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vk/extensions/ViewExtKt$l;->a:Landroid/view/View;
 
-    iput-object p2, p0, Lcom/vk/extensions/ViewExtKt$l;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/extensions/ViewExtKt$l;->b:Lkotlin/jvm/b/Functions;
 
     iput-wide p3, p0, Lcom/vk/extensions/ViewExtKt$l;->c:J
 
@@ -54,13 +54,13 @@
     .line 2
     iget-object p1, p0, Lcom/vk/extensions/ViewExtKt$l;->a:Landroid/view/View;
 
-    iget-object p2, p0, Lcom/vk/extensions/ViewExtKt$l;->b:Lkotlin/jvm/b/a;
+    iget-object p2, p0, Lcom/vk/extensions/ViewExtKt$l;->b:Lkotlin/jvm/b/Functions;
 
     if-eqz p2, :cond_0
 
-    new-instance p3, Lcom/vk/extensions/r;
+    new-instance p3, Lcom/vk/extensions/ViewExt;
 
-    invoke-direct {p3, p2}, Lcom/vk/extensions/r;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {p3, p2}, Lcom/vk/extensions/ViewExt;-><init>(Lkotlin/jvm/b/Functions;)V
 
     move-object p2, p3
 

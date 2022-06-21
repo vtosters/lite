@@ -3,7 +3,7 @@
 .source "StoryBoxChecker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -58,7 +58,7 @@
 
     const-string v1, "Pattern.compile(\"#$HASHTAG_REGEXP_WITHOUT_PREFIX\")"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lkotlin/text/Regex;
 
@@ -82,20 +82,20 @@
     const/4 v4, 0x0
 
     .line 3
-    invoke-static {v1, p1, v4, v3, v0}, Lkotlin/text/Regex;->b(Lkotlin/text/Regex;Ljava/lang/CharSequence;IILjava/lang/Object;)Lkotlin/sequences/j;
+    invoke-static {v1, p1, v4, v3, v0}, Lkotlin/text/Regex;->b(Lkotlin/text/Regex;Ljava/lang/CharSequence;IILjava/lang/Object;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
-    invoke-static {v1}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;)I
+    invoke-static {v1}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;)I
 
     move-result v1
 
     .line 4
-    invoke-static {v2, p1, v4, v3, v0}, Lkotlin/text/Regex;->b(Lkotlin/text/Regex;Ljava/lang/CharSequence;IILjava/lang/Object;)Lkotlin/sequences/j;
+    invoke-static {v2, p1, v4, v3, v0}, Lkotlin/text/Regex;->b(Lkotlin/text/Regex;Ljava/lang/CharSequence;IILjava/lang/Object;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
-    invoke-static {p1}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;)I
+    invoke-static {p1}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;)I
 
     move-result p1
 
@@ -132,7 +132,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxChecker$check$3;->a(Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

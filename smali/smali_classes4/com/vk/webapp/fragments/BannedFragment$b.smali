@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -70,15 +70,15 @@
 
     const-string v1, "Uri.Builder()\n          \u2026    .appendPath(URL_PATH)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
-    invoke-static {v0}, Lcom/vk/core/util/l1;->a(Landroid/net/Uri$Builder;)Landroid/net/Uri$Builder;
+    invoke-static {v0}, Lcom/vk/core/util/UriExt;->a(Landroid/net/Uri$Builder;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
     .line 14
-    invoke-static {}, Lcom/vk/core/util/m0;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/util/LangUtils;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -115,7 +115,7 @@
 
     const-string v0, "Uri.Builder()\n          \u2026              .toString()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -169,7 +169,7 @@
     invoke-direct {v0, v1, v2, p2, p3}, Lcom/vk/webapp/fragments/BannedFragment$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
     .line 5
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->b(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object p2
 
@@ -185,7 +185,7 @@
 
     .line 8
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

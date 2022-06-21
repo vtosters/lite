@@ -12,11 +12,11 @@
 
 .field private final d:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
-.field private final e:Lcom/vk/stories/editor/multi/e;
+.field private final e:Lcom/vk/stories/editor/multi/LayersProvider;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;Lcom/vk/stories/editor/multi/e;)V
+.method public constructor <init>(Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;Lcom/vk/stories/editor/multi/LayersProvider;)V
     .locals 0
 
     .line 1
@@ -26,7 +26,7 @@
 
     iput-object p2, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->d:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
-    iput-object p3, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->e:Lcom/vk/stories/editor/multi/e;
+    iput-object p3, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->e:Lcom/vk/stories/editor/multi/LayersProvider;
 
     .line 2
     iget-object p1, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->d:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
@@ -91,17 +91,17 @@
     .locals 2
 
     .line 57
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->e:Lcom/vk/stories/editor/multi/e;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->e:Lcom/vk/stories/editor/multi/LayersProvider;
 
     iget-object v1, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->d:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
-    invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->O1()Lcom/vk/cameraui/entities/d;
+    invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->O1()Lcom/vk/cameraui/entities/StoryRawData3;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/stories/editor/multi/e;->a(Lcom/vk/cameraui/entities/d;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-interface {v0, v1, p1}, Lcom/vk/stories/editor/multi/LayersProvider;->a(Lcom/vk/cameraui/entities/StoryRawData3;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -110,34 +110,34 @@
     .line 58
     iget-object v0, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->d:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
-    invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->O1()Lcom/vk/cameraui/entities/d;
+    invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->O1()Lcom/vk/cameraui/entities/StoryRawData3;
 
     move-result-object v1
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->a(Lcom/vk/cameraui/entities/d;Landroid/graphics/Bitmap;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->a(Lcom/vk/cameraui/entities/StoryRawData3;Landroid/graphics/Bitmap;)V
 
     .line 59
     iget-object v0, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->d:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
-    invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->O1()Lcom/vk/cameraui/entities/d;
+    invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->O1()Lcom/vk/cameraui/entities/StoryRawData3;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/entities/d;->b(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/entities/StoryRawData3;->b(Landroid/graphics/Bitmap;)V
 
     :cond_0
     return-void
 .end method
 
-.method private final a(Lcom/vk/attachpicker/stickers/reply/a;)V
+.method private final a(Lcom/vk/attachpicker/stickers/reply/ReplySticker;)V
     .locals 1
 
     const/4 v0, 0x0
 
     .line 55
-    invoke-interface {p1, v0}, Lcom/vk/attachpicker/stickers/reply/a;->setLoadingVisible(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/attachpicker/stickers/reply/ReplySticker;->setLoadingVisible(Z)V
 
     .line 56
     iget-object p1, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->d:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
@@ -158,25 +158,25 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/editor/multi/CameraReplyDelegate;Lcom/vk/attachpicker/stickers/reply/a;)V
+.method public static final synthetic a(Lcom/vk/stories/editor/multi/CameraReplyDelegate;Lcom/vk/attachpicker/stickers/reply/ReplySticker;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Lcom/vk/attachpicker/stickers/reply/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Lcom/vk/attachpicker/stickers/reply/ReplySticker;)V
 
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+.method private final a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/graphics/Bitmap;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -196,34 +196,34 @@
     if-nez v0, :cond_0
 
     .line 62
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->b(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->b(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
     .line 63
     :cond_0
-    invoke-interface {p2, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     .line 64
     :cond_1
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->b(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->b(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     :goto_0
     return-void
 .end method
 
-.method private final b(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+.method private final b(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/graphics/Bitmap;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -231,11 +231,11 @@
     .line 3
     iget-object v0, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->c:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v2, "AppContextHolder.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0600ea
 
@@ -250,40 +250,40 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
+    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 5
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 6
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 7
     new-instance v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$d;
 
-    invoke-direct {v0, p2}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$d;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p2}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$d;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     .line 8
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object p2
 
     .line 9
-    invoke-virtual {p1, v0, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
@@ -292,9 +292,9 @@
 
     const-string v0, "it"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, p1}, Lb/h/v/a;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p2, p1}, Lb/h/v/CompositeDisposableContainer;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -340,7 +340,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v3, 0x7f120ee9
 
@@ -350,13 +350,13 @@
 
     const-string v3, "AppContextHolder.context\u2026ng(R.string.story_memory)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v4, "Locale.US"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v1, :cond_1
 
@@ -366,27 +366,27 @@
 
     const-string v3, "(this as java.lang.String).toUpperCase(locale)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v3, Lcom/vk/stories/clickable/models/time/b;
+    new-instance v3, Lcom/vk/stories/clickable/models/time/TimeStickerInfo;
 
     const-string v4, "memories"
 
-    invoke-direct {v3, v2, v0, v4, v1}, Lcom/vk/stories/clickable/models/time/b;-><init>(ZLcom/vk/stories/clickable/models/time/StoryTimeHolder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v2, v0, v4, v1}, Lcom/vk/stories/clickable/models/time/TimeStickerInfo;-><init>(ZLcom/vk/stories/clickable/models/time/StoryTimeHolder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    new-instance v0, Lcom/vk/stories/clickable/stickers/i;
+    new-instance v0, Lcom/vk/stories/clickable/stickers/StoryTimerSticker;
 
-    invoke-direct {v0, v3}, Lcom/vk/stories/clickable/stickers/i;-><init>(Lcom/vk/stories/clickable/models/time/b;)V
+    invoke-direct {v0, v3}, Lcom/vk/stories/clickable/stickers/StoryTimerSticker;-><init>(Lcom/vk/stories/clickable/models/time/TimeStickerInfo;)V
 
     .line 4
     iget-object v1, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->d:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
-    invoke-static {}, Lcom/vk/stories/clickable/StickersArrangersKt;->a()Lkotlin/jvm/b/d;
+    invoke-static {}, Lcom/vk/stories/clickable/StickersArrangersKt;->a()Lkotlin/jvm/b/Functions4;
 
     move-result-object v2
 
-    invoke-interface {v1, v0, v2}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;)V
+    invoke-interface {v1, v0, v2}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;)V
 
     return-void
 
@@ -449,7 +449,7 @@
     const-string v4, "it"
 
     .line 4
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
@@ -573,7 +573,7 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/attachpicker/stickers/reply/a;
+.method public final a()Lcom/vk/attachpicker/stickers/reply/ReplySticker;
     .locals 4
 
     .line 45
@@ -585,7 +585,7 @@
 
     const-string v1, "view.stickers"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 46
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -610,7 +610,7 @@
     check-cast v3, Lcom/vk/attachpicker/stickers/ISticker;
 
     .line 47
-    instance-of v3, v3, Lcom/vk/attachpicker/stickers/reply/a;
+    instance-of v3, v3, Lcom/vk/attachpicker/stickers/reply/ReplySticker;
 
     if-eqz v3, :cond_0
 
@@ -632,29 +632,29 @@
 
     if-eqz v0, :cond_3
 
-    check-cast v0, Lcom/vk/attachpicker/stickers/reply/a;
+    check-cast v0, Lcom/vk/attachpicker/stickers/reply/ReplySticker;
 
     const/4 v1, 0x0
 
     .line 50
-    invoke-interface {v0, v1}, Lcom/vk/attachpicker/stickers/reply/a;->setLoadingVisible(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/attachpicker/stickers/reply/ReplySticker;->setLoadingVisible(Z)V
 
     .line 51
-    instance-of v1, v0, Lcom/vk/attachpicker/stickers/s0;
+    instance-of v1, v0, Lcom/vk/attachpicker/stickers/VideoViewSticker;
 
     if-eqz v1, :cond_2
 
     .line 52
     move-object v1, v0
 
-    check-cast v1, Lcom/vk/attachpicker/stickers/s0;
+    check-cast v1, Lcom/vk/attachpicker/stickers/VideoViewSticker;
 
-    invoke-virtual {v1}, Lcom/vk/attachpicker/stickers/s0;->t()V
+    invoke-virtual {v1}, Lcom/vk/attachpicker/stickers/VideoViewSticker;->t()V
 
     const/4 v2, 0x1
 
     .line 53
-    invoke-virtual {v1, v2}, Lcom/vk/attachpicker/stickers/s0;->setMute(Z)V
+    invoke-virtual {v1, v2}, Lcom/vk/attachpicker/stickers/VideoViewSticker;->setMute(Z)V
 
     :cond_2
     return-object v0
@@ -673,7 +673,7 @@
     return-object v2
 .end method
 
-.method public final a(Lcom/vk/cameraui/entities/d;)V
+.method public final a(Lcom/vk/cameraui/entities/StoryRawData3;)V
     .locals 24
 
     move-object/from16 v0, p0
@@ -724,7 +724,7 @@
 
     const-string v4, "image.getImageByWidth(Sc\u2026.width(), true) ?: return"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     iget-object v4, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->b:Lcom/vk/dto/stories/model/StoryOwner;
@@ -780,9 +780,9 @@
 
     move-result-object v5
 
-    invoke-static {v5, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v9, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v10, 0x0
 
@@ -800,27 +800,27 @@
 
     move-object v8, v1
 
-    invoke-direct/range {v6 .. v14}, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;-><init>(Landroid/content/Context;Lcom/vk/dto/common/ImageSize;Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v14}, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;-><init>(Landroid/content/Context;Lcom/vk/dto/common/ImageSize;Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 14
     new-instance v5, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$1;
 
     invoke-direct {v5, v0}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$1;-><init>(Lcom/vk/stories/editor/multi/CameraReplyDelegate;)V
 
-    invoke-direct {v0, v2, v5}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, v2, v5}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     .line 15
     invoke-virtual {v1}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1, v15}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v15}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$2;
 
-    invoke-direct {v2, v0, v3}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$2;-><init>(Lcom/vk/stories/editor/multi/CameraReplyDelegate;Lcom/vk/attachpicker/stickers/reply/a;)V
+    invoke-direct {v2, v0, v3}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$2;-><init>(Lcom/vk/stories/editor/multi/CameraReplyDelegate;Lcom/vk/attachpicker/stickers/reply/ReplySticker;)V
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     goto/16 :goto_3
 
@@ -834,10 +834,10 @@
 
     const-string v10, "parentStoryEntry.video ?: return"
 
-    invoke-static {v6, v10}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v10}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 17
-    new-instance v10, Lcom/vk/attachpicker/stickers/s0$a;
+    new-instance v10, Lcom/vk/attachpicker/stickers/VideoViewSticker$a;
 
     .line 18
     iget-object v11, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a:Lcom/vk/dto/stories/model/StoryEntry;
@@ -880,7 +880,7 @@
     move/from16 v22, v12
 
     .line 24
-    invoke-direct/range {v16 .. v22}, Lcom/vk/attachpicker/stickers/s0$a;-><init>(Ljava/lang/String;Ljava/lang/String;ZIIZ)V
+    invoke-direct/range {v16 .. v22}, Lcom/vk/attachpicker/stickers/VideoViewSticker$a;-><init>(Ljava/lang/String;Ljava/lang/String;ZIIZ)V
 
     .line 25
     iget-object v6, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a:Lcom/vk/dto/stories/model/StoryEntry;
@@ -954,9 +954,9 @@
     if-eqz v6, :cond_4
 
     .line 31
-    new-instance v11, Lcom/vk/stories/clickable/stickers/c;
+    new-instance v11, Lcom/vk/stories/clickable/stickers/StoryMusicSticker;
 
-    invoke-direct {v11, v6}, Lcom/vk/stories/clickable/stickers/c;-><init>(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-direct {v11, v6}, Lcom/vk/stories/clickable/stickers/StoryMusicSticker;-><init>(Lcom/vk/dto/music/MusicTrack;)V
 
     .line 32
     iget-object v6, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->d:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
@@ -966,7 +966,7 @@
     .line 33
     :cond_4
     :goto_2
-    new-instance v13, Lcom/vk/attachpicker/stickers/reply/c;
+    new-instance v13, Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;
 
     iget-object v6, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->c:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
@@ -974,9 +974,9 @@
 
     move-result-object v11
 
-    invoke-static {v11, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v11, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v9, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v12, 0x0
 
@@ -1008,50 +1008,50 @@
 
     move-object/from16 v14, v19
 
-    invoke-direct/range {v6 .. v14}, Lcom/vk/attachpicker/stickers/reply/c;-><init>(Landroid/content/Context;Lcom/vk/attachpicker/stickers/s0$a;Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v14}, Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;-><init>(Landroid/content/Context;Lcom/vk/attachpicker/stickers/VideoViewSticker$a;Ljava/lang/String;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 34
-    invoke-virtual {v3, v5}, Lcom/vk/attachpicker/stickers/reply/c;->setLoadingVisible(Z)V
+    invoke-virtual {v3, v5}, Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;->setLoadingVisible(Z)V
 
     const/4 v5, 0x0
 
     .line 35
-    invoke-virtual {v3, v5}, Lcom/vk/attachpicker/stickers/reply/c;->setDeterminateProgress(Z)V
+    invoke-virtual {v3, v5}, Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;->setDeterminateProgress(Z)V
 
     .line 36
     new-instance v5, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;
 
     move/from16 v6, v23
 
-    invoke-direct {v5, v3, v0, v6}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;-><init>(Lcom/vk/attachpicker/stickers/reply/c;Lcom/vk/stories/editor/multi/CameraReplyDelegate;Z)V
+    invoke-direct {v5, v3, v0, v6}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;-><init>(Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;Lcom/vk/stories/editor/multi/CameraReplyDelegate;Z)V
 
-    invoke-virtual {v3, v5}, Lcom/vk/attachpicker/stickers/s0;->setDownloadListener(Lcom/vk/mediastore/a/c$b;)V
+    invoke-virtual {v3, v5}, Lcom/vk/attachpicker/stickers/VideoViewSticker;->setDownloadListener(Lcom/vk/mediastore/a/VideoCache$b;)V
 
     .line 37
-    invoke-virtual {v3, v6}, Lcom/vk/attachpicker/stickers/reply/c;->setHasMusic(Z)V
+    invoke-virtual {v3, v6}, Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;->setHasMusic(Z)V
 
     .line 38
-    invoke-virtual {v3}, Lcom/vk/attachpicker/stickers/s0;->t()V
+    invoke-virtual {v3}, Lcom/vk/attachpicker/stickers/VideoViewSticker;->t()V
 
     .line 39
     new-instance v5, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$7;
 
-    invoke-direct {v5, v0, v3}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$7;-><init>(Lcom/vk/stories/editor/multi/CameraReplyDelegate;Lcom/vk/attachpicker/stickers/reply/a;)V
+    invoke-direct {v5, v0, v3}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$7;-><init>(Lcom/vk/stories/editor/multi/CameraReplyDelegate;Lcom/vk/attachpicker/stickers/reply/ReplySticker;)V
 
-    invoke-direct {v0, v2, v5}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, v2, v5}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     .line 40
     invoke-virtual {v1}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1, v15}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v15}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$8;
 
-    invoke-direct {v2, v3}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$8;-><init>(Lcom/vk/attachpicker/stickers/reply/a;)V
+    invoke-direct {v2, v3}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$8;-><init>(Lcom/vk/attachpicker/stickers/reply/ReplySticker;)V
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     .line 41
     :goto_3
@@ -1063,16 +1063,16 @@
 
     const-string v2, "parentStoryOwner.authorAvatarUrl"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$9;
 
-    invoke-direct {v2, v3}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$9;-><init>(Lcom/vk/attachpicker/stickers/reply/a;)V
+    invoke-direct {v2, v3}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$9;-><init>(Lcom/vk/attachpicker/stickers/reply/ReplySticker;)V
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     .line 42
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/cameraui/entities/d;->f()Z
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/cameraui/entities/StoryRawData3;->f()Z
 
     move-result v1
 
@@ -1108,7 +1108,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$prepareBackground$1;-><init>(Lcom/vk/stories/editor/multi/CameraReplyDelegate;)V
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     :cond_0
     return-void

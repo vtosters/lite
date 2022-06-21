@@ -3,7 +3,7 @@
 .source "DialogsEntryStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/internal/storage/models/a;",
-        "Lcom/vk/im/engine/internal/storage/models/a;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
+        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
         ">;"
     }
 .end annotation
@@ -56,17 +56,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/internal/storage/models/a;)Lcom/vk/im/engine/internal/storage/models/a;
+.method public final a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
     .locals 34
 
     move-object/from16 v0, p1
 
     .line 1
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/internal/storage/models/a;->x()I
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->x()I
 
     move-result v7
 
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/internal/storage/models/a;->g()I
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->g()I
 
     move-result v8
 
@@ -130,7 +130,7 @@
 
     const/16 v33, 0x0
 
-    invoke-static/range {v0 .. v33}, Lcom/vk/im/engine/internal/storage/models/a;->a(Lcom/vk/im/engine/internal/storage/models/a;IIIIIIIILcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/WritePermission;ZZLcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/messages/DraftMsg;ZLcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/f;Lcom/vk/im/engine/models/conversations/BotKeyboard;ZLcom/vk/im/engine/models/MsgRequestStatus;Lcom/vk/im/engine/models/Member;JLcom/vk/im/engine/models/MsgRequestStatus;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;ZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/a;
+    invoke-static/range {v0 .. v33}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;IIIIIIIILcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/conversations/PushSettings;Lcom/vk/im/engine/models/WritePermission;ZZLcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/messages/DraftMsg;ZLcom/vk/im/engine/models/dialogs/ConversationBar;Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/dialogs/DialogThemeName;Lcom/vk/im/engine/models/conversations/BotKeyboard;ZLcom/vk/im/engine/models/MsgRequestStatus;Lcom/vk/im/engine/models/Member;JLcom/vk/im/engine/models/MsgRequestStatus;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;ZIILjava/lang/Object;)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
     move-result-object v0
 
@@ -141,9 +141,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$resetReadTillLocal$1;->a(Lcom/vk/im/engine/internal/storage/models/a;)Lcom/vk/im/engine/internal/storage/models/a;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$resetReadTillLocal$1;->a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
     move-result-object p1
 

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -64,7 +64,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/dto/stories/model/clickable/ClickableQuestion;-><init>(Lcom/vk/dto/stories/model/actions/ActionQuestion;Ljava/util/List;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/dto/stories/model/clickable/ClickableQuestion;-><init>(Lcom/vk/dto/stories/model/actions/ActionQuestion;Ljava/util/List;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

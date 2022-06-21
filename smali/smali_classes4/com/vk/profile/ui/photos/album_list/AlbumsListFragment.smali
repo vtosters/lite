@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;
-.super Lcom/vk/core/fragments/c;
+.super Lcom/vk/core/fragments/BaseMvpFragment;
 .source "AlbumsListFragment.kt"
 
 # interfaces
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/c<",
+        "Lcom/vk/core/fragments/BaseMvpFragment<",
         "Lcom/vk/profile/ui/photos/album_list/AlbumsListFragmentPresenter;",
         ">;",
         "Lcom/vk/profile/ui/photos/album_list/AlbumsListFragmentPresenter$a;"
@@ -42,7 +42,7 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
 
     const/4 v0, 0x1
 
@@ -67,7 +67,7 @@
     invoke-direct {v2, p0}, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment$albumsAdapter$2;-><init>(Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;)V
 
     .line 6
-    invoke-direct {v0, v1, v2}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     iput-object v0, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;->K:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
@@ -127,7 +127,7 @@
     :cond_0
     const-string v0, "recyclerView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -140,21 +140,21 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;->K:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;->K:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
     iget-object v1, p1, Lcom/vk/api/photos/PhotosGetAlbums$b;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->g(Ljava/util/List;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;->K:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
     iget-object p1, p1, Lcom/vk/api/photos/PhotosGetAlbums$b;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->g(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->g(Ljava/util/List;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;->G:Lcom/vk/lists/RecyclerPaginatedView;
@@ -178,7 +178,7 @@
 
     const-string v2, "recyclerView.recyclerView"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -194,19 +194,19 @@
     return-void
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 7
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 8
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -233,7 +233,7 @@
     return-void
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/c;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseScreenContract;
     .locals 1
 
     .line 1
@@ -293,7 +293,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -339,7 +339,7 @@
     invoke-virtual {p1}, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragmentPresenter;->d()V
 
     .line 5
-    sget-object p1, Lcom/vk/profile/e/e;->a:Lcom/vk/profile/e/e;
+    sget-object p1, Lcom/vk/profile/e/ProfileTracker;->a:Lcom/vk/profile/e/ProfileTracker;
 
     iget v1, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;->L:I
 
@@ -356,19 +356,19 @@
     move-result-object v0
 
     :cond_1
-    invoke-virtual {p1, v1, v0}, Lcom/vk/profile/e/e;->b(ILjava/lang/String;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/profile/e/ProfileTracker;->b(ILjava/lang/String;)V
 
     return-void
 
     .line 6
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 7
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -400,11 +400,11 @@
 
     if-eqz p2, :cond_1
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v2
 
@@ -470,7 +470,7 @@
     goto :goto_2
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -481,7 +481,7 @@
     goto :goto_3
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -490,7 +490,7 @@
     const-string p2, "item"
 
     .line 6
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1, v0}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
@@ -518,17 +518,17 @@
 
     const-string v0, "view.findViewById(R.id.toolbar)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroidx/appcompat/widget/Toolbar;
 
     const v0, 0x7f080376
 
     .line 3
-    invoke-static {p2, v0}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, v0}, Lcom/vtosters/lite/ViewUtils;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 4
-    invoke-static {p0, p2}, Lcom/vtosters/lite/m0/a;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, p2}, Lcom/vtosters/lite/m0/ToolbarHelper;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     const v0, 0x7f1200d1
 
@@ -540,7 +540,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment$onCreateView$1;-><init>(Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;)V
 
-    invoke-static {p2, p0, v0}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p0, v0}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     invoke-virtual {p2}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
@@ -549,7 +549,7 @@
 
     const-string v1, "toolbar.menu"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -573,7 +573,7 @@
 
     const-string v3, "activity?.menuInflater!!"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0, v1}, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
@@ -594,7 +594,7 @@
     check-cast p2, Landroid/view/ViewGroup;
 
     .line 10
-    new-instance v0, Lcom/vk/profile/ui/b;
+    new-instance v0, Lcom/vk/profile/ui/AnimationPaginatedView;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -604,7 +604,7 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
@@ -616,7 +616,7 @@
 
     move-object v3, v0
 
-    invoke-direct/range {v3 .. v8}, Lcom/vk/profile/ui/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vk/profile/ui/AnimationPaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v0, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;->G:Lcom/vk/lists/RecyclerPaginatedView;
 
@@ -658,7 +658,7 @@
 
     const-string v0, "recyclerView.recyclerView"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
@@ -671,11 +671,11 @@
 
     move-result-object p2
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p3, Landroidx/recyclerview/widget/GridLayoutManager;
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
@@ -705,7 +705,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment$onCreateView$4;-><init>(Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;)V
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/d;)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions4;)V
 
     .line 20
     iget-object p2, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;->G:Lcom/vk/lists/RecyclerPaginatedView;
@@ -740,66 +740,66 @@
 
     invoke-direct {p3, p0}, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment$onCreateView$6;-><init>(Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/lists/RecyclerPaginatedView;->setOnRefreshListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, p3}, Lcom/vk/lists/RecyclerPaginatedView;->setOnRefreshListener(Lkotlin/jvm/b/Functions;)V
 
     return-object p1
 
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 23
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 24
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 25
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 26
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 27
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 28
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 29
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 30
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 31
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -829,11 +829,11 @@
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 4
-    new-instance v0, Lcom/vk/navigation/o;
+    new-instance v0, Lcom/vk/navigation/Navigator;
 
-    const-class v1, Lcom/vtosters/lite/fragments/photos/c;
+    const-class v1, Lcom/vtosters/lite/fragments/photos/EditAlbumFragment;
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     .line 5
     new-instance p1, Lcom/vtosters/lite/TabletDialogActivity$b;
@@ -846,15 +846,15 @@
 
     const-string v1, "TabletDialogActivity.Bui\u2026etGravity(Gravity.CENTER)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {v0, p1}, Lcom/vk/extensions/g;->a(Lcom/vk/navigation/o;Lcom/vk/navigation/o$a;)Lcom/vk/navigation/o;
+    invoke-static {v0, p1}, Lcom/vk/extensions/NavigatorExt;->a(Lcom/vk/navigation/Navigator;Lcom/vk/navigation/Navigator$a;)Lcom/vk/navigation/Navigator;
 
     const/16 p1, 0x2067
 
     .line 7
-    invoke-virtual {v0, p0, p1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v0, p0, p1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     :cond_0
     const/4 p1, 0x1
@@ -873,7 +873,7 @@
     invoke-virtual {v0, v1, p0}, Lcom/vk/stats/AppUseTime;->a(Lcom/vk/stats/AppUseTime$Section;Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onPause()V
 
     return-void
 .end method
@@ -882,7 +882,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onResume()V
 
     .line 2
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;
@@ -898,7 +898,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/c;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/BaseMvpFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;->getPresenter()Lcom/vk/profile/ui/photos/album_list/AlbumsListFragmentPresenter;
@@ -918,7 +918,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p2
 .end method
@@ -947,7 +947,7 @@
     :cond_0
     const-string v0, "recyclerView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

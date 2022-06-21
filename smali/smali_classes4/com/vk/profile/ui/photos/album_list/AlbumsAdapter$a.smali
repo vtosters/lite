@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter$a;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "AlbumsAdapter.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/dto/photo/PhotoAlbum;",
         ">;"
     }
@@ -50,7 +50,7 @@
 
     const v0, 0x7f0d0033
 
-    invoke-direct {p0, v0, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -105,7 +105,7 @@
     iput-object p2, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter$a;->f:Landroid/widget/ImageView;
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;->k()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;->k()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -115,24 +115,24 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     .line 7
     :cond_0
     iget-object p1, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter$a;->c:Lcom/vk/imageloader/view/VKImageView;
 
     .line 8
-    new-instance v0, Lcom/vk/core/drawable/g;
+    new-instance v0, Lcom/vk/core/drawable/LayerListDrawable;
 
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -140,9 +140,9 @@
 
     const-string v1, "itemView.context"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, p2}, Lcom/vk/core/drawable/g;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p2}, Lcom/vk/core/drawable/LayerListDrawable;-><init>(Landroid/content/Context;)V
 
     const p2, 0x7f04044d
 
@@ -153,17 +153,17 @@
 
     move-result v1
 
-    invoke-virtual {v0, p2, v1}, Lcom/vk/core/drawable/g;->b(IF)Lcom/vk/core/drawable/g;
+    invoke-virtual {v0, p2, v1}, Lcom/vk/core/drawable/LayerListDrawable;->b(IF)Lcom/vk/core/drawable/LayerListDrawable;
 
     const p2, 0x7f08039c
 
     const v1, 0x7f040450
 
     .line 10
-    invoke-virtual {v0, p2, v1}, Lcom/vk/core/drawable/g;->a(II)Lcom/vk/core/drawable/g;
+    invoke-virtual {v0, p2, v1}, Lcom/vk/core/drawable/LayerListDrawable;->a(II)Lcom/vk/core/drawable/LayerListDrawable;
 
     .line 11
-    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -174,9 +174,9 @@
     .locals 7
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
+    sget-object v0, Lcom/vk/core/util/MediaLoadingInfo;->b:Lcom/vk/core/util/MediaLoadingInfo;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/p0;->c()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/MediaLoadingInfo;->c()Z
 
     move-result v0
 
@@ -190,7 +190,7 @@
 
     const-string v3, "item.placeholderURL"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
@@ -248,7 +248,7 @@
 
     const-string v4, "item.privacy"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -298,7 +298,7 @@
     .line 7
     iget-object v0, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter$a;->f:Landroid/widget/ImageView;
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
@@ -308,7 +308,7 @@
     :cond_5
     iget-object v0, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter$a;->f:Landroid/widget/ImageView;
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v3, 0x8
 
@@ -320,7 +320,7 @@
 
     const-string v3, "title"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p1, Lcom/vk/dto/photo/PhotoAlbum;->f:Ljava/lang/String;
 
@@ -331,11 +331,11 @@
 
     const-string v3, "subtitle"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v4, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter$a;->e:Landroid/widget/TextView;
 
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
@@ -343,7 +343,7 @@
 
     const-string v4, "subtitle.context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 

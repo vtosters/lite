@@ -3,7 +3,7 @@
 .source "StoryChooserAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/d;
+.implements Lkotlin/jvm/b/Functions4;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/d<",
+        "Lkotlin/jvm/b/Functions4<",
         "Ljava/lang/Integer;",
         "Ljava/lang/Boolean;",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -72,7 +72,7 @@
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter$onCreateViewHolder$1;->a(IZI)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -83,19 +83,19 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter$onCreateViewHolder$1;->this$0:Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->j()Lcom/vk/stories/receivers/views/a;
+    invoke-virtual {v0}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->j()Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lb/h/r/b;->getPresenter()Lb/h/r/a;
+    invoke-interface {v0}, Lb/h/r/BaseContract1;->getPresenter()Lb/h/r/BaseContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stories/receivers/presenters/a;
+    check-cast v0, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/vk/stories/receivers/presenters/a;->a(IZI)V
+    invoke-interface {v0, p1, p2, p3}, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;->a(IZI)V
 
     :cond_0
     return-void

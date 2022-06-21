@@ -3,12 +3,12 @@
 .source "VkAuthModel.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/api/models/AuthResult;Lcom/vk/auth/api/commands/g;)Lc/a/m;
+    value = Lcom/vk/auth/VkAuthModel;->a(Lcom/vk/auth/api/models/AuthResult;Lcom/vk/auth/api/commands/GetExchangeLoginDataCommand;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,37 +57,37 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/execute/i$a;)Lcom/vk/auth/api/models/b;
+.method public final a(Lcom/vtosters/lite/api/execute/GetWallInfo$a;)Lcom/vk/auth/api/models/ExchangeLoginData;
     .locals 3
 
     .line 1
-    iget-object v0, p1, Lcom/vtosters/lite/api/execute/i$a;->d:Ljava/lang/String;
+    iget-object v0, p1, Lcom/vtosters/lite/api/execute/GetWallInfo$a;->d:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object p1, p1, Lcom/vtosters/lite/api/execute/i$a;->a:Lb/h/h/d/c;
+    iget-object p1, p1, Lcom/vtosters/lite/api/execute/GetWallInfo$a;->a:Lcom/vk/auth/api/VKAccount;
 
     .line 3
-    new-instance v1, Lcom/vk/auth/api/models/b;
+    new-instance v1, Lcom/vk/auth/api/models/ExchangeLoginData;
 
-    invoke-virtual {p1}, Lb/h/h/d/c;->C()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->C()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lb/h/h/d/c;->d0()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->d0()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v1, v2, p1, v0}, Lcom/vk/auth/api/models/b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, p1, v0}, Lcom/vk/auth/api/models/ExchangeLoginData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    sget-object p1, Lcom/vk/auth/api/models/b;->e:Lcom/vk/auth/api/models/b$a;
+    sget-object p1, Lcom/vk/auth/api/models/ExchangeLoginData;->e:Lcom/vk/auth/api/models/ExchangeLoginData$a;
 
-    invoke-virtual {p1}, Lcom/vk/auth/api/models/b$a;->a()Lcom/vk/auth/api/models/b;
+    invoke-virtual {p1}, Lcom/vk/auth/api/models/ExchangeLoginData$a;->a()Lcom/vk/auth/api/models/ExchangeLoginData;
 
     move-result-object v1
 
@@ -99,9 +99,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/execute/i$a;
+    check-cast p1, Lcom/vtosters/lite/api/execute/GetWallInfo$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/VkAuthModel$b;->a(Lcom/vtosters/lite/api/execute/i$a;)Lcom/vk/auth/api/models/b;
+    invoke-virtual {p0, p1}, Lcom/vk/auth/VkAuthModel$b;->a(Lcom/vtosters/lite/api/execute/GetWallInfo$a;)Lcom/vk/auth/api/models/ExchangeLoginData;
 
     move-result-object p1
 

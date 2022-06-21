@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/im/engine/models/dialogs/c;
+.field private final a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
 .field private final b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -35,12 +35,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/models/dialogs/c;Ljava/util/List;ZZI)V
+.method public constructor <init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;Ljava/util/List;ZZI)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/dialogs/c;",
+            "Lcom/vk/im/engine/models/dialogs/DialogApiModel;",
             "Ljava/util/List<",
             "+",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -51,7 +51,7 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->a:Lcom/vk/im/engine/models/dialogs/c;
+    iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->b:Ljava/util/List;
 
@@ -75,11 +75,11 @@
     return v0
 .end method
 
-.method public final b()Lcom/vk/im/engine/models/dialogs/c;
+.method public final b()Lcom/vk/im/engine/models/dialogs/DialogApiModel;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->a:Lcom/vk/im/engine/models/dialogs/c;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     return-object v0
 .end method
@@ -130,11 +130,11 @@
 
     check-cast p1, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->a:Lcom/vk/im/engine/models/dialogs/c;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
-    iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->a:Lcom/vk/im/engine/models/dialogs/c;
+    iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -144,7 +144,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->b:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -185,13 +185,13 @@
 .method public hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->a:Lcom/vk/im/engine/models/dialogs/c;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/c;->hashCode()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->hashCode()I
 
     move-result v0
 
@@ -258,7 +258,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->a:Lcom/vk/im/engine/models/dialogs/c;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryGetCmdRefreshHelper$a;->a:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

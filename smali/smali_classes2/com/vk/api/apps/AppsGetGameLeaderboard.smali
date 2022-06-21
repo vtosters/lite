@@ -1,5 +1,5 @@
 .class public Lcom/vk/api/apps/AppsGetGameLeaderboard;
-.super Lcom/vk/api/base/d;
+.super Lcom/vk/api/base/ApiRequest;
 .source "AppsGetGameLeaderboard.java"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/d<",
+        "Lcom/vk/api/base/ApiRequest<",
         "Lcom/vk/api/apps/AppsGetGameLeaderboard$LeaderboardData;",
         ">;"
     }
@@ -26,19 +26,19 @@
     const-string v0, "execute.getGameLeaderboard"
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     const-string v0, "app_id"
 
     .line 2
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "fields"
 
     const-string v0, "online_info,photo_100,photo_50,photo_200,sex"
 
     .line 3
-    invoke-virtual {p0, p1, v0}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -193,7 +193,7 @@
     .line 19
     sget-object v10, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;
 
-    invoke-interface {v10}, Lb/h/h/a$a;->c()I
+    invoke-interface {v10}, Lb/h/h/ModelConfig$a;->c()I
 
     move-result v10
 

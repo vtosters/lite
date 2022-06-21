@@ -63,7 +63,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/lists/DefaultErrorView$a;->a:Lcom/vk/lists/DefaultErrorView;
 
-    invoke-virtual {p1}, Lcom/vk/lists/a;->a()V
+    invoke-virtual {p1}, Lcom/vk/lists/AbstractErrorView;->a()V
 
     .line 3
     iget-object p1, p0, Lcom/vk/lists/DefaultErrorView$a;->a:Lcom/vk/lists/DefaultErrorView;

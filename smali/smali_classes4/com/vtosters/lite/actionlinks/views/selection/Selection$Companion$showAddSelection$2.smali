@@ -3,12 +3,12 @@
 .source "Selection.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;->a(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/k;)Lcom/vtosters/lite/actionlinks/views/selection/Selection$a;
+    value = Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;->a(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/ModalDialogCallback;)Lcom/vtosters/lite/actionlinks/views/selection/Selection$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;",
         ">;"
     }
 .end annotation
@@ -29,7 +29,7 @@
 # instance fields
 .field final synthetic $addListener:Lcom/vtosters/lite/actionlinks/AL$d;
 
-.field final synthetic $stateCallback:Lcom/vk/navigation/k;
+.field final synthetic $stateCallback:Lcom/vk/navigation/ModalDialogCallback;
 
 .field final synthetic $type:Lcom/vtosters/lite/actionlinks/AL$SourceType;
 
@@ -39,7 +39,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/k;)V
+.method constructor <init>(Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/ModalDialogCallback;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$2;->$view:Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;
@@ -50,7 +50,7 @@
 
     iput-object p4, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$2;->$type:Lcom/vtosters/lite/actionlinks/AL$SourceType;
 
-    iput-object p5, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$2;->$stateCallback:Lcom/vk/navigation/k;
+    iput-object p5, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$2;->$stateCallback:Lcom/vk/navigation/ModalDialogCallback;
 
     const/4 p1, 0x0
 
@@ -61,7 +61,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;
+.method public final invoke()Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;
     .locals 6
 
     .line 2
@@ -69,7 +69,7 @@
 
     iget-object v1, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$2;->$view:Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;
 
-    invoke-interface {v1}, Lcom/vk/cameraui/i/b;->getContext()Landroid/content/Context;
+    invoke-interface {v1}, Lcom/vk/cameraui/i/BaseView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -79,13 +79,13 @@
 
     iget-object v4, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$2;->$type:Lcom/vtosters/lite/actionlinks/AL$SourceType;
 
-    iget-object v5, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$2;->$stateCallback:Lcom/vk/navigation/k;
+    iget-object v5, p0, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$2;->$stateCallback:Lcom/vk/navigation/ModalDialogCallback;
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/AL$Companion;->c(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/k;)Lcom/vtosters/lite/actionlinks/views/fragments/wall/b;
+    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/AL$Companion;->c(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/ModalDialogCallback;)Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/b;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;
+    invoke-interface {v0}, Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall1;->getView()Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;
 
     move-result-object v0
 
@@ -96,7 +96,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$2;->invoke()Lcom/vtosters/lite/actionlinks/views/fragments/wall/c;
+    invoke-virtual {p0}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$2;->invoke()Lcom/vtosters/lite/actionlinks/views/fragments/wall/AddWall;
 
     move-result-object v0
 

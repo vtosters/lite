@@ -33,11 +33,11 @@
 
 
 # virtual methods
-.method protected a(Lcom/facebook/drawee/generic/b;)V
+.method protected a(Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;)V
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/imageloader/view/VKImageView;->a(Lcom/facebook/drawee/generic/b;)V
+    invoke-super {p0, p1}, Lcom/vk/imageloader/view/VKImageView;->a(Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;)V
 
     const/high16 v0, 0x40800000    # 4.0f
 
@@ -52,7 +52,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/b;->a(Lcom/facebook/drawee/generic/RoundingParams;)Lcom/facebook/drawee/generic/b;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(Lcom/facebook/drawee/generic/RoundingParams;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     return-void
 .end method

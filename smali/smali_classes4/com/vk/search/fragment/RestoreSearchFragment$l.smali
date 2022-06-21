@@ -3,12 +3,12 @@
 .source "RestoreSearchFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/search/fragment/RestoreSearchFragment;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/search/fragment/RestoreSearchFragment;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,9 +22,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/common/data/VKList<",
-        "Lcom/vk/common/i/b;",
+        "Lcom/vk/common/i/RecyclerItem;",
         ">;>;"
     }
 .end annotation
@@ -35,18 +35,18 @@
 
 .field final synthetic b:Z
 
-.field final synthetic c:Lcom/vk/lists/t;
+.field final synthetic c:Lcom/vk/lists/PaginationHelper;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/search/fragment/RestoreSearchFragment;ZLcom/vk/lists/t;)V
+.method constructor <init>(Lcom/vk/search/fragment/RestoreSearchFragment;ZLcom/vk/lists/PaginationHelper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment$l;->a:Lcom/vk/search/fragment/RestoreSearchFragment;
 
     iput-boolean p2, p0, Lcom/vk/search/fragment/RestoreSearchFragment$l;->b:Z
 
-    iput-object p3, p0, Lcom/vk/search/fragment/RestoreSearchFragment$l;->c:Lcom/vk/lists/t;
+    iput-object p3, p0, Lcom/vk/search/fragment/RestoreSearchFragment$l;->c:Lcom/vk/lists/PaginationHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -61,7 +61,7 @@
         value = {
             "(",
             "Lcom/vk/dto/common/data/VKList<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;)V"
         }
     .end annotation
@@ -84,16 +84,16 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->g(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->g(Ljava/util/List;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/search/fragment/RestoreSearchFragment$l;->c:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/search/fragment/RestoreSearchFragment$l;->c:Lcom/vk/lists/PaginationHelper;
 
     invoke-virtual {p1}, Lcom/vk/dto/common/data/VKList;->a()I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/t;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/PaginationHelper;->a(I)V
 
     return-void
 .end method

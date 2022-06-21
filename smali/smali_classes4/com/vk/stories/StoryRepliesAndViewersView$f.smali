@@ -1,5 +1,5 @@
 .class final Lcom/vk/stories/StoryRepliesAndViewersView$f;
-.super Lcom/vk/lists/j0;
+.super Lcom/vk/lists/SingleAdapter;
 .source "StoryRepliesAndViewersView.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/j0<",
+        "Lcom/vk/lists/SingleAdapter<",
         "Ljava/util/ArrayList<",
         "Lcom/vk/dto/stories/model/StoriesContainer;",
         ">;",
@@ -34,7 +34,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/j0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SingleAdapter;-><init>()V
 
     iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView$f;->b:Lcom/vk/newsfeed/StoriesBlocksEventController;
 
@@ -61,9 +61,9 @@
     .locals 0
 
     .line 1
-    iget-object p2, p0, Lcom/vk/lists/j0;->a:Ljava/lang/Object;
+    iget-object p2, p0, Lcom/vk/lists/SingleAdapter;->a:Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -109,7 +109,7 @@
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_VIEWER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v2}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -123,7 +123,7 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/view/View;->getPaddingLeft()I
 
@@ -139,7 +139,7 @@
 
     iget-object v3, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getPaddingRight()I
 
@@ -147,7 +147,7 @@
 
     iget-object v4, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/view/View;->getPaddingBottom()I
 

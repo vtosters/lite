@@ -3,10 +3,10 @@
 .source "GameCardActivity.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/fragments/e1$i;
+.implements Lcom/vtosters/lite/general/fragments/GameCardFragment$i;
 .implements Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;
 .implements Lcom/vtosters/lite/ui/widget/SlidingUpPanelLayout$e;
-.implements Lcom/vk/navigation/u;
+.implements Lcom/vk/navigation/ResulterProvider;
 
 
 # annotations
@@ -36,7 +36,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/navigation/c;",
+            "Lcom/vk/navigation/ActivityResulter;",
             ">;"
         }
     .end annotation
@@ -52,7 +52,7 @@
 
 .field private L:Landroid/widget/TextView;
 
-.field private M:Lcom/vk/api/apps/e0;
+.field private M:Lcom/vk/api/apps/CatalogLoader;
 
 .field private N:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -346,7 +346,7 @@
 
     check-cast p3, Lcom/vk/dto/common/data/ApiApplication;
 
-    invoke-static {p0, p3, p1, p2}, Lcom/vtosters/lite/data/p;->a(Landroid/content/Context;Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p3, p1, p2}, Lcom/vtosters/lite/data/Games;->a(Landroid/content/Context;Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
@@ -675,7 +675,7 @@
 
     invoke-direct {p1, p0, v1, v2, v3}, Lcom/vtosters/lite/GameCardActivity$a;-><init>(Lcom/vtosters/lite/GameCardActivity;Ljava/util/List;Lcom/vk/dto/common/data/CatalogInfo;Z)V
 
-    iput-object p1, p0, Lcom/vtosters/lite/GameCardActivity;->M:Lcom/vk/api/apps/e0;
+    iput-object p1, p0, Lcom/vtosters/lite/GameCardActivity;->M:Lcom/vk/api/apps/CatalogLoader;
 
     .line 25
     :cond_7
@@ -705,9 +705,9 @@
     if-nez p1, :cond_9
 
     .line 28
-    iget-object p1, p0, Lcom/vtosters/lite/GameCardActivity;->M:Lcom/vk/api/apps/e0;
+    iget-object p1, p0, Lcom/vtosters/lite/GameCardActivity;->M:Lcom/vk/api/apps/CatalogLoader;
 
-    invoke-virtual {p1}, Lcom/vk/api/apps/e0;->a()Z
+    invoke-virtual {p1}, Lcom/vk/api/apps/CatalogLoader;->a()Z
 
     .line 29
     :cond_9
@@ -885,7 +885,7 @@
 
     iget v0, v0, Lcom/vk/dto/common/data/ApiApplication;->a:I
 
-    invoke-static {p0, v0}, Lcom/vtosters/lite/data/p;->a(Landroid/content/Context;I)Lio/reactivex/disposables/b;
+    invoke-static {p0, v0}, Lcom/vtosters/lite/data/Games;->a(Landroid/content/Context;I)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -989,12 +989,12 @@
 
     .line 35
     :cond_0
-    iget-object v1, p0, Lcom/vtosters/lite/GameCardActivity;->M:Lcom/vk/api/apps/e0;
+    iget-object v1, p0, Lcom/vtosters/lite/GameCardActivity;->M:Lcom/vk/api/apps/CatalogLoader;
 
     if-eqz v1, :cond_1
 
     .line 36
-    invoke-virtual {v1, p1}, Lcom/vk/api/apps/e0;->a(Lcom/vk/dto/common/data/ApiApplication;)V
+    invoke-virtual {v1, p1}, Lcom/vk/api/apps/CatalogLoader;->a(Lcom/vk/dto/common/data/ApiApplication;)V
 
     .line 37
     :cond_1
@@ -1032,7 +1032,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/navigation/c;)V
+.method public a(Lcom/vk/navigation/ActivityResulter;)V
     .locals 1
 
     .line 4
@@ -1047,7 +1047,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/navigation/c;)V
+.method public b(Lcom/vk/navigation/ActivityResulter;)V
     .locals 1
 
     .line 3
@@ -1121,10 +1121,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/navigation/c;
+    check-cast v1, Lcom/vk/navigation/ActivityResulter;
 
     .line 4
-    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/c;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/ActivityResulter;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -1442,20 +1442,20 @@
     if-eqz p1, :cond_4
 
     .line 24
-    new-instance p1, Lcom/vk/api/apps/q;
+    new-instance p1, Lcom/vk/api/apps/AppsGetGenres;
 
-    invoke-direct {p1}, Lcom/vk/api/apps/q;-><init>()V
+    invoke-direct {p1}, Lcom/vk/api/apps/AppsGetGenres;-><init>()V
 
     new-instance v0, Lcom/vtosters/lite/GameCardActivity$c;
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/GameCardActivity$c;-><init>(Lcom/vtosters/lite/GameCardActivity;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {p1, v0}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
     .line 25
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     :cond_4
     return-void
@@ -1491,7 +1491,7 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/GameCardActivity;->M:Lcom/vk/api/apps/e0;
+    iget-object v0, p0, Lcom/vtosters/lite/GameCardActivity;->M:Lcom/vk/api/apps/CatalogLoader;
 
     if-eqz v0, :cond_1
 
@@ -1510,9 +1510,9 @@
     if-le p1, v0, :cond_1
 
     .line 5
-    iget-object v0, p0, Lcom/vtosters/lite/GameCardActivity;->M:Lcom/vk/api/apps/e0;
+    iget-object v0, p0, Lcom/vtosters/lite/GameCardActivity;->M:Lcom/vk/api/apps/CatalogLoader;
 
-    invoke-virtual {v0}, Lcom/vk/api/apps/e0;->a()Z
+    invoke-virtual {v0}, Lcom/vk/api/apps/CatalogLoader;->a()Z
 
     .line 6
     :cond_1

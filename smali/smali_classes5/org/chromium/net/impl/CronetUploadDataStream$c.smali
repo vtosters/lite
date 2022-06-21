@@ -47,11 +47,11 @@
     .line 2
     iget-object v0, p0, Lorg/chromium/net/impl/CronetUploadDataStream$c;->a:Lorg/chromium/net/impl/CronetUploadDataStream;
 
-    invoke-static {v0}, Lorg/chromium/net/impl/CronetUploadDataStream;->e(Lorg/chromium/net/impl/CronetUploadDataStream;)Lorg/chromium/net/impl/r;
+    invoke-static {v0}, Lorg/chromium/net/impl/CronetUploadDataStream;->e(Lorg/chromium/net/impl/CronetUploadDataStream;)Lorg/chromium/net/impl/VersionSafeCallbacks4;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lorg/chromium/net/impl/r;->close()V
+    invoke-virtual {v0}, Lorg/chromium/net/impl/VersionSafeCallbacks4;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -75,7 +75,7 @@
 
     const-string v0, "Exception thrown when closing"
 
-    invoke-static {v1, v0, v2}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_0
     return-void

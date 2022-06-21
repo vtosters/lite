@@ -3,7 +3,7 @@
 .source "CommunityFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/n;
+.implements Lcom/vk/core/ui/MilkshakeProvider;
 
 
 # annotations
@@ -41,11 +41,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/community/CommunityFragment$i;->a:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->d(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/profile/adapter/a;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->d(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 

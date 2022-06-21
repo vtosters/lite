@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/main/VkAuthState;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/main/VkAuthState;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     invoke-static {v0}, Lcom/vk/auth/main/VkAuthState;->a(Lcom/vk/auth/main/VkAuthState;)Ljava/util/Map;
@@ -90,7 +90,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/main/VkAuthState;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/main/VkAuthState;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     invoke-static {v0}, Lcom/vk/auth/main/VkAuthState;->a(Lcom/vk/auth/main/VkAuthState;)Ljava/util/Map;

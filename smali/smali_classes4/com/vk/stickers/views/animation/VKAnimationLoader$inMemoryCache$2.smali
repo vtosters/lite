@@ -3,7 +3,7 @@
 .source "VKAnimationLoader.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Landroid/util/LruCache<",
         "Ljava/lang/String;",
-        "Lcom/airbnb/lottie/d;",
+        "Lcom/airbnb/lottie/LottieComposition;",
         ">;>;"
     }
 .end annotation
@@ -64,7 +64,7 @@
             "()",
             "Landroid/util/LruCache<",
             "Ljava/lang/String;",
-            "Lcom/airbnb/lottie/d;",
+            "Lcom/airbnb/lottie/LottieComposition;",
             ">;"
         }
     .end annotation

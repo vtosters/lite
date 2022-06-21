@@ -16,74 +16,74 @@
     .end annotation
 .end field
 
-.field private final c:Lcom/vk/im/engine/internal/sync/d/a;
+.field private final c:Lcom/vk/im/engine/internal/sync/d/LongPollSyncManager;
 
-.field private final d:Lcom/vk/im/engine/internal/sync/c/a;
+.field private final d:Lcom/vk/im/engine/internal/sync/c/AccountInfoSyncManager;
 
 .field private final e:Lcom/vk/im/engine/internal/sync/dialogs/DialogsSyncManager;
 
 .field private final f:Lcom/vk/im/engine/internal/sync/msgs/MsgsSyncManager;
 
-.field private final g:Lcom/vk/im/engine/d;
+.field private final g:Lcom/vk/im/engine/ImEnvironment;
 
-.field private final h:Lcom/vk/im/engine/internal/sync/b;
+.field private final h:Lcom/vk/im/engine/internal/sync/ImBgSyncManagerEventListener;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/d;Lcom/vk/im/engine/internal/sync/b;)V
+.method public constructor <init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/internal/sync/ImBgSyncManagerEventListener;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->g:Lcom/vk/im/engine/d;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->g:Lcom/vk/im/engine/ImEnvironment;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->h:Lcom/vk/im/engine/internal/sync/b;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->h:Lcom/vk/im/engine/internal/sync/ImBgSyncManagerEventListener;
 
     .line 2
-    new-instance p1, Lcom/vk/im/engine/internal/sync/d/a;
+    new-instance p1, Lcom/vk/im/engine/internal/sync/d/LongPollSyncManager;
 
-    iget-object p2, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->g:Lcom/vk/im/engine/d;
+    iget-object p2, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->g:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-direct {p1, p2}, Lcom/vk/im/engine/internal/sync/d/a;-><init>(Lcom/vk/im/engine/d;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/engine/internal/sync/d/LongPollSyncManager;-><init>(Lcom/vk/im/engine/ImEnvironment;)V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->c:Lcom/vk/im/engine/internal/sync/d/a;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->c:Lcom/vk/im/engine/internal/sync/d/LongPollSyncManager;
 
     .line 3
-    new-instance p1, Lcom/vk/im/engine/internal/sync/c/a;
+    new-instance p1, Lcom/vk/im/engine/internal/sync/c/AccountInfoSyncManager;
 
-    iget-object p2, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->g:Lcom/vk/im/engine/d;
+    iget-object p2, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->g:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-direct {p1, p2}, Lcom/vk/im/engine/internal/sync/c/a;-><init>(Lcom/vk/im/engine/d;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/engine/internal/sync/c/AccountInfoSyncManager;-><init>(Lcom/vk/im/engine/ImEnvironment;)V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->d:Lcom/vk/im/engine/internal/sync/c/a;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->d:Lcom/vk/im/engine/internal/sync/c/AccountInfoSyncManager;
 
     .line 4
     new-instance p1, Lcom/vk/im/engine/internal/sync/dialogs/DialogsSyncManager;
 
-    iget-object p2, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->g:Lcom/vk/im/engine/d;
+    iget-object p2, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->g:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-direct {p1, p2}, Lcom/vk/im/engine/internal/sync/dialogs/DialogsSyncManager;-><init>(Lcom/vk/im/engine/d;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/engine/internal/sync/dialogs/DialogsSyncManager;-><init>(Lcom/vk/im/engine/ImEnvironment;)V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->e:Lcom/vk/im/engine/internal/sync/dialogs/DialogsSyncManager;
 
     .line 5
     new-instance p1, Lcom/vk/im/engine/internal/sync/msgs/MsgsSyncManager;
 
-    iget-object p2, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->g:Lcom/vk/im/engine/d;
+    iget-object p2, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->g:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-direct {p1, p2}, Lcom/vk/im/engine/internal/sync/msgs/MsgsSyncManager;-><init>(Lcom/vk/im/engine/d;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/engine/internal/sync/msgs/MsgsSyncManager;-><init>(Lcom/vk/im/engine/ImEnvironment;)V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->f:Lcom/vk/im/engine/internal/sync/msgs/MsgsSyncManager;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/sync/ImBgSyncManager;)Lcom/vk/im/engine/internal/sync/c/a;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/sync/ImBgSyncManager;)Lcom/vk/im/engine/internal/sync/c/AccountInfoSyncManager;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->d:Lcom/vk/im/engine/internal/sync/c/a;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->d:Lcom/vk/im/engine/internal/sync/c/AccountInfoSyncManager;
 
     return-object p0
 .end method
@@ -105,21 +105,21 @@
     invoke-direct {v1, p0}, Lcom/vk/im/engine/internal/sync/ImBgSyncManager$startPrimarySyncFull$doOnClearCacheRequested$1;-><init>(Lcom/vk/im/engine/internal/sync/ImBgSyncManager;)V
 
     .line 12
-    iget-object v2, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->c:Lcom/vk/im/engine/internal/sync/d/a;
+    iget-object v2, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->c:Lcom/vk/im/engine/internal/sync/d/LongPollSyncManager;
 
-    invoke-virtual {v2, p1, v0, v1}, Lcom/vk/im/engine/internal/sync/d/a;->a(Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v2, p1, v0, v1}, Lcom/vk/im/engine/internal/sync/d/LongPollSyncManager;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     .line 13
-    iget-object p1, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->c:Lcom/vk/im/engine/internal/sync/d/a;
+    iget-object p1, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->c:Lcom/vk/im/engine/internal/sync/d/LongPollSyncManager;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/sync/d/a;->a()Z
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/sync/d/LongPollSyncManager;->a()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 14
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -137,11 +137,11 @@
     throw p1
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/engine/internal/sync/ImBgSyncManager;)Lcom/vk/im/engine/d;
+.method public static final synthetic b(Lcom/vk/im/engine/internal/sync/ImBgSyncManager;)Lcom/vk/im/engine/ImEnvironment;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->g:Lcom/vk/im/engine/d;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->g:Lcom/vk/im/engine/ImEnvironment;
 
     return-object p0
 .end method
@@ -153,7 +153,7 @@
 
     .line 3
     :try_start_0
-    iget-object v0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->c:Lcom/vk/im/engine/internal/sync/d/a;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->c:Lcom/vk/im/engine/internal/sync/d/LongPollSyncManager;
 
     .line 4
     sget-object v1, Lcom/vk/im/engine/internal/sync/ImBgSyncManager$startPrimarySyncLite$1;->a:Lcom/vk/im/engine/internal/sync/ImBgSyncManager$startPrimarySyncLite$1;
@@ -164,12 +164,12 @@
     invoke-direct {v2, p0}, Lcom/vk/im/engine/internal/sync/ImBgSyncManager$startPrimarySyncLite$2;-><init>(Lcom/vk/im/engine/internal/sync/ImBgSyncManager;)V
 
     .line 6
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/im/engine/internal/sync/d/a;->a(Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/im/engine/internal/sync/d/LongPollSyncManager;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     .line 7
-    iget-object p1, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->d:Lcom/vk/im/engine/internal/sync/c/a;
+    iget-object p1, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->d:Lcom/vk/im/engine/internal/sync/c/AccountInfoSyncManager;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/sync/c/a;->a()V
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/sync/c/AccountInfoSyncManager;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -186,11 +186,11 @@
     throw p1
 .end method
 
-.method public static final synthetic c(Lcom/vk/im/engine/internal/sync/ImBgSyncManager;)Lcom/vk/im/engine/internal/sync/b;
+.method public static final synthetic c(Lcom/vk/im/engine/internal/sync/ImBgSyncManager;)Lcom/vk/im/engine/internal/sync/ImBgSyncManagerEventListener;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->h:Lcom/vk/im/engine/internal/sync/b;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->h:Lcom/vk/im/engine/internal/sync/ImBgSyncManagerEventListener;
 
     return-object p0
 .end method
@@ -241,14 +241,14 @@
     iput-object v0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->b:Ljava/lang/String;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->d:Lcom/vk/im/engine/internal/sync/c/a;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->d:Lcom/vk/im/engine/internal/sync/c/AccountInfoSyncManager;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/sync/c/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/sync/c/AccountInfoSyncManager;->a()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->c:Lcom/vk/im/engine/internal/sync/d/a;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->c:Lcom/vk/im/engine/internal/sync/d/LongPollSyncManager;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/sync/d/a;->b()Ljava/util/concurrent/CountDownLatch;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/sync/d/LongPollSyncManager;->b()Ljava/util/concurrent/CountDownLatch;
 
     move-result-object v0
     :try_end_0

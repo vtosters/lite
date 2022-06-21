@@ -3,7 +3,7 @@
 .source "UserDetailsItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/util/ArrayList<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
@@ -87,7 +87,7 @@
 
     const-string v3, "context.resources.getStr\u2026ersonal_politics_options)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     iget v3, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->J0:I
@@ -99,7 +99,7 @@
     if-ge v4, v5, :cond_0
 
     .line 5
-    new-instance v4, Lcom/vk/profile/adapter/items/o;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v5, 0x7f120a35
 
@@ -109,9 +109,9 @@
 
     const-string v3, "opts[profile.political - 1]"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -125,7 +125,7 @@
 
     const-string v4, "profile.religion"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
@@ -144,15 +144,15 @@
     if-eqz v1, :cond_2
 
     .line 7
-    new-instance v1, Lcom/vk/profile/adapter/items/o;
+    new-instance v1, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v5, 0x7f120a36
 
     iget-object v6, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->H0:Ljava/lang/String;
 
-    invoke-static {v6, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, v5, v6}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v1, v5, v6}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -177,7 +177,7 @@
 
     const-string v4, "context.resources.getStr\u2026ay.personal_life_options)"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     iget v4, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->K0:I
@@ -189,7 +189,7 @@
     if-ge v5, v6, :cond_3
 
     .line 11
-    new-instance v5, Lcom/vk/profile/adapter/items/o;
+    new-instance v5, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v6, 0x7f120a33
 
@@ -199,9 +199,9 @@
 
     const-string v4, "opts[profile.lifeMain - 1]"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v5, v6, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v5, v6, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -226,7 +226,7 @@
 
     const-string v4, "context.resources.getStr\u2026.personal_people_options)"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     iget v4, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->L0:I
@@ -238,7 +238,7 @@
     if-ge v5, v6, :cond_4
 
     .line 15
-    new-instance v5, Lcom/vk/profile/adapter/items/o;
+    new-instance v5, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v6, 0x7f120a34
 
@@ -248,9 +248,9 @@
 
     const-string v4, "opts[profile.peopleMain - 1]"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v5, v6, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v5, v6, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -275,7 +275,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 18
     iget v6, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->M0:I
@@ -287,7 +287,7 @@
     if-ge v7, v8, :cond_5
 
     .line 19
-    new-instance v7, Lcom/vk/profile/adapter/items/o;
+    new-instance v7, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v8, 0x7f120a37
 
@@ -297,9 +297,9 @@
 
     const-string v6, "opts[profile.smoking - 1]"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v7, v8, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v7, v8, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -320,7 +320,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 22
     iget v4, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->N0:I
@@ -332,7 +332,7 @@
     if-ge v5, v6, :cond_6
 
     .line 23
-    new-instance v5, Lcom/vk/profile/adapter/items/o;
+    new-instance v5, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v6, 0x7f120a30
 
@@ -342,9 +342,9 @@
 
     const-string v4, "opts[profile.alcohol - 1]"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v5, v6, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v5, v6, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -356,7 +356,7 @@
 
     const-string v4, "profile.inspiredBy"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
@@ -375,15 +375,15 @@
     if-eqz v1, :cond_8
 
     .line 25
-    new-instance v1, Lcom/vk/profile/adapter/items/o;
+    new-instance v1, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v5, 0x7f120a31
 
     iget-object v6, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->I0:Ljava/lang/String;
 
-    invoke-static {v6, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, v5, v6}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v1, v5, v6}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -394,15 +394,15 @@
     if-eqz v1, :cond_9
 
     .line 27
-    new-instance v4, Lcom/vk/profile/adapter/items/o;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v5, 0x7f120bcd
 
     const-string v6, "profile.activities"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -413,15 +413,15 @@
     if-eqz v1, :cond_a
 
     .line 29
-    new-instance v4, Lcom/vk/profile/adapter/items/o;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v5, 0x7f120bc4
 
     const-string v6, "profile.interests"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -432,15 +432,15 @@
     if-eqz v1, :cond_b
 
     .line 31
-    new-instance v4, Lcom/vk/profile/adapter/items/o;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v5, 0x7f120bcb
 
     const-string v6, "profile.music"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -451,15 +451,15 @@
     if-eqz v1, :cond_c
 
     .line 33
-    new-instance v4, Lcom/vk/profile/adapter/items/o;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v5, 0x7f120bc9
 
     const-string v6, "profile.movies"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -470,15 +470,15 @@
     if-eqz v1, :cond_d
 
     .line 35
-    new-instance v4, Lcom/vk/profile/adapter/items/o;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v5, 0x7f120be6
 
     const-string v6, "profile.tv"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -489,15 +489,15 @@
     if-eqz v1, :cond_e
 
     .line 37
-    new-instance v4, Lcom/vk/profile/adapter/items/o;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v5, 0x7f120b9d
 
     const-string v6, "profile.books"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -508,15 +508,15 @@
     if-eqz v1, :cond_f
 
     .line 39
-    new-instance v4, Lcom/vk/profile/adapter/items/o;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v5, 0x7f120bb4
 
     const-string v6, "profile.games"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -527,15 +527,15 @@
     if-eqz v1, :cond_10
 
     .line 41
-    new-instance v4, Lcom/vk/profile/adapter/items/o;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v5, 0x7f120bd0
 
     const-string v6, "profile.quotations"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v4, v5, v1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -546,15 +546,15 @@
     if-eqz p1, :cond_11
 
     .line 43
-    new-instance v1, Lcom/vk/profile/adapter/items/o;
+    new-instance v1, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v4, 0x7f120b8a
 
     const-string v5, "profile.about"
 
-    invoke-static {p1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, v4, p1}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v1, v4, p1}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -569,7 +569,7 @@
     if-eqz p1, :cond_12
 
     .line 45
-    new-instance p1, Lcom/vk/profile/adapter/items/n;
+    new-instance p1, Lcom/vk/profile/adapter/items/DetailsHeaderItem;
 
     const v5, 0x7f120bc1
 
@@ -583,7 +583,7 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v4 .. v9}, Lcom/vk/profile/adapter/items/n;-><init>(ILjava/lang/String;Ljava/lang/Runnable;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/profile/adapter/items/DetailsHeaderItem;-><init>(ILjava/lang/String;Ljava/lang/Runnable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v0, v3, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 

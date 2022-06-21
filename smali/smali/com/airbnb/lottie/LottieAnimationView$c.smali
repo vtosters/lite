@@ -1,11 +1,11 @@
 .class Lcom/airbnb/lottie/LottieAnimationView$c;
-.super Lcom/airbnb/lottie/v/c;
+.super Lcom/airbnb/lottie/v/LottieValueCallback;
 .source "LottieAnimationView.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/airbnb/lottie/LottieAnimationView;->a(Lcom/airbnb/lottie/model/d;Ljava/lang/Object;Lcom/airbnb/lottie/v/e;)V
+    value = Lcom/airbnb/lottie/LottieAnimationView;->a(Lcom/airbnb/lottie/model/KeyPath;Ljava/lang/Object;Lcom/airbnb/lottie/v/SimpleLottieValueCallback;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,44 +15,44 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/airbnb/lottie/v/c<",
+        "Lcom/airbnb/lottie/v/LottieValueCallback<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic c:Lcom/airbnb/lottie/v/e;
+.field final synthetic c:Lcom/airbnb/lottie/v/SimpleLottieValueCallback;
 
 
 # direct methods
-.method constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;Lcom/airbnb/lottie/v/e;)V
+.method constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;Lcom/airbnb/lottie/v/SimpleLottieValueCallback;)V
     .locals 0
 
     .line 1
-    iput-object p2, p0, Lcom/airbnb/lottie/LottieAnimationView$c;->c:Lcom/airbnb/lottie/v/e;
+    iput-object p2, p0, Lcom/airbnb/lottie/LottieAnimationView$c;->c:Lcom/airbnb/lottie/v/SimpleLottieValueCallback;
 
-    invoke-direct {p0}, Lcom/airbnb/lottie/v/c;-><init>()V
+    invoke-direct {p0}, Lcom/airbnb/lottie/v/LottieValueCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/airbnb/lottie/v/b;)Ljava/lang/Object;
+.method public a(Lcom/airbnb/lottie/v/LottieFrameInfo;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/airbnb/lottie/v/b<",
+            "Lcom/airbnb/lottie/v/LottieFrameInfo<",
             "TT;>;)TT;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$c;->c:Lcom/airbnb/lottie/v/e;
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$c;->c:Lcom/airbnb/lottie/v/SimpleLottieValueCallback;
 
-    invoke-interface {v0, p1}, Lcom/airbnb/lottie/v/e;->a(Lcom/airbnb/lottie/v/b;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lcom/airbnb/lottie/v/SimpleLottieValueCallback;->a(Lcom/airbnb/lottie/v/LottieFrameInfo;)Ljava/lang/Object;
 
     move-result-object p1
 

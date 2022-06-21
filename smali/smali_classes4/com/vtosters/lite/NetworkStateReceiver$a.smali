@@ -3,7 +3,7 @@
 .source "NetworkStateReceiver.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vtosters/lite/api/execute/i$a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vtosters/lite/api/execute/GetWallInfo$a;",
         ">;"
     }
 .end annotation
@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vtosters/lite/api/execute/i$a;)V
+.method public a(Lcom/vtosters/lite/api/execute/GetWallInfo$a;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -57,7 +57,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, p1, v1}, Lcom/vtosters/lite/NetworkStateReceiver;->a(Landroid/content/Context;Lcom/vtosters/lite/api/execute/i$a;Z)V
+    invoke-static {v0, p1, v1}, Lcom/vtosters/lite/NetworkStateReceiver;->a(Landroid/content/Context;Lcom/vtosters/lite/api/execute/GetWallInfo$a;Z)V
 
     return-void
 .end method
@@ -71,9 +71,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/execute/i$a;
+    check-cast p1, Lcom/vtosters/lite/api/execute/GetWallInfo$a;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/NetworkStateReceiver$a;->a(Lcom/vtosters/lite/api/execute/i$a;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/NetworkStateReceiver$a;->a(Lcom/vtosters/lite/api/execute/GetWallInfo$a;)V
 
     return-void
 .end method

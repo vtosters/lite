@@ -1041,7 +1041,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/sharing/target/b;-><init>(Lcom/vk/sharing/target/Target;)V
 
-    invoke-static {v0, v1}, Lkotlin/collections/l;->b(Ljava/lang/Iterable;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lkotlin/collections/l;->b(Ljava/lang/Iterable;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object v0
 

@@ -18,11 +18,11 @@
 
 .field private static b:I
 
-.field private static final c:Lcom/vk/log/c/a;
+.field private static final c:Lcom/vk/log/c/CollectionTargets;
 
 .field private static d:Lcom/vk/log/settings/LoggerSettings;
 
-.field private static e:Lcom/vk/log/settings/a;
+.field private static e:Lcom/vk/log/settings/FileSettings;
 
 .field private static f:Lcom/vk/log/L$a;
 
@@ -46,11 +46,11 @@
     sput v0, Lcom/vk/log/L;->b:I
 
     .line 3
-    new-instance v0, Lcom/vk/log/c/a;
+    new-instance v0, Lcom/vk/log/c/CollectionTargets;
 
-    invoke-direct {v0}, Lcom/vk/log/c/a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/log/c/CollectionTargets;-><init>()V
 
-    sput-object v0, Lcom/vk/log/L;->c:Lcom/vk/log/c/a;
+    sput-object v0, Lcom/vk/log/L;->c:Lcom/vk/log/c/CollectionTargets;
 
     return-void
 .end method
@@ -87,13 +87,13 @@
     const-string v4, "s"
 
     .line 41
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {v4, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -111,7 +111,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -180,7 +180,7 @@
 
     const-string v3, "append(value)"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lkotlin/text/l;->a(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
 
@@ -196,7 +196,7 @@
 
     const-string v0, "sb.toString()"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
@@ -305,7 +305,7 @@
 
     const-string v5, "builder.toString()"
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 24
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -314,7 +314,7 @@
 
     const-string v8, "Thread.currentThread()"
 
-    invoke-static {v6, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object/from16 v8, p4
 
@@ -373,7 +373,7 @@
 
     const-string v6, "element.className"
 
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -424,7 +424,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -468,7 +468,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -486,22 +486,22 @@
 
     move-result-object v4
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-nez v2, :cond_7
 
     .line 36
-    sget-object v2, Lcom/vk/log/L;->c:Lcom/vk/log/c/a;
+    sget-object v2, Lcom/vk/log/L;->c:Lcom/vk/log/c/CollectionTargets;
 
-    invoke-virtual {v2, v1, v3, v4}, Lcom/vk/log/c/a;->a(Lcom/vk/log/L$LogType;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v1, v3, v4}, Lcom/vk/log/c/CollectionTargets;->a(Lcom/vk/log/L$LogType;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
     .line 37
     :cond_7
-    sget-object v5, Lcom/vk/log/L;->c:Lcom/vk/log/c/a;
+    sget-object v5, Lcom/vk/log/L;->c:Lcom/vk/log/c/CollectionTargets;
 
-    invoke-virtual {v5, v1, v3, v4, v2}, Lcom/vk/log/c/f;->a(Lcom/vk/log/L$LogType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v5, v1, v3, v4, v2}, Lcom/vk/log/c/LogTarget;->a(Lcom/vk/log/L$LogType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_3
     return-void
@@ -510,7 +510,7 @@
     const-string v1, "loggerSetting"
 
     .line 38
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v8
 
@@ -576,7 +576,7 @@
     :cond_1
     const-string p0, "loggerSetting"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -599,7 +599,7 @@
 
     const-string p5, "L::class.java.name"
 
-    invoke-static {p4, p5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, p5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/log/L;->a(Lcom/vk/log/L$LogType;Ljava/lang/Throwable;[Ljava/lang/Object;Ljava/lang/String;)V
@@ -634,7 +634,7 @@
     :cond_0
     const-string p1, "loggerSetting"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -777,7 +777,7 @@
     :cond_0
     const-string p1, "loggerSetting"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -799,11 +799,11 @@
     if-eqz v0, :cond_0
 
     .line 4
-    sget-object v0, Lcom/vk/log/L;->e:Lcom/vk/log/settings/a;
+    sget-object v0, Lcom/vk/log/L;->e:Lcom/vk/log/settings/FileSettings;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/log/settings/a;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/log/settings/FileSettings;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -858,17 +858,17 @@
     if-nez p4, :cond_1
 
     .line 9
-    sget-object p4, Lcom/vk/log/L;->c:Lcom/vk/log/c/a;
+    sget-object p4, Lcom/vk/log/L;->c:Lcom/vk/log/c/CollectionTargets;
 
-    invoke-virtual {p4, p1, p2, p3}, Lcom/vk/log/c/a;->a(Lcom/vk/log/L$LogType;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p4, p1, p2, p3}, Lcom/vk/log/c/CollectionTargets;->a(Lcom/vk/log/L$LogType;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 10
     :cond_1
-    sget-object v0, Lcom/vk/log/L;->c:Lcom/vk/log/c/a;
+    sget-object v0, Lcom/vk/log/L;->c:Lcom/vk/log/c/CollectionTargets;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/log/c/f;->a(Lcom/vk/log/L$LogType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/log/c/LogTarget;->a(Lcom/vk/log/L$LogType;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
     :goto_0
@@ -952,7 +952,7 @@
     const-string v0, "loggerSetting"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1106,9 +1106,9 @@
     .locals 7
 
     .line 1
-    sget-object v0, Lcom/vk/log/L;->c:Lcom/vk/log/c/a;
+    sget-object v0, Lcom/vk/log/L;->c:Lcom/vk/log/c/CollectionTargets;
 
-    invoke-virtual {v0}, Lcom/vk/log/c/a;->b()V
+    invoke-virtual {v0}, Lcom/vk/log/c/CollectionTargets;->b()V
 
     const/4 v0, 0x1
 
@@ -1132,17 +1132,17 @@
     if-eqz v2, :cond_1
 
     .line 4
-    sget-object v2, Lcom/vk/log/L;->c:Lcom/vk/log/c/a;
+    sget-object v2, Lcom/vk/log/L;->c:Lcom/vk/log/c/CollectionTargets;
 
-    new-instance v3, Lcom/vk/log/c/c;
+    new-instance v3, Lcom/vk/log/c/ConsoleTarget;
 
-    invoke-direct {v3}, Lcom/vk/log/c/c;-><init>()V
+    invoke-direct {v3}, Lcom/vk/log/c/ConsoleTarget;-><init>()V
 
-    invoke-virtual {v2, v3}, Lcom/vk/log/c/a;->a(Lcom/vk/log/c/f;)Z
+    invoke-virtual {v2, v3}, Lcom/vk/log/c/CollectionTargets;->a(Lcom/vk/log/c/LogTarget;)Z
 
     .line 5
     :cond_1
-    sget-object v2, Lcom/vk/log/L;->e:Lcom/vk/log/settings/a;
+    sget-object v2, Lcom/vk/log/L;->e:Lcom/vk/log/settings/FileSettings;
 
     if-eqz v2, :cond_8
 
@@ -1160,7 +1160,7 @@
 
     .line 6
     :cond_2
-    sget-object v1, Lcom/vk/log/L;->e:Lcom/vk/log/settings/a;
+    sget-object v1, Lcom/vk/log/L;->e:Lcom/vk/log/settings/FileSettings;
 
     const/4 v2, 0x0
 
@@ -1178,17 +1178,17 @@
     if-eqz v3, :cond_3
 
     .line 8
-    sget-object v3, Lcom/vk/log/L;->c:Lcom/vk/log/c/a;
+    sget-object v3, Lcom/vk/log/L;->c:Lcom/vk/log/c/CollectionTargets;
 
-    new-instance v5, Lcom/vk/log/c/d;
+    new-instance v5, Lcom/vk/log/c/FileTarget;
 
-    new-instance v6, Lcom/vk/log/e/d;
+    new-instance v6, Lcom/vk/log/e/OneFileWritable;
 
-    invoke-direct {v6}, Lcom/vk/log/e/d;-><init>()V
+    invoke-direct {v6}, Lcom/vk/log/e/OneFileWritable;-><init>()V
 
-    invoke-direct {v5, v1, v6}, Lcom/vk/log/c/d;-><init>(Lcom/vk/log/settings/a;Lcom/vk/log/e/b;)V
+    invoke-direct {v5, v1, v6}, Lcom/vk/log/c/FileTarget;-><init>(Lcom/vk/log/settings/FileSettings;Lcom/vk/log/e/FileWritable;)V
 
-    invoke-virtual {v3, v5}, Lcom/vk/log/c/a;->a(Lcom/vk/log/c/f;)Z
+    invoke-virtual {v3, v5}, Lcom/vk/log/c/CollectionTargets;->a(Lcom/vk/log/c/LogTarget;)Z
 
     const/4 v3, 0x1
 
@@ -1208,17 +1208,17 @@
     if-eqz v5, :cond_4
 
     .line 10
-    sget-object v3, Lcom/vk/log/L;->c:Lcom/vk/log/c/a;
+    sget-object v3, Lcom/vk/log/L;->c:Lcom/vk/log/c/CollectionTargets;
 
-    new-instance v5, Lcom/vk/log/c/d;
+    new-instance v5, Lcom/vk/log/c/FileTarget;
 
-    new-instance v6, Lcom/vk/log/e/c;
+    new-instance v6, Lcom/vk/log/e/LogcatFileWritable;
 
-    invoke-direct {v6}, Lcom/vk/log/e/c;-><init>()V
+    invoke-direct {v6}, Lcom/vk/log/e/LogcatFileWritable;-><init>()V
 
-    invoke-direct {v5, v1, v6}, Lcom/vk/log/c/d;-><init>(Lcom/vk/log/settings/a;Lcom/vk/log/e/b;)V
+    invoke-direct {v5, v1, v6}, Lcom/vk/log/c/FileTarget;-><init>(Lcom/vk/log/settings/FileSettings;Lcom/vk/log/e/FileWritable;)V
 
-    invoke-virtual {v3, v5}, Lcom/vk/log/c/a;->a(Lcom/vk/log/c/f;)Z
+    invoke-virtual {v3, v5}, Lcom/vk/log/c/CollectionTargets;->a(Lcom/vk/log/c/LogTarget;)Z
 
     const/4 v3, 0x1
 
@@ -1233,17 +1233,17 @@
     if-eqz v5, :cond_5
 
     .line 12
-    sget-object v3, Lcom/vk/log/L;->c:Lcom/vk/log/c/a;
+    sget-object v3, Lcom/vk/log/L;->c:Lcom/vk/log/c/CollectionTargets;
 
-    new-instance v5, Lcom/vk/log/c/d;
+    new-instance v5, Lcom/vk/log/c/FileTarget;
 
-    new-instance v6, Lcom/vk/log/e/e;
+    new-instance v6, Lcom/vk/log/e/RingFileWritable;
 
-    invoke-direct {v6, v4, v0, v2}, Lcom/vk/log/e/e;-><init>(IILkotlin/jvm/internal/i;)V
+    invoke-direct {v6, v4, v0, v2}, Lcom/vk/log/e/RingFileWritable;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-direct {v5, v1, v6}, Lcom/vk/log/c/d;-><init>(Lcom/vk/log/settings/a;Lcom/vk/log/e/b;)V
+    invoke-direct {v5, v1, v6}, Lcom/vk/log/c/FileTarget;-><init>(Lcom/vk/log/settings/FileSettings;Lcom/vk/log/e/FileWritable;)V
 
-    invoke-virtual {v3, v5}, Lcom/vk/log/c/a;->a(Lcom/vk/log/c/f;)Z
+    invoke-virtual {v3, v5}, Lcom/vk/log/c/CollectionTargets;->a(Lcom/vk/log/c/LogTarget;)Z
 
     const/4 v3, 0x1
 
@@ -1260,7 +1260,7 @@
 
     .line 14
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -1302,14 +1302,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/log/a/c;Lcom/vk/log/a/a;Lcom/vk/log/L$a;)V
+.method public final a(Lcom/vk/log/a/LoggerBuilder;Lcom/vk/log/a/FileSettingsBuilder;Lcom/vk/log/L$a;)V
     .locals 0
 
     .line 2
     sput-object p3, Lcom/vk/log/L;->f:Lcom/vk/log/L$a;
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/log/a/c;->a()Lcom/vk/log/settings/LoggerSettings;
+    invoke-virtual {p1}, Lcom/vk/log/a/LoggerBuilder;->a()Lcom/vk/log/settings/LoggerSettings;
 
     move-result-object p1
 
@@ -1318,7 +1318,7 @@
     if-eqz p2, :cond_0
 
     .line 4
-    invoke-virtual {p2}, Lcom/vk/log/a/a;->a()Lcom/vk/log/settings/a;
+    invoke-virtual {p2}, Lcom/vk/log/a/FileSettingsBuilder;->a()Lcom/vk/log/settings/FileSettings;
 
     move-result-object p1
 
@@ -1328,7 +1328,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    sput-object p1, Lcom/vk/log/L;->e:Lcom/vk/log/settings/a;
+    sput-object p1, Lcom/vk/log/L;->e:Lcom/vk/log/settings/FileSettings;
 
     .line 5
     invoke-direct {p0}, Lcom/vk/log/L;->c()V

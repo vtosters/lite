@@ -1,5 +1,5 @@
 .class public final Lcom/vk/ui/photoviewer/VkAppCallback$a;
-.super Lcom/vk/bridges/p$c;
+.super Lcom/vk/bridges/ImageViewer$c;
 .source "VkAppCallback.kt"
 
 
@@ -34,7 +34,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/ui/photoviewer/VkAppCallback$a;-><init>(ZZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/ui/photoviewer/VkAppCallback$a;-><init>(ZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -43,7 +43,7 @@
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vk/bridges/p$c;-><init>(ZZ)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/bridges/ImageViewer$c;-><init>(ZZ)V
 
     .line 3
     iput-boolean p3, p0, Lcom/vk/ui/photoviewer/VkAppCallback$a;->c:Z
@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZZZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x1
@@ -85,7 +85,7 @@
 
 
 # virtual methods
-.method public bridge synthetic a()Lcom/vk/bridges/p$c;
+.method public bridge synthetic a()Lcom/vk/bridges/ImageViewer$c;
     .locals 1
 
     .line 1
@@ -102,11 +102,11 @@
     .line 2
     new-instance v0, Lcom/vk/ui/photoviewer/VkAppCallback$a;
 
-    invoke-virtual {p0}, Lcom/vk/bridges/p$c;->b()Z
+    invoke-virtual {p0}, Lcom/vk/bridges/ImageViewer$c;->b()Z
 
     move-result v1
 
-    invoke-virtual {p0}, Lcom/vk/bridges/p$c;->c()Z
+    invoke-virtual {p0}, Lcom/vk/bridges/ImageViewer$c;->c()Z
 
     move-result v2
 

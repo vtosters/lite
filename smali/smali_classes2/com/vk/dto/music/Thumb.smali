@@ -3,7 +3,7 @@
 .source "Thumb.kt"
 
 # interfaces
-.implements Lcom/vk/core/serialize/a;
+.implements Lcom/vk/core/serialize/JSONSerialize;
 
 
 # annotations
@@ -25,10 +25,10 @@
     .end annotation
 .end field
 
-.field public static final e:Lcom/vk/dto/common/data/c;
+.field public static final e:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/music/Thumb;",
             ">;"
         }
@@ -62,7 +62,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/music/Thumb$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/music/Thumb$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/music/Thumb$b;
@@ -77,7 +77,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/music/Thumb$a;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/music/Thumb;->e:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/music/Thumb;->e:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method
@@ -99,7 +99,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/dto/music/Thumb;-><init>(Ljava/lang/String;IILandroid/util/SparseArray;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/dto/music/Thumb;-><init>(Ljava/lang/String;IILandroid/util/SparseArray;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -122,7 +122,7 @@
     move-object v0, p0
 
     .line 26
-    invoke-direct/range {v0 .. v6}, Lcom/vk/dto/music/Thumb;-><init>(Ljava/lang/String;IILandroid/util/SparseArray;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/dto/music/Thumb;-><init>(Ljava/lang/String;IILandroid/util/SparseArray;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 27
     invoke-virtual {p1}, Lcom/vk/core/serialize/Serializer;->v()Ljava/lang/String;
@@ -188,7 +188,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -215,7 +215,7 @@
     move-object v0, p0
 
     .line 4
-    invoke-direct/range {v0 .. v6}, Lcom/vk/dto/music/Thumb;-><init>(Ljava/lang/String;IILandroid/util/SparseArray;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/dto/music/Thumb;-><init>(Ljava/lang/String;IILandroid/util/SparseArray;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 5
     new-instance v0, Landroid/util/SparseArray;
@@ -254,7 +254,7 @@
 
     const-string v2, "size"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/common/ImageSize;->getWidth()I
 
@@ -299,7 +299,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;IILandroid/util/SparseArray;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;IILandroid/util/SparseArray;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 2
 
     and-int/lit8 p6, p5, 0x1
@@ -358,7 +358,7 @@
     move-object v0, p0
 
     .line 8
-    invoke-direct/range {v0 .. v6}, Lcom/vk/dto/music/Thumb;-><init>(Ljava/lang/String;IILandroid/util/SparseArray;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/dto/music/Thumb;-><init>(Ljava/lang/String;IILandroid/util/SparseArray;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 9
     invoke-virtual {p1}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
@@ -381,14 +381,14 @@
 
     const-string v2, "it.next()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Ljava/lang/String;
 
     const-string v2, "id"
 
     .line 12
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -406,7 +406,7 @@
     const-string v2, "sizes"
 
     .line 13
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -515,7 +515,7 @@
 
     const-string v4, "(this as java.lang.String).substring(startIndex)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -523,7 +523,7 @@
 
     const-string v4, "Integer.valueOf(key.subs\u2026eys.PHOTO_PREFIX.length))"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -599,7 +599,7 @@
     .end annotation
 
     .line 10
-    invoke-static {p1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;)Z
+    invoke-static {p1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;)Z
 
     move-result v0
 
@@ -689,7 +689,7 @@
 
     invoke-direct {v4, v0, v2}, Lcom/vk/dto/music/Thumb$urlsToJsonArray$1$1;-><init>(Landroid/util/SparseArray;I)V
 
-    invoke-static {v4}, Lcom/vk/dto/common/data/b;->a(Lkotlin/jvm/b/b;)Lorg/json/JSONObject;
+    invoke-static {v4}, Lcom/vk/dto/common/data/JsonObj1;->a(Lkotlin/jvm/b/Functions2;)Lorg/json/JSONObject;
 
     move-result-object v4
 
@@ -719,7 +719,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/dto/music/Thumb$toJSONObject$1;-><init>(Lcom/vk/dto/music/Thumb;)V
 
-    invoke-static {v0}, Lcom/vk/dto/common/data/b;->a(Lkotlin/jvm/b/b;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lcom/vk/dto/common/data/JsonObj1;->a(Lkotlin/jvm/b/Functions2;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -825,7 +825,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/music/Thumb;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -895,7 +895,7 @@
     move-object v4, v3
 
     :goto_1
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -957,7 +957,7 @@
     move-object v6, v3
 
     :goto_4
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -1001,7 +1001,7 @@
     move-object v6, v3
 
     :goto_6
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -1021,7 +1021,7 @@
 
     .line 9
     :cond_f
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 .end method
@@ -1096,9 +1096,9 @@
 
     .line 4
     :cond_2
-    sget-object v4, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
+    sget-object v4, Lcom/vk/core/util/MediaLoadingInfo;->b:Lcom/vk/core/util/MediaLoadingInfo;
 
-    invoke-virtual {v4}, Lcom/vk/core/util/p0;->c()Z
+    invoke-virtual {v4}, Lcom/vk/core/util/MediaLoadingInfo;->c()Z
 
     move-result v4
 

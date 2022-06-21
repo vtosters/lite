@@ -3,7 +3,7 @@
 .source "VkDialogsHeaderVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/models/j;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/models/Profile;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,19 +46,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/j;)V
+.method public final a(Lcom/vk/im/engine/models/Profile;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc$showCreateMsgPopup$1;->this$0:Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc;->a()Lcom/vk/im/ui/components/dialogs_header/vc/b;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc;->a()Lcom/vk/im/ui/components/dialogs_header/vc/DialogsHeaderVcCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialogs_header/vc/b;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialogs_header/vc/DialogsHeaderVcCallback;->a(Lcom/vk/im/engine/models/Profile;)V
 
     :cond_0
     return-void
@@ -68,11 +68,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/j;
+    check-cast p1, Lcom/vk/im/engine/models/Profile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc$showCreateMsgPopup$1;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc$showCreateMsgPopup$1;->a(Lcom/vk/im/engine/models/Profile;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

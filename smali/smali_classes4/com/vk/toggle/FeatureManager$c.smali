@@ -32,7 +32,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/toggle/FeatureManager$c$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/toggle/FeatureManager$c$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/toggle/FeatureManager$c;->e:Lcom/vk/toggle/FeatureManager$c$a;
 
@@ -79,7 +79,7 @@
     .line 1
     sget-object v0, Lcom/vk/toggle/FeatureManager;->g:Lcom/vk/toggle/FeatureManager;
 
-    invoke-static {v0}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/b;
+    invoke-static {v0}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/FeatureStorage;
 
     move-result-object v0
 
@@ -93,7 +93,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/toggle/b;->b(Lcom/vk/toggle/b;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/toggle/FeatureStorage;->b(Lcom/vk/toggle/FeatureStorage;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -156,7 +156,7 @@
     :cond_2
     sget-object v0, Lcom/vk/toggle/FeatureManager;->g:Lcom/vk/toggle/FeatureManager;
 
-    invoke-static {v0}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/b;
+    invoke-static {v0}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/FeatureStorage;
 
     move-result-object v0
 
@@ -164,7 +164,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, v3}, Lcom/vk/toggle/b;->c(Ljava/lang/String;Z)V
+    invoke-virtual {v0, v1, v3}, Lcom/vk/toggle/FeatureStorage;->c(Ljava/lang/String;Z)V
 
     .line 8
     sget-object v0, Lcom/vk/toggle/FeatureManager;->g:Lcom/vk/toggle/FeatureManager;

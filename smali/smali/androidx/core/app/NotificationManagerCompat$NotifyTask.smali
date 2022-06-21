@@ -51,7 +51,7 @@
 
 
 # virtual methods
-.method public send(Landroid/support/v4/app/a;)V
+.method public send(Landroid/support/v4/app/INotificationSideChannel;)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -68,7 +68,7 @@
 
     iget-object v3, p0, Landroidx/core/app/NotificationManagerCompat$NotifyTask;->notif:Landroid/app/Notification;
 
-    invoke-interface {p1, v0, v1, v2, v3}, Landroid/support/v4/app/a;->notify(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
+    invoke-interface {p1, v0, v1, v2, v3}, Landroid/support/v4/app/INotificationSideChannel;->notify(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "UpdateMsgViaCacheTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask;->b(Lcom/vk/im/engine/a;Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;ILcom/vk/im/engine/utils/collection/d;)Lc/a/t;
+    value = Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask;->b(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;ILcom/vk/im/engine/utils/collection/IntCollection;)Lio/reactivex/Single;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;",
         ">;"
     }
@@ -27,13 +27,13 @@
 
 
 # instance fields
-.field final synthetic $entryList:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+.field final synthetic $entryList:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
 .field final synthetic $history:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-.field final synthetic $imEngine:Lcom/vk/im/engine/a;
+.field final synthetic $imEngine:Lcom/vk/im/engine/ImEngine;
 
-.field final synthetic $msgLocalIds:Lcom/vk/im/engine/utils/collection/d;
+.field final synthetic $msgLocalIds:Lcom/vk/im/engine/utils/collection/IntCollection;
 
 .field final synthetic $readTill:I
 
@@ -41,20 +41,20 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask;Lcom/vk/im/engine/a;Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;ILcom/vk/im/engine/utils/collection/d;)V
+.method constructor <init>(Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;ILcom/vk/im/engine/utils/collection/IntCollection;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->this$0:Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$imEngine:Lcom/vk/im/engine/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$imEngine:Lcom/vk/im/engine/ImEngine;
 
     iput-object p3, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$history:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iput-object p4, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$entryList:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iput-object p4, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$entryList:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     iput p5, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$readTill:I
 
-    iput-object p6, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$msgLocalIds:Lcom/vk/im/engine/utils/collection/d;
+    iput-object p6, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$msgLocalIds:Lcom/vk/im/engine/utils/collection/IntCollection;
 
     const/4 p1, 0x0
 
@@ -71,17 +71,17 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->this$0:Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$imEngine:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$imEngine:Lcom/vk/im/engine/ImEngine;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$history:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    iget-object v3, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$entryList:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v3, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$entryList:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     iget v4, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$readTill:I
 
-    iget-object v5, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$msgLocalIds:Lcom/vk/im/engine/utils/collection/d;
+    iget-object v5, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$mergeSingle$1;->$msgLocalIds:Lcom/vk/im/engine/utils/collection/IntCollection;
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask;->a(Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask;Lcom/vk/im/engine/a;Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;ILcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;
+    invoke-static/range {v0 .. v5}, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask;->a(Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;ILcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;
 
     move-result-object v0
 

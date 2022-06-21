@@ -1,9 +1,9 @@
 .class public final Lcom/vk/im/ui/components/contacts/ContactsListComponent;
-.super Lcom/vk/im/ui/q/c;
+.super Lcom/vk/im/ui/q/Component;
 .source "ContactsListComponent.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -20,16 +20,16 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/q/c;",
-        "Lc/a/z/g<",
-        "Lcom/vk/im/engine/events/a;",
+        "Lcom/vk/im/ui/q/Component;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/im/engine/events/Event;",
         ">;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic V:[Lkotlin/u/j;
+.field static final synthetic V:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -39,13 +39,13 @@
 
 .field private final D:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-.field private E:Lio/reactivex/disposables/a;
+.field private E:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private final F:Lio/reactivex/subjects/PublishSubject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lio/reactivex/subjects/PublishSubject<",
-            "Lcom/vk/im/ui/views/adapter_delegate/c;",
+            "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
             ">;"
         }
     .end annotation
@@ -55,27 +55,27 @@
 
 .field private final H:Landroid/view/LayoutInflater;
 
-.field private final I:Lcom/vk/core/util/u0;
+.field private final I:Lcom/vk/core/util/Provider2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/util/u0<",
-            "Lcom/vk/im/ui/components/contacts/vc/d;",
+            "Lcom/vk/core/util/Provider2<",
+            "Lcom/vk/im/ui/components/contacts/vc/ContactsVc;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final J:Lcom/vk/core/util/u0;
+.field private final J:Lcom/vk/core/util/Provider2;
 
 .field private final K:Z
 
-.field private final L:Lcom/vk/im/engine/a;
+.field private final L:Lcom/vk/im/engine/ImEngine;
 
-.field private final M:Lcom/vk/im/ui/p/b;
+.field private final M:Lcom/vk/im/ui/p/ImBridge8;
 
-.field private final N:Lcom/vk/im/engine/models/e;
+.field private final N:Lcom/vk/im/engine/models/ImExperiments;
 
-.field private final O:Lcom/vk/navigation/a;
+.field private final O:Lcom/vk/navigation/ActivityLauncher;
 
 .field private final P:Lcom/vk/im/ui/components/contacts/ContactsListComponent$a;
 
@@ -108,13 +108,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/contacts/ContactsListComponent;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -122,34 +122,34 @@
 
     const-string v4, "getVc()Lcom/vk/im/ui/components/contacts/vc/ContactsVc;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->V:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->V:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/im/ui/components/contacts/ContactsListComponent$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/im/engine/models/e;Lcom/vk/navigation/a;Lcom/vk/im/ui/components/contacts/ContactsListComponent$a;Lcom/vk/im/ui/components/contacts/ContactsListFactory;Lcom/vk/im/ui/components/contacts/SortOrder;ZLjava/lang/String;Ljava/util/Set;Ljava/util/Set;)V
+.method public constructor <init>(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/engine/models/ImExperiments;Lcom/vk/navigation/ActivityLauncher;Lcom/vk/im/ui/components/contacts/ContactsListComponent$a;Lcom/vk/im/ui/components/contacts/ContactsListFactory;Lcom/vk/im/ui/components/contacts/SortOrder;ZLjava/lang/String;Ljava/util/Set;Ljava/util/Set;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/a;",
-            "Lcom/vk/im/ui/p/b;",
-            "Lcom/vk/im/engine/models/e;",
-            "Lcom/vk/navigation/a;",
+            "Lcom/vk/im/engine/ImEngine;",
+            "Lcom/vk/im/ui/p/ImBridge8;",
+            "Lcom/vk/im/engine/models/ImExperiments;",
+            "Lcom/vk/navigation/ActivityLauncher;",
             "Lcom/vk/im/ui/components/contacts/ContactsListComponent$a;",
             "Lcom/vk/im/ui/components/contacts/ContactsListFactory;",
             "Lcom/vk/im/ui/components/contacts/SortOrder;",
@@ -165,15 +165,15 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/q/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/q/Component;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->L:Lcom/vk/im/engine/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->L:Lcom/vk/im/engine/ImEngine;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->M:Lcom/vk/im/ui/p/b;
+    iput-object p2, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->M:Lcom/vk/im/ui/p/ImBridge8;
 
-    iput-object p3, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->N:Lcom/vk/im/engine/models/e;
+    iput-object p3, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->N:Lcom/vk/im/engine/models/ImExperiments;
 
-    iput-object p4, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->O:Lcom/vk/navigation/a;
+    iput-object p4, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->O:Lcom/vk/navigation/ActivityLauncher;
 
     iput-object p5, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->P:Lcom/vk/im/ui/components/contacts/ContactsListComponent$a;
 
@@ -214,7 +214,7 @@
     .line 6
     new-instance p1, Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    iget-object p4, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->N:Lcom/vk/im/engine/models/e;
+    iget-object p4, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->N:Lcom/vk/im/engine/models/ImExperiments;
 
     iget-object p2, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->Q:Lcom/vk/im/ui/components/contacts/ContactsListFactory;
 
@@ -230,16 +230,16 @@
 
     move-object p8, p11
 
-    invoke-direct/range {p3 .. p8}, Lcom/vk/im/ui/components/contacts/ContactsModel;-><init>(Lcom/vk/im/engine/models/e;Ljava/util/Set;ZLjava/lang/String;Ljava/util/Set;)V
+    invoke-direct/range {p3 .. p8}, Lcom/vk/im/ui/components/contacts/ContactsModel;-><init>(Lcom/vk/im/engine/models/ImExperiments;Ljava/util/Set;ZLjava/lang/String;Ljava/util/Set;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->D:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
     .line 7
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->E:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->E:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 8
     invoke-static {}, Lio/reactivex/subjects/PublishSubject;->p()Lio/reactivex/subjects/PublishSubject;
@@ -248,7 +248,7 @@
 
     const-string p2, "PublishSubject.create<ListItem>()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->F:Lio/reactivex/subjects/PublishSubject;
 
@@ -260,9 +260,9 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->G:Lcom/vk/im/ui/components/contacts/ContactsListComponent$CallbackImpl;
 
     .line 10
-    iget-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->O:Lcom/vk/navigation/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->O:Lcom/vk/navigation/ActivityLauncher;
 
-    invoke-interface {p1}, Lcom/vk/navigation/a;->a()Landroid/content/Context;
+    invoke-interface {p1}, Lcom/vk/navigation/ActivityLauncher;->a()Landroid/content/Context;
 
     move-result-object p1
 
@@ -277,21 +277,21 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$vcHolder$1;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)V
 
-    invoke-static {p1}, Lcom/vk/core/util/w0;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/u0;
+    invoke-static {p1}, Lcom/vk/core/util/Provider1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/Provider2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->I:Lcom/vk/core/util/u0;
+    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->I:Lcom/vk/core/util/Provider2;
 
     .line 12
-    iget-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->I:Lcom/vk/core/util/u0;
+    iget-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->I:Lcom/vk/core/util/Provider2;
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->J:Lcom/vk/core/util/u0;
+    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->J:Lcom/vk/core/util/Provider2;
 
     .line 13
-    iget-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->O:Lcom/vk/navigation/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->O:Lcom/vk/navigation/ActivityLauncher;
 
-    invoke-interface {p1}, Lcom/vk/navigation/a;->a()Landroid/content/Context;
+    invoke-interface {p1}, Lcom/vk/navigation/ActivityLauncher;->a()Landroid/content/Context;
 
     move-result-object p1
 
@@ -304,11 +304,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/p/b;
+.method public static final synthetic a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/p/ImBridge8;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->M:Lcom/vk/im/ui/p/b;
+    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->M:Lcom/vk/im/ui/p/ImBridge8;
 
     return-object p0
 .end method
@@ -319,7 +319,7 @@
     .line 35
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->Q:Lcom/vk/im/ui/components/contacts/ContactsListFactory;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->a()Lkotlin/jvm/b/d;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->a()Lkotlin/jvm/b/Functions4;
 
     move-result-object v0
 
@@ -329,13 +329,13 @@
 
     move-result-object p2
 
-    invoke-interface {v0, p1, v1, p2}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, v1, p2}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
     move-object v2, p2
 
-    check-cast v2, Lcom/vk/im/engine/i/c;
+    check-cast v2, Lcom/vk/im/engine/i/ImEngineCmd;
 
     .line 36
     sget-object p2, Lcom/vk/im/engine/models/Source;->CACHE:Lcom/vk/im/engine/models/Source;
@@ -355,39 +355,39 @@
 
     .line 37
     :goto_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->L:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->L:Lcom/vk/im/engine/ImEngine;
 
     .line 38
     new-instance p1, Lcom/vk/im/ui/components/contacts/ContactsListComponent$loadContacts$1;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$loadContacts$1;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)V
 
-    new-instance v4, Lcom/vk/im/ui/components/contacts/b;
+    new-instance v4, Lcom/vk/im/ui/components/contacts/ContactsListComponent1;
 
-    invoke-direct {v4, p1}, Lcom/vk/im/ui/components/contacts/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v4, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     .line 39
     new-instance p1, Lcom/vk/im/ui/components/contacts/ContactsListComponent$loadContacts$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$loadContacts$2;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)V
 
-    new-instance v5, Lcom/vk/im/ui/components/contacts/b;
+    new-instance v5, Lcom/vk/im/ui/components/contacts/ContactsListComponent1;
 
-    invoke-direct {v5, p1}, Lcom/vk/im/ui/components/contacts/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v5, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object v1, p0
 
     .line 40
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/im/engine/a;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;ZLc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/im/engine/ImEngine;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;ZLio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "engine.submitSingle(this\u2026           ::onLoadError)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 41
-    invoke-static {p1, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {p1, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     return-void
 .end method
@@ -408,11 +408,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;Lcom/vk/im/ui/components/contacts/a;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;Lcom/vk/im/ui/components/contacts/ContactsList;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/ui/components/contacts/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/ui/components/contacts/ContactsList;)V
 
     return-void
 .end method
@@ -426,24 +426,24 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;Lkotlin/jvm/b/a;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/contacts/ContactsListComponent;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/ui/components/contacts/a;)V
+.method private final a(Lcom/vk/im/ui/components/contacts/ContactsList;)V
     .locals 5
 
     .line 42
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/a;->c()Lcom/vk/im/ui/components/contacts/c;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/ContactsList;->c()Lcom/vk/im/ui/components/contacts/ContactsListState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/c;->b()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/ContactsListState;->b()Z
 
     move-result v0
 
@@ -505,11 +505,11 @@
     move-result v3
 
     .line 49
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/a;->b()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/ContactsList;->b()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     move-result-object v4
 
-    invoke-virtual {v4, v3}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/j;
+    invoke-virtual {v4, v3}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/Profile;
 
     move-result-object v3
 
@@ -530,19 +530,19 @@
     .line 52
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->D:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    invoke-virtual {v0, p1, v2}, Lcom/vk/im/ui/components/contacts/ContactsModel;->a(Lcom/vk/im/ui/components/contacts/a;Ljava/util/List;)V
+    invoke-virtual {v0, p1, v2}, Lcom/vk/im/ui/components/contacts/ContactsModel;->a(Lcom/vk/im/ui/components/contacts/ContactsList;Ljava/util/List;)V
 
     :goto_1
     return-void
 .end method
 
-.method private final a(Lio/reactivex/disposables/a;)V
+.method private final a(Lio/reactivex/disposables/CompositeDisposable;)V
     .locals 3
 
     .line 7
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->D:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/ContactsModel;->f()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/ContactsModel;->f()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -551,21 +551,21 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$c;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "model.observeLoading()\n \u2026ading()\n                }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
-    invoke-static {v0, p1}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
 
     .line 10
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->D:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/ContactsModel;->e()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/ContactsModel;->e()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -575,26 +575,26 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$d;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)V
 
     .line 12
-    invoke-static {}, Lcom/vk/core/util/z0;->a()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->a()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 13
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "model.observeError()\n   \u2026 }, RxUtil.assertError())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
-    invoke-static {v0, p1}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
 
     .line 15
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->D:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/ContactsModel;->d()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/ContactsModel;->d()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -604,26 +604,26 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$e;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)V
 
     .line 17
-    invoke-static {}, Lcom/vk/core/util/z0;->a()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->a()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 18
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "model.observeData()\n    \u2026 }, RxUtil.assertError())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 19
-    invoke-static {v0, p1}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
 
     .line 20
     iget-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->D:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->g()Lc/a/m;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->g()Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -633,21 +633,21 @@
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$f;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)V
 
     .line 22
-    invoke-static {}, Lcom/vk/core/util/z0;->a()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->a()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
 
     .line 23
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "model.observeSelectionCh\u2026 }, RxUtil.assertError())"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 24
-    invoke-static {p1, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {p1, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     return-void
 .end method
@@ -663,13 +663,13 @@
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/a;)V
+.method private final a(Lkotlin/jvm/b/Functions;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -678,9 +678,9 @@
     sget-object v0, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
 
     .line 59
-    iget-object v1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->O:Lcom/vk/navigation/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->O:Lcom/vk/navigation/ActivityLauncher;
 
-    invoke-interface {v1}, Lcom/vk/navigation/a;->a()Landroid/content/Context;
+    invoke-interface {v1}, Lcom/vk/navigation/ActivityLauncher;->a()Landroid/content/Context;
 
     move-result-object v1
 
@@ -701,7 +701,7 @@
     .line 62
     new-instance v5, Lcom/vk/im/ui/components/contacts/ContactsListComponent$requestContactPermissions$1;
 
-    invoke-direct {v5, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$requestContactPermissions$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v5, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$requestContactPermissions$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     const/4 v6, 0x0
 
@@ -712,7 +712,7 @@
     move v3, v4
 
     .line 63
-    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
 
     return-void
 .end method
@@ -735,11 +735,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/engine/a;
+.method public static final synthetic d(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/engine/ImEngine;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->L:Lcom/vk/im/engine/a;
+    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->L:Lcom/vk/im/engine/ImEngine;
 
     return-object p0
 .end method
@@ -753,11 +753,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic f(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/navigation/a;
+.method public static final synthetic f(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/navigation/ActivityLauncher;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->O:Lcom/vk/navigation/a;
+    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->O:Lcom/vk/navigation/ActivityLauncher;
 
     return-object p0
 .end method
@@ -780,11 +780,11 @@
     return p0
 .end method
 
-.method public static final synthetic i(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/components/contacts/vc/d;
+.method public static final synthetic i(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)Lcom/vk/im/ui/components/contacts/vc/ContactsVc;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->v()Lcom/vk/im/ui/components/contacts/vc/d;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->v()Lcom/vk/im/ui/components/contacts/vc/ContactsVc;
 
     move-result-object p0
 
@@ -809,22 +809,22 @@
     return p0
 .end method
 
-.method private final v()Lcom/vk/im/ui/components/contacts/vc/d;
+.method private final v()Lcom/vk/im/ui/components/contacts/vc/ContactsVc;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->J:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->J:Lcom/vk/core/util/Provider2;
 
-    sget-object v1, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->V:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->V:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/w0;->a(Lcom/vk/core/util/u0;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/Provider1;->a(Lcom/vk/core/util/Provider2;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/components/contacts/vc/d;
+    check-cast v0, Lcom/vk/im/ui/components/contacts/vc/ContactsVc;
 
     return-object v0
 .end method
@@ -835,36 +835,36 @@
     .locals 1
 
     .line 5
-    invoke-super {p0, p1}, Lcom/vk/im/ui/q/c;->a(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/res/Configuration;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->I:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->I:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {v0}, Lcom/vk/core/util/u0;->isInitialized()Z
+    invoke-interface {v0}, Lcom/vk/core/util/Provider2;->isInitialized()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->v()Lcom/vk/im/ui/components/contacts/vc/d;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->v()Lcom/vk/im/ui/components/contacts/vc/ContactsVc;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/contacts/vc/d;->a(Landroid/content/res/Configuration;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/contacts/vc/ContactsVc;->a(Landroid/content/res/Configuration;)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/events/a;)V
+.method public a(Lcom/vk/im/engine/events/Event;)V
     .locals 3
 
     .line 25
-    iget-object v0, p1, Lcom/vk/im/engine/events/a;->a:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/vk/im/engine/events/Event;->a:Ljava/lang/Object;
 
     const-string v1, "ContactsListComponent"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -874,7 +874,7 @@
 
     .line 26
     :cond_0
-    instance-of v0, p1, Lcom/vk/im/engine/events/y;
+    instance-of v0, p1, Lcom/vk/im/engine/events/OnImEngineInvalidateEvent;
 
     if-eqz v0, :cond_1
 
@@ -886,7 +886,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$accept$1;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)V
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/concurrent/a;->a(Ljava/lang/Object;JLkotlin/jvm/b/a;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/concurrent/ConcurrentExt;->a(Ljava/lang/Object;JLkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
@@ -904,22 +904,22 @@
 
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$accept$2;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)V
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/concurrent/a;->a(Ljava/lang/Object;JLkotlin/jvm/b/a;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/concurrent/ConcurrentExt;->a(Ljava/lang/Object;JLkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
     .line 28
     :cond_2
-    instance-of v0, p1, Lcom/vk/im/engine/events/l;
+    instance-of v0, p1, Lcom/vk/im/engine/events/OnContactsSyncStateChangedEvent;
 
     if-eqz v0, :cond_3
 
     .line 29
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->D:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    check-cast p1, Lcom/vk/im/engine/events/l;
+    check-cast p1, Lcom/vk/im/engine/events/OnContactsSyncStateChangedEvent;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/events/l;->c()Lcom/vk/im/engine/models/contacts/ContactSyncState;
+    invoke-virtual {p1}, Lcom/vk/im/engine/events/OnContactsSyncStateChangedEvent;->c()Lcom/vk/im/engine/models/contacts/ContactSyncState;
 
     move-result-object p1
 
@@ -929,16 +929,16 @@
 
     .line 30
     :cond_3
-    instance-of v0, p1, Lcom/vk/im/engine/events/i0;
+    instance-of v0, p1, Lcom/vk/im/engine/events/OnProfilesUpdateEvent;
 
     if-eqz v0, :cond_4
 
     .line 31
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->D:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    check-cast p1, Lcom/vk/im/engine/events/i0;
+    check-cast p1, Lcom/vk/im/engine/events/OnProfilesUpdateEvent;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/events/i0;->c()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p1}, Lcom/vk/im/engine/events/OnProfilesUpdateEvent;->c()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object p1
 
@@ -948,16 +948,16 @@
 
     .line 32
     :cond_4
-    instance-of v0, p1, Lcom/vk/im/engine/events/w;
+    instance-of v0, p1, Lcom/vk/im/engine/events/OnHintsUpdateEvent;
 
     if-eqz v0, :cond_5
 
     .line 33
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->D:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    check-cast p1, Lcom/vk/im/engine/events/w;
+    check-cast p1, Lcom/vk/im/engine/events/OnHintsUpdateEvent;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/events/w;->c()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/im/engine/events/OnHintsUpdateEvent;->c()Ljava/util/List;
 
     move-result-object p1
 
@@ -994,7 +994,7 @@
 
     invoke-direct {v3, p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$filter$1;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent;Ljava/lang/CharSequence;)V
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/concurrent/a;->a(Ljava/lang/Object;JLkotlin/jvm/b/a;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/concurrent/ConcurrentExt;->a(Ljava/lang/Object;JLkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
@@ -1002,7 +1002,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->B:Ljava/lang/Object;
 
-    invoke-static {p1}, Lcom/vk/core/concurrent/a;->a(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcom/vk/core/concurrent/ConcurrentExt;->a(Ljava/lang/Object;)V
 
     :goto_0
     return-void
@@ -1012,9 +1012,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/a;
+    check-cast p1, Lcom/vk/im/engine/events/Event;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/engine/events/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lcom/vk/im/engine/events/Event;)V
 
     return-void
 .end method
@@ -1023,16 +1023,16 @@
     .locals 0
 
     .line 2
-    iget-object p3, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->I:Lcom/vk/core/util/u0;
+    iget-object p3, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->I:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {p3}, Lcom/vk/core/util/u0;->reset()V
+    invoke-interface {p3}, Lcom/vk/core/util/Provider2;->reset()V
 
     .line 3
-    invoke-direct {p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->v()Lcom/vk/im/ui/components/contacts/vc/d;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->v()Lcom/vk/im/ui/components/contacts/vc/ContactsVc;
 
     move-result-object p3
 
-    invoke-virtual {p3, p1, p2}, Lcom/vk/im/ui/components/contacts/vc/d;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {p3, p1, p2}, Lcom/vk/im/ui/components/contacts/vc/ContactsVc;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
@@ -1052,12 +1052,12 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->B:Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/vk/core/concurrent/a;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcom/vk/core/concurrent/ConcurrentExt;->a(Ljava/lang/Object;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->I:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->I:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {v0}, Lcom/vk/core/util/u0;->u()V
+    invoke-interface {v0}, Lcom/vk/core/util/Provider2;->u()V
 
     return-void
 .end method
@@ -1066,68 +1066,68 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->L:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->L:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/a;->j()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 2
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0, p0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, p0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "engine.observeEvents()\n \u2026         .subscribe(this)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->E:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->E:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->E:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->E:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lio/reactivex/disposables/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->a(Lio/reactivex/disposables/CompositeDisposable;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->F:Lio/reactivex/subjects/PublishSubject;
 
     .line 7
-    const-class v1, Lcom/vk/im/ui/components/contacts/vc/contact/b;
+    const-class v1, Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 8
     sget-object v1, Lcom/vk/im/ui/components/contacts/ContactsListComponent$g;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent$g;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 9
     sget-object v1, Lcom/vk/im/ui/components/contacts/ContactsListComponent$h;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent$h;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 10
     sget-object v1, Lcom/vk/im/ui/components/contacts/ContactsListComponent$i;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent$i;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1136,14 +1136,14 @@
 
     const-wide/16 v2, 0x2
 
-    invoke-virtual {v0, v2, v3, v1}, Lc/a/m;->a(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v0, v2, v3, v1}, Lio/reactivex/Observable;->a(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 12
     sget-object v1, Lcom/vk/im/ui/components/contacts/ContactsListComponent$j;->a:Lcom/vk/im/ui/components/contacts/ContactsListComponent$j;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1153,21 +1153,21 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent$k;-><init>(Lcom/vk/im/ui/components/contacts/ContactsListComponent;)V
 
     .line 14
-    invoke-static {}, Lcom/vk/core/util/z0;->a()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->a()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 15
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "visibleUsersPublisher\n  \u2026 }, RxUtil.assertError())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 16
-    invoke-static {v0, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {v0, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     .line 17
     sget-object v0, Lcom/vk/im/engine/models/Source;->CACHE:Lcom/vk/im/engine/models/Source;
@@ -1185,12 +1185,12 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->g:Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/vk/core/concurrent/a;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcom/vk/core/concurrent/ConcurrentExt;->a(Ljava/lang/Object;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->E:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->E:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->a()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->a()V
 
     return-void
 .end method
@@ -1212,7 +1212,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/j;",
+            "Lcom/vk/im/engine/models/Profile;",
             ">;"
         }
     .end annotation
@@ -1231,11 +1231,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->v()Lcom/vk/im/ui/components/contacts/vc/d;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/contacts/ContactsListComponent;->v()Lcom/vk/im/ui/components/contacts/vc/ContactsVc;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/vc/d;->b()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/contacts/vc/ContactsVc;->b()Z
 
     move-result v0
 

@@ -3,7 +3,7 @@
 .source "ImAudioMsgPlayerProvider.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/im/engine/models/attaches/a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/im/engine/models/attaches/AttachRelatedEntities;",
         ">;"
     }
 .end annotation
@@ -56,20 +56,20 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/attaches/a;)V
+.method public final a(Lcom/vk/im/engine/models/attaches/AttachRelatedEntities;)V
     .locals 26
 
     .line 1
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/models/attaches/a;->b()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/models/attaches/AttachRelatedEntities;->b()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v3
 
     .line 2
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/models/attaches/a;->a()Lcom/vk/im/engine/models/b;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/models/attaches/AttachRelatedEntities;->a()Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/b;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityValue;->b()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -88,11 +88,11 @@
 
     .line 3
     :goto_0
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/models/attaches/a;->c()Lcom/vk/im/engine/models/b;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/im/engine/models/attaches/AttachRelatedEntities;->c()Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/b;->b()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/EntityValue;->b()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -105,11 +105,11 @@
     if-eqz v6, :cond_1
 
     .line 4
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v0
 
@@ -181,7 +181,7 @@
     const/16 v25, 0x0
 
     .line 8
-    invoke-static/range {v0 .. v25}, Lcom/vk/im/ui/p/e$b;->a(Lcom/vk/im/ui/p/e;Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v25}, Lcom/vk/im/ui/p/ImBridge$b1;->a(Lcom/vk/im/ui/p/ImBridge11;Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     goto :goto_1
 
@@ -191,11 +191,11 @@
     if-eqz v0, :cond_2
 
     .line 9
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v1}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v1
 
@@ -207,7 +207,7 @@
     move-result-object v2
 
     .line 11
-    invoke-interface {v1, v2, v0, v3}, Lcom/vk/im/ui/p/e;->a(Landroid/content/Context;Lcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-interface {v1, v2, v0, v3}, Lcom/vk/im/ui/p/ImBridge11;->a(Landroid/content/Context;Lcom/vk/im/engine/models/messages/PinnedMsg;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     :cond_2
     :goto_1
@@ -218,9 +218,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/attaches/a;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/AttachRelatedEntities;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider$d;->a(Lcom/vk/im/engine/models/attaches/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider$d;->a(Lcom/vk/im/engine/models/attaches/AttachRelatedEntities;)V
 
     return-void
 .end method

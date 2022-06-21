@@ -3,7 +3,7 @@
 .source "CreateStoryEditText.kt"
 
 # interfaces
-.implements Lcom/vk/stories/views/c/b/d;
+.implements Lcom/vk/stories/views/c/b/TextBackgroundDrawer1;
 .implements Landroid/view/GestureDetector$OnGestureListener;
 
 
@@ -27,9 +27,9 @@
 
 .field private c:I
 
-.field private d:Lcom/vk/attachpicker/stickers/text/j;
+.field private d:Lcom/vk/attachpicker/stickers/text/TextStickerInfo;
 
-.field private e:Lcom/vk/stories/views/c/b/a;
+.field private e:Lcom/vk/stories/views/c/b/StoryTextBackgroundDrawer;
 
 .field private f:Z
 
@@ -46,7 +46,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/views/CreateStoryEditText$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/views/CreateStoryEditText$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v0, 0x20
 
@@ -205,7 +205,7 @@
 
     const-string v1, "layout"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/text/Layout;->getLineCount()I
 
@@ -301,11 +301,11 @@
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/views/CreateStoryEditText;->e:Lcom/vk/stories/views/c/b/a;
+    iget-object v0, p0, Lcom/vk/stories/views/CreateStoryEditText;->e:Lcom/vk/stories/views/c/b/StoryTextBackgroundDrawer;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0}, Lcom/vk/stories/views/c/b/b;->a(Lcom/vk/stories/views/c/b/d;)V
+    invoke-interface {v0, p0}, Lcom/vk/stories/views/c/b/TextBackgroundDrawer;->a(Lcom/vk/stories/views/c/b/TextBackgroundDrawer1;)V
 
     .line 3
     :cond_0
@@ -399,7 +399,7 @@
 
     const-string v5, "TextView::class.java.get\u2026redField(\"mShadowRadius\")"
 
-    invoke-static {v1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-virtual {v1, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -468,7 +468,7 @@
 
     const-string v0, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -526,14 +526,14 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/attachpicker/stickers/text/j;)V
+.method public final a(Lcom/vk/attachpicker/stickers/text/TextStickerInfo;)V
     .locals 7
 
     .line 11
-    iput-object p1, p0, Lcom/vk/stories/views/CreateStoryEditText;->d:Lcom/vk/attachpicker/stickers/text/j;
+    iput-object p1, p0, Lcom/vk/stories/views/CreateStoryEditText;->d:Lcom/vk/attachpicker/stickers/text/TextStickerInfo;
 
     .line 12
-    iget-object v0, p1, Lcom/vk/attachpicker/stickers/text/j;->b:Landroid/text/Layout$Alignment;
+    iget-object v0, p1, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->b:Landroid/text/Layout$Alignment;
 
     const/4 v1, 0x2
 
@@ -573,7 +573,7 @@
     invoke-virtual {p0, v0}, Landroid/widget/EditText;->setTextAlignment(I)V
 
     .line 13
-    iget-object v0, p1, Lcom/vk/attachpicker/stickers/text/j;->b:Landroid/text/Layout$Alignment;
+    iget-object v0, p1, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->b:Landroid/text/Layout$Alignment;
 
     if-nez v0, :cond_3
 
@@ -612,34 +612,34 @@
     invoke-virtual {p0, v0}, Landroid/widget/EditText;->setGravity(I)V
 
     .line 15
-    iget v0, p1, Lcom/vk/attachpicker/stickers/text/j;->f:I
+    iget v0, p1, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->f:I
 
     invoke-virtual {p0, v0}, Landroid/widget/EditText;->setTextColor(I)V
 
     .line 16
-    iget-object v0, p1, Lcom/vk/attachpicker/stickers/text/j;->a:Landroid/graphics/Typeface;
+    iget-object v0, p1, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->a:Landroid/graphics/Typeface;
 
     invoke-virtual {p0, v0}, Landroid/widget/EditText;->setTypeface(Landroid/graphics/Typeface;)V
 
     .line 17
-    iget v0, p1, Lcom/vk/attachpicker/stickers/text/j;->c:F
+    iget v0, p1, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->c:F
 
     const/4 v3, 0x0
 
     invoke-virtual {p0, v3, v0}, Landroid/widget/EditText;->setTextSize(IF)V
 
     .line 18
-    iget v0, p1, Lcom/vk/attachpicker/stickers/text/j;->d:F
+    iget v0, p1, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->d:F
 
-    iget v4, p1, Lcom/vk/attachpicker/stickers/text/j;->e:F
+    iget v4, p1, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->e:F
 
     invoke-virtual {p0, v0, v4}, Landroid/widget/EditText;->setLineSpacing(FF)V
 
     .line 19
-    iget-object v0, p1, Lcom/vk/attachpicker/stickers/text/j;->j:Lcom/vk/attachpicker/stickers/text/d;
+    iget-object v0, p1, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->j:Lcom/vk/attachpicker/stickers/text/ShadowLayerInfo;
 
     .line 20
-    iget-boolean v4, v0, Lcom/vk/attachpicker/stickers/text/d;->a:Z
+    iget-boolean v4, v0, Lcom/vk/attachpicker/stickers/text/ShadowLayerInfo;->a:Z
 
     const/4 v5, 0x0
 
@@ -650,13 +650,13 @@
 
     move-result-object v1
 
-    iget v3, v0, Lcom/vk/attachpicker/stickers/text/d;->d:F
+    iget v3, v0, Lcom/vk/attachpicker/stickers/text/ShadowLayerInfo;->d:F
 
-    iget v4, v0, Lcom/vk/attachpicker/stickers/text/d;->b:F
+    iget v4, v0, Lcom/vk/attachpicker/stickers/text/ShadowLayerInfo;->b:F
 
-    iget v6, v0, Lcom/vk/attachpicker/stickers/text/d;->c:F
+    iget v6, v0, Lcom/vk/attachpicker/stickers/text/ShadowLayerInfo;->c:F
 
-    iget v0, v0, Lcom/vk/attachpicker/stickers/text/d;->e:I
+    iget v0, v0, Lcom/vk/attachpicker/stickers/text/ShadowLayerInfo;->e:I
 
     invoke-virtual {v1, v3, v4, v6, v0}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
@@ -680,13 +680,13 @@
 
     .line 25
     :goto_4
-    iget-object p1, p1, Lcom/vk/attachpicker/stickers/text/j;->i:Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;
+    iget-object p1, p1, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->i:Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;->a(Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;)Lcom/vk/stories/views/c/b/a;
+    invoke-static {p1}, Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;->a(Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;)Lcom/vk/stories/views/c/b/StoryTextBackgroundDrawer;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/views/CreateStoryEditText;->e:Lcom/vk/stories/views/c/b/a;
+    iput-object p1, p0, Lcom/vk/stories/views/CreateStoryEditText;->e:Lcom/vk/stories/views/c/b/StoryTextBackgroundDrawer;
 
     .line 26
     invoke-virtual {p0}, Landroid/widget/EditText;->requestLayout()V
@@ -754,11 +754,11 @@
     invoke-direct {p0}, Lcom/vk/stories/views/CreateStoryEditText;->b()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/views/CreateStoryEditText;->e:Lcom/vk/stories/views/c/b/a;
+    iget-object v0, p0, Lcom/vk/stories/views/CreateStoryEditText;->e:Lcom/vk/stories/views/c/b/StoryTextBackgroundDrawer;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/stories/views/c/a;->a(Landroid/graphics/Canvas;)V
+    invoke-interface {v0, p1}, Lcom/vk/stories/views/c/Drawer;->a(Landroid/graphics/Canvas;)V
 
     .line 3
     :cond_0
@@ -901,18 +901,18 @@
     invoke-virtual {p0, p2, p1}, Landroid/widget/EditText;->setLineSpacing(FF)V
 
     .line 3
-    iget-object p3, p0, Lcom/vk/stories/views/CreateStoryEditText;->d:Lcom/vk/attachpicker/stickers/text/j;
+    iget-object p3, p0, Lcom/vk/stories/views/CreateStoryEditText;->d:Lcom/vk/attachpicker/stickers/text/TextStickerInfo;
 
     if-eqz p3, :cond_0
 
-    iget p2, p3, Lcom/vk/attachpicker/stickers/text/j;->d:F
+    iget p2, p3, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->d:F
 
     :cond_0
-    iget-object p3, p0, Lcom/vk/stories/views/CreateStoryEditText;->d:Lcom/vk/attachpicker/stickers/text/j;
+    iget-object p3, p0, Lcom/vk/stories/views/CreateStoryEditText;->d:Lcom/vk/attachpicker/stickers/text/TextStickerInfo;
 
     if-eqz p3, :cond_1
 
-    iget p1, p3, Lcom/vk/attachpicker/stickers/text/j;->e:F
+    iget p1, p3, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->e:F
 
     :cond_1
     invoke-virtual {p0, p2, p1}, Landroid/widget/EditText;->setLineSpacing(FF)V

@@ -3,7 +3,7 @@
 .source "BaseProfilePresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -54,16 +54,16 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->a(Lcom/vk/profile/presenter/BaseProfilePresenter;Lio/reactivex/disposables/b;)V
+    invoke-static {p1, v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->a(Lcom/vk/profile/presenter/BaseProfilePresenter;Lio/reactivex/disposables/Disposable;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$c;->a:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
-    invoke-virtual {p1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->X()Lcom/vk/music/player/d;
+    invoke-virtual {p1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->X()Lcom/vk/music/player/PlayerModel;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/music/player/d;->stop()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->stop()V
 
     return-void
 .end method

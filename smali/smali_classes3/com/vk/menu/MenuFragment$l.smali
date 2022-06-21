@@ -1,5 +1,5 @@
 .class final Lcom/vk/menu/MenuFragment$l;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "MenuFragment.kt"
 
 # interfaces
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
-        "Lcom/vk/menu/d;",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vk/menu/MenuViewItem;",
         ">;",
         "Landroid/view/View$OnClickListener;"
     }
@@ -51,14 +51,14 @@
     const p1, 0x7f0d0326
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x2
 
@@ -66,7 +66,7 @@
 
     const v2, 0x7f0a098c
 
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -77,11 +77,11 @@
     .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f0a0d80
 
-    invoke-static {p1, p2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -99,22 +99,22 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/menu/d;)V
+.method public a(Lcom/vk/menu/MenuViewItem;)V
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object p1
 
     const-string v0, "VKAccountManager.getCurrent()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/menu/MenuFragment$l;->c:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lb/h/h/d/c;->d0()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->d0()Ljava/lang/String;
 
     move-result-object v1
 
@@ -123,7 +123,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/menu/MenuFragment$l;->d:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lb/h/h/d/c;->Z()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->Z()Ljava/lang/String;
 
     move-result-object p1
 
@@ -136,9 +136,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/menu/d;
+    check-cast p1, Lcom/vk/menu/MenuViewItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuFragment$l;->a(Lcom/vk/menu/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuFragment$l;->a(Lcom/vk/menu/MenuViewItem;)V
 
     return-void
 .end method
@@ -157,13 +157,13 @@
 
     const-string v0, "view!!"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/auth/p;->b(Landroid/content/Context;)Lcom/vk/auth/o;
+    invoke-static {p1}, Lcom/vk/auth/VkAuth;->b(Landroid/content/Context;)Lcom/vk/auth/VkAccessToken;
 
     .line 2
     iget-object p1, p0, Lcom/vk/menu/MenuFragment$l;->e:Lcom/vk/menu/MenuFragment;
@@ -176,14 +176,14 @@
 
     const v0, 0x7f0a07e3
 
-    invoke-static {p1, v0}, Lcom/vk/menu/c;->a(Lcom/vk/navigation/NavigationDelegate;I)V
+    invoke-static {p1, v0}, Lcom/vk/menu/MenuUtils;->a(Lcom/vk/navigation/NavigationDelegate;I)V
 
     :cond_0
     return-void
 
     .line 3
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

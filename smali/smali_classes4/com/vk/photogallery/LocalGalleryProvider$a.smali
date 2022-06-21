@@ -1,5 +1,5 @@
 .class final Lcom/vk/photogallery/LocalGalleryProvider$a;
-.super Lcom/vk/photogallery/dto/a;
+.super Lcom/vk/photogallery/dto/GalleryState;
 .source "LocalGalleryProvider.kt"
 
 
@@ -19,7 +19,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/photogallery/dto/c;",
+            "Lcom/vk/photogallery/dto/GalleryState2;",
             ">;"
         }
     .end annotation
@@ -36,13 +36,13 @@
             "I",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/photogallery/dto/c;",
+            "Lcom/vk/photogallery/dto/GalleryState2;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/photogallery/dto/a;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/photogallery/dto/GalleryState;-><init>(Ljava/lang/String;I)V
 
     iput-object p3, p0, Lcom/vk/photogallery/LocalGalleryProvider$a;->c:Ljava/util/List;
 
@@ -57,7 +57,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/photogallery/dto/c;",
+            "Lcom/vk/photogallery/dto/GalleryState2;",
             ">;"
         }
     .end annotation

@@ -1,9 +1,9 @@
 .class public Lcom/vk/notifications/settings/NotificationsSettingsFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "NotificationsSettingsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$p;
+.implements Lcom/vk/lists/PaginationHelper$p;
 
 
 # annotations
@@ -18,9 +18,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/b;",
-        "Lcom/vk/lists/t$p<",
-        "Lb/h/c/q/k$a;",
+        "Lcom/vk/core/fragments/BaseFragment1;",
+        "Lcom/vk/lists/PaginationHelper$p<",
+        "Lcom/vk/api/notifications/NotificationsGetSettings$a;",
         ">;"
     }
 .end annotation
@@ -29,7 +29,7 @@
 # instance fields
 .field private F:Landroidx/appcompat/widget/Toolbar;
 
-.field private G:Lcom/vk/lists/t;
+.field private G:Lcom/vk/lists/PaginationHelper;
 
 .field private H:Lcom/vk/lists/RecyclerPaginatedView;
 
@@ -43,7 +43,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     return-void
 .end method
@@ -52,18 +52,18 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lb/h/c/q/j;
+    new-instance v0, Lcom/vk/api/notifications/NotificationsGetIgnoredSources;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, v1}, Lb/h/c/q/j;-><init>(II)V
+    invoke-direct {v0, v1, v1}, Lcom/vk/api/notifications/NotificationsGetIgnoredSources;-><init>(II)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 2
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -76,16 +76,16 @@
     sget-object v2, Lcom/vk/notifications/settings/NotificationsSettingsFragment$l;->a:Lcom/vk/notifications/settings/NotificationsSettingsFragment$l;
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "NotificationsGetIgnoredS\u2026Ignore\n                })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -94,18 +94,18 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lb/h/c/e0/d;
+    new-instance v0, Lcom/vk/api/wall/WallGetSubscriptions;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, v1}, Lb/h/c/e0/d;-><init>(II)V
+    invoke-direct {v0, v1, v1}, Lcom/vk/api/wall/WallGetSubscriptions;-><init>(II)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 2
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -118,16 +118,16 @@
     sget-object v2, Lcom/vk/notifications/settings/NotificationsSettingsFragment$n;->a:Lcom/vk/notifications/settings/NotificationsSettingsFragment$n;
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "WallGetSubscriptions(0, \u2026Ignore\n                })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -161,15 +161,15 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
-            "Lb/h/c/q/k$a;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/api/notifications/NotificationsGetSettings$a;",
             ">;"
         }
     .end annotation
@@ -177,64 +177,64 @@
     const-string p2, "0"
 
     .line 2
-    invoke-virtual {p0, p2, p1}, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+.method public a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
-            "Lb/h/c/q/k$a;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/api/notifications/NotificationsGetSettings$a;",
             ">;"
         }
     .end annotation
 
     .line 3
-    new-instance p1, Lb/h/c/q/k;
+    new-instance p1, Lcom/vk/api/notifications/NotificationsGetSettings;
 
-    sget-object p2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {p2}, Lcom/vk/core/util/u;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/vk/core/util/DeviceIdProvider;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p2
 
     const-string v0, "DeviceIdProvider.getDevi\u2026AppContextHolder.context)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "notifications"
 
-    invoke-direct {p1, p2, v0}, Lb/h/c/q/k;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, p2, v0}, Lcom/vk/api/notifications/NotificationsGetSettings;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p2, 0x0
 
     const/4 v0, 0x1
 
-    invoke-static {p1, p2, v0, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, p2, v0, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
-            "Lb/h/c/q/k$a;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/api/notifications/NotificationsGetSettings$a;",
             ">;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -242,22 +242,22 @@
     .line 4
     new-instance p2, Lcom/vk/notifications/settings/NotificationsSettingsFragment$i;
 
-    invoke-direct {p2, p0, p3}, Lcom/vk/notifications/settings/NotificationsSettingsFragment$i;-><init>(Lcom/vk/notifications/settings/NotificationsSettingsFragment;Lcom/vk/lists/t;)V
+    invoke-direct {p2, p0, p3}, Lcom/vk/notifications/settings/NotificationsSettingsFragment$i;-><init>(Lcom/vk/notifications/settings/NotificationsSettingsFragment;Lcom/vk/lists/PaginationHelper;)V
 
     .line 5
     sget-object p3, Lcom/vk/notifications/settings/NotificationsSettingsFragment$j;->a:Lcom/vk/notifications/settings/NotificationsSettingsFragment$j;
 
     .line 6
-    invoke-virtual {p1, p2, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "observable.subscribe(\n  \u2026       }, { e-> L.e(e) })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -277,7 +277,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
 
     :cond_0
     return-void
@@ -287,10 +287,10 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    sget-object p1, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object p1, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -300,9 +300,9 @@
 
     const-string v1, "getActivity()!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/pushes/j/e;->a(Landroid/content/Context;)Z
+    invoke-virtual {p1, v0}, Lcom/vk/pushes/j/NotificationHelper;->a(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -313,146 +313,146 @@
     iput-object p1, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->J:Ljava/lang/Boolean;
 
     .line 3
-    sget-object p1, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object p1, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {p1}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {p1}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 4
     sget-object v0, Lcom/vk/notifications/settings/NotificationsSettingsFragment$e;->a:Lcom/vk/notifications/settings/NotificationsSettingsFragment$e;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "RxBus.instance.events.\n \u2026ttingInvalidateNewPosts }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     new-instance v0, Lcom/vk/notifications/settings/NotificationsSettingsFragment$onCreate$2;
 
     invoke-direct {v0, p0}, Lcom/vk/notifications/settings/NotificationsSettingsFragment$onCreate$2;-><init>(Lcom/vk/notifications/settings/NotificationsSettingsFragment;)V
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Lkotlin/jvm/b/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 6
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 7
-    sget-object p1, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object p1, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {p1}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {p1}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 8
     sget-object v0, Lcom/vk/notifications/settings/NotificationsSettingsFragment$f;->a:Lcom/vk/notifications/settings/NotificationsSettingsFragment$f;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "RxBus.instance.events.\n \u2026InvalidateIgnoreSources }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     new-instance v0, Lcom/vk/notifications/settings/NotificationsSettingsFragment$onCreate$4;
 
     invoke-direct {v0, p0}, Lcom/vk/notifications/settings/NotificationsSettingsFragment$onCreate$4;-><init>(Lcom/vk/notifications/settings/NotificationsSettingsFragment;)V
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Lkotlin/jvm/b/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 10
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 11
-    sget-object p1, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object p1, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {p1}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {p1}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 12
     sget-object v0, Lcom/vk/notifications/settings/NotificationsSettingsFragment$g;->a:Lcom/vk/notifications/settings/NotificationsSettingsFragment$g;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "RxBus.instance.events.\n \u2026sSettingInvalidateEvent }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     new-instance v0, Lcom/vk/notifications/settings/NotificationsSettingsFragment$onCreate$6;
 
     invoke-direct {v0, p0}, Lcom/vk/notifications/settings/NotificationsSettingsFragment$onCreate$6;-><init>(Lcom/vk/notifications/settings/NotificationsSettingsFragment;)V
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Lkotlin/jvm/b/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 14
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 15
-    sget-object p1, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object p1, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {p1}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {p1}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 16
     sget-object v0, Lcom/vk/notifications/settings/NotificationsSettingsFragment$h;->a:Lcom/vk/notifications/settings/NotificationsSettingsFragment$h;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "RxBus.instance.events.\n \u2026crementCommunitiesCount }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 17
     new-instance v0, Lcom/vk/notifications/settings/NotificationsSettingsFragment$onCreate$8;
 
     invoke-direct {v0, p0}, Lcom/vk/notifications/settings/NotificationsSettingsFragment$onCreate$8;-><init>(Lcom/vk/notifications/settings/NotificationsSettingsFragment;)V
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Lkotlin/jvm/b/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 18
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 
     .line 19
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -474,7 +474,7 @@
     const-string p2, "view"
 
     .line 2
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x2
 
@@ -482,7 +482,7 @@
 
     const v0, 0x7f0a0d9d
 
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -509,13 +509,13 @@
 
     invoke-direct {v1, p0}, Lcom/vk/notifications/settings/NotificationsSettingsFragment$onCreateView$1;-><init>(Lcom/vk/notifications/settings/NotificationsSettingsFragment;)V
 
-    invoke-static {v0, p0, v1}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, p0, v1}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     :cond_1
     const v0, 0x7f0a0b7a
 
     .line 5
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -564,7 +564,7 @@
 
     const-string v1, "context!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, v0}, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;-><init>(Landroid/content/Context;)V
 
@@ -581,7 +581,7 @@
 
     .line 10
     :cond_4
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p2
 
@@ -592,22 +592,22 @@
 
     if-eqz p2, :cond_6
 
-    new-instance v0, Lcom/vk/core/ui/m;
+    new-instance v0, Lcom/vk/core/ui/MilkshakeDecoration;
 
-    invoke-direct {v0}, Lcom/vk/core/ui/m;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/ui/MilkshakeDecoration;-><init>()V
 
     iget-object v2, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->I:Lcom/vk/notifications/settings/NotificationsSettingsAdapter;
 
     if-eqz v2, :cond_5
 
-    invoke-virtual {v0, v2}, Lcom/vk/core/ui/m;->a(Lcom/vk/core/ui/n;)Lcom/vk/core/ui/m;
+    invoke-virtual {v0, v2}, Lcom/vk/core/ui/MilkshakeDecoration;->a(Lcom/vk/core/ui/MilkshakeProvider;)Lcom/vk/core/ui/MilkshakeDecoration;
 
     invoke-virtual {p2, v0}, Lcom/vk/lists/RecyclerPaginatedView;->setItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     goto :goto_0
 
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
@@ -624,14 +624,14 @@
 
     if-eqz v0, :cond_7
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p2, v0}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Landroid/content/Context;)V
+    invoke-static {p2, v0}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Landroid/content/Context;)V
 
     goto :goto_1
 
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
@@ -643,40 +643,40 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p2, p3, v0, p3}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
+    invoke-static {p2, p3, v0, p3}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
 
     .line 14
     :cond_9
     :goto_1
-    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$p;)Lcom/vk/lists/t$k;
+    invoke-static {p0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$p;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object p2
 
     const-string v0, "PaginationHelper\n       \u2026createWithStartFrom(this)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
     iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->H:Lcom/vk/lists/RecyclerPaginatedView;
 
     if-eqz v0, :cond_a
 
-    invoke-static {p2, v0}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p2, v0}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->G:Lcom/vk/lists/t;
+    iput-object p2, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->G:Lcom/vk/lists/PaginationHelper;
 
     return-object p1
 
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     .line 16
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 .end method
@@ -696,15 +696,15 @@
     iput-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->I:Lcom/vk/notifications/settings/NotificationsSettingsAdapter;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->G:Lcom/vk/lists/t;
+    iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->G:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/lists/t;->j()V
+    invoke-virtual {v1}, Lcom/vk/lists/PaginationHelper;->j()V
 
     .line 5
     :cond_0
-    iput-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->G:Lcom/vk/lists/t;
+    iput-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->G:Lcom/vk/lists/PaginationHelper;
 
     .line 6
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onDestroyView()V
@@ -716,14 +716,14 @@
     .locals 3
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->I:Lcom/vk/notifications/settings/NotificationsSettingsAdapter;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result v0
 
@@ -760,7 +760,7 @@
 
     .line 6
     :cond_3
-    sget-object v0, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object v0, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -770,9 +770,9 @@
 
     const-string v2, "getActivity()!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/pushes/j/e;->a(Landroid/content/Context;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/pushes/j/NotificationHelper;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -783,7 +783,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -792,11 +792,11 @@
     if-eqz v1, :cond_5
 
     .line 8
-    iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->G:Lcom/vk/lists/t;
+    iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;->G:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {v1}, Lcom/vk/lists/PaginationHelper;->h()V
 
     .line 9
     :cond_4
@@ -811,7 +811,7 @@
 
     .line 10
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

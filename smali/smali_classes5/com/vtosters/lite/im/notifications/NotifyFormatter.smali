@@ -12,17 +12,17 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 .field private static final b:Landroid/content/Context;
 
-.field private static final c:Lcom/vk/core/util/d1;
+.field private static final c:Lcom/vk/core/util/ThreadLocalDelegate;
 
-.field private static final d:Lcom/vk/core/util/d1;
+.field private static final d:Lcom/vk/core/util/ThreadLocalDelegate;
 
-.field private static final e:Lcom/vk/core/util/d1;
+.field private static final e:Lcom/vk/core/util/ThreadLocalDelegate;
 
-.field private static final f:Lcom/vk/core/util/d1;
+.field private static final f:Lcom/vk/core/util/ThreadLocalDelegate;
 
 .field public static final g:Lcom/vtosters/lite/im/notifications/NotifyFormatter;
 
@@ -35,11 +35,11 @@
 
     const/4 v1, 0x4
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -47,9 +47,9 @@
 
     const-string v5, "getNameFormatter()Lcom/vk/im/ui/formatters/DisplayNameFormatter;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -57,7 +57,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -65,9 +65,9 @@
 
     const-string v5, "getBodyFormatter()Lcom/vk/im/ui/formatters/MsgBodyFormatter;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x1
 
@@ -75,7 +75,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -83,9 +83,9 @@
 
     const-string v5, "getAttachFormatter()Lcom/vk/im/ui/formatters/MsgAttachFormatter;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x2
 
@@ -93,7 +93,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -101,15 +101,15 @@
 
     const-string v4, "getFwdFormatter()Lcom/vk/im/ui/formatters/MsgNestedFormatter;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x3
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a:[Lkotlin/u/j;
+    sput-object v1, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;
@@ -119,45 +119,45 @@
     sput-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->g:Lcom/vtosters/lite/im/notifications/NotifyFormatter;
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     sput-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->b:Landroid/content/Context;
 
     .line 3
     sget-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter$nameFormatter$2;->a:Lcom/vtosters/lite/im/notifications/NotifyFormatter$nameFormatter$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->c:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->c:Lcom/vk/core/util/ThreadLocalDelegate;
 
     .line 4
     sget-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter$bodyFormatter$2;->a:Lcom/vtosters/lite/im/notifications/NotifyFormatter$bodyFormatter$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->d:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->d:Lcom/vk/core/util/ThreadLocalDelegate;
 
     .line 5
     sget-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter$attachFormatter$2;->a:Lcom/vtosters/lite/im/notifications/NotifyFormatter$attachFormatter$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->e:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->e:Lcom/vk/core/util/ThreadLocalDelegate;
 
     .line 6
     sget-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter$fwdFormatter$2;->a:Lcom/vtosters/lite/im/notifications/NotifyFormatter$fwdFormatter$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->f:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->f:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-void
 .end method
@@ -186,15 +186,15 @@
     if-eqz p1, :cond_0
 
     .line 29
-    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->b(Ljava/lang/String;)Lc/a/m;
+    invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->b(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "VKImageLoader.getNotificationCircleBitmap(url)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lcom/vk/core/util/z0;->a(Lc/a/m;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/vk/core/util/RxUtil;->a(Lio/reactivex/Observable;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -209,31 +209,31 @@
     return-object p1
 .end method
 
-.method private final a()Lcom/vk/im/ui/formatters/j;
+.method private final a()Lcom/vk/im/ui/formatters/MsgAttachFormatter;
     .locals 3
 
-    sget-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->e:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->e:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/formatters/j;
+    check-cast v0, Lcom/vk/im/ui/formatters/MsgAttachFormatter;
 
     return-object v0
 .end method
 
-.method private final a(Lcom/vtosters/lite/im/notifications/b;)Ljava/lang/String;
+.method private final a(Lcom/vtosters/lite/im/notifications/Info;)Ljava/lang/String;
     .locals 4
 
     .line 23
-    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/Info;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object v0
 
@@ -247,7 +247,7 @@
 
     .line 24
     :cond_0
-    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/Info;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object p1
 
@@ -278,13 +278,13 @@
     check-cast v2, Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 26
-    instance-of v3, v2, Lcom/vk/im/engine/models/attaches/g;
+    instance-of v3, v2, Lcom/vk/im/engine/models/attaches/WithPreview;
 
     if-eqz v3, :cond_2
 
-    check-cast v2, Lcom/vk/im/engine/models/attaches/g;
+    check-cast v2, Lcom/vk/im/engine/models/attaches/WithPreview;
 
-    invoke-interface {v2}, Lcom/vk/im/engine/models/attaches/g;->h()Lcom/vk/im/engine/models/ImageList;
+    invoke-interface {v2}, Lcom/vk/im/engine/models/attaches/WithPreview;->h()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object v2
 
@@ -311,19 +311,19 @@
 
     .line 27
     :goto_1
-    instance-of p1, v0, Lcom/vk/im/engine/models/attaches/g;
+    instance-of p1, v0, Lcom/vk/im/engine/models/attaches/WithPreview;
 
     if-nez p1, :cond_4
 
     move-object v0, v1
 
     :cond_4
-    check-cast v0, Lcom/vk/im/engine/models/attaches/g;
+    check-cast v0, Lcom/vk/im/engine/models/attaches/WithPreview;
 
     if-eqz v0, :cond_5
 
     .line 28
-    invoke-interface {v0}, Lcom/vk/im/engine/models/attaches/g;->h()Lcom/vk/im/engine/models/ImageList;
+    invoke-interface {v0}, Lcom/vk/im/engine/models/attaches/WithPreview;->h()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object p1
 
@@ -386,31 +386,31 @@
     return p1
 .end method
 
-.method private final b()Lcom/vk/im/ui/formatters/k;
+.method private final b()Lcom/vk/im/ui/formatters/MsgBodyFormatter;
     .locals 3
 
-    sget-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->d:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->d:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/formatters/k;
+    check-cast v0, Lcom/vk/im/ui/formatters/MsgBodyFormatter;
 
     return-object v0
 .end method
 
-.method private final b(Landroid/content/Context;Lcom/vtosters/lite/im/notifications/b;)Ljava/lang/String;
+.method private final b(Landroid/content/Context;Lcom/vtosters/lite/im/notifications/Info;)Ljava/lang/String;
     .locals 6
 
     .line 1
-    invoke-virtual {p2}, Lcom/vtosters/lite/im/notifications/b;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {p2}, Lcom/vtosters/lite/im/notifications/Info;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
@@ -429,21 +429,21 @@
 
     const-string p2, "context.getString(R.stri\u2026n_msg_text_disabled_text)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     .line 3
     :cond_0
-    invoke-direct {p0}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->b()Lcom/vk/im/ui/formatters/k;
+    invoke-direct {p0}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->b()Lcom/vk/im/ui/formatters/MsgBodyFormatter;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/vtosters/lite/im/notifications/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual {p2}, Lcom/vtosters/lite/im/notifications/Info;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object v1
 
-    invoke-virtual {p2}, Lcom/vtosters/lite/im/notifications/b;->d()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    invoke-virtual {p2}, Lcom/vtosters/lite/im/notifications/Info;->d()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     move-result-object v2
 
@@ -453,7 +453,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/im/ui/formatters/k;->a(Lcom/vk/im/ui/formatters/k;Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/models/ProfilesSimpleInfo;IILjava/lang/Object;)Ljava/lang/CharSequence;
+    invoke-static/range {v0 .. v5}, Lcom/vk/im/ui/formatters/MsgBodyFormatter;->a(Lcom/vk/im/ui/formatters/MsgBodyFormatter;Lcom/vk/im/engine/models/messages/Msg;Lcom/vk/im/engine/models/ProfilesSimpleInfo;IILjava/lang/Object;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -462,18 +462,18 @@
     move-result-object p1
 
     .line 4
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/emoji/b;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcom/vk/emoji/Emoji;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_8
 
     .line 5
-    invoke-static {p1}, Lcom/vk/im/ui/formatters/h;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {p1}, Lcom/vk/im/ui/formatters/MentionStrip;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -482,28 +482,28 @@
     move-result-object p1
 
     .line 6
-    invoke-direct {p0}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->c()Lcom/vk/im/ui/formatters/n;
+    invoke-direct {p0}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->c()Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/vtosters/lite/im/notifications/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual {p2}, Lcom/vtosters/lite/im/notifications/Info;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/formatters/n;->a(Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/formatters/MsgNestedFormatter;->a(Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 7
-    invoke-direct {p0}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a()Lcom/vk/im/ui/formatters/j;
+    invoke-direct {p0}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a()Lcom/vk/im/ui/formatters/MsgAttachFormatter;
 
     move-result-object v1
 
-    invoke-virtual {p2}, Lcom/vtosters/lite/im/notifications/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual {p2}, Lcom/vtosters/lite/im/notifications/Info;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object p2
 
-    invoke-virtual {v1, p2}, Lcom/vk/im/ui/formatters/j;->a(Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, p2}, Lcom/vk/im/ui/formatters/MsgAttachFormatter;->a(Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -631,18 +631,18 @@
 
     .line 14
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method private final b(Lcom/vtosters/lite/im/notifications/b;)Ljava/lang/String;
+.method private final b(Lcom/vtosters/lite/im/notifications/Info;)Ljava/lang/String;
     .locals 0
 
     .line 15
-    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/b;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/Info;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object p1
 
@@ -677,27 +677,27 @@
     return-object p1
 .end method
 
-.method private final c()Lcom/vk/im/ui/formatters/n;
+.method private final c()Lcom/vk/im/ui/formatters/MsgNestedFormatter;
     .locals 3
 
-    sget-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->f:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->f:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/formatters/n;
+    check-cast v0, Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
     return-object v0
 .end method
 
-.method private final c(Lcom/vtosters/lite/im/notifications/b;)Ljava/lang/String;
+.method private final c(Lcom/vtosters/lite/im/notifications/Info;)Ljava/lang/String;
     .locals 5
 
     const/16 v0, 0x38
@@ -708,7 +708,7 @@
     move-result v0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/Info;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object v1
 
@@ -721,7 +721,7 @@
     move-result-object v1
 
     .line 3
-    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/Info;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object v2
 
@@ -763,7 +763,7 @@
 
     .line 5
     :cond_1
-    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/b;->d()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/Info;->d()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     move-result-object p1
 
@@ -787,7 +787,7 @@
 
     .line 6
     :cond_2
-    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/b;->d()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/Info;->d()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     move-result-object p1
 
@@ -829,31 +829,31 @@
     return-object v4
 .end method
 
-.method private final d()Lcom/vk/im/ui/formatters/d;
+.method private final d()Lcom/vk/im/ui/formatters/DisplayNameFormatter;
     .locals 3
 
-    sget-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->c:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->c:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/formatters/d;
+    check-cast v0, Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     return-object v0
 .end method
 
-.method private final d(Lcom/vtosters/lite/im/notifications/b;)Ljava/lang/String;
+.method private final d(Lcom/vtosters/lite/im/notifications/Info;)Ljava/lang/String;
     .locals 2
 
     .line 1
-    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/Info;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object v0
 
@@ -873,17 +873,17 @@
 
     const-string v0, "context.getString(R.stri\u2026fication_msg_send_failed)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 2
     :cond_0
-    new-instance v0, Lcom/vk/im/ui/formatters/d;
+    new-instance v0, Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/formatters/d;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;-><init>()V
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/Info;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object v1
 
@@ -891,11 +891,11 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/b;->d()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/Info;->d()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -903,23 +903,23 @@
     return-object p1
 .end method
 
-.method private final e(Lcom/vtosters/lite/im/notifications/b;)Ljava/lang/String;
+.method private final e(Lcom/vtosters/lite/im/notifications/Info;)Ljava/lang/String;
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->d()Lcom/vk/im/ui/formatters/d;
+    invoke-direct {p0}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->d()Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/b;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/Info;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/b;->d()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
+    invoke-virtual {p1}, Lcom/vtosters/lite/im/notifications/Info;->d()Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -928,7 +928,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lcom/vtosters/lite/im/notifications/b;)Lcom/vtosters/lite/im/notifications/j;
+.method public final a(Landroid/content/Context;Lcom/vtosters/lite/im/notifications/Info;)Lcom/vtosters/lite/im/notifications/Notify;
     .locals 20
 
     move-object/from16 v0, p0
@@ -936,22 +936,22 @@
     move-object/from16 v1, p2
 
     .line 2
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->e(Lcom/vtosters/lite/im/notifications/b;)Ljava/lang/String;
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->e(Lcom/vtosters/lite/im/notifications/Info;)Ljava/lang/String;
 
     move-result-object v4
 
     .line 3
-    invoke-direct/range {p0 .. p2}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->b(Landroid/content/Context;Lcom/vtosters/lite/im/notifications/b;)Ljava/lang/String;
+    invoke-direct/range {p0 .. p2}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->b(Landroid/content/Context;Lcom/vtosters/lite/im/notifications/Info;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 4
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->d(Lcom/vtosters/lite/im/notifications/b;)Ljava/lang/String;
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->d(Lcom/vtosters/lite/im/notifications/Info;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 5
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->c(Lcom/vtosters/lite/im/notifications/b;)Ljava/lang/String;
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->c(Lcom/vtosters/lite/im/notifications/Info;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -970,7 +970,7 @@
     if-eqz v5, :cond_0
 
     .line 8
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a(Lcom/vtosters/lite/im/notifications/b;)Ljava/lang/String;
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->a(Lcom/vtosters/lite/im/notifications/Info;)Ljava/lang/String;
 
     move-result-object v9
 
@@ -1000,7 +1000,7 @@
 
     .line 10
     :goto_1
-    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/Info;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object v5
 
@@ -1023,7 +1023,7 @@
 
     .line 11
     :goto_2
-    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/Info;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object v2
 
@@ -1032,7 +1032,7 @@
     move-result v16
 
     .line 12
-    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/b;->c()Lcom/vk/im/engine/models/messages/Msg;
+    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/Info;->c()Lcom/vk/im/engine/models/messages/Msg;
 
     move-result-object v2
 
@@ -1053,7 +1053,7 @@
     move v3, v2
 
     .line 13
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->b(Lcom/vtosters/lite/im/notifications/b;)Ljava/lang/String;
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/NotifyFormatter;->b(Lcom/vtosters/lite/im/notifications/Info;)Ljava/lang/String;
 
     move-result-object v15
 
@@ -1063,10 +1063,10 @@
     move-result-object v18
 
     .line 15
-    new-instance v19, Lcom/vtosters/lite/im/notifications/j;
+    new-instance v19, Lcom/vtosters/lite/im/notifications/Notify;
 
     .line 16
-    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/b;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/Info;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
@@ -1075,7 +1075,7 @@
     move-result v2
 
     .line 17
-    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/b;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/Info;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v11
 
@@ -1084,14 +1084,14 @@
     move-result v11
 
     .line 18
-    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/b;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/Info;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v12
 
     iget-boolean v13, v12, Lcom/vk/im/engine/models/dialogs/Dialog;->notificationsIsUseSound:Z
 
     .line 19
-    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/b;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/Info;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v12
 
@@ -1100,7 +1100,7 @@
     move-result v12
 
     .line 20
-    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/b;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/Info;->b()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v14
 
@@ -1119,7 +1119,7 @@
 
     .line 21
     :goto_4
-    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/b;->a()Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;
+    invoke-virtual/range {p2 .. p2}, Lcom/vtosters/lite/im/notifications/Info;->a()Lcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;
 
     move-result-object v14
 
@@ -1136,7 +1136,7 @@
     move-object/from16 v17, v0
 
     .line 22
-    invoke-direct/range {v1 .. v18}, Lcom/vtosters/lite/im/notifications/j;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/io/File;ZZZLcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;ZZLjava/lang/String;Landroid/graphics/Bitmap;)V
+    invoke-direct/range {v1 .. v18}, Lcom/vtosters/lite/im/notifications/Notify;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/io/File;ZZZLcom/vk/im/engine/models/dialogs/BusinessNotifyInfo;ZZLjava/lang/String;Landroid/graphics/Bitmap;)V
 
     return-object v19
 .end method

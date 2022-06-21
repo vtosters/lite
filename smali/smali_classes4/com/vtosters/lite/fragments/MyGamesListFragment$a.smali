@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/fragments/MyGamesListFragment$a;
-.super Lcom/vtosters/lite/fragments/i1$d;
+.super Lcom/vtosters/lite/general/fragments/GamesListFragment$d;
 .source "MyGamesListFragment.kt"
 
 
@@ -21,7 +21,7 @@
     .line 1
     const-class v0, Lcom/vtosters/lite/fragments/MyGamesListFragment;
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/i1$d;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/general/fragments/GamesListFragment$d;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method

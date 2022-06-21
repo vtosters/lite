@@ -3,7 +3,7 @@
 .source "ReefProtocol.java"
 
 # interfaces
-.implements Lcom/vk/reef/protocol/n;
+.implements Lcom/vk/reef/protocol/ReefProtocol9;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Lcom/vk/reef/protocol/ReefProtocol$LocationState;",
         "Lcom/vk/reef/protocol/ReefProtocol$LocationState$a;",
         ">;",
-        "Lcom/vk/reef/protocol/n;"
+        "Lcom/vk/reef/protocol/ReefProtocol9;"
     }
 .end annotation
 
@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/vk/reef/protocol/a;)V
+.method synthetic constructor <init>(Lcom/vk/reef/protocol/ReefProtocol1;)V
     .locals 0
 
     .line 1

@@ -3,19 +3,19 @@
 .source "StoryCreateQuestionDialog.kt"
 
 # interfaces
-.implements Lcom/vk/stories/clickable/dialogs/question/g;
-.implements Lcom/vk/core/util/k0;
+.implements Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract;
+.implements Lcom/vk/core/util/ItemClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog<",
-        "Lcom/vk/stories/clickable/dialogs/question/f;",
+        "Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;",
         ">;",
-        "Lcom/vk/stories/clickable/dialogs/question/g;",
-        "Lcom/vk/core/util/k0<",
-        "Lcom/vk/stories/clickable/dialogs/question/a;",
+        "Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract;",
+        "Lcom/vk/core/util/ItemClickListener<",
+        "Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter;",
         ">;"
     }
 .end annotation
@@ -34,13 +34,13 @@
 
 .field private G:Landroid/view/View;
 
-.field private H:Lcom/vk/stories/clickable/dialogs/question/c;
+.field private H:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter1;
 
 .field private I:Lcom/vk/stories/clickable/models/StoryQuestionInfo$b;
 
 .field private J:Landroid/animation/ValueAnimator;
 
-.field private K:Lcom/vk/stories/clickable/dialogs/question/f;
+.field private K:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;
 
 .field private d:Landroid/view/animation/Animation;
 
@@ -54,7 +54,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/stories/clickable/dialogs/question/d;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract2;)V
     .locals 2
 
     .line 1
@@ -72,21 +72,21 @@
 
     const-string v0, "LayoutInflater.from(cont\u2026tion_dialog_layout, null)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     invoke-direct {p0, p1}, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog;-><init>(Landroid/view/View;)V
 
     .line 3
-    new-instance p1, Lcom/vk/stories/clickable/dialogs/question/i;
+    new-instance p1, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionPresenter;
 
     new-instance v0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;
 
     invoke-direct {v0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDataProvider;-><init>()V
 
-    invoke-direct {p1, p0, v0, p2}, Lcom/vk/stories/clickable/dialogs/question/i;-><init>(Lcom/vk/stories/clickable/dialogs/question/g;Lcom/vk/stories/clickable/dialogs/question/e;Lcom/vk/stories/clickable/dialogs/question/d;)V
+    invoke-direct {p1, p0, v0, p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionPresenter;-><init>(Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract;Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract1;Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract2;)V
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->K:Lcom/vk/stories/clickable/dialogs/question/f;
+    iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->K:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;
 
     return-void
 .end method
@@ -104,7 +104,7 @@
     :cond_0
     const-string p0, "buttonEditText"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -225,19 +225,19 @@
     return-void
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 82
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 83
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -252,19 +252,19 @@
     :cond_4
     const-string p1, "buttonEditTextWrapper"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 85
     :cond_5
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 86
     :cond_6
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -277,18 +277,18 @@
     throw p1
 
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
 
-.method private final a(Lkotlin/jvm/b/a;)V
+.method private final a(Lkotlin/jvm/b/Functions;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -304,7 +304,7 @@
 
     new-instance v3, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$a;
 
-    invoke-direct {v3, p0, p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$a;-><init>(Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;Lkotlin/jvm/b/a;)V
+    invoke-direct {v3, p0, p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$a;-><init>(Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v0, v3}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -322,20 +322,20 @@
     return-void
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_1
     const-string p1, "buttonEditText"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 74
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -353,7 +353,7 @@
     :cond_0
     const-string p0, "buttonFadeInAnimation"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -369,13 +369,13 @@
     return-void
 .end method
 
-.method private final b(Lkotlin/jvm/b/a;)V
+.method private final b(Lkotlin/jvm/b/Functions;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -391,7 +391,7 @@
 
     new-instance v3, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$b;
 
-    invoke-direct {v3, p0, p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$b;-><init>(Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;Lkotlin/jvm/b/a;)V
+    invoke-direct {v3, p0, p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$b;-><init>(Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v0, v3}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -409,20 +409,20 @@
     return-void
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_1
     const-string p1, "questionEditText"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 10
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -449,7 +449,7 @@
     :cond_0
     const-string p0, "questionEditText"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -469,7 +469,7 @@
     :cond_0
     const-string p0, "questionFadeInAnimation"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -509,7 +509,7 @@
     :cond_1
     const-string v0, "buttonEditText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -520,7 +520,7 @@
     .locals 6
 
     .line 4
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f01003c
 
@@ -530,12 +530,12 @@
 
     const-string v2, "AnimationUtils.loadAnima\u2026stories_question_text_in)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->d:Landroid/view/animation/Animation;
 
     .line 5
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v3, 0x7f01003d
 
@@ -545,29 +545,29 @@
 
     const-string v4, "AnimationUtils.loadAnima\u2026tories_question_text_out)"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->e:Landroid/view/animation/Animation;
 
     .line 6
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->f:Landroid/view/animation/Animation;
 
     .line 7
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-static {v0, v3}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v0
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->g:Landroid/view/animation/Animation;
 
@@ -580,7 +580,7 @@
 
     const-string v1, "rootViewGroup.findViewBy\u2026story_dialog_root_layout)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
@@ -594,7 +594,7 @@
     const-string v1, "it"
 
     .line 10
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -606,7 +606,7 @@
     const-string v3, "rootViewGroup.findViewBy\u2026kListener(this)\n        }"
 
     .line 12
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->G:Landroid/view/View;
 
@@ -622,14 +622,14 @@
     check-cast v4, Lcom/vk/stories/clickable/dialogs/base/StoryDialogStyleButton;
 
     .line 14
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v4, p0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     const-string v5, "rootViewGroup.findViewBy\u2026rWithLock(this)\n        }"
 
     .line 15
-    invoke-static {v0, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v4, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->h:Lcom/vk/stories/clickable/dialogs/base/StoryDialogStyleButton;
 
@@ -645,7 +645,7 @@
     check-cast v4, Landroid/view/ViewGroup;
 
     .line 17
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->setAlpha(F)V
 
@@ -653,7 +653,7 @@
     invoke-virtual {v4, p0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 19
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v4, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->B:Landroid/view/ViewGroup;
 
@@ -671,7 +671,7 @@
     const-string v3, "et"
 
     .line 21
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v4, Lcom/vk/core/ui/Font;->Companion:Lcom/vk/core/ui/Font$a;
 
@@ -703,7 +703,7 @@
     const-string v4, "rootViewGroup.findViewBy\u2026\n            })\n        }"
 
     .line 25
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->C:Lcom/vk/common/view/IgnoreKeysEditText;
 
@@ -716,7 +716,7 @@
 
     const-string v1, "rootViewGroup.findViewBy\u2026button_edit_text_wrapper)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/view/ViewGroup;
 
@@ -734,9 +734,9 @@
     check-cast v1, Landroid/widget/EditText;
 
     .line 28
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v3
 
@@ -744,7 +744,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v3, v5}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v3, v5}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -758,7 +758,7 @@
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 30
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->D:Landroid/widget/EditText;
 
@@ -774,24 +774,24 @@
     check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
 
     .line 32
-    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->H:Lcom/vk/stories/clickable/dialogs/question/c;
+    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->H:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter1;
 
     if-nez v1, :cond_0
 
     .line 33
-    new-instance v1, Lcom/vk/stories/clickable/dialogs/question/c;
+    new-instance v1, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter1;
 
-    invoke-direct {v1, p0}, Lcom/vk/stories/clickable/dialogs/question/c;-><init>(Lcom/vk/core/util/k0;)V
+    invoke-direct {v1, p0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter1;-><init>(Lcom/vk/core/util/ItemClickListener;)V
 
-    iput-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->H:Lcom/vk/stories/clickable/dialogs/question/c;
+    iput-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->H:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter1;
 
     :cond_0
     const-string v1, "rv"
 
     .line 34
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->H:Lcom/vk/stories/clickable/dialogs/question/c;
+    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->H:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter1;
 
     if-eqz v1, :cond_1
 
@@ -819,16 +819,16 @@
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
 
     .line 38
-    new-instance v3, Lcom/vk/lists/l0/a;
+    new-instance v3, Lcom/vk/lists/l0/BoundariesSpacesItemDecoration;
 
-    invoke-direct {v3, v4, v4, v1}, Lcom/vk/lists/l0/a;-><init>(IIZ)V
+    invoke-direct {v3, v4, v4, v1}, Lcom/vk/lists/l0/BoundariesSpacesItemDecoration;-><init>(IIZ)V
 
     invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     const-string v1, "rootViewGroup.findViewBy\u2026on(0, 0, true))\n        }"
 
     .line 39
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->F:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -845,24 +845,24 @@
     const-string p1, "colorsAdapter"
 
     .line 41
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public a(Lcom/vk/stories/clickable/dialogs/question/a;I)V
+.method public a(Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter;I)V
     .locals 1
 
     .line 42
-    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/question/f;
+    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/core/util/k0;->a(Ljava/lang/Object;I)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/core/util/ItemClickListener;->a(Ljava/lang/Object;I)V
 
     :cond_0
     return-void
@@ -941,7 +941,7 @@
     const-string p1, "animator"
 
     .line 62
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 p1, 0xc8
 
@@ -960,13 +960,13 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 65
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -1016,7 +1016,7 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/g;->a(Landroid/widget/EditText;I)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/EditTextExt;->a(Landroid/widget/EditText;I)V
 
     .line 69
     iget-object p1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->D:Landroid/widget/EditText;
@@ -1031,39 +1031,39 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/g;->a(Landroid/widget/EditText;I)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/EditTextExt;->a(Landroid/widget/EditText;I)V
 
     :goto_0
     return-void
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     :cond_5
     const-string p1, "buttonEditText"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 70
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     :cond_7
     const-string p1, "questionEditText"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 71
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -1080,9 +1080,9 @@
     .locals 0
 
     .line 3
-    check-cast p1, Lcom/vk/stories/clickable/dialogs/question/a;
+    check-cast p1, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->a(Lcom/vk/stories/clickable/dialogs/question/a;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->a(Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter;I)V
 
     return-void
 .end method
@@ -1102,7 +1102,7 @@
     :cond_0
     const-string p1, "styleButton"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1113,7 +1113,7 @@
     .locals 8
 
     .line 43
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->H:Lcom/vk/stories/clickable/dialogs/question/c;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->H:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter1;
 
     const/4 v1, 0x0
 
@@ -1144,9 +1144,9 @@
     move-result v6
 
     .line 47
-    new-instance v7, Lcom/vk/stories/clickable/dialogs/question/a;
+    new-instance v7, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter;
 
-    invoke-direct {v7, v6, v4}, Lcom/vk/stories/clickable/dialogs/question/a;-><init>(IZ)V
+    invoke-direct {v7, v6, v4}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter;-><init>(IZ)V
 
     invoke-interface {v2, v7}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -1155,7 +1155,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, v2}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v2}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 48
     iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->F:Landroidx/recyclerview/widget/RecyclerView;
@@ -1168,7 +1168,7 @@
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Lcom/vk/lists/l0/a;
+    check-cast v0, Lcom/vk/lists/l0/BoundariesSpacesItemDecoration;
 
     .line 49
     invoke-static {}, Lcom/vk/core/util/Screen;->i()I
@@ -1183,9 +1183,9 @@
 
     div-float/2addr v1, p1
 
-    sget-object p1, Lcom/vk/stories/clickable/dialogs/question/b;->f:Lcom/vk/stories/clickable/dialogs/question/b$a;
+    sget-object p1, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter2;->f:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter$a;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/dialogs/question/b$a;->a()I
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter$a;->a()I
 
     move-result p1
 
@@ -1202,19 +1202,19 @@
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Lcom/vk/lists/l0/a;->b(I)V
+    invoke-virtual {v0, v2}, Lcom/vk/lists/l0/BoundariesSpacesItemDecoration;->b(I)V
 
     .line 51
     invoke-static {p1}, Lkotlin/q/a;->a(F)I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/l0/a;->c(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/l0/BoundariesSpacesItemDecoration;->c(I)V
 
     float-to-int p1, v1
 
     .line 52
-    invoke-virtual {v0, p1}, Lcom/vk/lists/l0/c;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/l0/SpacesItemDecoration;->a(I)V
 
     return-void
 
@@ -1231,7 +1231,7 @@
     :cond_2
     const-string p1, "colorsRecyclerView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1239,7 +1239,7 @@
     const-string p1, "colorsAdapter"
 
     .line 54
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1248,18 +1248,18 @@
     .locals 1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->H:Lcom/vk/stories/clickable/dialogs/question/c;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->H:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter1;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/clickable/dialogs/question/c;->H(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionColorsAdapter1;->H(I)V
 
     return-void
 
     :cond_0
     const-string p1, "colorsAdapter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1288,7 +1288,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -1301,13 +1301,13 @@
 
     invoke-direct {p2, p0, p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$setButtonText$1;-><init>(Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;Ljava/lang/String;)V
 
-    invoke-direct {p0, p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->a(Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -1323,7 +1323,7 @@
     return-void
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -1359,7 +1359,7 @@
     :cond_1
     const-string v0, "questionEditText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1379,7 +1379,7 @@
     :cond_0
     const-string v0, "questionEditText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1396,7 +1396,7 @@
 
     invoke-direct {p2, p0, p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$setButtonHint$1;-><init>(Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;Ljava/lang/String;)V
 
-    invoke-direct {p0, p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->a(Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
@@ -1414,7 +1414,7 @@
     :cond_1
     const-string p1, "buttonEditText"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1452,7 +1452,7 @@
     :cond_1
     const-string p1, "questionEditText"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1473,7 +1473,7 @@
 
     invoke-direct {p2, p0, p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$setQuestionHint$1;-><init>(Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;Ljava/lang/String;)V
 
-    invoke-direct {p0, p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->b(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->b(Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
@@ -1491,7 +1491,7 @@
     :cond_1
     const-string p1, "questionEditText"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1520,7 +1520,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -1533,13 +1533,13 @@
 
     invoke-direct {p2, p0, p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$setQuestionText$1;-><init>(Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;Ljava/lang/String;)V
 
-    invoke-direct {p0, p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->b(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->b(Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -1555,7 +1555,7 @@
     return-void
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -1567,7 +1567,7 @@
     invoke-super {p0}, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog;->f()V
 
     .line 2
-    sget-object v0, Lcom/vk/attachpicker/stickers/j0;->a:Lcom/vk/attachpicker/stickers/j0;
+    sget-object v0, Lcom/vk/attachpicker/stickers/StickerDialogUtils;->a:Lcom/vk/attachpicker/stickers/StickerDialogUtils;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->B:Landroid/view/ViewGroup;
 
@@ -1575,41 +1575,41 @@
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/j0;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/StickerDialogUtils;->a(Landroid/view/View;)V
 
     .line 3
-    sget-object v0, Lcom/vk/attachpicker/stickers/j0;->a:Lcom/vk/attachpicker/stickers/j0;
+    sget-object v0, Lcom/vk/attachpicker/stickers/StickerDialogUtils;->a:Lcom/vk/attachpicker/stickers/StickerDialogUtils;
 
     invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialog;->a()Landroid/view/View;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/j0;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/StickerDialogUtils;->a(Landroid/view/View;)V
 
     .line 4
-    sget-object v0, Lcom/vk/attachpicker/stickers/j0;->a:Lcom/vk/attachpicker/stickers/j0;
+    sget-object v0, Lcom/vk/attachpicker/stickers/StickerDialogUtils;->a:Lcom/vk/attachpicker/stickers/StickerDialogUtils;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->F:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/j0;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/StickerDialogUtils;->a(Landroid/view/View;)V
 
     .line 5
-    sget-object v0, Lcom/vk/attachpicker/stickers/j0;->a:Lcom/vk/attachpicker/stickers/j0;
+    sget-object v0, Lcom/vk/attachpicker/stickers/StickerDialogUtils;->a:Lcom/vk/attachpicker/stickers/StickerDialogUtils;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->G:Landroid/view/View;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/j0;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/StickerDialogUtils;->a(Landroid/view/View;)V
 
     return-void
 
     :cond_0
     const-string v0, "shuffleButton"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1617,7 +1617,7 @@
     const-string v0, "colorsRecyclerView"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1625,7 +1625,7 @@
     const-string v0, "questionLayout"
 
     .line 7
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -1661,29 +1661,29 @@
     :cond_1
     const-string v0, "questionEditText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/a;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseContract;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/question/f;
+    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/stories/clickable/dialogs/question/f;
+.method public getPresenter()Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->K:Lcom/vk/stories/clickable/dialogs/question/f;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->K:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;
 
     return-object v0
 .end method
@@ -1719,7 +1719,7 @@
     :cond_1
     const-string v0, "buttonEditText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1741,7 +1741,7 @@
     :cond_0
     const-string p1, "shuffleButton"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1763,7 +1763,7 @@
     :cond_0
     const-string p1, "colorsRecyclerView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1808,13 +1808,13 @@
     if-ne v1, v0, :cond_2
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/question/f;
+    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/question/f;->l2()V
+    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;->l2()V
 
     goto :goto_3
 
@@ -1835,13 +1835,13 @@
     if-ne v1, v0, :cond_4
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/question/f;
+    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/question/f;->k2()V
+    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;->k2()V
 
     goto :goto_3
 
@@ -1869,13 +1869,13 @@
     if-eqz p1, :cond_6
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/question/f;
+    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/base/a;->t1()V
+    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/base/StoryBaseDialogContract;->t1()V
 
     :cond_6
     :goto_3
@@ -1899,7 +1899,7 @@
     :cond_0
     const-string v0, "questionLayout"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1931,7 +1931,7 @@
     :cond_1
     const-string p1, "questionEditText"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

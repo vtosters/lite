@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private transient a:Lokhttp3/l;
+.field private transient a:Lokhttp3/Cookie;
 
 
 # direct methods
@@ -170,9 +170,9 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lokhttp3/l$a;
+    new-instance v0, Lokhttp3/Cookie$a;
 
-    invoke-direct {v0}, Lokhttp3/l$a;-><init>()V
+    invoke-direct {v0}, Lokhttp3/Cookie$a;-><init>()V
 
     .line 2
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
@@ -181,7 +181,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lokhttp3/l$a;->c(Ljava/lang/String;)Lokhttp3/l$a;
+    invoke-virtual {v0, v1}, Lokhttp3/Cookie$a;->c(Ljava/lang/String;)Lokhttp3/Cookie$a;
 
     .line 3
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
@@ -190,7 +190,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lokhttp3/l$a;->e(Ljava/lang/String;)Lokhttp3/l$a;
+    invoke-virtual {v0, v1}, Lokhttp3/Cookie$a;->e(Ljava/lang/String;)Lokhttp3/Cookie$a;
 
     .line 4
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readLong()J
@@ -205,7 +205,7 @@
     if-eqz v5, :cond_0
 
     .line 6
-    invoke-virtual {v0, v1, v2}, Lokhttp3/l$a;->a(J)Lokhttp3/l$a;
+    invoke-virtual {v0, v1, v2}, Lokhttp3/Cookie$a;->a(J)Lokhttp3/Cookie$a;
 
     .line 7
     :cond_0
@@ -216,7 +216,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 8
-    invoke-virtual {v0, v1}, Lokhttp3/l$a;->a(Ljava/lang/String;)Lokhttp3/l$a;
+    invoke-virtual {v0, v1}, Lokhttp3/Cookie$a;->a(Ljava/lang/String;)Lokhttp3/Cookie$a;
 
     .line 9
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
@@ -225,7 +225,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Lokhttp3/l$a;->d(Ljava/lang/String;)Lokhttp3/l$a;
+    invoke-virtual {v0, v2}, Lokhttp3/Cookie$a;->d(Ljava/lang/String;)Lokhttp3/Cookie$a;
 
     .line 10
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readBoolean()Z
@@ -235,7 +235,7 @@
     if-eqz v2, :cond_1
 
     .line 11
-    invoke-virtual {v0}, Lokhttp3/l$a;->c()Lokhttp3/l$a;
+    invoke-virtual {v0}, Lokhttp3/Cookie$a;->c()Lokhttp3/Cookie$a;
 
     .line 12
     :cond_1
@@ -246,7 +246,7 @@
     if-eqz v2, :cond_2
 
     .line 13
-    invoke-virtual {v0}, Lokhttp3/l$a;->b()Lokhttp3/l$a;
+    invoke-virtual {v0}, Lokhttp3/Cookie$a;->b()Lokhttp3/Cookie$a;
 
     .line 14
     :cond_2
@@ -257,15 +257,15 @@
     if-eqz p1, :cond_3
 
     .line 15
-    invoke-virtual {v0, v1}, Lokhttp3/l$a;->b(Ljava/lang/String;)Lokhttp3/l$a;
+    invoke-virtual {v0, v1}, Lokhttp3/Cookie$a;->b(Ljava/lang/String;)Lokhttp3/Cookie$a;
 
     .line 16
     :cond_3
-    invoke-virtual {v0}, Lokhttp3/l$a;->a()Lokhttp3/l;
+    invoke-virtual {v0}, Lokhttp3/Cookie$a;->a()Lokhttp3/Cookie;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/l;
+    iput-object p1, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/Cookie;
 
     return-void
 .end method
@@ -279,35 +279,35 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/l;
+    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/Cookie;
 
-    invoke-virtual {v0}, Lokhttp3/l;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lokhttp3/Cookie;->e()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/l;
+    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/Cookie;
 
-    invoke-virtual {v0}, Lokhttp3/l;->i()Ljava/lang/String;
+    invoke-virtual {v0}, Lokhttp3/Cookie;->i()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/l;
+    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/Cookie;
 
-    invoke-virtual {v0}, Lokhttp3/l;->g()Z
+    invoke-virtual {v0}, Lokhttp3/Cookie;->g()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/l;
+    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/Cookie;
 
-    invoke-virtual {v0}, Lokhttp3/l;->b()J
+    invoke-virtual {v0}, Lokhttp3/Cookie;->b()J
 
     move-result-wide v0
 
@@ -320,45 +320,45 @@
     invoke-virtual {p1, v0, v1}, Ljava/io/ObjectOutputStream;->writeLong(J)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/l;
+    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/Cookie;
 
-    invoke-virtual {v0}, Lokhttp3/l;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lokhttp3/Cookie;->a()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/l;
+    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/Cookie;
 
-    invoke-virtual {v0}, Lokhttp3/l;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Lokhttp3/Cookie;->f()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/l;
+    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/Cookie;
 
-    invoke-virtual {v0}, Lokhttp3/l;->h()Z
+    invoke-virtual {v0}, Lokhttp3/Cookie;->h()Z
 
     move-result v0
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeBoolean(Z)V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/l;
+    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/Cookie;
 
-    invoke-virtual {v0}, Lokhttp3/l;->d()Z
+    invoke-virtual {v0}, Lokhttp3/Cookie;->d()Z
 
     move-result v0
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeBoolean(Z)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/l;
+    iget-object v0, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/Cookie;
 
-    invoke-virtual {v0}, Lokhttp3/l;->c()Z
+    invoke-virtual {v0}, Lokhttp3/Cookie;->c()Z
 
     move-result v0
 
@@ -369,11 +369,11 @@
 
 
 # virtual methods
-.method public a(Lokhttp3/l;)Ljava/lang/String;
+.method public a(Lokhttp3/Cookie;)Ljava/lang/String;
     .locals 2
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/l;
+    iput-object p1, p0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/Cookie;
 
     .line 2
     new-instance p1, Ljava/io/ByteArrayOutputStream;
@@ -457,7 +457,7 @@
     return-object v0
 .end method
 
-.method public a(Ljava/lang/String;)Lokhttp3/l;
+.method public a(Ljava/lang/String;)Lokhttp3/Cookie;
     .locals 2
 
     .line 15
@@ -490,7 +490,7 @@
 
     check-cast v0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;
 
-    iget-object p1, v0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/l;
+    iget-object p1, v0, Lcom/vk/core/network/cookies/persistence/SerializableCookie;->a:Lokhttp3/Cookie;
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_2

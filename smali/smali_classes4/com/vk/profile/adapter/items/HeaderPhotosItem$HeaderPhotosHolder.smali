@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "HeaderPhotosItem.kt"
 
 
@@ -21,7 +21,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/profile/adapter/items/HeaderPhotosItem<",
         "TT;>;>;"
     }
@@ -29,7 +29,7 @@
 
 
 # static fields
-.field static final synthetic F:[Lkotlin/u/j;
+.field static final synthetic F:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -57,17 +57,17 @@
 
 .field private final f:Lcom/vk/profile/view/PhotosGridView;
 
-.field private g:Lcom/vk/bridges/p$d;
+.field private g:Lcom/vk/bridges/ImageViewer$d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/bridges/p$d<",
+            "Lcom/vk/bridges/ImageViewer$d<",
             "Lcom/vk/dto/photo/Photo;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final h:Lkotlin/e;
+.field private final h:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -76,13 +76,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -90,15 +90,15 @@
 
     const-string v4, "getViewerCallback()Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder$ImageViewerCallback;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->F:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->F:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -118,7 +118,7 @@
 
     const v0, 0x7f0d04b8
 
-    invoke-direct {p0, v0, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -131,7 +131,7 @@
 
     const-string v0, "itemView.findViewById(R.id.counter)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -148,7 +148,7 @@
 
     const-string v0, "itemView.findViewById(R.id.header)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->d:Landroid/view/View;
 
@@ -163,7 +163,7 @@
 
     const-string v0, "itemView.findViewById(R.id.add_photo_label)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->e:Landroid/view/View;
 
@@ -178,7 +178,7 @@
 
     const-string v0, "itemView.findViewById(R.id.photos_grid)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/profile/view/PhotosGridView;
 
@@ -189,11 +189,11 @@
 
     invoke-direct {p2, p0}, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder$viewerCallback$2;-><init>(Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;)V
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->h:Lkotlin/e;
+    iput-object p2, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->h:Lkotlin/Lazy2;
 
     .line 7
     new-instance p2, Ljava/util/ArrayList;
@@ -240,7 +240,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder$2;-><init>(Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;)V
 
-    invoke-virtual {p2, v0}, Lcom/vk/profile/view/PhotosGridView;->setClickListener(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p2, v0}, Lcom/vk/profile/view/PhotosGridView;->setClickListener(Lkotlin/jvm/b/Functions2;)V
 
     .line 12
     iget-object p2, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->e:Landroid/view/View;
@@ -271,7 +271,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder$4;-><init>(Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/profile/view/PhotosGridView;->setClickListener(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, p2}, Lcom/vk/profile/view/PhotosGridView;->setClickListener(Lkotlin/jvm/b/Functions2;)V
 
     .line 15
     invoke-direct {p0}, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->h0()V
@@ -297,11 +297,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;Lcom/vk/bridges/p$d;)V
+.method public static final synthetic a(Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;Lcom/vk/bridges/ImageViewer$d;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->g:Lcom/vk/bridges/p$d;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->g:Lcom/vk/bridges/ImageViewer$d;
 
     return-void
 .end method
@@ -319,7 +319,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem;
 
@@ -353,11 +353,11 @@
     return p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;)Lcom/vk/bridges/p$d;
+.method public static final synthetic e(Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;)Lcom/vk/bridges/ImageViewer$d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->g:Lcom/vk/bridges/p$d;
+    iget-object p0, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->g:Lcom/vk/bridges/ImageViewer$d;
 
     return-object p0
 .end method
@@ -381,15 +381,15 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->h:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->h:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->F:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->F:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -402,7 +402,7 @@
     .locals 4
 
     .line 1
-    new-instance v0, Lcom/vk/api/photos/k;
+    new-instance v0, Lcom/vk/api/photos/PhotosGetAll;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->E:Lcom/vk/profile/adapter/items/HeaderPhotosItem;
 
@@ -410,7 +410,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v1
 
@@ -422,14 +422,14 @@
 
     move-result v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/api/photos/k;-><init>(III)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/api/photos/PhotosGetAll;-><init>(III)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 2
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -443,20 +443,20 @@
     invoke-direct {v2, p0}, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder$e;-><init>(Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;)V
 
     .line 4
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "request.toUiObservable()\u2026led = true\n            })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -464,9 +464,9 @@
 
     const-string v2, "itemView.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -475,7 +475,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->g:Lcom/vk/bridges/p$d;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->g:Lcom/vk/bridges/ImageViewer$d;
 
     if-eqz v0, :cond_0
 
@@ -487,7 +487,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -495,7 +495,7 @@
 
     const-string v1, "itemView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -532,12 +532,12 @@
 
     const-string v3, "a.getString(R.string.all_photos)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v2}, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder$c;->a(Ljava/lang/String;)V
 
     .line 5
-    invoke-static {}, Lcom/vk/bridges/q;->a()Lcom/vk/bridges/p;
+    invoke-static {}, Lcom/vk/bridges/ImageViewer1;->a()Lcom/vk/bridges/ImageViewer;
 
     move-result-object v1
 
@@ -547,11 +547,11 @@
 
     move-result-object v3
 
-    invoke-interface {v1, p1, v2, v0, v3}, Lcom/vk/bridges/p;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
+    invoke-interface {v1, p1, v2, v0, v3}, Lcom/vk/bridges/ImageViewer;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->g:Lcom/vk/bridges/p$d;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->g:Lcom/vk/bridges/ImageViewer$d;
 
     :cond_2
     return-void
@@ -634,7 +634,7 @@
 
     if-lez v0, :cond_1
 
-    invoke-static {v0}, Lcom/vk/core/util/b1;->a(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/util/StringUtils;->a(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -651,7 +651,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result p1
 

@@ -3,7 +3,7 @@
 .source "CommunityPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -47,11 +47,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/group/a;)V
+.method public final a(Lcom/vk/dto/group/GroupDetails;)V
     .locals 2
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/dto/group/a;->b()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p1}, Lcom/vk/dto/group/GroupDetails;->b()Lcom/vk/dto/common/data/VKList;
 
     move-result-object v0
 
@@ -59,15 +59,15 @@
 
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$n;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vtosters/lite/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/dto/group/a;->b()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p1}, Lcom/vk/dto/group/GroupDetails;->b()Lcom/vk/dto/common/data/VKList;
 
     move-result-object v1
 
@@ -75,7 +75,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/dto/group/a;->a()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p1}, Lcom/vk/dto/group/GroupDetails;->a()Lcom/vk/dto/common/data/VKList;
 
     move-result-object v0
 
@@ -83,19 +83,19 @@
 
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$n;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vtosters/lite/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/dto/group/a;->a()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p1}, Lcom/vk/dto/group/GroupDetails;->a()Lcom/vk/dto/common/data/VKList;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/api/i;->a(Lcom/vk/dto/common/data/VKList;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->a(Lcom/vk/dto/common/data/VKList;)V
 
     :cond_1
     return-void
@@ -105,11 +105,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/group/a;
+    check-cast p1, Lcom/vk/dto/group/GroupDetails;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$n;->a(Lcom/vk/dto/group/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$n;->a(Lcom/vk/dto/group/GroupDetails;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

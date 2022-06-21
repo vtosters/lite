@@ -3,7 +3,7 @@
 .source "FriendsImportFragment.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/x$i;
+.implements Lcom/vtosters/lite/ui/SearchViewWrapper$i;
 
 
 # annotations
@@ -52,11 +52,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$k;->a:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
-    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsImportFragment;->b(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/friends/recommendations/c;
+    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsImportFragment;->b(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/c;->f(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;->f(Ljava/lang/String;)V
 
     return-void
 .end method

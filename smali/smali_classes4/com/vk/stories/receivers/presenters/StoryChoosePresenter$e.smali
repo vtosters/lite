@@ -3,12 +3,12 @@
 .source "StoryChoosePresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -56,30 +56,30 @@
     const-string v0, "throwable"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/log/L;->a(Ljava/lang/Throwable;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter$e;->a:Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;
 
-    invoke-virtual {p1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->e()Lcom/vk/stories/receivers/views/a;
+    invoke-virtual {p1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->e()Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stories/receivers/views/a;->d1()V
+    invoke-interface {p1}, Lcom/vk/stories/receivers/views/IStoryChooseView;->d1()V
 
     .line 3
     iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter$e;->a:Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a(Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;Lcom/vk/stories/e1/a;)V
+    invoke-static {p1, v0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a(Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;Lcom/vk/stories/e1/StoryReceiverTarget;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter$e;->a:Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;
 
-    invoke-virtual {p1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->e()Lcom/vk/stories/receivers/views/a;
+    invoke-virtual {p1}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->e()Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     move-result-object p1
 
@@ -95,7 +95,7 @@
     if-eqz p1, :cond_1
 
     .line 5
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
 
     .line 6
     :cond_1
@@ -110,7 +110,7 @@
     const/4 v2, 0x2
 
     .line 7
-    invoke-static {p1, v1, v2, v0}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v1, v2, v0}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :cond_2
     return-void

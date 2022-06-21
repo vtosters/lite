@@ -6,7 +6,7 @@
 # instance fields
 .field private a:Landroid/view/View$OnTouchListener;
 
-.field private b:Lcom/vk/photoviewer/d;
+.field private b:Lcom/vk/photoviewer/ContextMenuListener;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/photoviewer/PhotoViewerLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/photoviewer/PhotoViewerLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -45,7 +45,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/photoviewer/PhotoViewerLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/photoviewer/PhotoViewerLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -84,11 +84,11 @@
 
 
 # virtual methods
-.method public final getContextMenuCreator()Lcom/vk/photoviewer/d;
+.method public final getContextMenuCreator()Lcom/vk/photoviewer/ContextMenuListener;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewerLayout;->b:Lcom/vk/photoviewer/d;
+    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewerLayout;->b:Lcom/vk/photoviewer/ContextMenuListener;
 
     return-object v0
 .end method
@@ -126,11 +126,11 @@
     return p1
 .end method
 
-.method public final setContextMenuCreator(Lcom/vk/photoviewer/d;)V
+.method public final setContextMenuCreator(Lcom/vk/photoviewer/ContextMenuListener;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/photoviewer/PhotoViewerLayout;->b:Lcom/vk/photoviewer/d;
+    iput-object p1, p0, Lcom/vk/photoviewer/PhotoViewerLayout;->b:Lcom/vk/photoviewer/ContextMenuListener;
 
     return-void
 .end method
@@ -148,13 +148,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewerLayout;->b:Lcom/vk/photoviewer/d;
+    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewerLayout;->b:Lcom/vk/photoviewer/ContextMenuListener;
 
     if-eqz v0, :cond_0
 
     const/high16 v1, -0x40800000    # -1.0f
 
-    invoke-interface {v0, p1, v1, v1}, Lcom/vk/photoviewer/d;->showContextMenuForChild(Landroid/view/View;FF)Z
+    invoke-interface {v0, p1, v1, v1}, Lcom/vk/photoviewer/ContextMenuListener;->showContextMenuForChild(Landroid/view/View;FF)Z
 
     move-result p1
 
@@ -174,11 +174,11 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewerLayout;->b:Lcom/vk/photoviewer/d;
+    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewerLayout;->b:Lcom/vk/photoviewer/ContextMenuListener;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/vk/photoviewer/d;->showContextMenuForChild(Landroid/view/View;FF)Z
+    invoke-interface {v0, p1, p2, p3}, Lcom/vk/photoviewer/ContextMenuListener;->showContextMenuForChild(Landroid/view/View;FF)Z
 
     move-result p1
 

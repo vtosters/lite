@@ -3,12 +3,12 @@
 .source "UserHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->a(Z)Lcom/vk/profile/adapter/b/a$h;
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->a(Z)Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
-        "Lcom/vk/profile/adapter/items/c0/b$c;",
+        "Lcom/vk/profile/adapter/items/c0/StubMessageItem$c;",
         ">;"
     }
 .end annotation
@@ -50,21 +50,21 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/c0/b$c;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/c0/StubMessageItem$c;
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/profile/adapter/items/c0/b$c;
+    new-instance v0, Lcom/vk/profile/adapter/items/c0/StubMessageItem$c;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$getServiceMessage$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-virtual {v1}, Lcom/vk/profile/adapter/b/a;->a()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->a()Landroid/content/Context;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$getServiceMessage$1;->$withLink:Z
 
-    invoke-direct {v0, v1, p1, v2}, Lcom/vk/profile/adapter/items/c0/b$c;-><init>(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Z)V
+    invoke-direct {v0, v1, p1, v2}, Lcom/vk/profile/adapter/items/c0/StubMessageItem$c;-><init>(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Z)V
 
     return-object v0
 .end method
@@ -75,7 +75,7 @@
     .line 1
     check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$getServiceMessage$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/c0/b$c;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$getServiceMessage$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/c0/StubMessageItem$c;
 
     move-result-object p1
 

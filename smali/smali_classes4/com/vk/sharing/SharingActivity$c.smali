@@ -15,9 +15,9 @@
 
 
 # direct methods
-.method static a(Lcom/vk/sharing/d;)I
+.method static a(Lcom/vk/sharing/BasePresenter;)I
     .locals 1
-    .param p0    # Lcom/vk/sharing/d;
+    .param p0    # Lcom/vk/sharing/BasePresenter;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -28,7 +28,7 @@
     move-result-object p0
 
     .line 2
-    const-class v0, Lcom/vk/sharing/f;
+    const-class v0, Lcom/vk/sharing/DialogSearchPresenter;
 
     invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -42,7 +42,7 @@
 
     .line 3
     :cond_0
-    const-class v0, Lcom/vk/sharing/o;
+    const-class v0, Lcom/vk/sharing/WallPostPresenter;
 
     invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -56,7 +56,7 @@
 
     .line 4
     :cond_1
-    const-class v0, Lcom/vk/sharing/h;
+    const-class v0, Lcom/vk/sharing/GroupPostPresenter;
 
     invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -70,7 +70,7 @@
 
     .line 5
     :cond_2
-    const-class v0, Lcom/vk/sharing/i;
+    const-class v0, Lcom/vk/sharing/GroupSearchPresenter;
 
     invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -84,7 +84,7 @@
 
     .line 6
     :cond_3
-    const-class v0, Lcom/vk/sharing/g;
+    const-class v0, Lcom/vk/sharing/GroupPickerPresenter;
 
     invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -98,7 +98,7 @@
 
     .line 7
     :cond_4
-    const-class v0, Lcom/vk/sharing/n;
+    const-class v0, Lcom/vk/sharing/UniversalGroupPickerPresenter;
 
     invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -112,7 +112,7 @@
 
     .line 8
     :cond_5
-    const-class v0, Lcom/vk/sharing/p;
+    const-class v0, Lcom/vk/sharing/WallRepostSettingsPresenter;
 
     invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -126,7 +126,7 @@
 
     .line 9
     :cond_6
-    const-class v0, Lcom/vk/sharing/k;
+    const-class v0, Lcom/vk/sharing/LivesGroupPickerPresenter;
 
     invoke-virtual {v0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -144,7 +144,7 @@
     return p0
 .end method
 
-.method static a(Lcom/vk/sharing/SharingActivity;I)Lcom/vk/sharing/d;
+.method static a(Lcom/vk/sharing/SharingActivity;I)Lcom/vk/sharing/BasePresenter;
     .locals 0
     .param p0    # Lcom/vk/sharing/SharingActivity;
         .annotation build Landroidx/annotation/NonNull;
@@ -156,73 +156,73 @@
     packed-switch p1, :pswitch_data_0
 
     .line 10
-    new-instance p1, Lcom/vk/sharing/e;
+    new-instance p1, Lcom/vk/sharing/CommonPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/sharing/e;-><init>(Lcom/vk/sharing/d$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/sharing/CommonPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;)V
 
     return-object p1
 
     .line 11
     :pswitch_0
-    new-instance p1, Lcom/vk/sharing/k;
+    new-instance p1, Lcom/vk/sharing/LivesGroupPickerPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/sharing/k;-><init>(Lcom/vk/sharing/d$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/sharing/LivesGroupPickerPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;)V
 
     return-object p1
 
     .line 12
     :pswitch_1
-    new-instance p1, Lcom/vk/sharing/p;
+    new-instance p1, Lcom/vk/sharing/WallRepostSettingsPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/sharing/p;-><init>(Lcom/vk/sharing/d$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/sharing/WallRepostSettingsPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;)V
 
     return-object p1
 
     .line 13
     :pswitch_2
-    new-instance p1, Lcom/vk/sharing/n;
+    new-instance p1, Lcom/vk/sharing/UniversalGroupPickerPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/sharing/n;-><init>(Lcom/vk/sharing/d$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/sharing/UniversalGroupPickerPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;)V
 
     return-object p1
 
     .line 14
     :pswitch_3
-    new-instance p1, Lcom/vk/sharing/g;
+    new-instance p1, Lcom/vk/sharing/GroupPickerPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/sharing/g;-><init>(Lcom/vk/sharing/d$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/sharing/GroupPickerPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;)V
 
     return-object p1
 
     .line 15
     :pswitch_4
-    new-instance p1, Lcom/vk/sharing/i;
+    new-instance p1, Lcom/vk/sharing/GroupSearchPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/sharing/i;-><init>(Lcom/vk/sharing/d$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/sharing/GroupSearchPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;)V
 
     return-object p1
 
     .line 16
     :pswitch_5
-    new-instance p1, Lcom/vk/sharing/h;
+    new-instance p1, Lcom/vk/sharing/GroupPostPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/sharing/h;-><init>(Lcom/vk/sharing/d$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/sharing/GroupPostPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;)V
 
     return-object p1
 
     .line 17
     :pswitch_6
-    new-instance p1, Lcom/vk/sharing/o;
+    new-instance p1, Lcom/vk/sharing/WallPostPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/sharing/o;-><init>(Lcom/vk/sharing/d$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/sharing/WallPostPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;)V
 
     return-object p1
 
     .line 18
     :pswitch_7
-    new-instance p1, Lcom/vk/sharing/f;
+    new-instance p1, Lcom/vk/sharing/DialogSearchPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/sharing/f;-><init>(Lcom/vk/sharing/d$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/sharing/DialogSearchPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;)V
 
     return-object p1
 

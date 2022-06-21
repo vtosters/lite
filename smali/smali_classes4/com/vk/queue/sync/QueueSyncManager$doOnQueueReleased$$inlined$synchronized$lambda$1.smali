@@ -3,7 +3,7 @@
 .source "QueueSyncManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/queue/sync/c<",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/queue/sync/Subscriber<",
         "*>;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -51,12 +51,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/queue/sync/c;)Z
+.method public final a(Lcom/vk/queue/sync/Subscriber;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;)Z"
         }
     .end annotation
@@ -64,7 +64,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/queue/sync/QueueSyncManager$doOnQueueReleased$$inlined$synchronized$lambda$1;->$queueIds$inlined:Ljava/util/Collection;
 
-    invoke-virtual {p1}, Lcom/vk/queue/sync/c;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/queue/sync/Subscriber;->a()Ljava/lang/String;
 
     move-result-object p1
 
@@ -79,9 +79,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/queue/sync/c;
+    check-cast p1, Lcom/vk/queue/sync/Subscriber;
 
-    invoke-virtual {p0, p1}, Lcom/vk/queue/sync/QueueSyncManager$doOnQueueReleased$$inlined$synchronized$lambda$1;->a(Lcom/vk/queue/sync/c;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/queue/sync/QueueSyncManager$doOnQueueReleased$$inlined$synchronized$lambda$1;->a(Lcom/vk/queue/sync/Subscriber;)Z
 
     move-result p1
 

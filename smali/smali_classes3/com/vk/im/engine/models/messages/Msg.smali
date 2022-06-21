@@ -4,10 +4,10 @@
 
 # interfaces
 .implements Ljava/lang/Comparable;
-.implements Lcom/vk/im/engine/models/messages/g;
-.implements Lcom/vk/im/engine/models/w;
-.implements Lcom/vk/im/engine/models/v;
-.implements Lcom/vk/im/engine/models/t;
+.implements Lcom/vk/im/engine/models/messages/WithFrom;
+.implements Lcom/vk/im/engine/models/WithWeight;
+.implements Lcom/vk/im/engine/models/WithLocalId;
+.implements Lcom/vk/im/engine/models/WithExpired;
 
 
 # annotations
@@ -23,10 +23,10 @@
         "Ljava/lang/Comparable<",
         "Lcom/vk/im/engine/models/messages/Msg;",
         ">;",
-        "Lcom/vk/im/engine/models/messages/g;",
-        "Lcom/vk/im/engine/models/w;",
-        "Lcom/vk/im/engine/models/v;",
-        "Lcom/vk/im/engine/models/t;"
+        "Lcom/vk/im/engine/models/messages/WithFrom;",
+        "Lcom/vk/im/engine/models/WithWeight;",
+        "Lcom/vk/im/engine/models/WithLocalId;",
+        "Lcom/vk/im/engine/models/WithExpired;"
     }
 .end annotation
 
@@ -44,7 +44,7 @@
 
 .field private E:Lcom/vk/im/engine/models/messages/MsgSyncState;
 
-.field private F:Lcom/vk/im/engine/models/q;
+.field private F:Lcom/vk/im/engine/models/Weight;
 
 .field private G:Z
 
@@ -85,7 +85,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/messages/Msg$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/messages/Msg$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -109,13 +109,13 @@
     iput-object v0, p0, Lcom/vk/im/engine/models/messages/Msg;->E:Lcom/vk/im/engine/models/messages/MsgSyncState;
 
     .line 4
-    sget-object v0, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v0, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/q$a;->d()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight$a;->d()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/engine/models/messages/Msg;->F:Lcom/vk/im/engine/models/q;
+    iput-object v0, p0, Lcom/vk/im/engine/models/messages/Msg;->F:Lcom/vk/im/engine/models/Weight;
 
     return-void
 .end method
@@ -163,11 +163,11 @@
     return v0
 .end method
 
-.method public D1()Lcom/vk/im/engine/models/q;
+.method public D1()Lcom/vk/im/engine/models/Weight;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/models/messages/Msg;->F:Lcom/vk/im/engine/models/q;
+    iget-object v0, p0, Lcom/vk/im/engine/models/messages/Msg;->F:Lcom/vk/im/engine/models/Weight;
 
     return-object v0
 .end method
@@ -233,7 +233,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/w$a;->a(Lcom/vk/im/engine/models/w;)Z
+    invoke-static {p0}, Lcom/vk/im/engine/models/WithWeight$a;->a(Lcom/vk/im/engine/models/WithWeight;)Z
 
     move-result v0
 
@@ -454,7 +454,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/messages/g$a;->b(Lcom/vk/im/engine/models/messages/g;)Lcom/vk/im/engine/models/MemberType;
+    invoke-static {p0}, Lcom/vk/im/engine/models/messages/WithFrom$a;->b(Lcom/vk/im/engine/models/messages/WithFrom;)Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v0
 
@@ -465,15 +465,15 @@
     .locals 1
 
     .line 30
-    invoke-virtual {p0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/q;->a(Lcom/vk/im/engine/models/q;)I
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/Weight;->a(Lcom/vk/im/engine/models/Weight;)I
 
     move-result p1
 
@@ -570,11 +570,11 @@
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(I)V
 
     .line 21
-    invoke-virtual {p0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/q;->c()J
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight;->c()J
 
     move-result-wide v0
 
@@ -632,11 +632,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/models/q;)V
+.method public a(Lcom/vk/im/engine/models/Weight;)V
     .locals 0
 
     .line 6
-    iput-object p1, p0, Lcom/vk/im/engine/models/messages/Msg;->F:Lcom/vk/im/engine/models/q;
+    iput-object p1, p0, Lcom/vk/im/engine/models/messages/Msg;->F:Lcom/vk/im/engine/models/Weight;
 
     return-void
 .end method
@@ -654,7 +654,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/im/engine/models/messages/g$a;->a(Lcom/vk/im/engine/models/messages/g;Lcom/vk/im/engine/models/MemberType;I)Z
+    invoke-static {p0, p1, p2}, Lcom/vk/im/engine/models/messages/WithFrom$a;->a(Lcom/vk/im/engine/models/messages/WithFrom;Lcom/vk/im/engine/models/MemberType;I)Z
 
     move-result p1
 
@@ -672,11 +672,11 @@
     return p1
 .end method
 
-.method public a(Lcom/vk/im/engine/models/j;)Z
+.method public a(Lcom/vk/im/engine/models/Profile;)Z
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/im/engine/models/messages/g$a;->a(Lcom/vk/im/engine/models/messages/g;Lcom/vk/im/engine/models/j;)Z
+    invoke-static {p0, p1}, Lcom/vk/im/engine/models/messages/WithFrom$a;->a(Lcom/vk/im/engine/models/messages/WithFrom;Lcom/vk/im/engine/models/Profile;)Z
 
     move-result p1
 
@@ -787,15 +787,15 @@
     iput-object v0, p0, Lcom/vk/im/engine/models/messages/Msg;->E:Lcom/vk/im/engine/models/messages/MsgSyncState;
 
     .line 36
-    new-instance v0, Lcom/vk/im/engine/models/q;
+    new-instance v0, Lcom/vk/im/engine/models/Weight;
 
     invoke-virtual {p1}, Lcom/vk/core/serialize/Serializer;->p()J
 
     move-result-wide v1
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/models/q;-><init>(J)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/models/Weight;-><init>(J)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/im/engine/models/messages/Msg;->a(Lcom/vk/im/engine/models/q;)V
+    invoke-virtual {p0, v0}, Lcom/vk/im/engine/models/messages/Msg;->a(Lcom/vk/im/engine/models/Weight;)V
 
     .line 37
     invoke-virtual {p1}, Lcom/vk/core/serialize/Serializer;->g()Z
@@ -853,7 +853,7 @@
 
     .line 45
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -928,11 +928,11 @@
     iput-object v0, p0, Lcom/vk/im/engine/models/messages/Msg;->E:Lcom/vk/im/engine/models/messages/MsgSyncState;
 
     .line 16
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/vk/im/engine/models/messages/Msg;->a(Lcom/vk/im/engine/models/q;)V
+    invoke-virtual {p0, v0}, Lcom/vk/im/engine/models/messages/Msg;->a(Lcom/vk/im/engine/models/Weight;)V
 
     .line 17
     iget-boolean v0, p1, Lcom/vk/im/engine/models/messages/Msg;->G:Z
@@ -987,7 +987,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/im/engine/models/messages/g$a;->a(Lcom/vk/im/engine/models/messages/g;Lcom/vk/im/engine/models/Member;)Z
+    invoke-static {p0, p1}, Lcom/vk/im/engine/models/messages/WithFrom$a;->a(Lcom/vk/im/engine/models/messages/WithFrom;Lcom/vk/im/engine/models/Member;)Z
 
     move-result p1
 
@@ -1015,7 +1015,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/im/engine/models/messages/g$a;->b(Lcom/vk/im/engine/models/messages/g;Lcom/vk/im/engine/models/Member;)Z
+    invoke-static {p0, p1}, Lcom/vk/im/engine/models/messages/WithFrom$a;->b(Lcom/vk/im/engine/models/messages/WithFrom;Lcom/vk/im/engine/models/Member;)Z
 
     move-result p1
 
@@ -1066,7 +1066,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/messages/g$a;->a(Lcom/vk/im/engine/models/messages/g;)I
+    invoke-static {p0}, Lcom/vk/im/engine/models/messages/WithFrom$a;->a(Lcom/vk/im/engine/models/messages/WithFrom;)I
 
     move-result v0
 
@@ -1170,7 +1170,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1232,15 +1232,15 @@
 
     .line 14
     :cond_d
-    invoke-virtual {p0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1286,7 +1286,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/messages/Msg;->J:Ljava/lang/Long;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1302,7 +1302,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/models/messages/Msg;->K:Ljava/lang/Long;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1557,11 +1557,11 @@
     mul-int/lit8 v0, v0, 0x1f
 
     .line 13
-    invoke-virtual {p0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/q;->hashCode()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/Weight;->hashCode()I
 
     move-result v1
 
@@ -1813,11 +1813,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/models/q;->c()J
+    invoke-virtual {v2}, Lcom/vk/im/engine/models/Weight;->c()J
 
     move-result-wide v2
 
@@ -1849,7 +1849,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/q;
+    invoke-virtual {p0}, Lcom/vk/im/engine/models/messages/Msg;->D1()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v1
 

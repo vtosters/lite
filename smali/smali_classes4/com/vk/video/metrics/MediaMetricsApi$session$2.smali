@@ -3,7 +3,7 @@
 .source "MediaMetricsApi.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vigo/metrics/x;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vigo/metrics/VigoSession;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vigo/metrics/x;
+.method public final invoke()Lcom/vigo/metrics/VigoSession;
     .locals 2
 
     .line 2
@@ -67,11 +67,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/k0;->b()Z
+    invoke-interface {v0}, Lcom/vk/bridges/VideoBridge1;->b()Z
 
     move-result v0
 
@@ -79,7 +79,7 @@
 
     sget-object v0, Lcom/vk/video/metrics/MediaMetricsHolder;->d:Lcom/vk/video/metrics/MediaMetricsHolder;
 
-    invoke-virtual {v0}, Lcom/vk/video/metrics/MediaMetricsHolder;->a()Lcom/vigo/metrics/l;
+    invoke-virtual {v0}, Lcom/vk/video/metrics/MediaMetricsHolder;->a()Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     move-result-object v0
 
@@ -89,7 +89,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->a(Ljava/lang/String;)Lcom/vigo/metrics/x;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->a(Ljava/lang/String;)Lcom/vigo/metrics/VigoSession;
 
     move-result-object v0
 
@@ -107,7 +107,7 @@
 
     sget-object v0, Lcom/vk/video/metrics/MediaMetricsHolder;->d:Lcom/vk/video/metrics/MediaMetricsHolder;
 
-    invoke-virtual {v0}, Lcom/vk/video/metrics/MediaMetricsHolder;->a()Lcom/vigo/metrics/l;
+    invoke-virtual {v0}, Lcom/vk/video/metrics/MediaMetricsHolder;->a()Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     move-result-object v0
 
@@ -117,7 +117,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->a(Ljava/lang/String;)Lcom/vigo/metrics/x;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->a(Ljava/lang/String;)Lcom/vigo/metrics/VigoSession;
 
     move-result-object v0
 
@@ -134,7 +134,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsApi$session$2;->invoke()Lcom/vigo/metrics/x;
+    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsApi$session$2;->invoke()Lcom/vigo/metrics/VigoSession;
 
     move-result-object v0
 

@@ -1,5 +1,5 @@
 .class public Lcom/vk/stories/clickable/stickers/StoryGifSticker;
-.super Lcom/vk/attachpicker/stickers/q;
+.super Lcom/vk/attachpicker/stickers/AnimateSticker;
 .source "StoryGifSticker.kt"
 
 
@@ -30,15 +30,15 @@
 
 .field private H:I
 
-.field private final I:Lcom/facebook/imagepipeline/animated/base/d;
+.field private final I:Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;
 
 .field private final J:Ljava/lang/String;
 
-.field private final f:Lcom/facebook/imagepipeline/animated/base/b;
+.field private final f:Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
 
 .field private final g:[I
 
-.field private final h:Lcom/facebook/v/a/c/a;
+.field private final h:Lcom/facebook/v/a/c/AnimatedDrawable2;
 
 
 # direct methods
@@ -49,7 +49,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/stickers/StoryGifSticker$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/stickers/StoryGifSticker$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v0, 0x6e
 
@@ -65,33 +65,33 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/imagepipeline/animated/base/d;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;Ljava/lang/String;)V
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/attachpicker/stickers/q;-><init>()V
+    invoke-direct {p0}, Lcom/vk/attachpicker/stickers/AnimateSticker;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->I:Lcom/facebook/imagepipeline/animated/base/d;
+    iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->I:Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;
 
     iput-object p2, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->J:Ljava/lang/String;
 
     .line 2
-    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->I:Lcom/facebook/imagepipeline/animated/base/d;
+    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->I:Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;
 
-    invoke-virtual {p1}, Lcom/facebook/imagepipeline/animated/base/d;->b()Lcom/facebook/imagepipeline/animated/base/b;
+    invoke-virtual {p1}, Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;->b()Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->f:Lcom/facebook/imagepipeline/animated/base/b;
+    iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->f:Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->f:Lcom/facebook/imagepipeline/animated/base/b;
+    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->f:Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
 
     const-string p2, "image"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/animated/base/b;->e()[I
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/animated/base/AnimatedImage;->e()[I
 
     move-result-object p1
 
@@ -103,35 +103,35 @@
     invoke-direct {p1, p0}, Lcom/vk/stories/clickable/stickers/StoryGifSticker$animationDrawable$1;-><init>(Lcom/vk/stories/clickable/stickers/StoryGifSticker;)V
 
     .line 5
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/v/a/c/a;
+    check-cast p1, Lcom/facebook/v/a/c/AnimatedDrawable2;
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/a;
+    iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/AnimatedDrawable2;
 
     .line 6
-    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->I:Lcom/facebook/imagepipeline/animated/base/d;
+    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->I:Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;
 
-    invoke-virtual {p1}, Lcom/facebook/imagepipeline/animated/base/d;->b()Lcom/facebook/imagepipeline/animated/base/b;
+    invoke-virtual {p1}, Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;->b()Lcom/facebook/imagepipeline/animated/base/AnimatedImage;
 
     move-result-object p1
 
     const-string p2, "animationResult.image"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/animated/base/b;->getDuration()I
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/animated/base/AnimatedImage;->getDuration()I
 
     move-result p1
 
     iput p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->C:I
 
     .line 7
-    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/a;
+    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/AnimatedDrawable2;
 
-    invoke-virtual {p1}, Lcom/facebook/v/a/c/a;->getIntrinsicWidth()I
+    invoke-virtual {p1}, Lcom/facebook/v/a/c/AnimatedDrawable2;->getIntrinsicWidth()I
 
     move-result p1
 
@@ -140,9 +140,9 @@
     iput p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->D:F
 
     .line 8
-    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/a;
+    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/AnimatedDrawable2;
 
-    invoke-virtual {p1}, Lcom/facebook/v/a/c/a;->getIntrinsicHeight()I
+    invoke-virtual {p1}, Lcom/facebook/v/a/c/AnimatedDrawable2;->getIntrinsicHeight()I
 
     move-result p1
 
@@ -176,16 +176,16 @@
     iput p2, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->F:F
 
     .line 10
-    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/a;
+    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/AnimatedDrawable2;
 
-    invoke-virtual {p1}, Lcom/facebook/v/a/c/a;->start()V
+    invoke-virtual {p1}, Lcom/facebook/v/a/c/AnimatedDrawable2;->start()V
 
     .line 11
     iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->g:[I
 
     const-string p2, "framesDurations"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lkotlin/collections/f;->e([I)Ljava/lang/Integer;
 
@@ -206,7 +206,7 @@
     iput p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->G:I
 
     .line 12
-    invoke-super {p0}, Lcom/vk/attachpicker/stickers/y;->getStickerAlpha()I
+    invoke-super {p0}, Lcom/vk/attachpicker/stickers/CanvasSticker;->getStickerAlpha()I
 
     move-result p1
 
@@ -219,11 +219,11 @@
     .locals 1
 
     .line 13
-    iget-object v0, p1, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->I:Lcom/facebook/imagepipeline/animated/base/d;
+    iget-object v0, p1, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->I:Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;
 
     iget-object p1, p1, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->J:Ljava/lang/String;
 
-    invoke-direct {p0, v0, p1}, Lcom/vk/stories/clickable/stickers/StoryGifSticker;-><init>(Lcom/facebook/imagepipeline/animated/base/d;Ljava/lang/String;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/stories/clickable/stickers/StoryGifSticker;-><init>(Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -232,7 +232,7 @@
     .locals 6
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/y;->n()I
+    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/CanvasSticker;->n()I
 
     move-result v0
 
@@ -298,7 +298,7 @@
     check-cast p1, Lcom/vk/stories/clickable/stickers/StoryGifSticker;
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/attachpicker/stickers/y;->a(Lcom/vk/attachpicker/stickers/ISticker;)Lcom/vk/attachpicker/stickers/ISticker;
+    invoke-super {p0, p1}, Lcom/vk/attachpicker/stickers/CanvasSticker;->a(Lcom/vk/attachpicker/stickers/ISticker;)Lcom/vk/attachpicker/stickers/ISticker;
 
     return-object p1
 
@@ -327,9 +327,9 @@
     move-result v0
 
     .line 6
-    iget-object v1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/a;
+    iget-object v1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/AnimatedDrawable2;
 
-    invoke-virtual {v1, v0}, Lcom/facebook/v/a/c/a;->a(I)V
+    invoke-virtual {v1, v0}, Lcom/facebook/v/a/c/AnimatedDrawable2;->a(I)V
 
     .line 7
     :cond_0
@@ -341,9 +341,9 @@
     invoke-virtual {p1, v0, v0}, Landroid/graphics/Canvas;->scale(FF)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/AnimatedDrawable2;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/v/a/c/a;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/v/a/c/AnimatedDrawable2;->draw(Landroid/graphics/Canvas;)V
 
     .line 10
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
@@ -357,9 +357,9 @@
     .line 1
     iget v0, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->F:F
 
-    iget-object v1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/a;
+    iget-object v1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/AnimatedDrawable2;
 
-    invoke-virtual {v1}, Lcom/facebook/v/a/c/a;->getIntrinsicHeight()I
+    invoke-virtual {v1}, Lcom/facebook/v/a/c/AnimatedDrawable2;->getIntrinsicHeight()I
 
     move-result v1
 
@@ -376,9 +376,9 @@
     .line 1
     iget v0, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->F:F
 
-    iget-object v1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/a;
+    iget-object v1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/AnimatedDrawable2;
 
-    invoke-virtual {v1}, Lcom/facebook/v/a/c/a;->getIntrinsicWidth()I
+    invoke-virtual {v1}, Lcom/facebook/v/a/c/AnimatedDrawable2;->getIntrinsicWidth()I
 
     move-result v1
 
@@ -427,18 +427,18 @@
     iput-boolean v0, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->B:Z
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/AnimatedDrawable2;
 
-    invoke-virtual {v0}, Lcom/facebook/v/a/c/a;->start()V
+    invoke-virtual {v0}, Lcom/facebook/v/a/c/AnimatedDrawable2;->start()V
 
     return-void
 .end method
 
-.method public final r()Lcom/facebook/imagepipeline/animated/base/d;
+.method public final r()Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->I:Lcom/facebook/imagepipeline/animated/base/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->I:Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;
 
     return-object v0
 .end method
@@ -459,9 +459,9 @@
     iput p1, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->H:I
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->h:Lcom/facebook/v/a/c/AnimatedDrawable2;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/v/a/c/a;->setAlpha(I)V
+    invoke-virtual {v0, p1}, Lcom/facebook/v/a/c/AnimatedDrawable2;->setAlpha(I)V
 
     return-void
 .end method

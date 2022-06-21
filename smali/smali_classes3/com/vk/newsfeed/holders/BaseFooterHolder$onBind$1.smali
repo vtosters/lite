@@ -3,7 +3,7 @@
 .source "BaseFooterHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/newsfeed/entries/Post;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -102,9 +102,9 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/vk/newsfeed/y;->b:Lcom/vk/newsfeed/y;
+    sget-object v1, Lcom/vk/newsfeed/PostDisplayItemsHelper;->b:Lcom/vk/newsfeed/PostDisplayItemsHelper;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/y;->b()Z
+    invoke-virtual {v1}, Lcom/vk/newsfeed/PostDisplayItemsHelper;->b()Z
 
     move-result v1
 
@@ -279,11 +279,11 @@
     if-eqz v1, :cond_8
 
     .line 12
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->I()Z
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->I()Z
 
     move-result v1
 
@@ -404,7 +404,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/BaseFooterHolder$onBind$1;->a(Lcom/vk/dto/newsfeed/entries/Post;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

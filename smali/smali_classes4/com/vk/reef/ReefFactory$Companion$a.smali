@@ -3,7 +3,7 @@
 .source "ReefFactory.kt"
 
 # interfaces
-.implements Lcom/vk/reef/utils/a;
+.implements Lcom/vk/reef/utils/ReefApplicationSettings;
 
 
 # annotations
@@ -33,7 +33,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/reef/utils/a$a;->e(Lcom/vk/reef/utils/a;)I
+    invoke-static {p0}, Lcom/vk/reef/utils/ReefApplicationSettings$a;->e(Lcom/vk/reef/utils/ReefApplicationSettings;)I
 
     move-result v0
 
@@ -44,7 +44,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/reef/utils/a$a;->b(Lcom/vk/reef/utils/a;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vk/reef/utils/ReefApplicationSettings$a;->b(Lcom/vk/reef/utils/ReefApplicationSettings;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -55,7 +55,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/reef/utils/a$a;->d(Lcom/vk/reef/utils/a;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vk/reef/utils/ReefApplicationSettings$a;->d(Lcom/vk/reef/utils/ReefApplicationSettings;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -66,7 +66,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/reef/utils/a$a;->a(Lcom/vk/reef/utils/a;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vk/reef/utils/ReefApplicationSettings$a;->a(Lcom/vk/reef/utils/ReefApplicationSettings;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/reef/utils/a$a;->c(Lcom/vk/reef/utils/a;)Lcom/vk/reef/dto/ReefBuildType;
+    invoke-static {p0}, Lcom/vk/reef/utils/ReefApplicationSettings$a;->c(Lcom/vk/reef/utils/ReefApplicationSettings;)Lcom/vk/reef/dto/ReefBuildType;
 
     move-result-object v0
 
@@ -88,7 +88,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/reef/utils/a$a;->f(Lcom/vk/reef/utils/a;)I
+    invoke-static {p0}, Lcom/vk/reef/utils/ReefApplicationSettings$a;->f(Lcom/vk/reef/utils/ReefApplicationSettings;)I
 
     move-result v0
 

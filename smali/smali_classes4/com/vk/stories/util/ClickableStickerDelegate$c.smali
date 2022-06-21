@@ -3,7 +3,7 @@
 .source "ClickableStickerDelegate.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/c;
+.implements Lcom/vk/navigation/ActivityResulter;
 
 
 # annotations
@@ -59,14 +59,14 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, p2, v0, p3, v0}, Lcom/vk/stories/util/ClickableStickerDelegate$a$a;->a(Lcom/vk/stories/util/ClickableStickerDelegate$a;Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {p1, p2, v0, p3, v0}, Lcom/vk/stories/util/ClickableStickerDelegate$a$a;->a(Lcom/vk/stories/util/ClickableStickerDelegate$a;Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/stories/util/ClickableStickerDelegate$c;->a:Landroid/app/Activity;
 
-    check-cast p1, Lcom/vk/navigation/u;
+    check-cast p1, Lcom/vk/navigation/ResulterProvider;
 
-    invoke-interface {p1, p0}, Lcom/vk/navigation/u;->a(Lcom/vk/navigation/c;)V
+    invoke-interface {p1, p0}, Lcom/vk/navigation/ResulterProvider;->a(Lcom/vk/navigation/ActivityResulter;)V
 
     :cond_0
     return-void

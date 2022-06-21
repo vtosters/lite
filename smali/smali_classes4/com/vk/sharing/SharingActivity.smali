@@ -3,9 +3,9 @@
 .source "SharingActivity.java"
 
 # interfaces
-.implements Lcom/vk/sharing/d$a;
-.implements Lcom/vk/sharing/view/k$p;
-.implements Lcom/vk/sharing/target/o$e;
+.implements Lcom/vk/sharing/BasePresenter$a;
+.implements Lcom/vk/sharing/view/SharingView$p;
+.implements Lcom/vk/sharing/target/TargetsLoader$e;
 
 
 # annotations
@@ -20,17 +20,17 @@
 # instance fields
 .field private G:Lcom/vtosters/lite/activities/LogoutReceiver;
 
-.field private H:Lcom/vk/sharing/d;
+.field private H:Lcom/vk/sharing/BasePresenter;
 
-.field private I:Lcom/vk/sharing/view/k;
+.field private I:Lcom/vk/sharing/view/SharingView;
 
 .field private J:Lcom/vk/sharing/target/Targets;
 
 .field private K:Lcom/vk/sharing/attachment/AttachmentInfo;
 
-.field private L:Lcom/vk/sharing/target/o;
+.field private L:Lcom/vk/sharing/target/TargetsLoader;
 
-.field private M:Lcom/vk/sharing/attachment/j;
+.field private M:Lcom/vk/sharing/attachment/AttachmentViewHolder;
 
 .field private N:Lcom/vk/sharing/action/ActionsInfo;
 
@@ -151,7 +151,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {p0}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
 
     :cond_0
     return-void
@@ -179,7 +179,7 @@
 
     iget-object v3, p0, Lcom/vk/sharing/SharingActivity;->N:Lcom/vk/sharing/action/ActionsInfo;
 
-    invoke-static {v2, v3}, Lcom/vk/sharing/attachment/k;->a(Lcom/vk/sharing/attachment/AttachmentInfo;Lcom/vk/sharing/action/ActionsInfo;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/vk/sharing/attachment/Attachments;->a(Lcom/vk/sharing/attachment/AttachmentInfo;Lcom/vk/sharing/action/ActionsInfo;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -201,7 +201,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -213,9 +213,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->A0()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->A0()V
 
     return-void
 .end method
@@ -224,9 +224,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->B0()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->B0()V
 
     return-void
 .end method
@@ -235,9 +235,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->C0()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->C0()V
 
     return-void
 .end method
@@ -246,9 +246,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->D0()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->D0()V
 
     return-void
 .end method
@@ -257,9 +257,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->F()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->F()V
 
     return-void
 .end method
@@ -268,9 +268,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->F0()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->F0()V
 
     return-void
 .end method
@@ -279,9 +279,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->G0()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->G0()V
 
     return-void
 .end method
@@ -320,13 +320,13 @@
     move-result v2
 
     .line 4
-    new-instance v3, Lcom/vk/cameraui/builder/a;
+    new-instance v3, Lcom/vk/cameraui/builder/CameraBuilder;
 
     const-string v4, "sharing"
 
     const-string v5, "story_repost"
 
-    invoke-direct {v3, v4, v5}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v4, v5}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v4, Lcom/vk/cameraui/CameraUI;->d:Lcom/vk/cameraui/CameraUI$a;
 
@@ -546,28 +546,28 @@
     iget-object v6, v0, Lcom/vk/sharing/SharingActivity;->N:Lcom/vk/sharing/action/ActionsInfo;
 
     .line 26
-    invoke-static {v5, v6}, Lcom/vk/sharing/attachment/k;->a(Lcom/vk/sharing/attachment/AttachmentInfo;Lcom/vk/sharing/action/ActionsInfo;)Ljava/lang/String;
+    invoke-static {v5, v6}, Lcom/vk/sharing/attachment/Attachments;->a(Lcom/vk/sharing/attachment/AttachmentInfo;Lcom/vk/sharing/action/ActionsInfo;)Ljava/lang/String;
 
     move-result-object v16
 
-    sget-object v5, Lcom/vk/sharing/q/a;->a:Lcom/vk/sharing/q/a;
+    sget-object v5, Lcom/vk/sharing/q/StorySharingHelper;->a:Lcom/vk/sharing/q/StorySharingHelper;
 
     .line 27
-    invoke-virtual {v5, v2, v1}, Lcom/vk/sharing/q/a;->b(ILcom/vk/dto/common/Attachment;)Ljava/lang/String;
+    invoke-virtual {v5, v2, v1}, Lcom/vk/sharing/q/StorySharingHelper;->b(ILcom/vk/dto/common/Attachment;)Ljava/lang/String;
 
     move-result-object v17
 
-    sget-object v5, Lcom/vk/sharing/q/a;->a:Lcom/vk/sharing/q/a;
+    sget-object v5, Lcom/vk/sharing/q/StorySharingHelper;->a:Lcom/vk/sharing/q/StorySharingHelper;
 
     .line 28
-    invoke-virtual {v5, v2, v1}, Lcom/vk/sharing/q/a;->a(ILcom/vk/dto/common/Attachment;)Ljava/lang/String;
+    invoke-virtual {v5, v2, v1}, Lcom/vk/sharing/q/StorySharingHelper;->a(ILcom/vk/dto/common/Attachment;)Ljava/lang/String;
 
     move-result-object v18
 
-    sget-object v5, Lcom/vk/sharing/q/a;->a:Lcom/vk/sharing/q/a;
+    sget-object v5, Lcom/vk/sharing/q/StorySharingHelper;->a:Lcom/vk/sharing/q/StorySharingHelper;
 
     .line 29
-    invoke-virtual {v5, v2, v1}, Lcom/vk/sharing/q/a;->c(ILcom/vk/dto/common/Attachment;)Ljava/lang/String;
+    invoke-virtual {v5, v2, v1}, Lcom/vk/sharing/q/StorySharingHelper;->c(ILcom/vk/dto/common/Attachment;)Ljava/lang/String;
 
     move-result-object v19
 
@@ -595,9 +595,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->I()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->I()V
 
     return-void
 .end method
@@ -617,7 +617,7 @@
 
     iget-object v2, p0, Lcom/vk/sharing/SharingActivity;->N:Lcom/vk/sharing/action/ActionsInfo;
 
-    invoke-static {v1, v2}, Lcom/vk/sharing/attachment/k;->a(Lcom/vk/sharing/attachment/AttachmentInfo;Lcom/vk/sharing/action/ActionsInfo;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/vk/sharing/attachment/Attachments;->a(Lcom/vk/sharing/attachment/AttachmentInfo;Lcom/vk/sharing/action/ActionsInfo;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -670,7 +670,7 @@
     invoke-static {v1}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 5
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -817,7 +817,7 @@
 
     iget-object v2, p0, Lcom/vk/sharing/SharingActivity;->N:Lcom/vk/sharing/action/ActionsInfo;
 
-    invoke-static {v1, v2}, Lcom/vk/sharing/attachment/k;->a(Lcom/vk/sharing/attachment/AttachmentInfo;Lcom/vk/sharing/action/ActionsInfo;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/vk/sharing/attachment/Attachments;->a(Lcom/vk/sharing/attachment/AttachmentInfo;Lcom/vk/sharing/action/ActionsInfo;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -847,7 +847,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/vk/sharing/m;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/vk/sharing/Sharing;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -859,7 +859,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/vk/sharing/m;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/vk/sharing/Sharing;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 10
     :goto_0
@@ -884,15 +884,15 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/sharing/d;)V
+.method public a(Lcom/vk/sharing/BasePresenter;)V
     .locals 0
-    .param p1    # Lcom/vk/sharing/d;
+    .param p1    # Lcom/vk/sharing/BasePresenter;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 34
-    iput-object p1, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iput-object p1, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
     return-void
 .end method
@@ -905,9 +905,9 @@
     .end param
 
     .line 35
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/sharing/d;->a(Lcom/vk/sharing/target/Target;I)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/sharing/BasePresenter;->a(Lcom/vk/sharing/target/Target;I)V
 
     return-void
 .end method
@@ -981,7 +981,7 @@
     move-result-object p1
 
     .line 8
-    invoke-static {p1}, Lcom/vk/core/service/b;->b(Landroid/content/Intent;)V
+    invoke-static {p1}, Lcom/vk/core/service/BoundServiceManager;->b(Landroid/content/Intent;)V
 
     .line 9
     invoke-direct {p0}, Lcom/vk/sharing/SharingActivity;->w1()V
@@ -996,11 +996,11 @@
     new-array p1, p1, [I
 
     .line 11
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {p2}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result p2
 
@@ -1106,7 +1106,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 21
-    invoke-static {v0}, Lcom/vk/core/service/b;->b(Landroid/content/Intent;)V
+    invoke-static {v0}, Lcom/vk/core/service/BoundServiceManager;->b(Landroid/content/Intent;)V
 
     goto :goto_0
 
@@ -1145,9 +1145,9 @@
     .end annotation
 
     .line 36
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/sharing/d;->a(Ljava/util/ArrayList;)V
+    invoke-virtual {v0, p1}, Lcom/vk/sharing/BasePresenter;->a(Ljava/util/ArrayList;)V
 
     return-void
 .end method
@@ -1245,7 +1245,7 @@
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 10
-    invoke-static {v0}, Lcom/vk/core/service/b;->b(Landroid/content/Intent;)V
+    invoke-static {v0}, Lcom/vk/core/service/BoundServiceManager;->b(Landroid/content/Intent;)V
 
     goto :goto_0
 
@@ -1277,9 +1277,9 @@
     .end annotation
 
     .line 13
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/sharing/d;->b(Ljava/util/ArrayList;)V
+    invoke-virtual {v0, p1}, Lcom/vk/sharing/BasePresenter;->b(Ljava/util/ArrayList;)V
 
     return-void
 .end method
@@ -1335,9 +1335,9 @@
     .end annotation
 
     .line 5
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/sharing/d;->c(Ljava/util/ArrayList;)V
+    invoke-virtual {v0, p1}, Lcom/vk/sharing/BasePresenter;->c(Ljava/util/ArrayList;)V
 
     return-void
 .end method
@@ -1358,9 +1358,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/sharing/d;->d(Ljava/util/ArrayList;)V
+    invoke-virtual {v0, p1}, Lcom/vk/sharing/BasePresenter;->d(Ljava/util/ArrayList;)V
 
     return-void
 .end method
@@ -1369,9 +1369,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->e()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->e()V
 
     return-void
 .end method
@@ -1380,9 +1380,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/sharing/d;->e(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/sharing/BasePresenter;->e(I)V
 
     return-void
 .end method
@@ -1395,9 +1395,9 @@
     .end param
 
     .line 3
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/sharing/d;->e(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/sharing/BasePresenter;->e(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1435,13 +1435,13 @@
     return-void
 .end method
 
-.method public getView()Lcom/vk/sharing/view/k;
+.method public getView()Lcom/vk/sharing/view/SharingView;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/k;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/SharingView;
 
     return-object v0
 .end method
@@ -1474,13 +1474,13 @@
     return v0
 .end method
 
-.method public o1()Lcom/vk/sharing/target/o;
+.method public o1()Lcom/vk/sharing/target/TargetsLoader;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->L:Lcom/vk/sharing/target/o;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->L:Lcom/vk/sharing/target/TargetsLoader;
 
     return-object v0
 .end method
@@ -1489,9 +1489,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/k;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/SharingView;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/view/k;->x()V
+    invoke-virtual {v0}, Lcom/vk/sharing/view/SharingView;->x()V
 
     return-void
 .end method
@@ -1549,7 +1549,7 @@
 
     .line 5
     :goto_0
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v2
 
@@ -1594,14 +1594,14 @@
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setId(I)V
 
     .line 13
-    new-instance v2, Lcom/vk/sharing/view/k;
+    new-instance v2, Lcom/vk/sharing/view/SharingView;
 
-    invoke-direct {v2, p0}, Lcom/vk/sharing/view/k;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p0}, Lcom/vk/sharing/view/SharingView;-><init>(Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/k;
+    iput-object v2, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/SharingView;
 
     .line 14
-    iget-object v2, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/k;
+    iget-object v2, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/SharingView;
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
@@ -1691,11 +1691,11 @@
     if-nez v2, :cond_4
 
     .line 22
-    new-instance v2, Lcom/vk/sharing/target/o;
+    new-instance v2, Lcom/vk/sharing/target/TargetsLoader;
 
-    invoke-direct {v2}, Lcom/vk/sharing/target/o;-><init>()V
+    invoke-direct {v2}, Lcom/vk/sharing/target/TargetsLoader;-><init>()V
 
-    iput-object v2, p0, Lcom/vk/sharing/SharingActivity;->L:Lcom/vk/sharing/target/o;
+    iput-object v2, p0, Lcom/vk/sharing/SharingActivity;->L:Lcom/vk/sharing/target/TargetsLoader;
 
     .line 23
     iget-object v2, p0, Lcom/vk/sharing/SharingActivity;->K:Lcom/vk/sharing/attachment/AttachmentInfo;
@@ -1703,50 +1703,50 @@
     if-eqz v2, :cond_5
 
     .line 24
-    invoke-static {v2}, Lcom/vk/sharing/attachment/k;->a(Lcom/vk/sharing/attachment/AttachmentInfo;)Lcom/vk/sharing/attachment/j;
+    invoke-static {v2}, Lcom/vk/sharing/attachment/Attachments;->a(Lcom/vk/sharing/attachment/AttachmentInfo;)Lcom/vk/sharing/attachment/AttachmentViewHolder;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/vk/sharing/SharingActivity;->M:Lcom/vk/sharing/attachment/j;
+    iput-object v2, p0, Lcom/vk/sharing/SharingActivity;->M:Lcom/vk/sharing/attachment/AttachmentViewHolder;
 
     goto :goto_2
 
     .line 25
     :cond_4
-    invoke-static {v2}, Lcom/vk/sharing/SharingActivity$b;->a(Lcom/vk/sharing/SharingActivity$b;)Lcom/vk/sharing/target/o;
+    invoke-static {v2}, Lcom/vk/sharing/SharingActivity$b;->a(Lcom/vk/sharing/SharingActivity$b;)Lcom/vk/sharing/target/TargetsLoader;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/vk/sharing/SharingActivity;->L:Lcom/vk/sharing/target/o;
+    iput-object v3, p0, Lcom/vk/sharing/SharingActivity;->L:Lcom/vk/sharing/target/TargetsLoader;
 
     .line 26
-    invoke-static {v2}, Lcom/vk/sharing/SharingActivity$b;->b(Lcom/vk/sharing/SharingActivity$b;)Lcom/vk/sharing/attachment/j;
+    invoke-static {v2}, Lcom/vk/sharing/SharingActivity$b;->b(Lcom/vk/sharing/SharingActivity$b;)Lcom/vk/sharing/attachment/AttachmentViewHolder;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/vk/sharing/SharingActivity;->M:Lcom/vk/sharing/attachment/j;
+    iput-object v2, p0, Lcom/vk/sharing/SharingActivity;->M:Lcom/vk/sharing/attachment/AttachmentViewHolder;
 
     .line 27
     :cond_5
     :goto_2
-    iget-object v2, p0, Lcom/vk/sharing/SharingActivity;->M:Lcom/vk/sharing/attachment/j;
+    iget-object v2, p0, Lcom/vk/sharing/SharingActivity;->M:Lcom/vk/sharing/attachment/AttachmentViewHolder;
 
     if-eqz v2, :cond_6
 
     .line 28
-    iget-object v3, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/k;
+    iget-object v3, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/SharingView;
 
-    invoke-virtual {v3, v2}, Lcom/vk/sharing/view/k;->setAttachmentViewHolder(Lcom/vk/sharing/attachment/j;)V
+    invoke-virtual {v3, v2}, Lcom/vk/sharing/view/SharingView;->setAttachmentViewHolder(Lcom/vk/sharing/attachment/AttachmentViewHolder;)V
 
     :cond_6
     if-eqz v0, :cond_7
 
     .line 29
-    iget-object v2, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/k;
+    iget-object v2, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/SharingView;
 
     iget-object v3, p0, Lcom/vk/sharing/SharingActivity;->K:Lcom/vk/sharing/attachment/AttachmentInfo;
 
-    invoke-virtual {v2, v0, v3}, Lcom/vk/sharing/view/k;->a(Lcom/vk/sharing/action/ActionsInfo;Lcom/vk/sharing/attachment/AttachmentInfo;)V
+    invoke-virtual {v2, v0, v3}, Lcom/vk/sharing/view/SharingView;->a(Lcom/vk/sharing/action/ActionsInfo;Lcom/vk/sharing/attachment/AttachmentInfo;)V
 
     .line 30
     :cond_7
@@ -1800,41 +1800,41 @@
     if-eq p1, v2, :cond_8
 
     .line 34
-    new-instance p1, Lcom/vk/sharing/e;
+    new-instance p1, Lcom/vk/sharing/CommonPresenter;
 
-    invoke-direct {p1, p0, v0}, Lcom/vk/sharing/e;-><init>(Lcom/vk/sharing/d$a;Z)V
+    invoke-direct {p1, p0, v0}, Lcom/vk/sharing/CommonPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;Z)V
 
-    iput-object p1, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iput-object p1, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
     goto :goto_3
 
     .line 35
     :cond_8
-    new-instance p1, Lcom/vk/sharing/k;
+    new-instance p1, Lcom/vk/sharing/LivesGroupPickerPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/sharing/k;-><init>(Lcom/vk/sharing/d$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/sharing/LivesGroupPickerPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;)V
 
-    iput-object p1, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iput-object p1, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
     goto :goto_3
 
     .line 36
     :cond_9
-    new-instance p1, Lcom/vk/sharing/n;
+    new-instance p1, Lcom/vk/sharing/UniversalGroupPickerPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/sharing/n;-><init>(Lcom/vk/sharing/d$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/sharing/UniversalGroupPickerPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;)V
 
-    iput-object p1, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iput-object p1, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
     goto :goto_3
 
     .line 37
     :cond_a
-    new-instance p1, Lcom/vk/sharing/g;
+    new-instance p1, Lcom/vk/sharing/GroupPickerPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/sharing/g;-><init>(Lcom/vk/sharing/d$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/sharing/GroupPickerPresenter;-><init>(Lcom/vk/sharing/BasePresenter$a;)V
 
-    iput-object p1, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iput-object p1, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
     goto :goto_3
 
@@ -1857,22 +1857,22 @@
 
     move-result p1
 
-    invoke-static {p0, p1}, Lcom/vk/sharing/SharingActivity$c;->a(Lcom/vk/sharing/SharingActivity;I)Lcom/vk/sharing/d;
+    invoke-static {p0, p1}, Lcom/vk/sharing/SharingActivity$c;->a(Lcom/vk/sharing/SharingActivity;I)Lcom/vk/sharing/BasePresenter;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iput-object p1, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
     .line 40
     :goto_3
-    iget-object p1, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/k;
+    iget-object p1, p0, Lcom/vk/sharing/SharingActivity;->I:Lcom/vk/sharing/view/SharingView;
 
-    invoke-virtual {p1, p0}, Lcom/vk/sharing/view/k;->setPresenter(Lcom/vk/sharing/view/k$p;)V
+    invoke-virtual {p1, p0}, Lcom/vk/sharing/view/SharingView;->setPresenter(Lcom/vk/sharing/view/SharingView$p;)V
 
     .line 41
-    iget-object p1, p0, Lcom/vk/sharing/SharingActivity;->L:Lcom/vk/sharing/target/o;
+    iget-object p1, p0, Lcom/vk/sharing/SharingActivity;->L:Lcom/vk/sharing/target/TargetsLoader;
 
-    invoke-virtual {p1, p0}, Lcom/vk/sharing/target/o;->a(Lcom/vk/sharing/target/o$e;)V
+    invoke-virtual {p1, p0}, Lcom/vk/sharing/target/TargetsLoader;->a(Lcom/vk/sharing/target/TargetsLoader$e;)V
 
     .line 42
     iput-boolean v1, p0, Lcom/vtosters/lite/VKActivity;->C:Z
@@ -1884,11 +1884,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->L:Lcom/vk/sharing/target/o;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->L:Lcom/vk/sharing/target/TargetsLoader;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/sharing/target/o;->a(Lcom/vk/sharing/target/o$e;)V
+    invoke-virtual {v0, v1}, Lcom/vk/sharing/target/TargetsLoader;->a(Lcom/vk/sharing/target/TargetsLoader$e;)V
 
     .line 2
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
@@ -1907,14 +1907,14 @@
     invoke-direct {v0, v1}, Lcom/vk/sharing/SharingActivity$b;-><init>(Lcom/vk/sharing/SharingActivity$a;)V
 
     .line 2
-    iget-object v1, p0, Lcom/vk/sharing/SharingActivity;->L:Lcom/vk/sharing/target/o;
+    iget-object v1, p0, Lcom/vk/sharing/SharingActivity;->L:Lcom/vk/sharing/target/TargetsLoader;
 
-    invoke-static {v0, v1}, Lcom/vk/sharing/SharingActivity$b;->a(Lcom/vk/sharing/SharingActivity$b;Lcom/vk/sharing/target/o;)Lcom/vk/sharing/target/o;
+    invoke-static {v0, v1}, Lcom/vk/sharing/SharingActivity$b;->a(Lcom/vk/sharing/SharingActivity$b;Lcom/vk/sharing/target/TargetsLoader;)Lcom/vk/sharing/target/TargetsLoader;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/sharing/SharingActivity;->M:Lcom/vk/sharing/attachment/j;
+    iget-object v1, p0, Lcom/vk/sharing/SharingActivity;->M:Lcom/vk/sharing/attachment/AttachmentViewHolder;
 
-    invoke-static {v0, v1}, Lcom/vk/sharing/SharingActivity$b;->a(Lcom/vk/sharing/SharingActivity$b;Lcom/vk/sharing/attachment/j;)Lcom/vk/sharing/attachment/j;
+    invoke-static {v0, v1}, Lcom/vk/sharing/SharingActivity$b;->a(Lcom/vk/sharing/SharingActivity$b;Lcom/vk/sharing/attachment/AttachmentViewHolder;)Lcom/vk/sharing/attachment/AttachmentViewHolder;
 
     return-object v0
 .end method
@@ -1934,9 +1934,9 @@
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-static {v0}, Lcom/vk/sharing/SharingActivity$c;->a(Lcom/vk/sharing/d;)I
+    invoke-static {v0}, Lcom/vk/sharing/SharingActivity$c;->a(Lcom/vk/sharing/BasePresenter;)I
 
     move-result v0
 
@@ -2026,9 +2026,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->u0()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->u0()V
 
     return-void
 .end method
@@ -2037,9 +2037,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->v0()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->v0()V
 
     return-void
 .end method
@@ -2048,9 +2048,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->w0()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->w0()V
 
     return-void
 .end method
@@ -2059,9 +2059,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->x0()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->x0()V
 
     return-void
 .end method
@@ -2070,9 +2070,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/d;
+    iget-object v0, p0, Lcom/vk/sharing/SharingActivity;->H:Lcom/vk/sharing/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/d;->z0()V
+    invoke-virtual {v0}, Lcom/vk/sharing/BasePresenter;->z0()V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "AdjusterView.java"
 
 # interfaces
-.implements Lcom/vk/crop/q/a$a;
+.implements Lcom/vk/crop/q/MoveGestureDetector$a;
 
 
 # annotations
@@ -31,7 +31,7 @@
 
 .field protected D:Lcom/vk/crop/widget/AdjusterView$a;
 
-.field protected E:Lcom/vk/crop/q/a;
+.field protected E:Lcom/vk/crop/q/MoveGestureDetector;
 
 .field protected F:F
 
@@ -698,11 +698,11 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/crop/q/a;
+    new-instance v0, Lcom/vk/crop/q/MoveGestureDetector;
 
-    invoke-direct {v0, p0}, Lcom/vk/crop/q/a;-><init>(Lcom/vk/crop/q/a$a;)V
+    invoke-direct {v0, p0}, Lcom/vk/crop/q/MoveGestureDetector;-><init>(Lcom/vk/crop/q/MoveGestureDetector$a;)V
 
-    iput-object v0, p0, Lcom/vk/crop/widget/AdjusterView;->E:Lcom/vk/crop/q/a;
+    iput-object v0, p0, Lcom/vk/crop/widget/AdjusterView;->E:Lcom/vk/crop/q/MoveGestureDetector;
 
     .line 2
     iget-object v0, p0, Lcom/vk/crop/widget/AdjusterView;->g:Landroid/graphics/Paint;
@@ -1202,9 +1202,9 @@
     .line 4
     :cond_1
     :try_start_0
-    iget-object v0, p0, Lcom/vk/crop/widget/AdjusterView;->E:Lcom/vk/crop/q/a;
+    iget-object v0, p0, Lcom/vk/crop/widget/AdjusterView;->E:Lcom/vk/crop/q/MoveGestureDetector;
 
-    invoke-virtual {v0, p1}, Lcom/vk/crop/q/a;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/crop/q/MoveGestureDetector;->a(Landroid/view/MotionEvent;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

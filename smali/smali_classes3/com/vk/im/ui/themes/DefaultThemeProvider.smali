@@ -3,17 +3,17 @@
 .source "DefaultThemeProvider.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/j/a;
+.implements Lcom/vk/im/engine/j/DialogThemesProvider;
 
 
 # static fields
-.field static final synthetic c:[Lkotlin/u/j;
+.field static final synthetic c:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lkotlin/e;
+.field private final a:Lkotlin/Lazy2;
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -24,11 +24,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -36,9 +36,9 @@
 
     const-string v5, "getDefaultTheme()Lcom/vk/im/engine/models/dialogs/DialogTheme;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -46,7 +46,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -54,15 +54,15 @@
 
     const-string v4, "getThemes()Ljava/util/Map;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/im/ui/themes/DefaultThemeProvider;->c:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/im/ui/themes/DefaultThemeProvider;->c:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -78,22 +78,22 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/im/ui/themes/DefaultThemeProvider$defaultTheme$2;-><init>(Lcom/vk/im/ui/themes/DefaultThemeProvider;Lcom/vk/core/ui/themes/VKThemeHelper;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->a:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->a:Lkotlin/Lazy2;
 
     .line 3
     new-instance p1, Lcom/vk/im/ui/themes/DefaultThemeProvider$themes$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/themes/DefaultThemeProvider$themes$2;-><init>(Lcom/vk/im/ui/themes/DefaultThemeProvider;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->b:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -331,7 +331,7 @@
     move-object/from16 v1, v28
 
     .line 45
-    invoke-direct/range {v1 .. v27}, Lcom/vk/im/engine/models/dialogs/BubbleColors;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v27}, Lcom/vk/im/engine/models/dialogs/BubbleColors;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v28
 .end method
@@ -340,7 +340,7 @@
     .locals 10
 
     .line 2
-    sget-object p1, Lcom/vk/im/engine/models/dialogs/f$b;->d:Lcom/vk/im/engine/models/dialogs/f$b;
+    sget-object p1, Lcom/vk/im/engine/models/dialogs/DialogThemeName$b;->d:Lcom/vk/im/engine/models/dialogs/DialogThemeName$b;
 
     .line 3
     invoke-static {}, Lcom/vk/core/ui/themes/VKTheme;->values()[Lcom/vk/core/ui/themes/VKTheme;
@@ -383,7 +383,7 @@
 
     move-result v9
 
-    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
 
     .line 9
     sget v8, Lcom/vk/im/engine/h;->header_tint:I
@@ -392,7 +392,7 @@
 
     move-result v9
 
-    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
 
     .line 10
     sget v8, Lcom/vk/im/engine/h;->header_text:I
@@ -401,7 +401,7 @@
 
     move-result v9
 
-    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
 
     .line 11
     sget v8, Lcom/vk/im/engine/h;->toolbar_title_textColor:I
@@ -410,7 +410,7 @@
 
     move-result v9
 
-    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v7, v8, v9}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
 
     const/4 v8, 0x1
 
@@ -437,7 +437,7 @@
 
     invoke-direct {v9, v7, v8, v6}, Lcom/vk/im/engine/models/dialogs/DialogThemeImpl;-><init>(Landroid/util/SparseIntArray;Ljava/util/List;Ljava/util/List;)V
 
-    invoke-static {v5, v9}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v5, v9}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v5
 
@@ -457,7 +457,7 @@
     .line 17
     new-instance v1, Lcom/vk/im/engine/models/dialogs/DialogTheme;
 
-    invoke-direct {v1, p1, v0}, Lcom/vk/im/engine/models/dialogs/DialogTheme;-><init>(Lcom/vk/im/engine/models/dialogs/f;Ljava/util/Map;)V
+    invoke-direct {v1, p1, v0}, Lcom/vk/im/engine/models/dialogs/DialogTheme;-><init>(Lcom/vk/im/engine/models/dialogs/DialogThemeName;Ljava/util/Map;)V
 
     return-object v1
 .end method
@@ -481,21 +481,21 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lcom/vk/im/engine/models/dialogs/f;",
+            "Lcom/vk/im/engine/models/dialogs/DialogThemeName;",
             "Lcom/vk/im/engine/models/dialogs/DialogTheme;",
             ">;"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/themes/DefaultThemeProvider;->c:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/themes/DefaultThemeProvider;->c:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -507,15 +507,15 @@
 .method public final b()Lcom/vk/im/engine/models/dialogs/DialogTheme;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->a:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/themes/DefaultThemeProvider;->a:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/themes/DefaultThemeProvider;->c:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/themes/DefaultThemeProvider;->c:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

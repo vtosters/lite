@@ -69,20 +69,20 @@
     return-void
 .end method
 
-.method private final b(Landroid/content/Context;Lcom/vk/api/base/ApiConfig$a;Lcom/vk/api/sdk/i;Lcom/vk/api/sdk/f;Lcom/vk/api/internal/o;Lcom/vk/api/internal/a;Lcom/vk/api/internal/b;Lcom/vk/api/sdk/utils/log/Logger;Lkotlin/e;)V
+.method private final b(Landroid/content/Context;Lcom/vk/api/base/ApiConfig$a;Lcom/vk/api/sdk/VKApiValidationHandler;Lcom/vk/api/sdk/VKApiIllegalCredentialsListener;Lcom/vk/api/internal/TokenConfirmationInfoProvider;Lcom/vk/api/internal/ApiCredentialsChangeListener;Lcom/vk/api/internal/ApiProfiler;Lcom/vk/api/sdk/utils/log/Logger;Lkotlin/Lazy2;)V
     .locals 21
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Lcom/vk/api/base/ApiConfig$a;",
-            "Lcom/vk/api/sdk/i;",
-            "Lcom/vk/api/sdk/f;",
-            "Lcom/vk/api/internal/o;",
-            "Lcom/vk/api/internal/a;",
-            "Lcom/vk/api/internal/b;",
+            "Lcom/vk/api/sdk/VKApiValidationHandler;",
+            "Lcom/vk/api/sdk/VKApiIllegalCredentialsListener;",
+            "Lcom/vk/api/internal/TokenConfirmationInfoProvider;",
+            "Lcom/vk/api/internal/ApiCredentialsChangeListener;",
+            "Lcom/vk/api/internal/ApiProfiler;",
             "Lcom/vk/api/sdk/utils/log/Logger;",
-            "Lkotlin/e<",
+            "Lkotlin/Lazy2<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
@@ -118,7 +118,7 @@
 
     invoke-direct {v5, v0}, Lcom/vk/api/base/ApiConfig$configureApiManager$apiConfig$1;-><init>(Lcom/vk/api/base/ApiConfig$a;)V
 
-    invoke-static {v5}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v5}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v5
 
@@ -127,7 +127,7 @@
 
     invoke-direct {v6, v0}, Lcom/vk/api/base/ApiConfig$configureApiManager$apiConfig$2;-><init>(Lcom/vk/api/base/ApiConfig$a;)V
 
-    invoke-static {v6}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v6}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v13
 
@@ -136,7 +136,7 @@
 
     invoke-direct {v6, v0}, Lcom/vk/api/base/ApiConfig$configureApiManager$apiConfig$3;-><init>(Lcom/vk/api/base/ApiConfig$a;)V
 
-    invoke-static {v6}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v6}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v14
 
@@ -150,7 +150,7 @@
 
     invoke-direct {v6, v0}, Lcom/vk/api/base/ApiConfig$configureApiManager$apiConfig$4;-><init>(Lcom/vk/api/base/ApiConfig$a;)V
 
-    invoke-static {v6}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v6}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v18
 
@@ -181,7 +181,7 @@
     move v15, v0
 
     .line 11
-    invoke-direct/range {v1 .. v19}, Lcom/vk/api/sdk/VKApiConfig;-><init>(Landroid/content/Context;ILcom/vk/api/sdk/i;Lkotlin/e;Ljava/lang/String;Lcom/vk/api/sdk/m;JJLcom/vk/api/sdk/utils/log/Logger;Lkotlin/e;Lkotlin/e;ZLkotlin/e;ILkotlin/e;Ljava/lang/String;)V
+    invoke-direct/range {v1 .. v19}, Lcom/vk/api/sdk/VKApiConfig;-><init>(Landroid/content/Context;ILcom/vk/api/sdk/VKApiValidationHandler;Lkotlin/Lazy2;Ljava/lang/String;Lcom/vk/api/sdk/VKOkHttpProvider;JJLcom/vk/api/sdk/utils/log/Logger;Lkotlin/Lazy2;Lkotlin/Lazy2;ZLkotlin/Lazy2;ILkotlin/Lazy2;Ljava/lang/String;)V
 
     .line 12
     new-instance v0, Lcom/vk/api/internal/ApiManager;
@@ -193,22 +193,22 @@
     move-object/from16 v1, p4
 
     .line 13
-    invoke-virtual {v0, v1}, Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/f;)V
+    invoke-virtual {v0, v1}, Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/VKApiIllegalCredentialsListener;)V
 
     move-object/from16 v1, p5
 
     .line 14
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/internal/o;)V
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/internal/TokenConfirmationInfoProvider;)V
 
     move-object/from16 v1, p6
 
     .line 15
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/internal/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/internal/ApiCredentialsChangeListener;)V
 
     move-object/from16 v1, p7
 
     .line 16
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/internal/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/internal/ApiProfiler;)V
 
     .line 17
     sput-object v0, Lcom/vk/api/base/ApiConfig;->e:Lcom/vk/api/internal/ApiManager;
@@ -218,20 +218,20 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lcom/vk/api/base/ApiConfig$a;Lcom/vk/api/sdk/i;Lcom/vk/api/sdk/f;Lcom/vk/api/internal/o;Lcom/vk/api/internal/a;Lcom/vk/api/internal/b;Lcom/vk/api/sdk/utils/log/Logger;Lkotlin/e;)V
+.method public final a(Landroid/content/Context;Lcom/vk/api/base/ApiConfig$a;Lcom/vk/api/sdk/VKApiValidationHandler;Lcom/vk/api/sdk/VKApiIllegalCredentialsListener;Lcom/vk/api/internal/TokenConfirmationInfoProvider;Lcom/vk/api/internal/ApiCredentialsChangeListener;Lcom/vk/api/internal/ApiProfiler;Lcom/vk/api/sdk/utils/log/Logger;Lkotlin/Lazy2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Lcom/vk/api/base/ApiConfig$a;",
-            "Lcom/vk/api/sdk/i;",
-            "Lcom/vk/api/sdk/f;",
-            "Lcom/vk/api/internal/o;",
-            "Lcom/vk/api/internal/a;",
-            "Lcom/vk/api/internal/b;",
+            "Lcom/vk/api/sdk/VKApiValidationHandler;",
+            "Lcom/vk/api/sdk/VKApiIllegalCredentialsListener;",
+            "Lcom/vk/api/internal/TokenConfirmationInfoProvider;",
+            "Lcom/vk/api/internal/ApiCredentialsChangeListener;",
+            "Lcom/vk/api/internal/ApiProfiler;",
             "Lcom/vk/api/sdk/utils/log/Logger;",
-            "Lkotlin/e<",
+            "Lkotlin/Lazy2<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
@@ -241,7 +241,7 @@
     sput-object p2, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;
 
     .line 2
-    invoke-direct/range {p0 .. p9}, Lcom/vk/api/base/ApiConfig;->b(Landroid/content/Context;Lcom/vk/api/base/ApiConfig$a;Lcom/vk/api/sdk/i;Lcom/vk/api/sdk/f;Lcom/vk/api/internal/o;Lcom/vk/api/internal/a;Lcom/vk/api/internal/b;Lcom/vk/api/sdk/utils/log/Logger;Lkotlin/e;)V
+    invoke-direct/range {p0 .. p9}, Lcom/vk/api/base/ApiConfig;->b(Landroid/content/Context;Lcom/vk/api/base/ApiConfig$a;Lcom/vk/api/sdk/VKApiValidationHandler;Lcom/vk/api/sdk/VKApiIllegalCredentialsListener;Lcom/vk/api/internal/TokenConfirmationInfoProvider;Lcom/vk/api/internal/ApiCredentialsChangeListener;Lcom/vk/api/internal/ApiProfiler;Lcom/vk/api/sdk/utils/log/Logger;Lkotlin/Lazy2;)V
 
     .line 3
     sget-object p3, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;
@@ -250,7 +250,7 @@
 
     move-result p4
 
-    invoke-static {p3, p4}, Lb/h/h/a;->a(Lb/h/h/a$a;Z)V
+    invoke-static {p3, p4}, Lb/h/h/ModelConfig;->a(Lb/h/h/ModelConfig$a;Z)V
 
     .line 4
     sget-object p3, Lcom/vk/api/base/persistent/PersistentRequestManager;->e:Lcom/vk/api/base/persistent/PersistentRequestManager;

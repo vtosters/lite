@@ -3,12 +3,12 @@
 .source "StickerHeaderHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stickers/holders/StickerHeaderHolder;-><init>(Landroid/content/Context;Lcom/vk/stickers/g0/a;)V
+    value = Lcom/vk/stickers/holders/StickerHeaderHolder;-><init>(Landroid/content/Context;Lcom/vk/stickers/g0/StickerKeyboardListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $keyboardListener:Lcom/vk/stickers/g0/a;
+.field final synthetic $keyboardListener:Lcom/vk/stickers/g0/StickerKeyboardListener;
 
 .field final synthetic this$0:Lcom/vk/stickers/holders/StickerHeaderHolder;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stickers/holders/StickerHeaderHolder;Lcom/vk/stickers/g0/a;)V
+.method constructor <init>(Lcom/vk/stickers/holders/StickerHeaderHolder;Lcom/vk/stickers/g0/StickerKeyboardListener;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stickers/holders/StickerHeaderHolder$1;->this$0:Lcom/vk/stickers/holders/StickerHeaderHolder;
 
-    iput-object p2, p0, Lcom/vk/stickers/holders/StickerHeaderHolder$1;->$keyboardListener:Lcom/vk/stickers/g0/a;
+    iput-object p2, p0, Lcom/vk/stickers/holders/StickerHeaderHolder$1;->$keyboardListener:Lcom/vk/stickers/g0/StickerKeyboardListener;
 
     const/4 p1, 0x1
 
@@ -54,7 +54,7 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stickers/holders/StickerHeaderHolder$1;->$keyboardListener:Lcom/vk/stickers/g0/a;
+    iget-object v0, p0, Lcom/vk/stickers/holders/StickerHeaderHolder$1;->$keyboardListener:Lcom/vk/stickers/g0/StickerKeyboardListener;
 
     if-eqz v0, :cond_1
 
@@ -62,21 +62,21 @@
 
     iget-object p1, p0, Lcom/vk/stickers/holders/StickerHeaderHolder$1;->this$0:Lcom/vk/stickers/holders/StickerHeaderHolder;
 
-    invoke-static {p1}, Lcom/vk/stickers/holders/StickerHeaderHolder;->a(Lcom/vk/stickers/holders/StickerHeaderHolder;)Lcom/vk/stickers/e0/c;
+    invoke-static {p1}, Lcom/vk/stickers/holders/StickerHeaderHolder;->a(Lcom/vk/stickers/holders/StickerHeaderHolder;)Lcom/vk/stickers/e0/StickerHeaderRecyclerItem;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/c;->e()Lcom/vk/dto/stickers/StickerStockItem;
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerHeaderRecyclerItem;->e()Lcom/vk/dto/stickers/StickerStockItem;
 
     move-result-object v2
 
     iget-object p1, p0, Lcom/vk/stickers/holders/StickerHeaderHolder$1;->this$0:Lcom/vk/stickers/holders/StickerHeaderHolder;
 
-    invoke-static {p1}, Lcom/vk/stickers/holders/StickerHeaderHolder;->a(Lcom/vk/stickers/holders/StickerHeaderHolder;)Lcom/vk/stickers/e0/c;
+    invoke-static {p1}, Lcom/vk/stickers/holders/StickerHeaderHolder;->a(Lcom/vk/stickers/holders/StickerHeaderHolder;)Lcom/vk/stickers/e0/StickerHeaderRecyclerItem;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/c;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerHeaderRecyclerItem;->f()Ljava/lang/String;
 
     move-result-object p1
 
@@ -94,7 +94,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/stickers/g0/a$a;->a(Lcom/vk/stickers/g0/a;Ljava/lang/Integer;Lcom/vk/dto/stickers/StickerStockItem;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/stickers/g0/StickerKeyboardListener$a;->a(Lcom/vk/stickers/g0/StickerKeyboardListener;Ljava/lang/Integer;Lcom/vk/dto/stickers/StickerStockItem;Ljava/lang/String;ILjava/lang/Object;)V
 
     :cond_1
     return-void
@@ -108,7 +108,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stickers/holders/StickerHeaderHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -3,12 +3,12 @@
 .source "MusicSearchCatalogVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;ZLcom/vk/music/k/a;I)V
+    value = Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;ZLcom/vk/music/k/MusicSuggestionModel;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -70,7 +70,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh$searchQueryVh$4;->this$0:Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh;
 
-    invoke-static {v0}, Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh;->c(Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh;)Lcom/vk/catalog2/core/y/d/b;
+    invoke-static {v0}, Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh;->c(Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh;)Lcom/vk/catalog2/core/y/d/SearchResultsVh;
 
     move-result-object v0
 
@@ -80,7 +80,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/catalog2/core/y/d/b;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/catalog2/core/y/d/SearchResultsVh;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -94,7 +94,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/music/MusicSearchCatalogVh$searchQueryVh$4;->a(Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

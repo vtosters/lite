@@ -3,12 +3,12 @@
 .source "NotificationItem.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/dto/notifications/NotificationItem$Companion;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/c;)Lcom/vk/dto/notifications/NotificationItem;
+    value = Lcom/vk/dto/notifications/NotificationItem$Companion;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationsResponseData;)Lcom/vk/dto/notifications/NotificationItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lorg/json/JSONObject;",
         "Lcom/vk/dto/notifications/NotificationAction;",
         ">;"
@@ -28,14 +28,14 @@
 
 
 # instance fields
-.field final synthetic $responseData:Lcom/vk/dto/notifications/c;
+.field final synthetic $responseData:Lcom/vk/dto/notifications/NotificationsResponseData;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/notifications/c;)V
+.method constructor <init>(Lcom/vk/dto/notifications/NotificationsResponseData;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$actionParser$1;->$responseData:Lcom/vk/dto/notifications/c;
+    iput-object p1, p0, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$actionParser$1;->$responseData:Lcom/vk/dto/notifications/NotificationsResponseData;
 
     const/4 p1, 0x1
 
@@ -52,9 +52,9 @@
     .line 1
     sget-object v0, Lcom/vk/dto/notifications/NotificationAction;->g:Lcom/vk/dto/notifications/NotificationAction$b;
 
-    iget-object v1, p0, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$actionParser$1;->$responseData:Lcom/vk/dto/notifications/c;
+    iget-object v1, p0, Lcom/vk/dto/notifications/NotificationItem$Companion$parse$actionParser$1;->$responseData:Lcom/vk/dto/notifications/NotificationsResponseData;
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/dto/notifications/NotificationAction$b;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/c;)Lcom/vk/dto/notifications/NotificationAction;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/dto/notifications/NotificationAction$b;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationsResponseData;)Lcom/vk/dto/notifications/NotificationAction;
 
     move-result-object p1
 

@@ -3,12 +3,12 @@
 .source "UserHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/newsfeed/k0/b/b/i;Ljava/util/ArrayList;Landroid/view/View$OnClickListener;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Ljava/util/ArrayList;Landroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
         ">;"
@@ -58,7 +58,7 @@
     move-object/from16 v1, p1
 
     .line 1
-    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v2
 
@@ -81,7 +81,7 @@
 
     iget v5, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->t:I
 
-    invoke-static {v4, v5}, Lcom/vk/core/util/i1;->a(II)I
+    invoke-static {v4, v5}, Lcom/vk/core/util/TimeUtils;->a(II)I
 
     move-result v4
 
@@ -95,7 +95,7 @@
     move-result-object v5
 
     .line 5
-    new-instance v2, Lcom/vk/profile/adapter/items/w;
+    new-instance v2, Lcom/vk/profile/adapter/items/OverviewInfoItem;
 
     const v4, 0x7f0804de
 
@@ -117,7 +117,7 @@
 
     move-object v3, v2
 
-    invoke-direct/range {v3 .. v12}, Lcom/vk/profile/adapter/items/w;-><init>(ILjava/lang/CharSequence;Ljava/lang/Runnable;IIIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v12}, Lcom/vk/profile/adapter/items/OverviewInfoItem;-><init>(ILjava/lang/CharSequence;Ljava/lang/Runnable;IIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_2
 
@@ -158,7 +158,7 @@
     move-result-object v9
 
     .line 8
-    new-instance v2, Lcom/vk/profile/adapter/items/w;
+    new-instance v2, Lcom/vk/profile/adapter/items/OverviewInfoItem;
 
     const v8, 0x7f0804de
 
@@ -180,7 +180,7 @@
 
     move-object v7, v2
 
-    invoke-direct/range {v7 .. v16}, Lcom/vk/profile/adapter/items/w;-><init>(ILjava/lang/CharSequence;Ljava/lang/Runnable;IIIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v16}, Lcom/vk/profile/adapter/items/OverviewInfoItem;-><init>(ILjava/lang/CharSequence;Ljava/lang/Runnable;IIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_2
 

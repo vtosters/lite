@@ -65,22 +65,22 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    sget-object v1, Lcom/facebook/drawee/drawable/r$b;->k:Lcom/facebook/drawee/drawable/r$b;
+    sget-object v1, Lcom/facebook/drawee/drawable/ScalingUtils$b;->k:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/drawable/r$b;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
 
     :cond_0
     return-void
@@ -101,22 +101,22 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     sget-object v1, Lcom/vk/stickers/views/VKStickerImageView;->R:Landroid/graphics/ColorFilter;
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/a;->a(Landroid/graphics/ColorFilter;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Landroid/graphics/ColorFilter;)V
 
     goto :goto_0
 
@@ -126,22 +126,22 @@
     if-eq v0, v1, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/a;->a(Landroid/graphics/ColorFilter;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Landroid/graphics/ColorFilter;)V
 
     .line 6
     :cond_1

@@ -1,5 +1,5 @@
 .class final Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "CommunityInternalMenuItem.kt"
 
 
@@ -21,8 +21,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
-        "Lcom/vk/dto/profile/a$b;",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vk/dto/profile/CommunityInternalMenu$b;",
         ">;"
     }
 .end annotation
@@ -39,7 +39,7 @@
 
 .field private e:I
 
-.field private final f:Lcom/vk/profile/adapter/di/a;
+.field private final f:Lcom/vk/profile/adapter/di/CommunityDataScope;
 
 
 # direct methods
@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/high16 v0, 0x41400000    # 12.0f
 
@@ -64,15 +64,15 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/profile/adapter/di/a;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/profile/adapter/di/CommunityDataScope;)V
     .locals 3
 
     const v0, 0x7f0d0153
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->f:Lcom/vk/profile/adapter/di/a;
+    iput-object p2, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->f:Lcom/vk/profile/adapter/di/CommunityDataScope;
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -109,15 +109,15 @@
     .line 4
     iget-object p1, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->d:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/a;
+    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const-string p2, "coverView.hierarchy"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget p2, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->g:F
 
@@ -125,21 +125,21 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->d:Lcom/vk/imageloader/view/VKImageView;
 
-    new-instance p2, Lcom/vk/core/drawable/a;
+    new-instance p2, Lcom/vk/core/drawable/BorderDrawable;
 
     .line 6
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const-string v1, "getContext<Context>()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f060048
 
@@ -158,45 +158,45 @@
     move-result v2
 
     .line 9
-    invoke-direct {p2, v0, v1, v2}, Lcom/vk/core/drawable/a;-><init>(IFF)V
+    invoke-direct {p2, v0, v1, v2}, Lcom/vk/core/drawable/BorderDrawable;-><init>(IFF)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/imageloader/view/a;->setOverlayImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, p2}, Lcom/vk/imageloader/view/GenericVKImageView;->setOverlayImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 10
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$1;
 
     invoke-direct {v0, p0}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$1;-><init>(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 11
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;
 
     invoke-direct {p2, p0}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;-><init>(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
     .line 12
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p2
 
     .line 13
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p2
 .end method
@@ -212,13 +212,13 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;)Lcom/vk/dto/profile/a$b;
+.method public static final synthetic b(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;)Lcom/vk/dto/profile/CommunityInternalMenu$b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
-    check-cast p0, Lcom/vk/dto/profile/a$b;
+    check-cast p0, Lcom/vk/dto/profile/CommunityInternalMenu$b;
 
     return-object p0
 .end method
@@ -232,11 +232,11 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 2
-    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
-    check-cast v1, Lcom/vk/dto/profile/a$b;
+    check-cast v1, Lcom/vk/dto/profile/CommunityInternalMenu$b;
 
-    invoke-virtual {v1}, Lcom/vk/dto/profile/a$b;->b()I
+    invoke-virtual {v1}, Lcom/vk/dto/profile/CommunityInternalMenu$b;->b()I
 
     move-result v1
 
@@ -245,11 +245,11 @@
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     .line 3
-    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
-    check-cast v1, Lcom/vk/dto/profile/a$b;
+    check-cast v1, Lcom/vk/dto/profile/CommunityInternalMenu$b;
 
-    invoke-virtual {v1}, Lcom/vk/dto/profile/a$b;->e()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/dto/profile/CommunityInternalMenu$b;->e()Ljava/lang/String;
 
     move-result-object v1
 
@@ -269,11 +269,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/dto/profile/a$b;)V
+.method public a(Lcom/vk/dto/profile/CommunityInternalMenu$b;)V
     .locals 5
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/dto/profile/a$b;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/profile/CommunityInternalMenu$b;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -474,37 +474,37 @@
     iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->d:Lcom/vk/imageloader/view/VKImageView;
 
     .line 17
-    new-instance v1, Lcom/vk/core/drawable/g;
+    new-instance v1, Lcom/vk/core/drawable/LayerListDrawable;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
     const-string v4, "getContext()"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, v3}, Lcom/vk/core/drawable/g;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v3}, Lcom/vk/core/drawable/LayerListDrawable;-><init>(Landroid/content/Context;)V
 
     const v3, 0x7f04044d
 
     .line 18
     sget v4, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->g:F
 
-    invoke-virtual {v1, v3, v4}, Lcom/vk/core/drawable/g;->b(IF)Lcom/vk/core/drawable/g;
+    invoke-virtual {v1, v3, v4}, Lcom/vk/core/drawable/LayerListDrawable;->b(IF)Lcom/vk/core/drawable/LayerListDrawable;
 
     const v3, 0x7f040450
 
     .line 19
-    invoke-virtual {v1, v2, v3}, Lcom/vk/core/drawable/g;->a(II)Lcom/vk/core/drawable/g;
+    invoke-virtual {v1, v2, v3}, Lcom/vk/core/drawable/LayerListDrawable;->a(II)Lcom/vk/core/drawable/LayerListDrawable;
 
     .line 20
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 21
     iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->d:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/dto/profile/a$b;->a()Lcom/vk/dto/common/Image;
+    invoke-virtual {p1}, Lcom/vk/dto/profile/CommunityInternalMenu$b;->a()Lcom/vk/dto/common/Image;
 
     move-result-object v1
 
@@ -537,7 +537,7 @@
     .line 22
     iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->c:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/dto/profile/a$b;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/profile/CommunityInternalMenu$b;->d()Ljava/lang/String;
 
     move-result-object p1
 
@@ -569,18 +569,18 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/dto/profile/a$b;
+    check-cast p1, Lcom/vk/dto/profile/CommunityInternalMenu$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->a(Lcom/vk/dto/profile/a$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->a(Lcom/vk/dto/profile/CommunityInternalMenu$b;)V
 
     return-void
 .end method
 
-.method public final g0()Lcom/vk/profile/adapter/di/a;
+.method public final g0()Lcom/vk/profile/adapter/di/CommunityDataScope;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->f:Lcom/vk/profile/adapter/di/a;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->f:Lcom/vk/profile/adapter/di/CommunityDataScope;
 
     return-object v0
 .end method

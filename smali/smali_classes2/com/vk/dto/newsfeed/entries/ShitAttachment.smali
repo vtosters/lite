@@ -107,7 +107,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/ShitAttachment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->Z:Lcom/vk/dto/newsfeed/entries/ShitAttachment$b;
 
@@ -284,7 +284,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;Ljava/lang/String;Lcom/vk/statistic/StatisticUrl;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/vk/dto/common/Image;Lcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vtosters/lite/attachments/VideoAttachment;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FLjava/lang/String;Ljava/lang/String;Lcom/vk/statistic/StatisticUrl;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/vk/dto/common/Image;Lcom/vtosters/lite/attachments/PhotoAttachment;Lcom/vtosters/lite/attachments/VideoAttachment;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;Lcom/vk/statistic/Statistic$a;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 31
 
     const/high16 v0, 0x10000000
@@ -632,7 +632,7 @@
     check-cast v2, Lcom/vk/statistic/StatisticUrl;
 
     .line 2
-    invoke-static {v2}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
+    invoke-static {v2}, Lcom/vtosters/lite/data/Analytics;->a(Lcom/vk/statistic/StatisticUrl;)V
 
     goto :goto_0
 
@@ -683,7 +683,7 @@
     check-cast v3, Lcom/vk/statistic/StatisticUrl;
 
     .line 6
-    invoke-static {v3}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/StatisticUrl;)V
+    invoke-static {v3}, Lcom/vtosters/lite/data/Analytics;->a(Lcom/vk/statistic/StatisticUrl;)V
 
     goto :goto_1
 
@@ -730,7 +730,7 @@
 
     const-string v0, "statistics.getStatisticByType(type)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -957,7 +957,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/newsfeed/entries/ShitAttachment;->h:Ljava/lang/String;
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

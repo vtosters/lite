@@ -48,11 +48,11 @@
 
     iget-object v0, v0, Lcom/vk/search/holder/StoryElongatedViewHolder$1;->this$0:Lcom/vk/search/holder/StoryElongatedViewHolder;
 
-    invoke-static {v0}, Lcom/vk/search/holder/StoryElongatedViewHolder;->d(Lcom/vk/search/holder/StoryElongatedViewHolder;)Lkotlin/jvm/b/b;
+    invoke-static {v0}, Lcom/vk/search/holder/StoryElongatedViewHolder;->d(Lcom/vk/search/holder/StoryElongatedViewHolder;)Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -71,12 +71,12 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -85,17 +85,17 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/holder/StoryElongatedViewHolder$1$1$getAnimationTargetView$1;-><init>(Lcom/vk/search/holder/StoryElongatedViewHolder$1$1;)V
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, Lkotlin/sequences/m;->g(Lkotlin/sequences/j;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/sequences/m;->g(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 5
-    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -114,10 +114,10 @@
 
     move-object v3, v1
 
-    check-cast v3, Lcom/vk/stories/holders/k;
+    check-cast v3, Lcom/vk/stories/holders/StoryPreview;
 
     .line 6
-    invoke-interface {v3}, Lcom/vk/stories/holders/k;->getStory()Lcom/vk/dto/stories/model/StoriesContainer;
+    invoke-interface {v3}, Lcom/vk/stories/holders/StoryPreview;->getStory()Lcom/vk/dto/stories/model/StoriesContainer;
 
     move-result-object v3
 
@@ -133,7 +133,7 @@
     move-object v3, v2
 
     :goto_0
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -146,12 +146,12 @@
 
     .line 7
     :goto_1
-    check-cast v1, Lcom/vk/stories/holders/k;
+    check-cast v1, Lcom/vk/stories/holders/StoryPreview;
 
     if-eqz v1, :cond_3
 
     .line 8
-    invoke-interface {v1}, Lcom/vk/stories/holders/k;->getStoryImageView()Landroid/view/View;
+    invoke-interface {v1}, Lcom/vk/stories/holders/StoryPreview;->getStoryImageView()Landroid/view/View;
 
     move-result-object v2
 

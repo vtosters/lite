@@ -38,17 +38,17 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/archive/StoryArchiveFragment$f;->a:Lcom/vk/stories/archive/StoryArchiveFragment;
 
-    invoke-static {v0}, Lcom/vk/stories/archive/StoryArchiveFragment;->a(Lcom/vk/stories/archive/StoryArchiveFragment;)Lcom/vk/stories/archive/list/a;
+    invoke-static {v0}, Lcom/vk/stories/archive/StoryArchiveFragment;->a(Lcom/vk/stories/archive/StoryArchiveFragment;)Lcom/vk/stories/archive/list/StoryArchiveAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/common/i/b;
+    check-cast p1, Lcom/vk/common/i/RecyclerItem;
 
     goto :goto_0
 
@@ -56,7 +56,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    instance-of p1, p1, Lcom/vk/stories/archive/e/b;
+    instance-of p1, p1, Lcom/vk/stories/archive/e/StoryArchiveItem;
 
     if-eqz p1, :cond_1
 

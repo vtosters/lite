@@ -3,7 +3,7 @@
 .source "ReefNetworkInfoTracker.kt"
 
 # interfaces
-.implements Lcom/vk/reef/c;
+.implements Lcom/vk/reef/ReefStateSource;
 
 
 # annotations
@@ -26,23 +26,23 @@
 
 
 # instance fields
-.field private a:Lcom/vk/reef/dto/b;
+.field private a:Lcom/vk/reef/dto/ReefState3;
 
 .field private volatile b:Landroid/telephony/SignalStrength;
 
-.field private final c:Lcom/vk/reef/d;
+.field private final c:Lcom/vk/reef/SendRequestController;
 
 .field private final d:Landroid/net/ConnectivityManager;
 
 .field private final e:Landroid/telephony/TelephonyManager;
 
-.field private final f:Lcom/vk/reef/i/c;
+.field private final f:Lcom/vk/reef/i/ReefNetworkCellInfoObserver;
 
-.field private final g:Lcom/vk/reef/utils/d;
+.field private final g:Lcom/vk/reef/utils/ReefNetworkUtil;
 
-.field private final h:Lcom/vk/reef/utils/e;
+.field private final h:Lcom/vk/reef/utils/ReefPermissionsUtil;
 
-.field private final i:Lcom/vk/reef/utils/c;
+.field private final i:Lcom/vk/reef/utils/ReefLogger;
 
 
 # direct methods
@@ -53,12 +53,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/reef/trackers/ReefNetworkInfoTracker$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/reef/trackers/ReefNetworkInfoTracker$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/reef/d;Landroid/net/ConnectivityManager;Landroid/telephony/TelephonyManager;Lcom/vk/reef/i/c;Lcom/vk/reef/utils/d;Lcom/vk/reef/utils/e;Lcom/vk/reef/utils/c;)V
+.method public constructor <init>(Lcom/vk/reef/SendRequestController;Landroid/net/ConnectivityManager;Landroid/telephony/TelephonyManager;Lcom/vk/reef/i/ReefNetworkCellInfoObserver;Lcom/vk/reef/utils/ReefNetworkUtil;Lcom/vk/reef/utils/ReefPermissionsUtil;Lcom/vk/reef/utils/ReefLogger;)V
     .locals 19
 
     move-object/from16 v0, p0
@@ -68,7 +68,7 @@
 
     move-object/from16 v1, p1
 
-    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->c:Lcom/vk/reef/d;
+    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->c:Lcom/vk/reef/SendRequestController;
 
     move-object/from16 v1, p2
 
@@ -80,22 +80,22 @@
 
     move-object/from16 v1, p4
 
-    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->f:Lcom/vk/reef/i/c;
+    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->f:Lcom/vk/reef/i/ReefNetworkCellInfoObserver;
 
     move-object/from16 v1, p5
 
-    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/d;
+    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/ReefNetworkUtil;
 
     move-object/from16 v1, p6
 
-    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->h:Lcom/vk/reef/utils/e;
+    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->h:Lcom/vk/reef/utils/ReefPermissionsUtil;
 
     move-object/from16 v1, p7
 
-    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->i:Lcom/vk/reef/utils/c;
+    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->i:Lcom/vk/reef/utils/ReefLogger;
 
     .line 2
-    new-instance v15, Lcom/vk/reef/dto/b;
+    new-instance v15, Lcom/vk/reef/dto/ReefState3;
 
     .line 3
     sget-object v2, Lcom/vk/reef/dto/network/ReefNetworkType;->UNKNOWN:Lcom/vk/reef/dto/network/ReefNetworkType;
@@ -151,11 +151,11 @@
     move-object/from16 v16, v17
 
     .line 10
-    invoke-direct/range {v1 .. v16}, Lcom/vk/reef/dto/b;-><init>(Lcom/vk/reef/dto/network/ReefNetworkType;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;ZLcom/vk/reef/dto/network/ReefMobileNetworkDataState;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/vk/reef/dto/network/g/a;)V
+    invoke-direct/range {v1 .. v16}, Lcom/vk/reef/dto/ReefState3;-><init>(Lcom/vk/reef/dto/network/ReefNetworkType;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;ZLcom/vk/reef/dto/network/ReefMobileNetworkDataState;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/vk/reef/dto/network/g/ReefGsmSignalStrengthInfo;)V
 
     move-object/from16 v1, v18
 
-    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->a:Lcom/vk/reef/dto/b;
+    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->a:Lcom/vk/reef/dto/ReefState3;
 
     return-void
 .end method
@@ -172,7 +172,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/reef/trackers/ReefNetworkInfoTracker$subscribe$receiver$1;-><init>(Lcom/vk/reef/trackers/ReefNetworkInfoTracker;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/reef/utils/ReefNetworkReceiver;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, v1}, Lcom/vk/reef/utils/ReefNetworkReceiver;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     .line 28
     sget-object v1, Lcom/vk/reef/utils/ReefNetworkReceiver;->b:Lcom/vk/reef/utils/ReefNetworkReceiver$a;
@@ -190,9 +190,9 @@
 
     .line 30
     :try_start_0
-    iget-object v0, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->h:Lcom/vk/reef/utils/e;
+    iget-object v0, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->h:Lcom/vk/reef/utils/ReefPermissionsUtil;
 
-    invoke-virtual {v0}, Lcom/vk/reef/utils/e;->a()Z
+    invoke-virtual {v0}, Lcom/vk/reef/utils/ReefPermissionsUtil;->a()Z
 
     move-result v0
 
@@ -219,7 +219,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/reef/dto/f;)V
+.method public a(Lcom/vk/reef/dto/ReefSnapshot;)V
     .locals 21
 
     move-object/from16 v0, p0
@@ -280,9 +280,9 @@
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
     .line 6
-    iget-object v5, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->f:Lcom/vk/reef/i/c;
+    iget-object v5, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->f:Lcom/vk/reef/i/ReefNetworkCellInfoObserver;
 
-    invoke-virtual {v5}, Lcom/vk/reef/i/c;->a()Ljava/util/List;
+    invoke-virtual {v5}, Lcom/vk/reef/i/ReefNetworkCellInfoObserver;->a()Ljava/util/List;
 
     move-result-object v5
 
@@ -302,10 +302,10 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/vk/reef/dto/network/a;
+    check-cast v6, Lcom/vk/reef/dto/network/ReefCellInfo;
 
     .line 8
-    invoke-virtual {v6}, Lcom/vk/reef/dto/network/a;->m()Z
+    invoke-virtual {v6}, Lcom/vk/reef/dto/network/ReefCellInfo;->m()Z
 
     move-result v7
 
@@ -322,12 +322,12 @@
 
     .line 9
     :cond_4
-    iget-object v5, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->a:Lcom/vk/reef/dto/b;
+    iget-object v5, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->a:Lcom/vk/reef/dto/ReefState3;
 
     .line 10
-    iget-object v6, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/d;
+    iget-object v6, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/ReefNetworkUtil;
 
-    invoke-virtual {v6, v4, v1}, Lcom/vk/reef/utils/d;->a(II)Lcom/vk/reef/dto/network/ReefNetworkType;
+    invoke-virtual {v6, v4, v1}, Lcom/vk/reef/utils/ReefNetworkUtil;->a(II)Lcom/vk/reef/dto/network/ReefNetworkType;
 
     move-result-object v6
 
@@ -415,7 +415,7 @@
 
     .line 17
     :goto_6
-    iget-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/d;
+    iget-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/ReefNetworkUtil;
 
     iget-object v3, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->e:Landroid/telephony/TelephonyManager;
 
@@ -435,30 +435,30 @@
     move-object v3, v2
 
     :goto_7
-    invoke-virtual {v1, v3}, Lcom/vk/reef/utils/d;->a(Ljava/lang/Integer;)Lcom/vk/reef/dto/network/ReefMobileNetworkDataState;
+    invoke-virtual {v1, v3}, Lcom/vk/reef/utils/ReefNetworkUtil;->a(Ljava/lang/Integer;)Lcom/vk/reef/dto/network/ReefMobileNetworkDataState;
 
     move-result-object v13
 
     .line 18
-    iget-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/d;
+    iget-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/ReefNetworkUtil;
 
-    invoke-virtual {v1}, Lcom/vk/reef/utils/d;->a()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/reef/utils/ReefNetworkUtil;->a()Ljava/util/List;
 
     move-result-object v1
 
     .line 19
-    iget-object v3, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/d;
+    iget-object v3, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/ReefNetworkUtil;
 
     iget-object v4, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->e:Landroid/telephony/TelephonyManager;
 
-    invoke-virtual {v3, v4}, Lcom/vk/reef/utils/d;->a(Landroid/telephony/TelephonyManager;)Ljava/util/List;
+    invoke-virtual {v3, v4}, Lcom/vk/reef/utils/ReefNetworkUtil;->a(Landroid/telephony/TelephonyManager;)Ljava/util/List;
 
     move-result-object v19
 
     .line 20
-    iget-object v3, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/d;
+    iget-object v3, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/ReefNetworkUtil;
 
-    invoke-virtual {v3}, Lcom/vk/reef/utils/d;->b()J
+    invoke-virtual {v3}, Lcom/vk/reef/utils/ReefNetworkUtil;->b()J
 
     move-result-wide v3
 
@@ -467,9 +467,9 @@
     move-result-object v3
 
     .line 21
-    iget-object v4, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/d;
+    iget-object v4, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/ReefNetworkUtil;
 
-    invoke-virtual {v4}, Lcom/vk/reef/utils/d;->c()J
+    invoke-virtual {v4}, Lcom/vk/reef/utils/ReefNetworkUtil;->c()J
 
     move-result-wide v16
 
@@ -482,9 +482,9 @@
 
     if-eqz v4, :cond_a
 
-    iget-object v2, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/d;
+    iget-object v2, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->g:Lcom/vk/reef/utils/ReefNetworkUtil;
 
-    invoke-virtual {v2, v4}, Lcom/vk/reef/utils/d;->a(Landroid/telephony/SignalStrength;)Lcom/vk/reef/dto/network/g/a;
+    invoke-virtual {v2, v4}, Lcom/vk/reef/utils/ReefNetworkUtil;->a(Landroid/telephony/SignalStrength;)Lcom/vk/reef/dto/network/g/ReefGsmSignalStrengthInfo;
 
     move-result-object v2
 
@@ -504,14 +504,14 @@
     move-object/from16 v18, v2
 
     .line 23
-    invoke-virtual/range {v5 .. v20}, Lcom/vk/reef/dto/b;->a(Lcom/vk/reef/dto/network/ReefNetworkType;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;ZLcom/vk/reef/dto/network/ReefMobileNetworkDataState;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/vk/reef/dto/network/g/a;)Lcom/vk/reef/dto/b;
+    invoke-virtual/range {v5 .. v20}, Lcom/vk/reef/dto/ReefState3;->a(Lcom/vk/reef/dto/network/ReefNetworkType;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;ZLcom/vk/reef/dto/network/ReefMobileNetworkDataState;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/vk/reef/dto/network/g/ReefGsmSignalStrengthInfo;)Lcom/vk/reef/dto/ReefState3;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->a:Lcom/vk/reef/dto/b;
+    iput-object v1, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->a:Lcom/vk/reef/dto/ReefState3;
 
     .line 24
-    iget-object v2, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->a:Lcom/vk/reef/dto/b;
+    iget-object v2, v0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->a:Lcom/vk/reef/dto/ReefState3;
 
     const/4 v3, 0x0
 
@@ -547,13 +547,13 @@
 
     const/16 v19, 0x0
 
-    invoke-static/range {v2 .. v19}, Lcom/vk/reef/dto/b;->a(Lcom/vk/reef/dto/b;Lcom/vk/reef/dto/network/ReefNetworkType;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;ZLcom/vk/reef/dto/network/ReefMobileNetworkDataState;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/vk/reef/dto/network/g/a;ILjava/lang/Object;)Lcom/vk/reef/dto/b;
+    invoke-static/range {v2 .. v19}, Lcom/vk/reef/dto/ReefState3;->a(Lcom/vk/reef/dto/ReefState3;Lcom/vk/reef/dto/network/ReefNetworkType;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;ZLcom/vk/reef/dto/network/ReefMobileNetworkDataState;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/vk/reef/dto/network/g/ReefGsmSignalStrengthInfo;ILjava/lang/Object;)Lcom/vk/reef/dto/ReefState3;
 
     move-result-object v1
 
     move-object/from16 v2, p1
 
-    invoke-virtual {v2, v1}, Lcom/vk/reef/dto/f;->a(Lcom/vk/reef/dto/g;)V
+    invoke-virtual {v2, v1}, Lcom/vk/reef/dto/ReefSnapshot;->a(Lcom/vk/reef/dto/ReefState;)V
 
     return-void
 .end method
@@ -562,7 +562,7 @@
     .locals 3
 
     .line 25
-    iget-object v0, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->i:Lcom/vk/reef/utils/c;
+    iget-object v0, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->i:Lcom/vk/reef/utils/ReefLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -582,14 +582,14 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/vk/reef/utils/c;->log(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/reef/utils/ReefLogger;->log(Ljava/lang/String;)V
 
     .line 26
-    iget-object p1, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->c:Lcom/vk/reef/d;
+    iget-object p1, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->c:Lcom/vk/reef/SendRequestController;
 
     sget-object v0, Lcom/vk/reef/dto/ReefRequestReason;->REACHABILITY_CHANGED:Lcom/vk/reef/dto/ReefRequestReason;
 
-    invoke-interface {p1, p0, v0}, Lcom/vk/reef/d;->a(Ljava/lang/Object;Lcom/vk/reef/dto/ReefRequestReason;)V
+    invoke-interface {p1, p0, v0}, Lcom/vk/reef/SendRequestController;->a(Ljava/lang/Object;Lcom/vk/reef/dto/ReefRequestReason;)V
 
     return-void
 .end method
@@ -607,23 +607,23 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->i:Lcom/vk/reef/utils/c;
+    iget-object v0, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->i:Lcom/vk/reef/utils/ReefLogger;
 
     const-string v1, "ReefNetworkInfoTracker.onCellInfoChanged()"
 
-    invoke-interface {v0, v1}, Lcom/vk/reef/utils/c;->log(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/reef/utils/ReefLogger;->log(Ljava/lang/String;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->f:Lcom/vk/reef/i/c;
+    iget-object v0, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->f:Lcom/vk/reef/i/ReefNetworkCellInfoObserver;
 
-    invoke-virtual {v0, p1}, Lcom/vk/reef/i/c;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Lcom/vk/reef/i/ReefNetworkCellInfoObserver;->a(Ljava/util/List;)Ljava/util/List;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->c:Lcom/vk/reef/d;
+    iget-object p1, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->c:Lcom/vk/reef/SendRequestController;
 
     sget-object v0, Lcom/vk/reef/dto/ReefRequestReason;->NETWORK_CHANGED:Lcom/vk/reef/dto/ReefRequestReason;
 
-    invoke-interface {p1, p0, v0}, Lcom/vk/reef/d;->a(Ljava/lang/Object;Lcom/vk/reef/dto/ReefRequestReason;)V
+    invoke-interface {p1, p0, v0}, Lcom/vk/reef/SendRequestController;->a(Ljava/lang/Object;Lcom/vk/reef/dto/ReefRequestReason;)V
 
     return-void
 .end method
@@ -632,18 +632,18 @@
     .locals 1
 
     .line 1
-    iget-object p1, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->i:Lcom/vk/reef/utils/c;
+    iget-object p1, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->i:Lcom/vk/reef/utils/ReefLogger;
 
     const-string v0, "ReefNetworkInfoTracker.onCellLocationChanged()"
 
-    invoke-interface {p1, v0}, Lcom/vk/reef/utils/c;->log(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/reef/utils/ReefLogger;->log(Ljava/lang/String;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->c:Lcom/vk/reef/d;
+    iget-object p1, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->c:Lcom/vk/reef/SendRequestController;
 
     sget-object v0, Lcom/vk/reef/dto/ReefRequestReason;->NETWORK_CHANGED:Lcom/vk/reef/dto/ReefRequestReason;
 
-    invoke-interface {p1, p0, v0}, Lcom/vk/reef/d;->a(Ljava/lang/Object;Lcom/vk/reef/dto/ReefRequestReason;)V
+    invoke-interface {p1, p0, v0}, Lcom/vk/reef/SendRequestController;->a(Ljava/lang/Object;Lcom/vk/reef/dto/ReefRequestReason;)V
 
     return-void
 .end method
@@ -652,18 +652,18 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->i:Lcom/vk/reef/utils/c;
+    iget-object p1, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->i:Lcom/vk/reef/utils/ReefLogger;
 
     const-string p2, "ReefNetworkInfoTracker.onDataConnectionStateChanged()"
 
-    invoke-interface {p1, p2}, Lcom/vk/reef/utils/c;->log(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcom/vk/reef/utils/ReefLogger;->log(Ljava/lang/String;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->c:Lcom/vk/reef/d;
+    iget-object p1, p0, Lcom/vk/reef/trackers/ReefNetworkInfoTracker;->c:Lcom/vk/reef/SendRequestController;
 
     sget-object p2, Lcom/vk/reef/dto/ReefRequestReason;->NETWORK_CHANGED:Lcom/vk/reef/dto/ReefRequestReason;
 
-    invoke-interface {p1, p0, p2}, Lcom/vk/reef/d;->a(Ljava/lang/Object;Lcom/vk/reef/dto/ReefRequestReason;)V
+    invoke-interface {p1, p0, p2}, Lcom/vk/reef/SendRequestController;->a(Ljava/lang/Object;Lcom/vk/reef/dto/ReefRequestReason;)V
 
     return-void
 .end method

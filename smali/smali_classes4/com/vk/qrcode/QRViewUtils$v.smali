@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$d;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/l;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

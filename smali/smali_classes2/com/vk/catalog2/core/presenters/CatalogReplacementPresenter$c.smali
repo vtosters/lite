@@ -3,12 +3,12 @@
 .source "CatalogReplacementPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/disposables/b;
+    value = Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/disposables/Disposable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/catalog2/core/api/dto/d<",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
         "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
         ">;>;"
     }
@@ -51,23 +51,23 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/api/dto/d;)V
+.method public final a(Lcom/vk/catalog2/core/api/dto/CatalogResponse;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/catalog2/core/api/dto/d<",
+            "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/d;->b()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/CatalogResponse;->b()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/d;->a()Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/CatalogResponse;->a()Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;
 
     move-result-object p1
 
@@ -93,9 +93,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/catalog2/core/api/dto/d;
+    check-cast p1, Lcom/vk/catalog2/core/api/dto/CatalogResponse;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$c;->a(Lcom/vk/catalog2/core/api/dto/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$c;->a(Lcom/vk/catalog2/core/api/dto/CatalogResponse;)V
 
     return-void
 .end method

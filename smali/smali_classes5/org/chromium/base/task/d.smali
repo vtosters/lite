@@ -36,7 +36,7 @@
 .method public final call()Ljava/lang/Object;
     .locals 1
 
-    invoke-static {}, Lorg/chromium/base/task/k;->b()Lorg/chromium/base/task/i;
+    invoke-static {}, Lorg/chromium/base/task/DefaultTaskExecutor;->b()Lorg/chromium/base/task/ChoreographerTaskRunner;
 
     move-result-object v0
 

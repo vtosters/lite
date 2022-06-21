@@ -4,10 +4,10 @@
 
 
 # static fields
-.field private static final a:Lkotlin/jvm/b/d;
+.field private static final a:Lkotlin/jvm/b/Functions4;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/d<",
+            "Lkotlin/jvm/b/Functions4<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
             "Lcom/vk/attachpicker/stickers/ISticker;",
@@ -17,10 +17,10 @@
     .end annotation
 .end field
 
-.field private static final b:Lkotlin/jvm/b/d;
+.field private static final b:Lkotlin/jvm/b/Functions4;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/d<",
+            "Lkotlin/jvm/b/Functions4<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
             "Lcom/vk/attachpicker/stickers/ISticker;",
@@ -38,22 +38,22 @@
     .line 1
     sget-object v0, Lcom/vk/stories/clickable/StickersArrangersKt$BOTTOM$1;->a:Lcom/vk/stories/clickable/StickersArrangersKt$BOTTOM$1;
 
-    sput-object v0, Lcom/vk/stories/clickable/StickersArrangersKt;->a:Lkotlin/jvm/b/d;
+    sput-object v0, Lcom/vk/stories/clickable/StickersArrangersKt;->a:Lkotlin/jvm/b/Functions4;
 
     .line 2
     sget-object v0, Lcom/vk/stories/clickable/StickersArrangersKt$CENTER$1;->a:Lcom/vk/stories/clickable/StickersArrangersKt$CENTER$1;
 
-    sput-object v0, Lcom/vk/stories/clickable/StickersArrangersKt;->b:Lkotlin/jvm/b/d;
+    sput-object v0, Lcom/vk/stories/clickable/StickersArrangersKt;->b:Lkotlin/jvm/b/Functions4;
 
     return-void
 .end method
 
-.method public static final a()Lkotlin/jvm/b/d;
+.method public static final a()Lkotlin/jvm/b/Functions4;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/d<",
+            "Lkotlin/jvm/b/Functions4<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
             "Lcom/vk/attachpicker/stickers/ISticker;",
@@ -63,17 +63,17 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/stories/clickable/StickersArrangersKt;->a:Lkotlin/jvm/b/d;
+    sget-object v0, Lcom/vk/stories/clickable/StickersArrangersKt;->a:Lkotlin/jvm/b/Functions4;
 
     return-object v0
 .end method
 
-.method public static final b()Lkotlin/jvm/b/d;
+.method public static final b()Lkotlin/jvm/b/Functions4;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/d<",
+            "Lkotlin/jvm/b/Functions4<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
             "Lcom/vk/attachpicker/stickers/ISticker;",
@@ -83,7 +83,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/stories/clickable/StickersArrangersKt;->b:Lkotlin/jvm/b/d;
+    sget-object v0, Lcom/vk/stories/clickable/StickersArrangersKt;->b:Lkotlin/jvm/b/Functions4;
 
     return-object v0
 .end method

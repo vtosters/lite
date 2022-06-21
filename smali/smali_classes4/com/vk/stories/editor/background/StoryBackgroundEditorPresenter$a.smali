@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stories/editor/background/g/c;Ljava/lang/String;)Lcom/vk/dto/stories/entities/stat/BackgroundInfo;
+.method public final a(Lcom/vk/stories/editor/background/g/StoryBackgroundItem;Ljava/lang/String;)Lcom/vk/dto/stories/entities/stat/BackgroundInfo;
     .locals 2
 
     if-eqz p1, :cond_1
@@ -45,7 +45,7 @@
 
     const-string v1, "emojies"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -59,11 +59,11 @@
     const-string v1, "gradient"
 
     :goto_0
-    invoke-virtual {p1}, Lcom/vk/stories/editor/background/g/c;->c()Lcom/vk/dto/stories/entities/a/a;
+    invoke-virtual {p1}, Lcom/vk/stories/editor/background/g/StoryBackgroundItem;->c()Lcom/vk/dto/stories/entities/a/StoryBackground;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/dto/stories/entities/a/a;->b()I
+    invoke-virtual {p1}, Lcom/vk/dto/stories/entities/a/StoryBackground;->b()I
 
     move-result p1
 

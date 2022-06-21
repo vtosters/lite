@@ -3,7 +3,7 @@
 .source "BaseProfileSectionsFactory.kt"
 
 # interfaces
-.implements Lcom/vk/music/view/v/d$c;
+.implements Lcom/vk/music/view/v/ItemViewHolder$c;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/music/view/v/d$c<",
+        "Lcom/vk/music/view/v/ItemViewHolder$c<",
         "Lcom/vk/dto/music/Playlist;",
         ">;"
     }
@@ -58,10 +58,10 @@
 
     move-result-object p1
 
-    invoke-virtual {p3, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p3, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 3
-    new-instance p1, Lcom/vk/profile/e/b;
+    new-instance p1, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     iget-object p3, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$a;->a:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
@@ -69,7 +69,7 @@
 
     iget p3, p3, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {p1, p3}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {p1, p3}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     .line 4
     invoke-static {}, Lcom/vk/profile/data/ProfileCountersKt;->d()Lcom/vk/profile/data/CountersWrapper;
@@ -80,16 +80,16 @@
 
     move-result p3
 
-    invoke-static {p3}, Lcom/vk/profile/e/c;->a(I)Ljava/lang/String;
+    invoke-static {p3}, Lcom/vk/profile/e/CommunityScreenTracker;->a(I)Ljava/lang/String;
 
     move-result-object p3
 
-    invoke-virtual {p1, p3}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, p3}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string p3, "element"
 
     .line 5
-    invoke-virtual {p1, p3}, Lcom/vk/profile/e/b;->d(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, p3}, Lcom/vk/profile/e/CommunityScreenTracker1;->d(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 6
     iget p2, p2, Lcom/vk/dto/music/Playlist;->a:I
@@ -98,10 +98,10 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/profile/e/b;->b(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, p2}, Lcom/vk/profile/e/CommunityScreenTracker1;->b(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     return-void
 .end method

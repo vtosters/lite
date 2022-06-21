@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->a(Lcom/vk/stories/clickable/stickers/b;)V
+    value = Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->a(Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,11 +40,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$a;->a:Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;
 
-    invoke-static {v0}, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->b(Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;)Lcom/vk/stories/editor/base/e0;
+    invoke-static {v0}, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->b(Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;)Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stories/editor/base/e0;->h()V
+    invoke-virtual {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorViewAnimationsDelegate;->h()V
 
     return-void
 .end method

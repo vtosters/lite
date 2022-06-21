@@ -3,7 +3,7 @@
 .source "AppGroupedStoryView.kt"
 
 # interfaces
-.implements Lcom/vk/lists/y;
+.implements Lcom/vk/lists/PreloadCallback;
 
 
 # annotations
@@ -40,13 +40,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/AppGroupedStoryView$e;->a:Lcom/vk/stories/view/AppGroupedStoryView;
 
-    invoke-static {v0}, Lcom/vk/stories/view/AppGroupedStoryView;->b(Lcom/vk/stories/view/AppGroupedStoryView;)Lcom/vk/stories/view/z1/a;
+    invoke-static {v0}, Lcom/vk/stories/view/AppGroupedStoryView;->b(Lcom/vk/stories/view/AppGroupedStoryView;)Lcom/vk/stories/view/z1/GroupedStoriesAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -77,7 +77,7 @@
 
     const-string v0, "story.getImageBig(Screen\u2026?: return@PreloadCallback"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     invoke-static {p1}, Lcom/vk/imageloader/VKImageLoader;->f(Ljava/lang/String;)V

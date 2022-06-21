@@ -3,9 +3,9 @@
 .source "DocumentAttachment.java"
 
 # interfaces
-.implements Lcom/vk/dto/attachments/b;
+.implements Lcom/vk/dto/attachments/ImageAttachment;
 .implements Lcom/vk/dto/common/Image$ConvertToImage;
-.implements Lcom/vk/newsfeed/i0/b;
+.implements Lcom/vk/newsfeed/i0/PostingDraftJsonItem;
 
 
 # static fields
@@ -45,7 +45,7 @@
     .end annotation
 .end field
 
-.field private K:Lcom/vk/libvideo/autoplay/a;
+.field private K:Lcom/vk/libvideo/autoplay/AutoPlay;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -324,7 +324,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/attachments/DocumentAttachment;->K:Lcom/vk/libvideo/autoplay/a;
+    iput-object p1, p0, Lcom/vtosters/lite/attachments/DocumentAttachment;->K:Lcom/vk/libvideo/autoplay/AutoPlay;
 
     goto :goto_0
 
@@ -332,7 +332,7 @@
     const/4 p1, 0x0
 
     .line 17
-    iput-object p1, p0, Lcom/vtosters/lite/attachments/DocumentAttachment;->K:Lcom/vk/libvideo/autoplay/a;
+    iput-object p1, p0, Lcom/vtosters/lite/attachments/DocumentAttachment;->K:Lcom/vk/libvideo/autoplay/AutoPlay;
 
     :goto_0
     return-void
@@ -615,9 +615,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/i0/b;->w:Lcom/vk/newsfeed/i0/b$a;
+    sget-object v0, Lcom/vk/newsfeed/i0/PostingDraftJsonItem;->w:Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;
 
-    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/b$a;->a(Lcom/vk/newsfeed/i0/b;)Lorg/json/JSONObject;
+    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;->a(Lcom/vk/newsfeed/i0/PostingDraftJsonItem;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -922,7 +922,7 @@
     .locals 5
 
     .line 1
-    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->h()Lcom/vk/mediastore/a/a;
+    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->h()Lcom/vk/mediastore/a/GifCache;
 
     move-result-object v0
 
@@ -934,7 +934,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/mediastore/a/a;->a(IILjava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/mediastore/a/GifCache;->a(IILjava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 
@@ -945,7 +945,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f120313
 
@@ -966,12 +966,12 @@
 
     if-eqz v0, :cond_0
 
-    sget v0, Lcom/vk/dto/attachments/a;->g:I
+    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->g:I
 
     goto :goto_0
 
     :cond_0
-    sget v0, Lcom/vk/dto/attachments/a;->m:I
+    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->m:I
 
     :goto_0
     return v0
@@ -1042,13 +1042,13 @@
     return-object v0
 .end method
 
-.method public z1()Lcom/vk/libvideo/autoplay/a;
+.method public z1()Lcom/vk/libvideo/autoplay/AutoPlay;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/attachments/DocumentAttachment;->K:Lcom/vk/libvideo/autoplay/a;
+    iget-object v0, p0, Lcom/vtosters/lite/attachments/DocumentAttachment;->K:Lcom/vk/libvideo/autoplay/AutoPlay;
 
     return-object v0
 .end method

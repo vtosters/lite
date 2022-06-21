@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/fragments/z1;
+.field private final synthetic a:Lcom/vtosters/lite/general/fragments/SettingsGeneralFragment;
 
 .field private final synthetic b:Landroidx/preference/ListPreference;
 
@@ -15,12 +15,12 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/z1;Landroidx/preference/ListPreference;Landroidx/preference/ListPreference;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/general/fragments/SettingsGeneralFragment;Landroidx/preference/ListPreference;Landroidx/preference/ListPreference;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/k0;->a:Lcom/vtosters/lite/fragments/z1;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/k0;->a:Lcom/vtosters/lite/general/fragments/SettingsGeneralFragment;
 
     iput-object p2, p0, Lcom/vtosters/lite/fragments/k0;->b:Landroidx/preference/ListPreference;
 
@@ -34,13 +34,13 @@
 .method public final onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 3
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/k0;->a:Lcom/vtosters/lite/fragments/z1;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/k0;->a:Lcom/vtosters/lite/general/fragments/SettingsGeneralFragment;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/k0;->b:Landroidx/preference/ListPreference;
 
     iget-object v2, p0, Lcom/vtosters/lite/fragments/k0;->c:Landroidx/preference/ListPreference;
 
-    invoke-virtual {v0, v1, v2, p1, p2}, Lcom/vtosters/lite/fragments/z1;->a(Landroidx/preference/ListPreference;Landroidx/preference/ListPreference;Landroidx/preference/Preference;Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1, v2, p1, p2}, Lcom/vtosters/lite/general/fragments/SettingsGeneralFragment;->a(Landroidx/preference/ListPreference;Landroidx/preference/ListPreference;Landroidx/preference/Preference;Ljava/lang/Object;)Z
 
     move-result p1
 

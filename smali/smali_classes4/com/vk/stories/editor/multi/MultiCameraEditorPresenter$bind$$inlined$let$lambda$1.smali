@@ -3,12 +3,12 @@
 .source "MultiCameraEditorPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/d;)V
+    value = Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/StoryRawData3;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/Integer;",
-        "Lcom/vk/common/i/b;",
-        "Lkotlin/m;",
+        "Lcom/vk/common/i/RecyclerItem;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -57,16 +57,16 @@
     .line 1
     check-cast p1, Ljava/lang/Integer;
 
-    check-cast p2, Lcom/vk/common/i/b;
+    check-cast p2, Lcom/vk/common/i/RecyclerItem;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$bind$$inlined$let$lambda$1;->a(Ljava/lang/Integer;Lcom/vk/common/i/b;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$bind$$inlined$let$lambda$1;->a(Ljava/lang/Integer;Lcom/vk/common/i/RecyclerItem;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public final a(Ljava/lang/Integer;Lcom/vk/common/i/b;)V
+.method public final a(Ljava/lang/Integer;Lcom/vk/common/i/RecyclerItem;)V
     .locals 2
 
     if-nez p1, :cond_0
@@ -93,25 +93,25 @@
 
     .line 3
     :goto_1
-    instance-of v1, p2, Lcom/vk/stories/editor/multi/k/b/b;
+    instance-of v1, p2, Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;
 
     if-eqz v1, :cond_2
 
-    check-cast p2, Lcom/vk/stories/editor/multi/k/b/b;
+    check-cast p2, Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;
 
-    invoke-virtual {p2}, Lcom/vk/stories/editor/multi/k/b/b;->d()Z
+    invoke-virtual {p2}, Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;->d()Z
 
     move-result v1
 
     if-eq v1, v0, :cond_2
 
     .line 4
-    invoke-virtual {p2, v0}, Lcom/vk/stories/editor/multi/k/b/b;->a(Z)V
+    invoke-virtual {p2, v0}, Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;->a(Z)V
 
     .line 5
     iget-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$bind$$inlined$let$lambda$1;->this$0:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    invoke-static {p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->j(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/lists/b;
+    invoke-static {p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->j(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/lists/BaseListDataSet;
 
     move-result-object p2
 
@@ -119,13 +119,13 @@
 
     const-string v0, "index"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/lists/b;->a(I)V
+    invoke-virtual {p2, p1}, Lcom/vk/lists/BaseListDataSet;->a(I)V
 
     :cond_2
     return-void

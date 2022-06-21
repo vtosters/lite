@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/vk/core/simplescreen/ScreenContainer$a;
-.implements Lcom/vk/attachpicker/j;
+.implements Lcom/vk/attachpicker/AttachResulter;
 
 
 # instance fields
@@ -110,7 +110,7 @@
     invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-static {p0}, Lcom/vk/core/util/l0;->a(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/app/Activity;)V
 
     .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -190,15 +190,15 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/attachpicker/PhotoEditorActivity;->H:Lcom/vk/core/simplescreen/ScreenContainer;
 
-    new-instance v1, Lcom/vk/attachpicker/screen/d0;
+    new-instance v1, Lcom/vk/attachpicker/screen/EditorScreen;
 
     iget-boolean v2, p0, Lcom/vk/attachpicker/PhotoEditorActivity;->G:Z
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, p1, v3, v2, v3}, Lcom/vk/attachpicker/screen/d0;-><init>(Ljava/io/File;Lcom/vk/attachpicker/screen/d0$x0;ZLcom/vk/attachpicker/j;)V
+    invoke-direct {v1, p1, v3, v2, v3}, Lcom/vk/attachpicker/screen/EditorScreen;-><init>(Ljava/io/File;Lcom/vk/attachpicker/screen/EditorScreen$x0;ZLcom/vk/attachpicker/AttachResulter;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/simplescreen/ScreenContainer;->a(Lcom/vk/core/simplescreen/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/simplescreen/ScreenContainer;->a(Lcom/vk/core/simplescreen/BaseScreen;)V
 
     :goto_0
     return-void

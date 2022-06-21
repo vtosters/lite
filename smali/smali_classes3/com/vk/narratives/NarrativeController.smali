@@ -4,25 +4,25 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 .field private static final b:Ljava/lang/String;
 
-.field private static final c:Lb/h/v/d;
+.field private static final c:Lb/h/v/RxBus;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/v/d<",
+            "Lb/h/v/RxBus<",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private static final d:Lkotlin/e;
+.field private static final d:Lkotlin/Lazy2;
 
-.field private static final e:Lkotlin/e;
+.field private static final e:Lkotlin/Lazy2;
 
-.field private static final f:Lkotlin/e;
+.field private static final f:Lkotlin/Lazy2;
 
 .field public static final g:Lcom/vk/narratives/NarrativeController;
 
@@ -35,11 +35,11 @@
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -47,9 +47,9 @@
 
     const-string v5, "getNarrativeColorFilter()Landroid/graphics/PorterDuffColorFilter;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -57,7 +57,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -65,9 +65,9 @@
 
     const-string v5, "getStoryNarrativeProcessor()Lcom/vk/imageloader/transform/StoryPreviewPostProcessor;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x1
 
@@ -75,7 +75,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -83,15 +83,15 @@
 
     const-string v4, "getNarrativeSnippetProcessor()Lcom/vk/imageloader/transform/StoryPreviewPostProcessor;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x2
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/narratives/NarrativeController;->a:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/narratives/NarrativeController;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/narratives/NarrativeController;
@@ -110,44 +110,44 @@
     sput-object v0, Lcom/vk/narratives/NarrativeController;->b:Ljava/lang/String;
 
     .line 3
-    new-instance v0, Lb/h/v/d;
+    new-instance v0, Lb/h/v/RxBus;
 
-    invoke-direct {v0}, Lb/h/v/d;-><init>()V
+    invoke-direct {v0}, Lb/h/v/RxBus;-><init>()V
 
-    sput-object v0, Lcom/vk/narratives/NarrativeController;->c:Lb/h/v/d;
+    sput-object v0, Lcom/vk/narratives/NarrativeController;->c:Lb/h/v/RxBus;
 
     .line 4
     sget-object v0, Lkotlin/LazyThreadSafetyMode;->NONE:Lkotlin/LazyThreadSafetyMode;
 
     sget-object v1, Lcom/vk/narratives/NarrativeController$narrativeColorFilter$2;->a:Lcom/vk/narratives/NarrativeController$narrativeColorFilter$2;
 
-    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/narratives/NarrativeController;->d:Lkotlin/e;
+    sput-object v0, Lcom/vk/narratives/NarrativeController;->d:Lkotlin/Lazy2;
 
     .line 5
     sget-object v0, Lkotlin/LazyThreadSafetyMode;->NONE:Lkotlin/LazyThreadSafetyMode;
 
     sget-object v1, Lcom/vk/narratives/NarrativeController$storyNarrativeProcessor$2;->a:Lcom/vk/narratives/NarrativeController$storyNarrativeProcessor$2;
 
-    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/narratives/NarrativeController;->e:Lkotlin/e;
+    sput-object v0, Lcom/vk/narratives/NarrativeController;->e:Lkotlin/Lazy2;
 
     .line 6
     sget-object v0, Lkotlin/LazyThreadSafetyMode;->NONE:Lkotlin/LazyThreadSafetyMode;
 
     sget-object v1, Lcom/vk/narratives/NarrativeController$narrativeSnippetProcessor$2;->a:Lcom/vk/narratives/NarrativeController$narrativeSnippetProcessor$2;
 
-    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0, v1}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/narratives/NarrativeController;->f:Lkotlin/e;
+    sput-object v0, Lcom/vk/narratives/NarrativeController;->f:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -161,19 +161,19 @@
     return-void
 .end method
 
-.method public static final a()Lb/h/v/d;
+.method public static final a()Lb/h/v/RxBus;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lb/h/v/d<",
+            "Lb/h/v/RxBus<",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/narratives/NarrativeController;->c:Lb/h/v/d;
+    sget-object v0, Lcom/vk/narratives/NarrativeController;->c:Lb/h/v/RxBus;
 
     return-object v0
 .end method
@@ -278,50 +278,50 @@
     .locals 2
 
     .line 19
-    sget-object v0, Lcom/vk/narratives/NarrativeController;->c:Lb/h/v/d;
+    sget-object v0, Lcom/vk/narratives/NarrativeController;->c:Lb/h/v/RxBus;
 
-    new-instance v1, Lcom/vk/narratives/b;
+    new-instance v1, Lcom/vk/narratives/NarrativeController2;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/narratives/b;-><init>(II)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/narratives/NarrativeController2;-><init>(II)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static final a(Lcom/vk/dto/narratives/Narrative;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+.method public static final a(Lcom/vk/dto/narratives/Narrative;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/narratives/Narrative;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Throwable;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 7
-    new-instance v0, Lcom/vk/api/narratives/a;
+    new-instance v0, Lcom/vk/api/narratives/NarrativeDelete;
 
-    invoke-direct {v0, p0}, Lcom/vk/api/narratives/a;-><init>(Lcom/vk/dto/narratives/Narrative;)V
+    invoke-direct {v0, p0}, Lcom/vk/api/narratives/NarrativeDelete;-><init>(Lcom/vk/dto/narratives/Narrative;)V
 
     .line 8
     new-instance v1, Lcom/vk/narratives/NarrativeController$a;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/vk/narratives/NarrativeController$a;-><init>(Lcom/vk/dto/narratives/Narrative;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/vk/narratives/NarrativeController$a;-><init>(Lcom/vk/dto/narratives/Narrative;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, v1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p0
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p0}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -344,7 +344,7 @@
 
     const-string v1, "storiesContainer.storyEntries"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -404,7 +404,7 @@
     if-eqz v1, :cond_5
 
     .line 12
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -425,9 +425,9 @@
     if-nez v0, :cond_4
 
     .line 15
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
@@ -437,7 +437,7 @@
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/attachments/NarrativeAttachment;-><init>(Lcom/vk/dto/narratives/Narrative;)V
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 16
     invoke-static {p0}, Lcom/vk/narratives/NarrativeController;->c(Lcom/vk/dto/narratives/Narrative;)V
@@ -463,15 +463,15 @@
 .method public static final b()Landroid/graphics/PorterDuffColorFilter;
     .locals 3
 
-    sget-object v0, Lcom/vk/narratives/NarrativeController;->d:Lkotlin/e;
+    sget-object v0, Lcom/vk/narratives/NarrativeController;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/narratives/NarrativeController;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/narratives/NarrativeController;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -584,22 +584,22 @@
     return-object p0
 .end method
 
-.method public static final c()Lcom/vk/imageloader/o/f;
+.method public static final c()Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
     .locals 3
 
-    sget-object v0, Lcom/vk/narratives/NarrativeController;->f:Lkotlin/e;
+    sget-object v0, Lcom/vk/narratives/NarrativeController;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/narratives/NarrativeController;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/narratives/NarrativeController;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/imageloader/o/f;
+    check-cast v0, Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
     return-object v0
 .end method
@@ -608,33 +608,33 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/narratives/NarrativeController;->c:Lb/h/v/d;
+    sget-object v0, Lcom/vk/narratives/NarrativeController;->c:Lb/h/v/RxBus;
 
-    new-instance v1, Lcom/vk/narratives/b;
+    new-instance v1, Lcom/vk/narratives/NarrativeController2;
 
-    invoke-direct {v1, p0}, Lcom/vk/narratives/b;-><init>(Lcom/vk/dto/narratives/Narrative;)V
+    invoke-direct {v1, p0}, Lcom/vk/narratives/NarrativeController2;-><init>(Lcom/vk/dto/narratives/Narrative;)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static final d()Lcom/vk/imageloader/o/f;
+.method public static final d()Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
     .locals 3
 
-    sget-object v0, Lcom/vk/narratives/NarrativeController;->e:Lkotlin/e;
+    sget-object v0, Lcom/vk/narratives/NarrativeController;->e:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/narratives/NarrativeController;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/narratives/NarrativeController;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/imageloader/o/f;
+    check-cast v0, Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
     return-object v0
 .end method
@@ -660,7 +660,7 @@
 
     const-string v2, "no_gradient"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -712,7 +712,7 @@
     move-object v2, v0
 
     :goto_1
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -745,7 +745,7 @@
     move-result-object v0
 
     :cond_3
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

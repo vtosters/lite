@@ -3,12 +3,12 @@
 .source "MsgHistoryClearCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->a(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
+    value = Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,16 +19,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/d;
+.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
 
 .field final synthetic $tillVkId:I
 
@@ -36,14 +36,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;ILcom/vk/im/engine/d;)V
+.method constructor <init>(Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;ILcom/vk/im/engine/ImEnvironment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;->this$0:Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;
 
     iput p2, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;->$tillVkId:I
 
-    iput-object p3, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;->$env:Lcom/vk/im/engine/d;
+    iput-object p3, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     const/4 p1, 0x1
 
@@ -69,7 +69,7 @@
     if-lez v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/messages/e;->k:Lcom/vk/im/engine/internal/storage/delegates/messages/e$b;
+    sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;->k:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs$b;
 
     iget-object v4, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;->this$0:Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;
 
@@ -81,18 +81,18 @@
 
     iget v6, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;->$tillVkId:I
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/vk/im/engine/internal/storage/delegates/messages/e$b;->a(III)Lcom/vk/im/engine/internal/storage/delegates/messages/e;
+    invoke-virtual {v0, v4, v5, v6}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs$b;->a(III)Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;
 
     move-result-object v0
 
     .line 3
     new-instance v4, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;
 
-    invoke-direct {v4, v0, v3, v2, v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;-><init>(Lcom/vk/im/engine/internal/storage/delegates/messages/e;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v4, v0, v3, v2, v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;-><init>(Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-virtual {v4, v0}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+    invoke-virtual {v4, v0}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
 
     .line 4
     :cond_0
@@ -135,10 +135,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast v0, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     .line 9
-    sget-object v4, Lcom/vk/im/engine/internal/storage/delegates/messages/e;->k:Lcom/vk/im/engine/internal/storage/delegates/messages/e$b;
+    sget-object v4, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;->k:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs$b;
 
     iget-object v5, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;->this$0:Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd;
 
@@ -146,22 +146,22 @@
 
     move-result v5
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
 
     move-result v0
 
-    invoke-virtual {v4, v5, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/e$b;->a(II)Lcom/vk/im/engine/internal/storage/delegates/messages/e;
+    invoke-virtual {v4, v5, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs$b;->a(II)Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;
 
     move-result-object v0
 
     .line 10
     new-instance v4, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;
 
-    invoke-direct {v4, v0, v3, v2, v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;-><init>(Lcom/vk/im/engine/internal/storage/delegates/messages/e;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v4, v0, v3, v2, v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;-><init>(Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-virtual {v4, v0}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+    invoke-virtual {v4, v0}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -177,7 +177,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgHistoryClearCmd$onExecute$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

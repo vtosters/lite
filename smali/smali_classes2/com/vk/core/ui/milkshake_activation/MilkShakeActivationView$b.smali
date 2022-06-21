@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView$b;->a:Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;
 
-    invoke-static {v0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->d(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;)Lkotlin/jvm/b/b;
+    invoke-static {v0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;->d(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;)Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
@@ -48,11 +48,11 @@
 
     iget-object v1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView$b;->a:Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_0
     return-void

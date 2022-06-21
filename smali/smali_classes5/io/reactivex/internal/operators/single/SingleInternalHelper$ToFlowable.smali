@@ -3,7 +3,7 @@
 .source "SingleInternalHelper.java"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -21,9 +21,9 @@
         "Ljava/lang/Enum<",
         "Lio/reactivex/internal/operators/single/SingleInternalHelper$ToFlowable;",
         ">;",
-        "Lc/a/z/j<",
-        "Lc/a/x;",
-        "Le/b/b;",
+        "Lio/reactivex/functions/Function<",
+        "Lio/reactivex/SingleSource;",
+        "Le/b/Publisher;",
         ">;"
     }
 .end annotation
@@ -110,13 +110,13 @@
 
 
 # virtual methods
-.method public a(Lc/a/x;)Le/b/b;
+.method public a(Lio/reactivex/SingleSource;)Le/b/Publisher;
     .locals 1
 
     .line 1
     new-instance v0, Lio/reactivex/internal/operators/single/SingleToFlowable;
 
-    invoke-direct {v0, p1}, Lio/reactivex/internal/operators/single/SingleToFlowable;-><init>(Lc/a/x;)V
+    invoke-direct {v0, p1}, Lio/reactivex/internal/operators/single/SingleToFlowable;-><init>(Lio/reactivex/SingleSource;)V
 
     return-object v0
 .end method
@@ -130,9 +130,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lc/a/x;
+    check-cast p1, Lio/reactivex/SingleSource;
 
-    invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/single/SingleInternalHelper$ToFlowable;->a(Lc/a/x;)Le/b/b;
+    invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/single/SingleInternalHelper$ToFlowable;->a(Lio/reactivex/SingleSource;)Le/b/Publisher;
 
     move-result-object p1
 

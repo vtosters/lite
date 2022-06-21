@@ -3,7 +3,7 @@
 .source "PhotoVideoAttachActivity.java"
 
 # interfaces
-.implements Lb/h/g/l/e;
+.implements Lb/h/g/l/NotificationListener;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lb/h/g/l/e<",
+        "Lb/h/g/l/NotificationListener<",
         "Ljava/lang/Void;",
         ">;"
     }
@@ -61,11 +61,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity$d;->a:Lcom/vk/attachpicker/PhotoVideoAttachActivity;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->a(Lcom/vk/attachpicker/PhotoVideoAttachActivity;)Lcom/vk/attachpicker/p;
+    invoke-static {p1}, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->a(Lcom/vk/attachpicker/PhotoVideoAttachActivity;)Lcom/vk/attachpicker/SelectionContext;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/p;->g()I
+    invoke-virtual {p1}, Lcom/vk/attachpicker/SelectionContext;->g()I
 
     move-result p1
 
@@ -82,11 +82,11 @@
 
     iget-object p3, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity$d;->a:Lcom/vk/attachpicker/PhotoVideoAttachActivity;
 
-    invoke-static {p3}, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->a(Lcom/vk/attachpicker/PhotoVideoAttachActivity;)Lcom/vk/attachpicker/p;
+    invoke-static {p3}, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->a(Lcom/vk/attachpicker/PhotoVideoAttachActivity;)Lcom/vk/attachpicker/SelectionContext;
 
     move-result-object p3
 
-    invoke-virtual {p3}, Lcom/vk/attachpicker/p;->g()I
+    invoke-virtual {p3}, Lcom/vk/attachpicker/SelectionContext;->g()I
 
     move-result p3
 
@@ -108,11 +108,11 @@
     :goto_0
     iget-object p1, p0, Lcom/vk/attachpicker/PhotoVideoAttachActivity$d;->a:Lcom/vk/attachpicker/PhotoVideoAttachActivity;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->a(Lcom/vk/attachpicker/PhotoVideoAttachActivity;)Lcom/vk/attachpicker/p;
+    invoke-static {p1}, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->a(Lcom/vk/attachpicker/PhotoVideoAttachActivity;)Lcom/vk/attachpicker/SelectionContext;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/p;->g()I
+    invoke-virtual {p1}, Lcom/vk/attachpicker/SelectionContext;->g()I
 
     move-result p1
 

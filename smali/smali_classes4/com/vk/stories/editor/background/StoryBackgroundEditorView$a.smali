@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView$a;->a:Lcom/vk/stories/editor/background/StoryBackgroundEditorView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->getPresenter()Lcom/vk/stories/editor/background/b;
+    invoke-virtual {p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->getPresenter()Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;
 
     move-result-object p1
 
@@ -48,13 +48,13 @@
 
     const-string v0, "default"
 
-    invoke-interface {p1, v0}, Lcom/vk/stories/editor/background/b;->m(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;->m(Ljava/lang/String;)V
 
     .line 2
     :cond_0
     iget-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView$a;->a:Lcom/vk/stories/editor/background/StoryBackgroundEditorView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->getPresenter()Lcom/vk/stories/editor/background/b;
+    invoke-virtual {p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->getPresenter()Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;
 
     move-result-object p1
 
@@ -66,7 +66,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v2, v0, v1, v2}, Lcom/vk/stories/editor/background/b$a;->a(Lcom/vk/stories/editor/background/b;Lcom/vk/stories/editor/background/g/c;ZILjava/lang/Object;)V
+    invoke-static {p1, v2, v0, v1, v2}, Lcom/vk/stories/editor/background/StoryBackgroundEditorContract$a;->a(Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;Lcom/vk/stories/editor/background/g/StoryBackgroundItem;ZILjava/lang/Object;)V
 
     :cond_1
     return-void

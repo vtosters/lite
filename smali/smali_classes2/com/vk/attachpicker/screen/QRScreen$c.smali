@@ -50,17 +50,17 @@
     .line 2
     iget-object p1, p0, Lcom/vk/attachpicker/screen/QRScreen$c;->a:Lcom/vk/attachpicker/screen/QRScreen;
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->K()Lcom/vk/attachpicker/util/c;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->K()Lcom/vk/attachpicker/util/OrientationLocker;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/attachpicker/screen/QRScreen$c;->a:Lcom/vk/attachpicker/screen/QRScreen;
 
-    invoke-virtual {v0}, Lcom/vk/core/simplescreen/a;->b()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/vk/core/simplescreen/BaseScreen;->b()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/util/c;->b(Landroid/app/Activity;)V
+    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/util/OrientationLocker;->b(Landroid/app/Activity;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/attachpicker/screen/QRScreen$c;->a:Lcom/vk/attachpicker/screen/QRScreen;

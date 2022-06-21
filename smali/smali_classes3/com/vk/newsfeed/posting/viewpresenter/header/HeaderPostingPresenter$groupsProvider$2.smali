@@ -3,12 +3,12 @@
 .source "HeaderPostingPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;-><init>(Lcom/vk/newsfeed/posting/j;Lcom/vk/newsfeed/posting/g;Lcom/vk/newsfeed/posting/PostingInteractor;)V
+    value = Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;-><init>(Lcom/vk/newsfeed/posting/PostingContracts14;Lcom/vk/newsfeed/posting/PostingContracts;Lcom/vk/newsfeed/posting/PostingInteractor;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter$groupsProvider$2$a;",
         ">;"
     }

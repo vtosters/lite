@@ -3,7 +3,7 @@
 .source "SearchParamsDialogSheet.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -52,11 +52,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/search/SearchParamsDialogSheet$e;->a:Lcom/vk/search/SearchParamsDialogSheet;
 
-    invoke-static {p1}, Lcom/vk/search/SearchParamsDialogSheet;->a(Lcom/vk/search/SearchParamsDialogSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {p1}, Lcom/vk/search/SearchParamsDialogSheet;->a(Lcom/vk/search/SearchParamsDialogSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->G4()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->G4()V
 
     return-void
 .end method

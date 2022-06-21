@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/flowable/FlowableRange;
-.super Lc/a/g;
+.super Lio/reactivex/Flowable;
 .source "FlowableRange.java"
 
 
@@ -14,7 +14,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lc/a/g<",
+        "Lio/reactivex/Flowable<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -32,7 +32,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lc/a/g;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/Flowable;-><init>()V
 
     .line 2
     iput p1, p0, Lio/reactivex/internal/operators/flowable/FlowableRange;->b:I
@@ -47,12 +47,12 @@
 
 
 # virtual methods
-.method public b(Le/b/c;)V
+.method public b(Le/b/Subscriber;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-",
             "Ljava/lang/Integer;",
             ">;)V"
@@ -60,7 +60,7 @@
     .end annotation
 
     .line 1
-    instance-of v0, p1, Lc/a/a0/b/a;
+    instance-of v0, p1, Lc/a/a0/b/ConditionalSubscriber;
 
     if-eqz v0, :cond_0
 
@@ -69,15 +69,15 @@
 
     move-object v1, p1
 
-    check-cast v1, Lc/a/a0/b/a;
+    check-cast v1, Lc/a/a0/b/ConditionalSubscriber;
 
     iget v2, p0, Lio/reactivex/internal/operators/flowable/FlowableRange;->b:I
 
     iget v3, p0, Lio/reactivex/internal/operators/flowable/FlowableRange;->c:I
 
-    invoke-direct {v0, v1, v2, v3}, Lio/reactivex/internal/operators/flowable/FlowableRange$RangeConditionalSubscription;-><init>(Lc/a/a0/b/a;II)V
+    invoke-direct {v0, v1, v2, v3}, Lio/reactivex/internal/operators/flowable/FlowableRange$RangeConditionalSubscription;-><init>(Lc/a/a0/b/ConditionalSubscriber;II)V
 
-    invoke-interface {p1, v0}, Le/b/c;->a(Le/b/d;)V
+    invoke-interface {p1, v0}, Le/b/Subscriber;->a(Le/b/Subscription;)V
 
     goto :goto_0
 
@@ -89,9 +89,9 @@
 
     iget v2, p0, Lio/reactivex/internal/operators/flowable/FlowableRange;->c:I
 
-    invoke-direct {v0, p1, v1, v2}, Lio/reactivex/internal/operators/flowable/FlowableRange$RangeSubscription;-><init>(Le/b/c;II)V
+    invoke-direct {v0, p1, v1, v2}, Lio/reactivex/internal/operators/flowable/FlowableRange$RangeSubscription;-><init>(Le/b/Subscriber;II)V
 
-    invoke-interface {p1, v0}, Le/b/c;->a(Le/b/d;)V
+    invoke-interface {p1, v0}, Le/b/Subscriber;->a(Le/b/Subscription;)V
 
     :goto_0
     return-void

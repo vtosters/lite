@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final synthetic i0:[Lkotlin/u/j;
+.field static final synthetic i0:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -18,9 +18,9 @@
 
 .field private final F:Ljava/lang/String;
 
-.field private final G:Lcom/vk/im/ui/drawables/h;
+.field private final G:Lcom/vk/im/ui/drawables/TypingDrawable;
 
-.field private final H:Lcom/vk/im/ui/drawables/f;
+.field private final H:Lcom/vk/im/ui/drawables/RecordingDrawable;
 
 .field private I:Z
 
@@ -56,15 +56,15 @@
 
 .field private final a0:Landroidx/appcompat/widget/AppCompatImageView;
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
 .field private final b0:Landroidx/appcompat/widget/AppCompatImageView;
 
-.field private final c:Lkotlin/e;
+.field private final c:Lkotlin/Lazy2;
 
 .field private final c0:Landroid/widget/TextView;
 
-.field private final d:Lkotlin/e;
+.field private final d:Lkotlin/Lazy2;
 
 .field private final d0:Landroidx/appcompat/widget/AppCompatImageView;
 
@@ -72,11 +72,11 @@
 
 .field private final e0:Landroidx/appcompat/widget/AppCompatImageView;
 
-.field private final f:Lkotlin/e;
+.field private final f:Lkotlin/Lazy2;
 
 .field private final f0:Landroidx/appcompat/widget/AppCompatImageView;
 
-.field private final g:Lcom/vk/im/ui/drawables/g;
+.field private final g:Lcom/vk/im/ui/drawables/RoundCornerColorDrawable;
 
 .field private g0:Z
 
@@ -91,13 +91,13 @@
 
     const/4 v0, 0x4
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/views/dialogs/DialogItemView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -105,9 +105,9 @@
 
     const-string v4, "getDrOnlineWeb()Landroid/graphics/drawable/Drawable;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -117,7 +117,7 @@
 
     const-class v2, Lcom/vk/im/ui/views/dialogs/DialogItemView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -125,9 +125,9 @@
 
     const-string v4, "getDrOnlineMobile()Landroid/graphics/drawable/Drawable;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x1
 
@@ -137,7 +137,7 @@
 
     const-class v2, Lcom/vk/im/ui/views/dialogs/DialogItemView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -145,9 +145,9 @@
 
     const-string v4, "getDrOnlineVkMe()Landroid/graphics/drawable/Drawable;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x2
 
@@ -157,7 +157,7 @@
 
     const-class v2, Lcom/vk/im/ui/views/dialogs/DialogItemView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -165,15 +165,15 @@
 
     const-string v4, "getTitleColorHighlight()I"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->i0:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->i0:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -193,7 +193,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/dialogs/DialogItemView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/dialogs/DialogItemView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -213,7 +213,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/dialogs/DialogItemView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/dialogs/DialogItemView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -235,7 +235,7 @@
 
     const-string v1, "resources"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -248,33 +248,33 @@
 
     invoke-direct {v0, v9}, Lcom/vk/im/ui/views/dialogs/DialogItemView$drOnlineWeb$2;-><init>(Lcom/vk/im/ui/views/dialogs/DialogItemView;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->b:Lkotlin/e;
+    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->b:Lkotlin/Lazy2;
 
     .line 4
     new-instance v0, Lcom/vk/im/ui/views/dialogs/DialogItemView$drOnlineMobile$2;
 
     invoke-direct {v0, v9}, Lcom/vk/im/ui/views/dialogs/DialogItemView$drOnlineMobile$2;-><init>(Lcom/vk/im/ui/views/dialogs/DialogItemView;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->c:Lkotlin/e;
+    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->c:Lkotlin/Lazy2;
 
     .line 5
     new-instance v0, Lcom/vk/im/ui/views/dialogs/DialogItemView$drOnlineVkMe$2;
 
     invoke-direct {v0, v9}, Lcom/vk/im/ui/views/dialogs/DialogItemView$drOnlineVkMe$2;-><init>(Lcom/vk/im/ui/views/dialogs/DialogItemView;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->d:Lkotlin/e;
+    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->d:Lkotlin/Lazy2;
 
     .line 6
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -283,7 +283,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v2, Lcom/vk/im/ui/c;->text_primary:I
 
@@ -298,16 +298,16 @@
 
     invoke-direct {v0, v9}, Lcom/vk/im/ui/views/dialogs/DialogItemView$titleColorHighlight$2;-><init>(Lcom/vk/im/ui/views/dialogs/DialogItemView;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->f:Lkotlin/e;
+    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->f:Lkotlin/Lazy2;
 
     .line 8
-    new-instance v0, Lcom/vk/im/ui/drawables/g;
+    new-instance v0, Lcom/vk/im/ui/drawables/RoundCornerColorDrawable;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/drawables/g;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/drawables/RoundCornerColorDrawable;-><init>()V
 
     const/16 v6, 0xc
 
@@ -315,18 +315,18 @@
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/ui/drawables/g;->b(I)V
+    invoke-virtual {v0, v2}, Lcom/vk/im/ui/drawables/RoundCornerColorDrawable;->b(I)V
 
-    sget-object v2, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v2, Lkotlin/Unit;->a:Lkotlin/Unit;
 
-    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->g:Lcom/vk/im/ui/drawables/g;
+    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->g:Lcom/vk/im/ui/drawables/RoundCornerColorDrawable;
 
     .line 9
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v2, Lcom/vk/im/ui/c;->counter_primary_background:I
 
@@ -341,7 +341,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v2, Lcom/vk/im/ui/c;->counter_secondary_background:I
 
@@ -374,7 +374,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v2, Lcom/vk/im/ui/c;->im_new_theme:I
 
@@ -397,18 +397,18 @@
 
     const-string v2, "context.getString(R.string.vkim_msg_empty)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->F:Ljava/lang/String;
 
     .line 15
-    new-instance v0, Lcom/vk/im/ui/drawables/h;
+    new-instance v0, Lcom/vk/im/ui/drawables/TypingDrawable;
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v3, Lcom/vk/im/ui/c;->link_alternate:I
 
@@ -416,18 +416,18 @@
 
     move-result v2
 
-    invoke-direct {v0, v2}, Lcom/vk/im/ui/drawables/h;-><init>(I)V
+    invoke-direct {v0, v2}, Lcom/vk/im/ui/drawables/TypingDrawable;-><init>(I)V
 
-    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->G:Lcom/vk/im/ui/drawables/h;
+    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->G:Lcom/vk/im/ui/drawables/TypingDrawable;
 
     .line 16
-    new-instance v0, Lcom/vk/im/ui/drawables/f;
+    new-instance v0, Lcom/vk/im/ui/drawables/RecordingDrawable;
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v1, Lcom/vk/im/ui/c;->link_alternate:I
 
@@ -435,9 +435,9 @@
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/drawables/f;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/drawables/RecordingDrawable;-><init>(I)V
 
-    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->H:Lcom/vk/im/ui/drawables/f;
+    iput-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->H:Lcom/vk/im/ui/drawables/RecordingDrawable;
 
     .line 17
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
@@ -647,7 +647,7 @@
 
     move-object/from16 v5, v23
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/AvatarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/AvatarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v11, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->K:Lcom/vk/im/ui/views/avatars/AvatarView;
 
@@ -734,7 +734,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/StoryBorderView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/StoryBorderView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v6, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->M:Lcom/vk/im/ui/views/avatars/StoryBorderView;
 
@@ -1090,7 +1090,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->icon_tertiary:I
 
-    invoke-static {v0, v1, v2}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;II)V
+    invoke-static {v0, v1, v2}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;II)V
 
     .line 65
     iget-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->P:Landroidx/appcompat/widget/AppCompatImageView;
@@ -1145,7 +1145,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/AvatarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/avatars/AvatarView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v6, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->S:Lcom/vk/im/ui/views/avatars/AvatarView;
 
@@ -1557,7 +1557,7 @@
     .line 105
     iget-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->a0:Landroidx/appcompat/widget/AppCompatImageView;
 
-    iget-object v1, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->G:Lcom/vk/im/ui/drawables/h;
+    iget-object v1, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->G:Lcom/vk/im/ui/drawables/TypingDrawable;
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -1743,7 +1743,7 @@
     .line 121
     iget-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->c0:Landroid/widget/TextView;
 
-    iget-object v1, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->g:Lcom/vk/im/ui/drawables/g;
+    iget-object v1, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->g:Lcom/vk/im/ui/drawables/RoundCornerColorDrawable;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -1829,7 +1829,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->counter_primary_background:I
 
-    invoke-static {v0, v1, v2}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;II)V
+    invoke-static {v0, v1, v2}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;II)V
 
     .line 126
     iget-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->d0:Landroidx/appcompat/widget/AppCompatImageView;
@@ -1890,7 +1890,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->icon_outline_medium:I
 
-    invoke-static {v0, v1, v2}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;II)V
+    invoke-static {v0, v1, v2}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;II)V
 
     .line 131
     iget-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->e0:Landroidx/appcompat/widget/AppCompatImageView;
@@ -1941,7 +1941,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->field_error_border:I
 
-    invoke-static {v0, v1, v2}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;II)V
+    invoke-static {v0, v1, v2}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;II)V
 
     .line 136
     iget-object v0, v9, Lcom/vk/im/ui/views/dialogs/DialogItemView;->f0:Landroidx/appcompat/widget/AppCompatImageView;
@@ -2082,7 +2082,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -4129,15 +4129,15 @@
 .method private final getDrOnlineMobile()Landroid/graphics/drawable/Drawable;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->c:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/views/dialogs/DialogItemView;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/views/dialogs/DialogItemView;->i0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -4149,15 +4149,15 @@
 .method private final getDrOnlineVkMe()Landroid/graphics/drawable/Drawable;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->d:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/views/dialogs/DialogItemView;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/views/dialogs/DialogItemView;->i0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -4169,15 +4169,15 @@
 .method private final getDrOnlineWeb()Landroid/graphics/drawable/Drawable;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/views/dialogs/DialogItemView;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/views/dialogs/DialogItemView;->i0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -4241,15 +4241,15 @@
 .method private final getTitleColorHighlight()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->f:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/views/dialogs/DialogItemView;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/views/dialogs/DialogItemView;->i0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -5123,7 +5123,7 @@
     move-result v4
 
     .line 4
-    invoke-static {v0, v1, v2, v3, v4}, Lb/h/g/r/c;->a(IIIII)I
+    invoke-static {v0, v1, v2, v3, v4}, Lb/h/g/r/MathExt;->a(IIIII)I
 
     move-result v0
 
@@ -5167,7 +5167,7 @@
     move-result v4
 
     .line 4
-    invoke-static {v1, v2, v3, v4}, Lb/h/g/r/c;->a(IIII)I
+    invoke-static {v1, v2, v3, v4}, Lb/h/g/r/MathExt;->a(IIII)I
 
     move-result v1
 
@@ -5487,12 +5487,12 @@
 
     if-ne p2, v0, :cond_0
 
-    iget-object p2, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->H:Lcom/vk/im/ui/drawables/f;
+    iget-object p2, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->H:Lcom/vk/im/ui/drawables/RecordingDrawable;
 
     goto :goto_0
 
     :cond_0
-    iget-object p2, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->G:Lcom/vk/im/ui/drawables/h;
+    iget-object p2, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->G:Lcom/vk/im/ui/drawables/TypingDrawable;
 
     :goto_0
     const/4 v0, 0x0
@@ -5674,7 +5674,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p2, :cond_3
 
@@ -5693,7 +5693,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 5
-    iget-object p1, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->g:Lcom/vk/im/ui/drawables/g;
+    iget-object p1, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->g:Lcom/vk/im/ui/drawables/RoundCornerColorDrawable;
 
     if-eqz p2, :cond_4
 
@@ -5705,7 +5705,7 @@
     iget p2, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->h:I
 
     :goto_4
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/drawables/g;->a(I)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/drawables/RoundCornerColorDrawable;->a(I)V
 
     return-void
 .end method
@@ -5850,13 +5850,13 @@
     return-void
 .end method
 
-.method public final setAvatar(Lcom/vk/im/engine/models/j;)V
+.method public final setAvatar(Lcom/vk/im/engine/models/Profile;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->K:Lcom/vk/im/ui/views/avatars/AvatarView;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/Profile;)V
 
     return-void
 .end method
@@ -6098,7 +6098,7 @@
     return-void
 .end method
 
-.method public final setSender(Lcom/vk/im/engine/models/j;)V
+.method public final setSender(Lcom/vk/im/engine/models/Profile;)V
     .locals 2
 
     if-nez p1, :cond_0
@@ -6119,7 +6119,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/views/dialogs/DialogItemView;->S:Lcom/vk/im/ui/views/avatars/AvatarView;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/Profile;)V
 
     return-void
 .end method

@@ -29,7 +29,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/ui/c;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
+    iget-object p0, p0, Lcom/vk/profile/ui/BaseProfileFragment;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-object p0
 .end method
@@ -38,7 +38,7 @@
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/profile/ui/c;->u0:Lcom/vk/profile/ui/header/BaseHeaderView;
+    iput-object p1, p0, Lcom/vk/profile/ui/BaseProfileFragment;->u0:Lcom/vk/profile/ui/header/BaseHeaderView;
 
     return-void
 .end method
@@ -47,7 +47,7 @@
     .locals 0
 
     .line 1
-    iget p0, p0, Lcom/vk/profile/ui/c;->q0:I
+    iget p0, p0, Lcom/vk/profile/ui/BaseProfileFragment;->q0:I
 
     return p0
 .end method
@@ -77,7 +77,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    instance-of v2, v0, Lcom/vk/core/ui/d;
+    instance-of v2, v0, Lcom/vk/core/ui/CardItemDecorator;
 
     if-eqz v2, :cond_0
 
@@ -90,7 +90,7 @@
 
     const-string v3, "activity ?: return"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-static {v2}, Lcom/vk/core/util/Screen;->l(Landroid/content/Context;)Z
@@ -100,9 +100,9 @@
     if-nez v2, :cond_0
 
     .line 5
-    check-cast v0, Lcom/vk/core/ui/d;
+    check-cast v0, Lcom/vk/core/ui/CardItemDecorator;
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/ui/d;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/ui/CardItemDecorator;->a(Z)V
 
     nop
 
@@ -122,7 +122,7 @@
     .locals 2
 
     .line 3
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -141,24 +141,24 @@
     goto :goto_0
 
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/vk/profile/ui/c;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-super {p0, p1, p2}, Lcom/vk/profile/ui/BaseProfileFragment;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
     const-string p2, "super.onInflateLayout(inflater, container)"
 
     :goto_0
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public b5()Lcom/vk/lists/i0;
+.method public b5()Lcom/vk/lists/SimpleAdapter;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/lists/i0<",
+            "Lcom/vk/lists/SimpleAdapter<",
             "*",
             "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
             ">;"
@@ -166,22 +166,22 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vk/profile/adapter/a;
+    new-instance v0, Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-    iget-object v1, p0, Lcom/vk/profile/ui/c;->O0:Lcom/vk/lists/g;
+    iget-object v1, p0, Lcom/vk/profile/ui/BaseProfileFragment;->O0:Lcom/vk/lists/DiffListDataSet;
 
     const-string v2, "infoItems"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/a;-><init>(Lcom/vk/lists/o;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/InfoItemsAdapter;-><init>(Lcom/vk/lists/ListDataSet;)V
 
-    iput-object v0, p0, Lcom/vk/profile/ui/c;->N0:Lcom/vk/profile/adapter/a;
+    iput-object v0, p0, Lcom/vk/profile/ui/BaseProfileFragment;->N0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     return-object v0
 .end method
 
-.method public bridge synthetic c5()Lcom/vk/newsfeed/contracts/e;
+.method public bridge synthetic c5()Lcom/vk/newsfeed/contracts/EntriesListContract;
     .locals 1
 
     .line 1
@@ -196,13 +196,13 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/newsfeed/presenters/a;
+    new-instance v0, Lcom/vk/newsfeed/presenters/AdministratorProfilePresenter;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->W4()Lcom/vk/music/player/d;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->W4()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/vk/newsfeed/presenters/a;-><init>(Lcom/vk/newsfeed/contracts/u;Lcom/vk/music/player/d;)V
+    invoke-direct {v0, p0, v1}, Lcom/vk/newsfeed/presenters/AdministratorProfilePresenter;-><init>(Lcom/vk/newsfeed/contracts/ProfileContract;Lcom/vk/music/player/PlayerModel;)V
 
     return-object v0
 .end method
@@ -211,7 +211,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/profile/ui/c;->onAttach(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lcom/vk/profile/ui/BaseProfileFragment;->onAttach(Landroid/app/Activity;)V
 
     const/4 p1, 0x0
 
@@ -243,7 +243,7 @@
 
     .line 2
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/profile/ui/c;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/vk/profile/ui/BaseProfileFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
@@ -296,9 +296,9 @@
     invoke-virtual {p0, v0}, Lcom/vk/newsfeed/EntriesListFragment;->x0(Z)V
 
     .line 2
-    iget-object v1, p0, Lcom/vk/profile/ui/c;->O0:Lcom/vk/lists/g;
+    iget-object v1, p0, Lcom/vk/profile/ui/BaseProfileFragment;->O0:Lcom/vk/lists/DiffListDataSet;
 
-    invoke-virtual {v1}, Lcom/vk/lists/g;->clear()V
+    invoke-virtual {v1}, Lcom/vk/lists/DiffListDataSet;->clear()V
 
     .line 3
     new-instance v1, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;
@@ -307,12 +307,12 @@
 
     invoke-direct {v2, p0}, Lcom/vk/profile/ui/user/AdministratorProfileFragment$createInfoItems$item$1;-><init>(Lcom/vk/profile/ui/user/AdministratorProfileFragment;)V
 
-    invoke-direct {v1, p0, v2}, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;-><init>(Lcom/vk/profile/ui/user/AdministratorProfileFragment;Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p0, v2}, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;-><init>(Lcom/vk/profile/ui/user/AdministratorProfileFragment;Lkotlin/jvm/b/Functions2;)V
 
     .line 4
-    iget-object v2, p0, Lcom/vk/profile/ui/c;->O0:Lcom/vk/lists/g;
+    iget-object v2, p0, Lcom/vk/profile/ui/BaseProfileFragment;->O0:Lcom/vk/lists/DiffListDataSet;
 
-    invoke-virtual {v2, v1}, Lcom/vk/lists/o;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, v1}, Lcom/vk/lists/ListDataSet;->b(Ljava/lang/Object;)V
 
     .line 5
     iget-object v1, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->k1:Lcom/vk/core/view/links/LinkedTextView;
@@ -346,7 +346,7 @@
 
     const-string v3, "activity ?: return"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     iget-object v3, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment;->k1:Lcom/vk/core/view/links/LinkedTextView;
@@ -422,7 +422,7 @@
     goto :goto_0
 
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -447,7 +447,7 @@
 
     move-result-object v1
 
-    iget v3, p0, Lcom/vk/profile/ui/c;->q0:I
+    iget v3, p0, Lcom/vk/profile/ui/BaseProfileFragment;->q0:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -474,7 +474,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/common/links/b;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v1}, Lcom/vk/common/links/LinkParser;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -486,13 +486,13 @@
 
     if-eqz v1, :cond_9
 
-    iget-object v3, p0, Lcom/vk/profile/ui/c;->O0:Lcom/vk/lists/g;
+    iget-object v3, p0, Lcom/vk/profile/ui/BaseProfileFragment;->O0:Lcom/vk/lists/DiffListDataSet;
 
-    new-instance v5, Lcom/vk/profile/adapter/items/z;
+    new-instance v5, Lcom/vk/profile/adapter/items/ViewInfoItem;
 
-    invoke-direct {v5, v1}, Lcom/vk/profile/adapter/items/z;-><init>(Landroid/view/View;)V
+    invoke-direct {v5, v1}, Lcom/vk/profile/adapter/items/ViewInfoItem;-><init>(Landroid/view/View;)V
 
-    invoke-virtual {v3, v5}, Lcom/vk/lists/o;->b(Ljava/lang/Object;)V
+    invoke-virtual {v3, v5}, Lcom/vk/lists/ListDataSet;->b(Ljava/lang/Object;)V
 
     .line 17
     :cond_9
@@ -503,9 +503,9 @@
     if-eqz v1, :cond_a
 
     .line 18
-    iget-object v1, p0, Lcom/vk/profile/ui/c;->O0:Lcom/vk/lists/g;
+    iget-object v1, p0, Lcom/vk/profile/ui/BaseProfileFragment;->O0:Lcom/vk/lists/DiffListDataSet;
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/o;->k(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lcom/vk/lists/ListDataSet;->k(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -514,11 +514,11 @@
     invoke-virtual {v0, v4}, Lcom/vk/profile/adapter/BaseInfoItem;->c(I)V
 
     .line 19
-    iget-object v0, p0, Lcom/vk/profile/ui/c;->O0:Lcom/vk/lists/g;
+    iget-object v0, p0, Lcom/vk/profile/ui/BaseProfileFragment;->O0:Lcom/vk/lists/DiffListDataSet;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/o;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/lists/ListDataSet;->k(I)Ljava/lang/Object;
 
     move-result-object v0
 

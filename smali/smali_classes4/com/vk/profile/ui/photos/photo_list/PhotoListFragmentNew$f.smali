@@ -3,12 +3,12 @@
 .source "PhotoListFragmentNew.kt"
 
 # interfaces
-.implements Lcom/vk/lists/y;
+.implements Lcom/vk/lists/PreloadCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->g5()Lcom/vk/lists/t$k;
+    value = Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->g5()Lcom/vk/lists/PaginationHelper$k;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,13 +40,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$f;->a:Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Z4()Lcom/vk/profile/ui/photos/a;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Z4()Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/profile/ui/photos/a;->c(II)Ljava/lang/String;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/profile/ui/photos/PhotoListAdapter;->c(II)Ljava/lang/String;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "SocialGraphLoginFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -60,7 +60,7 @@
 
     const-string v2, "it"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$k;->b:Landroid/accounts/Account;
 
@@ -68,7 +68,7 @@
 
     const-string v3, "account.name"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, p1, v2}, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;
-.super Lcom/vk/im/ui/components/msg_send/picker/location/d;
+.super Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;
 .source "ImLocationVc.kt"
 
 
@@ -24,9 +24,9 @@
 
 
 # instance fields
-.field private b:Lcom/vk/im/ui/views/adapter_delegate/a;
+.field private b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
-.field private final c:Lcom/vk/im/ui/components/msg_send/picker/menu/a;
+.field private final c:Lcom/vk/im/ui/components/msg_send/picker/menu/MenuStateItems;
 
 .field private d:Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$a;
 
@@ -41,12 +41,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->i:Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$b;
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     sget v1, Lcom/vk/im/ui/m;->vkim_nearby_locations_not_found:I
 
@@ -56,12 +56,12 @@
 
     const-string v1, "AppContextHolder.context\u2026arby_locations_not_found)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->f:Ljava/lang/String;
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     sget v1, Lcom/vk/im/ui/m;->vkim_picker_no_results:I
 
@@ -71,12 +71,12 @@
 
     const-string v1, "AppContextHolder.context\u2026g.vkim_picker_no_results)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->g:Ljava/lang/String;
 
     .line 3
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     sget v1, Lcom/vk/im/ui/m;->vkim_current_location_not_set:I
 
@@ -86,7 +86,7 @@
 
     const-string v1, "AppContextHolder.context\u2026current_location_not_set)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->h:Ljava/lang/String;
 
@@ -97,18 +97,18 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/d;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/components/msg_send/picker/menu/a;
+    new-instance v0, Lcom/vk/im/ui/components/msg_send/picker/menu/MenuStateItems;
 
     sget v1, Lcom/vk/im/ui/m;->vkim_picker_menu_item_place:I
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/msg_send/picker/menu/a;-><init>(IZ)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/msg_send/picker/menu/MenuStateItems;-><init>(IZ)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->c:Lcom/vk/im/ui/components/msg_send/picker/menu/a;
+    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->c:Lcom/vk/im/ui/components/msg_send/picker/menu/MenuStateItems;
 
     return-void
 .end method
@@ -126,7 +126,7 @@
     .locals 2
 
     .line 40
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->b()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->b()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
 
@@ -145,28 +145,28 @@
 
     .line 41
     :goto_0
-    instance-of v0, p1, Lcom/vk/im/ui/components/msg_send/picker/b;
+    instance-of v0, p1, Lcom/vk/im/ui/components/msg_send/picker/OnExpandListener;
 
     if-nez v0, :cond_1
 
     move-object p1, v1
 
     :cond_1
-    check-cast p1, Lcom/vk/im/ui/components/msg_send/picker/b;
+    check-cast p1, Lcom/vk/im/ui/components/msg_send/picker/OnExpandListener;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1, p2}, Lcom/vk/im/ui/components/msg_send/picker/b;->b(F)V
+    invoke-interface {p1, p2}, Lcom/vk/im/ui/components/msg_send/picker/OnExpandListener;->b(F)V
 
     :cond_2
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;Lkotlin/jvm/b/a;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -178,13 +178,13 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/ui/views/adapter_delegate/c;",
+            "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
             ">;)V"
         }
     .end annotation
 
     .line 33
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     const/4 v1, 0x0
 
@@ -192,7 +192,7 @@
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->j()Ljava/util/List;
 
     move-result-object v0
 
@@ -219,10 +219,10 @@
     move-result-object v5
 
     .line 35
-    check-cast v5, Lcom/vk/im/ui/views/adapter_delegate/c;
+    check-cast v5, Lcom/vk/im/ui/views/adapter_delegate/ListItem;
 
     .line 36
-    instance-of v5, v5, Lcom/vk/im/ui/components/msg_send/picker/location/c;
+    instance-of v5, v5, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
 
     if-eqz v5, :cond_0
 
@@ -240,13 +240,13 @@
     if-eq v4, v6, :cond_4
 
     .line 37
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     if-eqz v0, :cond_3
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->j()Ljava/util/List;
 
     move-result-object v1
 
@@ -260,27 +260,27 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/adapter_delegate/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->setItems(Ljava/util/List;)V
 
     goto :goto_2
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 38
     :cond_4
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->j()Ljava/util/List;
 
     move-result-object v1
 
@@ -288,36 +288,36 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/adapter_delegate/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->setItems(Ljava/util/List;)V
 
     :goto_2
     return-void
 
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 39
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method private final a(Lkotlin/jvm/b/a;)V
+.method private final a(Lkotlin/jvm/b/Functions;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 42
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->b()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->b()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
 
@@ -331,12 +331,12 @@
     :cond_0
     new-instance v0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$c;
 
-    invoke-direct {v0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$c;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$c;-><init>(Lkotlin/jvm/b/Functions;)V
 
     iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->e:Ljava/lang/Runnable;
 
     .line 44
-    sget-object v1, Lb/h/k/c;->b:Lb/h/k/c;
+    sget-object v1, Lb/h/k/IdleTaskHandler1;->b:Lb/h/k/IdleTaskHandler1;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->e:Ljava/lang/Runnable;
 
@@ -346,34 +346,34 @@
 
     const-wide/16 v5, 0x64
 
-    invoke-virtual/range {v1 .. v6}, Lb/h/k/c;->a(Ljava/lang/Runnable;JJ)V
+    invoke-virtual/range {v1 .. v6}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;JJ)V
 
     return-void
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;Lcom/vk/im/ui/components/msg_send/picker/location/c;)Z
+.method public static final synthetic a(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)Z
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->a(Lcom/vk/im/ui/components/msg_send/picker/location/c;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final a(Lcom/vk/im/ui/components/msg_send/picker/location/c;)Z
+.method private final a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;)Z
     .locals 2
 
     .line 45
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/c;->b()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;->b()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object v0
 
@@ -385,7 +385,7 @@
 
     if-eq v0, v1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/c;->b()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;->b()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object p1
 
@@ -420,7 +420,7 @@
             "Lcom/vk/dto/geo/GeoLocation;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/views/adapter_delegate/c;",
+            "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
             ">;"
         }
     .end annotation
@@ -428,7 +428,7 @@
     if-eqz p1, :cond_0
 
     .line 6
-    new-instance v6, Lcom/vk/im/ui/components/msg_send/picker/location/c;
+    new-instance v6, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
 
     sget-object v0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->i:Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$b;
 
@@ -446,7 +446,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/msg_send/picker/location/c;-><init>(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;-><init>(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-static {v6}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
@@ -463,20 +463,20 @@
     :goto_0
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lcom/vk/im/ui/components/msg_send/picker/c;
+    new-array v1, v1, [Lcom/vk/im/ui/components/msg_send/picker/PickerListItem;
 
     const/4 v2, 0x0
 
     .line 8
-    iget-object v3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->c:Lcom/vk/im/ui/components/msg_send/picker/menu/a;
+    iget-object v3, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->c:Lcom/vk/im/ui/components/msg_send/picker/menu/MenuStateItems;
 
     aput-object v3, v1, v2
 
     const/4 v2, 0x1
 
-    new-instance v3, Lcom/vk/im/ui/components/msg_send/picker/location/g;
+    new-instance v3, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;
 
-    invoke-direct {v3, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/g;-><init>(Lcom/vk/dto/geo/GeoLocation;)V
+    invoke-direct {v3, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;-><init>(Lcom/vk/dto/geo/GeoLocation;)V
 
     aput-object v3, v1, v2
 
@@ -495,7 +495,7 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     const/4 v1, 0x0
 
@@ -505,7 +505,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->j()Ljava/util/List;
 
     move-result-object v1
 
@@ -533,10 +533,10 @@
 
     move-object v4, v3
 
-    check-cast v4, Lcom/vk/im/ui/views/adapter_delegate/c;
+    check-cast v4, Lcom/vk/im/ui/views/adapter_delegate/ListItem;
 
     .line 4
-    instance-of v4, v4, Lcom/vk/im/ui/components/msg_send/picker/f/a;
+    instance-of v4, v4, Lcom/vk/im/ui/components/msg_send/picker/f/NoResultsItem;
 
     xor-int/lit8 v4, v4, 0x1
 
@@ -548,18 +548,18 @@
 
     .line 5
     :cond_1
-    invoke-virtual {v0, v2}, Lcom/vk/im/ui/views/adapter_delegate/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v2}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->setItems(Ljava/util/List;)V
 
     return-void
 
     .line 6
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -568,7 +568,7 @@
     .locals 7
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     const/4 v1, 0x0
 
@@ -576,7 +576,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->j()Ljava/util/List;
 
     move-result-object v0
 
@@ -603,10 +603,10 @@
     move-result-object v5
 
     .line 3
-    check-cast v5, Lcom/vk/im/ui/views/adapter_delegate/c;
+    check-cast v5, Lcom/vk/im/ui/views/adapter_delegate/ListItem;
 
     .line 4
-    instance-of v5, v5, Lcom/vk/im/ui/components/msg_send/picker/e/a;
+    instance-of v5, v5, Lcom/vk/im/ui/components/msg_send/picker/e/LoadMoreItem;
 
     if-eqz v5, :cond_0
 
@@ -624,13 +624,13 @@
     if-eq v4, v6, :cond_4
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     if-eqz v0, :cond_3
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->j()Ljava/util/List;
 
     move-result-object v1
 
@@ -638,17 +638,17 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/adapter_delegate/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->setItems(Ljava/util/List;)V
 
     goto :goto_2
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -658,7 +658,7 @@
 
     .line 6
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -669,19 +669,19 @@
     .locals 2
 
     .line 4
-    new-instance v0, Lcom/vk/im/ui/components/msg_send/picker/location/a;
+    new-instance v0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationAdapter;
 
     new-instance v1, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$AdapterCallback;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$AdapterCallback;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;)V
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/a;-><init>(Landroid/view/LayoutInflater;Lcom/vk/im/ui/components/msg_send/picker/location/a$a;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationAdapter;-><init>(Landroid/view/LayoutInflater;Lcom/vk/im/ui/components/msg_send/picker/location/LocationAdapter$a;)V
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->setHasStableIds(Z)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     .line 5
     sget v0, Lcom/vk/im/ui/j;->vkim_msg_send_picker:I
@@ -713,7 +713,7 @@
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     const/4 v1, 0x0
 
@@ -734,12 +734,12 @@
     invoke-static {p2, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->g(Landroid/view/View;I)V
 
     .line 11
-    invoke-virtual {p0, p2}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p0, p2}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
     const-string p2, "inflater.inflate(R.layou\u2026)\n            }\n        }"
 
     .line 12
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -747,7 +747,7 @@
     const-string p1, "adapter"
 
     .line 13
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -756,7 +756,7 @@
     .locals 2
 
     .line 14
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->b()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->b()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
 
@@ -768,7 +768,7 @@
 
     .line 15
     :cond_0
-    invoke-virtual {p0, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p0, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 16
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->e:Ljava/lang/Runnable;
@@ -776,9 +776,9 @@
     if-eqz v0, :cond_1
 
     .line 17
-    sget-object v1, Lb/h/k/c;->b:Lb/h/k/c;
+    sget-object v1, Lb/h/k/IdleTaskHandler1;->b:Lb/h/k/IdleTaskHandler1;
 
-    invoke-virtual {v1, v0}, Lb/h/k/c;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v0}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;)V
 
     :cond_1
     return-void
@@ -788,7 +788,7 @@
     .locals 4
 
     .line 29
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/d;->b()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationVc;->b()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
 
@@ -811,7 +811,7 @@
 
     const-string v3, "getChildAt(i)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 32
     invoke-direct {p0, v2, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->a(Landroid/view/View;F)V
@@ -828,7 +828,7 @@
     .locals 6
 
     .line 19
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     const/4 v1, 0x0
 
@@ -836,7 +836,7 @@
 
     if-eqz v0, :cond_7
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->j()Ljava/util/List;
 
     move-result-object v0
 
@@ -861,10 +861,10 @@
     move-result-object v4
 
     .line 21
-    check-cast v4, Lcom/vk/im/ui/views/adapter_delegate/c;
+    check-cast v4, Lcom/vk/im/ui/views/adapter_delegate/ListItem;
 
     .line 22
-    instance-of v4, v4, Lcom/vk/im/ui/components/msg_send/picker/location/c;
+    instance-of v4, v4, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
 
     if-eqz v4, :cond_0
 
@@ -882,7 +882,7 @@
     if-eq v3, v5, :cond_5
 
     .line 23
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     if-eqz v0, :cond_4
 
@@ -890,21 +890,21 @@
 
     move-result-object p1
 
-    iget-object v4, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v4, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     if-eqz v4, :cond_3
 
-    invoke-virtual {v4}, Lcom/vk/im/ui/views/adapter_delegate/a;->j()Ljava/util/List;
+    invoke-virtual {v4}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->j()Ljava/util/List;
 
     move-result-object v4
 
     add-int/lit8 v3, v3, 0x1
 
-    iget-object v5, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v5, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     if-eqz v5, :cond_2
 
-    invoke-virtual {v5}, Lcom/vk/im/ui/views/adapter_delegate/a;->j()Ljava/util/List;
+    invoke-virtual {v5}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->j()Ljava/util/List;
 
     move-result-object v1
 
@@ -920,28 +920,28 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/adapter_delegate/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->setItems(Ljava/util/List;)V
 
     goto :goto_2
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 24
     :cond_5
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     if-eqz v0, :cond_6
 
@@ -949,19 +949,19 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/adapter_delegate/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->setItems(Ljava/util/List;)V
 
     :goto_2
     return-void
 
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 25
     :cond_7
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1017,7 +1017,7 @@
     check-cast v2, Lcom/vk/dto/geo/GeoLocation;
 
     .line 49
-    new-instance v3, Lcom/vk/im/ui/components/msg_send/picker/location/c;
+    new-instance v3, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;
 
     sget-object v4, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->i:Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$b;
 
@@ -1027,7 +1027,7 @@
 
     const/4 v5, 0x0
 
-    invoke-direct {v3, v2, v4, v5}, Lcom/vk/im/ui/components/msg_send/picker/location/c;-><init>(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/String;Z)V
+    invoke-direct {v3, v2, v4, v5}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems1;-><init>(Lcom/vk/dto/geo/GeoLocation;Ljava/lang/String;Z)V
 
     invoke-interface {v0, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -1037,13 +1037,13 @@
     if-eqz p2, :cond_3
 
     .line 50
-    iget-object p2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object p2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     const/4 v1, 0x0
 
     if-eqz p2, :cond_2
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->c:Lcom/vk/im/ui/components/msg_send/picker/menu/a;
+    iget-object v2, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->c:Lcom/vk/im/ui/components/msg_send/picker/menu/MenuStateItems;
 
     invoke-static {v2}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
@@ -1055,11 +1055,11 @@
 
     if-eqz p1, :cond_1
 
-    new-instance p1, Lcom/vk/im/ui/components/msg_send/picker/f/a;
+    new-instance p1, Lcom/vk/im/ui/components/msg_send/picker/f/NoResultsItem;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, v1, v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/f/a;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v1, v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/f/NoResultsItem;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
@@ -1070,14 +1070,14 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/im/ui/views/adapter_delegate/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {p2, p1}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->setItems(Ljava/util/List;)V
 
     goto :goto_1
 
     :cond_2
     const-string p1, "adapter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1089,11 +1089,11 @@
 
     if-eqz p1, :cond_4
 
-    new-instance p1, Lcom/vk/im/ui/components/msg_send/picker/f/a;
+    new-instance p1, Lcom/vk/im/ui/components/msg_send/picker/f/NoResultsItem;
 
     sget-object p2, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->f:Ljava/lang/String;
 
-    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/msg_send/picker/f/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/msg_send/picker/f/NoResultsItem;-><init>(Ljava/lang/String;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
@@ -1119,11 +1119,11 @@
     if-eqz p1, :cond_0
 
     .line 27
-    new-instance p1, Lcom/vk/im/ui/components/msg_send/picker/f/a;
+    new-instance p1, Lcom/vk/im/ui/components/msg_send/picker/f/NoResultsItem;
 
     sget-object v0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->g:Ljava/lang/String;
 
-    invoke-direct {p1, v0}, Lcom/vk/im/ui/components/msg_send/picker/f/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vk/im/ui/components/msg_send/picker/f/NoResultsItem;-><init>(Ljava/lang/String;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
@@ -1135,11 +1135,11 @@
 
     .line 28
     :cond_0
-    new-instance p1, Lcom/vk/im/ui/components/msg_send/picker/f/a;
+    new-instance p1, Lcom/vk/im/ui/components/msg_send/picker/f/NoResultsItem;
 
     sget-object v0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->f:Ljava/lang/String;
 
-    invoke-direct {p1, v0}, Lcom/vk/im/ui/components/msg_send/picker/f/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vk/im/ui/components/msg_send/picker/f/NoResultsItem;-><init>(Ljava/lang/String;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
@@ -1155,7 +1155,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     const/4 v1, 0x0
 
@@ -1163,11 +1163,11 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->j()Ljava/util/List;
 
     move-result-object v0
 
-    sget-object v3, Lcom/vk/im/ui/components/msg_send/picker/e/a;->a:Lcom/vk/im/ui/components/msg_send/picker/e/a;
+    sget-object v3, Lcom/vk/im/ui/components/msg_send/picker/e/LoadMoreItem;->a:Lcom/vk/im/ui/components/msg_send/picker/e/LoadMoreItem;
 
     invoke-interface {v0, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -1184,34 +1184,34 @@
     if-eqz p1, :cond_2
 
     .line 3
-    iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->c:Lcom/vk/im/ui/components/msg_send/picker/menu/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->c:Lcom/vk/im/ui/components/msg_send/picker/menu/MenuStateItems;
 
     invoke-static {v0}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/im/ui/components/msg_send/picker/e/a;->a:Lcom/vk/im/ui/components/msg_send/picker/e/a;
+    sget-object v1, Lcom/vk/im/ui/components/msg_send/picker/e/LoadMoreItem;->a:Lcom/vk/im/ui/components/msg_send/picker/e/LoadMoreItem;
 
     invoke-static {v0, v1}, Lkotlin/collections/l;->a(Ljava/util/Collection;Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->setItems(Ljava/util/List;)V
 
     goto :goto_0
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 4
     :cond_2
-    sget-object p1, Lcom/vk/im/ui/components/msg_send/picker/e/a;->a:Lcom/vk/im/ui/components/msg_send/picker/e/a;
+    sget-object p1, Lcom/vk/im/ui/components/msg_send/picker/e/LoadMoreItem;->a:Lcom/vk/im/ui/components/msg_send/picker/e/LoadMoreItem;
 
     invoke-static {p1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
@@ -1224,7 +1224,7 @@
 
     .line 5
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1236,32 +1236,32 @@
     invoke-direct {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->g()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->b:Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->j()Ljava/util/List;
 
     move-result-object v1
 
-    new-instance v2, Lcom/vk/im/ui/components/msg_send/picker/f/a;
+    new-instance v2, Lcom/vk/im/ui/components/msg_send/picker/f/NoResultsItem;
 
     sget-object v3, Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc;->h:Ljava/lang/String;
 
-    invoke-direct {v2, v3}, Lcom/vk/im/ui/components/msg_send/picker/f/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Lcom/vk/im/ui/components/msg_send/picker/f/NoResultsItem;-><init>(Ljava/lang/String;)V
 
     invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/Collection;Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/adapter_delegate/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->setItems(Ljava/util/List;)V
 
     return-void
 
     :cond_0
     const-string v0, "adapter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

@@ -3,7 +3,7 @@
 .source "ErrorView.java"
 
 # interfaces
-.implements Lcom/vk/libvideo/live/views/error/c;
+.implements Lcom/vk/libvideo/live/views/error/ErrorContract1;
 
 
 # instance fields
@@ -11,7 +11,7 @@
 
 .field private final b:Landroid/widget/TextView;
 
-.field private c:Lcom/vk/libvideo/live/views/error/a;
+.field private c:Lcom/vk/libvideo/live/views/error/ErrorContract;
 
 .field private d:Ljava/lang/String;
 
@@ -113,11 +113,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/libvideo/live/views/error/ErrorView;)Lcom/vk/libvideo/live/views/error/a;
+.method static synthetic a(Lcom/vk/libvideo/live/views/error/ErrorView;)Lcom/vk/libvideo/live/views/error/ErrorContract;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/live/views/error/ErrorView;->c:Lcom/vk/libvideo/live/views/error/a;
+    iget-object p0, p0, Lcom/vk/libvideo/live/views/error/ErrorView;->c:Lcom/vk/libvideo/live/views/error/ErrorContract;
 
     return-object p0
 .end method
@@ -130,12 +130,12 @@
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/libvideo/live/views/error/ErrorView;->c:Lcom/vk/libvideo/live/views/error/a;
+    iput-object v0, p0, Lcom/vk/libvideo/live/views/error/ErrorView;->c:Lcom/vk/libvideo/live/views/error/ErrorContract;
 
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Ljava/lang/String;Lcom/vk/libvideo/live/views/error/a;)V
+.method public a(Ljava/lang/String;Ljava/lang/String;Lcom/vk/libvideo/live/views/error/ErrorContract;)V
     .locals 0
 
     .line 3
@@ -145,7 +145,7 @@
     iput-object p2, p0, Lcom/vk/libvideo/live/views/error/ErrorView;->e:Ljava/lang/String;
 
     .line 5
-    iput-object p3, p0, Lcom/vk/libvideo/live/views/error/ErrorView;->c:Lcom/vk/libvideo/live/views/error/a;
+    iput-object p3, p0, Lcom/vk/libvideo/live/views/error/ErrorView;->c:Lcom/vk/libvideo/live/views/error/ErrorContract;
 
     .line 6
     iget-object p1, p0, Lcom/vk/libvideo/live/views/error/ErrorView;->b:Landroid/widget/TextView;
@@ -155,7 +155,7 @@
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 7
-    iget-object p1, p0, Lcom/vk/libvideo/live/views/error/ErrorView;->c:Lcom/vk/libvideo/live/views/error/a;
+    iget-object p1, p0, Lcom/vk/libvideo/live/views/error/ErrorView;->c:Lcom/vk/libvideo/live/views/error/ErrorContract;
 
     if-nez p1, :cond_0
 
@@ -193,7 +193,7 @@
     return-void
 .end method
 
-.method public getPresenter()Lcom/vk/libvideo/live/views/error/b;
+.method public getPresenter()Lcom/vk/libvideo/live/views/error/ErrorContract2;
     .locals 1
 
     const/4 v0, 0x0
@@ -205,14 +205,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/error/ErrorView;->getPresenter()Lcom/vk/libvideo/live/views/error/b;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/error/ErrorView;->getPresenter()Lcom/vk/libvideo/live/views/error/ErrorContract2;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public setPresenter(Lcom/vk/libvideo/live/views/error/b;)V
+.method public setPresenter(Lcom/vk/libvideo/live/views/error/ErrorContract2;)V
     .locals 0
 
     return-void
@@ -222,9 +222,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/live/views/error/b;
+    check-cast p1, Lcom/vk/libvideo/live/views/error/ErrorContract2;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/error/ErrorView;->setPresenter(Lcom/vk/libvideo/live/views/error/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/error/ErrorView;->setPresenter(Lcom/vk/libvideo/live/views/error/ErrorContract2;)V
 
     return-void
 .end method

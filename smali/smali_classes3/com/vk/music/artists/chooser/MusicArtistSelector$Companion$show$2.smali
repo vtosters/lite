@@ -3,12 +3,12 @@
 .source "MusicArtistSelector.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Lcom/vk/music/stats/c;)V
+    value = Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Lcom/vk/music/stats/MusicStatsRefer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/music/Artist;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -30,16 +30,16 @@
 # instance fields
 .field final synthetic $activity:Landroid/app/Activity;
 
-.field final synthetic $refer:Lcom/vk/music/stats/c;
+.field final synthetic $refer:Lcom/vk/music/stats/MusicStatsRefer;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Lcom/vk/music/stats/c;)V
+.method constructor <init>(Landroid/app/Activity;Lcom/vk/music/stats/MusicStatsRefer;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion$show$2;->$activity:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion$show$2;->$refer:Lcom/vk/music/stats/c;
+    iput-object p2, p0, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion$show$2;->$refer:Lcom/vk/music/stats/MusicStatsRefer;
 
     const/4 p1, 0x1
 
@@ -58,9 +58,9 @@
 
     iget-object v1, p0, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion$show$2;->$activity:Landroid/app/Activity;
 
-    iget-object v2, p0, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion$show$2;->$refer:Lcom/vk/music/stats/c;
+    iget-object v2, p0, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion$show$2;->$refer:Lcom/vk/music/stats/MusicStatsRefer;
 
-    invoke-static {v0, v1, p1, v2}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;Landroid/content/Context;Lcom/vk/dto/music/Artist;Lcom/vk/music/stats/c;)V
+    invoke-static {v0, v1, p1, v2}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;Landroid/content/Context;Lcom/vk/dto/music/Artist;Lcom/vk/music/stats/MusicStatsRefer;)V
 
     return-void
 .end method
@@ -73,7 +73,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion$show$2;->a(Lcom/vk/dto/music/Artist;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

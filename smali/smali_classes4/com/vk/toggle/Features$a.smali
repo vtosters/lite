@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -48,7 +48,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lb/h/g/g/b;->l()Z
+    invoke-static {}, Lb/h/g/g/BuildInfo;->l()Z
 
     move-result v0
 
@@ -103,7 +103,7 @@
 
     move-object v7, v13
 
-    invoke-direct/range {v7 .. v12}, Lcom/vk/toggle/FeatureManager$b;-><init>(Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v12}, Lcom/vk/toggle/FeatureManager$b;-><init>(Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-interface {v1, v6, v13}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -180,7 +180,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v6, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -238,7 +238,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lb/h/g/g/b;->l()Z
+    invoke-static {}, Lb/h/g/g/BuildInfo;->l()Z
 
     move-result v0
 

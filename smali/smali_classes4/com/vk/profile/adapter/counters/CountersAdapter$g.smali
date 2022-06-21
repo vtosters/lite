@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/profile/adapter/counters/CountersAdapter$c<",
-        "Lcom/vk/profile/adapter/counters/e$c;",
+        "Lcom/vk/profile/adapter/counters/CountersCacheManager$c;",
         ">;"
     }
 .end annotation
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/profile/adapter/counters/e$c;)V
+.method public a(Lcom/vk/profile/adapter/counters/CountersCacheManager$c;)V
     .locals 0
 
     return-void
@@ -53,9 +53,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/profile/adapter/counters/e$c;
+    check-cast p1, Lcom/vk/profile/adapter/counters/CountersCacheManager$c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/counters/CountersAdapter$g;->a(Lcom/vk/profile/adapter/counters/e$c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/counters/CountersAdapter$g;->a(Lcom/vk/profile/adapter/counters/CountersCacheManager$c;)V
 
     return-void
 .end method

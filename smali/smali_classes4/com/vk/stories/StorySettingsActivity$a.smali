@@ -1,5 +1,5 @@
 .class Lcom/vk/stories/StorySettingsActivity$a;
-.super Lc/a/c0/a;
+.super Lio/reactivex/observers/DisposableObserver/DisposableObserver;
 .source "StorySettingsActivity.java"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lc/a/c0/a<",
+        "Lio/reactivex/observers/DisposableObserver/DisposableObserver<",
         "Ljava/util/ArrayList<",
-        "Lcom/vk/dto/common/data/d;",
+        "Lcom/vk/dto/common/data/PrivacySection;",
         ">;>;"
     }
 .end annotation
@@ -34,7 +34,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/stories/StorySettingsActivity$a;->b:Lcom/vk/stories/StorySettingsActivity;
 
-    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/observers/DisposableObserver/DisposableObserver;-><init>()V
 
     return-void
 .end method
@@ -84,7 +84,7 @@
         value = {
             "(",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/common/data/d;",
+            "Lcom/vk/dto/common/data/PrivacySection;",
             ">;)V"
         }
     .end annotation
@@ -92,7 +92,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/StorySettingsActivity$a;->b:Lcom/vk/stories/StorySettingsActivity;
 
-    invoke-static {v0}, Lcom/vk/stories/StorySettingsActivity;->c(Lcom/vk/stories/StorySettingsActivity;)Lcom/vk/stories/v0;
+    invoke-static {v0}, Lcom/vk/stories/StorySettingsActivity;->c(Lcom/vk/stories/StorySettingsActivity;)Lcom/vk/stories/StoryPrivacySettingsController;
 
     move-result-object v0
 
@@ -104,15 +104,15 @@
 
     iget-object v2, p0, Lcom/vk/stories/StorySettingsActivity$a;->b:Lcom/vk/stories/StorySettingsActivity;
 
-    invoke-static {v2}, Lcom/vk/stories/StorySettingsActivity;->b(Lcom/vk/stories/StorySettingsActivity;)Lcom/vk/bridges/a;
+    invoke-static {v2}, Lcom/vk/stories/StorySettingsActivity;->b(Lcom/vk/stories/StorySettingsActivity;)Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/bridges/a;->k()Z
+    invoke-virtual {v2}, Lcom/vk/bridges/AuthBridge1;->k()Z
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/stories/v0;->a(ZZ)Ljava/util/Set;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/stories/StoryPrivacySettingsController;->a(ZZ)Ljava/util/Set;
 
     move-result-object v0
 
@@ -134,10 +134,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/dto/common/data/d;
+    check-cast v2, Lcom/vk/dto/common/data/PrivacySection;
 
     .line 3
-    iget-object v2, v2, Lcom/vk/dto/common/data/d;->b:Ljava/util/ArrayList;
+    iget-object v2, v2, Lcom/vk/dto/common/data/PrivacySection;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -178,7 +178,7 @@
     .line 6
     iget-object v4, p0, Lcom/vk/stories/StorySettingsActivity$a;->b:Lcom/vk/stories/StorySettingsActivity;
 
-    invoke-static {v4, v3}, Lcom/vk/stories/StorySettingsActivity;->a(Lcom/vk/stories/StorySettingsActivity;Lcom/vk/dto/common/data/PrivacySetting;)Lb/h/w/a;
+    invoke-static {v4, v3}, Lcom/vk/stories/StorySettingsActivity;->a(Lcom/vk/stories/StorySettingsActivity;Lcom/vk/dto/common/data/PrivacySetting;)Lb/h/w/PrivacySettingView;
 
     goto :goto_1
 
@@ -195,7 +195,7 @@
     .line 8
     iget-object v4, p0, Lcom/vk/stories/StorySettingsActivity$a;->b:Lcom/vk/stories/StorySettingsActivity;
 
-    invoke-static {v4, v3}, Lcom/vk/stories/StorySettingsActivity;->a(Lcom/vk/stories/StorySettingsActivity;Lcom/vk/dto/common/data/PrivacySetting;)Lb/h/w/a;
+    invoke-static {v4, v3}, Lcom/vk/stories/StorySettingsActivity;->a(Lcom/vk/stories/StorySettingsActivity;Lcom/vk/dto/common/data/PrivacySetting;)Lb/h/w/PrivacySettingView;
 
     :goto_1
     add-int/lit8 v1, v1, 0x1

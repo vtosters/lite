@@ -1,20 +1,20 @@
 .class public final Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;
-.super Lcom/vk/im/ui/views/adapter_delegate/d;
+.super Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
 .source "ContactVh.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/d<",
-        "Lcom/vk/im/ui/components/contacts/vc/contact/b;",
+        "Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder<",
+        "Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;",
         ">;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic l:[Lkotlin/u/j;
+.field static final synthetic l:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
 .field private final e:Landroid/widget/CheckBox;
 
-.field private final f:Lkotlin/e;
+.field private final f:Lkotlin/Lazy2;
 
 .field private final g:Ljava/lang/StringBuffer;
 
@@ -36,9 +36,9 @@
 
 .field private final i:I
 
-.field private j:Lcom/vk/im/ui/components/contacts/vc/contact/b;
+.field private j:Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;
 
-.field private final k:Lcom/vk/im/ui/components/contacts/vc/contact/a;
+.field private final k:Lcom/vk/im/ui/components/contacts/vc/contact/ContactCallback;
 
 
 # direct methods
@@ -47,13 +47,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -61,26 +61,26 @@
 
     const-string v4, "getOnlineFormatter()Lcom/vk/core/formatters/OnlineFormatter;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->l:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->l:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/contact/a;)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/contact/ContactCallback;)V
     .locals 2
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/d;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->k:Lcom/vk/im/ui/components/contacts/vc/contact/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->k:Lcom/vk/im/ui/components/contacts/vc/contact/ContactCallback;
 
     .line 2
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -152,11 +152,11 @@
 
     invoke-direct {p2, p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh$onlineFormatter$2;-><init>(Landroid/view/View;)V
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->f:Lkotlin/e;
+    iput-object p2, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->f:Lkotlin/Lazy2;
 
     .line 8
     new-instance p2, Ljava/lang/StringBuffer;
@@ -172,7 +172,7 @@
 
     const-string v0, "view.context"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v1, Lcom/vk/im/ui/c;->accent:I
 
@@ -187,7 +187,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget p2, Lcom/vk/im/ui/c;->text_secondary:I
 
@@ -218,20 +218,20 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;)Lcom/vk/im/ui/components/contacts/vc/contact/a;
+.method public static final synthetic a(Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;)Lcom/vk/im/ui/components/contacts/vc/contact/ContactCallback;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->k:Lcom/vk/im/ui/components/contacts/vc/contact/a;
+    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->k:Lcom/vk/im/ui/components/contacts/vc/contact/ContactCallback;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;)Lcom/vk/im/ui/components/contacts/vc/contact/b;
+.method public static final synthetic b(Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;)Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->j:Lcom/vk/im/ui/components/contacts/vc/contact/b;
+    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->j:Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;
 
     if-eqz p0, :cond_0
 
@@ -240,7 +240,7 @@
     :cond_0
     const-string p0, "model"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -250,15 +250,15 @@
 .method private final e0()Lcom/vk/core/formatters/OnlineFormatter;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->f:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->l:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->l:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -269,14 +269,14 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/ui/components/contacts/vc/contact/b;)V
+.method public a(Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;)V
     .locals 5
 
     .line 3
-    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->j:Lcom/vk/im/ui/components/contacts/vc/contact/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->j:Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/b;->b()Lcom/vk/im/engine/models/j;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;->b()Lcom/vk/im/engine/models/Profile;
 
     move-result-object v0
 
@@ -287,10 +287,10 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->g:Ljava/lang/StringBuffer;
 
-    invoke-static {v1, v0, v2}, Lcom/vk/im/ui/formatters/r;->a(Lcom/vk/core/formatters/OnlineFormatter;Lcom/vk/im/engine/models/j;Ljava/lang/StringBuffer;)V
+    invoke-static {v1, v0, v2}, Lcom/vk/im/ui/formatters/OnlineFormatterExt;->a(Lcom/vk/core/formatters/OnlineFormatter;Lcom/vk/im/engine/models/Profile;Ljava/lang/StringBuffer;)V
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/b;->d()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;->d()I
 
     move-result v1
 
@@ -324,7 +324,7 @@
     :cond_0
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -338,7 +338,7 @@
 
     const-string v2, "itemView.context.getStri\u2026ring.vkim_contact_invite)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     iget v2, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->i:I
@@ -349,7 +349,7 @@
     :cond_1
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -363,7 +363,7 @@
 
     const-string v2, "itemView.context.getStri\u2026vkim_contact_new_contact)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     iget v2, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->h:I
@@ -374,7 +374,7 @@
     :cond_2
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -388,7 +388,7 @@
 
     const-string v2, "itemView.context.getStri\u2026ring.vkim_contact_say_hi)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     iget v2, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->i:I
@@ -399,7 +399,7 @@
     :cond_3
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -413,16 +413,16 @@
 
     const-string v2, "itemView.context.getStri\u2026ng.vkim_contact_birthday)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 16
     iget v2, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->i:I
 
     .line 17
     :goto_0
-    iget-object v3, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->k:Lcom/vk/im/ui/components/contacts/vc/contact/a;
+    iget-object v3, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->k:Lcom/vk/im/ui/components/contacts/vc/contact/ContactCallback;
 
-    invoke-interface {v3, p1}, Lcom/vk/im/ui/components/contacts/vc/contact/a;->a(Lcom/vk/im/ui/components/contacts/vc/contact/b;)Z
+    invoke-interface {v3, p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactCallback;->a(Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;)Z
 
     move-result v3
 
@@ -449,14 +449,14 @@
     .line 18
     iget-object v3, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->d:Landroid/widget/TextView;
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v3}, Lcom/vk/extensions/ViewExtKt;->r(Landroid/view/View;)V
 
     .line 19
     iget-object v3, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->d:Landroid/widget/TextView;
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -471,7 +471,7 @@
     :cond_5
     iget-object v1, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->d:Landroid/widget/TextView;
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
@@ -481,9 +481,9 @@
 
     const-string v2, "title"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/b;->a()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;->a()Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -492,23 +492,23 @@
     .line 23
     iget-object v1, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->a:Lcom/vk/im/ui/views/avatars/AvatarView;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {v1, v0}, Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/vk/im/engine/models/Profile;)V
 
     .line 24
     iget-object v1, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->b:Landroid/widget/ImageView;
 
-    invoke-static {v1, v0}, Lcom/vk/im/ui/views/g;->a(Landroid/widget/ImageView;Lcom/vk/im/engine/models/j;)V
+    invoke-static {v1, v0}, Lcom/vk/im/ui/views/OnlineExt;->a(Landroid/widget/ImageView;Lcom/vk/im/engine/models/Profile;)V
 
     .line 25
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->e:Landroid/widget/CheckBox;
 
     const-string v1, "checkBox"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->k:Lcom/vk/im/ui/components/contacts/vc/contact/a;
+    iget-object v2, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->k:Lcom/vk/im/ui/components/contacts/vc/contact/ContactCallback;
 
-    invoke-interface {v2}, Lcom/vk/im/ui/components/contacts/vc/contact/a;->b()Z
+    invoke-interface {v2}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactCallback;->b()Z
 
     move-result v2
 
@@ -517,9 +517,9 @@
     .line 26
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->e:Landroid/widget/CheckBox;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/b;->c()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;->c()Z
 
     move-result p1
 
@@ -528,13 +528,13 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/c;)V
+.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/im/ui/components/contacts/vc/contact/b;
+    check-cast p1, Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->a(Lcom/vk/im/ui/components/contacts/vc/contact/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/vc/contact/ContactVh;->a(Lcom/vk/im/ui/components/contacts/vc/contact/ContactItem;)V
 
     return-void
 .end method

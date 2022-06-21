@@ -37,7 +37,7 @@
 
 .field private h:Lcom/vk/stickers/AutoSuggestStickersPopupWindow$Adapter;
 
-.field private i:Lcom/vk/stickers/r;
+.field private i:Lcom/vk/stickers/StickerLongtapWindow;
 
 .field private j:Lcom/vk/stickers/LeftDeltaLayout;
 
@@ -57,7 +57,7 @@
 
 .field private final n:Landroid/text/TextWatcher;
 
-.field private final o:Lio/reactivex/disposables/a;
+.field private final o:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private p:Lcom/vk/stickers/AutoSuggestStickersPopupWindow$d;
 
@@ -67,7 +67,7 @@
 
 .field private final s:Landroid/view/View;
 
-.field private final t:Lcom/vk/stickers/b0$k;
+.field private final t:Lcom/vk/stickers/StickersView$k;
 
 
 # direct methods
@@ -78,10 +78,10 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$e;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$e;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
-    sget v0, Lcom/vk/stickers/v;->g:I
+    sget v0, Lcom/vk/stickers/StickersConfig;->g:I
 
     const/16 v1, 0x1c
 
@@ -101,7 +101,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/widget/EditText;Landroid/view/View;Lcom/vk/stickers/b0$k;)V
+.method public constructor <init>(Landroid/content/Context;Landroid/widget/EditText;Landroid/view/View;Lcom/vk/stickers/StickersView$k;)V
     .locals 4
 
     .line 1
@@ -113,7 +113,7 @@
 
     iput-object p3, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->s:Landroid/view/View;
 
-    iput-object p4, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->t:Lcom/vk/stickers/b0$k;
+    iput-object p4, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->t:Lcom/vk/stickers/StickersView$k;
 
     const/high16 p1, 0x41c00000    # 24.0f
 
@@ -134,17 +134,17 @@
     iput-boolean p1, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->e:Z
 
     .line 6
-    new-instance p2, Lcom/vk/stickers/r;
+    new-instance p2, Lcom/vk/stickers/StickerLongtapWindow;
 
     iget-object p3, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->q:Landroid/content/Context;
 
-    new-instance p4, Lcom/vk/stickers/o;
+    new-instance p4, Lcom/vk/stickers/StickerCheckerImpl;
 
-    invoke-direct {p4}, Lcom/vk/stickers/o;-><init>()V
+    invoke-direct {p4}, Lcom/vk/stickers/StickerCheckerImpl;-><init>()V
 
-    invoke-direct {p2, p3, p4}, Lcom/vk/stickers/r;-><init>(Landroid/content/Context;Lcom/vk/stickers/n;)V
+    invoke-direct {p2, p3, p4}, Lcom/vk/stickers/StickerLongtapWindow;-><init>(Landroid/content/Context;Lcom/vk/stickers/StickerChecker;)V
 
-    iput-object p2, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->i:Lcom/vk/stickers/r;
+    iput-object p2, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->i:Lcom/vk/stickers/StickerLongtapWindow;
 
     .line 7
     invoke-direct {p0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->g()Landroid/text/TextWatcher;
@@ -154,11 +154,11 @@
     iput-object p2, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->n:Landroid/text/TextWatcher;
 
     .line 8
-    new-instance p2, Lio/reactivex/disposables/a;
+    new-instance p2, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p2}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p2}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->o:Lio/reactivex/disposables/a;
+    iput-object p2, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->o:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 9
     iget-object p2, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->q:Landroid/content/Context;
@@ -195,9 +195,9 @@
     .line 13
     new-instance p4, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$Adapter;
 
-    iget-object v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->t:Lcom/vk/stickers/b0$k;
+    iget-object v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->t:Lcom/vk/stickers/StickersView$k;
 
-    invoke-direct {p4, v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$Adapter;-><init>(Lcom/vk/stickers/b0$k;)V
+    invoke-direct {p4, v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$Adapter;-><init>(Lcom/vk/stickers/StickersView$k;)V
 
     iput-object p4, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->h:Lcom/vk/stickers/AutoSuggestStickersPopupWindow$Adapter;
 
@@ -238,16 +238,16 @@
     invoke-virtual {p2, p3}, Lcom/vk/stickers/LongtapRecyclerView;->setLongtapListener(Lcom/vk/stickers/LongtapRecyclerView$b;)V
 
     .line 18
-    iget-object p2, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->i:Lcom/vk/stickers/r;
+    iget-object p2, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->i:Lcom/vk/stickers/StickerLongtapWindow;
 
     new-instance p3, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$c;
 
     invoke-direct {p3, p0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$c;-><init>(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/stickers/r;->a(Lcom/vk/stickers/q$b;)V
+    invoke-virtual {p2, p3}, Lcom/vk/stickers/StickerLongtapWindow;->a(Lcom/vk/stickers/StickerLongtapView$b;)V
 
     .line 19
-    new-instance p2, Lcom/vk/stickers/c;
+    new-instance p2, Lcom/vk/stickers/CalloutPopupBackgroundDrawable;
 
     .line 20
     sget p3, Lcom/vk/stickers/i;->bg_stickers_suggestions_left_full:I
@@ -271,7 +271,7 @@
     move-result-object v0
 
     .line 23
-    invoke-direct {p2, p3, p4, v0}, Lcom/vk/stickers/c;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p2, p3, p4, v0}, Lcom/vk/stickers/CalloutPopupBackgroundDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     .line 24
     iget-object p3, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->g:Lcom/vk/stickers/LongtapRecyclerView;
@@ -327,7 +327,7 @@
     .line 29
     iget-object p3, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->j:Lcom/vk/stickers/LeftDeltaLayout;
 
-    invoke-virtual {p3, p2}, Lcom/vk/stickers/LeftDeltaLayout;->setCalloutPopupBackgroundDrawable(Lcom/vk/stickers/c;)V
+    invoke-virtual {p3, p2}, Lcom/vk/stickers/LeftDeltaLayout;->setCalloutPopupBackgroundDrawable(Lcom/vk/stickers/CalloutPopupBackgroundDrawable;)V
 
     .line 30
     iget-object p2, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->j:Lcom/vk/stickers/LeftDeltaLayout;
@@ -416,11 +416,11 @@
     invoke-virtual {p2, p3}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 38
-    sget-object p2, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object p2, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
     const/4 p3, 0x0
 
-    invoke-static {p2, v1, p1, p3}, Lcom/vk/stickers/t;->a(Lcom/vk/stickers/t;ZILjava/lang/Object;)V
+    invoke-static {p2, v1, p1, p3}, Lcom/vk/stickers/Stickers;->a(Lcom/vk/stickers/Stickers;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -452,11 +452,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lc/a/m;
+.method public static final synthetic c(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lio/reactivex/Observable;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->f()Lc/a/m;
+    invoke-direct {p0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->f()Lio/reactivex/Observable;
 
     move-result-object p0
 
@@ -490,12 +490,12 @@
     return-object v0
 .end method
 
-.method private final f()Lc/a/m;
+.method private final f()Lio/reactivex/Observable;
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Ljava/lang/Integer;",
             ">;>;"
@@ -503,15 +503,15 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->t:Lcom/vk/stickers/b0$k;
+    iget-object v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->t:Lcom/vk/stickers/StickersView$k;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/b0$k;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/stickers/StickersView$k;->a()Ljava/util/List;
 
     move-result-object v0
 
     const-string v1, "listener.usersForStore"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -527,13 +527,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "Observable.just(emptyList<Int>())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
@@ -555,34 +555,34 @@
     if-eqz v1, :cond_1
 
     .line 7
-    invoke-static {v1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {v1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "Observable.just(it)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
     .line 8
     :cond_1
-    new-instance v1, Lb/h/c/z/b;
+    new-instance v1, Lb/h/c/z/StickersGetAvailableForGift;
 
     const-string v3, "recipientUserId"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    invoke-direct {v1, v0}, Lb/h/c/z/b;-><init>(I)V
+    invoke-direct {v1, v0}, Lb/h/c/z/StickersGetAvailableForGift;-><init>(I)V
 
     const/4 v0, 0x0
 
     .line 9
-    invoke-static {v1, v0, v2, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v0, v2, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -601,7 +601,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -610,22 +610,22 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$f;-><init>(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "StickersGetAvailableForG\u2026 availablePacksIds = it }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public static final synthetic f(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lio/reactivex/disposables/a;
+.method public static final synthetic f(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lio/reactivex/disposables/CompositeDisposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->o:Lio/reactivex/disposables/a;
+    iget-object p0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->o:Lio/reactivex/disposables/CompositeDisposable;
 
     return-object p0
 .end method
@@ -641,11 +641,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic g(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lcom/vk/stickers/r;
+.method public static final synthetic g(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lcom/vk/stickers/StickerLongtapWindow;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->i:Lcom/vk/stickers/r;
+    iget-object p0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->i:Lcom/vk/stickers/StickerLongtapWindow;
 
     return-object p0
 .end method
@@ -680,9 +680,9 @@
     iput-boolean v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->e:Z
 
     .line 28
-    iget-object v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->o:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->o:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->a()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->a()V
 
     return-void
 .end method

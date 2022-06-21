@@ -60,7 +60,7 @@
 
     if-eq p1, p2, :cond_0
 
-    new-instance p1, Lcom/vtosters/lite/api/wall/e;
+    new-instance p1, Lcom/vtosters/lite/api/wall/WallDeleteComment;
 
     iget-object p2, p0, Lcom/vk/newsfeed/controllers/PostsController$y;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
@@ -92,7 +92,7 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/api/wall/e;-><init>(IIIILjava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/api/wall/WallDeleteComment;-><init>(IIIILjava/lang/String;)V
 
     goto :goto_0
 
@@ -108,7 +108,7 @@
 
     const-string p2, "topic"
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -134,9 +134,9 @@
 
     move-result p2
 
-    new-instance v0, Lcom/vk/api/board/e;
+    new-instance v0, Lcom/vk/api/board/BoardDeleteTopic;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/api/board/e;-><init>(II)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/api/board/BoardDeleteTopic;-><init>(II)V
 
     move-object p1, v0
 
@@ -154,13 +154,13 @@
 
     const-string p2, "market"
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    new-instance p1, Lcom/vk/api/market/d;
+    new-instance p1, Lcom/vk/api/market/MarketDelete;
 
     iget-object p2, p0, Lcom/vk/newsfeed/controllers/PostsController$y;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
@@ -178,7 +178,7 @@
 
     move-result v0
 
-    invoke-direct {p1, p2, v0}, Lcom/vk/api/market/d;-><init>(II)V
+    invoke-direct {p1, p2, v0}, Lcom/vk/api/market/MarketDelete;-><init>(II)V
 
     goto :goto_0
 
@@ -186,7 +186,7 @@
     :cond_2
     iget-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$y;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-static {p1}, Lcom/vtosters/lite/api/wall/d;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vtosters/lite/api/wall/d;
+    invoke-static {p1}, Lcom/vtosters/lite/api/wall/WallDelete;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vtosters/lite/api/wall/WallDelete;
 
     move-result-object p1
 
@@ -194,7 +194,7 @@
 
     .line 7
     :cond_3
-    invoke-static {p1}, Lcom/vtosters/lite/api/wall/d;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vtosters/lite/api/wall/d;
+    invoke-static {p1}, Lcom/vtosters/lite/api/wall/WallDelete;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vtosters/lite/api/wall/WallDelete;
 
     move-result-object p1
 
@@ -206,7 +206,7 @@
     const/4 v0, 0x0
 
     .line 8
-    invoke-static {p1, v0, p2, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, v0, p2, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -226,7 +226,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -242,7 +242,7 @@
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/controllers/PostsController$y$b;-><init>(Lcom/vk/newsfeed/controllers/PostsController$y;)V
 
     .line 10
-    invoke-virtual {p1, p2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_4
     return-void

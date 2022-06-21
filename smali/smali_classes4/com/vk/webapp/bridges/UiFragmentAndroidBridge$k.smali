@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/webapp/p/a/a;
+.field final synthetic a:Lcom/vk/webapp/p/a/StatusNavBarController;
 
 .field final synthetic b:Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
@@ -30,10 +30,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/webapp/p/a/a;Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V
+.method constructor <init>(Lcom/vk/webapp/p/a/StatusNavBarController;Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$k;->a:Lcom/vk/webapp/p/a/a;
+    iput-object p1, p0, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$k;->a:Lcom/vk/webapp/p/a/StatusNavBarController;
 
     iput-object p2, p0, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$k;->b:Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
@@ -54,9 +54,9 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$k;->a:Lcom/vk/webapp/p/a/a;
+    iget-object v0, p0, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$k;->a:Lcom/vk/webapp/p/a/StatusNavBarController;
 
-    new-instance v1, Lcom/vk/webapp/q/a/a;
+    new-instance v1, Lcom/vk/webapp/q/a/StatusNavBarConfig;
 
     iget-object v2, p0, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$k;->c:Ljava/lang/Integer;
 
@@ -64,9 +64,9 @@
 
     iget-object v4, p0, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$k;->e:Ljava/lang/Integer;
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/vk/webapp/q/a/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/vk/webapp/q/a/StatusNavBarConfig;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/p/a/a;->a(Lcom/vk/webapp/q/a/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/p/a/StatusNavBarController;->a(Lcom/vk/webapp/q/a/StatusNavBarConfig;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$k;->b:Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
@@ -87,11 +87,11 @@
 
     const-string v3, "JSONObject().put(\"result\", true)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v3, "VKWebAppSetViewSettingsResult"
 
-    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
 .end method

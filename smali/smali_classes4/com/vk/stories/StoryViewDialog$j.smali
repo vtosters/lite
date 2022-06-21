@@ -3,7 +3,7 @@
 .source "StoryViewDialog.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/e;
+.implements Lkotlin/jvm/b/Functions3;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/e<",
+        "Lkotlin/jvm/b/Functions3<",
         "Landroidx/dynamicanimation/animation/DynamicAnimation<",
         "+",
         "Landroidx/dynamicanimation/animation/DynamicAnimation<",
@@ -27,7 +27,7 @@
         "Ljava/lang/Boolean;",
         "Ljava/lang/Float;",
         "Ljava/lang/Float;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -79,14 +79,14 @@
 
     check-cast p4, Ljava/lang/Float;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/stories/StoryViewDialog$j;->a(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/Boolean;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/m;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/stories/StoryViewDialog$j;->a(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/Boolean;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/Unit;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/Boolean;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/m;
+.method public a(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/Boolean;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/Unit;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -99,7 +99,7 @@
             "Ljava/lang/Float;",
             "Ljava/lang/Float;",
             ")",
-            "Lkotlin/m;"
+            "Lkotlin/Unit;"
         }
     .end annotation
 
@@ -188,11 +188,11 @@
     .line 9
     iget-object p1, p0, Lcom/vk/stories/StoryViewDialog$j;->e:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/s1;->k()V
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewContainer;->k()V
 
     .line 10
     iget-object p1, p0, Lcom/vk/stories/StoryViewDialog$j;->e:Lcom/vk/stories/StoryViewDialog;
@@ -206,13 +206,13 @@
     .line 11
     iget-object p1, p0, Lcom/vk/stories/StoryViewDialog$j;->e:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {p1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object p1
 
     const/4 p3, 0x1
 
-    invoke-virtual {p1, p3}, Lcom/vk/stories/view/s1;->a(Z)V
+    invoke-virtual {p1, p3}, Lcom/vk/stories/view/StoryViewContainer;->a(Z)V
 
     :cond_1
     return-object p2

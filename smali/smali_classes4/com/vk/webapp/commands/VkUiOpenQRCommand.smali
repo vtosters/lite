@@ -1,5 +1,5 @@
 .class public final Lcom/vk/webapp/commands/VkUiOpenQRCommand;
-.super Lcom/vk/webapp/commands/c;
+.super Lcom/vk/webapp/commands/VkUiBaseCommand;
 .source "VkUiOpenQRCommand.kt"
 
 
@@ -25,7 +25,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/commands/VkUiOpenQRCommand$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/commands/VkUiOpenQRCommand$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/webapp/commands/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;-><init>()V
 
     iput-boolean p1, p0, Lcom/vk/webapp/commands/VkUiOpenQRCommand;->g:Z
 
@@ -87,7 +87,7 @@
     const-string p1, "VKWebAppQRDone"
 
     .line 4
-    invoke-virtual {p0, p1, v0}, Lcom/vk/webapp/commands/c;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object p1
 
@@ -115,7 +115,7 @@
     const-string p1, "VKWebAppOpenQRResult"
 
     .line 7
-    invoke-virtual {p0, p1, v0}, Lcom/vk/webapp/commands/c;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object p1
 
@@ -134,7 +134,7 @@
     const-string p1, "VKWebAppOpenCodeReaderResult"
 
     .line 9
-    invoke-virtual {p0, p1, v0}, Lcom/vk/webapp/commands/c;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object p1
 
@@ -157,7 +157,7 @@
     .locals 2
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
     move-result-object v0
 
@@ -171,7 +171,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
 
     :cond_0
     return-void
@@ -195,7 +195,7 @@
 
     const-string v1, "VKWebAppQRClosed"
 
-    invoke-virtual {p0, v1, v0}, Lcom/vk/webapp/commands/c;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-virtual {p0, v1, v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -223,7 +223,7 @@
 
     const-string v1, "VKWebAppOpenQRFailed"
 
-    invoke-virtual {p0, v1, v0}, Lcom/vk/webapp/commands/c;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-virtual {p0, v1, v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -239,7 +239,7 @@
 
     const-string v1, "VKWebAppOpenCodeReaderFailed"
 
-    invoke-virtual {p0, v1, v0}, Lcom/vk/webapp/commands/c;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-virtual {p0, v1, v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -289,14 +289,14 @@
     .locals 9
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->e()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->e()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object v1
 
@@ -336,7 +336,7 @@
     invoke-direct {v8, p0}, Lcom/vk/webapp/commands/VkUiOpenQRCommand$openQRReader$2;-><init>(Lcom/vk/webapp/commands/VkUiOpenQRCommand;)V
 
     .line 7
-    invoke-virtual/range {v2 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v2 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     :cond_1
     return-void
@@ -346,7 +346,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
     move-result-object v0
 
@@ -360,7 +360,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
 
     :cond_0
     return-void
@@ -433,7 +433,7 @@
 
     .line 10
     :cond_4
-    invoke-super {p0, p1, p2, p3}, Lcom/vk/webapp/commands/c;->a(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(IILandroid/content/Intent;)V
 
     :goto_2
     return-void
@@ -445,7 +445,7 @@
     const-string v0, "from_vk_pay"
 
     .line 2
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

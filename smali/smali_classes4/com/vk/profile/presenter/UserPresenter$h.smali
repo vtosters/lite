@@ -3,12 +3,12 @@
 .source "UserPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/presenter/UserPresenter;->j1()Lc/a/m;
+    value = Lcom/vk/profile/presenter/UserPresenter;->j1()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -47,12 +47,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/execute/g$a;)Lcom/vtosters/lite/api/ExtendedUserProfile;
+.method public final a(Lcom/vtosters/lite/api/execute/GetFullProfile$a;)Lcom/vtosters/lite/api/ExtendedUserProfile;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/api/execute/g$a<",
+            "Lcom/vtosters/lite/api/execute/GetFullProfile$a<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">;)",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;"
@@ -67,7 +67,7 @@
     invoke-static {v0, v1}, Lcom/vk/profile/presenter/UserPresenter;->a(Lcom/vk/profile/presenter/UserPresenter;Z)V
 
     .line 2
-    iget-object p1, p1, Lcom/vtosters/lite/api/execute/g$a;->a:Lcom/vtosters/lite/api/ExtendedUserProfile;
+    iget-object p1, p1, Lcom/vtosters/lite/api/execute/GetFullProfile$a;->a:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     return-object p1
 .end method
@@ -76,9 +76,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/execute/g$a;
+    check-cast p1, Lcom/vtosters/lite/api/execute/GetFullProfile$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/UserPresenter$h;->a(Lcom/vtosters/lite/api/execute/g$a;)Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/UserPresenter$h;->a(Lcom/vtosters/lite/api/execute/GetFullProfile$a;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 

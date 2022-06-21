@@ -3,7 +3,7 @@
 .source "PagerAdapterFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/msg_search/vc/p;)V
+.method constructor <init>(Lcom/vk/im/ui/components/msg_search/vc/VcCallback;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -47,12 +47,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
-    const-class v0, Lcom/vk/im/ui/components/msg_search/vc/p;
+    const-class v0, Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -87,10 +87,10 @@
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vk/im/ui/components/msg_search/vc/p;
+    check-cast v0, Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_search/vc/p;->a()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/components/msg_search/vc/VcCallback;->a()Z
 
     move-result v0
 

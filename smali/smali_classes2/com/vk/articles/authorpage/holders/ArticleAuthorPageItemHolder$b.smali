@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->a(Lcom/vk/articles/authorpage/g/a;)V
+    value = Lcom/vk/articles/authorpage/holders/ArticleAuthorPageItemHolder;->a(Lcom/vk/articles/authorpage/g/ArticleAuthorPageItem;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

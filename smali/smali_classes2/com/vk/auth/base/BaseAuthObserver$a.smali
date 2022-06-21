@@ -3,12 +3,12 @@
 .source "BaseAuthObserver.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/base/BaseAuthObserver;->b(Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Z)Lc/a/z/g;
+    value = Lcom/vk/auth/base/BaseAuthObserver;->b(Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)Lio/reactivex/functions/Consumer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/auth/api/models/ValidatePhoneResult;",
         ">;"
     }
@@ -32,7 +32,7 @@
 # instance fields
 .field final synthetic a:Lcom/vk/auth/base/BaseAuthObserver;
 
-.field final synthetic b:Lkotlin/jvm/b/a;
+.field final synthetic b:Lkotlin/jvm/b/Functions;
 
 .field final synthetic c:Lcom/vk/auth/main/VkAuthState;
 
@@ -44,12 +44,12 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/auth/base/BaseAuthObserver;Lkotlin/jvm/b/a;Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Z)V
+.method constructor <init>(Lcom/vk/auth/base/BaseAuthObserver;Lkotlin/jvm/b/Functions;Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/auth/base/BaseAuthObserver$a;->a:Lcom/vk/auth/base/BaseAuthObserver;
 
-    iput-object p2, p0, Lcom/vk/auth/base/BaseAuthObserver$a;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/auth/base/BaseAuthObserver$a;->b:Lkotlin/jvm/b/Functions;
 
     iput-object p3, p0, Lcom/vk/auth/base/BaseAuthObserver$a;->c:Lcom/vk/auth/main/VkAuthState;
 
@@ -70,28 +70,28 @@
     .locals 8
 
     .line 1
-    sget-object v0, Lcom/vk/auth/utils/e;->a:Lcom/vk/auth/utils/e;
+    sget-object v0, Lcom/vk/auth/utils/ValidatePhoneUtils;->a:Lcom/vk/auth/utils/ValidatePhoneUtils;
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vk/auth/base/BaseAuthObserver$a;->b:Lkotlin/jvm/b/a;
+    iget-object v1, p0, Lcom/vk/auth/base/BaseAuthObserver$a;->b:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/vk/auth/verification/base/CodeState;
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/auth/utils/e;->a(Lcom/vk/auth/api/models/ValidatePhoneResult;Lcom/vk/auth/verification/base/CodeState;)Lcom/vk/auth/verification/base/CodeState;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/auth/utils/ValidatePhoneUtils;->a(Lcom/vk/auth/api/models/ValidatePhoneResult;Lcom/vk/auth/verification/base/CodeState;)Lcom/vk/auth/verification/base/CodeState;
 
     move-result-object v6
 
     .line 2
     iget-object p1, p0, Lcom/vk/auth/base/BaseAuthObserver$a;->a:Lcom/vk/auth/base/BaseAuthObserver;
 
-    invoke-static {p1}, Lcom/vk/auth/base/BaseAuthObserver;->a(Lcom/vk/auth/base/BaseAuthObserver;)Lcom/vk/auth/main/g;
+    invoke-static {p1}, Lcom/vk/auth/base/BaseAuthObserver;->a(Lcom/vk/auth/base/BaseAuthObserver;)Lcom/vk/auth/main/AuthRouter;
 
     move-result-object v2
 
@@ -103,7 +103,7 @@
 
     iget-boolean v7, p0, Lcom/vk/auth/base/BaseAuthObserver$a;->f:Z
 
-    invoke-interface/range {v2 .. v7}, Lcom/vk/auth/main/g;->a(Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lcom/vk/auth/verification/base/CodeState;Z)V
+    invoke-interface/range {v2 .. v7}, Lcom/vk/auth/main/AuthRouter;->a(Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lcom/vk/auth/verification/base/CodeState;Z)V
 
     return-void
 .end method

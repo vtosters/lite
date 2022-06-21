@@ -3,7 +3,7 @@
 .source "CommunitiesCatalogFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -68,7 +68,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/vk/navigation/q;->Z:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->Z:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 

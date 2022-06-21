@@ -18,7 +18,7 @@
 # instance fields
 .field private a:Lcom/vk/webapp/helpers/AppForegroundNotifier$Companion$State;
 
-.field private final b:Lcom/vk/webapp/bridges/a;
+.field private final b:Lcom/vk/webapp/bridges/AndroidBridge;
 
 
 # direct methods
@@ -29,20 +29,20 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/helpers/AppForegroundNotifier$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/helpers/AppForegroundNotifier$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/webapp/helpers/AppForegroundNotifier;->c:Lcom/vk/webapp/helpers/AppForegroundNotifier$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/webapp/bridges/a;)V
+.method public constructor <init>(Lcom/vk/webapp/bridges/AndroidBridge;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/webapp/helpers/AppForegroundNotifier;->b:Lcom/vk/webapp/bridges/a;
+    iput-object p1, p0, Lcom/vk/webapp/helpers/AppForegroundNotifier;->b:Lcom/vk/webapp/bridges/AndroidBridge;
 
     .line 2
     sget-object p1, Lcom/vk/webapp/helpers/AppForegroundNotifier$Companion$State;->UNKNOWN:Lcom/vk/webapp/helpers/AppForegroundNotifier$Companion$State;
@@ -70,7 +70,7 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/webapp/helpers/AppForegroundNotifier;->b:Lcom/vk/webapp/bridges/a;
+    iget-object v0, p0, Lcom/vk/webapp/helpers/AppForegroundNotifier;->b:Lcom/vk/webapp/bridges/AndroidBridge;
 
     sget-object v1, Lcom/vk/webapp/helpers/AppForegroundNotifier;->c:Lcom/vk/webapp/helpers/AppForegroundNotifier$Companion;
 
@@ -80,7 +80,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/bridges/a;->e(Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/bridges/AndroidBridge;->e(Lorg/json/JSONObject;)V
 
     .line 3
     sget-object v0, Lcom/vk/webapp/helpers/AppForegroundNotifier$Companion$State;->BACKGROUND:Lcom/vk/webapp/helpers/AppForegroundNotifier$Companion$State;
@@ -119,7 +119,7 @@
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/vk/webapp/helpers/AppForegroundNotifier;->b:Lcom/vk/webapp/bridges/a;
+    iget-object v0, p0, Lcom/vk/webapp/helpers/AppForegroundNotifier;->b:Lcom/vk/webapp/bridges/AndroidBridge;
 
     sget-object v1, Lcom/vk/webapp/helpers/AppForegroundNotifier;->c:Lcom/vk/webapp/helpers/AppForegroundNotifier$Companion;
 
@@ -129,7 +129,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/bridges/a;->e(Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/bridges/AndroidBridge;->e(Lorg/json/JSONObject;)V
 
     .line 5
     sget-object v0, Lcom/vk/webapp/helpers/AppForegroundNotifier$Companion$State;->FOREGROUND:Lcom/vk/webapp/helpers/AppForegroundNotifier$Companion$State;

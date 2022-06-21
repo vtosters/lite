@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/masks/MasksView$e;->b(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/vk/lists/a;
+    value = Lcom/vk/stories/masks/MasksView$e;->b(Landroid/content/Context;Landroid/util/AttributeSet;)Lcom/vk/lists/AbstractErrorView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

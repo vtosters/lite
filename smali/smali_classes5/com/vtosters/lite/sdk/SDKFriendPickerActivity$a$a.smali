@@ -1,11 +1,11 @@
 .class Lcom/vtosters/lite/sdk/SDKFriendPickerActivity$a$a;
-.super Lcom/vtosters/lite/fragments/friends/presenter/a;
+.super Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter;
 .source "SDKFriendPickerActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/sdk/SDKFriendPickerActivity$a;->d5()Lcom/vtosters/lite/fragments/friends/presenter/a;
+    value = Lcom/vtosters/lite/sdk/SDKFriendPickerActivity$a;->d5()Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,13 +19,13 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/sdk/SDKFriendPickerActivity$a;Lcom/vtosters/lite/fragments/friends/presenter/a$a;)V
+.method constructor <init>(Lcom/vtosters/lite/sdk/SDKFriendPickerActivity$a;Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter$a;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/sdk/SDKFriendPickerActivity$a$a;->e:Lcom/vtosters/lite/sdk/SDKFriendPickerActivity$a;
 
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/fragments/friends/presenter/a;-><init>(Lcom/vtosters/lite/fragments/friends/presenter/a$a;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter;-><init>(Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter$a;)V
 
     return-void
 .end method

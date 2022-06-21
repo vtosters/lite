@@ -89,7 +89,7 @@
 
     xor-int/2addr p2, v1
 
-    invoke-interface {p1, p2}, Lcom/vk/wall/f;->H(Z)V
+    invoke-interface {p1, p2}, Lcom/vk/wall/CommentsListContract2;->H(Z)V
 
     :cond_2
     return-void

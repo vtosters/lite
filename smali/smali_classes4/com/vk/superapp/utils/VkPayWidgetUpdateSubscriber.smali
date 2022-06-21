@@ -13,7 +13,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/queue/sync/a;
+.field private a:Lcom/vk/queue/sync/CancellationSignal;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -77,24 +77,24 @@
     .locals 2
 
     .line 8
-    sget-object v0, Lb/h/u/a;->f:Lb/h/u/a;
+    sget-object v0, Lb/h/u/VkQueueSyncManager;->f:Lb/h/u/VkQueueSyncManager;
 
     const-string v1, "super_vk_pay_widget_tag"
 
-    invoke-virtual {v0, v1}, Lb/h/u/a;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/u/VkQueueSyncManager;->a(Ljava/lang/Object;)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber;->a:Lcom/vk/queue/sync/a;
+    iget-object v0, p0, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber;->a:Lcom/vk/queue/sync/CancellationSignal;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/queue/sync/a;->cancel()V
+    invoke-interface {v0}, Lcom/vk/queue/sync/CancellationSignal;->cancel()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 10
-    iput-object v0, p0, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber;->a:Lcom/vk/queue/sync/a;
+    iput-object v0, p0, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber;->a:Lcom/vk/queue/sync/CancellationSignal;
 
     return-void
 .end method
@@ -114,7 +114,7 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber;->a:Lcom/vk/queue/sync/a;
+    iget-object v0, p0, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber;->a:Lcom/vk/queue/sync/CancellationSignal;
 
     if-eqz v0, :cond_0
 
@@ -123,20 +123,20 @@
 
     .line 4
     :cond_0
-    sget-object v1, Lb/h/u/a;->f:Lb/h/u/a;
+    sget-object v1, Lb/h/u/VkQueueSyncManager;->f:Lb/h/u/VkQueueSyncManager;
 
     .line 5
-    new-instance v2, Lb/h/u/b/e;
+    new-instance v2, Lb/h/u/b/VkPayBalanceQueueEvent;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v0
 
-    invoke-direct {v2, v0}, Lb/h/u/b/e;-><init>(I)V
+    invoke-direct {v2, v0}, Lb/h/u/b/VkPayBalanceQueueEvent;-><init>(I)V
 
     const/4 v4, 0x0
 
@@ -154,11 +154,11 @@
     const-string v3, "super_vk_pay_widget_tag"
 
     .line 7
-    invoke-static/range {v1 .. v8}, Lb/h/u/a;->a(Lb/h/u/a;Lb/h/u/b/c;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;ILjava/lang/Object;)Lcom/vk/queue/sync/a;
+    invoke-static/range {v1 .. v8}, Lb/h/u/VkQueueSyncManager;->a(Lb/h/u/VkQueueSyncManager;Lb/h/u/b/QueueEvent;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Lcom/vk/queue/sync/CancellationSignal;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber;->a:Lcom/vk/queue/sync/a;
+    iput-object p1, p0, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber;->a:Lcom/vk/queue/sync/CancellationSignal;
 
     return-void
 .end method

@@ -72,7 +72,7 @@
 
     move-result-object v1
 
-    sget-object v7, Lcom/vk/core/util/h;->f:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
+    sget-object v7, Lcom/vk/core/util/AnimationUtils;->f:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
 
     const-wide/16 v2, 0xc8
 

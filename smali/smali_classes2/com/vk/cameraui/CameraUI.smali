@@ -18,7 +18,7 @@
 
 
 # static fields
-.field private static final a:Lkotlin/e;
+.field private static final a:Lkotlin/Lazy2;
 
 .field private static final b:F
 
@@ -35,18 +35,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/cameraui/CameraUI$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/cameraui/CameraUI$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/cameraui/CameraUI;->d:Lcom/vk/cameraui/CameraUI$a;
 
     .line 1
     sget-object v0, Lcom/vk/cameraui/CameraUI$Companion$isNewFrameAvaialblee$2;->a:Lcom/vk/cameraui/CameraUI$Companion$isNewFrameAvaialblee$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/cameraui/CameraUI;->a:Lkotlin/e;
+    sput-object v0, Lcom/vk/cameraui/CameraUI;->a:Lkotlin/Lazy2;
 
     const/high16 v0, 0x42580000    # 54.0f
 
@@ -92,11 +92,11 @@
     return v0
 .end method
 
-.method public static final synthetic c()Lkotlin/e;
+.method public static final synthetic c()Lkotlin/Lazy2;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/cameraui/CameraUI;->a:Lkotlin/e;
+    sget-object v0, Lcom/vk/cameraui/CameraUI;->a:Lkotlin/Lazy2;
 
     return-object v0
 .end method

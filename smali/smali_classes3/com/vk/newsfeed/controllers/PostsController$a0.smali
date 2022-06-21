@@ -3,7 +3,7 @@
 .source "PostsController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -55,11 +55,11 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     check-cast p1, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;
 
-    invoke-static {v0, p1}, Lcom/vk/api/base/f;->b(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-static {v0, p1}, Lcom/vk/api/base/ApiUtils;->b(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     goto :goto_0
 
@@ -67,7 +67,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/newsfeed/controllers/PostsController$a0;->a:Landroid/content/Context;
 
-    invoke-static {v0, p1}, Lcom/vk/api/base/f;->b(Landroid/content/Context;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/vk/api/base/ApiUtils;->b(Landroid/content/Context;Ljava/lang/Throwable;)V
 
     :goto_0
     return-void

@@ -3,12 +3,12 @@
 .source "VKImageLoader.java"
 
 # interfaces
-.implements Lcom/facebook/datasource/d;
+.implements Lcom/facebook/datasource/DataSubscriber;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/imageloader/VKImageLoader$h;->a(Lc/a/n;)V
+    value = Lcom/vk/imageloader/VKImageLoader$h;->a(Lio/reactivex/ObservableEmitter;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,28 +19,28 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/facebook/datasource/d<",
-        "Lcom/facebook/common/references/a<",
-        "Lcom/facebook/x/g/c;",
+        "Lcom/facebook/datasource/DataSubscriber<",
+        "Lcom/facebook/common/references/CloseableReference<",
+        "Lcom/facebook/x/g/CloseableImage;",
         ">;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lc/a/n;
+.field final synthetic a:Lio/reactivex/ObservableEmitter;
 
 .field final synthetic b:Lcom/vk/imageloader/VKImageLoader$h;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/imageloader/VKImageLoader$h;Lc/a/n;)V
+.method constructor <init>(Lcom/vk/imageloader/VKImageLoader$h;Lio/reactivex/ObservableEmitter;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->b:Lcom/vk/imageloader/VKImageLoader$h;
 
-    iput-object p2, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->a:Lc/a/n;
+    iput-object p2, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->a:Lio/reactivex/ObservableEmitter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,40 +49,40 @@
 
 
 # virtual methods
-.method public a(Lcom/facebook/datasource/b;)V
+.method public a(Lcom/facebook/datasource/DataSource;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/datasource/b<",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object p1, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->a:Lc/a/n;
+    iget-object p1, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->a:Lio/reactivex/ObservableEmitter;
 
-    invoke-interface {p1}, Lc/a/f;->b()V
+    invoke-interface {p1}, Lio/reactivex/Emitter;->b()V
 
     return-void
 .end method
 
-.method public b(Lcom/facebook/datasource/b;)V
+.method public b(Lcom/facebook/datasource/DataSource;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/datasource/b<",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object p1, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->a:Lc/a/n;
+    iget-object p1, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->a:Lio/reactivex/ObservableEmitter;
 
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -106,37 +106,37 @@
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lc/a/f;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0}, Lio/reactivex/Emitter;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public c(Lcom/facebook/datasource/b;)V
+.method public c(Lcom/facebook/datasource/DataSource;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/datasource/b<",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;>;)V"
         }
     .end annotation
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->a:Lc/a/n;
+    iget-object v0, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->a:Lio/reactivex/ObservableEmitter;
 
-    invoke-interface {p1}, Lcom/facebook/datasource/b;->g()Ljava/lang/Object;
+    invoke-interface {p1}, Lcom/facebook/datasource/DataSource;->g()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lc/a/f;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lio/reactivex/Emitter;->b(Ljava/lang/Object;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->a:Lc/a/n;
+    iget-object p1, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->a:Lio/reactivex/ObservableEmitter;
 
-    invoke-interface {p1}, Lc/a/f;->b()V
+    invoke-interface {p1}, Lio/reactivex/Emitter;->b()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -146,9 +146,9 @@
     move-exception p1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->a:Lc/a/n;
+    iget-object v0, p0, Lcom/vk/imageloader/VKImageLoader$h$a;->a:Lio/reactivex/ObservableEmitter;
 
-    invoke-interface {v0, p1}, Lc/a/f;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lio/reactivex/Emitter;->a(Ljava/lang/Throwable;)V
 
     .line 4
     invoke-static {}, Lcom/vk/imageloader/VKImageLoader;->a()Ljava/lang/String;
@@ -163,14 +163,14 @@
     return-void
 .end method
 
-.method public d(Lcom/facebook/datasource/b;)V
+.method public d(Lcom/facebook/datasource/DataSource;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/datasource/b<",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;>;)V"
         }
     .end annotation

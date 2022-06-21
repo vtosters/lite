@@ -48,7 +48,7 @@
 
 
 # virtual methods
-.method protected a(Lcom/vk/common/i/b;)Z
+.method protected a(Lcom/vk/common/i/RecyclerItem;)Z
     .locals 1
 
     .line 1
@@ -68,7 +68,7 @@
 
     iget-object p1, p1, Lcom/vk/apps/AppsFragment$a;->b:Lcom/vk/dto/common/data/VKList;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -86,7 +86,7 @@
     return v0
 .end method
 
-.method protected b(Lcom/vk/common/i/b;)Z
+.method protected b(Lcom/vk/common/i/RecyclerItem;)Z
     .locals 1
 
     .line 2
@@ -100,7 +100,7 @@
 
     iget-object v0, p0, Lcom/vk/apps/AppsFragment$a;->b:Lcom/vk/dto/common/data/VKList;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

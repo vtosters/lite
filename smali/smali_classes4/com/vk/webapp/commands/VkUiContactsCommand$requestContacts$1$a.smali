@@ -51,7 +51,7 @@
 
     iget-object v1, v1, Lcom/vk/webapp/commands/VkUiContactsCommand$requestContacts$1;->this$0:Lcom/vk/webapp/commands/VkUiContactsCommand;
 
-    invoke-virtual {v1}, Lcom/vk/webapp/commands/c;->e()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v1}, Lcom/vk/webapp/commands/VkUiBaseCommand;->e()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v1
 

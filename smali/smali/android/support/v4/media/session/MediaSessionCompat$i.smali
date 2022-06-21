@@ -58,7 +58,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/RemoteCallbackList<",
-            "Landroid/support/v4/media/session/a;",
+            "Landroid/support/v4/media/session/IMediaControllerCallback;",
             ">;"
         }
     .end annotation
@@ -245,11 +245,11 @@
 
     move-result-object v1
 
-    check-cast v1, Landroid/support/v4/media/session/a;
+    check-cast v1, Landroid/support/v4/media/session/IMediaControllerCallback;
 
     .line 30
     :try_start_0
-    invoke-interface {v1, p1}, Landroid/support/v4/media/session/a;->a(Landroid/support/v4/media/MediaMetadataCompat;)V
+    invoke-interface {v1, p1}, Landroid/support/v4/media/session/IMediaControllerCallback;->a(Landroid/support/v4/media/MediaMetadataCompat;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -289,11 +289,11 @@
 
     move-result-object v1
 
-    check-cast v1, Landroid/support/v4/media/session/a;
+    check-cast v1, Landroid/support/v4/media/session/IMediaControllerCallback;
 
     .line 4
     :try_start_0
-    invoke-interface {v1, p1}, Landroid/support/v4/media/session/a;->a(Landroid/support/v4/media/session/PlaybackStateCompat;)V
+    invoke-interface {v1, p1}, Landroid/support/v4/media/session/IMediaControllerCallback;->a(Landroid/support/v4/media/session/PlaybackStateCompat;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -333,11 +333,11 @@
 
     move-result-object v1
 
-    check-cast v1, Landroid/support/v4/media/session/a;
+    check-cast v1, Landroid/support/v4/media/session/IMediaControllerCallback;
 
     .line 3
     :try_start_0
-    invoke-interface {v1}, Landroid/support/v4/media/session/a;->k()V
+    invoke-interface {v1}, Landroid/support/v4/media/session/IMediaControllerCallback;->k()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1172,11 +1172,11 @@
 
     move-result-object v1
 
-    check-cast v1, Landroid/support/v4/media/session/a;
+    check-cast v1, Landroid/support/v4/media/session/IMediaControllerCallback;
 
     .line 114
     :try_start_0
-    invoke-interface {v1, p1}, Landroid/support/v4/media/session/a;->a(Landroid/support/v4/media/session/ParcelableVolumeInfo;)V
+    invoke-interface {v1, p1}, Landroid/support/v4/media/session/IMediaControllerCallback;->a(Landroid/support/v4/media/session/ParcelableVolumeInfo;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 

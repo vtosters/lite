@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # static fields
@@ -36,7 +36,7 @@
 .method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    invoke-static {}, Lcom/vtosters/lite/fragments/n2/q0;->i5()Lkotlin/m;
+    invoke-static {}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment;->i5()Lkotlin/Unit;
 
     move-result-object v0
 

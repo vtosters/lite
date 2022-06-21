@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/stories/StoriesBackgroundLoader$preload$1;->call()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -60,7 +60,7 @@
     .locals 4
 
     .line 2
-    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->k()Lcom/vk/mediastore/a/e/i;
+    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->k()Lcom/vk/mediastore/a/e/ExoVideoCache;
 
     move-result-object v0
 
@@ -70,7 +70,7 @@
 
     move-result-wide v1
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/mediastore/a/e/i;->a(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/mediastore/a/e/ExoVideoCache;->a(J)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/stories/StoriesBackgroundLoader$preload$1;->a:Lcom/vk/stories/StoriesBackgroundLoader;
@@ -120,7 +120,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/stories/StoriesBackgroundLoader$preload$1$$special$$inlined$forEach$lambda$1;-><init>(Lcom/vk/stories/StoriesBackgroundLoader$preload$1;)V
 
-    invoke-virtual {v2, v1, v3}, Lcom/vk/stories/StoriesBackgroundLoader$a;->a(Lcom/vk/dto/stories/model/StoryEntry;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v2, v1, v3}, Lcom/vk/stories/StoriesBackgroundLoader$a;->a(Lcom/vk/dto/stories/model/StoryEntry;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 

@@ -3,12 +3,12 @@
 .source "QRParser.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRParser;->b(Lcom/vk/media/camera/qrcode/a$b;)V
+    value = Lcom/vk/qrcode/QRParser;->b(Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/qrcode/QRParser;
 
-.field final synthetic b:Lcom/vk/media/camera/qrcode/a$b;
+.field final synthetic b:Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/a$b;)V
+.method constructor <init>(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/qrcode/QRParser$d;->a:Lcom/vk/qrcode/QRParser;
 
-    iput-object p2, p0, Lcom/vk/qrcode/QRParser$d;->b:Lcom/vk/media/camera/qrcode/a$b;
+    iput-object p2, p0, Lcom/vk/qrcode/QRParser$d;->b:Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,11 +56,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/qrcode/QRParser$d;->a:Lcom/vk/qrcode/QRParser;
 
-    iget-object v0, p0, Lcom/vk/qrcode/QRParser$d;->b:Lcom/vk/media/camera/qrcode/a$b;
+    iget-object v0, p0, Lcom/vk/qrcode/QRParser$d;->b:Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v0, v1}, Lcom/vk/qrcode/QRParser;->a(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/a$b;Z)V
+    invoke-static {p1, v0, v1}, Lcom/vk/qrcode/QRParser;->a(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;Z)V
 
     return-void
 .end method

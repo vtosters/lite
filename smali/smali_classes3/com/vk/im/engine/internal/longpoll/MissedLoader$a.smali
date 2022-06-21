@@ -19,7 +19,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/models/dialogs/c;",
+            "Lcom/vk/im/engine/models/dialogs/DialogApiModel;",
             ">;"
         }
     .end annotation
@@ -46,7 +46,7 @@
         value = {
             "(",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/models/dialogs/c;",
+            "Lcom/vk/im/engine/models/dialogs/DialogApiModel;",
             ">;",
             "Ljava/util/Map<",
             "Ljava/lang/Integer;",
@@ -78,7 +78,7 @@
         value = {
             "()",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/models/dialogs/c;",
+            "Lcom/vk/im/engine/models/dialogs/DialogApiModel;",
             ">;"
         }
     .end annotation
@@ -131,7 +131,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/internal/longpoll/MissedLoader$a;->a:Landroid/util/SparseArray;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -141,7 +141,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/internal/longpoll/MissedLoader$a;->b:Ljava/util/Map;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -151,7 +151,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/internal/longpoll/MissedLoader$a;->c:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

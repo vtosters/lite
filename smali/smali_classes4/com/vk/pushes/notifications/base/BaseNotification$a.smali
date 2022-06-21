@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -39,7 +39,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/util/r0;->e()I
+    invoke-static {}, Lcom/vk/core/util/Prefs;->e()I
 
     move-result v0
 

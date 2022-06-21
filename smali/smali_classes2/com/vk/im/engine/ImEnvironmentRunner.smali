@@ -48,21 +48,21 @@
     .end annotation
 .end field
 
-.field private final f:Lcom/vk/im/engine/e;
+.field private final f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-.field private final g:Lcom/vk/im/log/a;
+.field private final g:Lcom/vk/im/log/ImLogger;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/e;Lcom/vk/im/log/a;)V
+.method public constructor <init>(Lcom/vk/im/engine/ImEnvironmentImpl;Lcom/vk/im/log/ImLogger;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iput-object p1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    iput-object p2, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/a;
+    iput-object p2, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/ImLogger;
 
     .line 2
     new-instance p1, Ljava/lang/Object;
@@ -105,7 +105,7 @@
     if-eqz v1, :cond_0
 
     .line 26
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -156,7 +156,7 @@
     throw p1
 .end method
 
-.method private final b(Lcom/vk/im/engine/i/c;)Ljava/util/concurrent/Future;
+.method private final b(Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/util/concurrent/Future;
     .locals 3
     .annotation build Landroidx/annotation/GuardedBy;
         value = "lock"
@@ -167,7 +167,7 @@
             "<V:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/vk/im/engine/i/c<",
+            "Lcom/vk/im/engine/i/ImEngineCmd<",
             "TV;>;)",
             "Ljava/util/concurrent/Future<",
             "TV;>;"
@@ -175,7 +175,7 @@
     .end annotation
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/a;
+    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/ImLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -203,7 +203,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     .line 10
     new-instance v0, Lcom/vk/im/engine/ImEnvironmentRunner$a;
@@ -215,14 +215,14 @@
 
     new-instance v2, Lcom/vk/im/engine/ImEnvironmentRunner$b;
 
-    invoke-direct {v2, p1, v0}, Lcom/vk/im/engine/ImEnvironmentRunner$b;-><init>(Lcom/vk/im/engine/i/c;Lcom/vk/im/engine/ImEnvironmentRunner$a;)V
+    invoke-direct {v2, p1, v0}, Lcom/vk/im/engine/ImEnvironmentRunner$b;-><init>(Lcom/vk/im/engine/i/ImEngineCmd;Lcom/vk/im/engine/ImEnvironmentRunner$a;)V
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object v0
 .end method
 
-.method private final c(Lcom/vk/im/engine/i/c;)Ljava/util/concurrent/Future;
+.method private final c(Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/util/concurrent/Future;
     .locals 1
     .annotation build Landroidx/annotation/GuardedBy;
         value = "lock"
@@ -233,7 +233,7 @@
             "<V:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/vk/im/engine/i/c<",
+            "Lcom/vk/im/engine/i/ImEngineCmd<",
             "TV;>;)",
             "Ljava/util/concurrent/Future<",
             "TV;>;"
@@ -259,7 +259,7 @@
     throw p1
 .end method
 
-.method private final d(Lcom/vk/im/engine/i/c;)Ljava/util/concurrent/Future;
+.method private final d(Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/util/concurrent/Future;
     .locals 1
     .annotation build Landroidx/annotation/GuardedBy;
         value = "lock"
@@ -270,7 +270,7 @@
             "<V:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/vk/im/engine/i/c<",
+            "Lcom/vk/im/engine/i/ImEngineCmd<",
             "TV;>;)",
             "Ljava/util/concurrent/Future<",
             "TV;>;"
@@ -278,15 +278,15 @@
     .end annotation
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/e;->a(Lcom/vk/im/engine/i/c;)Ljava/util/concurrent/Future;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/ImEnvironmentImpl;->a(Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/util/concurrent/Future;
 
     move-result-object p1
 
     const-string v0, "env.submitCommand(cmd)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -309,9 +309,9 @@
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     .line 2
-    new-instance v1, Lcom/vk/im/engine/internal/i/c;
+    new-instance v1, Lcom/vk/im/engine/internal/i/ThrowExceptionFuture;
 
-    invoke-direct {v1, v0}, Lcom/vk/im/engine/internal/i/c;-><init>(Ljava/lang/Exception;)V
+    invoke-direct {v1, v0}, Lcom/vk/im/engine/internal/i/ThrowExceptionFuture;-><init>(Ljava/lang/Exception;)V
 
     return-object v1
 .end method
@@ -387,9 +387,9 @@
 
     .line 13
     :cond_1
-    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/e;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/im/engine/ImEnvironmentImpl;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -416,14 +416,14 @@
     throw v1
 .end method
 
-.method public final a(Lcom/vk/im/engine/i/c;)Ljava/util/concurrent/Future;
+.method public final a(Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/util/concurrent/Future;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<V:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/vk/im/engine/i/c<",
+            "Lcom/vk/im/engine/i/ImEngineCmd<",
             "TV;>;)",
             "Ljava/util/concurrent/Future<",
             "TV;>;"
@@ -464,7 +464,7 @@
     if-ne v1, v2, :cond_0
 
     .line 19
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/ImEnvironmentRunner;->c(Lcom/vk/im/engine/i/c;)Ljava/util/concurrent/Future;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/ImEnvironmentRunner;->c(Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/util/concurrent/Future;
 
     move-result-object p1
 
@@ -479,7 +479,7 @@
 
     .line 20
     :cond_1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/ImEnvironmentRunner;->d(Lcom/vk/im/engine/i/c;)Ljava/util/concurrent/Future;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/ImEnvironmentRunner;->d(Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/util/concurrent/Future;
 
     move-result-object p1
 
@@ -487,7 +487,7 @@
 
     .line 21
     :cond_2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/ImEnvironmentRunner;->b(Lcom/vk/im/engine/i/c;)Ljava/util/concurrent/Future;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/ImEnvironmentRunner;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/util/concurrent/Future;
 
     move-result-object p1
     :try_end_0
@@ -574,9 +574,9 @@
     throw p1
 
     :cond_1
-    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v1, p1, p2}, Lcom/vk/im/engine/e;->a(Lcom/vk/im/engine/models/sync/ImBgSyncMode;Ljava/lang/String;)V
+    invoke-virtual {v1, p1, p2}, Lcom/vk/im/engine/ImEnvironmentImpl;->a(Lcom/vk/im/engine/models/sync/ImBgSyncMode;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -673,15 +673,15 @@
 
     .line 5
     :cond_1
-    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/e;->c()Lcom/vk/im/engine/models/ImBgSyncLaunchState;
+    invoke-virtual {v1}, Lcom/vk/im/engine/ImEnvironmentImpl;->c()Lcom/vk/im/engine/models/ImBgSyncLaunchState;
 
     move-result-object v1
 
     const-string v2, "env.bgSyncLaunchState"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -784,9 +784,9 @@
 
     .line 5
     :cond_1
-    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/e;->d()Lcom/vk/im/engine/models/sync/ImBgSyncMode;
+    invoke-virtual {v1}, Lcom/vk/im/engine/ImEnvironmentImpl;->d()Lcom/vk/im/engine/models/sync/ImBgSyncMode;
 
     move-result-object v1
 
@@ -882,15 +882,15 @@
 
     .line 5
     :cond_1
-    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/e;->h0()Lcom/vk/im/engine/models/ImBgSyncState;
+    invoke-virtual {v1}, Lcom/vk/im/engine/ImEnvironmentImpl;->h0()Lcom/vk/im/engine/models/ImBgSyncState;
 
     move-result-object v1
 
     const-string v2, "env.bgSyncState"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -924,11 +924,11 @@
     throw v1
 .end method
 
-.method public final e()Lcom/vk/im/engine/e;
+.method public final e()Lcom/vk/im/engine/ImEnvironmentImpl;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
     return-object v0
 .end method
@@ -961,7 +961,7 @@
     iput-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->e:Lcom/vk/im/engine/ImEnvironmentRunner$State;
 
     .line 4
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
@@ -969,11 +969,11 @@
     monitor-exit v0
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/a;
+    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/ImLogger;
 
     const-string v1, "#ImEnvironment: init() start..."
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     .line 7
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -981,9 +981,9 @@
     move-result-wide v0
 
     .line 8
-    iget-object v2, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v2, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/e;->f()V
+    invoke-virtual {v2}, Lcom/vk/im/engine/ImEnvironmentImpl;->f()V
 
     .line 9
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -993,7 +993,7 @@
     sub-long/2addr v2, v0
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/a;
+    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/ImLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1013,10 +1013,10 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     .line 11
-    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/a;
+    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/ImLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1042,7 +1042,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     .line 12
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1066,9 +1066,9 @@
     if-eqz v4, :cond_0
 
     .line 16
-    iget-object v5, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v5, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v5, v3, v4}, Lcom/vk/im/engine/e;->a(Lcom/vk/im/engine/models/sync/ImBgSyncMode;Ljava/lang/String;)V
+    invoke-virtual {v5, v3, v4}, Lcom/vk/im/engine/ImEnvironmentImpl;->a(Lcom/vk/im/engine/models/sync/ImBgSyncMode;Ljava/lang/String;)V
 
     .line 17
     :cond_0
@@ -1111,20 +1111,20 @@
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/vk/im/engine/internal/i/b;->isCancelled()Z
+    invoke-virtual {v6}, Lcom/vk/im/engine/internal/i/ProxyFuture;->isCancelled()Z
 
     move-result v6
 
     if-nez v6, :cond_2
 
     .line 21
-    iget-object v6, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v6, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/ImEnvironmentRunner$b;->a()Lcom/vk/im/engine/i/c;
+    invoke-virtual {v4}, Lcom/vk/im/engine/ImEnvironmentRunner$b;->a()Lcom/vk/im/engine/i/ImEngineCmd;
 
     move-result-object v7
 
-    invoke-virtual {v6, v7}, Lcom/vk/im/engine/e;->a(Lcom/vk/im/engine/i/c;)Ljava/util/concurrent/Future;
+    invoke-virtual {v6, v7}, Lcom/vk/im/engine/ImEnvironmentImpl;->a(Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/util/concurrent/Future;
 
     move-result-object v6
 
@@ -1135,7 +1135,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4, v6}, Lcom/vk/im/engine/internal/i/b;->a(Ljava/util/concurrent/Future;)V
+    invoke-virtual {v4, v6}, Lcom/vk/im/engine/internal/i/ProxyFuture;->a(Ljava/util/concurrent/Future;)V
 
     goto :goto_1
 
@@ -1152,7 +1152,7 @@
     .line 24
     :cond_2
     :goto_1
-    sget-object v4, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v4, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -1189,7 +1189,7 @@
     iput-object v3, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->e:Lcom/vk/im/engine/ImEnvironmentRunner$State;
 
     .line 30
-    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v3, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -1204,7 +1204,7 @@
     sub-long/2addr v2, v0
 
     .line 33
-    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/a;
+    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/ImLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1236,7 +1236,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     return-void
 
@@ -1344,9 +1344,9 @@
     if-eq v1, v4, :cond_0
 
     .line 4
-    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/e;->c0()Lcom/vk/im/engine/ImConfig;
+    invoke-virtual {v1}, Lcom/vk/im/engine/ImEnvironmentImpl;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object v1
 
@@ -1362,9 +1362,9 @@
 
     .line 5
     :cond_0
-    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/e;->h()Z
+    invoke-virtual {v1}, Lcom/vk/im/engine/ImEnvironmentImpl;->h()Z
 
     move-result v3
     :try_end_0
@@ -1500,7 +1500,7 @@
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v2, v3}, Lcom/vk/im/engine/internal/i/b;->a(Ljava/util/concurrent/Future;)V
+    invoke-virtual {v2, v3}, Lcom/vk/im/engine/internal/i/ProxyFuture;->a(Ljava/util/concurrent/Future;)V
 
     goto :goto_0
 
@@ -1520,7 +1520,7 @@
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
     .line 8
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1528,11 +1528,11 @@
     monitor-exit v0
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/a;
+    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/ImLogger;
 
     const-string v1, "#ImEnvironment: shutdown() start..."
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     .line 11
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1540,9 +1540,9 @@
     move-result-wide v0
 
     .line 12
-    iget-object v2, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v2, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/e;->i()V
+    invoke-virtual {v2}, Lcom/vk/im/engine/ImEnvironmentImpl;->i()V
 
     .line 13
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1552,7 +1552,7 @@
     sub-long/2addr v2, v0
 
     .line 14
-    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/a;
+    iget-object v0, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->g:Lcom/vk/im/log/ImLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1572,7 +1572,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/im/log/a;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/log/ImLogger;->b(Ljava/lang/String;)V
 
     return-void
 
@@ -1672,15 +1672,15 @@
 
     .line 5
     :cond_1
-    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/e;
+    iget-object v1, p0, Lcom/vk/im/engine/ImEnvironmentRunner;->f:Lcom/vk/im/engine/ImEnvironmentImpl;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/e;->j()Ljava/util/concurrent/CountDownLatch;
+    invoke-virtual {v1}, Lcom/vk/im/engine/ImEnvironmentImpl;->j()Ljava/util/concurrent/CountDownLatch;
 
     move-result-object v1
 
     const-string v2, "env.stopBgSync()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

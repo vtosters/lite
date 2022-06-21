@@ -44,7 +44,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$s;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/bridges/a;->c()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/vk/webapp/bridges/AndroidBridge;->c()Landroid/content/Context;
 
     move-result-object v0
 
@@ -53,7 +53,7 @@
     .line 2
     iget-object v1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$s;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-static {v1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/b;
+    invoke-static {v1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
@@ -61,17 +61,17 @@
 
     iget-object v3, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$s;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-static {v3}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/b;
+    invoke-static {v3}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v3}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v3
 
     iget-object v4, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$s;->b:Lcom/vk/webapp/helpers/AdvMyTargetHelper$AdType;
 
-    invoke-interface {v1, v0, v2, v3, v4}, Lcom/vk/webapp/o/b;->a(Landroid/content/Context;IILcom/vk/webapp/helpers/AdvMyTargetHelper$AdType;)V
+    invoke-interface {v1, v0, v2, v3, v4}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->a(Landroid/content/Context;IILcom/vk/webapp/helpers/AdvMyTargetHelper$AdType;)V
 
     goto :goto_0
 
@@ -94,7 +94,7 @@
 
     const-string v3, "VKWebAppShowNativeAdsFailed"
 
-    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :goto_0
     return-void

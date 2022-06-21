@@ -3,12 +3,12 @@
 .source "MusicArtistHeaderContainer.kt"
 
 # interfaces
-.implements Lcom/vk/music/sections/f$a;
+.implements Lcom/vk/music/sections/MusicSectionsModel$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/artists/MusicArtistHeaderContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/sections/f;Z)V
+    value = Lcom/vk/music/artists/MusicArtistHeaderContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/sections/MusicSectionsModel;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -44,7 +44,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0}, Lcom/vk/music/sections/f$a$a;->a(Lcom/vk/music/sections/f$a;)V
+    invoke-static {p0}, Lcom/vk/music/sections/MusicSectionsModel$a$a;->a(Lcom/vk/music/sections/MusicSectionsModel$a;)V
 
     return-void
 .end method
@@ -53,12 +53,12 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/music/sections/f$a$a;->a(Lcom/vk/music/sections/f$a;Lcom/vk/dto/music/Section;Ljava/lang/Object;)V
+    invoke-static {p0, p1, p2}, Lcom/vk/music/sections/MusicSectionsModel$a$a;->a(Lcom/vk/music/sections/MusicSectionsModel$a;Lcom/vk/dto/music/Section;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/music/sections/f;)V
+.method public a(Lcom/vk/music/sections/MusicSectionsModel;)V
     .locals 0
 
     .line 3
@@ -69,7 +69,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/sections/f;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+.method public a(Lcom/vk/music/sections/MusicSectionsModel;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
     .locals 0
 
     .line 4
@@ -89,13 +89,13 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/music/sections/f;)V
+.method public b(Lcom/vk/music/sections/MusicSectionsModel;)V
     .locals 0
 
     return-void
 .end method
 
-.method public b(Lcom/vk/music/sections/f;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+.method public b(Lcom/vk/music/sections/MusicSectionsModel;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
     .locals 0
 
     return-void

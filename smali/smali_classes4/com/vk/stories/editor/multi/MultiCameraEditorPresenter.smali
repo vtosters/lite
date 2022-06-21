@@ -1,9 +1,9 @@
 .class public final Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
-.super Lcom/vk/stories/editor/base/c0;
+.super Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;
 .source "MultiCameraEditorPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/stories/editor/multi/g;
+.implements Lcom/vk/stories/editor/multi/MultiCameraEditorContract;
 
 
 # annotations
@@ -15,10 +15,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/stories/editor/base/c0<",
-        "Lcom/vk/stories/editor/multi/h;",
+        "Lcom/vk/stories/editor/base/BaseCameraEditorPresenter<",
+        "Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;",
         ">;",
-        "Lcom/vk/stories/editor/multi/g;"
+        "Lcom/vk/stories/editor/multi/MultiCameraEditorContract;"
     }
 .end annotation
 
@@ -32,35 +32,35 @@
 
 
 # instance fields
-.field private a0:Lcom/vk/cameraui/entities/d;
+.field private a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
-.field private b0:Lcom/vk/lists/b;
+.field private b0:Lcom/vk/lists/BaseListDataSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/lists/b<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/lists/BaseListDataSet<",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final c0:Lcom/vk/stories/editor/multi/d;
+.field private final c0:Lcom/vk/stories/editor/multi/CameraVideoDelegate;
 
 .field private final d0:Lcom/vk/stories/editor/multi/CameraPhotoDelegate;
 
 .field private final e0:Lcom/vk/stories/editor/multi/CameraCompositeProcessor;
 
-.field private final f0:Lcom/vk/stories/editor/multi/j;
+.field private final f0:Lcom/vk/stories/editor/multi/MusicStoryRenderer;
 
 .field private g0:I
 
-.field private final h0:Lio/reactivex/disposables/a;
+.field private final h0:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private final i0:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/cameraui/entities/d;",
+            "Lcom/vk/cameraui/entities/StoryRawData3;",
             ">;"
         }
     .end annotation
@@ -75,7 +75,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->l0:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$a;
 
@@ -100,16 +100,16 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/List;Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;Lcom/vk/stories/editor/multi/h;Lcom/vk/cameraui/CameraUI$c;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;I)V
+.method public constructor <init>(Ljava/util/List;Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;Lcom/vk/cameraui/CameraUI$c;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;I)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/cameraui/entities/d;",
+            "Lcom/vk/cameraui/entities/StoryRawData3;",
             ">;",
             "Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;",
-            "Lcom/vk/stories/editor/multi/h;",
+            "Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;",
             "Lcom/vk/cameraui/CameraUI$c;",
             "Lcom/vk/dto/stories/model/CommonUploadParams;",
             "Lcom/vk/dto/stories/model/StoryUploadParams;",
@@ -132,31 +132,31 @@
     move v6, p7
 
     .line 1
-    invoke-direct/range {v0 .. v6}, Lcom/vk/stories/editor/base/c0;-><init>(Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;Lcom/vk/cameraui/CameraUI$c;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;I)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;-><init>(Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;Lcom/vk/cameraui/CameraUI$c;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;I)V
 
     iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->i0:Ljava/util/List;
 
     .line 2
-    new-instance p1, Lcom/vk/stories/editor/multi/d;
+    new-instance p1, Lcom/vk/stories/editor/multi/CameraVideoDelegate;
 
-    iget-object p4, p0, Lcom/vk/stories/editor/base/c0;->h:Lcom/vk/stories/editor/multi/e;
+    iget-object p4, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->h:Lcom/vk/stories/editor/multi/LayersProvider;
 
     const-string p5, "overlayProvider"
 
-    invoke-static {p4, p5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, p5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, p3, p4}, Lcom/vk/stories/editor/multi/d;-><init>(Lcom/vk/stories/c1/b/b;Lcom/vk/stories/editor/multi/e;)V
+    invoke-direct {p1, p3, p4}, Lcom/vk/stories/editor/multi/CameraVideoDelegate;-><init>(Lcom/vk/stories/c1/b/VideoCameraEditorContract1;Lcom/vk/stories/editor/multi/LayersProvider;)V
 
-    iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/d;
+    iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/CameraVideoDelegate;
 
     .line 3
     new-instance p1, Lcom/vk/stories/editor/multi/CameraPhotoDelegate;
 
-    iget-object p4, p0, Lcom/vk/stories/editor/base/c0;->h:Lcom/vk/stories/editor/multi/e;
+    iget-object p4, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->h:Lcom/vk/stories/editor/multi/LayersProvider;
 
-    invoke-static {p4, p5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, p5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, p3, p2, p7, p4}, Lcom/vk/stories/editor/multi/CameraPhotoDelegate;-><init>(Lcom/vk/stories/c1/a/b;Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;ILcom/vk/stories/editor/multi/e;)V
+    invoke-direct {p1, p3, p2, p7, p4}, Lcom/vk/stories/editor/multi/CameraPhotoDelegate;-><init>(Lcom/vk/stories/c1/a/PhotoCameraEditorContract1;Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;ILcom/vk/stories/editor/multi/LayersProvider;)V
 
     iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->d0:Lcom/vk/stories/editor/multi/CameraPhotoDelegate;
 
@@ -165,32 +165,32 @@
 
     iget-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->d0:Lcom/vk/stories/editor/multi/CameraPhotoDelegate;
 
-    iget-object p3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/d;
+    iget-object p3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/CameraVideoDelegate;
 
-    invoke-direct {p1, p0, p2, p3}, Lcom/vk/stories/editor/multi/CameraCompositeProcessor;-><init>(Lcom/vk/stories/editor/multi/g;Lcom/vk/stories/editor/multi/CameraPhotoDelegate;Lcom/vk/stories/editor/multi/d;)V
+    invoke-direct {p1, p0, p2, p3}, Lcom/vk/stories/editor/multi/CameraCompositeProcessor;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorContract;Lcom/vk/stories/editor/multi/CameraPhotoDelegate;Lcom/vk/stories/editor/multi/CameraVideoDelegate;)V
 
     iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->e0:Lcom/vk/stories/editor/multi/CameraCompositeProcessor;
 
     .line 5
-    new-instance p1, Lcom/vk/stories/editor/multi/j;
+    new-instance p1, Lcom/vk/stories/editor/multi/MusicStoryRenderer;
 
-    invoke-direct {p1}, Lcom/vk/stories/editor/multi/j;-><init>()V
+    invoke-direct {p1}, Lcom/vk/stories/editor/multi/MusicStoryRenderer;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->f0:Lcom/vk/stories/editor/multi/j;
+    iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->f0:Lcom/vk/stories/editor/multi/MusicStoryRenderer;
 
     .line 6
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->h0:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->h0:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 7
-    iget-object p1, p0, Lcom/vk/stories/editor/base/c0;->h:Lcom/vk/stories/editor/multi/e;
+    iget-object p1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->h:Lcom/vk/stories/editor/multi/LayersProvider;
 
-    iget-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/d;
+    iget-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/CameraVideoDelegate;
 
-    invoke-interface {p1, p2}, Lcom/vk/stories/editor/multi/e;->a(Lcom/vk/stories/editor/multi/d;)V
+    invoke-interface {p1, p2}, Lcom/vk/stories/editor/multi/LayersProvider;->a(Lcom/vk/stories/editor/multi/CameraVideoDelegate;)V
 
     return-void
 .end method
@@ -213,11 +213,11 @@
     return v0
 .end method
 
-.method public static final synthetic C()Lc/a/s;
+.method public static final synthetic C()Lio/reactivex/Scheduler;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/stories/editor/base/c0;->Z:Lc/a/s;
+    sget-object v0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->Z:Lio/reactivex/Scheduler;
 
     return-object v0
 .end method
@@ -226,7 +226,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     const-string v1, "currentStory"
 
@@ -234,13 +234,13 @@
 
     if-eqz v0, :cond_9
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->o()Lcom/vk/cameraui/entities/a;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->o()Lcom/vk/cameraui/entities/StoryRawData;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/a;->b()Landroid/net/Uri;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData;->b()Landroid/net/Uri;
 
     move-result-object v0
 
@@ -252,17 +252,17 @@
     :goto_0
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->o()Lcom/vk/cameraui/entities/a;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->o()Lcom/vk/cameraui/entities/StoryRawData;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/a;->a()Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData;->a()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -291,23 +291,23 @@
 
     .line 3
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 4
     :cond_3
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_8
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->o()Lcom/vk/cameraui/entities/a;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->o()Lcom/vk/cameraui/entities/StoryRawData;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/a;->a()Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData;->a()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -320,54 +320,54 @@
     if-eqz v0, :cond_6
 
     .line 5
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_5
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {p0, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     goto :goto_3
 
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 6
     :cond_6
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_7
 
     .line 7
     iget-object v1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->d0:Lcom/vk/stories/editor/multi/CameraPhotoDelegate;
 
-    invoke-virtual {v1, v0}, Lcom/vk/stories/editor/multi/CameraPhotoDelegate;->b(Lcom/vk/cameraui/entities/d;)Lc/a/m;
+    invoke-virtual {v1, v0}, Lcom/vk/stories/editor/multi/CameraPhotoDelegate;->b(Lcom/vk/cameraui/entities/StoryRawData3;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 8
-    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lc/a/s;
+    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 9
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 10
     new-instance v2, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$b;
 
-    invoke-direct {v2, p0, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$b;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {v2, p0, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$b;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     .line 11
     new-instance v0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$c;
@@ -375,35 +375,35 @@
     invoke-direct {v0, p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$c;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)V
 
     .line 12
-    invoke-virtual {v1, v2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "sourceImageDisposable"
 
     .line 13
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lio/reactivex/disposables/Disposable;)V
 
     :goto_3
     return-void
 
     .line 14
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 15
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 16
     :cond_9
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -412,7 +412,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     const/4 v1, 0x0
 
@@ -420,25 +420,25 @@
 
     if-eqz v0, :cond_8
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->q()Lcom/vk/cameraui/entities/e;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->q()Lcom/vk/cameraui/entities/StoryRawData2;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
     .line 2
-    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v3, :cond_6
 
-    invoke-virtual {v3}, Lcom/vk/cameraui/entities/d;->j()Z
+    invoke-virtual {v3}, Lcom/vk/cameraui/entities/StoryRawData3;->j()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 3
-    iget-object v3, p0, Lcom/vk/stories/editor/base/c0;->B:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
+    iget-object v3, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->B:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
 
     if-eqz v3, :cond_1
 
@@ -448,44 +448,44 @@
 
     .line 4
     :cond_0
-    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v3, :cond_5
 
-    invoke-direct {p0, v3}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c(Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {p0, v3}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     .line 5
     :cond_1
     :goto_0
-    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v3, :cond_4
 
-    invoke-virtual {v3}, Lcom/vk/cameraui/entities/d;->p()Lcom/vk/attachpicker/stickers/m0;
+    invoke-virtual {v3}, Lcom/vk/cameraui/entities/StoryRawData3;->p()Lcom/vk/attachpicker/stickers/StickersState;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/attachpicker/stickers/m0;->m()Z
+    invoke-virtual {v3}, Lcom/vk/attachpicker/stickers/StickersState;->m()Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
     .line 6
-    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {v3}, Lcom/vk/cameraui/entities/d;->m()Z
+    invoke-virtual {v3}, Lcom/vk/cameraui/entities/StoryRawData3;->m()Z
 
     move-result v1
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/e;Z)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/StoryRawData2;Z)V
 
     goto :goto_1
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -495,19 +495,19 @@
 
     .line 7
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 8
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 9
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -516,7 +516,7 @@
 
     .line 10
     :cond_8
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -527,7 +527,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->i0:Ljava/util/List;
 
-    iget-object v1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v1, :cond_0
 
@@ -540,7 +540,7 @@
     :cond_0
     const-string v0, "currentStory"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -551,7 +551,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/BaseListDataSet;
 
     const/4 v1, 0x0
 
@@ -569,7 +569,7 @@
 
     invoke-direct {v1, v2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$getStoryPickerItemsCount$1;-><init>(Lkotlin/jvm/internal/Ref$IntRef;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/lists/d;->a(Lkotlin/jvm/b/b;)V
+    invoke-interface {v0, v1}, Lcom/vk/lists/DataSet;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 4
     iget v0, v2, Lkotlin/jvm/internal/Ref$IntRef;->element:I
@@ -584,11 +584,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->s()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->s()Z
 
     move-result v0
 
@@ -597,7 +597,7 @@
     :cond_0
     const-string v0, "currentStory"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -608,11 +608,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->t()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->t()Z
 
     move-result v0
 
@@ -621,7 +621,7 @@
     :cond_0
     const-string v0, "currentStory"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -650,9 +650,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/cameraui/entities/d;
+    check-cast v0, Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->s()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->s()Z
 
     move-result v0
 
@@ -664,9 +664,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/cameraui/entities/d;
+    check-cast v0, Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->o()Lcom/vk/cameraui/entities/a;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->o()Lcom/vk/cameraui/entities/StoryRawData;
 
     move-result-object v0
 
@@ -674,7 +674,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/a;->b()Landroid/net/Uri;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData;->b()Landroid/net/Uri;
 
     move-result-object v0
 
@@ -692,15 +692,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/cameraui/entities/d;
+    check-cast v0, Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->o()Lcom/vk/cameraui/entities/a;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->o()Lcom/vk/cameraui/entities/StoryRawData;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/a;->a()Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData;->a()Landroid/graphics/Bitmap;
 
     move-result-object v3
 
@@ -730,7 +730,7 @@
 
     if-le v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/BaseListDataSet;
 
     if-nez v0, :cond_0
 
@@ -738,9 +738,9 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->T0()V
 
@@ -751,7 +751,7 @@
     .locals 2
 
     .line 1
-    iget v0, p0, Lcom/vk/stories/editor/base/c0;->b:I
+    iget v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->b:I
 
     const/4 v1, 0x1
 
@@ -772,16 +772,16 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/cameraui/entities/d;
+    check-cast v0, Lcom/vk/cameraui/entities/StoryRawData3;
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->f()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->f()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->h()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->h()Z
 
     move-result v0
 
@@ -790,28 +790,28 @@
     .line 4
     sget-object v0, Lcom/vk/stories/analytics/StoryPublishEvent;->APPLY_BACKGROUND:Lcom/vk/stories/analytics/StoryPublishEvent;
 
-    invoke-virtual {p0, v0}, Lcom/vk/stories/editor/base/c0;->a(Lcom/vk/stories/analytics/StoryPublishEvent;)V
+    invoke-virtual {p0, v0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->a(Lcom/vk/stories/analytics/StoryPublishEvent;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Landroid/graphics/Bitmap;Z)Lcom/vk/attachpicker/stickers/w;
+.method public static final synthetic a(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Landroid/graphics/Bitmap;Z)Lcom/vk/attachpicker/stickers/CameraImageViewSticker;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Landroid/graphics/Bitmap;Z)Lcom/vk/attachpicker/stickers/w;
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Landroid/graphics/Bitmap;Z)Lcom/vk/attachpicker/stickers/CameraImageViewSticker;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/e;Z)Lcom/vk/attachpicker/stickers/x;
+.method public static final synthetic a(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData2;Z)Lcom/vk/attachpicker/stickers/CameraVideoViewSticker;
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lcom/vk/cameraui/entities/e;Z)Lcom/vk/attachpicker/stickers/x;
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lcom/vk/cameraui/entities/StoryRawData2;Z)Lcom/vk/attachpicker/stickers/CameraVideoViewSticker;
 
     move-result-object p0
 
@@ -822,7 +822,7 @@
     .locals 0
 
     .line 5
-    iget-object p0, p0, Lcom/vk/stories/editor/base/c0;->g:Lcom/vk/dto/stories/model/StoryUploadParams;
+    iget-object p0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->g:Lcom/vk/dto/stories/model/StoryUploadParams;
 
     return-object p0
 .end method
@@ -831,24 +831,24 @@
     .locals 0
 
     .line 76
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Landroid/graphics/Bitmap;Z)Lcom/vk/attachpicker/stickers/w;
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Landroid/graphics/Bitmap;Z)Lcom/vk/attachpicker/stickers/CameraImageViewSticker;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 77
-    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/base/c0;->a(Lcom/vk/attachpicker/stickers/ISticker;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->a(Lcom/vk/attachpicker/stickers/ISticker;)V
 
     :cond_0
     return-void
 .end method
 
-.method private final a(Lcom/vk/cameraui/entities/d;)V
+.method private final a(Lcom/vk/cameraui/entities/StoryRawData3;)V
     .locals 6
 
     .line 21
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     const-string v1, "currentStory"
 
@@ -858,35 +858,35 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->i()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->i()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 22
-    invoke-virtual {p0}, Lcom/vk/stories/editor/base/c0;->y1()V
+    invoke-virtual {p0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->y1()V
 
     goto :goto_0
 
     .line 23
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 24
     :cond_1
     :goto_0
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->h0:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->h0:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->a()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->a()V
 
     .line 25
-    iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     .line 26
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/BaseListDataSet;
 
     if-eqz v0, :cond_2
 
@@ -900,92 +900,92 @@
 
     invoke-direct {v4, v3, p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$bind$$inlined$let$lambda$1;-><init>(ILcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)V
 
-    invoke-interface {v0, v4}, Lcom/vk/lists/d;->a(Lkotlin/jvm/b/c;)V
+    invoke-interface {v0, v4}, Lcom/vk/lists/DataSet;->a(Lkotlin/jvm/b/Functions1;)V
 
     .line 29
     :cond_2
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
     const-string v3, "view"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v3, :cond_14
 
-    invoke-virtual {v3}, Lcom/vk/cameraui/entities/d;->p()Lcom/vk/attachpicker/stickers/m0;
+    invoke-virtual {v3}, Lcom/vk/cameraui/entities/StoryRawData3;->p()Lcom/vk/attachpicker/stickers/StickersState;
 
     move-result-object v3
 
-    invoke-interface {v0, v3}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->setStickersState(Lcom/vk/attachpicker/stickers/m0;)V
+    invoke-interface {v0, v3}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->setStickersState(Lcom/vk/attachpicker/stickers/StickersState;)V
 
     .line 30
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v3, :cond_13
 
-    invoke-virtual {v3}, Lcom/vk/cameraui/entities/d;->e()Lcom/vk/attachpicker/drawing/d;
+    invoke-virtual {v3}, Lcom/vk/cameraui/entities/StoryRawData3;->e()Lcom/vk/attachpicker/drawing/DrawingState;
 
     move-result-object v3
 
-    invoke-interface {v0, v3}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->setDrawingState(Lcom/vk/attachpicker/drawing/d;)V
+    invoke-interface {v0, v3}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->setDrawingState(Lcom/vk/attachpicker/drawing/DrawingState;)V
 
     .line 31
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->r()Z
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->r()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
     .line 32
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->B:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->B:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
 
     if-eqz v0, :cond_4
 
-    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v3, :cond_3
 
-    invoke-virtual {v0, v3}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Lcom/vk/cameraui/entities/d;)V
+    invoke-virtual {v0, v3}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     goto :goto_1
 
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 33
     :cond_4
     :goto_1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->C:Lcom/vk/stories/editor/multi/c;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->C:Lcom/vk/stories/editor/multi/CameraPostDelegate;
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Lcom/vk/stories/editor/multi/c;->a()V
+    invoke-virtual {v0}, Lcom/vk/stories/editor/multi/CameraPostDelegate;->a()V
 
     .line 34
     :cond_5
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->E:Lcom/vk/stories/editor/multi/a;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->E:Lcom/vk/stories/editor/multi/CameraPhotoStickerDelegate;
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {v0}, Lcom/vk/stories/editor/multi/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/stories/editor/multi/CameraPhotoStickerDelegate;->a()V
 
     .line 35
     :cond_6
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->D:Lcom/vk/stories/editor/multi/b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->D:Lcom/vk/stories/editor/multi/CameraPollDelegate;
 
     if-eqz v0, :cond_7
 
-    invoke-virtual {v0}, Lcom/vk/stories/editor/multi/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/stories/editor/multi/CameraPollDelegate;->a()V
 
     .line 36
     :cond_7
@@ -995,7 +995,7 @@
 
     .line 37
     :cond_8
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->s()Z
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->s()Z
 
     move-result v0
 
@@ -1007,7 +1007,7 @@
 
     .line 38
     :cond_9
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->t()Z
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->t()Z
 
     move-result v0
 
@@ -1018,10 +1018,10 @@
     .line 39
     :cond_a
     :goto_2
-    invoke-virtual {p0}, Lcom/vk/stories/editor/base/c0;->f()V
+    invoke-virtual {p0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->f()V
 
     .line 40
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->d()Lcom/vk/dto/stories/entities/stat/BackgroundInfo;
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->d()Lcom/vk/dto/stories/entities/stat/BackgroundInfo;
 
     move-result-object v0
 
@@ -1058,7 +1058,7 @@
     if-nez v5, :cond_d
 
     .line 43
-    iget-object v5, p0, Lcom/vk/stories/editor/base/c0;->R:Lcom/vk/stories/editor/background/b;
+    iget-object v5, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->R:Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;
 
     if-eqz v5, :cond_d
 
@@ -1066,24 +1066,24 @@
 
     move-result-object v0
 
-    invoke-interface {v5, v0, v4}, Lcom/vk/stories/editor/background/b;->a(Ljava/lang/Integer;Ljava/lang/String;)V
+    invoke-interface {v5, v0, v4}, Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;->a(Ljava/lang/Integer;Ljava/lang/String;)V
 
     .line 44
     :cond_d
-    invoke-virtual {p0}, Lcom/vk/stories/editor/base/c0;->w()V
+    invoke-virtual {p0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->w()V
 
     .line 45
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->p()Lcom/vk/attachpicker/stickers/m0;
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->p()Lcom/vk/attachpicker/stickers/StickersState;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
 
     move-result-object p1
 
     const-string v0, "story.stickersState.stickers"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 46
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1106,7 +1106,7 @@
     check-cast v4, Lcom/vk/attachpicker/stickers/ISticker;
 
     .line 47
-    instance-of v4, v4, Lcom/vk/stories/clickable/stickers/d;
+    instance-of v4, v4, Lcom/vk/stories/clickable/stickers/StoryMusicSticker1;
 
     if-eqz v4, :cond_e
 
@@ -1117,18 +1117,18 @@
 
     .line 48
     :goto_5
-    instance-of p1, v0, Lcom/vk/stories/clickable/stickers/d;
+    instance-of p1, v0, Lcom/vk/stories/clickable/stickers/StoryMusicSticker1;
 
     if-nez p1, :cond_10
 
     move-object v0, v2
 
     :cond_10
-    check-cast v0, Lcom/vk/stories/clickable/stickers/d;
+    check-cast v0, Lcom/vk/stories/clickable/stickers/StoryMusicSticker1;
 
     if-eqz v0, :cond_11
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/stickers/d;->r()Lcom/vk/stories/clickable/models/StoryMusicInfo;
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/stickers/StoryMusicSticker1;->r()Lcom/vk/stories/clickable/models/StoryMusicInfo;
 
     move-result-object p1
 
@@ -1147,77 +1147,77 @@
 
     move-result p1
 
-    invoke-virtual {p0, v0, v4, p1, v3}, Lcom/vk/stories/editor/base/c0;->a(Ljava/lang/String;IIZ)V
+    invoke-virtual {p0, v0, v4, p1, v3}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->a(Ljava/lang/String;IIZ)V
 
     .line 50
     :cond_11
-    iget-object p1, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object p1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast p1, Lcom/vk/stories/editor/multi/h;
+    check-cast p1, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_12
 
-    invoke-interface {p1, v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->a(Lcom/vk/cameraui/entities/d;)V
+    invoke-interface {p1, v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->a(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     return-void
 
     :cond_12
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 51
     :cond_13
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 52
     :cond_14
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
 
-.method private final a(Lcom/vk/cameraui/entities/e;Z)V
+.method private final a(Lcom/vk/cameraui/entities/StoryRawData2;Z)V
     .locals 0
 
     .line 78
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lcom/vk/cameraui/entities/e;Z)Lcom/vk/attachpicker/stickers/x;
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lcom/vk/cameraui/entities/StoryRawData2;Z)Lcom/vk/attachpicker/stickers/CameraVideoViewSticker;
 
     move-result-object p1
 
     .line 79
-    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/base/c0;->a(Lcom/vk/attachpicker/stickers/ISticker;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->a(Lcom/vk/attachpicker/stickers/ISticker;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/d;)V
+.method public static final synthetic a(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData3;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/d;Lcom/vk/dto/stories/model/StoryUploadParams;)V
+.method public static final synthetic a(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData3;Lcom/vk/dto/stories/model/StoryUploadParams;)V
     .locals 0
 
     .line 4
-    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/editor/base/c0;->a(Lcom/vk/cameraui/entities/d;Lcom/vk/dto/stories/model/StoryUploadParams;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/StoryRawData3;Lcom/vk/dto/stories/model/StoryUploadParams;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/lists/b;)V
+.method public static final synthetic a(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/lists/BaseListDataSet;)V
     .locals 0
 
     .line 7
-    iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/b;
+    iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/BaseListDataSet;
 
     return-void
 .end method
@@ -1255,21 +1255,21 @@
     invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
 
     .line 73
-    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
 
     .line 74
-    iget-object p1, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object p1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast p1, Lcom/vk/stories/editor/multi/h;
+    check-cast p1, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {p1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->W0()V
 
     .line 75
-    invoke-virtual {p0}, Lcom/vk/stories/editor/base/c0;->l()Lcom/vk/stories/editor/base/f0;
+    invoke-virtual {p0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->l()Lcom/vk/stories/editor/base/CameraEditorContainer;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stories/editor/base/f0;->a()V
+    invoke-interface {p1}, Lcom/vk/stories/editor/base/CameraEditorContainer;->a()V
 
     return-void
 .end method
@@ -1280,7 +1280,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/cameraui/entities/d;",
+            "Lcom/vk/cameraui/entities/StoryRawData3;",
             ">;)V"
         }
     .end annotation
@@ -1326,10 +1326,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/cameraui/entities/d;
+    check-cast v0, Lcom/vk/cameraui/entities/StoryRawData3;
 
     .line 12
-    invoke-direct {p0, v1, v2, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Ljava/util/List;ILcom/vk/cameraui/entities/d;)V
+    invoke-direct {p0, v1, v2, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Ljava/util/List;ILcom/vk/cameraui/entities/StoryRawData3;)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -1339,15 +1339,15 @@
     return-void
 .end method
 
-.method private final a(Ljava/util/List;ILcom/vk/cameraui/entities/d;)V
+.method private final a(Ljava/util/List;ILcom/vk/cameraui/entities/StoryRawData3;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/stories/editor/multi/k/b/b;",
+            "Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;",
             ">;I",
-            "Lcom/vk/cameraui/entities/d;",
+            "Lcom/vk/cameraui/entities/StoryRawData3;",
             ")V"
         }
     .end annotation
@@ -1355,27 +1355,27 @@
     .line 13
     new-instance v0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;
 
-    invoke-direct {v0, p0, p3, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/d;I)V
+    invoke-direct {v0, p0, p3, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$f;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData3;I)V
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object p3
 
     .line 14
-    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lc/a/s;
+    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p3, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p3, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p3
 
     .line 15
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p3, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p3, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p3
 
@@ -1384,7 +1384,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$g;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)V
 
-    invoke-virtual {p3, v0}, Lc/a/m;->e(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p3, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p3
 
@@ -1399,27 +1399,27 @@
     invoke-direct {p1, p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$i;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)V
 
     .line 19
-    invoke-virtual {p3, v0, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p3, v0, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "disposable"
 
     .line 20
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lb/h/v/b;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lb/h/v/CompositeDisposableContainer1;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/lists/b;)Z
+.method private final a(Lcom/vk/lists/BaseListDataSet;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/b<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/lists/BaseListDataSet<",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;)Z"
         }
     .end annotation
@@ -1438,7 +1438,7 @@
 
     invoke-direct {v1, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$containsAddStoryItem$1;-><init>(Lkotlin/jvm/internal/Ref$BooleanRef;)V
 
-    invoke-interface {p1, v1}, Lcom/vk/lists/d;->a(Lkotlin/jvm/b/b;)V
+    invoke-interface {p1, v1}, Lcom/vk/lists/DataSet;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 82
     iget-boolean p1, v0, Lkotlin/jvm/internal/Ref$BooleanRef;->element:Z
@@ -1446,7 +1446,7 @@
     return p1
 .end method
 
-.method private final b(Landroid/graphics/Bitmap;Z)Lcom/vk/attachpicker/stickers/w;
+.method private final b(Landroid/graphics/Bitmap;Z)Lcom/vk/attachpicker/stickers/CameraImageViewSticker;
     .locals 5
 
     if-nez p1, :cond_0
@@ -1457,15 +1457,15 @@
 
     .line 25
     :cond_0
-    new-instance v0, Lcom/vk/attachpicker/stickers/w;
+    new-instance v0, Lcom/vk/attachpicker/stickers/CameraImageViewSticker;
 
-    iget-object v1, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
     const-string v2, "view"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v1, Lcom/vk/stories/editor/multi/h;
+    check-cast v1, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getContext()Landroid/content/Context;
 
@@ -1473,15 +1473,15 @@
 
     const-string v3, "view.context"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/attachpicker/stickers/w;-><init>(Landroid/content/Context;Landroid/graphics/Bitmap;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/attachpicker/stickers/CameraImageViewSticker;-><init>(Landroid/content/Context;Landroid/graphics/Bitmap;)V
 
     .line 26
-    invoke-virtual {v0, p2}, Lcom/vk/attachpicker/stickers/t0;->setStatic(Z)V
+    invoke-virtual {v0, p2}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->setStatic(Z)V
 
     .line 27
-    sget-object p2, Lcom/vk/attachpicker/stickers/k0;->a:Lcom/vk/attachpicker/stickers/k0;
+    sget-object p2, Lcom/vk/attachpicker/stickers/StickerUtils;->a:Lcom/vk/attachpicker/stickers/StickerUtils;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -1491,55 +1491,55 @@
 
     move-result p1
 
-    iget-object v3, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v3, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v3, Lcom/vk/stories/editor/multi/h;
+    check-cast v3, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {v3}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getLayoutWidth()I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v4, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    invoke-static {v4, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v4, Lcom/vk/stories/editor/multi/h;
+    check-cast v4, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {v4}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getLayoutHeight()I
 
     move-result v2
 
-    invoke-virtual {p2, v1, p1, v3, v2}, Lcom/vk/attachpicker/stickers/k0;->a(IIII)F
+    invoke-virtual {p2, v1, p1, v3, v2}, Lcom/vk/attachpicker/stickers/StickerUtils;->a(IIII)F
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/t0;->setStickerScale(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->setStickerScale(F)V
 
     .line 28
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/t0;->getStickerScale()F
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->getStickerScale()F
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/t0;->setOriginalStickerScale(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->setOriginalStickerScale(F)V
 
     return-object v0
 .end method
 
-.method private final b(Lcom/vk/cameraui/entities/e;Z)Lcom/vk/attachpicker/stickers/x;
+.method private final b(Lcom/vk/cameraui/entities/StoryRawData2;Z)Lcom/vk/attachpicker/stickers/CameraVideoViewSticker;
     .locals 10
 
     .line 29
-    new-instance v8, Lcom/vk/attachpicker/stickers/x;
+    new-instance v8, Lcom/vk/attachpicker/stickers/CameraVideoViewSticker;
 
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
     const-string v9, "view"
 
-    invoke-static {v0, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getContext()Landroid/content/Context;
 
@@ -1547,7 +1547,7 @@
 
     const-string v0, "view.context"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
@@ -1563,14 +1563,14 @@
 
     move-object v4, p0
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/attachpicker/stickers/x;-><init>(Landroid/content/Context;Lcom/vk/cameraui/entities/e;Lcom/vk/media/player/video/view/SimpleVideoView$k;Lcom/vk/media/player/video/view/SimpleVideoView$l;Landroid/graphics/Bitmap;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/attachpicker/stickers/CameraVideoViewSticker;-><init>(Landroid/content/Context;Lcom/vk/cameraui/entities/StoryRawData2;Lcom/vk/media/player/video/view/SimpleVideoView$k;Lcom/vk/media/player/video/view/SimpleVideoView$l;Landroid/graphics/Bitmap;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 30
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/e;->l()I
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData2;->l()I
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/e;->k()I
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData2;->k()I
 
     move-result v1
 
@@ -1579,52 +1579,52 @@
     if-eqz v0, :cond_0
 
     .line 31
-    sget-object v0, Lcom/vk/attachpicker/stickers/k0;->a:Lcom/vk/attachpicker/stickers/k0;
+    sget-object v0, Lcom/vk/attachpicker/stickers/StickerUtils;->a:Lcom/vk/attachpicker/stickers/StickerUtils;
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/e;->l()I
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData2;->l()I
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/e;->k()I
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData2;->k()I
 
     move-result p1
 
-    iget-object v2, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v2, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    invoke-static {v2, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v2, Lcom/vk/stories/editor/multi/h;
+    check-cast v2, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {v2}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getLayoutWidth()I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v3, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    invoke-static {v3, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v3, Lcom/vk/stories/editor/multi/h;
+    check-cast v3, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {v3}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getLayoutHeight()I
 
     move-result v3
 
-    invoke-virtual {v0, v1, p1, v2, v3}, Lcom/vk/attachpicker/stickers/k0;->a(IIII)F
+    invoke-virtual {v0, v1, p1, v2, v3}, Lcom/vk/attachpicker/stickers/StickerUtils;->a(IIII)F
 
     move-result p1
 
-    invoke-virtual {v8, p1}, Lcom/vk/attachpicker/stickers/t0;->setStickerScale(F)V
+    invoke-virtual {v8, p1}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->setStickerScale(F)V
 
     .line 32
-    invoke-virtual {v8}, Lcom/vk/attachpicker/stickers/t0;->getStickerScale()F
+    invoke-virtual {v8}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->getStickerScale()F
 
     move-result p1
 
-    invoke-virtual {v8, p1}, Lcom/vk/attachpicker/stickers/t0;->setOriginalStickerScale(F)V
+    invoke-virtual {v8, p1}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->setOriginalStickerScale(F)V
 
     .line 33
     :cond_0
-    invoke-virtual {v8, p2}, Lcom/vk/attachpicker/stickers/t0;->setStatic(Z)V
+    invoke-virtual {v8, p2}, Lcom/vk/attachpicker/stickers/ViewGroupSticker;->setStatic(Z)V
 
     return-object v8
 .end method
@@ -1638,18 +1638,18 @@
     return-object p0
 .end method
 
-.method private final b(Lcom/vk/cameraui/entities/d;)V
+.method private final b(Lcom/vk/cameraui/entities/StoryRawData3;)V
     .locals 4
 
     .line 12
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->j()Z
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->j()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 13
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->B:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->B:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
 
     if-eqz v0, :cond_1
 
@@ -1659,29 +1659,29 @@
 
     .line 14
     :cond_0
-    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c(Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     .line 15
     :cond_1
     :goto_0
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->p()Lcom/vk/attachpicker/stickers/m0;
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->p()Lcom/vk/attachpicker/stickers/StickersState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->l()Z
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->l()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
     .line 16
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->o()Lcom/vk/cameraui/entities/a;
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->o()Lcom/vk/cameraui/entities/StoryRawData;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/a;->a()Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData;->a()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -1691,7 +1691,7 @@
     const/4 v0, 0x0
 
     :goto_1
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->m()Z
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->m()Z
 
     move-result v1
 
@@ -1699,20 +1699,20 @@
 
     .line 17
     :cond_3
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->l()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->l()Ljava/util/List;
 
     move-result-object v0
 
     if-nez v0, :cond_4
 
     .line 18
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->o()Lcom/vk/cameraui/entities/a;
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->o()Lcom/vk/cameraui/entities/StoryRawData;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/a;->a()Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData;->a()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -1721,13 +1721,13 @@
     .line 19
     sget-object v1, Lcom/vk/ml/MLFeatures;->d:Lcom/vk/ml/MLFeatures;
 
-    iget-object v2, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v2, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
     const-string v3, "view"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v2, Lcom/vk/stories/editor/multi/h;
+    check-cast v2, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {v2}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getContext()Landroid/content/Context;
 
@@ -1735,54 +1735,54 @@
 
     const-string v3, "view.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/ml/MLFeatures;->a(Landroid/content/Context;Landroid/graphics/Bitmap;)Lc/a/t;
+    invoke-virtual {v1, v2, v0}, Lcom/vk/ml/MLFeatures;->a(Landroid/content/Context;Landroid/graphics/Bitmap;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 20
     new-instance v1, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$d;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$d;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$d;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     .line 21
     new-instance v2, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$e;
 
-    invoke-direct {v2, p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$e;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {v2, p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$e;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     .line 22
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "it"
 
     .line 23
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lb/h/v/b;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lb/h/v/CompositeDisposableContainer1;->a(Lio/reactivex/disposables/Disposable;)V
 
     :cond_4
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/d;)V
+.method public static final synthetic b(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData3;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c(Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     return-void
 .end method
 
-.method private final b(Lio/reactivex/disposables/b;)V
+.method private final b(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
     .line 24
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->h0:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->h0:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -1791,29 +1791,29 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/editor/base/c0;->G:Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;
+    iget-object p0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->G:Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;
 
     return-object p0
 .end method
 
-.method private final c(Lcom/vk/cameraui/entities/d;)V
+.method private final c(Lcom/vk/cameraui/entities/StoryRawData3;)V
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->h:Lcom/vk/stories/editor/multi/e;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->h:Lcom/vk/stories/editor/multi/LayersProvider;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x2
 
-    invoke-static {v0, p1, v1, v2, v1}, Lcom/vk/stories/editor/multi/e$b;->a(Lcom/vk/stories/editor/multi/e;Lcom/vk/cameraui/entities/d;Landroid/graphics/Bitmap;ILjava/lang/Object;)Landroid/graphics/Bitmap;
+    invoke-static {v0, p1, v1, v2, v1}, Lcom/vk/stories/editor/multi/LayersProvider$b;->a(Lcom/vk/stories/editor/multi/LayersProvider;Lcom/vk/cameraui/entities/StoryRawData3;Landroid/graphics/Bitmap;ILjava/lang/Object;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {p0, p1, v0}, Lcom/vk/stories/editor/base/c0;->a(Lcom/vk/cameraui/entities/d;Landroid/graphics/Bitmap;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/StoryRawData3;Landroid/graphics/Bitmap;)V
 
     :cond_0
     return-void
@@ -1830,11 +1830,11 @@
     return p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/cameraui/entities/d;
+.method public static final synthetic e(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/cameraui/entities/StoryRawData3;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object p0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz p0, :cond_0
 
@@ -1843,7 +1843,7 @@
     :cond_0
     const-string p0, "currentStory"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1854,25 +1854,25 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/editor/base/c0;->d:Lcom/vk/stories/editor/base/EditorEventsTracker;
+    iget-object p0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->d:Lcom/vk/stories/editor/base/EditorEventsTracker;
 
     return-object p0
 .end method
 
-.method public static final synthetic g(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/j;
+.method public static final synthetic g(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/MusicStoryRenderer;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->f0:Lcom/vk/stories/editor/multi/j;
+    iget-object p0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->f0:Lcom/vk/stories/editor/multi/MusicStoryRenderer;
 
     return-object p0
 .end method
 
-.method public static final synthetic h(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/e;
+.method public static final synthetic h(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/LayersProvider;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/editor/base/c0;->h:Lcom/vk/stories/editor/multi/e;
+    iget-object p0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->h:Lcom/vk/stories/editor/multi/LayersProvider;
 
     return-object p0
 .end method
@@ -1894,56 +1894,56 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$o;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;I)V
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 3
-    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lc/a/s;
+    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 5
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "it"
 
     .line 6
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lb/h/v/b;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lb/h/v/CompositeDisposableContainer1;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
 
-.method public static final synthetic j(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/lists/b;
+.method public static final synthetic j(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/lists/BaseListDataSet;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/b;
+    iget-object p0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/BaseListDataSet;
 
     return-object p0
 .end method
@@ -1973,18 +1973,18 @@
 
     .line 2
     :goto_0
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {v0, p1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->b(F)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/stories/editor/base/c0;->l()Lcom/vk/stories/editor/base/f0;
+    invoke-virtual {p0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->l()Lcom/vk/stories/editor/base/CameraEditorContainer;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/stories/editor/base/f0;->c(F)V
+    invoke-interface {v0, p1}, Lcom/vk/stories/editor/base/CameraEditorContainer;->c(F)V
 
     return-void
 .end method
@@ -2013,7 +2013,7 @@
     .locals 0
 
     .line 1
-    iget p0, p0, Lcom/vk/stories/editor/base/c0;->H:I
+    iget p0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->H:I
 
     return p0
 .end method
@@ -2022,27 +2022,27 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/editor/base/c0;->f:Lcom/vk/dto/stories/model/CommonUploadParams;
+    iget-object p0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->f:Lcom/vk/dto/stories/model/CommonUploadParams;
 
     return-object p0
 .end method
 
-.method public static final synthetic o(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/d;
+.method public static final synthetic o(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/CameraVideoDelegate;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/d;
+    iget-object p0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/CameraVideoDelegate;
 
     return-object p0
 .end method
 
-.method public static final synthetic p(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/h;
+.method public static final synthetic p(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object p0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast p0, Lcom/vk/stories/editor/multi/h;
+    check-cast p0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     return-object p0
 .end method
@@ -2051,7 +2051,7 @@
     .locals 0
 
     .line 1
-    iget-boolean p0, p0, Lcom/vk/stories/editor/base/c0;->J:Z
+    iget-boolean p0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->J:Z
 
     return p0
 .end method
@@ -2079,11 +2079,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->l()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->l()Ljava/util/List;
 
     move-result-object v0
 
@@ -2092,7 +2092,7 @@
     :cond_0
     const-string v0, "currentStory"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2103,11 +2103,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->k()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->k()Z
 
     move-result v0
 
@@ -2116,7 +2116,7 @@
     :cond_0
     const-string v0, "currentStory"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2140,27 +2140,27 @@
     .locals 2
 
     .line 1
-    iget-boolean v0, p0, Lcom/vk/stories/editor/base/c0;->L:Z
+    iget-boolean v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->L:Z
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/vk/stories/editor/base/c0;->setMute(Z)V
+    invoke-virtual {p0, v0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->setMute(Z)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->q()Lcom/vk/cameraui/entities/e;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->q()Lcom/vk/cameraui/entities/StoryRawData2;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 3
-    iget-object v1, p0, Lcom/vk/stories/editor/base/c0;->d:Lcom/vk/stories/editor/base/EditorEventsTracker;
+    iget-object v1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->d:Lcom/vk/stories/editor/base/EditorEventsTracker;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/e;->d()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData2;->d()Z
 
     move-result v0
 
@@ -2183,7 +2183,7 @@
     const-string v0, "currentStory"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2194,13 +2194,13 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
     const-string v1, "view"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getContext()Landroid/content/Context;
 
@@ -2208,7 +2208,7 @@
 
     const-string v1, "view.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -2299,11 +2299,11 @@
     return-void
 .end method
 
-.method public O1()Lcom/vk/cameraui/entities/d;
+.method public O1()Lcom/vk/cameraui/entities/StoryRawData3;
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     const/4 v1, 0x0
 
@@ -2316,7 +2316,7 @@
     :cond_0
     const-string v0, "currentStory"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -2342,13 +2342,13 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->k()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->k()Z
 
     move-result v0
 
@@ -2357,35 +2357,35 @@
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
     const-string v3, "view"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getStickersState()Lcom/vk/attachpicker/stickers/m0;
+    invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getStickersState()Lcom/vk/attachpicker/stickers/StickersState;
 
     move-result-object v0
 
     const-string v3, "view.stickersState"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/m0;->j()Lcom/vk/attachpicker/stickers/r0;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersState;->j()Lcom/vk/attachpicker/stickers/ISticker5;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/attachpicker/stickers/r0;->getVideoData()Lcom/vk/cameraui/entities/e;
+    invoke-interface {v0}, Lcom/vk/attachpicker/stickers/ISticker5;->getVideoData()Lcom/vk/cameraui/entities/StoryRawData2;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/e;->a()I
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData2;->a()I
 
     move-result v0
 
@@ -2407,7 +2407,7 @@
     const-string v0, "currentStory"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -2416,11 +2416,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->f()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->f()Z
 
     move-result v0
 
@@ -2429,22 +2429,22 @@
     :cond_0
     const-string v0, "currentStory"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public a(F)Lb/h/p/c$b;
+.method public a(F)Lb/h/p/MediaUtils$b;
     .locals 1
 
     .line 53
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->r()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->r()Z
 
     move-result v0
 
@@ -2452,7 +2452,7 @@
 
     iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->e0:Lcom/vk/stories/editor/multi/CameraCompositeProcessor;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/editor/multi/CameraCompositeProcessor;->a(F)Lb/h/p/c$b;
+    invoke-virtual {v0, p1}, Lcom/vk/stories/editor/multi/CameraCompositeProcessor;->a(F)Lb/h/p/MediaUtils$b;
 
     move-result-object p1
 
@@ -2468,7 +2468,7 @@
 
     iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->d0:Lcom/vk/stories/editor/multi/CameraPhotoDelegate;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/editor/multi/CameraPhotoDelegate;->a(F)Lb/h/p/c$b;
+    invoke-virtual {v0, p1}, Lcom/vk/stories/editor/multi/CameraPhotoDelegate;->a(F)Lb/h/p/MediaUtils$b;
 
     move-result-object p1
 
@@ -2482,9 +2482,9 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/CameraVideoDelegate;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/editor/multi/d;->a(F)Lb/h/p/c$b;
+    invoke-virtual {v0, p1}, Lcom/vk/stories/editor/multi/CameraVideoDelegate;->a(F)Lb/h/p/MediaUtils$b;
 
     move-result-object p1
 
@@ -2492,13 +2492,13 @@
 
     .line 56
     :cond_2
-    invoke-static {p1}, Lcom/vk/stories/t0;->a(F)Lb/h/p/c$b;
+    invoke-static {p1}, Lcom/vk/stories/StoriesProcessor;->a(F)Lb/h/p/MediaUtils$b;
 
     move-result-object p1
 
     const-string v0, "StoriesProcessor.getPubl\u2026deoStorySize(aspectRatio)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1
@@ -2507,7 +2507,7 @@
     const-string p1, "currentStory"
 
     .line 57
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -2518,20 +2518,20 @@
     .locals 2
 
     .line 68
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->q()Lcom/vk/cameraui/entities/e;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->q()Lcom/vk/cameraui/entities/StoryRawData2;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 69
-    iget-object v1, p0, Lcom/vk/stories/editor/base/c0;->d:Lcom/vk/stories/editor/base/EditorEventsTracker;
+    iget-object v1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->d:Lcom/vk/stories/editor/base/EditorEventsTracker;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/e;->a()I
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData2;->a()I
 
     move-result v0
 
@@ -2546,7 +2546,7 @@
     const-string v0, "currentStory"
 
     .line 70
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2557,7 +2557,7 @@
     .locals 3
 
     .line 58
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     const-string v1, "currentStory"
 
@@ -2565,23 +2565,23 @@
 
     if-eqz v0, :cond_7
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->s()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->s()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->o()Lcom/vk/cameraui/entities/a;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->o()Lcom/vk/cameraui/entities/StoryRawData;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/a;->b()Landroid/net/Uri;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData;->b()Landroid/net/Uri;
 
     move-result-object v0
 
@@ -2597,17 +2597,17 @@
 
     .line 59
     :cond_1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->o()Lcom/vk/cameraui/entities/a;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->o()Lcom/vk/cameraui/entities/StoryRawData;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/entities/a;->a(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/entities/StoryRawData;->a(Landroid/graphics/Bitmap;)V
 
     .line 60
     :cond_2
@@ -2617,31 +2617,31 @@
     invoke-direct {p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->K()V
 
     .line 62
-    iget-object p1, p0, Lcom/vk/stories/editor/base/c0;->G:Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;
+    iget-object p1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->G:Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;
 
     sget-object v0, Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;->MEDIA:Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;
 
     if-ne p1, v0, :cond_3
 
     .line 63
-    iget-object p1, p0, Lcom/vk/stories/editor/base/c0;->h:Lcom/vk/stories/editor/multi/e;
+    iget-object p1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->h:Lcom/vk/stories/editor/multi/LayersProvider;
 
     iget v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->g0:I
 
-    invoke-interface {p1, v0}, Lcom/vk/stories/editor/multi/e;->a(I)V
+    invoke-interface {p1, v0}, Lcom/vk/stories/editor/multi/LayersProvider;->a(I)V
 
     :cond_3
     return-void
 
     .line 64
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 65
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2670,7 +2670,7 @@
 
     .line 67
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -2709,14 +2709,14 @@
     .locals 1
 
     .line 4
-    invoke-super {p0, p1}, Lcom/vk/stories/editor/base/c0;->b(I)V
+    invoke-super {p0, p1}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->b(I)V
 
     .line 5
-    iget-object p1, p0, Lcom/vk/stories/editor/base/c0;->h:Lcom/vk/stories/editor/multi/e;
+    iget-object p1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->h:Lcom/vk/stories/editor/multi/LayersProvider;
 
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/CameraVideoDelegate;
 
-    invoke-interface {p1, v0}, Lcom/vk/stories/editor/multi/e;->a(Lcom/vk/stories/editor/multi/d;)V
+    invoke-interface {p1, v0}, Lcom/vk/stories/editor/multi/LayersProvider;->a(Lcom/vk/stories/editor/multi/CameraVideoDelegate;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->i0:Ljava/util/List;
@@ -2727,9 +2727,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/cameraui/entities/d;
+    check-cast p1, Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     .line 7
     invoke-direct {p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->L()V
@@ -2800,10 +2800,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/cameraui/entities/d;
+    check-cast v0, Lcom/vk/cameraui/entities/StoryRawData3;
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->s()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->s()Z
 
     move-result v0
 
@@ -2825,11 +2825,11 @@
     return-object v0
 .end method
 
-.method public c2()Lc/a/s;
+.method public c2()Lio/reactivex/Scheduler;
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lc/a/s;
+    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
@@ -2845,17 +2845,17 @@
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/BaseListDataSet;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/lists/d;->k(I)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lcom/vk/lists/DataSet;->k(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/i/b;
+    check-cast v0, Lcom/vk/common/i/RecyclerItem;
 
     goto :goto_0
 
@@ -2863,36 +2863,36 @@
     move-object v0, v1
 
     :goto_0
-    instance-of v2, v0, Lcom/vk/stories/editor/multi/k/b/b;
+    instance-of v2, v0, Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;
 
     if-nez v2, :cond_1
 
     move-object v0, v1
 
     :cond_1
-    check-cast v0, Lcom/vk/stories/editor/multi/k/b/b;
+    check-cast v0, Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;
 
     if-eqz v0, :cond_2
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/editor/multi/k/b/b;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/editor/multi/k/b/MultiStoryItem;->a(Z)V
 
     .line 4
     :cond_2
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/BaseListDataSet;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/b;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/BaseListDataSet;->a(I)V
 
     .line 5
     :cond_3
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/BaseListDataSet;
 
     if-eqz v0, :cond_4
 
-    invoke-interface {v0, p1}, Lcom/vk/lists/d;->j(I)V
+    invoke-interface {v0, p1}, Lcom/vk/lists/DataSet;->j(I)V
 
     .line 6
     :cond_4
@@ -2904,11 +2904,11 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {p0}, Lcom/vk/stories/editor/base/c0;->l()Lcom/vk/stories/editor/base/f0;
+    invoke-virtual {p0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->l()Lcom/vk/stories/editor/base/CameraEditorContainer;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stories/editor/base/f0;->a()V
+    invoke-interface {p1}, Lcom/vk/stories/editor/base/CameraEditorContainer;->a()V
 
     goto :goto_1
 
@@ -2928,9 +2928,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/cameraui/entities/d;
+    check-cast p1, Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     goto :goto_1
 
@@ -2944,9 +2944,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/cameraui/entities/d;
+    check-cast p1, Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     .line 9
     :goto_1
@@ -2966,26 +2966,26 @@
 
     if-ge p1, v0, :cond_7
 
-    iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/b;
+    iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/BaseListDataSet;
 
     if-eqz p1, :cond_7
 
-    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/lists/b;)Z
+    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/lists/BaseListDataSet;)Z
 
     move-result p1
 
     if-nez p1, :cond_7
 
     .line 10
-    iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/b;
+    iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/BaseListDataSet;
 
     if-eqz p1, :cond_7
 
-    new-instance v0, Lcom/vk/stories/editor/multi/k/b/a;
+    new-instance v0, Lcom/vk/stories/editor/multi/k/b/MultiAddStoryItem;
 
-    invoke-direct {v0}, Lcom/vk/stories/editor/multi/k/b/a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/stories/editor/multi/k/b/MultiAddStoryItem;-><init>()V
 
-    invoke-interface {p1, v0}, Lcom/vk/lists/d;->b(Ljava/lang/Object;)V
+    invoke-interface {p1, v0}, Lcom/vk/lists/DataSet;->b(Ljava/lang/Object;)V
 
     :cond_7
     return-void
@@ -3001,9 +3001,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/cameraui/entities/d;
+    check-cast p1, Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     return-void
 .end method
@@ -3025,7 +3025,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->e:Lcom/vk/cameraui/CameraUI$c;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->e:Lcom/vk/cameraui/CameraUI$c;
 
     invoke-interface {v0}, Lcom/vk/cameraui/CameraUI$c;->getLayoutHeight()I
 
@@ -3061,7 +3061,7 @@
     .locals 5
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     const/4 v1, 0x0
 
@@ -3069,18 +3069,18 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->q()Lcom/vk/cameraui/entities/e;
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->q()Lcom/vk/cameraui/entities/StoryRawData2;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/e;->l()I
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData2;->l()I
 
     move-result v3
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/e;->k()I
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData2;->k()I
 
     move-result v4
 
@@ -3093,114 +3093,114 @@
     .line 4
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {v1, v2, v3}, Lc/a/m;->j(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-static {v1, v2, v3}, Lio/reactivex/Observable;->j(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 5
     new-instance v2, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$p;
 
-    invoke-direct {v2, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$p;-><init>(Lcom/vk/cameraui/entities/e;)V
+    invoke-direct {v2, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$p;-><init>(Lcom/vk/cameraui/entities/StoryRawData2;)V
 
-    invoke-virtual {v1, v2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 6
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 7
-    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lc/a/s;
+    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 8
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "it"
 
     .line 9
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lb/h/v/b;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, v0}, Lb/h/v/CompositeDisposableContainer1;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 
     .line 10
     :cond_0
-    iget-object v3, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v3, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v3, Lcom/vk/stories/editor/multi/h;
+    check-cast v3, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/e;->d()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData2;->d()Z
 
     move-result v4
 
     invoke-interface {v3, v4}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->setMute(Z)V
 
     .line 11
-    iget-object v3, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v3, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v3, Lcom/vk/stories/editor/multi/h;
+    check-cast v3, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    invoke-interface {v3}, Lcom/vk/stories/c1/b/b;->t0()V
+    invoke-interface {v3}, Lcom/vk/stories/c1/b/VideoCameraEditorContract1;->t0()V
 
     .line 12
-    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v3, :cond_1
 
     .line 13
     new-instance v1, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$q;
 
-    invoke-direct {v1, p0, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$q;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/e;)V
+    invoke-direct {v1, p0, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$q;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData2;)V
 
-    invoke-static {v1}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v1}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 14
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 15
-    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lc/a/s;
+    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 16
     new-instance v1, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$r;
 
-    invoke-direct {v1, p0, v3}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$r;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {v1, p0, v3}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$r;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     .line 17
     new-instance v2, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$s;
@@ -3208,22 +3208,22 @@
     invoke-direct {v2, p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$s;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)V
 
     .line 18
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "disposable"
 
     .line 19
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 
     .line 20
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3232,7 +3232,7 @@
 
     .line 21
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -3241,9 +3241,9 @@
     .locals 1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {v0, p1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->setNeedRequestAudioFocus(Z)V
 
@@ -3260,7 +3260,7 @@
 
     if-nez v0, :cond_2
 
-    iget-boolean v0, p0, Lcom/vk/stories/editor/base/c0;->I:Z
+    iget-boolean v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->I:Z
 
     if-nez v0, :cond_0
 
@@ -3268,9 +3268,9 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     const-wide/16 v1, 0x12c
 
@@ -3300,7 +3300,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/cameraui/entities/d;
+    check-cast v2, Lcom/vk/cameraui/entities/StoryRawData3;
 
     const/4 v2, 0x0
 
@@ -3311,28 +3311,28 @@
 
     .line 8
     :cond_1
-    iget-object v1, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
     const-string v2, "view"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v1, Lcom/vk/stories/editor/multi/h;
+    check-cast v1, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getAnimationStickerManager()Lcom/vk/attachpicker/stickers/r;
+    invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getAnimationStickerManager()Lcom/vk/attachpicker/stickers/AnimationChoreographer;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-interface {v1, v2}, Lcom/vk/attachpicker/stickers/r;->a(Z)V
+    invoke-interface {v1, v2}, Lcom/vk/attachpicker/stickers/AnimationChoreographer;->a(Z)V
 
     .line 9
     new-instance v1, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$j;
 
     invoke-direct {v1, p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$j;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)V
 
-    invoke-static {v1}, Lc/a/m;->a(Lc/a/o;)Lc/a/m;
+    invoke-static {v1}, Lio/reactivex/Observable;->a(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -3341,25 +3341,25 @@
 
     invoke-direct {v2, p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$k;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)V
 
-    invoke-virtual {v1, v2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 11
-    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lc/a/s;
+    invoke-static {}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->C()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 12
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -3379,31 +3379,31 @@
     invoke-direct {v0, p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$n;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)V
 
     .line 16
-    invoke-virtual {v1, v2, p1, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;Lc/a/z/a;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "it"
 
     .line 17
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lb/h/v/b;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lb/h/v/CompositeDisposableContainer1;->a(Lio/reactivex/disposables/Disposable;)V
 
     :cond_2
     :goto_1
     return-void
 .end method
 
-.method protected n()Lcom/vk/attachpicker/stickers/reply/a;
+.method protected n()Lcom/vk/attachpicker/stickers/reply/ReplySticker;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->B:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->B:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a()Lcom/vk/attachpicker/stickers/reply/a;
+    invoke-virtual {v0}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a()Lcom/vk/attachpicker/stickers/reply/ReplySticker;
 
     move-result-object v0
 
@@ -3420,7 +3420,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Lcom/vk/stories/editor/base/c0;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->onActivityResult(IILandroid/content/Intent;)V
 
     const/16 v0, 0x12c
 
@@ -3431,9 +3431,9 @@
     if-ne p2, p1, :cond_4
 
     .line 2
-    sget-object p1, Lcom/vk/cameraui/utils/f;->a:Lcom/vk/cameraui/utils/f;
+    sget-object p1, Lcom/vk/cameraui/utils/StoryGalleryUtils;->a:Lcom/vk/cameraui/utils/StoryGalleryUtils;
 
-    invoke-virtual {p1, p3}, Lcom/vk/cameraui/utils/f;->a(Landroid/content/Intent;)Ljava/util/List;
+    invoke-virtual {p1, p3}, Lcom/vk/cameraui/utils/StoryGalleryUtils;->a(Landroid/content/Intent;)Ljava/util/List;
 
     move-result-object p1
 
@@ -3448,7 +3448,7 @@
 
     .line 4
     :cond_0
-    iget-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/b;
+    iget-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/BaseListDataSet;
 
     const/4 p3, 0x1
 
@@ -3504,18 +3504,18 @@
     invoke-direct {p0, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->i(I)V
 
     .line 8
-    iget-object p1, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object p1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast p1, Lcom/vk/stories/editor/multi/h;
+    check-cast p1, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {p1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->V0()V
 
     .line 9
-    iget-object p1, p0, Lcom/vk/stories/editor/base/c0;->e:Lcom/vk/cameraui/CameraUI$c;
+    iget-object p1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->e:Lcom/vk/cameraui/CameraUI$c;
 
     if-eqz p1, :cond_4
 
-    invoke-interface {p1}, Lcom/vk/cameraui/i/a;->getView()Ljava/lang/Object;
+    invoke-interface {p1}, Lcom/vk/cameraui/i/BasePresenter;->getView()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -3533,14 +3533,14 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->a()V
 
     .line 2
-    iget-boolean v0, p0, Lcom/vk/stories/editor/base/c0;->K:Z
+    iget-boolean v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->K:Z
 
     if-nez v0, :cond_1
 
@@ -3563,46 +3563,46 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/cameraui/entities/d;
+    check-cast v1, Lcom/vk/cameraui/entities/StoryRawData3;
 
     .line 4
-    invoke-virtual {v1}, Lcom/vk/cameraui/entities/d;->s()Z
+    invoke-virtual {v1}, Lcom/vk/cameraui/entities/StoryRawData3;->s()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/cameraui/entities/d;->f()Z
+    invoke-virtual {v1}, Lcom/vk/cameraui/entities/StoryRawData3;->f()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 5
-    invoke-virtual {v1}, Lcom/vk/cameraui/entities/d;->q()Lcom/vk/cameraui/entities/e;
+    invoke-virtual {v1}, Lcom/vk/cameraui/entities/StoryRawData3;->q()Lcom/vk/cameraui/entities/StoryRawData2;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/cameraui/entities/e;->h()Ljava/io/File;
+    invoke-virtual {v1}, Lcom/vk/cameraui/entities/StoryRawData2;->h()Ljava/io/File;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-static {v1}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
+    invoke-static {v1}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
 
     goto :goto_0
 
     .line 6
     :cond_1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->h0:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->h0:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 7
-    invoke-super {p0}, Lcom/vk/stories/editor/base/c0;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->onDestroy()V
 
     return-void
 .end method
@@ -3611,20 +3611,20 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/c1/b/b;->q0()V
+    invoke-interface {v0}, Lcom/vk/stories/c1/b/VideoCameraEditorContract1;->q0()V
 
     .line 3
     :cond_0
-    invoke-super {p0}, Lcom/vk/stories/editor/base/c0;->onPause()V
+    invoke-super {p0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->onPause()V
 
     return-void
 .end method
@@ -3633,10 +3633,10 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/stories/editor/base/c0;->onResume()V
+    invoke-super {p0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->onResume()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v0, :cond_1
 
@@ -3651,17 +3651,17 @@
 
     if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b0:Lcom/vk/lists/BaseListDataSet;
 
     if-eqz v0, :cond_1
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/c1/b/b;->t0()V
+    invoke-interface {v0}, Lcom/vk/stories/c1/b/VideoCameraEditorContract1;->t0()V
 
     :cond_1
     return-void
@@ -3671,13 +3671,13 @@
     .locals 2
 
     .line 2
-    invoke-super {p0}, Lcom/vk/stories/editor/base/c0;->p()Z
+    invoke-super {p0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->p()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->G:Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->G:Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;
 
     sget-object v1, Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;->STORY:Lcom/vk/stories/editor/base/BaseCameraEditorContract$ContentType;
 
@@ -3698,11 +3698,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/c1/b/b;->q0()V
+    invoke-interface {v0}, Lcom/vk/stories/c1/b/VideoCameraEditorContract1;->q0()V
 
     return-void
 .end method
@@ -3711,11 +3711,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/c1/b/b;->s0()V
+    invoke-interface {v0}, Lcom/vk/stories/c1/b/VideoCameraEditorContract1;->s0()V
 
     return-void
 .end method
@@ -3724,11 +3724,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/c1/b/b;->t0()V
+    invoke-interface {v0}, Lcom/vk/stories/c1/b/VideoCameraEditorContract1;->t0()V
 
     return-void
 .end method
@@ -3737,7 +3737,7 @@
     .locals 5
 
     .line 1
-    iget-boolean v0, p0, Lcom/vk/stories/editor/base/c0;->I:Z
+    iget-boolean v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->I:Z
 
     if-nez v0, :cond_0
 
@@ -3773,32 +3773,32 @@
     invoke-static {v0}, Lcom/vk/log/L;->b([Ljava/lang/Object;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/stories/editor/base/c0;->l()Lcom/vk/stories/editor/base/f0;
+    invoke-virtual {p0}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->l()Lcom/vk/stories/editor/base/CameraEditorContainer;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stories/editor/base/f0;->a()V
+    invoke-interface {v0}, Lcom/vk/stories/editor/base/CameraEditorContainer;->a()V
 
     return-void
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->F:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
     const-string v2, "view"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Lcom/vk/stories/editor/multi/h;
+    check-cast v0, Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getAnimationStickerManager()Lcom/vk/attachpicker/stickers/r;
+    invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;->getAnimationStickerManager()Lcom/vk/attachpicker/stickers/AnimationChoreographer;
 
     move-result-object v0
 
-    invoke-interface {v0, v1}, Lcom/vk/attachpicker/stickers/r;->a(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/attachpicker/stickers/AnimationChoreographer;->a(Z)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     const-string v1, "currentStory"
 
@@ -3806,7 +3806,7 @@
 
     if-eqz v0, :cond_8
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/entities/d;->r()Z
+    invoke-virtual {v0}, Lcom/vk/cameraui/entities/StoryRawData3;->r()Z
 
     move-result v0
 
@@ -3814,16 +3814,16 @@
 
     iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->e0:Lcom/vk/stories/editor/multi/CameraCompositeProcessor;
 
-    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v3, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {v0, v3}, Lcom/vk/stories/editor/multi/CameraCompositeProcessor;->a(Lcom/vk/cameraui/entities/d;)V
+    invoke-virtual {v0, v3}, Lcom/vk/stories/editor/multi/CameraCompositeProcessor;->a(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     goto :goto_0
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -3837,16 +3837,16 @@
 
     iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->d0:Lcom/vk/stories/editor/multi/CameraPhotoDelegate;
 
-    iget-object v4, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v4, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v4, :cond_4
 
-    invoke-static {v0, v4, v2, v3, v2}, Lcom/vk/stories/editor/multi/CameraPhotoDelegate;->a(Lcom/vk/stories/editor/multi/CameraPhotoDelegate;Lcom/vk/cameraui/entities/d;Lcom/vk/stories/util/CameraVideoEncoder$c;ILjava/lang/Object;)V
+    invoke-static {v0, v4, v2, v3, v2}, Lcom/vk/stories/editor/multi/CameraPhotoDelegate;->a(Lcom/vk/stories/editor/multi/CameraPhotoDelegate;Lcom/vk/cameraui/entities/StoryRawData3;Lcom/vk/stories/util/CameraVideoEncoder$c;ILjava/lang/Object;)V
 
     goto :goto_0
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -3858,25 +3858,25 @@
 
     if-eqz v0, :cond_7
 
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->c0:Lcom/vk/stories/editor/multi/CameraVideoDelegate;
 
-    iget-object v4, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/d;
+    iget-object v4, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a0:Lcom/vk/cameraui/entities/StoryRawData3;
 
     if-eqz v4, :cond_6
 
-    invoke-static {v0, v4, v2, v3, v2}, Lcom/vk/stories/editor/multi/d;->a(Lcom/vk/stories/editor/multi/d;Lcom/vk/cameraui/entities/d;Lcom/vk/stories/util/CameraVideoEncoder$c;ILjava/lang/Object;)V
+    invoke-static {v0, v4, v2, v3, v2}, Lcom/vk/stories/editor/multi/CameraVideoDelegate;->a(Lcom/vk/stories/editor/multi/CameraVideoDelegate;Lcom/vk/cameraui/entities/StoryRawData3;Lcom/vk/stories/util/CameraVideoEncoder$c;ILjava/lang/Object;)V
 
     goto :goto_0
 
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 9
     :cond_7
     :goto_0
-    iget-object v0, p0, Lcom/vk/stories/editor/base/c0;->d:Lcom/vk/stories/editor/base/EditorEventsTracker;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->d:Lcom/vk/stories/editor/base/EditorEventsTracker;
 
     sget-object v1, Lcom/vk/stories/analytics/StoryPublishEvent;->SAVE_STORY:Lcom/vk/stories/analytics/StoryPublishEvent;
 
@@ -3886,7 +3886,7 @@
 
     .line 10
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method

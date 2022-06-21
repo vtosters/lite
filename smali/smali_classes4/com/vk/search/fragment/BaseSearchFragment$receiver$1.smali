@@ -47,7 +47,7 @@
 
     const-string v0, "com.vkontakte.android.ACTION_FRIEND_STATUS_CHANGED"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -72,7 +72,7 @@
     .line 4
     iget-object p2, p0, Lcom/vk/search/fragment/BaseSearchFragment$receiver$1;->a:Lcom/vk/search/fragment/BaseSearchFragment;
 
-    invoke-virtual {p2}, Lcom/vk/search/fragment/BaseSearchFragment;->P4()Lcom/vk/search/b/a;
+    invoke-virtual {p2}, Lcom/vk/search/fragment/BaseSearchFragment;->P4()Lcom/vk/search/b/BaseSearchAdapter;
 
     move-result-object p2
 
@@ -86,7 +86,7 @@
     invoke-direct {v0, p1}, Lcom/vk/search/fragment/BaseSearchFragment$receiver$1$onReceive$2;-><init>(I)V
 
     .line 6
-    invoke-virtual {p2, v1, v0}, Lcom/vk/lists/i0;->b(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p2, v1, v0}, Lcom/vk/lists/SimpleAdapter;->b(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     :cond_0
     return-void

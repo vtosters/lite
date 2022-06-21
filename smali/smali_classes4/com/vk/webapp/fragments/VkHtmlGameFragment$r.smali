@@ -47,7 +47,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$r;->g:Lcom/vk/webapp/fragments/VkHtmlGameFragment;
 
-    iget-boolean p2, p1, Ld/a/a/a/j;->Q:Z
+    iget-boolean p2, p1, Lme/grishka/appkit/fragments/LoaderFragment;->Q:Z
 
     if-nez p2, :cond_0
 

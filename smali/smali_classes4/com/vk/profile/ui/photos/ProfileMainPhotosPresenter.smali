@@ -38,7 +38,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;ZILjava/lang/Object;)Lc/a/m;
+.method public static synthetic a(Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;ZILjava/lang/Object;)Lio/reactivex/Observable;
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -49,19 +49,19 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->a(Z)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->a(Z)Lio/reactivex/Observable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final i()Lc/a/m;
+.method private final i()Lio/reactivex/Observable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/api/photos/PhotosGetAlbums$b;",
             ">;"
         }
@@ -77,9 +77,9 @@
     new-instance v2, Lcom/vk/api/photos/PhotosGetAlbums$a;
 
     .line 2
-    sget-object v3, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v3, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v3}, Lcom/vk/core/util/v;->y()Z
+    invoke-virtual {v3}, Lcom/vk/core/util/DeviceState;->y()Z
 
     move-result v3
 
@@ -101,12 +101,12 @@
     const/16 v2, 0x64
 
     .line 4
-    invoke-virtual {v0, v1, v2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     const/4 v1, 0x0
 
     .line 5
-    invoke-static {v0, v1, v3, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v3, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -117,7 +117,7 @@
     .locals 2
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
@@ -125,7 +125,7 @@
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v0, v1}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v0
 
@@ -152,14 +152,14 @@
     return v0
 .end method
 
-.method private final k()Lc/a/m;
+.method private final k()Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
-            "Lcom/vk/core/util/q0<",
-            "Lcom/vk/api/photos/p$a;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/core/util/Optional<",
+            "Lcom/vk/api/photos/PhotosGetNewTags$a;",
             ">;>;"
         }
     .end annotation
@@ -176,33 +176,33 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/api/photos/p;
+    new-instance v0, Lcom/vk/api/photos/PhotosGetNewTags;
 
     const/4 v1, 0x0
 
     const/16 v2, 0x9
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/api/photos/p;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/api/photos/PhotosGetNewTags;-><init>(II)V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
     sget-object v1, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$e;->a:Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$e;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$f;->a:Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$f;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->g(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->g(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -210,13 +210,13 @@
 
     .line 5
     :cond_0
-    sget-object v0, Lcom/vk/core/util/q0;->b:Lcom/vk/core/util/q0$a;
+    sget-object v0, Lcom/vk/core/util/Optional;->b:Lcom/vk/core/util/Optional$a;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/q0$a;->a()Lcom/vk/core/util/q0;
+    invoke-virtual {v0}, Lcom/vk/core/util/Optional$a;->a()Lcom/vk/core/util/Optional;
 
     move-result-object v0
 
-    invoke-static {v0}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -226,16 +226,16 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/core/util/a0;I)Lc/a/m;
+.method public a(Lcom/vk/core/util/Either;I)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/util/a0<",
+            "Lcom/vk/core/util/Either<",
             "Ljava/lang/Integer;",
             "Ljava/lang/String;",
             ">;I)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/photo/Photo;",
             ">;>;"
@@ -243,20 +243,20 @@
     .end annotation
 
     .line 4
-    instance-of v0, p1, Lcom/vk/core/util/a0$a;
+    instance-of v0, p1, Lcom/vk/core/util/Either$a;
 
     if-eqz v0, :cond_0
 
     .line 5
-    new-instance v0, Lcom/vk/api/photos/k;
+    new-instance v0, Lcom/vk/api/photos/PhotosGetAll;
 
     invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter;->e()I
 
     move-result v1
 
-    check-cast p1, Lcom/vk/core/util/a0$a;
+    check-cast p1, Lcom/vk/core/util/Either$a;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/a0$a;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/core/util/Either$a;->a()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -266,14 +266,14 @@
 
     move-result p1
 
-    invoke-direct {v0, v1, p1, p2}, Lcom/vk/api/photos/k;-><init>(III)V
+    invoke-direct {v0, v1, p1, p2}, Lcom/vk/api/photos/PhotosGetAll;-><init>(III)V
 
     const/4 p1, 0x1
 
     const/4 p2, 0x0
 
     .line 6
-    invoke-static {v0, p2, p1, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p2, p1, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -282,13 +282,13 @@
 
     invoke-direct {p2, p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$d;-><init>(Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;)V
 
-    invoke-virtual {p1, p2}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "PhotosGetAll(uid, offset\u2026otal())\n                }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -303,31 +303,31 @@
     throw p1
 .end method
 
-.method public final a(Z)Lc/a/m;
+.method public final a(Z)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lkotlin/Pair<",
             "Lcom/vk/api/photos/PhotosGetAlbums$b;",
-            "Lcom/vk/api/photos/p$a;",
+            "Lcom/vk/api/photos/PhotosGetNewTags$a;",
             ">;>;"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->i()Lc/a/m;
+    invoke-direct {p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->i()Lio/reactivex/Observable;
 
     move-result-object v0
 
-    invoke-direct {p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->k()Lc/a/m;
+    invoke-direct {p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->k()Lio/reactivex/Observable;
 
     move-result-object v1
 
     sget-object v2, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$b;->a:Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$b;
 
-    invoke-static {v0, v1, v2}, Lc/a/m;->b(Lc/a/p;Lc/a/p;Lc/a/z/c;)Lc/a/m;
+    invoke-static {v0, v1, v2}, Lio/reactivex/Observable;->b(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;Lio/reactivex/functions/BiFunction;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -336,7 +336,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$c;-><init>(Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;Z)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -370,7 +370,7 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 6
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->g:Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$receiver$1;
 
@@ -389,7 +389,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-virtual {p0, v0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->a(Z)Lc/a/m;
+    invoke-virtual {p0, v0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->a(Z)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -403,18 +403,18 @@
     sget-object v2, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$h;->a:Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$h;
 
     .line 3
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter;->d()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter;->d()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -445,7 +445,7 @@
     invoke-super {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter;->onDestroy()V
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->g:Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$receiver$1;
 
@@ -464,7 +464,7 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-static {p0, v0, v1, v2}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->a(Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;ZILjava/lang/Object;)Lc/a/m;
+    invoke-static {p0, v0, v1, v2}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->a(Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;ZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -478,18 +478,18 @@
     sget-object v2, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$j;->a:Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$j;
 
     .line 3
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter;->d()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter;->d()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void

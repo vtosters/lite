@@ -3,7 +3,7 @@
 .source "ReefProtocol.java"
 
 # interfaces
-.implements Lcom/vk/reef/protocol/q;
+.implements Lcom/vk/reef/protocol/ReefProtocol29;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Lcom/vk/reef/protocol/ReefProtocol$NetworkState;",
         "Lcom/vk/reef/protocol/ReefProtocol$NetworkState$a;",
         ">;",
-        "Lcom/vk/reef/protocol/q;"
+        "Lcom/vk/reef/protocol/ReefProtocol29;"
     }
 .end annotation
 
@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/vk/reef/protocol/a;)V
+.method synthetic constructor <init>(Lcom/vk/reef/protocol/ReefProtocol1;)V
     .locals 0
 
     .line 1
@@ -116,7 +116,7 @@
     return-object p0
 .end method
 
-.method public a(Lcom/vk/reef/protocol/t;)Lcom/vk/reef/protocol/ReefProtocol$NetworkState$a;
+.method public a(Lcom/vk/reef/protocol/ReefProtocol4;)Lcom/vk/reef/protocol/ReefProtocol$NetworkState$a;
     .locals 1
 
     .line 15
@@ -127,7 +127,7 @@
 
     check-cast v0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;
 
-    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->a(Lcom/vk/reef/protocol/ReefProtocol$NetworkState;Lcom/vk/reef/protocol/t;)V
+    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->a(Lcom/vk/reef/protocol/ReefProtocol$NetworkState;Lcom/vk/reef/protocol/ReefProtocol4;)V
 
     return-object p0
 .end method
@@ -139,7 +139,7 @@
             "(",
             "Ljava/lang/Iterable<",
             "+",
-            "Lcom/vk/reef/protocol/c;",
+            "Lcom/vk/reef/protocol/ReefProtocol12;",
             ">;)",
             "Lcom/vk/reef/protocol/ReefProtocol$NetworkState$a;"
         }
@@ -229,7 +229,7 @@
             "(",
             "Ljava/lang/Iterable<",
             "+",
-            "Lcom/vk/reef/protocol/c;",
+            "Lcom/vk/reef/protocol/ReefProtocol12;",
             ">;)",
             "Lcom/vk/reef/protocol/ReefProtocol$NetworkState$a;"
         }
@@ -287,7 +287,7 @@
             "(",
             "Ljava/lang/Iterable<",
             "+",
-            "Lcom/vk/reef/protocol/c;",
+            "Lcom/vk/reef/protocol/ReefProtocol12;",
             ">;)",
             "Lcom/vk/reef/protocol/ReefProtocol$NetworkState$a;"
         }
@@ -313,7 +313,7 @@
             "(",
             "Ljava/lang/Iterable<",
             "+",
-            "Lcom/vk/reef/protocol/o;",
+            "Lcom/vk/reef/protocol/ReefProtocol5;",
             ">;)",
             "Lcom/vk/reef/protocol/ReefProtocol$NetworkState$a;"
         }

@@ -3,7 +3,7 @@
 .source "SearchHolder.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,7 +56,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/search/holder/SearchHolder$addToFriends$1;->a:Lcom/vk/search/holder/SearchHolder;
 
-    invoke-virtual {p1}, Lcom/vk/search/holder/SearchHolder;->h0()Lcom/vk/search/b/a;
+    invoke-virtual {p1}, Lcom/vk/search/holder/SearchHolder;->h0()Lcom/vk/search/b/BaseSearchAdapter;
 
     move-result-object p1
 
@@ -71,7 +71,7 @@
     sget-object v1, Lcom/vk/search/holder/SearchHolder$addToFriends$1$2;->a:Lcom/vk/search/holder/SearchHolder$addToFriends$1$2;
 
     .line 4
-    invoke-virtual {p1, v0, v1}, Lcom/vk/lists/i0;->b(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/lists/SimpleAdapter;->b(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     :cond_0
     return-void

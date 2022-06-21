@@ -3,7 +3,7 @@
 .source "VkUiFragmentDelegateImpl.kt"
 
 # interfaces
-.implements Lcom/vk/webapp/o/c;
+.implements Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
 
 # instance fields
@@ -17,7 +17,7 @@
 
 .field private e:Lcom/vk/webapp/commands/VkUiCommandsController;
 
-.field public f:Lcom/vk/webapp/p/a/a;
+.field public f:Lcom/vk/webapp/p/a/StatusNavBarController;
 
 .field private final g:Lcom/vk/webapp/VkUiFragment;
 
@@ -184,7 +184,7 @@
 
     const-string p1, "URLEncoder.encode(string, \"utf-8\")"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "+"
 
@@ -289,11 +289,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/webapp/p/a/a;)V
+.method public a(Lcom/vk/webapp/p/a/StatusNavBarController;)V
     .locals 0
 
     .line 5
-    iput-object p1, p0, Lcom/vk/webapp/delegates/impl/VkUiFragmentDelegateImpl;->f:Lcom/vk/webapp/p/a/a;
+    iput-object p1, p0, Lcom/vk/webapp/delegates/impl/VkUiFragmentDelegateImpl;->f:Lcom/vk/webapp/p/a/StatusNavBarController;
 
     return-void
 .end method
@@ -325,7 +325,7 @@
 
     const-string v3, "fragment.activity!!"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -384,7 +384,7 @@
 
     const-string v8, "this.getJSONObject(i)"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 16
     invoke-virtual {v7, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -397,7 +397,7 @@
 
     move-result-object v7
 
-    invoke-static {v8, v7}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v8, v7}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v7
 
@@ -507,7 +507,7 @@
 
     .line 23
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -525,7 +525,7 @@
     .locals 3
 
     .line 36
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
@@ -537,7 +537,7 @@
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/bridges/f;->a(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/bridges/AuthBridge3;->a(Ljava/lang/String;Z)V
 
     .line 37
     new-instance v0, Lcom/vk/webapp/delegates/impl/VkUiFragmentDelegateImpl$c;
@@ -591,7 +591,7 @@
     const-string v0, "uriParams"
 
     .line 21
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
 
@@ -605,7 +605,7 @@
     const-string v2, "paramNames"
 
     .line 23
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 24
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -628,7 +628,7 @@
     const-string v3, "it"
 
     .line 25
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
@@ -638,14 +638,14 @@
 
     const-string v4, "uriParams.getQueryParameter(it)!!"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -655,13 +655,13 @@
     :cond_1
     iget-object p2, p0, Lcom/vk/webapp/delegates/impl/VkUiFragmentDelegateImpl;->g:Lcom/vk/webapp/VkUiFragment;
 
-    invoke-virtual {p2}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p2}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object p2
 
-    sget-object v0, Lcom/vk/webapp/helpers/d;->a:Lcom/vk/webapp/helpers/d;
+    sget-object v0, Lcom/vk/webapp/helpers/WebAppApiHelper;->a:Lcom/vk/webapp/helpers/WebAppApiHelper;
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/webapp/helpers/d;->a(Ljava/lang/String;Ljava/util/Map;)Lc/a/m;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/webapp/helpers/WebAppApiHelper;->a(Ljava/lang/String;Ljava/util/Map;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -676,12 +676,12 @@
     invoke-direct {v2, p0, v1, p3}, Lcom/vk/webapp/delegates/impl/VkUiFragmentDelegateImpl$b;-><init>(Lcom/vk/webapp/delegates/impl/VkUiFragmentDelegateImpl;Ljava/util/HashMap;Ljava/lang/String;)V
 
     .line 29
-    invoke-virtual {p1, v0, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 30
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -704,7 +704,7 @@
 
     const-string v3, "fragment.activity!!"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -754,7 +754,7 @@
 
     move-result-object v8
 
-    invoke-static {v8, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     invoke-virtual {v8, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -818,7 +818,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, "handler"
 
@@ -854,7 +854,7 @@
 
     .line 18
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -1026,7 +1026,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/delegates/impl/VkUiFragmentDelegateImpl;->g:Lcom/vk/webapp/VkUiFragment;
 
-    invoke-virtual {v0}, Ld/a/a/a/j;->P3()V
+    invoke-virtual {v0}, Lme/grishka/appkit/fragments/LoaderFragment;->P3()V
 
     return-void
 .end method
@@ -1070,11 +1070,11 @@
     return v0
 .end method
 
-.method public u()Lcom/vk/webapp/p/a/a;
+.method public u()Lcom/vk/webapp/p/a/StatusNavBarController;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/delegates/impl/VkUiFragmentDelegateImpl;->f:Lcom/vk/webapp/p/a/a;
+    iget-object v0, p0, Lcom/vk/webapp/delegates/impl/VkUiFragmentDelegateImpl;->f:Lcom/vk/webapp/p/a/StatusNavBarController;
 
     if-eqz v0, :cond_0
 
@@ -1083,7 +1083,7 @@
     :cond_0
     const-string v0, "statusNavBarController"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1094,7 +1094,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/delegates/impl/VkUiFragmentDelegateImpl;->f:Lcom/vk/webapp/p/a/a;
+    iget-object v0, p0, Lcom/vk/webapp/delegates/impl/VkUiFragmentDelegateImpl;->f:Lcom/vk/webapp/p/a/StatusNavBarController;
 
     if-eqz v0, :cond_0
 

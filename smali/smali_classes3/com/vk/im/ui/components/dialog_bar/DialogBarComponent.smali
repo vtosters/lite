@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;
-.super Lcom/vk/im/ui/q/c;
+.super Lcom/vk/im/ui/q/Component;
 .source "DialogBarComponent.kt"
 
 
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static final K:Lcom/vk/im/log/a;
+.field private static final K:Lcom/vk/im/log/ImLogger;
 
 .field private static final L:Ljava/lang/String;
 
@@ -23,25 +23,25 @@
 # instance fields
 .field private B:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;
 
-.field private final C:Lcom/vk/im/engine/reporters/k;
+.field private final C:Lcom/vk/im/engine/reporters/ImReporters;
 
-.field private D:Lio/reactivex/disposables/b;
+.field private D:Lio/reactivex/disposables/Disposable;
 
-.field private E:Lio/reactivex/disposables/b;
+.field private E:Lio/reactivex/disposables/Disposable;
 
-.field private F:Lcom/vk/im/ui/components/dialog_bar/b;
+.field private F:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponentCallback;
 
 .field private final G:Landroid/content/Context;
 
-.field private final H:Lcom/vk/im/engine/a;
+.field private final H:Lcom/vk/im/engine/ImEngine;
 
-.field private final I:Lcom/vk/im/ui/p/b;
+.field private final I:Lcom/vk/im/ui/p/ImBridge8;
 
 .field private final J:Lcom/vk/im/ui/ImUiModule;
 
-.field private final g:Lio/reactivex/disposables/a;
+.field private final g:Lio/reactivex/disposables/CompositeDisposable;
 
-.field private h:Lcom/vk/im/ui/components/dialog_bar/d;
+.field private h:Lcom/vk/im/ui/components/dialog_bar/State;
 
 
 # direct methods
@@ -54,16 +54,16 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
-    invoke-static {v0}, Lcom/vk/im/log/b;->a(Ljava/lang/Class;)Lcom/vk/im/log/a;
+    invoke-static {v0}, Lcom/vk/im/log/ImLoggerFactory;->a(Ljava/lang/Class;)Lcom/vk/im/log/ImLogger;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    sput-object v1, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K:Lcom/vk/im/log/a;
+    sput-object v1, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K:Lcom/vk/im/log/ImLogger;
 
     .line 2
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -74,47 +74,47 @@
 
     const-string v1, "DialogBarComponent::class.java.simpleName!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->L:Ljava/lang/String;
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 3
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/im/ui/ImUiModule;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/ui/ImUiModule;)V
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/q/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/q/Component;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->G:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/ImEngine;
 
-    iput-object p3, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->I:Lcom/vk/im/ui/p/b;
+    iput-object p3, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->I:Lcom/vk/im/ui/p/ImBridge8;
 
     iput-object p4, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->J:Lcom/vk/im/ui/ImUiModule;
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->g:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 3
-    new-instance p1, Lcom/vk/im/ui/components/dialog_bar/d;
+    new-instance p1, Lcom/vk/im/ui/components/dialog_bar/State;
 
     new-instance p2, Lcom/vk/im/engine/models/dialogs/DialogExt;
 
@@ -124,20 +124,20 @@
 
     const/4 v0, 0x2
 
-    invoke-direct {p2, p4, p3, v0, p3}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p2, p4, p3, v0, p3}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/dialog_bar/d;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/ui/components/dialog_bar/State;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     .line 4
     iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->J:Lcom/vk/im/ui/ImUiModule;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/ImUiModule;->c()Lcom/vk/im/engine/reporters/k;
+    invoke-virtual {p1}, Lcom/vk/im/ui/ImUiModule;->c()Lcom/vk/im/engine/reporters/ImReporters;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->C:Lcom/vk/im/engine/reporters/k;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->C:Lcom/vk/im/engine/reporters/ImReporters;
 
     return-void
 .end method
@@ -146,9 +146,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 
@@ -169,9 +169,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->h()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->h()Z
 
     move-result v0
 
@@ -182,9 +182,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->f()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->f()Z
 
     move-result v0
 
@@ -194,51 +194,51 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/d;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/State;->b(Z)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/d;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/State;->a(Ljava/lang/Throwable;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K()V
 
     .line 5
-    invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->F()Lkotlin/m;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->F()Lkotlin/Unit;
 
     .line 6
-    new-instance v0, Lcom/vk/im/ui/components/dialog_bar/f/c;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_bar/f/LoadInitCmd;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->d()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->d()I
 
     move-result v1
 
     sget-object v2, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->L:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_bar/f/c;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_bar/f/LoadInitCmd;-><init>(ILjava/lang/Object;)V
 
     .line 7
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 8
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -247,45 +247,45 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$loadInit$1;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_bar/a;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_bar/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v1, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$loadInit$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$loadInit$2;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/dialog_bar/a;
+    new-instance v3, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_bar/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "imEngine.submitWithCance\u2026ccess, ::onLoadInitError)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->g:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method private final F()Lkotlin/m;
+.method private final F()Lkotlin/Unit;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->F:Lcom/vk/im/ui/components/dialog_bar/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->F:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponentCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_bar/b;->a()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponentCallback;->a()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_0
 
@@ -300,12 +300,12 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->g:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->a()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->a()V
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/components/dialog_bar/d;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_bar/State;
 
     new-instance v1, Lcom/vk/im/engine/models/dialogs/DialogExt;
 
@@ -315,11 +315,11 @@
 
     const/4 v4, 0x2
 
-    invoke-direct {v1, v3, v2, v4, v2}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v3, v2, v4, v2}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/d;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/State;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     .line 3
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K()V
@@ -331,17 +331,17 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->f()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->f()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->g()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->g()Z
 
     move-result v0
 
@@ -351,38 +351,38 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/d;->c(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/State;->c(Z)V
 
     .line 3
-    new-instance v0, Lcom/vk/im/ui/components/dialog_bar/f/a;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_bar/f/LoadAllByActualCmd;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->d()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->d()I
 
     move-result v1
 
     sget-object v2, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->L:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_bar/f/a;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_bar/f/LoadAllByActualCmd;-><init>(ILjava/lang/Object;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -391,30 +391,30 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$updateAllByActual$1;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_bar/a;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_bar/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v1, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$updateAllByActual$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$updateAllByActual$2;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/dialog_bar/a;
+    new-instance v3, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_bar/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "imEngine.submitWithCance\u2026onUpdateAllByActualError)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->g:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     :cond_1
     :goto_0
@@ -429,21 +429,21 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vk/im/ui/views/span/a;
+    new-instance v1, Lcom/vk/im/ui/views/span/ImBridgeOnSpanClickListener;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_bar/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_bar/State;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->I:Lcom/vk/im/ui/p/b;
+    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->I:Lcom/vk/im/ui/p/ImBridge8;
 
     iget-object v4, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->G:Landroid/content/Context;
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/ui/views/span/a;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/ui/p/b;Landroid/content/Context;)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/ui/views/span/ImBridgeOnSpanClickListener;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/ui/p/ImBridge8;Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/views/span/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/views/span/OnSpanClickListener;)V
 
     .line 2
     :cond_0
@@ -453,13 +453,13 @@
 
     new-instance v1, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_bar/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_bar/State;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->I:Lcom/vk/im/ui/p/b;
+    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->I:Lcom/vk/im/ui/p/ImBridge8;
 
     iget-object v4, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->G:Landroid/content/Context;
 
@@ -467,9 +467,9 @@
 
     move-result-object v4
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/ui/p/b;Landroid/app/Activity;)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/ui/p/ImBridge8;Landroid/app/Activity;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/views/span/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/views/span/OnSpanLongPressListener;)V
 
     :cond_1
     return-void
@@ -479,17 +479,17 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->f()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 
@@ -511,9 +511,9 @@
 
     .line 3
     :cond_1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->e()Ljava/lang/Throwable;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->e()Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -531,9 +531,9 @@
 
     .line 5
     :cond_3
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->a()Lcom/vk/im/engine/models/dialogs/ConversationBar;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->a()Lcom/vk/im/engine/models/dialogs/ConversationBar;
 
     move-result-object v0
 
@@ -548,9 +548,9 @@
 
     .line 7
     :cond_4
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->b()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->b()Z
 
     move-result v1
 
@@ -604,11 +604,11 @@
     invoke-virtual {p0, v1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->a(Ljava/util/List;)V
 
     .line 13
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/d;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/State;->a(Z)V
 
     :cond_6
     return-void
@@ -663,17 +663,17 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/m;
+.method private final a(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/Unit;
     .locals 1
 
     .line 26
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->F:Lcom/vk/im/ui/components/dialog_bar/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->F:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponentCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/b;->a(Lcom/vk/im/engine/models/dialogs/ConversationBar;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponentCallback;->a(Lcom/vk/im/engine/models/dialogs/ConversationBar;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_0
 
@@ -684,20 +684,20 @@
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/engine/models/a;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->b(Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->b(Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->E:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->E:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -724,9 +724,9 @@
     .locals 1
 
     .line 21
-    sget-object v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
 
     .line 22
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->B:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;
@@ -761,17 +761,17 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/m;
+.method private final b(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/Unit;
     .locals 1
 
     .line 38
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->F:Lcom/vk/im/ui/components/dialog_bar/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->F:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponentCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/b;->b(Lcom/vk/im/engine/models/dialogs/ConversationBar;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponentCallback;->b(Lcom/vk/im/engine/models/dialogs/ConversationBar;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_0
 
@@ -782,46 +782,46 @@
     return-object p1
 .end method
 
-.method private final b(Lcom/vk/im/engine/models/a;)V
+.method private final b(Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;)V"
         }
     .end annotation
 
     .line 18
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/d;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/State;->b(Z)V
 
     .line 19
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->d()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->d()I
 
     move-result v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/a;->e(I)Lcom/vk/im/engine/models/b;
+    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/EntityIntMap;->e(I)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object p1
 
     const-string v1, "dialogs.getValue(state.dialogId)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->a(Lcom/vk/im/engine/models/b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->a(Lcom/vk/im/engine/models/EntityValue;)V
 
     .line 20
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->C()V
@@ -830,13 +830,13 @@
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K()V
 
     .line 22
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_bar/d;->a()Lcom/vk/im/engine/models/dialogs/ConversationBar;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_bar/State;->a()Lcom/vk/im/engine/models/dialogs/ConversationBar;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->a(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/m;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->a(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/Unit;
 
     return-void
 .end method
@@ -845,52 +845,52 @@
     .locals 1
 
     .line 10
-    new-instance v0, Lcom/vk/im/ui/components/dialog_bar/d;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-direct {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/d;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-direct {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/State;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     .line 11
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_bar/d;->d(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_bar/State;->d(Z)V
 
     .line 12
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/a;->j()Lc/a/m;
+    invoke-virtual {p1}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 13
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 14
-    new-instance v0, Lcom/vk/im/ui/components/dialog_bar/c;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_bar/EventConsumerImpl;
 
-    invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_bar/c;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
+    invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_bar/EventConsumerImpl;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "imEngine.observeEvents()\u2026(EventConsumerImpl(this))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->g:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     .line 16
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K()V
@@ -901,20 +901,20 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/engine/models/a;)V
+.method public static final synthetic b(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->c(Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->c(Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lio/reactivex/disposables/b;)V
+.method public static final synthetic b(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->D:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->D:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -941,9 +941,9 @@
     .locals 1
 
     .line 35
-    sget-object v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
 
     .line 36
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->B:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;
@@ -978,53 +978,53 @@
     return-void
 .end method
 
-.method private final c(Lcom/vk/im/engine/models/a;)V
+.method private final c(Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;)V"
         }
     .end annotation
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/d;->c(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/State;->c(Z)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->d()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->d()I
 
     move-result v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/a;->e(I)Lcom/vk/im/engine/models/b;
+    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/EntityIntMap;->e(I)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object p1
 
     const-string v1, "dialogs.getValue(state.dialogId)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->a(Lcom/vk/im/engine/models/b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->a(Lcom/vk/im/engine/models/EntityValue;)V
 
     .line 10
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_bar/d;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_bar/State;->a(Ljava/lang/Throwable;)V
 
     .line 11
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->C()V
@@ -1033,22 +1033,22 @@
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K()V
 
     .line 13
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_bar/d;->a()Lcom/vk/im/engine/models/dialogs/ConversationBar;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_bar/State;->a()Lcom/vk/im/engine/models/dialogs/ConversationBar;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->b(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/m;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->b(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/Unit;
 
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/engine/models/a;)V
+.method public static final synthetic c(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->d(Lcom/vk/im/engine/models/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->d(Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
@@ -1066,21 +1066,21 @@
     .locals 2
 
     .line 3
-    sget-object v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/d;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/State;->b(Z)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/d;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/State;->a(Ljava/lang/Throwable;)V
 
     .line 6
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K()V
@@ -1088,51 +1088,51 @@
     const/4 p1, 0x0
 
     .line 7
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->a(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/m;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->a(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/Unit;
 
     return-void
 .end method
 
-.method private final d(Lcom/vk/im/engine/models/a;)V
+.method private final d(Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->d()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->d()I
 
     move-result v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/a;->e(I)Lcom/vk/im/engine/models/b;
+    invoke-virtual {p1, v1}, Lcom/vk/im/engine/models/EntityIntMap;->e(I)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object p1
 
     const-string v1, "dialogs.getValue(state.dialogId)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->a(Lcom/vk/im/engine/models/b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->a(Lcom/vk/im/engine/models/EntityValue;)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_bar/d;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/dialog_bar/State;->a(Ljava/lang/Throwable;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->C()V
@@ -1141,13 +1141,13 @@
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K()V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_bar/d;->a()Lcom/vk/im/engine/models/dialogs/ConversationBar;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_bar/State;->a()Lcom/vk/im/engine/models/dialogs/ConversationBar;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->b(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/m;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->b(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/Unit;
 
     return-void
 .end method
@@ -1165,40 +1165,40 @@
     .locals 3
 
     .line 7
-    sget-object v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/d;->c(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialog_bar/State;->c(Z)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/im/engine/models/c;
+    new-instance v1, Lcom/vk/im/engine/models/EntityWithId;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v2, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_bar/d;->d()I
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/dialog_bar/State;->d()I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Lcom/vk/im/engine/models/c;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/im/engine/models/EntityWithId;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->a(Lcom/vk/im/engine/models/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->a(Lcom/vk/im/engine/models/EntityValue;)V
 
     .line 10
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/d;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/State;->a(Ljava/lang/Throwable;)V
 
     .line 11
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K()V
@@ -1219,14 +1219,14 @@
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K:Lcom/vk/im/log/a;
+    sget-object v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K:Lcom/vk/im/log/ImLogger;
 
-    invoke-interface {v0, p1}, Lcom/vk/im/log/a;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/log/ImLogger;->a(Ljava/lang/Throwable;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/d;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/State;->a(Ljava/lang/Throwable;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K()V
@@ -1258,12 +1258,12 @@
 
     .line 3
     :cond_1
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/j;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsBarHideCmd;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->d()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->d()I
 
     move-result v1
 
@@ -1273,22 +1273,22 @@
     sget-object v3, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->L:Ljava/lang/String;
 
     .line 6
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/j;-><init>(IZLjava/lang/Object;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/DialogsBarHideCmd;-><init>(IZLjava/lang/Object;)V
 
     .line 7
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/ImEngine;
 
     .line 8
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 9
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -1297,7 +1297,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$b;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -1306,23 +1306,23 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$startHideBar$2;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_bar/a;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_bar/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v1, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$startHideBar$3;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$startHideBar$3;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/dialog_bar/a;
+    new-instance v3, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_bar/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->E:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->E:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1331,9 +1331,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->f()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->f()Z
 
     move-result v0
 
@@ -1343,31 +1343,31 @@
 
     .line 2
     :cond_0
-    new-instance v0, Lcom/vk/im/ui/components/dialog_bar/f/b;
+    new-instance v0, Lcom/vk/im/ui/components/dialog_bar/f/LoadAllByCacheCmd;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->d()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->d()I
 
     move-result v1
 
     sget-object v2, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->L:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_bar/f/b;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/dialog_bar/f/LoadAllByCacheCmd;-><init>(ILjava/lang/Object;)V
 
     .line 3
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -1376,62 +1376,62 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$updateAllByCache$1;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_bar/a;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_bar/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v1, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$updateAllByCache$2;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$updateAllByCache$2;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/dialog_bar/a;
+    new-instance v3, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_bar/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "imEngine.submitWithCance\u2026:onUpdateAllByCacheError)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->g:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->g:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/a;)V
+.method public final a(Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;)V"
         }
     .end annotation
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->d()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->d()I
 
     move-result v0
 
     .line 10
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->f()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->f()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/a;->j(I)Z
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;->j(I)Z
 
     move-result v1
 
@@ -1441,9 +1441,9 @@
 
     .line 11
     :cond_0
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v1
 
@@ -1456,7 +1456,7 @@
     move-result-object v1
 
     .line 12
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/a;->d(I)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;->d(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1475,7 +1475,7 @@
 
     .line 13
     :goto_0
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1484,21 +1484,21 @@
     if-eqz v1, :cond_2
 
     .line 14
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v1
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/a;->e(I)Lcom/vk/im/engine/models/b;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;->e(I)Lcom/vk/im/engine/models/EntityValue;
 
     move-result-object p1
 
     const-string v0, "dialogs.getValue(dialogId)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->a(Lcom/vk/im/engine/models/b;)V
+    invoke-virtual {v1, p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;->a(Lcom/vk/im/engine/models/EntityValue;)V
 
     .line 15
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->C()V
@@ -1507,13 +1507,13 @@
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->K()V
 
     .line 17
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_bar/d;->a()Lcom/vk/im/engine/models/dialogs/ConversationBar;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/dialog_bar/State;->a()Lcom/vk/im/engine/models/dialogs/ConversationBar;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->b(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/m;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->b(Lcom/vk/im/engine/models/dialogs/ConversationBar;)Lkotlin/Unit;
 
     :cond_2
     :goto_1
@@ -1524,19 +1524,19 @@
     .locals 2
 
     .line 25
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->C:Lcom/vk/im/engine/reporters/k;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->C:Lcom/vk/im/engine/reporters/ImReporters;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/reporters/k;->c()Lcom/vk/im/engine/reporters/d;
+    invoke-virtual {v0}, Lcom/vk/im/engine/reporters/ImReporters;->c()Lcom/vk/im/engine/reporters/DialogBarReporter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->d()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->d()I
 
     move-result v1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/im/engine/reporters/d;->a(ILcom/vk/im/engine/models/dialogs/ConversationBar$ButtonType;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/im/engine/reporters/DialogBarReporter;->a(ILcom/vk/im/engine/models/dialogs/ConversationBar$ButtonType;)V
 
     return-void
 .end method
@@ -1564,11 +1564,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/dialog_bar/b;)V
+.method public final a(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponentCallback;)V
     .locals 0
 
     .line 5
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->F:Lcom/vk/im/ui/components/dialog_bar/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->F:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponentCallback;
 
     return-void
 .end method
@@ -1577,11 +1577,11 @@
     .locals 1
 
     .line 18
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->F:Lcom/vk/im/ui/components/dialog_bar/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->F:Lcom/vk/im/ui/components/dialog_bar/DialogBarComponentCallback;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/b;->a(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponentCallback;->a(Ljava/lang/String;)V
 
     .line 19
     :cond_0
@@ -1603,19 +1603,19 @@
     .end annotation
 
     .line 24
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->C:Lcom/vk/im/engine/reporters/k;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->C:Lcom/vk/im/engine/reporters/ImReporters;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/reporters/k;->c()Lcom/vk/im/engine/reporters/d;
+    invoke-virtual {v0}, Lcom/vk/im/engine/reporters/ImReporters;->c()Lcom/vk/im/engine/reporters/DialogBarReporter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->d()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->d()I
 
     move-result v1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/im/engine/reporters/d;->a(ILjava/util/List;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/im/engine/reporters/DialogBarReporter;->a(ILjava/util/List;)V
 
     return-void
 .end method
@@ -1629,11 +1629,11 @@
     invoke-direct {p3, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
 
     .line 6
-    new-instance p1, Lcom/vk/im/ui/components/dialog_bar/e;
+    new-instance p1, Lcom/vk/im/ui/components/dialog_bar/VcCallbackImpl;
 
-    invoke-direct {p1, p0}, Lcom/vk/im/ui/components/dialog_bar/e;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
+    invoke-direct {p1, p0}, Lcom/vk/im/ui/components/dialog_bar/VcCallbackImpl;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    invoke-virtual {p3, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;)V
+    invoke-virtual {p3, p1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;)V
 
     .line 7
     iput-object p3, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->B:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;
@@ -1653,7 +1653,7 @@
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -1682,12 +1682,12 @@
 
     .line 25
     :cond_1
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/i;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsBarCallbackCmd;
 
     .line 26
-    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/d;->d()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_bar/State;->d()I
 
     move-result v1
 
@@ -1697,22 +1697,22 @@
     sget-object v3, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->L:Ljava/lang/String;
 
     .line 28
-    invoke-direct {v0, v1, p1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/i;-><init>(ILjava/lang/String;ZLjava/lang/Object;)V
+    invoke-direct {v0, v1, p1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/DialogsBarCallbackCmd;-><init>(ILjava/lang/String;ZLjava/lang/Object;)V
 
     .line 29
-    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->H:Lcom/vk/im/engine/ImEngine;
 
     .line 30
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object p1
 
     .line 31
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -1721,7 +1721,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$c;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    invoke-virtual {p1, v0}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -1730,23 +1730,23 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$startInvokeCallback$2;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    new-instance v1, Lcom/vk/im/ui/components/dialog_bar/a;
+    new-instance v1, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;
 
-    invoke-direct {v1, v0}, Lcom/vk/im/ui/components/dialog_bar/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, v0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$startInvokeCallback$3;
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$startInvokeCallback$3;-><init>(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/dialog_bar/a;
+    new-instance v2, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;
 
-    invoke-direct {v2, v0}, Lcom/vk/im/ui/components/dialog_bar/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {p1, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->D:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->D:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1755,7 +1755,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/q/c;->m()V
+    invoke-super {p0}, Lcom/vk/im/ui/q/Component;->m()V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->D()Z
@@ -1775,7 +1775,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/q/c;->n()V
+    invoke-super {p0}, Lcom/vk/im/ui/q/Component;->n()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->B:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;
@@ -1785,13 +1785,13 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/views/span/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/views/span/OnSpanClickListener;)V
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/views/span/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/views/span/OnSpanLongPressListener;)V
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;)V
 
     .line 6
     invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->c()V
@@ -1807,11 +1807,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->E:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->E:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -1821,11 +1821,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->D:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->D:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -1835,9 +1835,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->a()Lcom/vk/im/engine/models/dialogs/ConversationBar;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->a()Lcom/vk/im/engine/models/dialogs/ConversationBar;
 
     move-result-object v0
 
@@ -1879,9 +1879,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->E:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->E:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
@@ -1892,9 +1892,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->D:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->D:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
@@ -1905,17 +1905,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->f()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 
@@ -1947,9 +1947,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->h:Lcom/vk/im/ui/components/dialog_bar/State;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/d;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/dialog_bar/State;->c()Lcom/vk/im/engine/models/dialogs/DialogExt;
 
     move-result-object v0
 

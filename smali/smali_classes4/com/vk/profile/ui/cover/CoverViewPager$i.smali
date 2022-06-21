@@ -56,17 +56,17 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverViewPager$i;->c:Lcom/vk/profile/ui/cover/CoverViewPager;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getTapListener()Lkotlin/jvm/b/a;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getTapListener()Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -214,17 +214,17 @@
     .line 1
     iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverViewPager$i;->c:Lcom/vk/profile/ui/cover/CoverViewPager;
 
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewPager;->getTapListener()Lkotlin/jvm/b/a;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewPager;->getTapListener()Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     const/4 p1, 0x1

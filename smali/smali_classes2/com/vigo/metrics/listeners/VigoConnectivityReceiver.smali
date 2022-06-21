@@ -41,11 +41,11 @@
 
     .line 3
     :cond_0
-    sget-object p1, Lcom/vigo/metrics/z;->d:Lcom/vigo/metrics/h;
+    sget-object p1, Lcom/vigo/metrics/config;->d:Lcom/vigo/metrics/Vigo;
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, p2}, Lcom/vigo/metrics/h;->a(Ljava/util/List;)V
+    invoke-virtual {p1, p2}, Lcom/vigo/metrics/Vigo;->a(Ljava/util/List;)V
 
     :goto_0
     return-void

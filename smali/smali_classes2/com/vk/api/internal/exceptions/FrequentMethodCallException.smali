@@ -10,27 +10,27 @@
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/vk/api/internal/p/e;",
+            "Lcom/vk/api/internal/chain/MethodCallInfo;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private final method:Lcom/vk/api/sdk/l;
+.field private final method:Lcom/vk/api/sdk/VKMethodCall;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/api/sdk/l;Ljava/util/Map;)V
+.method public constructor <init>(Lcom/vk/api/sdk/VKMethodCall;Ljava/util/Map;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/api/sdk/l;",
+            "Lcom/vk/api/sdk/VKMethodCall;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "+",
             "Ljava/util/List<",
-            "Lcom/vk/api/internal/p/e;",
+            "Lcom/vk/api/internal/chain/MethodCallInfo;",
             ">;>;)V"
         }
     .end annotation
@@ -44,7 +44,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/vk/api/sdk/l;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/VKMethodCall;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -62,7 +62,7 @@
 
     invoke-direct {p0, v0}, Lcom/vk/api/sdk/exceptions/VKApiException;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/api/internal/exceptions/FrequentMethodCallException;->method:Lcom/vk/api/sdk/l;
+    iput-object p1, p0, Lcom/vk/api/internal/exceptions/FrequentMethodCallException;->method:Lcom/vk/api/sdk/VKMethodCall;
 
     iput-object p2, p0, Lcom/vk/api/internal/exceptions/FrequentMethodCallException;->calls:Ljava/util/Map;
 

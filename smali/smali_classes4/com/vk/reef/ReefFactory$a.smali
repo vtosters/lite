@@ -3,7 +3,7 @@
 .source "ReefFactory.kt"
 
 # interfaces
-.implements Lcom/vk/reef/utils/c;
+.implements Lcom/vk/reef/utils/ReefLogger;
 
 
 # annotations

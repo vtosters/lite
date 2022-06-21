@@ -3,7 +3,7 @@
 .source "VkUiConnectFragmentDelegateMock.kt"
 
 # interfaces
-.implements Lcom/vk/webapp/o/b;
+.implements Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
 
 # instance fields
@@ -21,13 +21,13 @@
 
 .field private m:Z
 
-.field private final n:Lcom/vk/webapp/cache/c;
+.field private final n:Lcom/vk/webapp/cache/AppsCacheManager;
 
 .field private final o:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lcom/vk/webapp/utils/a;",
+            "Lcom/vk/webapp/utils/WebAppOpenListener;",
             ">;"
         }
     .end annotation
@@ -55,13 +55,13 @@
     iput-object v0, p0, Lcom/vk/webapp/delegates/mock/VkUiConnectFragmentDelegateMock;->g:Lcom/vk/dto/common/data/ApiApplication;
 
     .line 3
-    sget-object v0, Lcom/vk/webapp/cache/c;->a:Lcom/vk/webapp/cache/c$a;
+    sget-object v0, Lcom/vk/webapp/cache/AppsCacheManager;->a:Lcom/vk/webapp/cache/AppsCacheManager$a;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/cache/c$a;->a()Lcom/vk/webapp/cache/c;
+    invoke-virtual {v0}, Lcom/vk/webapp/cache/AppsCacheManager$a;->a()Lcom/vk/webapp/cache/AppsCacheManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/webapp/delegates/mock/VkUiConnectFragmentDelegateMock;->n:Lcom/vk/webapp/cache/c;
+    iput-object v0, p0, Lcom/vk/webapp/delegates/mock/VkUiConnectFragmentDelegateMock;->n:Lcom/vk/webapp/cache/AppsCacheManager;
 
     .line 4
     new-instance v0, Ljava/util/LinkedHashSet;
@@ -175,15 +175,15 @@
     return-void
 .end method
 
-.method public a(Lkotlin/jvm/b/b;)V
+.method public a(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
-            "Lcom/vk/webapp/cache/a$a;",
+            "Lcom/vk/webapp/cache/AppsCache$a;",
             ">;)V"
         }
     .end annotation
@@ -206,13 +206,13 @@
     return-void
 .end method
 
-.method public a(ZLkotlin/jvm/b/a;)V
+.method public a(ZLkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -341,11 +341,11 @@
     return v0
 .end method
 
-.method public j()Lcom/vk/webapp/cache/c;
+.method public j()Lcom/vk/webapp/cache/AppsCacheManager;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/delegates/mock/VkUiConnectFragmentDelegateMock;->n:Lcom/vk/webapp/cache/c;
+    iget-object v0, p0, Lcom/vk/webapp/delegates/mock/VkUiConnectFragmentDelegateMock;->n:Lcom/vk/webapp/cache/AppsCacheManager;
 
     return-object v0
 .end method
@@ -443,7 +443,7 @@
         value = {
             "()",
             "Ljava/util/Set<",
-            "Lcom/vk/webapp/utils/a;",
+            "Lcom/vk/webapp/utils/WebAppOpenListener;",
             ">;"
         }
     .end annotation
@@ -454,7 +454,7 @@
     return-object v0
 .end method
 
-.method public w()Lcom/vk/webapp/helpers/b;
+.method public w()Lcom/vk/webapp/helpers/VkAppsAnalytics;
     .locals 1
 
     .line 1

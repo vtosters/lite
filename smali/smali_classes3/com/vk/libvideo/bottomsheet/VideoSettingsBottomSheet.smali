@@ -15,7 +15,7 @@
 # static fields
 .field private static a:Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;
 
-.field private static b:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private static b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 .field public static final c:Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;
 
@@ -64,9 +64,9 @@
     .line 23
     sget v1, Lcom/vk/libvideo/h;->actions_popup_double_item:I
 
-    sget-object v2, Lcom/vk/libvideo/bottomsheet/a;->a:Lcom/vk/libvideo/bottomsheet/a;
+    sget-object v2, Lcom/vk/libvideo/bottomsheet/DarkThemeHelper;->a:Lcom/vk/libvideo/bottomsheet/DarkThemeHelper;
 
-    invoke-virtual {v2, p1}, Lcom/vk/libvideo/bottomsheet/a;->a(Landroid/content/Context;)Landroid/content/Context;
+    invoke-virtual {v2, p1}, Lcom/vk/libvideo/bottomsheet/DarkThemeHelper;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
 
@@ -76,7 +76,7 @@
 
     const-string v2, "LayoutInflater.from(Dark\u2026.getDarkContext(context))"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, p1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(ILandroid/view/LayoutInflater;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
@@ -85,7 +85,7 @@
 
     invoke-direct {p1}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$b;-><init>()V
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
+    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter1;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 25
     new-instance p1, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$c;
@@ -111,27 +111,27 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method public static final synthetic a(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 0
 
     .line 2
-    sput-object p1, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object p1, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
+.method public static final synthetic b(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
     .locals 0
 
     .line 1
-    sget-object p0, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/e;
+    sget-object p0, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/app/Activity;IZLandroidx/core/util/Pair;ZILcom/vk/libvideo/bottomsheet/ModalDialogsController$a;Lcom/vk/navigation/k;)Lcom/vk/core/util/w;
+.method public final a(Landroid/app/Activity;IZLandroidx/core/util/Pair;ZILcom/vk/libvideo/bottomsheet/ModalDialogsController$a;Lcom/vk/navigation/ModalDialogCallback;)Lcom/vk/core/util/Dismissable;
     .locals 12
     .param p6    # I
         .annotation build Landroidx/annotation/StringRes;
@@ -149,9 +149,9 @@
             "Ljava/lang/String;",
             ">;>;ZI",
             "Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;",
-            "Lcom/vk/navigation/k;",
+            "Lcom/vk/navigation/ModalDialogCallback;",
             ")",
-            "Lcom/vk/core/util/w;"
+            "Lcom/vk/core/util/Dismissable;"
         }
     .end annotation
 
@@ -229,7 +229,7 @@
     const-string v7, "str"
 
     .line 8
-    invoke-static {v1, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
@@ -257,7 +257,7 @@
 
     const-string v9, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {v8, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v8, :cond_4
 
@@ -267,7 +267,7 @@
 
     const-string v9, "(this as java.lang.String).toUpperCase()"
 
-    invoke-static {v8, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -277,7 +277,7 @@
 
     const-string v8, "(this as java.lang.String).substring(startIndex)"
 
-    invoke-static {v1, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -308,11 +308,11 @@
     sget-object v9, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$PlaybackSettings;->QUALITY:Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$PlaybackSettings;
 
     .line 10
-    sget-object v10, Lcom/vk/libvideo/t;->a:Lcom/vk/libvideo/t;
+    sget-object v10, Lcom/vk/libvideo/VideoUtils;->a:Lcom/vk/libvideo/VideoUtils;
 
     move v11, p2
 
-    invoke-virtual {v10, p2}, Lcom/vk/libvideo/t;->b(I)I
+    invoke-virtual {v10, p2}, Lcom/vk/libvideo/VideoUtils;->b(I)I
 
     move-result v10
 
@@ -322,7 +322,7 @@
 
     const-string v11, "activity.getString(Video\u2026tyString(currentQuality))"
 
-    invoke-static {v10, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move v11, p3
 
@@ -338,7 +338,7 @@
 
     const-string v9, "lang"
 
-    invoke-static {v1, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v5, v8, v1, v2}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$a;-><init>(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$PlaybackSettings;Ljava/lang/String;Z)V
 
@@ -359,7 +359,7 @@
 
     const-string v8, "activity.getString(currentPlaybackSpeed)"
 
-    invoke-static {v6, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v8, 0x0
 
@@ -379,7 +379,7 @@
 
     move-object/from16 p7, v10
 
-    invoke-direct/range {p2 .. p7}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$a;-><init>(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$PlaybackSettings;Ljava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {p2 .. p7}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$a;-><init>(Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$PlaybackSettings;Ljava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     aput-object v2, v7, v1
 
@@ -391,28 +391,28 @@
     invoke-virtual {v4, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->setItems(Ljava/util/List;)V
 
     .line 15
-    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 16
     new-instance v0, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$d;
 
-    invoke-direct {v0, v3}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$d;-><init>(Lcom/vk/navigation/k;)V
+    invoke-direct {v0, v3}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$d;-><init>(Lcom/vk/navigation/ModalDialogCallback;)V
 
-    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 17
     new-instance v0, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$e;
 
-    invoke-direct {v0, v3}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$e;-><init>(Lcom/vk/navigation/k;)V
+    invoke-direct {v0, v3}, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$e;-><init>(Lcom/vk/navigation/ModalDialogCallback;)V
 
-    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$f;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 18
     sget-object v0, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$show$dialog$3;->a:Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet$show$dialog$3;
 
-    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v0, 0x1
 
@@ -435,17 +435,17 @@
     move-object/from16 p6, v5
 
     .line 19
-    invoke-static/range {p1 .. p6}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static/range {p1 .. p6}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const-string v0, "video_playback_settings"
 
     .line 20
-    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v0
 
     .line 21
-    sput-object v0, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object v0, Lcom/vk/libvideo/bottomsheet/VideoSettingsBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-object v0
 .end method

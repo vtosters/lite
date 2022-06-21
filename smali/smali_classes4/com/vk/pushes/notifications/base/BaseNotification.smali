@@ -23,7 +23,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/pushes/notifications/base/BaseNotification$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/pushes/notifications/base/BaseNotification$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/pushes/notifications/base/BaseNotification;->a:Lcom/vk/pushes/notifications/base/BaseNotification$a;
 
@@ -49,7 +49,7 @@
 
     .line 4
     :try_start_0
-    sget-object v0, Lcom/vk/pushes/a;->c:Lcom/vk/pushes/a;
+    sget-object v0, Lcom/vk/pushes/NotificationChannelsController;->c:Lcom/vk/pushes/NotificationChannelsController;
 
     invoke-virtual {p0}, Lcom/vk/pushes/notifications/base/BaseNotification;->b()Ljava/lang/String;
 
@@ -59,7 +59,7 @@
 
     invoke-direct {v2, p0, p1}, Lcom/vk/pushes/notifications/base/BaseNotification$notify$1;-><init>(Lcom/vk/pushes/notifications/base/BaseNotification;Landroid/app/NotificationManager;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/pushes/a;->a(Ljava/lang/String;Lkotlin/jvm/b/a;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/pushes/NotificationChannelsController;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions;)Lio/reactivex/disposables/Disposable;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -87,9 +87,9 @@
 
     .line 6
     :goto_0
-    sget-object p1, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object p1, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
-    invoke-virtual {p1}, Lcom/vk/pushes/j/e;->b()V
+    invoke-virtual {p1}, Lcom/vk/pushes/j/NotificationHelper;->b()V
 
     return-void
 .end method

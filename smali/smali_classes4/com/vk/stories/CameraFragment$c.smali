@@ -44,7 +44,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
+    invoke-interface {v0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
 
     move-result-object v0
 

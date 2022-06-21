@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field private B:Lcom/vk/im/ui/views/span/c;
+.field private B:Lcom/vk/im/ui/views/span/OnSpanLongPressListener;
 
 .field private a:J
 
@@ -24,15 +24,15 @@
 
 .field private final c:Lcom/vk/im/ui/views/span/SpanPressableTextView$c;
 
-.field private final d:Lcom/vk/im/ui/views/span/e;
+.field private final d:Lcom/vk/im/ui/views/span/SpanTouchEventListener;
 
-.field private final e:Lcom/vk/core/util/j1;
+.field private final e:Lcom/vk/core/util/TimeoutLock;
 
 .field private f:Landroid/view/View$OnClickListener;
 
 .field private g:Landroid/view/View$OnLongClickListener;
 
-.field private h:Lcom/vk/im/ui/views/span/b;
+.field private h:Lcom/vk/im/ui/views/span/OnSpanClickListener;
 
 
 # direct methods
@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/span/SpanPressableTextView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/span/SpanPressableTextView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -69,20 +69,20 @@
     iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->c:Lcom/vk/im/ui/views/span/SpanPressableTextView$c;
 
     .line 4
-    new-instance p1, Lcom/vk/im/ui/views/span/e;
+    new-instance p1, Lcom/vk/im/ui/views/span/SpanTouchEventListener;
 
-    invoke-direct {p1, p0}, Lcom/vk/im/ui/views/span/e;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {p1, p0}, Lcom/vk/im/ui/views/span/SpanTouchEventListener;-><init>(Landroid/widget/TextView;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/e;
+    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/SpanTouchEventListener;
 
     .line 5
-    new-instance p1, Lcom/vk/core/util/j1;
+    new-instance p1, Lcom/vk/core/util/TimeoutLock;
 
     const-wide/16 v0, 0x190
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/core/util/j1;-><init>(J)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/core/util/TimeoutLock;-><init>(J)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->e:Lcom/vk/core/util/j1;
+    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->e:Lcom/vk/core/util/TimeoutLock;
 
     .line 6
     invoke-direct {p0}, Lcom/vk/im/ui/views/span/SpanPressableTextView;->a()V
@@ -111,20 +111,20 @@
     iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->c:Lcom/vk/im/ui/views/span/SpanPressableTextView$c;
 
     .line 10
-    new-instance p1, Lcom/vk/im/ui/views/span/e;
+    new-instance p1, Lcom/vk/im/ui/views/span/SpanTouchEventListener;
 
-    invoke-direct {p1, p0}, Lcom/vk/im/ui/views/span/e;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {p1, p0}, Lcom/vk/im/ui/views/span/SpanTouchEventListener;-><init>(Landroid/widget/TextView;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/e;
+    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/SpanTouchEventListener;
 
     .line 11
-    new-instance p1, Lcom/vk/core/util/j1;
+    new-instance p1, Lcom/vk/core/util/TimeoutLock;
 
     const-wide/16 v0, 0x190
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/core/util/j1;-><init>(J)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/core/util/TimeoutLock;-><init>(J)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->e:Lcom/vk/core/util/j1;
+    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->e:Lcom/vk/core/util/TimeoutLock;
 
     .line 12
     invoke-direct {p0}, Lcom/vk/im/ui/views/span/SpanPressableTextView;->a()V
@@ -153,20 +153,20 @@
     iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->c:Lcom/vk/im/ui/views/span/SpanPressableTextView$c;
 
     .line 16
-    new-instance p1, Lcom/vk/im/ui/views/span/e;
+    new-instance p1, Lcom/vk/im/ui/views/span/SpanTouchEventListener;
 
-    invoke-direct {p1, p0}, Lcom/vk/im/ui/views/span/e;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {p1, p0}, Lcom/vk/im/ui/views/span/SpanTouchEventListener;-><init>(Landroid/widget/TextView;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/e;
+    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/SpanTouchEventListener;
 
     .line 17
-    new-instance p1, Lcom/vk/core/util/j1;
+    new-instance p1, Lcom/vk/core/util/TimeoutLock;
 
     const-wide/16 p2, 0x190
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/core/util/j1;-><init>(J)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/core/util/TimeoutLock;-><init>(J)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->e:Lcom/vk/core/util/j1;
+    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->e:Lcom/vk/core/util/TimeoutLock;
 
     .line 18
     invoke-direct {p0}, Lcom/vk/im/ui/views/span/SpanPressableTextView;->a()V
@@ -187,22 +187,22 @@
     .locals 2
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/e;
+    iget-object v0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/SpanTouchEventListener;
 
     new-instance v1, Lcom/vk/im/ui/views/span/SpanPressableTextView$d;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/views/span/SpanPressableTextView$d;-><init>(Lcom/vk/im/ui/views/span/SpanPressableTextView;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/span/e;->a(Lcom/vk/im/ui/views/span/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/span/SpanTouchEventListener;->a(Lcom/vk/im/ui/views/span/OnSpanClickListener;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/e;
+    iget-object v0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/SpanTouchEventListener;
 
     new-instance v1, Lcom/vk/im/ui/views/span/SpanPressableTextView$e;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/views/span/SpanPressableTextView$e;-><init>(Lcom/vk/im/ui/views/span/SpanPressableTextView;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/span/e;->a(Lcom/vk/im/ui/views/span/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/views/span/SpanTouchEventListener;->a(Lcom/vk/im/ui/views/span/OnSpanLongPressListener;)V
 
     return-void
 .end method
@@ -234,31 +234,31 @@
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/im/ui/views/span/SpanPressableTextView;)Lcom/vk/core/util/j1;
+.method public static final synthetic d(Lcom/vk/im/ui/views/span/SpanPressableTextView;)Lcom/vk/core/util/TimeoutLock;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->e:Lcom/vk/core/util/j1;
+    iget-object p0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->e:Lcom/vk/core/util/TimeoutLock;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public final getOnSpanClickListener()Lcom/vk/im/ui/views/span/b;
+.method public final getOnSpanClickListener()Lcom/vk/im/ui/views/span/OnSpanClickListener;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->h:Lcom/vk/im/ui/views/span/b;
+    iget-object v0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->h:Lcom/vk/im/ui/views/span/OnSpanClickListener;
 
     return-object v0
 .end method
 
-.method public final getOnSpanLongPressListener()Lcom/vk/im/ui/views/span/c;
+.method public final getOnSpanLongPressListener()Lcom/vk/im/ui/views/span/OnSpanLongPressListener;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->B:Lcom/vk/im/ui/views/span/c;
+    iget-object v0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->B:Lcom/vk/im/ui/views/span/OnSpanLongPressListener;
 
     return-object v0
 .end method
@@ -267,9 +267,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/e;
+    iget-object v0, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/SpanTouchEventListener;
 
-    invoke-virtual {v0, p0, p1}, Lcom/vk/im/ui/views/span/e;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p0, p1}, Lcom/vk/im/ui/views/span/SpanTouchEventListener;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
     .line 2
     invoke-super {p0, p1}, Landroid/widget/TextView;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -335,20 +335,20 @@
     return-void
 .end method
 
-.method public final setOnSpanClickListener(Lcom/vk/im/ui/views/span/b;)V
+.method public final setOnSpanClickListener(Lcom/vk/im/ui/views/span/OnSpanClickListener;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->h:Lcom/vk/im/ui/views/span/b;
+    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->h:Lcom/vk/im/ui/views/span/OnSpanClickListener;
 
     return-void
 .end method
 
-.method public final setOnSpanLongPressListener(Lcom/vk/im/ui/views/span/c;)V
+.method public final setOnSpanLongPressListener(Lcom/vk/im/ui/views/span/OnSpanLongPressListener;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->B:Lcom/vk/im/ui/views/span/c;
+    iput-object p1, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->B:Lcom/vk/im/ui/views/span/OnSpanLongPressListener;
 
     return-void
 .end method
@@ -365,11 +365,11 @@
     if-eqz p2, :cond_0
 
     .line 3
-    iget-object p2, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/e;
+    iget-object p2, p0, Lcom/vk/im/ui/views/span/SpanPressableTextView;->d:Lcom/vk/im/ui/views/span/SpanTouchEventListener;
 
     check-cast p1, Landroid/text/Spanned;
 
-    invoke-virtual {p2, p1}, Lcom/vk/im/ui/views/span/e;->a(Landroid/text/Spanned;)V
+    invoke-virtual {p2, p1}, Lcom/vk/im/ui/views/span/SpanTouchEventListener;->a(Landroid/text/Spanned;)V
 
     :cond_0
     return-void

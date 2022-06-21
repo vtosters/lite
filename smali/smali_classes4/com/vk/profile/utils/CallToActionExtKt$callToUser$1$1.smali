@@ -3,7 +3,7 @@
 .source "CallToActionExt.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
     invoke-virtual {p0}, Lcom/vk/profile/utils/CallToActionExtKt$callToUser$1$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -67,7 +67,7 @@
 
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-static {v0}, Lcom/vtosters/lite/i0/c;->a(I)Z
+    invoke-static {v0}, Lcom/vtosters/lite/auth/VKAccountManager;->a(I)Z
 
     move-result v0
 
@@ -82,7 +82,7 @@
     const/4 v3, 0x0
 
     .line 2
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     return-void
 
@@ -90,15 +90,15 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/profile/utils/CallToActionExtKt$callToUser$1$1;->this$0:Lcom/vk/profile/utils/CallToActionExtKt$callToUser$1;
 
-    iget-object v0, v0, Lcom/vk/profile/utils/CallToActionExtKt$callToUser$1;->b:Lkotlin/jvm/b/a;
+    iget-object v0, v0, Lcom/vk/profile/utils/CallToActionExtKt$callToUser$1;->b:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     .line 4
     :cond_1
@@ -108,7 +108,7 @@
 
     const-string v0, "it"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 

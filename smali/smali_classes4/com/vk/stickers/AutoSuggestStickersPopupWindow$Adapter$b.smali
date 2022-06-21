@@ -58,9 +58,9 @@
 
     check-cast p1, Lcom/vk/imageloader/view/VKImageView;
 
-    sget v0, Lcom/vk/stickers/v;->g:I
+    sget v0, Lcom/vk/stickers/StickersConfig;->g:I
 
-    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/a;->setFixedSize(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setFixedSize(I)V
 
     .line 3
     invoke-virtual {p2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -100,7 +100,7 @@
 
     if-eqz v0, :cond_0
 
-    sget v1, Lcom/vk/stickers/v;->g:I
+    sget v1, Lcom/vk/stickers/StickersConfig;->g:I
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/stickers/StickerItem;->h(I)Ljava/lang/String;
 
@@ -150,7 +150,7 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$Adapter$b;->b:Z
 
@@ -305,7 +305,7 @@
 
     const-string v3, "v.context"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v0, v2, p1}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$Adapter;->a(Lcom/vk/dto/stickers/StickerItem;ZLandroid/content/Context;)V
 

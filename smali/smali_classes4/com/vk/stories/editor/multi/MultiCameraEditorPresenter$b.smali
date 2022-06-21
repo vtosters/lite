@@ -3,7 +3,7 @@
 .source "MultiCameraEditorPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Landroid/graphics/Bitmap;",
         ">;"
     }
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-.field final synthetic b:Lcom/vk/cameraui/entities/d;
+.field final synthetic b:Lcom/vk/cameraui/entities/StoryRawData3;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/d;)V
+.method constructor <init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData3;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$b;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    iput-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$b;->b:Lcom/vk/cameraui/entities/d;
+    iput-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$b;->b:Lcom/vk/cameraui/entities/StoryRawData3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,9 +56,9 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$b;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$b;->b:Lcom/vk/cameraui/entities/d;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$b;->b:Lcom/vk/cameraui/entities/StoryRawData3;
 
-    invoke-static {p1, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/d;)V
+    invoke-static {p1, v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$b;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;

@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 .field private static final b:I
 
@@ -38,7 +38,7 @@
     .end annotation
 .end field
 
-.field private static final f:Lkotlin/e;
+.field private static final f:Lkotlin/Lazy2;
 
 .field public static final g:Lcom/vk/core/vc/KeyboardController;
 
@@ -49,13 +49,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/core/vc/KeyboardController;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -63,15 +63,15 @@
 
     const-string v4, "getPreferences()Landroid/content/SharedPreferences;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/core/vc/KeyboardController;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/core/vc/KeyboardController;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/core/vc/KeyboardController;
@@ -106,11 +106,11 @@
     .line 5
     sget-object v0, Lcom/vk/core/vc/KeyboardController$preferences$2;->a:Lcom/vk/core/vc/KeyboardController$preferences$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/vc/KeyboardController;->f:Lkotlin/e;
+    sput-object v0, Lcom/vk/core/vc/KeyboardController;->f:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -160,7 +160,7 @@
 
     const-string v1, "preferences"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
 
@@ -190,7 +190,7 @@
     const-string v2, "prefName"
 
     .line 10
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -214,7 +214,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v2, v3, v1}, Lcom/vk/core/extensions/x;->a(Landroid/util/LongSparseArray;JLjava/lang/Object;)V
+    invoke-static {p1, v2, v3, v1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/LongSparseArray;JLjava/lang/Object;)V
 
     goto :goto_0
 
@@ -302,7 +302,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/extensions/x;->a(Landroid/util/LongSparseArray;JLjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/LongSparseArray;JLjava/lang/Object;)V
 
     .line 5
     invoke-direct {p0}, Lcom/vk/core/vc/KeyboardController;->d()Landroid/content/SharedPreferences;
@@ -373,15 +373,15 @@
 .method private final d()Landroid/content/SharedPreferences;
     .locals 3
 
-    sget-object v0, Lcom/vk/core/vc/KeyboardController;->f:Lkotlin/e;
+    sget-object v0, Lcom/vk/core/vc/KeyboardController;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/vc/KeyboardController;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/vc/KeyboardController;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -486,7 +486,7 @@
 
     const-string v0, "kbdHeight.get(currentCon\u2026(Screen.realWidth() / 2))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Ljava/lang/Number;
 

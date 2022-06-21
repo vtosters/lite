@@ -3,7 +3,7 @@
 .source "VideoTextureView.kt"
 
 # interfaces
-.implements Lcom/vk/media/player/video/f;
+.implements Lcom/vk/media/player/video/MatrixProvider;
 
 
 # instance fields
@@ -17,9 +17,9 @@
 
 .field private F:Z
 
-.field private final a:Lcom/vk/core/util/measure/a$a;
+.field private final a:Lcom/vk/core/util/measure/MeasureImageUtils$a;
 
-.field private final b:Lcom/vk/core/util/measure/a$b;
+.field private final b:Lcom/vk/core/util/measure/MeasureImageUtils$b;
 
 .field private c:Lcom/vk/media/player/video/VideoResizer$VideoFitType;
 
@@ -50,7 +50,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/media/player/video/view/VideoTextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/media/player/video/view/VideoTextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -70,7 +70,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/media/player/video/view/VideoTextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/media/player/video/view/VideoTextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -86,18 +86,18 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/view/TextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 3
-    new-instance v0, Lcom/vk/core/util/measure/a$a;
+    new-instance v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;
 
-    invoke-direct {v0}, Lcom/vk/core/util/measure/a$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/util/measure/MeasureImageUtils$a;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/media/player/video/view/VideoTextureView;->a:Lcom/vk/core/util/measure/a$a;
+    iput-object v0, p0, Lcom/vk/media/player/video/view/VideoTextureView;->a:Lcom/vk/core/util/measure/MeasureImageUtils$a;
 
     .line 4
-    new-instance v0, Lcom/vk/core/util/measure/a$b;
+    new-instance v0, Lcom/vk/core/util/measure/MeasureImageUtils$b;
 
-    invoke-direct {v0}, Lcom/vk/core/util/measure/a$b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/util/measure/MeasureImageUtils$b;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/media/player/video/view/VideoTextureView;->b:Lcom/vk/core/util/measure/a$b;
+    iput-object v0, p0, Lcom/vk/media/player/video/view/VideoTextureView;->b:Lcom/vk/core/util/measure/MeasureImageUtils$b;
 
     .line 5
     sget-object v0, Lcom/vk/media/player/video/VideoResizer$VideoFitType;->CROP:Lcom/vk/media/player/video/VideoResizer$VideoFitType;
@@ -170,7 +170,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -439,47 +439,47 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/media/player/video/view/VideoTextureView;->a:Lcom/vk/core/util/measure/a$a;
+    iget-object v0, p0, Lcom/vk/media/player/video/view/VideoTextureView;->a:Lcom/vk/core/util/measure/MeasureImageUtils$a;
 
     .line 2
     iget v1, p0, Lcom/vk/media/player/video/view/VideoTextureView;->d:I
 
-    iput v1, v0, Lcom/vk/core/util/measure/a$a;->a:I
+    iput v1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;->a:I
 
     .line 3
     iget v1, p0, Lcom/vk/media/player/video/view/VideoTextureView;->e:I
 
-    iput v1, v0, Lcom/vk/core/util/measure/a$a;->b:I
+    iput v1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;->b:I
 
     .line 4
-    iput p1, v0, Lcom/vk/core/util/measure/a$a;->c:I
+    iput p1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;->c:I
 
     .line 5
-    iput p2, v0, Lcom/vk/core/util/measure/a$a;->d:I
+    iput p2, v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;->d:I
 
     .line 6
     invoke-virtual {p0}, Landroid/view/TextureView;->getSuggestedMinimumWidth()I
 
     move-result p1
 
-    iput p1, v0, Lcom/vk/core/util/measure/a$a;->e:I
+    iput p1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;->e:I
 
     .line 7
     invoke-virtual {p0}, Landroid/view/TextureView;->getSuggestedMinimumHeight()I
 
     move-result p1
 
-    iput p1, v0, Lcom/vk/core/util/measure/a$a;->f:I
+    iput p1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;->f:I
 
     .line 8
     iget p1, p0, Lcom/vk/media/player/video/view/VideoTextureView;->f:I
 
-    iput p1, v0, Lcom/vk/core/util/measure/a$a;->g:I
+    iput p1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;->g:I
 
     .line 9
     iget p1, p0, Lcom/vk/media/player/video/view/VideoTextureView;->g:I
 
-    iput p1, v0, Lcom/vk/core/util/measure/a$a;->h:I
+    iput p1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;->h:I
 
     .line 10
     invoke-virtual {p0}, Landroid/view/TextureView;->getPaddingLeft()I
@@ -492,7 +492,7 @@
 
     add-int/2addr p1, p2
 
-    iput p1, v0, Lcom/vk/core/util/measure/a$a;->i:I
+    iput p1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;->i:I
 
     .line 11
     invoke-virtual {p0}, Landroid/view/TextureView;->getPaddingTop()I
@@ -505,7 +505,7 @@
 
     add-int/2addr p1, p2
 
-    iput p1, v0, Lcom/vk/core/util/measure/a$a;->j:I
+    iput p1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;->j:I
 
     .line 12
     iget-boolean p1, p0, Lcom/vk/media/player/video/view/VideoTextureView;->B:Z
@@ -574,35 +574,35 @@
 
     .line 19
     :goto_0
-    iput-object p1, v0, Lcom/vk/core/util/measure/a$a;->k:Lcom/vk/core/util/measure/ScaleType;
+    iput-object p1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;->k:Lcom/vk/core/util/measure/ScaleType;
 
     const/high16 p1, -0x40800000    # -1.0f
 
     .line 20
-    iput p1, v0, Lcom/vk/core/util/measure/a$a;->l:F
+    iput p1, v0, Lcom/vk/core/util/measure/MeasureImageUtils$a;->l:F
 
     .line 21
-    iget-object p1, p0, Lcom/vk/media/player/video/view/VideoTextureView;->a:Lcom/vk/core/util/measure/a$a;
+    iget-object p1, p0, Lcom/vk/media/player/video/view/VideoTextureView;->a:Lcom/vk/core/util/measure/MeasureImageUtils$a;
 
-    iget-object p2, p0, Lcom/vk/media/player/video/view/VideoTextureView;->b:Lcom/vk/core/util/measure/a$b;
+    iget-object p2, p0, Lcom/vk/media/player/video/view/VideoTextureView;->b:Lcom/vk/core/util/measure/MeasureImageUtils$b;
 
-    invoke-static {p1, p2}, Lcom/vk/core/util/measure/a;->a(Lcom/vk/core/util/measure/a$a;Lcom/vk/core/util/measure/a$b;)V
+    invoke-static {p1, p2}, Lcom/vk/core/util/measure/MeasureImageUtils;->a(Lcom/vk/core/util/measure/MeasureImageUtils$a;Lcom/vk/core/util/measure/MeasureImageUtils$b;)V
 
     .line 22
-    iget-object p1, p0, Lcom/vk/media/player/video/view/VideoTextureView;->b:Lcom/vk/core/util/measure/a$b;
+    iget-object p1, p0, Lcom/vk/media/player/video/view/VideoTextureView;->b:Lcom/vk/core/util/measure/MeasureImageUtils$b;
 
-    iget p2, p1, Lcom/vk/core/util/measure/a$b;->a:I
+    iget p2, p1, Lcom/vk/core/util/measure/MeasureImageUtils$b;->a:I
 
-    iget p1, p1, Lcom/vk/core/util/measure/a$b;->b:I
+    iget p1, p1, Lcom/vk/core/util/measure/MeasureImageUtils$b;->b:I
 
     invoke-virtual {p0, p2, p1}, Landroid/view/TextureView;->setMeasuredDimension(II)V
 
     .line 23
-    iget-object p1, p0, Lcom/vk/media/player/video/view/VideoTextureView;->b:Lcom/vk/core/util/measure/a$b;
+    iget-object p1, p0, Lcom/vk/media/player/video/view/VideoTextureView;->b:Lcom/vk/core/util/measure/MeasureImageUtils$b;
 
-    iget p2, p1, Lcom/vk/core/util/measure/a$b;->a:I
+    iget p2, p1, Lcom/vk/core/util/measure/MeasureImageUtils$b;->a:I
 
-    iget p1, p1, Lcom/vk/core/util/measure/a$b;->b:I
+    iget p1, p1, Lcom/vk/core/util/measure/MeasureImageUtils$b;->b:I
 
     invoke-direct {p0, p2, p1}, Lcom/vk/media/player/video/view/VideoTextureView;->b(II)V
 

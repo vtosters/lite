@@ -52,7 +52,7 @@
 
     .line 3
     :try_start_0
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -222,7 +222,7 @@
     const-string v0, "Not Enabled"
 
     .line 23
-    sget v1, Lorg/chromium/base/c;->b:I
+    sget v1, Lorg/chromium/base/BuildConfig;->b:I
     :try_end_4
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_4 .. :try_end_4} :catch_3
 
@@ -230,11 +230,11 @@
 
     .line 24
     :try_start_5
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v1, Lorg/chromium/base/c;->b:I
+    sget v1, Lorg/chromium/base/BuildConfig;->b:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -434,7 +434,7 @@
     move-result-object v0
 
     .line 2
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v1
 

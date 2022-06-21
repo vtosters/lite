@@ -3,7 +3,7 @@
 .source "CameraUIView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/cameraui/CameraUIView$showQrUI$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -74,50 +74,50 @@
 
     iget-object v1, p0, Lcom/vk/cameraui/CameraUIView$showQrUI$1;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v1}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
+    invoke-static {v1}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/QrScannerUi;->a(Lcom/vk/cameraui/f;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/QrScannerUi;->a(Lcom/vk/cameraui/CameraUIPositionsImpl;)V
 
     .line 3
     :cond_0
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showQrUI$1;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->b(Lcom/vk/camera/j/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->b(Lcom/vk/camera/j/CadreUtils2;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showQrUI$1;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/vk/cameraui/f;->a(Lcom/vk/camera/j/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->a(Lcom/vk/camera/j/CadreUtils2;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showQrUI$1;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/f;->c()V
+    invoke-virtual {v0}, Lcom/vk/cameraui/CameraUIPositionsImpl;->c()V
 
     .line 6
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showQrUI$1;->this$0:Lcom/vk/cameraui/CameraUIView;
 
-    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/f;
+    invoke-static {v0}, Lcom/vk/cameraui/CameraUIView;->e(Lcom/vk/cameraui/CameraUIView;)Lcom/vk/cameraui/CameraUIPositionsImpl;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/f;->b()V
+    invoke-virtual {v0}, Lcom/vk/cameraui/CameraUIPositionsImpl;->b()V
 
     .line 7
     iget-object v0, p0, Lcom/vk/cameraui/CameraUIView$showQrUI$1;->this$0:Lcom/vk/cameraui/CameraUIView;

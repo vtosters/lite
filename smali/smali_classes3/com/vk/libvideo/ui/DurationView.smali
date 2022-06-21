@@ -20,7 +20,7 @@
 
 .field G:Landroid/animation/ValueAnimator;
 
-.field private final a:Lcom/vk/libvideo/x/a;
+.field private final a:Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
 .field private final b:Landroid/graphics/drawable/Drawable;
 
@@ -180,9 +180,9 @@
 
     .line 15
     :cond_0
-    new-instance v0, Lcom/vk/libvideo/x/c;
+    new-instance v0, Lcom/vk/libvideo/x/SimpleProgressDrawable;
 
-    invoke-direct {v0, p1}, Lcom/vk/libvideo/x/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vk/libvideo/x/SimpleProgressDrawable;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/vk/libvideo/ui/DurationView;->b:Landroid/graphics/drawable/Drawable;
 
@@ -199,18 +199,18 @@
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setSelected(Z)V
 
     .line 18
-    new-instance p1, Lcom/vk/libvideo/x/a;
+    new-instance p1, Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
-    invoke-direct {p1}, Lcom/vk/libvideo/x/a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/libvideo/x/AudioVisualizerDrawable;-><init>()V
 
     const/4 p3, -0x1
 
-    invoke-virtual {p1, p3}, Lcom/vk/libvideo/x/a;->a(I)Lcom/vk/libvideo/x/a;
+    invoke-virtual {p1, p3}, Lcom/vk/libvideo/x/AudioVisualizerDrawable;->a(I)Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
-    iput-object p1, p0, Lcom/vk/libvideo/ui/DurationView;->a:Lcom/vk/libvideo/x/a;
+    iput-object p1, p0, Lcom/vk/libvideo/ui/DurationView;->a:Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
     .line 19
-    iget-object p1, p0, Lcom/vk/libvideo/ui/DurationView;->a:Lcom/vk/libvideo/x/a;
+    iget-object p1, p0, Lcom/vk/libvideo/ui/DurationView;->a:Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
     new-instance v0, Landroid/graphics/Rect;
 
@@ -226,12 +226,12 @@
 
     invoke-direct {v0, p2, p2, v3, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/libvideo/x/a;->a(Landroid/graphics/Rect;)Lcom/vk/libvideo/x/a;
+    invoke-virtual {p1, v0}, Lcom/vk/libvideo/x/AudioVisualizerDrawable;->a(Landroid/graphics/Rect;)Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
     .line 20
     iget-object p1, p0, Lcom/vk/libvideo/ui/DurationView;->C:Landroid/widget/ImageView;
 
-    iget-object v0, p0, Lcom/vk/libvideo/ui/DurationView;->a:Lcom/vk/libvideo/x/a;
+    iget-object v0, p0, Lcom/vk/libvideo/ui/DurationView;->a:Lcom/vk/libvideo/x/AudioVisualizerDrawable;
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -441,7 +441,7 @@
     .line 26
     iget-object p1, p0, Lcom/vk/libvideo/ui/DurationView;->G:Landroid/animation/ValueAnimator;
 
-    invoke-static {}, Lb/h/g/g/a;->a()Z
+    invoke-static {}, Lb/h/g/g/AnimationHelper;->a()Z
 
     move-result v0
 

@@ -3,7 +3,7 @@
 .source "PostViewFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/adapters/g;
+.implements Lcom/vk/newsfeed/adapters/RecyclerViewObserver;
 
 
 # annotations
@@ -44,7 +44,7 @@
     .locals 2
 
     .line 2
-    instance-of v0, p1, Lcom/vk/newsfeed/holders/poster/a;
+    instance-of v0, p1, Lcom/vk/newsfeed/holders/poster/PosterHolder;
 
     if-eqz v0, :cond_0
 
@@ -64,11 +64,11 @@
     return-void
 .end method
 
-.method public a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/b;)V
+.method public a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/newsfeed/adapters/g$a;->a(Lcom/vk/newsfeed/adapters/g;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/b;)V
+    invoke-static {p0, p1, p2}, Lcom/vk/newsfeed/adapters/RecyclerViewObserver$a;->a(Lcom/vk/newsfeed/adapters/RecyclerViewObserver;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
 
     return-void
 .end method
@@ -77,7 +77,7 @@
     .locals 2
 
     .line 1
-    instance-of v0, p1, Lcom/vk/common/view/i/a;
+    instance-of v0, p1, Lcom/vk/common/view/i/CommonScrollListener;
 
     if-eqz v0, :cond_2
 
@@ -116,7 +116,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/newsfeed/holders/poster/a;
+    check-cast v1, Lcom/vk/newsfeed/holders/poster/PosterHolder;
 
     goto :goto_1
 
@@ -124,7 +124,7 @@
     const/4 v1, 0x0
 
     :goto_1
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 

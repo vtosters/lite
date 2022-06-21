@@ -3,12 +3,12 @@
 .source "MentionSelectViewController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/mentions/MentionSelectViewControllerImpl;-><init>(Lcom/vk/mentions/i;)V
+    value = Lcom/vk/mentions/MentionSelectViewControllerImpl;-><init>(Lcom/vk/mentions/MentionSelectInterfaces;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/mentions/MentionSelectViewControllerImpl$bottomSheetCallback$2$a;",
         ">;"
     }

@@ -44,21 +44,21 @@
     .line 1
     iget-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$e;->b:Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;
 
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/articles/authorpage/a;->Y0()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->Y0()Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    sget-object v0, Lcom/vk/articles/authorpage/c;->a:Lcom/vk/articles/authorpage/c;
+    sget-object v0, Lcom/vk/articles/authorpage/ArticleAuthorPageHelper;->a:Lcom/vk/articles/authorpage/ArticleAuthorPageHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/articles/authorpage/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcom/vk/articles/authorpage/ArticleAuthorPageHelper;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -70,13 +70,13 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$e;->b:Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;
 
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/articles/authorpage/a;->f1()Ljava/lang/Integer;
+    invoke-interface {p1}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->f1()Ljava/lang/Integer;
 
     move-result-object p1
 
@@ -86,9 +86,9 @@
 
     move-result p1
 
-    sget-object v0, Lcom/vk/articles/authorpage/c;->a:Lcom/vk/articles/authorpage/c;
+    sget-object v0, Lcom/vk/articles/authorpage/ArticleAuthorPageHelper;->a:Lcom/vk/articles/authorpage/ArticleAuthorPageHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/articles/authorpage/c;->a(I)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcom/vk/articles/authorpage/ArticleAuthorPageHelper;->a(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -105,11 +105,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/sharing/m;->a(Landroid/content/Context;)Lcom/vk/sharing/m$a;
+    invoke-static {v0}, Lcom/vk/sharing/Sharing;->a(Landroid/content/Context;)Lcom/vk/sharing/Sharing$a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/sharing/m$a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/sharing/Sharing$a;->a(Ljava/lang/String;)V
 
     const/4 p1, 0x1
 

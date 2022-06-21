@@ -1,5 +1,5 @@
 .class public final Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$d;
-.super Lcom/vk/core/dialogs/adapter/a;
+.super Lcom/vk/core/dialogs/adapter/ModalAdapter1;
 .source "ActionLinksSnippetPresenter.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/dialogs/adapter/a<",
+        "Lcom/vk/core/dialogs/adapter/ModalAdapter1<",
         "Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$ActionLinkOptions;",
         ">;"
     }
@@ -27,20 +27,20 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/dialogs/adapter/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/dialogs/adapter/ModalAdapter1;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;)Lcom/vk/core/dialogs/adapter/b;
+.method public a(Landroid/view/View;)Lcom/vk/core/dialogs/adapter/ViewReferrer;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/core/dialogs/adapter/b;
+    new-instance v0, Lcom/vk/core/dialogs/adapter/ViewReferrer;
 
-    invoke-direct {v0}, Lcom/vk/core/dialogs/adapter/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/dialogs/adapter/ViewReferrer;-><init>()V
 
     .line 3
     sget v1, Lcom/vk/libvideo/g;->action_text:I
@@ -51,9 +51,9 @@
 
     const-string v2, "itemView.findViewById(R.id.action_text)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/b;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(Landroid/view/View;)V
 
     .line 4
     sget v1, Lcom/vk/libvideo/g;->action_icon:I
@@ -81,20 +81,20 @@
     const-string v1, "itemView.findViewById<Im\u2026                        }"
 
     .line 7
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/b;->a(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(Landroid/view/View;)V
 
     return-object v0
 .end method
 
-.method public a(Lcom/vk/core/dialogs/adapter/b;Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$ActionLinkOptions;I)V
+.method public a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$ActionLinkOptions;I)V
     .locals 1
 
     .line 8
     sget p3, Lcom/vk/libvideo/g;->action_text:I
 
-    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/b;->a(I)Landroid/view/View;
+    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(I)Landroid/view/View;
 
     move-result-object p3
 
@@ -109,7 +109,7 @@
     .line 9
     sget p3, Lcom/vk/libvideo/g;->action_icon:I
 
-    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/b;->a(I)Landroid/view/View;
+    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/adapter/ViewReferrer;->a(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -124,13 +124,13 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/core/dialogs/adapter/b;Ljava/lang/Object;I)V
+.method public bridge synthetic a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Ljava/lang/Object;I)V
     .locals 0
 
     .line 1
     check-cast p2, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$ActionLinkOptions;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$d;->a(Lcom/vk/core/dialogs/adapter/b;Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$ActionLinkOptions;I)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$d;->a(Lcom/vk/core/dialogs/adapter/ViewReferrer;Lcom/vk/libvideo/live/views/actionlinkssnippet/ActionLinksSnippetPresenter$ActionLinkOptions;I)V
 
     return-void
 .end method

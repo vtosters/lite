@@ -3,12 +3,12 @@
 .source "NarrativeProfileHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/holders/NarrativeProfileHolder;-><init>(Landroid/view/View;ILjava/util/List;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/holders/NarrativeProfileHolder;-><init>(Landroid/view/View;ILjava/util/List;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -59,11 +59,11 @@
     invoke-static {p1}, Lcom/vk/profile/adapter/holders/NarrativeProfileHolder;->d(Lcom/vk/profile/adapter/holders/NarrativeProfileHolder;)V
 
     .line 2
-    new-instance p1, Lcom/vk/profile/e/b;
+    new-instance p1, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     iget v0, p0, Lcom/vk/profile/adapter/holders/NarrativeProfileHolder$1;->$profileId:I
 
-    invoke-direct {p1, v0}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     .line 3
     invoke-static {}, Lcom/vk/profile/data/ProfileCountersKt;->l()Lcom/vk/profile/data/CountersWrapper;
@@ -74,25 +74,25 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/profile/e/c;->a(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/profile/e/CommunityScreenTracker;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string v0, "element"
 
     .line 4
-    invoke-virtual {p1, v0}, Lcom/vk/profile/e/b;->d(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->d(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 5
     iget-object v0, p0, Lcom/vk/profile/adapter/holders/NarrativeProfileHolder$1;->this$0:Lcom/vk/profile/adapter/holders/NarrativeProfileHolder;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/holders/NarrativeProfileHolder;->a(Lcom/vk/profile/adapter/holders/NarrativeProfileHolder;)Lcom/vk/profile/adapter/items/v;
+    invoke-static {v0}, Lcom/vk/profile/adapter/holders/NarrativeProfileHolder;->a(Lcom/vk/profile/adapter/holders/NarrativeProfileHolder;)Lcom/vk/profile/adapter/items/NarrativeProfileItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/v;->c()Lcom/vk/dto/narratives/Narrative;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/NarrativeProfileItem;->c()Lcom/vk/dto/narratives/Narrative;
 
     move-result-object v0
 
@@ -104,10 +104,10 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/e/b;->b(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->b(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     return-void
 .end method
@@ -120,7 +120,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/holders/NarrativeProfileHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

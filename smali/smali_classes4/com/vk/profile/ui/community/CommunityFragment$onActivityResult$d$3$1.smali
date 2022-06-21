@@ -3,7 +3,7 @@
 .source "CommunityFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/Integer;",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -61,7 +61,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/profile/ui/community/CommunityFragment$onActivityResult$d$3$1;->a(Ljava/lang/Integer;Lcom/vk/profile/adapter/BaseInfoItem;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -82,19 +82,19 @@
 
     iget-object v0, v0, Lcom/vk/profile/ui/community/CommunityFragment$onActivityResult$d$3;->a:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->g(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/lists/g;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->g(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/lists/DiffListDataSet;
 
     move-result-object v0
 
     const-string v1, "i"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/o;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/lists/ListDataSet;->k(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -102,9 +102,9 @@
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Lcom/vk/profile/adapter/items/community/a;
+    check-cast v0, Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/community/a;->P()I
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;->P()I
 
     move-result v0
 
@@ -117,26 +117,26 @@
     .line 3
     move-object v0, p2
 
-    check-cast v0, Lcom/vk/profile/adapter/items/community/a;
+    check-cast v0, Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;
 
     iget-object v1, p0, Lcom/vk/profile/ui/community/CommunityFragment$onActivityResult$d$3$1;->$unreadCount:Ljava/lang/Integer;
 
     const-string v2, "unreadCount"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/a;->h(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;->h(I)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/profile/ui/community/CommunityFragment$onActivityResult$d$3$1;->this$0:Lcom/vk/profile/ui/community/CommunityFragment$onActivityResult$d$3;
 
     iget-object v0, v0, Lcom/vk/profile/ui/community/CommunityFragment$onActivityResult$d$3;->a:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->g(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/lists/g;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->g(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/lists/DiffListDataSet;
 
     move-result-object v0
 
@@ -144,7 +144,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/lists/o;->b(ILjava/lang/Object;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/lists/ListDataSet;->b(ILjava/lang/Object;)V
 
     goto :goto_0
 

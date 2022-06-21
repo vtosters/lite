@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/webapp/VkUiConnectFragment$d;->a(Landroid/content/Context;Lcom/vk/core/dialogs/bottomsheet/d;)V
+    value = Lcom/vk/webapp/VkUiConnectFragment$d;->a(Landroid/content/Context;Lcom/vk/core/dialogs/bottomsheet/MenuBottomSheetAction;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

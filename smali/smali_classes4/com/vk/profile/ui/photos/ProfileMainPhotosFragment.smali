@@ -29,9 +29,9 @@
 
 .field private final Z:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
-.field private a0:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private a0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
-.field private b0:Lcom/vk/profile/ui/photos/modal/b;
+.field private b0:Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;
 
 .field private c0:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
@@ -47,11 +47,11 @@
 
 .field private final e0:Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$c;
 
-.field private final f0:Lcom/vk/profile/adapter/a;
+.field private final f0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-.field private final g0:Lcom/vk/profile/adapter/a;
+.field private final g0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-.field private final h0:Lcom/vk/profile/ui/photos/a;
+.field private final h0:Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
 
 # direct methods
@@ -62,7 +62,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -91,7 +91,7 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v3, v1, v2, v3}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v3, v1, v2, v3}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->V:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
@@ -107,7 +107,7 @@
     invoke-direct {v4, p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$modalAddActionAdapter$2;-><init>(Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;)V
 
     .line 7
-    invoke-direct {v0, v1, v4}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, v1, v4}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     iput-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->Z:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
@@ -119,21 +119,21 @@
     iput-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->e0:Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$c;
 
     .line 9
-    new-instance v0, Lcom/vk/profile/adapter/a;
+    new-instance v0, Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-    invoke-direct {v0, v3, v2, v3}, Lcom/vk/profile/adapter/a;-><init>(Lcom/vk/lists/o;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v3, v2, v3}, Lcom/vk/profile/adapter/InfoItemsAdapter;-><init>(Lcom/vk/lists/ListDataSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->f0:Lcom/vk/profile/adapter/a;
+    iput-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->f0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     .line 10
-    new-instance v0, Lcom/vk/profile/adapter/a;
+    new-instance v0, Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-    invoke-direct {v0, v3, v2, v3}, Lcom/vk/profile/adapter/a;-><init>(Lcom/vk/lists/o;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v3, v2, v3}, Lcom/vk/profile/adapter/InfoItemsAdapter;-><init>(Lcom/vk/lists/ListDataSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->g0:Lcom/vk/profile/adapter/a;
+    iput-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->g0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     .line 11
-    new-instance v0, Lcom/vk/profile/ui/photos/a;
+    new-instance v0, Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     new-instance v5, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$newTagsAdapter$1;
 
@@ -151,9 +151,9 @@
     move-object v4, v0
 
     .line 13
-    invoke-direct/range {v4 .. v9}, Lcom/vk/profile/ui/photos/a;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/profile/ui/photos/PhotoListAdapter;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->h0:Lcom/vk/profile/ui/photos/a;
+    iput-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->h0:Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     return-void
 .end method
@@ -176,11 +176,11 @@
     return-void
 .end method
 
-.method private final k5()Lcom/vk/profile/adapter/items/i;
+.method private final k5()Lcom/vk/profile/adapter/items/ContentTitlePhotosInfoItem;
     .locals 7
 
     .line 1
-    new-instance v6, Lcom/vk/profile/adapter/items/i;
+    new-instance v6, Lcom/vk/profile/adapter/items/ContentTitlePhotosInfoItem;
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -193,7 +193,7 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -210,7 +210,7 @@
 
     const-string v0, "activity!!.getString(R.string.albums)"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     iget v3, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->W:I
@@ -225,7 +225,7 @@
     move-object v0, v6
 
     .line 6
-    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/adapter/items/i;-><init>(Landroid/content/Context;Ljava/lang/CharSequence;ILjava/lang/Runnable;Z)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/adapter/items/ContentTitlePhotosInfoItem;-><init>(Landroid/content/Context;Ljava/lang/CharSequence;ILjava/lang/Runnable;Z)V
 
     const/4 v0, 0x1
 
@@ -240,13 +240,13 @@
 
     .line 8
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 9
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -269,20 +269,20 @@
     .line 3
     iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->Z:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->size()I
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->size()I
 
     move-result p1
 
     if-nez p1, :cond_0
 
     .line 4
-    iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->b0:Lcom/vk/profile/ui/photos/modal/b;
+    iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->b0:Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;
 
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/photos/modal/b;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;->a(Z)V
 
     .line 5
     :cond_0
@@ -293,19 +293,19 @@
     iput p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->W:I
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     move-result-object p1
 
     sget-object v0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$removeAlbum$1;->a:Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$removeAlbum$1;
 
     .line 7
-    invoke-direct {p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->k5()Lcom/vk/profile/adapter/items/i;
+    invoke-direct {p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->k5()Lcom/vk/profile/adapter/items/ContentTitlePhotosInfoItem;
 
     move-result-object v1
 
     .line 8
-    invoke-virtual {p1, v0, v1}, Lcom/vk/lists/i0;->a(Lkotlin/jvm/b/b;Ljava/lang/Object;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/lists/SimpleAdapter;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -339,18 +339,18 @@
     if-lez v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     move-result-object v0
 
-    invoke-direct {p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->k5()Lcom/vk/profile/adapter/items/i;
+    invoke-direct {p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->k5()Lcom/vk/profile/adapter/items/ContentTitlePhotosInfoItem;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/vk/lists/i0;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v2}, Lcom/vk/lists/SimpleAdapter;->b(Ljava/lang/Object;)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     move-result-object v0
 
@@ -368,7 +368,7 @@
 
     move-object v2, v8
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;-><init>(ILandroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/b;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;-><init>(ILandroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/Functions2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 4
     invoke-virtual {v8, v1}, Lcom/vk/profile/adapter/BaseInfoItem;->a(Z)V
@@ -376,16 +376,16 @@
     .line 5
     sget-object v2, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$createHeaderItems$1$1;->a:Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$createHeaderItems$1$1;
 
-    invoke-virtual {v8, v2}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v8, v2}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 6
-    invoke-virtual {v0, v8}, Lcom/vk/lists/i0;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v8}, Lcom/vk/lists/SimpleAdapter;->b(Ljava/lang/Object;)V
 
     .line 7
     :cond_0
-    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->f0:Lcom/vk/profile/adapter/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->f0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     .line 8
     iget v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->d0:I
@@ -411,9 +411,9 @@
 
     .line 9
     :goto_0
-    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->f0:Lcom/vk/profile/adapter/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->f0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-    new-instance v1, Lcom/vk/profile/adapter/items/i;
+    new-instance v1, Lcom/vk/profile/adapter/items/ContentTitlePhotosInfoItem;
 
     .line 10
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -422,7 +422,7 @@
 
     if-eqz v5, :cond_4
 
-    invoke-static {v5, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -439,7 +439,7 @@
 
     const-string v4, "activity!!.getString(R.string.new_tags)"
 
-    invoke-static {v6, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     iget v7, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->d0:I
@@ -462,35 +462,35 @@
     move-object v4, v1
 
     .line 14
-    invoke-direct/range {v4 .. v9}, Lcom/vk/profile/adapter/items/i;-><init>(Landroid/content/Context;Ljava/lang/CharSequence;ILjava/lang/Runnable;Z)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/profile/adapter/items/ContentTitlePhotosInfoItem;-><init>(Landroid/content/Context;Ljava/lang/CharSequence;ILjava/lang/Runnable;Z)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->b(Ljava/lang/Object;)V
 
     goto :goto_2
 
     .line 15
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 16
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 17
     :cond_5
     :goto_2
-    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->g0:Lcom/vk/profile/adapter/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->g0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     .line 18
-    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->g0:Lcom/vk/profile/adapter/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->g0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-    new-instance v1, Lcom/vk/profile/adapter/items/i;
+    new-instance v1, Lcom/vk/profile/adapter/items/ContentTitlePhotosInfoItem;
 
     .line 19
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -499,7 +499,7 @@
 
     if-eqz v5, :cond_7
 
-    invoke-static {v5, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -516,7 +516,7 @@
 
     const-string v2, "activity!!.getString(R.string.all_photos)"
 
-    invoke-static {v6, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
     invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->c5()I
@@ -530,12 +530,12 @@
     move-object v4, v1
 
     .line 22
-    invoke-direct/range {v4 .. v9}, Lcom/vk/profile/adapter/items/i;-><init>(Landroid/content/Context;Ljava/lang/CharSequence;ILjava/lang/Runnable;Z)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/profile/adapter/items/ContentTitlePhotosInfoItem;-><init>(Landroid/content/Context;Ljava/lang/CharSequence;ILjava/lang/Runnable;Z)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->b(Ljava/lang/Object;)V
 
     .line 23
-    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     move-result-object v0
 
@@ -545,58 +545,58 @@
 
     .line 24
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 25
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 .end method
 
-.method protected Q4()Ld/a/a/c/b;
+.method protected Q4()Lme/grishka/appkit/utils/MergeRecyclerAdapter;
     .locals 2
 
     .line 1
-    new-instance v0, Ld/a/a/c/b;
+    new-instance v0, Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
-    invoke-direct {v0}, Ld/a/a/c/b;-><init>()V
+    invoke-direct {v0}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;-><init>()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 3
-    iget-object v1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->f0:Lcom/vk/profile/adapter/a;
+    iget-object v1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->f0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->h0:Lcom/vk/profile/ui/photos/a;
+    iget-object v1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->h0:Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
-    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 5
-    iget-object v1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->g0:Lcom/vk/profile/adapter/a;
+    iget-object v1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->g0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Z4()Lcom/vk/profile/ui/photos/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Z4()Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ld/a/a/c/b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     return-object v0
 .end method
 
-.method public a(Lcom/vk/api/photos/PhotosGetAlbums$b;Lcom/vk/api/photos/p$a;)V
+.method public a(Lcom/vk/api/photos/PhotosGetAlbums$b;Lcom/vk/api/photos/PhotosGetNewTags$a;)V
     .locals 4
 
     const/4 v0, 0x1
@@ -642,7 +642,7 @@
     .line 9
     iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->V:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     .line 10
     iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->V:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
@@ -653,12 +653,12 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/lists/i0;->g(Ljava/util/List;)V
+    invoke-virtual {p1, v1}, Lcom/vk/lists/SimpleAdapter;->g(Ljava/util/List;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->Z:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     .line 12
     iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->Z:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
@@ -690,7 +690,7 @@
     check-cast v3, Lcom/vk/dto/photo/PhotoAlbum;
 
     .line 15
-    invoke-static {v3}, Lcom/vk/profile/ui/photos/album_list/a;->a(Lcom/vk/dto/photo/PhotoAlbum;)Z
+    invoke-static {v3}, Lcom/vk/profile/ui/photos/album_list/PhotoAlbumsUtils;->a(Lcom/vk/dto/photo/PhotoAlbum;)Z
 
     move-result v3
 
@@ -701,12 +701,12 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p1, v1}, Lcom/vk/lists/i0;->g(Ljava/util/List;)V
+    invoke-virtual {p1, v1}, Lcom/vk/lists/SimpleAdapter;->g(Ljava/util/List;)V
 
     .line 16
-    iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->h0:Lcom/vk/profile/ui/photos/a;
+    iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->h0:Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/profile/ui/photos/a;->clear()V
+    invoke-virtual {p1}, Lcom/vk/profile/ui/photos/PhotoListAdapter;->clear()V
 
     const/4 p1, 0x0
 
@@ -716,15 +716,15 @@
     if-eqz p2, :cond_2
 
     .line 18
-    iget-object p1, p2, Lcom/vk/api/photos/p$a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p2, Lcom/vk/api/photos/PhotosGetNewTags$a;->a:Lcom/vk/dto/common/data/VKList;
 
     .line 19
-    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->h0:Lcom/vk/profile/ui/photos/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->h0:Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/photos/a;->l(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/photos/PhotoListAdapter;->l(Ljava/util/List;)V
 
     .line 20
-    iget-object p1, p2, Lcom/vk/api/photos/p$a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p2, Lcom/vk/api/photos/PhotosGetNewTags$a;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-virtual {p1}, Lcom/vk/dto/common/data/VKList;->a()I
 
@@ -733,7 +733,7 @@
     iput p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->d0:I
 
     .line 21
-    iget-object p1, p2, Lcom/vk/api/photos/p$a;->b:Landroid/util/SparseArray;
+    iget-object p1, p2, Lcom/vk/api/photos/PhotosGetNewTags$a;->b:Landroid/util/SparseArray;
 
     iput-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->c0:Landroid/util/SparseArray;
 
@@ -793,7 +793,7 @@
     return v0
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/c;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseScreenContract;
     .locals 1
 
     .line 1
@@ -857,7 +857,7 @@
     invoke-virtual {v3, v2}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;->a(Lcom/vk/dto/photo/PhotoAlbum;)V
 
     .line 4
-    invoke-static {v2}, Lcom/vk/profile/ui/photos/album_list/a;->a(Lcom/vk/dto/photo/PhotoAlbum;)Z
+    invoke-static {v2}, Lcom/vk/profile/ui/photos/album_list/PhotoAlbumsUtils;->a(Lcom/vk/dto/photo/PhotoAlbum;)Z
 
     move-result v3
 
@@ -871,18 +871,18 @@
     .line 6
     iget-object v2, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->Z:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
-    invoke-virtual {v2}, Lcom/vk/lists/i0;->size()I
+    invoke-virtual {v2}, Lcom/vk/lists/SimpleAdapter;->size()I
 
     move-result v2
 
     if-lez v2, :cond_0
 
     .line 7
-    iget-object v2, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->b0:Lcom/vk/profile/ui/photos/modal/b;
+    iget-object v2, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->b0:Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2, v1}, Lcom/vk/profile/ui/photos/modal/b;->a(Z)V
+    invoke-virtual {v2, v1}, Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;->a(Z)V
 
     .line 8
     :cond_0
@@ -893,19 +893,19 @@
     iput v2, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->W:I
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     move-result-object v2
 
     sget-object v3, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$onActivityResult$1$1;->a:Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$onActivityResult$1$1;
 
     .line 10
-    invoke-direct {p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->k5()Lcom/vk/profile/adapter/items/i;
+    invoke-direct {p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->k5()Lcom/vk/profile/adapter/items/ContentTitlePhotosInfoItem;
 
     move-result-object v4
 
     .line 11
-    invoke-virtual {v2, v3, v4}, Lcom/vk/lists/i0;->a(Lkotlin/jvm/b/b;Ljava/lang/Object;)V
+    invoke-virtual {v2, v3, v4}, Lcom/vk/lists/SimpleAdapter;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/Object;)V
 
     :cond_1
     const/16 v2, 0x5fe
@@ -941,7 +941,7 @@
 
     const-string v0, "data.getStringArrayListExtra(\"files\")"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -987,9 +987,9 @@
     check-cast v5, Ljava/lang/String;
 
     .line 19
-    new-instance v2, Lcom/vtosters/lite/upload/l/c;
+    new-instance v2, Lcom/vtosters/lite/upload/l/AlbumPhotoUploadTask;
 
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v6, p1, Lcom/vk/dto/photo/PhotoAlbum;->a:I
 
@@ -1001,7 +1001,7 @@
 
     move-object v4, v2
 
-    invoke-direct/range {v4 .. v9}, Lcom/vtosters/lite/upload/l/c;-><init>(Ljava/lang/String;IILjava/lang/String;Z)V
+    invoke-direct/range {v4 .. v9}, Lcom/vtosters/lite/upload/l/AlbumPhotoUploadTask;-><init>(Ljava/lang/String;IILjava/lang/String;Z)V
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1017,7 +1017,7 @@
 
     const-string p2, "activity!!"
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -1033,7 +1033,7 @@
     move-result-object p2
 
     .line 22
-    new-instance p3, Lcom/vtosters/lite/upload/l/f;
+    new-instance p3, Lcom/vtosters/lite/upload/l/BatchUploadTask;
 
     const v1, 0x7f121017
 
@@ -1043,16 +1043,16 @@
 
     const-string v2, "getString(R.string.uploading_photo)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p3, v0, v1}, Lcom/vtosters/lite/upload/l/f;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {p3, v0, v1}, Lcom/vtosters/lite/upload/l/BatchUploadTask;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
     .line 23
     new-instance v0, Lcom/vk/profile/ui/photos/PhotoUploadExtraParams;
 
     invoke-direct {v0, p1}, Lcom/vk/profile/ui/photos/PhotoUploadExtraParams;-><init>(Lcom/vk/dto/photo/PhotoAlbum;)V
 
-    invoke-virtual {p3, v0}, Lcom/vtosters/lite/upload/l/f;->b(Landroid/os/Parcelable;)V
+    invoke-virtual {p3, v0}, Lcom/vtosters/lite/upload/l/BatchUploadTask;->b(Landroid/os/Parcelable;)V
 
     .line 24
     new-instance p1, Lcom/vtosters/lite/upload/UploadNotification$a;
@@ -1065,7 +1065,7 @@
 
     const-string v1, "getString(R.string.photos_upload_ok)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f120a7b
 
@@ -1075,29 +1075,29 @@
 
     invoke-direct {p1, v0, v1, p2}, Lcom/vtosters/lite/upload/UploadNotification$a;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/PendingIntent;)V
 
-    invoke-static {p3, p1}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/j;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
+    invoke-static {p3, p1}, Lcom/vtosters/lite/upload/Upload;->a(Lcom/vtosters/lite/upload/UploadTask;Lcom/vtosters/lite/upload/UploadNotification$a;)Lcom/vtosters/lite/upload/UploadNotification$a;
 
     .line 25
-    invoke-static {p3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
+    invoke-static {p3}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/UploadTask;)I
 
     .line 26
-    iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->a0:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->a0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz p1, :cond_6
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
 
     goto :goto_2
 
     .line 27
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p2
 
     .line 28
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p2
 
@@ -1131,7 +1131,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vk/profile/ui/photos/album_list/a;->a(I)Lcom/vk/dto/photo/PhotoAlbum;
+    invoke-static {v1}, Lcom/vk/profile/ui/photos/album_list/PhotoAlbumsUtils;->a(I)Lcom/vk/dto/photo/PhotoAlbum;
 
     move-result-object v1
 
@@ -1166,7 +1166,7 @@
     invoke-virtual {p1, v2}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->j(Z)V
 
     .line 4
-    sget-object p1, Lcom/vk/profile/e/e;->a:Lcom/vk/profile/e/e;
+    sget-object p1, Lcom/vk/profile/e/ProfileTracker;->a:Lcom/vk/profile/e/ProfileTracker;
 
     invoke-virtual {p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->getPresenter()Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter;
 
@@ -1191,12 +1191,12 @@
     move-result-object v0
 
     :cond_1
-    invoke-virtual {p1, v1, v0}, Lcom/vk/profile/e/e;->c(ILjava/lang/String;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/profile/e/ProfileTracker;->c(ILjava/lang/String;)V
 
     return-void
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -1211,18 +1211,18 @@
     throw p1
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 6
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -1265,11 +1265,11 @@
     if-eqz p2, :cond_1
 
     .line 5
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v3}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v3
 
@@ -1331,7 +1331,7 @@
     goto :goto_2
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -1346,7 +1346,7 @@
     goto :goto_3
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -1355,7 +1355,7 @@
     const-string p2, "item"
 
     .line 7
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
@@ -1363,7 +1363,7 @@
 
     .line 8
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -1372,7 +1372,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->a0:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->a0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz v0, :cond_0
 
@@ -1386,7 +1386,7 @@
 
     .line 2
     :cond_0
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroy()V
 
     return-void
 .end method
@@ -1404,7 +1404,7 @@
     if-ne p1, v0, :cond_6
 
     .line 2
-    new-instance p1, Lcom/vk/profile/ui/photos/modal/b;
+    new-instance p1, Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1416,7 +1416,7 @@
 
     const-string v7, "activity!!"
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -1428,12 +1428,12 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/profile/ui/photos/modal/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->b0:Lcom/vk/profile/ui/photos/modal/b;
+    iput-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->b0:Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->b0:Lcom/vk/profile/ui/photos/modal/b;
+    iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->b0:Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;
 
     if-eqz p1, :cond_0
 
@@ -1441,21 +1441,21 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$onOptionsItemSelected$1;-><init>(Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;)V
 
-    invoke-virtual {p1, v1}, Lcom/vk/profile/ui/photos/modal/b;->setOnAddAlbumClick(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v1}, Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;->setOnAddAlbumClick(Lkotlin/jvm/b/Functions;)V
 
     .line 4
     :cond_0
-    iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->b0:Lcom/vk/profile/ui/photos/modal/b;
+    iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->b0:Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;
 
     if-eqz p1, :cond_1
 
     iget-object v1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->Z:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
-    invoke-virtual {p1, v1}, Lcom/vk/profile/ui/photos/modal/b;->setAdapter(Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;)V
+    invoke-virtual {p1, v1}, Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;->setAdapter(Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;)V
 
     .line 5
     :cond_1
-    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1463,51 +1463,51 @@
 
     if-eqz v1, :cond_4
 
-    invoke-static {v1, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 6
-    new-instance v1, Lcom/vk/profile/ui/photos/modal/a;
+    new-instance v1, Lcom/vk/profile/ui/photos/modal/AddPhotoSnapStrategy;
 
-    invoke-direct {v1}, Lcom/vk/profile/ui/photos/modal/a;-><init>()V
+    invoke-direct {v1}, Lcom/vk/profile/ui/photos/modal/AddPhotoSnapStrategy;-><init>()V
 
-    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 7
-    iget-object v1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->b0:Lcom/vk/profile/ui/photos/modal/b;
+    iget-object v1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->b0:Lcom/vk/profile/ui/photos/modal/ModalAddPhotoActionView;
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v0, 0x7f120a7d
 
     .line 8
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 9
     new-instance v0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$f;
 
     invoke-direct {v0, p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$f;-><init>(Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const-string v0, "modal_add_photo"
 
     .line 10
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->a0:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->a0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     .line 11
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
-    instance-of p1, p1, Lcom/vk/navigation/n;
+    instance-of p1, p1, Lcom/vk/navigation/NavigationDelegateProvider;
 
     if-eqz p1, :cond_6
 
@@ -1518,22 +1518,22 @@
 
     if-eqz p1, :cond_2
 
-    check-cast p1, Lcom/vk/navigation/n;
+    check-cast p1, Lcom/vk/navigation/NavigationDelegateProvider;
 
-    invoke-interface {p1}, Lcom/vk/navigation/n;->E0()Lcom/vk/navigation/NavigationDelegate;
+    invoke-interface {p1}, Lcom/vk/navigation/NavigationDelegateProvider;->E0()Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->e0:Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$c;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/g;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/Dismissed;)V
 
     .line 13
     iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->e0:Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$c;
 
-    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->a0:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->a0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$c;->a(Lcom/vk/core/dialogs/bottomsheet/e;)V
+    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$c;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
 
     goto :goto_0
 
@@ -1549,19 +1549,19 @@
 
     .line 15
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 16
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 17
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -1583,7 +1583,7 @@
     invoke-virtual {v0, v1, p0}, Lcom/vk/stats/AppUseTime;->a(Lcom/vk/stats/AppUseTime$Section;Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onPause()V
 
     return-void
 .end method
@@ -1592,7 +1592,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onResume()V
 
     .line 2
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;

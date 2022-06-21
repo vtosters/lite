@@ -3,12 +3,12 @@
 .source "StoryMentionSticker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/stickers/StoryMentionSticker;->b(Lcom/vk/stories/clickable/models/g;)V
+    value = Lcom/vk/stories/clickable/stickers/StoryMentionSticker;->b(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field final synthetic $textParams:Lcom/vk/stories/clickable/models/b;
+.field final synthetic $textParams:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/clickable/models/b;)V
+.method constructor <init>(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryMentionSticker$applyInfo$newFontSize$1;->$textParams:Lcom/vk/stories/clickable/models/b;
+    iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryMentionSticker$applyInfo$newFontSize$1;->$textParams:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     const/4 p1, 0x0
 
@@ -60,9 +60,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/stickers/StoryMentionSticker$applyInfo$newFontSize$1;->$textParams:Lcom/vk/stories/clickable/models/b;
+    iget-object v0, p0, Lcom/vk/stories/clickable/stickers/StoryMentionSticker$applyInfo$newFontSize$1;->$textParams:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/b;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->f()Ljava/lang/String;
 
     move-result-object v0
 

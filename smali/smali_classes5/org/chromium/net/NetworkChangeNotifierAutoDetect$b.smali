@@ -222,7 +222,7 @@
     .line 7
     iget-object v1, p0, Lorg/chromium/net/NetworkChangeNotifierAutoDetect$b;->a:Landroid/net/ConnectivityManager;
 
-    invoke-static {v1, v0}, Lorg/chromium/base/h/a;->a(Landroid/net/ConnectivityManager;Landroid/net/Network;)Landroid/net/NetworkInfo;
+    invoke-static {v1, v0}, Lorg/chromium/base/h/ApiHelperForM;->a(Landroid/net/ConnectivityManager;Landroid/net/Network;)Landroid/net/NetworkInfo;
 
     move-result-object v1
 
@@ -533,7 +533,7 @@
     .line 3
     iget-object v0, p0, Lorg/chromium/net/NetworkChangeNotifierAutoDetect$b;->a:Landroid/net/ConnectivityManager;
 
-    invoke-static {v0}, Lorg/chromium/base/h/a;->a(Landroid/net/ConnectivityManager;)Landroid/net/Network;
+    invoke-static {v0}, Lorg/chromium/base/h/ApiHelperForM;->a(Landroid/net/ConnectivityManager;)Landroid/net/Network;
 
     move-result-object v0
 
@@ -640,7 +640,7 @@
 
     .line 2
     :try_start_0
-    invoke-static {}, Lorg/chromium/base/g;->a()Lorg/chromium/base/g;
+    invoke-static {}, Lorg/chromium/base/StrictModeContext;->a()Lorg/chromium/base/StrictModeContext;
 
     move-result-object v1
     :try_end_0
@@ -657,7 +657,7 @@
 
     .line 4
     :try_start_2
-    invoke-virtual {v1}, Lorg/chromium/base/g;->close()V
+    invoke-virtual {v1}, Lorg/chromium/base/StrictModeContext;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
@@ -690,7 +690,7 @@
 
     .line 7
     :try_start_5
-    invoke-virtual {v1}, Lorg/chromium/base/g;->close()V
+    invoke-virtual {v1}, Lorg/chromium/base/StrictModeContext;->close()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 

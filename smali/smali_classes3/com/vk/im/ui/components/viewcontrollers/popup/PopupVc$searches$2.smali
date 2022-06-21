@@ -3,7 +3,7 @@
 .source "PopupVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSearches;",
         ">;"
     }
@@ -59,11 +59,11 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc$searches$2;->this$0:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
 
-    invoke-static {v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;)Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    invoke-static {v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;)Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSearches;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/f;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSearches;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;)V
 
     return-object v0
 .end method

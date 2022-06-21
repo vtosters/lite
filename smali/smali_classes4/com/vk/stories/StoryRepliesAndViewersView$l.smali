@@ -3,12 +3,12 @@
 .source "StoryRepliesAndViewersView.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/StoryRepliesAndViewersView;->a(Lcom/vk/lists/t;Z)Lc/a/m;
+    value = Lcom/vk/stories/StoryRepliesAndViewersView;->a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/stories/model/a;)Ljava/lang/Object;
+.method public final a(Lcom/vk/dto/stories/model/GetRepliesFullResponse;)Ljava/lang/Object;
     .locals 0
 
     return-object p1
@@ -67,9 +67,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/stories/model/a;
+    check-cast p1, Lcom/vk/dto/stories/model/GetRepliesFullResponse;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/StoryRepliesAndViewersView$l;->a(Lcom/vk/dto/stories/model/a;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/StoryRepliesAndViewersView$l;->a(Lcom/vk/dto/stories/model/GetRepliesFullResponse;)Ljava/lang/Object;
 
     return-object p1
 .end method

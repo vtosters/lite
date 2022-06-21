@@ -1,12 +1,12 @@
 .class public final Lcom/vk/music/sections/types/MusicSectionArtistHolder;
-.super Lcom/vk/music/ui/common/o;
+.super Lcom/vk/music/ui/common/MusicViewHolder;
 .source "MusicSectionArtistHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/music/ui/common/o<",
+        "Lcom/vk/music/ui/common/MusicViewHolder<",
         "Lcom/vk/dto/music/Artist;",
         ">;"
     }
@@ -28,11 +28,11 @@
 
 .field private final g:I
 
-.field private final h:Lcom/vk/music/sections/f;
+.field private final h:Lcom/vk/music/sections/MusicSectionsModel;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/music/sections/f;Lcom/vk/music/sections/types/MusicSectionAdapter;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/music/sections/MusicSectionsModel;Lcom/vk/music/sections/types/MusicSectionAdapter;)V
     .locals 12
 
     const v1, 0x7f0d03a1
@@ -48,9 +48,9 @@
     move-object v2, p1
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/ui/common/o;-><init>(ILandroid/view/ViewGroup;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/ui/common/MusicViewHolder;-><init>(ILandroid/view/ViewGroup;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object p2, p0, Lcom/vk/music/sections/types/MusicSectionArtistHolder;->h:Lcom/vk/music/sections/f;
+    iput-object p2, p0, Lcom/vk/music/sections/types/MusicSectionArtistHolder;->h:Lcom/vk/music/sections/MusicSectionsModel;
 
     iput-object p3, p0, Lcom/vk/music/sections/types/MusicSectionArtistHolder;->B:Lcom/vk/music/sections/types/MusicSectionAdapter;
 
@@ -59,7 +59,7 @@
 
     const-string p2, "itemView"
 
-    invoke-static {v6, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v9, Lcom/vk/music/sections/types/MusicSectionArtistHolder$image$1;->a:Lcom/vk/music/sections/types/MusicSectionArtistHolder$image$1;
 
@@ -71,7 +71,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v6 .. v11}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v6 .. v11}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -82,7 +82,7 @@
     .line 3
     iget-object p3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x2
 
@@ -90,7 +90,7 @@
 
     const v2, 0x7f0a00c0
 
-    invoke-static {p3, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p3, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -111,11 +111,11 @@
     .line 6
     iget-object p3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0a00bc
 
-    invoke-static {p3, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p3, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -126,11 +126,11 @@
     .line 7
     iget-object p3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0a00bb
 
-    invoke-static {p3, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p3, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -139,11 +139,11 @@
     .line 8
     iget-object p3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0a00bf
 
-    invoke-static {p3, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p3, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -154,7 +154,7 @@
     const v1, 0x7f060035
 
     .line 9
-    invoke-static {p3, v0, v1}, Lcom/vk/core/util/z;->a(Landroid/widget/TextView;II)V
+    invoke-static {p3, v0, v1}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/widget/TextView;II)V
 
     .line 10
     new-instance v0, Lcom/vk/music/sections/types/MusicSectionArtistHolder$a;
@@ -173,7 +173,7 @@
 
     const-string p3, "parent.context"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p3, 0x7f070180
 
@@ -207,14 +207,14 @@
     .line 14
     iget-object p1, p0, Lcom/vk/music/sections/types/MusicSectionArtistHolder;->b:Lcom/vk/imageloader/view/VKImageView;
 
-    new-instance p3, Lb/h/g/n/b/a;
+    new-instance p3, Lb/h/g/n/b/BlurTransform;
 
     const/16 v0, 0x4b
 
     .line 15
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -227,9 +227,9 @@
     move-result p2
 
     .line 16
-    invoke-direct {p3, v0, p2}, Lb/h/g/n/b/a;-><init>(II)V
+    invoke-direct {p3, v0, p2}, Lb/h/g/n/b/BlurTransform;-><init>(II)V
 
-    invoke-virtual {p1, p3}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {p1, p3}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 17
     iget-object p1, p0, Lcom/vk/music/sections/types/MusicSectionArtistHolder;->e:Landroid/view/View;
@@ -261,11 +261,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/music/sections/types/MusicSectionArtistHolder;)Lcom/vk/music/sections/f;
+.method public static final synthetic b(Lcom/vk/music/sections/types/MusicSectionArtistHolder;)Lcom/vk/music/sections/MusicSectionsModel;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/sections/types/MusicSectionArtistHolder;->h:Lcom/vk/music/sections/f;
+    iget-object p0, p0, Lcom/vk/music/sections/types/MusicSectionArtistHolder;->h:Lcom/vk/music/sections/MusicSectionsModel;
 
     return-object p0
 .end method
@@ -285,7 +285,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -293,7 +293,7 @@
 
     const-string v1, "itemView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -418,7 +418,7 @@
 
     const/4 v12, 0x0
 
-    invoke-static/range {v4 .. v12}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v4 .. v12}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "AlbumsListFragmentPresenter.kt"
 
 # interfaces
-.implements Lb/h/r/d;
+.implements Lb/h/r/BaseScreenContract1;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lb/h/r/d<",
+        "Lb/h/r/BaseScreenContract1<",
         "Lcom/vk/profile/ui/photos/album_list/AlbumsListFragmentPresenter;",
         ">;"
     }

@@ -3,7 +3,7 @@
 .source "StickerDetailsView.kt"
 
 # interfaces
-.implements Lcom/vk/stickers/q$b;
+.implements Lcom/vk/stickers/StickerLongtapView$b;
 
 
 # annotations
@@ -46,13 +46,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stickers/details/StickerDetailsView$d;->a:Lcom/vk/stickers/details/StickerDetailsView;
 
-    invoke-static {v0}, Lcom/vk/stickers/details/StickerDetailsView;->c(Lcom/vk/stickers/details/StickerDetailsView;)Lcom/vk/stickers/r;
+    invoke-static {v0}, Lcom/vk/stickers/details/StickerDetailsView;->c(Lcom/vk/stickers/details/StickerDetailsView;)Lcom/vk/stickers/StickerLongtapWindow;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stickers/r;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stickers/StickerLongtapWindow;->a(Z)V
 
     return-void
 .end method

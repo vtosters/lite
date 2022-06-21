@@ -3,7 +3,7 @@
 .source "VkMeCallback.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lkotlin/m;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/m;)V
+.method public final a(Lkotlin/Unit;)V
     .locals 1
 
     .line 1
@@ -69,24 +69,24 @@
 
     iget-object p1, p1, Lcom/vk/ui/photoviewer/VkMeCallback$delete$1;->this$0:Lcom/vk/ui/photoviewer/VkMeCallback;
 
-    invoke-static {p1}, Lcom/vk/ui/photoviewer/VkMeCallback;->a(Lcom/vk/ui/photoviewer/VkMeCallback;)Lcom/vk/navigation/g;
+    invoke-static {p1}, Lcom/vk/ui/photoviewer/VkMeCallback;->a(Lcom/vk/ui/photoviewer/VkMeCallback;)Lcom/vk/navigation/Dismissed;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-interface {p1, v0}, Lcom/vk/navigation/g;->a(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/navigation/Dismissed;->a(Z)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback$delete$1$a;->b:Lkotlin/jvm/internal/Ref$ObjectRef;
 
     iget-object p1, p1, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    check-cast p1, Lio/reactivex/disposables/b;
+    check-cast p1, Lio/reactivex/disposables/Disposable;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -96,9 +96,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
-    invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/VkMeCallback$delete$1$a;->a(Lkotlin/m;)V
+    invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/VkMeCallback$delete$1$a;->a(Lkotlin/Unit;)V
 
     return-void
 .end method

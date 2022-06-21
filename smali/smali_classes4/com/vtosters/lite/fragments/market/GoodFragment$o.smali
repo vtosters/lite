@@ -3,12 +3,12 @@
 .source "GoodFragment.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/market/GoodFragment;->a(Lcom/vtosters/lite/q;Lcom/vtosters/lite/ui/b0/m/c;)V
+    value = Lcom/vtosters/lite/fragments/market/GoodFragment;->a(Lcom/vtosters/lite/Comment;Lcom/vtosters/lite/ui/holder/comment/BaseCommentViewHolder;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
-        "Lcom/vtosters/lite/api/wall/h$a;",
+        "Lcom/vk/api/base/ApiCallback<",
+        "Lcom/vtosters/lite/api/wall/WallLike$a;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/vtosters/lite/q;
+.field final synthetic a:Lcom/vtosters/lite/Comment;
 
 .field final synthetic b:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lcom/vtosters/lite/q;)V
+.method constructor <init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lcom/vtosters/lite/Comment;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$o;->b:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    iput-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$o;->a:Lcom/vtosters/lite/q;
+    iput-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$o;->a:Lcom/vtosters/lite/Comment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,36 +54,36 @@
     const p1, 0x7f120369
 
     .line 5
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method
 
-.method public a(Lcom/vtosters/lite/api/wall/h$a;)V
+.method public a(Lcom/vtosters/lite/api/wall/WallLike$a;)V
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$o;->a:Lcom/vtosters/lite/q;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$o;->a:Lcom/vtosters/lite/Comment;
 
-    invoke-interface {v0}, Lcom/vtosters/lite/q;->M0()Z
+    invoke-interface {v0}, Lcom/vtosters/lite/Comment;->M0()Z
 
     move-result v1
 
     xor-int/lit8 v1, v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vtosters/lite/q;->d(Z)V
+    invoke-interface {v0, v1}, Lcom/vtosters/lite/Comment;->d(Z)V
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$o;->a:Lcom/vtosters/lite/q;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$o;->a:Lcom/vtosters/lite/Comment;
 
-    iget p1, p1, Lcom/vtosters/lite/api/wall/h$a;->a:I
+    iget p1, p1, Lcom/vtosters/lite/api/wall/WallLike$a;->a:I
 
-    invoke-interface {v0, p1}, Lcom/vtosters/lite/q;->b(I)V
+    invoke-interface {v0, p1}, Lcom/vtosters/lite/Comment;->b(I)V
 
     .line 4
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$o;->b:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-virtual {p1}, Ld/a/a/a/i;->K()V
+    invoke-virtual {p1}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->K()V
 
     return-void
 .end method
@@ -92,9 +92,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/wall/h$a;
+    check-cast p1, Lcom/vtosters/lite/api/wall/WallLike$a;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment$o;->a(Lcom/vtosters/lite/api/wall/h$a;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment$o;->a(Lcom/vtosters/lite/api/wall/WallLike$a;)V
 
     return-void
 .end method

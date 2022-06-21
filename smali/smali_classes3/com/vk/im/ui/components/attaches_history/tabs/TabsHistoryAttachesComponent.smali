@@ -1,28 +1,28 @@
 .class public final Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;
-.super Lcom/vk/im/ui/q/c;
+.super Lcom/vk/im/ui/q/Component;
 .source "TabsHistoryAttachesComponent.kt"
 
 
 # static fields
-.field static final synthetic E:[Lkotlin/u/j;
+.field static final synthetic E:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final B:Lcom/vk/core/util/u0;
+.field private final B:Lcom/vk/core/util/Provider2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/util/u0<",
-            "Lcom/vk/im/ui/components/attaches_history/tabs/a;",
+            "Lcom/vk/core/util/Provider2<",
+            "Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesVC;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final C:Lcom/vk/core/util/u0;
+.field private final C:Lcom/vk/core/util/Provider2;
 
-.field private final D:Lcom/vk/im/ui/components/attaches_history/tabs/b;
+.field private final D:Lcom/vk/im/ui/components/attaches_history/tabs/VcCallback;
 
-.field private final g:Lcom/vk/im/ui/components/attaches_history/attaches/g;
+.field private final g:Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponentFactory;
 
 .field private final h:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -41,13 +41,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -55,29 +55,29 @@
 
     const-string v4, "getVc()Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesVC;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->E:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->E:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/attaches_history/tabs/b;Lcom/vk/im/ui/p/b;Lcom/vk/im/engine/a;Lcom/vk/bridges/p;I)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/attaches_history/tabs/VcCallback;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/engine/ImEngine;Lcom/vk/bridges/ImageViewer;I)V
     .locals 6
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/q/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/q/Component;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->D:Lcom/vk/im/ui/components/attaches_history/tabs/b;
+    iput-object p2, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->D:Lcom/vk/im/ui/components/attaches_history/tabs/VcCallback;
 
     .line 2
-    new-instance p2, Lcom/vk/im/ui/components/attaches_history/attaches/g;
+    new-instance p2, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponentFactory;
 
     move-object v0, p2
 
@@ -91,9 +91,9 @@
 
     move v5, p6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/attaches_history/attaches/g;-><init>(Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/bridges/p;Landroid/content/Context;I)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponentFactory;-><init>(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/bridges/ImageViewer;Landroid/content/Context;I)V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->g:Lcom/vk/im/ui/components/attaches_history/attaches/g;
+    iput-object p2, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->g:Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponentFactory;
 
     const/4 p1, 0x5
 
@@ -165,9 +165,9 @@
     check-cast p3, Lcom/vk/im/engine/models/attaches/MediaType;
 
     .line 7
-    iget-object p4, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->g:Lcom/vk/im/ui/components/attaches_history/attaches/g;
+    iget-object p4, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->g:Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponentFactory;
 
-    invoke-virtual {p4, p3}, Lcom/vk/im/ui/components/attaches_history/attaches/g;->a(Lcom/vk/im/engine/models/attaches/MediaType;)Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;
+    invoke-virtual {p4, p3}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponentFactory;->a(Lcom/vk/im/engine/models/attaches/MediaType;)Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;
 
     move-result-object p3
 
@@ -184,16 +184,16 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent$vcHolder$1;-><init>(Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;)V
 
-    invoke-static {p1}, Lcom/vk/core/util/w0;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/u0;
+    invoke-static {p1}, Lcom/vk/core/util/Provider1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/Provider2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->B:Lcom/vk/core/util/u0;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->B:Lcom/vk/core/util/Provider2;
 
     .line 10
-    iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->B:Lcom/vk/core/util/u0;
+    iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->B:Lcom/vk/core/util/Provider2;
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->C:Lcom/vk/core/util/u0;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->C:Lcom/vk/core/util/Provider2;
 
     return-void
 .end method
@@ -207,31 +207,31 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;)Lcom/vk/im/ui/components/attaches_history/tabs/b;
+.method public static final synthetic b(Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;)Lcom/vk/im/ui/components/attaches_history/tabs/VcCallback;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->D:Lcom/vk/im/ui/components/attaches_history/tabs/b;
+    iget-object p0, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->D:Lcom/vk/im/ui/components/attaches_history/tabs/VcCallback;
 
     return-object p0
 .end method
 
-.method private final s()Lcom/vk/im/ui/components/attaches_history/tabs/a;
+.method private final s()Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesVC;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->C:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->C:Lcom/vk/core/util/Provider2;
 
-    sget-object v1, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->E:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->E:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/w0;->a(Lcom/vk/core/util/u0;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/Provider1;->a(Lcom/vk/core/util/Provider2;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/components/attaches_history/tabs/a;
+    check-cast v0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesVC;
 
     return-object v0
 .end method
@@ -242,7 +242,7 @@
     .locals 2
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/im/ui/q/c;->a(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/res/Configuration;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->h:Ljava/util/List;
@@ -266,7 +266,7 @@
     check-cast v1, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;
 
     .line 5
-    invoke-virtual {v1, p1}, Lcom/vk/im/ui/q/c;->a(Landroid/content/res/Configuration;)V
+    invoke-virtual {v1, p1}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/res/Configuration;)V
 
     goto :goto_0
 
@@ -278,16 +278,16 @@
     .locals 0
 
     .line 2
-    iget-object p3, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->B:Lcom/vk/core/util/u0;
+    iget-object p3, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->B:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {p3}, Lcom/vk/core/util/u0;->reset()V
+    invoke-interface {p3}, Lcom/vk/core/util/Provider2;->reset()V
 
     .line 3
-    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->s()Lcom/vk/im/ui/components/attaches_history/tabs/a;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->s()Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesVC;
 
     move-result-object p3
 
-    invoke-virtual {p3, p1, p2}, Lcom/vk/im/ui/components/attaches_history/tabs/a;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {p3, p1, p2}, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesVC;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
@@ -298,12 +298,12 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/q/c;->n()V
+    invoke-super {p0}, Lcom/vk/im/ui/q/Component;->n()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->B:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/tabs/TabsHistoryAttachesComponent;->B:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {v0}, Lcom/vk/core/util/u0;->u()V
+    invoke-interface {v0}, Lcom/vk/core/util/Provider2;->u()V
 
     return-void
 .end method

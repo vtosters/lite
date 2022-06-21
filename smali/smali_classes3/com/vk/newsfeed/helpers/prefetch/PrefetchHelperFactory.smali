@@ -4,37 +4,37 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lkotlin/e;
+.field private static final b:Lkotlin/Lazy2;
 
-.field private static final c:Lkotlin/e;
+.field private static final c:Lkotlin/Lazy2;
 
-.field private static final d:Lkotlin/e;
+.field private static final d:Lkotlin/Lazy2;
 
-.field private static final e:Lkotlin/e;
+.field private static final e:Lkotlin/Lazy2;
 
-.field private static final f:Lkotlin/e;
+.field private static final f:Lkotlin/Lazy2;
 
-.field private static final g:Lkotlin/e;
+.field private static final g:Lkotlin/Lazy2;
 
-.field private static final h:Lkotlin/e;
+.field private static final h:Lkotlin/Lazy2;
 
-.field private static final i:Lkotlin/e;
+.field private static final i:Lkotlin/Lazy2;
 
-.field private static final j:Lkotlin/e;
+.field private static final j:Lkotlin/Lazy2;
 
-.field private static final k:Lkotlin/e;
+.field private static final k:Lkotlin/Lazy2;
 
-.field private static final l:Lkotlin/e;
+.field private static final l:Lkotlin/Lazy2;
 
-.field private static final m:Lkotlin/e;
+.field private static final m:Lkotlin/Lazy2;
 
-.field private static final n:Lkotlin/e;
+.field private static final n:Lkotlin/Lazy2;
 
-.field private static final o:Lkotlin/e;
+.field private static final o:Lkotlin/Lazy2;
 
-.field private static final p:Lkotlin/e;
+.field private static final p:Lkotlin/Lazy2;
 
 .field public static final q:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;
 
@@ -47,11 +47,11 @@
 
     const/16 v1, 0xf
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -59,9 +59,9 @@
 
     const-string v5, "getPrettyCardsHelper()Lcom/vk/newsfeed/helpers/prefetch/PrettyCardsPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -69,7 +69,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -77,9 +77,9 @@
 
     const-string v5, "getAttachmentHelper()Lcom/vk/newsfeed/helpers/prefetch/AttachmentPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x1
 
@@ -87,7 +87,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -95,9 +95,9 @@
 
     const-string v5, "getImageAttachmentsHelper()Lcom/vk/newsfeed/helpers/prefetch/ImageAttachmentsPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x2
 
@@ -105,7 +105,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -113,9 +113,9 @@
 
     const-string v5, "getActivityCommentHelper()Lcom/vk/newsfeed/helpers/prefetch/ActivityCommentPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x3
 
@@ -123,7 +123,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -131,9 +131,9 @@
 
     const-string v5, "getActivityLikesHelper()Lcom/vk/newsfeed/helpers/prefetch/ActivityLikesPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x4
 
@@ -141,7 +141,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -149,9 +149,9 @@
 
     const-string v5, "getAdHelper()Lcom/vk/newsfeed/helpers/prefetch/AdPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x5
 
@@ -159,7 +159,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -167,9 +167,9 @@
 
     const-string v5, "getFriendsRecommendationsHelper()Lcom/vk/newsfeed/helpers/prefetch/FriendsRecommendationsPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x6
 
@@ -177,7 +177,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -185,9 +185,9 @@
 
     const-string v5, "getHeaderHelper()Lcom/vk/newsfeed/helpers/prefetch/HeaderPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x7
 
@@ -195,7 +195,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -203,9 +203,9 @@
 
     const-string v5, "getLatestNewsEntryHelper()Lcom/vk/newsfeed/helpers/prefetch/LatestNewsEntryPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v3, 0x8
 
@@ -213,7 +213,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -221,9 +221,9 @@
 
     const-string v5, "getPromoButtonHelper()Lcom/vk/newsfeed/helpers/prefetch/PromoButtonPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v3, 0x9
 
@@ -231,7 +231,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -239,9 +239,9 @@
 
     const-string v5, "getDummyHelper()Lcom/vk/newsfeed/helpers/prefetch/DummyPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v3, 0xa
 
@@ -249,7 +249,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -257,9 +257,9 @@
 
     const-string v5, "getDigestListItemHelper()Lcom/vk/newsfeed/helpers/prefetch/DigestListItemPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v3, 0xb
 
@@ -267,7 +267,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -275,9 +275,9 @@
 
     const-string v5, "getDigestGridHelper()Lcom/vk/newsfeed/helpers/prefetch/DigestGridPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v3, 0xc
 
@@ -285,7 +285,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -293,9 +293,9 @@
 
     const-string v5, "getStoriesBlockHelper()Lcom/vk/newsfeed/helpers/prefetch/StoriesPrefetchHelper;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v3, 0xd
 
@@ -303,7 +303,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -311,15 +311,15 @@
 
     const-string v4, "getHtml5AdPrefetchHelper()Lcom/vk/newsfeed/html5/Html5PrefetchHelper;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v0, 0xe
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;
@@ -331,137 +331,137 @@
     .line 2
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$prettyCardsHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$prettyCardsHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->b:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->b:Lkotlin/Lazy2;
 
     .line 3
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$attachmentHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$attachmentHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->c:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->c:Lkotlin/Lazy2;
 
     .line 4
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$imageAttachmentsHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$imageAttachmentsHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->d:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->d:Lkotlin/Lazy2;
 
     .line 5
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$activityCommentHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$activityCommentHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->e:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->e:Lkotlin/Lazy2;
 
     .line 6
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$activityLikesHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$activityLikesHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->f:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->f:Lkotlin/Lazy2;
 
     .line 7
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$adHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$adHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->g:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->g:Lkotlin/Lazy2;
 
     .line 8
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$friendsRecommendationsHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$friendsRecommendationsHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->h:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->h:Lkotlin/Lazy2;
 
     .line 9
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$headerHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$headerHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->i:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->i:Lkotlin/Lazy2;
 
     .line 10
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$latestNewsEntryHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$latestNewsEntryHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->j:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->j:Lkotlin/Lazy2;
 
     .line 11
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$promoButtonHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$promoButtonHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->k:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->k:Lkotlin/Lazy2;
 
     .line 12
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$dummyHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$dummyHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->l:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->l:Lkotlin/Lazy2;
 
     .line 13
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$digestListItemHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$digestListItemHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->m:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->m:Lkotlin/Lazy2;
 
     .line 14
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$digestGridHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$digestGridHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->n:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->n:Lkotlin/Lazy2;
 
     .line 15
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$storiesBlockHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$storiesBlockHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->o:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->o:Lkotlin/Lazy2;
 
     .line 16
     sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$html5AdPrefetchHelper$2;->a:Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$html5AdPrefetchHelper$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->p:Lkotlin/e;
+    sput-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->p:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -475,319 +475,319 @@
     return-void
 .end method
 
-.method private final a()Lcom/vk/newsfeed/helpers/prefetch/a;
+.method private final a()Lcom/vk/newsfeed/helpers/prefetch/ActivityCommentPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->e:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->e:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/a;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/ActivityCommentPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final b()Lcom/vk/newsfeed/helpers/prefetch/b;
+.method private final b()Lcom/vk/newsfeed/helpers/prefetch/ActivityLikesPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->f:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x4
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/b;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/ActivityLikesPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final c()Lcom/vk/newsfeed/helpers/prefetch/c;
+.method private final c()Lcom/vk/newsfeed/helpers/prefetch/AdPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->g:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->g:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x5
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/c;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/AdPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final d()Lcom/vk/newsfeed/helpers/prefetch/d;
+.method private final d()Lcom/vk/newsfeed/helpers/prefetch/AttachmentPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->c:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/d;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/AttachmentPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final e()Lcom/vk/newsfeed/helpers/prefetch/e;
+.method private final e()Lcom/vk/newsfeed/helpers/prefetch/DigestGridPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->n:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->n:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0xc
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/e;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/DigestGridPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final f()Lcom/vk/newsfeed/helpers/prefetch/f;
+.method private final f()Lcom/vk/newsfeed/helpers/prefetch/DigestListItemPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->m:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->m:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0xb
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/f;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/DigestListItemPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final g()Lcom/vk/newsfeed/helpers/prefetch/g;
+.method private final g()Lcom/vk/newsfeed/helpers/prefetch/DummyPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->l:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->l:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0xa
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/g;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/DummyPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final h()Lcom/vk/newsfeed/helpers/prefetch/h;
+.method private final h()Lcom/vk/newsfeed/helpers/prefetch/FriendsRecommendationsPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->h:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->h:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x6
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/h;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/FriendsRecommendationsPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final i()Lcom/vk/newsfeed/helpers/prefetch/i;
+.method private final i()Lcom/vk/newsfeed/helpers/prefetch/HeaderPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->i:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->i:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x7
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/i;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/HeaderPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final j()Lcom/vk/newsfeed/html5/a;
+.method private final j()Lcom/vk/newsfeed/html5/Html5PrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->p:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->p:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0xe
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/html5/a;
+    check-cast v0, Lcom/vk/newsfeed/html5/Html5PrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final k()Lcom/vk/newsfeed/helpers/prefetch/j;
+.method private final k()Lcom/vk/newsfeed/helpers/prefetch/ImageAttachmentsPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->d:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/j;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/ImageAttachmentsPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final l()Lcom/vk/newsfeed/helpers/prefetch/k;
+.method private final l()Lcom/vk/newsfeed/helpers/prefetch/LatestNewsEntryPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->j:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->j:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0x8
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/k;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/LatestNewsEntryPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final m()Lcom/vk/newsfeed/helpers/prefetch/m;
+.method private final m()Lcom/vk/newsfeed/helpers/prefetch/PrettyCardsPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->b:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/m;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/PrettyCardsPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final n()Lcom/vk/newsfeed/helpers/prefetch/n;
+.method private final n()Lcom/vk/newsfeed/helpers/prefetch/PromoButtonPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->k:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->k:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0x9
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/n;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/PromoButtonPrefetchHelper;
 
     return-object v0
 .end method
 
-.method private final o()Lcom/vk/newsfeed/helpers/prefetch/o;
+.method private final o()Lcom/vk/newsfeed/helpers/prefetch/StoriesPrefetchHelper;
     .locals 3
 
-    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->o:Lkotlin/e;
+    sget-object v0, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->o:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0xd
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/o;
+    check-cast v0, Lcom/vk/newsfeed/helpers/prefetch/StoriesPrefetchHelper;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/ui/f0/b;)Lcom/vk/newsfeed/helpers/prefetch/l;
+.method public final a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelper;
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vk/newsfeed/h0/a;
+    instance-of v0, p1, Lcom/vk/newsfeed/h0/AttachmentPostDisplayItem;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vk/newsfeed/h0/a;
+    check-cast p1, Lcom/vk/newsfeed/h0/AttachmentPostDisplayItem;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->e()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->e()I
 
     move-result p1
 
@@ -796,7 +796,7 @@
     if-eq p1, v0, :cond_0
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->d()Lcom/vk/newsfeed/helpers/prefetch/d;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->d()Lcom/vk/newsfeed/helpers/prefetch/AttachmentPrefetchHelper;
 
     move-result-object p1
 
@@ -804,7 +804,7 @@
 
     .line 3
     :cond_0
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->m()Lcom/vk/newsfeed/helpers/prefetch/m;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->m()Lcom/vk/newsfeed/helpers/prefetch/PrettyCardsPrefetchHelper;
 
     move-result-object p1
 
@@ -812,11 +812,11 @@
 
     .line 4
     :cond_1
-    instance-of v0, p1, Lcom/vk/newsfeed/h0/b;
+    instance-of v0, p1, Lcom/vk/newsfeed/h0/AttachmentsPostDisplayItem;
 
     if-eqz v0, :cond_2
 
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->k()Lcom/vk/newsfeed/helpers/prefetch/j;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->k()Lcom/vk/newsfeed/helpers/prefetch/ImageAttachmentsPrefetchHelper;
 
     move-result-object p1
 
@@ -824,7 +824,7 @@
 
     .line 5
     :cond_2
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->e()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->e()I
 
     move-result p1
 
@@ -865,7 +865,7 @@
     packed-switch p1, :pswitch_data_0
 
     .line 6
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->g()Lcom/vk/newsfeed/helpers/prefetch/g;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->g()Lcom/vk/newsfeed/helpers/prefetch/DummyPrefetchHelper;
 
     move-result-object p1
 
@@ -873,7 +873,7 @@
 
     .line 7
     :pswitch_0
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->i()Lcom/vk/newsfeed/helpers/prefetch/i;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->i()Lcom/vk/newsfeed/helpers/prefetch/HeaderPrefetchHelper;
 
     move-result-object p1
 
@@ -881,7 +881,7 @@
 
     .line 8
     :pswitch_1
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a()Lcom/vk/newsfeed/helpers/prefetch/a;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->a()Lcom/vk/newsfeed/helpers/prefetch/ActivityCommentPrefetchHelper;
 
     move-result-object p1
 
@@ -889,7 +889,7 @@
 
     .line 9
     :pswitch_2
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->b()Lcom/vk/newsfeed/helpers/prefetch/b;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->b()Lcom/vk/newsfeed/helpers/prefetch/ActivityLikesPrefetchHelper;
 
     move-result-object p1
 
@@ -897,7 +897,7 @@
 
     .line 10
     :cond_3
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->f()Lcom/vk/newsfeed/helpers/prefetch/f;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->f()Lcom/vk/newsfeed/helpers/prefetch/DigestListItemPrefetchHelper;
 
     move-result-object p1
 
@@ -905,7 +905,7 @@
 
     .line 11
     :cond_4
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->e()Lcom/vk/newsfeed/helpers/prefetch/e;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->e()Lcom/vk/newsfeed/helpers/prefetch/DigestGridPrefetchHelper;
 
     move-result-object p1
 
@@ -913,7 +913,7 @@
 
     .line 12
     :cond_5
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->h()Lcom/vk/newsfeed/helpers/prefetch/h;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->h()Lcom/vk/newsfeed/helpers/prefetch/FriendsRecommendationsPrefetchHelper;
 
     move-result-object p1
 
@@ -921,7 +921,7 @@
 
     .line 13
     :cond_6
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->c()Lcom/vk/newsfeed/helpers/prefetch/c;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->c()Lcom/vk/newsfeed/helpers/prefetch/AdPrefetchHelper;
 
     move-result-object p1
 
@@ -929,7 +929,7 @@
 
     .line 14
     :cond_7
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->j()Lcom/vk/newsfeed/html5/a;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->j()Lcom/vk/newsfeed/html5/Html5PrefetchHelper;
 
     move-result-object p1
 
@@ -937,7 +937,7 @@
 
     .line 15
     :cond_8
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->o()Lcom/vk/newsfeed/helpers/prefetch/o;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->o()Lcom/vk/newsfeed/helpers/prefetch/StoriesPrefetchHelper;
 
     move-result-object p1
 
@@ -945,7 +945,7 @@
 
     .line 16
     :cond_9
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->n()Lcom/vk/newsfeed/helpers/prefetch/n;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->n()Lcom/vk/newsfeed/helpers/prefetch/PromoButtonPrefetchHelper;
 
     move-result-object p1
 
@@ -953,7 +953,7 @@
 
     .line 17
     :cond_a
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->l()Lcom/vk/newsfeed/helpers/prefetch/k;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->l()Lcom/vk/newsfeed/helpers/prefetch/LatestNewsEntryPrefetchHelper;
 
     move-result-object p1
 
@@ -961,7 +961,7 @@
 
     .line 18
     :cond_b
-    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->i()Lcom/vk/newsfeed/helpers/prefetch/i;
+    invoke-direct {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory;->i()Lcom/vk/newsfeed/helpers/prefetch/HeaderPrefetchHelper;
 
     move-result-object p1
 

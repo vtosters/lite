@@ -3,7 +3,7 @@
 .source "CommunityDetailsItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/api/i;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
         "Lcom/vk/profile/adapter/items/details/DetailsInfoItem;",
         ">;"
     }
@@ -50,11 +50,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
     .locals 13
 
     .line 1
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object v0
 
@@ -76,17 +76,17 @@
     invoke-direct {v0}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;-><init>()V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object v6
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->f()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->f()I
 
     move-result v7
 
     iget-object v8, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;->$context:Landroid/content/Context;
 
-    invoke-static {v6, v7, v8}, Lcom/vk/profile/utils/b;->a(Lcom/vk/dto/profile/Address;ILandroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-static {v6, v7, v8}, Lcom/vk/profile/utils/CommunityExt;->a(Lcom/vk/dto/profile/Address;ILandroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -105,7 +105,7 @@
     if-eqz v6, :cond_6
 
     .line 4
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->f()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->f()I
 
     move-result v7
 
@@ -127,13 +127,13 @@
 
     const v10, 0x7f1000b8
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->f()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->f()I
 
     move-result v11
 
     new-array v8, v8, [Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->f()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->f()I
 
     move-result v12
 
@@ -149,7 +149,7 @@
 
     const-string v8, "context.resources.getQua\u2026, profile.addressesCount)"
 
-    invoke-static {v4, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     iget-object v8, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;->this$0:Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;
@@ -159,7 +159,7 @@
     move-result v8
 
     .line 8
-    invoke-static {v4, v8}, Lcom/vk/core/utils/f;->a(Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+    invoke-static {v4, v8}, Lcom/vk/core/utils/SpannableUtils1;->a(Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
 
     move-result-object v4
 
@@ -193,7 +193,7 @@
 
     move-result v4
 
-    invoke-static {v6, v4}, Lcom/vk/core/utils/f;->a(Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+    invoke-static {v6, v4}, Lcom/vk/core/utils/SpannableUtils1;->a(Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
 
     move-result-object v7
 
@@ -207,14 +207,14 @@
     .line 16
     new-instance v4, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1$a;
 
-    invoke-direct {v4, p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1$a;-><init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;Lcom/vtosters/lite/api/i;)V
+    invoke-direct {v4, p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1$a;-><init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
 
     invoke-virtual {v0, v4}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->a(Landroid/view/View$OnClickListener;)V
 
     .line 17
     new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object v5
 
@@ -233,7 +233,7 @@
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 18
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object v5
 
@@ -249,7 +249,7 @@
     move-object v5, v1
 
     :goto_3
-    invoke-static {v5}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v5}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
@@ -261,7 +261,7 @@
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 20
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->e()Lcom/vk/dto/profile/Address;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->e()Lcom/vk/dto/profile/Address;
 
     move-result-object v5
 
@@ -299,7 +299,7 @@
 
     .line 25
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -307,7 +307,7 @@
     :cond_7
     iget-object v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->i0:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -341,7 +341,7 @@
 
     move-result v1
 
-    invoke-static {v4, v1}, Lcom/vk/core/utils/f;->a(Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+    invoke-static {v4, v1}, Lcom/vk/core/utils/SpannableUtils1;->a(Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
 
     move-result-object v1
 
@@ -350,7 +350,7 @@
     .line 31
     new-instance v1, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1$b;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1$b;-><init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;Lcom/vtosters/lite/api/i;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1$b;-><init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->a(Landroid/view/View$OnClickListener;)V
 
@@ -363,7 +363,7 @@
 
     .line 33
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -396,7 +396,7 @@
 
     .line 39
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -408,9 +408,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
 
     move-result-object p1
 

@@ -261,15 +261,15 @@
     .line 7
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$d;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->getPresenter()Lcom/vk/profile/presenter/f/a;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->getPresenter()Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/presenter/f/a;->a()Lcom/vk/profile/data/AddressesRepository;
+    invoke-virtual {v0}, Lcom/vk/profile/presenter/f/CommunityAddressPresenter;->a()Lcom/vk/profile/data/AddressesRepository;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcom/vk/profile/data/AddressesRepository;->a(I)Lc/a/m;
+    invoke-virtual {v0, v3}, Lcom/vk/profile/data/AddressesRepository;->a(I)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -277,7 +277,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$d$b;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$d;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 
@@ -351,13 +351,13 @@
 
     .line 15
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 16
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method

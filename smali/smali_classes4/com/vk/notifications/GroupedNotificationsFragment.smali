@@ -1,9 +1,9 @@
 .class public Lcom/vk/notifications/GroupedNotificationsFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "GroupedNotificationsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$p;
+.implements Lcom/vk/lists/PaginationHelper$p;
 
 
 # annotations
@@ -16,9 +16,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/b;",
-        "Lcom/vk/lists/t$p<",
-        "Lcom/vk/dto/notifications/b;",
+        "Lcom/vk/core/fragments/BaseFragment1;",
+        "Lcom/vk/lists/PaginationHelper$p<",
+        "Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;",
         ">;"
     }
 .end annotation
@@ -33,13 +33,13 @@
 
 .field private G:Landroidx/appcompat/widget/Toolbar;
 
-.field private H:Lcom/vk/lists/t;
+.field private H:Lcom/vk/lists/PaginationHelper;
 
 .field private I:Lcom/vk/lists/RecyclerPaginatedView;
 
 .field private J:Lcom/vk/notifications/GroupedNotificationsAdapter;
 
-.field private final K:Lcom/vk/notifications/h;
+.field private final K:Lcom/vk/notifications/NotificationsAnalytics;
 
 .field private L:I
 
@@ -63,7 +63,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/notifications/GroupedNotificationsFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/notifications/GroupedNotificationsFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/notifications/GroupedNotificationsFragment;->N:Lcom/vk/notifications/GroupedNotificationsFragment$b;
 
@@ -74,14 +74,14 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/notifications/h;
+    new-instance v0, Lcom/vk/notifications/NotificationsAnalytics;
 
-    invoke-direct {v0}, Lcom/vk/notifications/h;-><init>()V
+    invoke-direct {v0}, Lcom/vk/notifications/NotificationsAnalytics;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->K:Lcom/vk/notifications/h;
+    iput-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->K:Lcom/vk/notifications/NotificationsAnalytics;
 
     const/4 v0, -0x1
 
@@ -109,15 +109,15 @@
     return-object v0
 .end method
 
-.method private final S4()Lcom/vk/notifications/e;
+.method private final S4()Lcom/vk/notifications/NotificationButtonsSwipeStateListener;
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/notifications/e;
+    new-instance v0, Lcom/vk/notifications/NotificationButtonsSwipeStateListener;
 
     iget-object v1, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->M:Ljava/util/ArrayList;
 
-    invoke-direct {v0, v1}, Lcom/vk/notifications/e;-><init>(Ljava/util/ArrayList;)V
+    invoke-direct {v0, v1}, Lcom/vk/notifications/NotificationButtonsSwipeStateListener;-><init>(Ljava/util/ArrayList;)V
 
     return-object v0
 .end method
@@ -151,11 +151,11 @@
     return p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/notifications/GroupedNotificationsFragment;)Lcom/vk/notifications/h;
+.method public static final synthetic b(Lcom/vk/notifications/GroupedNotificationsFragment;)Lcom/vk/notifications/NotificationsAnalytics;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->K:Lcom/vk/notifications/h;
+    iget-object p0, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->K:Lcom/vk/notifications/NotificationsAnalytics;
 
     return-object p0
 .end method
@@ -213,7 +213,7 @@
 
     const-string v4, "items[i]"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v3, Lcom/vk/dto/notifications/NotificationItem;
 
@@ -240,18 +240,18 @@
 
     move-result v4
 
-    const-class v6, Lcom/vtosters/lite/t;
+    const-class v6, Lcom/vtosters/lite/ExpandTextSpan;
 
     invoke-interface {v5, v1, v4, v6}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, [Lcom/vtosters/lite/t;
+    check-cast v4, [Lcom/vtosters/lite/ExpandTextSpan;
 
     const-string v5, "spans"
 
     .line 7
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     array-length v5, v4
 
@@ -278,7 +278,7 @@
 
     invoke-direct {v5, p0, v3}, Lcom/vk/notifications/GroupedNotificationsFragment$c;-><init>(Lcom/vk/notifications/GroupedNotificationsFragment;Lcom/vk/dto/notifications/NotificationItem;)V
 
-    invoke-virtual {v4, v5}, Lcom/vtosters/lite/t;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, v5}, Lcom/vtosters/lite/ExpandTextSpan;->a(Landroid/view/View$OnClickListener;)V
 
     :cond_1
     add-int/lit8 v2, v2, 0x1
@@ -301,7 +301,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/lists/i0;->size()I
+    invoke-virtual {v1}, Lcom/vk/lists/SimpleAdapter;->size()I
 
     move-result v1
 
@@ -330,24 +330,24 @@
     return-object v0
 .end method
 
-.method protected final Q4()Lcom/vk/lists/t;
+.method protected final Q4()Lcom/vk/lists/PaginationHelper;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->H:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->H:Lcom/vk/lists/PaginationHelper;
 
     return-object v0
 .end method
 
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
-            "Lcom/vk/dto/notifications/b;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;",
             ">;"
         }
     .end annotation
@@ -355,7 +355,7 @@
     const-string p2, "0"
 
     .line 4
-    invoke-virtual {p0, p2, p1}, Lcom/vk/notifications/GroupedNotificationsFragment;->a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/notifications/GroupedNotificationsFragment;->a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -363,37 +363,37 @@
 
     invoke-direct {p2, p0}, Lcom/vk/notifications/GroupedNotificationsFragment$j;-><init>(Lcom/vk/notifications/GroupedNotificationsFragment;)V
 
-    invoke-virtual {p1, p2}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+.method public a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/dto/notifications/b;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;",
             ">;"
         }
     .end annotation
 
     .line 5
-    new-instance v0, Lb/h/c/q/i;
+    new-instance v0, Lcom/vk/api/notifications/NotificationsGetGrouped;
 
     iget-object v1, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->F:Ljava/lang/String;
 
-    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result p2
 
-    invoke-direct {v0, v1, p1, p2}, Lb/h/c/q/i;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, p1, p2}, Lcom/vk/api/notifications/NotificationsGetGrouped;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 p2, 0x1
 
@@ -416,27 +416,27 @@
     iget p1, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->L:I
 
     :goto_0
-    invoke-virtual {v0, p1}, Lb/h/c/q/i;->b(I)Lb/h/c/q/i;
+    invoke-virtual {v0, p1}, Lcom/vk/api/notifications/NotificationsGetGrouped;->b(I)Lcom/vk/api/notifications/NotificationsGetGrouped;
 
     const/4 p1, 0x0
 
     .line 7
-    invoke-static {v0, p1, p2, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p1, p2, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
-            "Lcom/vk/dto/notifications/b;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;",
             ">;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -444,7 +444,7 @@
     .line 8
     new-instance v0, Lcom/vk/notifications/GroupedNotificationsFragment$h;
 
-    invoke-direct {v0, p0, p3}, Lcom/vk/notifications/GroupedNotificationsFragment$h;-><init>(Lcom/vk/notifications/GroupedNotificationsFragment;Lcom/vk/lists/t;)V
+    invoke-direct {v0, p0, p3}, Lcom/vk/notifications/GroupedNotificationsFragment$h;-><init>(Lcom/vk/notifications/GroupedNotificationsFragment;Lcom/vk/lists/PaginationHelper;)V
 
     .line 9
     new-instance p3, Lcom/vk/notifications/GroupedNotificationsFragment$i;
@@ -452,16 +452,16 @@
     invoke-direct {p3, p0, p2}, Lcom/vk/notifications/GroupedNotificationsFragment$i;-><init>(Lcom/vk/notifications/GroupedNotificationsFragment;Z)V
 
     .line 10
-    invoke-virtual {p1, v0, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "observable.subscribe(\n  \u2026L.e(e)\n                })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -470,7 +470,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -511,7 +511,7 @@
     const-string p2, "view"
 
     .line 2
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x2
 
@@ -519,7 +519,7 @@
 
     const v1, 0x7f0a0d9d
 
-    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v1
 
@@ -534,7 +534,7 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v2, Lcom/vk/navigation/q;->d:Ljava/lang/String;
+    sget-object v2, Lcom/vk/navigation/NavigatorKeys;->d:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -585,7 +585,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/notifications/GroupedNotificationsFragment$onCreateView$1;-><init>(Lcom/vk/notifications/GroupedNotificationsFragment;)V
 
-    invoke-static {p3, p0, v1}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {p3, p0, v1}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     :cond_5
@@ -628,7 +628,7 @@
     const p3, 0x7f0a0b7a
 
     .line 8
-    invoke-static {p1, p3, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p3, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -663,7 +663,7 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {p3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, p3}, Lcom/vk/notifications/GroupedNotificationsAdapter;-><init>(Landroid/app/Activity;)V
 
@@ -672,13 +672,13 @@
 
     invoke-direct {p3, p0}, Lcom/vk/notifications/GroupedNotificationsFragment$e;-><init>(Lcom/vk/notifications/GroupedNotificationsFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/notifications/GroupedNotificationsAdapter;->a(Lcom/vk/notifications/m;)V
+    invoke-virtual {p2, p3}, Lcom/vk/notifications/GroupedNotificationsAdapter;->a(Lcom/vk/notifications/OnCreateViewHolderListener;)V
 
     .line 12
     iput-object p2, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->J:Lcom/vk/notifications/GroupedNotificationsAdapter;
 
     .line 13
-    invoke-direct {p0}, Lcom/vk/notifications/GroupedNotificationsFragment;->S4()Lcom/vk/notifications/e;
+    invoke-direct {p0}, Lcom/vk/notifications/GroupedNotificationsFragment;->S4()Lcom/vk/notifications/NotificationButtonsSwipeStateListener;
 
     move-result-object p2
 
@@ -715,16 +715,16 @@
 
     .line 17
     :cond_b
-    new-instance p2, Lcom/vk/core/ui/m;
+    new-instance p2, Lcom/vk/core/ui/MilkshakeDecoration;
 
-    invoke-direct {p2}, Lcom/vk/core/ui/m;-><init>()V
+    invoke-direct {p2}, Lcom/vk/core/ui/MilkshakeDecoration;-><init>()V
 
     .line 18
     new-instance p3, Lcom/vk/notifications/GroupedNotificationsFragment$g;
 
     invoke-direct {p3, p0}, Lcom/vk/notifications/GroupedNotificationsFragment$g;-><init>(Lcom/vk/notifications/GroupedNotificationsFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/core/ui/m;->a(Lcom/vk/core/ui/n;)Lcom/vk/core/ui/m;
+    invoke-virtual {p2, p3}, Lcom/vk/core/ui/MilkshakeDecoration;->a(Lcom/vk/core/ui/MilkshakeProvider;)Lcom/vk/core/ui/MilkshakeDecoration;
 
     .line 19
     iget-object p3, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->I:Lcom/vk/lists/RecyclerPaginatedView;
@@ -777,67 +777,67 @@
     move-object p3, v0
 
     :goto_3
-    invoke-static {p2, p3}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 22
     :cond_f
-    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$p;)Lcom/vk/lists/t$k;
+    invoke-static {p0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$p;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object p2
 
     const/16 p3, 0x1e
 
     .line 23
-    invoke-virtual {p2, p3}, Lcom/vk/lists/t$k;->c(I)Lcom/vk/lists/t$k;
+    invoke-virtual {p2, p3}, Lcom/vk/lists/PaginationHelper$k;->c(I)Lcom/vk/lists/PaginationHelper$k;
 
     const/4 p3, 0x7
 
     .line 24
-    invoke-virtual {p2, p3}, Lcom/vk/lists/t$k;->d(I)Lcom/vk/lists/t$k;
+    invoke-virtual {p2, p3}, Lcom/vk/lists/PaginationHelper$k;->d(I)Lcom/vk/lists/PaginationHelper$k;
 
     .line 25
     new-instance p3, Lcom/vk/notifications/GroupedNotificationsFragment$f;
 
     invoke-direct {p3, p0}, Lcom/vk/notifications/GroupedNotificationsFragment$f;-><init>(Lcom/vk/notifications/GroupedNotificationsFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/y;)Lcom/vk/lists/t$k;
+    invoke-virtual {p2, p3}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/PreloadCallback;)Lcom/vk/lists/PaginationHelper$k;
 
     const-string p3, "PaginationHelper\n       \u2026At(it))\n                }"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 26
     iget-object p3, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->I:Lcom/vk/lists/RecyclerPaginatedView;
 
     if-eqz p3, :cond_10
 
-    invoke-static {p2, p3}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p2, p3}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->H:Lcom/vk/lists/t;
+    iput-object p2, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->H:Lcom/vk/lists/PaginationHelper;
 
     return-object p1
 
     :cond_10
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 27
     :cond_11
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 28
     :cond_12
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     :cond_13
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -857,15 +857,15 @@
     iput-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->J:Lcom/vk/notifications/GroupedNotificationsAdapter;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->H:Lcom/vk/lists/t;
+    iget-object v1, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->H:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/lists/t;->j()V
+    invoke-virtual {v1}, Lcom/vk/lists/PaginationHelper;->j()V
 
     .line 5
     :cond_0
-    iput-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->H:Lcom/vk/lists/t;
+    iput-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->H:Lcom/vk/lists/PaginationHelper;
 
     .line 6
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onDestroyView()V
@@ -877,12 +877,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->K:Lcom/vk/notifications/h;
+    iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment;->K:Lcom/vk/notifications/NotificationsAnalytics;
 
-    invoke-virtual {v0}, Lcom/vk/notifications/h;->a()V
+    invoke-virtual {v0}, Lcom/vk/notifications/NotificationsAnalytics;->a()V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onPause()V
 
     return-void
 .end method

@@ -4,10 +4,10 @@
 
 
 # instance fields
-.field private a:Lkotlin/jvm/b/b;
+.field private a:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
             "Ljava/lang/Boolean;",
@@ -25,7 +25,7 @@
 
     const/4 v1, 0x2
 
-    invoke-direct {p0, p1, v0, v1, v0}, Lcom/vk/photoviewer/PhotoViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, p1, v0, v1, v0}, Lcom/vk/photoviewer/PhotoViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -39,12 +39,12 @@
     .line 2
     sget-object p1, Lcom/vk/photoviewer/PhotoViewPager$pagingEnabled$1;->a:Lcom/vk/photoviewer/PhotoViewPager$pagingEnabled$1;
 
-    iput-object p1, p0, Lcom/vk/photoviewer/PhotoViewPager;->a:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/photoviewer/PhotoViewPager;->a:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -62,12 +62,12 @@
 
 
 # virtual methods
-.method public final getPagingEnabled()Lkotlin/jvm/b/b;
+.method public final getPagingEnabled()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Boolean;",
             ">;"
@@ -75,7 +75,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewPager;->a:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewPager;->a:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
@@ -84,7 +84,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewPager;->a:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewPager;->a:Lkotlin/jvm/b/Functions2;
 
     invoke-virtual {p0}, Landroidx/viewpager/widget/ViewPager;->getCurrentItem()I
 
@@ -94,7 +94,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -134,7 +134,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewPager;->a:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewPager;->a:Lkotlin/jvm/b/Functions2;
 
     invoke-virtual {p0}, Landroidx/viewpager/widget/ViewPager;->getCurrentItem()I
 
@@ -144,7 +144,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -173,12 +173,12 @@
     return p1
 .end method
 
-.method public final setPagingEnabled(Lkotlin/jvm/b/b;)V
+.method public final setPagingEnabled(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
             "Ljava/lang/Boolean;",
@@ -187,7 +187,7 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/photoviewer/PhotoViewPager;->a:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/photoviewer/PhotoViewPager;->a:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method

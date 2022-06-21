@@ -3,12 +3,12 @@
 .source "InAppUpdatesManager.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$e;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/updates/InAppUpdatesManager$Callbacks;->a(Lcom/vk/updates/core/a$a;)V
+    value = Lcom/vk/updates/InAppUpdatesManager$Callbacks;->a(Lcom/vk/updates/core/InAppUpdatesCallbacks$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

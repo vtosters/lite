@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/fragments/q1;
+.field private final synthetic a:Lcom/vtosters/lite/general/fragments/NotificationsAdvancedSettingsFragment;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/fragments/q1;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/general/fragments/NotificationsAdvancedSettingsFragment;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/k;->a:Lcom/vtosters/lite/fragments/q1;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/k;->a:Lcom/vtosters/lite/general/fragments/NotificationsAdvancedSettingsFragment;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final onPreferenceClick(Landroidx/preference/Preference;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/k;->a:Lcom/vtosters/lite/fragments/q1;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/k;->a:Lcom/vtosters/lite/general/fragments/NotificationsAdvancedSettingsFragment;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/q1;->a(Landroidx/preference/Preference;)Z
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/general/fragments/NotificationsAdvancedSettingsFragment;->a(Landroidx/preference/Preference;)Z
 
     move-result p1
 

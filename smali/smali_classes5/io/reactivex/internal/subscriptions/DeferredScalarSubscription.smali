@@ -20,10 +20,10 @@
 
 
 # instance fields
-.field protected final downstream:Le/b/c;
+.field protected final downstream:Le/b/Subscriber;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TT;>;"
         }
     .end annotation
@@ -39,12 +39,12 @@
 
 
 # direct methods
-.method public constructor <init>(Le/b/c;)V
+.method public constructor <init>(Le/b/Subscriber;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TT;>;)V"
         }
     .end annotation
@@ -53,7 +53,7 @@
     invoke-direct {p0}, Lio/reactivex/internal/subscriptions/BasicIntQueueSubscription;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->downstream:Le/b/c;
+    iput-object p1, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->downstream:Le/b/Subscriber;
 
     return-void
 .end method
@@ -129,10 +129,10 @@
     iput-object p2, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->value:Ljava/lang/Object;
 
     .line 6
-    iget-object p2, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->downstream:Le/b/c;
+    iget-object p2, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->downstream:Le/b/Subscriber;
 
     .line 7
-    invoke-interface {p2, p1}, Le/b/c;->b(Ljava/lang/Object;)V
+    invoke-interface {p2, p1}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
 
     .line 8
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -144,7 +144,7 @@
     if-eq p1, v0, :cond_2
 
     .line 9
-    invoke-interface {p2}, Le/b/c;->b()V
+    invoke-interface {p2}, Le/b/Subscriber;->b()V
 
     :cond_2
     return-void
@@ -226,10 +226,10 @@
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
     .line 4
-    iget-object v0, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->downstream:Le/b/Subscriber;
 
     .line 5
-    invoke-interface {v0, p1}, Le/b/c;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
 
     .line 6
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -239,7 +239,7 @@
     if-eq p1, v2, :cond_1
 
     .line 7
-    invoke-interface {v0}, Le/b/c;->b()V
+    invoke-interface {v0}, Le/b/Subscriber;->b()V
 
     :cond_1
     return-void
@@ -262,10 +262,10 @@
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
     .line 9
-    iget-object v0, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/subscriptions/DeferredScalarSubscription;->downstream:Le/b/Subscriber;
 
     .line 10
-    invoke-interface {v0, p1}, Le/b/c;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
 
     .line 11
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -275,7 +275,7 @@
     if-eq p1, v2, :cond_4
 
     .line 12
-    invoke-interface {v0}, Le/b/c;->b()V
+    invoke-interface {v0}, Le/b/Subscriber;->b()V
 
     :cond_4
     return-void

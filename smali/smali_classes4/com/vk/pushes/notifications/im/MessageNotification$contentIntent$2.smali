@@ -3,7 +3,7 @@
 .source "MessageNotification.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Landroid/app/PendingIntent;",
         ">;"
     }
@@ -55,11 +55,11 @@
     move-object/from16 v0, p0
 
     .line 2
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v1}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v2
 
@@ -97,15 +97,15 @@
     invoke-direct {v1, v5, v6}, Lcom/vk/im/ui/components/msg_list/MsgListOpenAtMsgMode;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;I)V
 
     .line 6
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v1}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/im/ui/p/e;->b()Ljava/lang/Class;
+    invoke-interface {v1}, Lcom/vk/im/ui/p/ImBridge11;->b()Ljava/lang/Class;
 
     move-result-object v23
 
@@ -148,7 +148,7 @@
     const/16 v25, 0x0
 
     .line 7
-    invoke-static/range {v2 .. v25}, Lcom/vk/im/ui/p/e$b;->a(Lcom/vk/im/ui/p/e;Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;ILjava/lang/Object;)Landroid/content/Intent;
+    invoke-static/range {v2 .. v25}, Lcom/vk/im/ui/p/ImBridge$b1;->a(Lcom/vk/im/ui/p/ImBridge11;Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;ILjava/lang/Object;)Landroid/content/Intent;
 
     move-result-object v1
 
@@ -157,9 +157,9 @@
 
     iget-object v3, v0, Lcom/vk/pushes/notifications/im/MessageNotification$contentIntent$2;->$ctx:Landroid/content/Context;
 
-    sget-object v4, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
+    sget-object v4, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
 
-    invoke-virtual {v4}, Lcom/vk/navigation/o$b;->b()Ljava/lang/Class;
+    invoke-virtual {v4}, Lcom/vk/navigation/Navigator$b;->b()Ljava/lang/Class;
 
     move-result-object v4
 

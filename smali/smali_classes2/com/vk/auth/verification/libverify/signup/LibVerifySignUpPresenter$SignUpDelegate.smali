@@ -1,5 +1,5 @@
 .class public Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;
-.super Lcom/vk/auth/y/a/c$a;
+.super Lcom/vk/auth/y/a/LibVerifyPresenter$a;
 .source "LibVerifySignUpPresenter.kt"
 
 
@@ -15,19 +15,19 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/auth/y/a/c$a<",
-        "Lcom/vk/auth/y/a/d$a;",
+        "Lcom/vk/auth/y/a/LibVerifyPresenter$a<",
+        "Lcom/vk/auth/y/a/LibVerifyView$a;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private final D:Lkotlin/jvm/b/a;
+.field private final D:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -54,15 +54,15 @@
     iput-object p1, p0, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;->F:Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;
 
     .line 2
-    invoke-static {p1}, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;->a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;)Lcom/vk/auth/main/s;
+    invoke-static {p1}, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;->a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;)Lcom/vk/auth/main/SignUpModel;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/auth/main/s;->h()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/auth/main/SignUpModel;->h()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, p2, p1}, Lcom/vk/auth/y/a/c$a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/auth/y/a/LibVerifyPresenter$a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;->E:Ljava/lang/String;
 
@@ -71,46 +71,46 @@
 
     invoke-direct {p1, p0}, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate$incorrectPhoneAction$1;-><init>(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;)V
 
-    iput-object p1, p0, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;->D:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;->D:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;)Lcom/vk/auth/main/t;
+.method public static final synthetic a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;)Lcom/vk/auth/main/SignUpRouter;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->p()Lcom/vk/auth/main/t;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->p()Lcom/vk/auth/main/SignUpRouter;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;Lcom/vk/auth/main/t;)V
+.method public static final synthetic a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;Lcom/vk/auth/main/SignUpRouter;)V
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/main/t;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter;->a(Lcom/vk/auth/main/SignUpRouter;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected B()Lkotlin/jvm/b/a;
+.method protected B()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;->D:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;->D:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
@@ -119,27 +119,27 @@
     .locals 7
 
     .line 3
-    new-instance p1, Lcom/vk/auth/api/commands/k;
+    new-instance p1, Lcom/vk/auth/api/commands/ValidatePhoneConfirmCommand;
 
-    invoke-virtual {p0}, Lcom/vk/auth/y/a/c$a;->C()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/auth/y/a/LibVerifyPresenter$a;->C()Ljava/lang/String;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;->E:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/auth/main/f;->c()I
+    invoke-interface {v0}, Lcom/vk/auth/main/AuthModel;->c()I
 
     move-result v5
 
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/auth/main/f;->b()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vk/auth/main/AuthModel;->b()Ljava/lang/String;
 
     move-result-object v6
 
@@ -149,16 +149,16 @@
 
     move-object v4, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/auth/api/commands/k;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/auth/api/commands/ValidatePhoneConfirmCommand;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate;->F:Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;
 
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Lcom/vk/auth/main/s;->a(Lcom/vk/auth/api/commands/k;)Lc/a/m;
+    invoke-interface {v1, p1}, Lcom/vk/auth/main/SignUpModel;->a(Lcom/vk/auth/api/commands/ValidatePhoneConfirmCommand;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -167,16 +167,16 @@
 
     invoke-direct {v1, p2, p3}, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter$SignUpDelegate$a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "signUpModel.confirmPhone\u2026                        }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {v0, p1}, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;->a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;Lc/a/m;)V
+    invoke-static {v0, p1}, Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;->a(Lcom/vk/auth/verification/libverify/signup/LibVerifySignUpPresenter;Lio/reactivex/Observable;)V
 
     return-void
 .end method

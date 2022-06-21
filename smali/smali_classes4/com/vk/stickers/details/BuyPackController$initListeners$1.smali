@@ -3,7 +3,7 @@
 .source "BuyPackController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stickers/details/BuyPackController$initListeners$1;->this$0:Lcom/vk/stickers/details/BuyPackController;
 
-    invoke-static {p1}, Lcom/vk/stickers/details/BuyPackController;->b(Lcom/vk/stickers/details/BuyPackController;)Lcom/vk/stickers/bridge/o;
+    invoke-static {p1}, Lcom/vk/stickers/details/BuyPackController;->b(Lcom/vk/stickers/details/BuyPackController;)Lcom/vk/stickers/bridge/StickersBridge1;
 
     move-result-object p1
 
@@ -66,7 +66,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stickers/details/BuyPackController$initListeners$1$1;-><init>(Lcom/vk/stickers/details/BuyPackController$initListeners$1;)V
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/stickers/bridge/o;->a(Lcom/vk/dto/stickers/StickerStockItem;Lkotlin/jvm/b/a;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/stickers/bridge/StickersBridge1;->a(Lcom/vk/dto/stickers/StickerStockItem;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stickers/details/BuyPackController$initListeners$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

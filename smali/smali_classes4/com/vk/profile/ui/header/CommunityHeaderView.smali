@@ -3,7 +3,7 @@
 .source "CommunityHeaderView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/header/CommunityHeaderView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/header/CommunityHeaderView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/profile/ui/header/CommunityHeaderView;->d0:Lcom/vk/profile/ui/header/CommunityHeaderView$a;
 
@@ -80,7 +80,7 @@
 
     const-string v0, "findViewById(R.id.profile_photo)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/profile/ui/community/CommunityBorderedImageView;
 
@@ -119,7 +119,7 @@
 
     const-string v1, "coverView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -141,11 +141,11 @@
     iget-object v5, p0, Lcom/vk/profile/ui/header/CommunityHeaderView;->b0:Landroid/view/View;
 
     .line 29
-    invoke-virtual {p2}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p2}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/newsfeed/contracts/u;->c2()Landroidx/appcompat/widget/Toolbar;
+    invoke-interface {v1}, Lcom/vk/newsfeed/contracts/ProfileContract;->c2()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object v7
 
@@ -182,14 +182,14 @@
     invoke-super {p0, p1}, Lcom/vk/profile/ui/header/BaseHeaderView;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 3
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     .line 4
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v0
 
@@ -207,7 +207,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->d(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/CommunityExt;->d(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result v0
 
@@ -226,13 +226,13 @@
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 6
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-static {p1, v1, v0}, Lcom/vk/profile/utils/b;->a(Lcom/vtosters/lite/api/i;ZZ)Ljava/util/List;
+    invoke-static {p1, v1, v0}, Lcom/vk/profile/utils/CommunityExt;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;ZZ)Ljava/util/List;
 
     move-result-object p1
 
@@ -254,7 +254,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;Lcom/vk/profile/presenter/CommunityPresenter;)V
     .locals 3
 
     .line 8
@@ -310,7 +310,7 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$$inlined$let$lambda$1;-><init>(Lcom/vk/profile/ui/header/CommunityHeaderView;Lcom/vk/profile/ui/cover/CoverViewPager;Lcom/vk/profile/presenter/CommunityPresenter;)V
 
-    invoke-virtual {v2, v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->setTapListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v2, v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->setTapListener(Lkotlin/jvm/b/Functions;)V
 
     .line 14
     invoke-virtual {p2}, Lcom/vk/profile/presenter/CommunityPresenter;->f0()Z
@@ -387,9 +387,9 @@
 
     new-instance v0, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;-><init>(Lcom/vk/profile/ui/header/CommunityHeaderView;Lcom/vtosters/lite/api/i;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;-><init>(Lcom/vk/profile/ui/header/CommunityHeaderView;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
 
-    invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 

@@ -3,7 +3,7 @@
 .source "Lazy.kt"
 
 # interfaces
-.implements Lkotlin/e;
+.implements Lkotlin/Lazy2;
 .implements Ljava/io/Serializable;
 
 
@@ -14,7 +14,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lkotlin/e<",
+        "Lkotlin/Lazy2<",
         "TT;>;",
         "Ljava/io/Serializable;"
     }
@@ -24,10 +24,10 @@
 # instance fields
 .field private _value:Ljava/lang/Object;
 
-.field private initializer:Lkotlin/jvm/b/a;
+.field private initializer:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+TT;>;"
         }
     .end annotation
@@ -35,12 +35,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+TT;>;)V"
         }
     .end annotation
@@ -49,10 +49,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lkotlin/UnsafeLazyImpl;->initializer:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lkotlin/UnsafeLazyImpl;->initializer:Lkotlin/jvm/b/Functions;
 
     .line 3
-    sget-object p1, Lkotlin/l;->a:Lkotlin/l;
+    sget-object p1, Lkotlin/Lazy;->a:Lkotlin/Lazy;
 
     iput-object p1, p0, Lkotlin/UnsafeLazyImpl;->_value:Ljava/lang/Object;
 
@@ -82,7 +82,7 @@
     .line 1
     iget-object v0, p0, Lkotlin/UnsafeLazyImpl;->_value:Ljava/lang/Object;
 
-    sget-object v1, Lkotlin/l;->a:Lkotlin/l;
+    sget-object v1, Lkotlin/Lazy;->a:Lkotlin/Lazy;
 
     if-eq v0, v1, :cond_0
 
@@ -108,31 +108,31 @@
     .line 1
     iget-object v0, p0, Lkotlin/UnsafeLazyImpl;->_value:Ljava/lang/Object;
 
-    sget-object v1, Lkotlin/l;->a:Lkotlin/l;
+    sget-object v1, Lkotlin/Lazy;->a:Lkotlin/Lazy;
 
     if-ne v0, v1, :cond_1
 
     .line 2
-    iget-object v0, p0, Lkotlin/UnsafeLazyImpl;->initializer:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lkotlin/UnsafeLazyImpl;->initializer:Lkotlin/jvm/b/Functions;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lkotlin/UnsafeLazyImpl;->_value:Ljava/lang/Object;
 
     .line 3
-    iput-object v1, p0, Lkotlin/UnsafeLazyImpl;->initializer:Lkotlin/jvm/b/a;
+    iput-object v1, p0, Lkotlin/UnsafeLazyImpl;->initializer:Lkotlin/jvm/b/Functions;
 
     goto :goto_0
 
     .line 4
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 

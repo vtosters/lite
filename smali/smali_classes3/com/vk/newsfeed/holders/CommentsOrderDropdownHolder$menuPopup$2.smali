@@ -3,7 +3,7 @@
 .source "CommentsOrderDropdownHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/core/dialogs/actionspopup/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/core/dialogs/actionspopup/ActionsPopup;",
         ">;"
     }
 .end annotation
@@ -45,11 +45,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/core/dialogs/actionspopup/a;
+.method public final invoke()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
     .locals 7
 
     .line 2
-    new-instance v6, Lcom/vk/core/dialogs/actionspopup/a$b;
+    new-instance v6, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$menuPopup$2;->this$0:Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;
 
@@ -67,7 +67,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/a$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$menuPopup$2;->this$0:Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder;
@@ -76,10 +76,10 @@
 
     move-result-object v0
 
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 4
-    invoke-virtual {v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a()Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     move-result-object v0
 
@@ -90,7 +90,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$menuPopup$2;->invoke()Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$menuPopup$2;->invoke()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     move-result-object v0
 

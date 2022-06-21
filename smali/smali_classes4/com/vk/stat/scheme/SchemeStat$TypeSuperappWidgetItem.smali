@@ -18,7 +18,7 @@
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/stat/scheme/a;
+.field private final b:Lcom/vk/stat/scheme/SchemeStat;
     .annotation runtime Lcom/google/gson/t/c;
         value = "superapp_item"
     .end annotation
@@ -26,7 +26,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem$Id;Lcom/vk/stat/scheme/a;)V
+.method public constructor <init>(Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem$Id;Lcom/vk/stat/scheme/SchemeStat;)V
     .locals 0
 
     .line 1
@@ -34,7 +34,7 @@
 
     iput-object p1, p0, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;->a:Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem$Id;
 
-    iput-object p2, p0, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;->b:Lcom/vk/stat/scheme/a;
+    iput-object p2, p0, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;->b:Lcom/vk/stat/scheme/SchemeStat;
 
     return-void
 .end method
@@ -56,17 +56,17 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;->a:Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem$Id;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;->b:Lcom/vk/stat/scheme/a;
+    iget-object v0, p0, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;->b:Lcom/vk/stat/scheme/SchemeStat;
 
-    iget-object p1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;->b:Lcom/vk/stat/scheme/a;
+    iget-object p1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;->b:Lcom/vk/stat/scheme/SchemeStat;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -107,11 +107,11 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;->b:Lcom/vk/stat/scheme/a;
+    iget-object v2, p0, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;->b:Lcom/vk/stat/scheme/SchemeStat;
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Lcom/vk/stat/scheme/a;->hashCode()I
+    invoke-virtual {v2}, Lcom/vk/stat/scheme/SchemeStat;->hashCode()I
 
     move-result v1
 
@@ -140,7 +140,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;->b:Lcom/vk/stat/scheme/a;
+    iget-object v1, p0, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;->b:Lcom/vk/stat/scheme/SchemeStat;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -3,7 +3,7 @@
 .source "VKAnimationView.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/airbnb/lottie/d;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/airbnb/lottie/LottieComposition;",
         ">;"
     }
 .end annotation
@@ -50,19 +50,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/airbnb/lottie/d;)V
+.method public final a(Lcom/airbnb/lottie/LottieComposition;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/stickers/views/animation/VKAnimationView$a;->a:Lcom/vk/stickers/views/animation/VKAnimationView;
 
-    invoke-static {v0}, Lcom/vk/stickers/views/animation/VKAnimationView;->a(Lcom/vk/stickers/views/animation/VKAnimationView;)Lcom/vk/stickers/views/animation/a;
+    invoke-static {v0}, Lcom/vk/stickers/views/animation/VKAnimationView;->a(Lcom/vk/stickers/views/animation/VKAnimationView;)Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stickers/views/animation/a;->a()V
+    invoke-interface {v0}, Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;->a()V
 
     .line 2
     :cond_0
@@ -75,7 +75,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/stickers/views/animation/VKAnimationView$a;->a:Lcom/vk/stickers/views/animation/VKAnimationView;
 
-    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setComposition(Lcom/airbnb/lottie/d;)V
+    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setComposition(Lcom/airbnb/lottie/LottieComposition;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/stickers/views/animation/VKAnimationView$a;->a:Lcom/vk/stickers/views/animation/VKAnimationView;
@@ -102,9 +102,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/airbnb/lottie/d;
+    check-cast p1, Lcom/airbnb/lottie/LottieComposition;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stickers/views/animation/VKAnimationView$a;->a(Lcom/airbnb/lottie/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stickers/views/animation/VKAnimationView$a;->a(Lcom/airbnb/lottie/LottieComposition;)V
 
     return-void
 .end method

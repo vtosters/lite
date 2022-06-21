@@ -3,12 +3,12 @@
 .source "CommunityHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/i;Lcom/vk/profile/presenter/f/b;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Lcom/vk/profile/presenter/f/CommunityLocationController;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/CommunityDataScope;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/api/i;",
-        "Lcom/vk/profile/adapter/items/community/a;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
+        "Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/a;
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;
     .locals 4
 
     .line 1
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->g()Lcom/vtosters/lite/api/i$a;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->g()Lcom/vtosters/lite/api/ExtendedCommunityProfile$a;
 
     move-result-object v0
 
@@ -59,21 +59,21 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->g()Lcom/vtosters/lite/api/i$a;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->g()Lcom/vtosters/lite/api/ExtendedCommunityProfile$a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/api/i$a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedCommunityProfile$a;->a()Ljava/lang/String;
 
     move-result-object v0
 
     .line 3
-    new-instance v1, Lcom/vk/profile/adapter/items/community/a;
+    new-instance v1, Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;
 
     .line 4
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v3, 0x7f12022a
 
@@ -83,42 +83,42 @@
 
     const-string v3, "AppContextHolder.context\u2026y_ads_easy_promote_title)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f080339
 
     .line 5
-    invoke-direct {v1, v2, v3}, Lcom/vk/profile/adapter/items/community/a;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;-><init>(Ljava/lang/String;I)V
 
     .line 6
     new-instance v2, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1$$special$$inlined$apply$lambda$1;
 
-    invoke-direct {v2, p0, v0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1$$special$$inlined$apply$lambda$1;-><init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1;Ljava/lang/String;Lcom/vtosters/lite/api/i;)V
+    invoke-direct {v2, p0, v0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1$$special$$inlined$apply$lambda$1;-><init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1;Ljava/lang/String;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/profile/adapter/items/community/a;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v1, v2}, Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 7
-    new-instance v0, Lcom/vk/profile/e/b;
+    new-instance v0, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget p1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v0, p1}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {v0, p1}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     const-string p1, "ads_easy_promote"
 
     .line 8
-    invoke-virtual {v0, p1}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 9
-    invoke-virtual {v0}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     return-object v1
 
     .line 10
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -130,9 +130,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/a;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$adsLink$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;
 
     move-result-object p1
 

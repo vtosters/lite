@@ -49,7 +49,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/c;
+    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/ValidatorSet;
 
     move-result-object p1
 
@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     :cond_0
     return-void

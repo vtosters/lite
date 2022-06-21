@@ -3,7 +3,7 @@
 .source "CoverDialog.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/g;
+.implements Lcom/vk/navigation/Dismissed;
 .implements Landroid/view/View$OnLayoutChangeListener;
 
 
@@ -14,7 +14,7 @@
 
 .field private D:I
 
-.field private final E:Lcom/vk/core/ui/themes/b;
+.field private final E:Lcom/vk/core/ui/themes/DynamicColorHolder;
 
 .field private final F:Landroid/graphics/Paint;
 
@@ -24,9 +24,9 @@
 
 .field private I:Landroid/view/View;
 
-.field private final J:Lcom/vk/core/utils/e;
+.field private final J:Lcom/vk/core/utils/OrientationListener;
 
-.field private final K:Lcom/vtosters/lite/audio/utils/f;
+.field private final K:Lcom/vtosters/lite/audio/utils/WakeLockEx;
 
 .field private L:Ljava/lang/Integer;
 
@@ -42,11 +42,11 @@
 
 .field private final R:Landroid/view/View;
 
-.field private a:Lkotlin/jvm/b/a;
+.field private a:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -64,7 +64,7 @@
     .end annotation
 .end field
 
-.field private final d:Lcom/vk/profile/ui/cover/a;
+.field private final d:Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
 .field private final e:Lcom/vk/profile/ui/cover/CoverViewPager;
 
@@ -103,7 +103,7 @@
     iput-object p2, p0, Lcom/vk/profile/ui/cover/CoverDialog;->c:Ljava/lang/ref/WeakReference;
 
     .line 4
-    new-instance p1, Lcom/vk/profile/ui/cover/a;
+    new-instance p1, Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     invoke-virtual {p0}, Lcom/vk/profile/ui/cover/CoverDialog;->j()Lcom/vk/profile/ui/cover/CoverViewPager;
 
@@ -121,9 +121,9 @@
 
     if-eqz p4, :cond_d
 
-    invoke-direct {p1, p0, p2, p4}, Lcom/vk/profile/ui/cover/a;-><init>(Lcom/vk/profile/ui/cover/CoverDialog;Lcom/vk/profile/ui/cover/CoverViewPager;Lcom/vk/profile/ui/community/CommunityParallax;)V
+    invoke-direct {p1, p0, p2, p4}, Lcom/vk/profile/ui/cover/CoverDialogAnimator;-><init>(Lcom/vk/profile/ui/cover/CoverDialog;Lcom/vk/profile/ui/cover/CoverViewPager;Lcom/vk/profile/ui/community/CommunityParallax;)V
 
-    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->d:Lcom/vk/profile/ui/cover/a;
+    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->d:Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     .line 5
     new-instance p1, Lcom/vk/profile/ui/cover/CoverViewPager;
@@ -132,7 +132,7 @@
 
     const/4 p4, 0x2
 
-    invoke-direct {p1, p2, p3, p4, p3}, Lcom/vk/profile/ui/cover/CoverViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, p2, p3, p4, p3}, Lcom/vk/profile/ui/cover/CoverViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 6
     invoke-virtual {p0}, Lcom/vk/profile/ui/cover/CoverDialog;->d()Lcom/vk/profile/data/cover/model/CommunityCoverModel;
@@ -159,13 +159,13 @@
     iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->f:Landroid/widget/FrameLayout;
 
     .line 10
-    new-instance p1, Lcom/vk/core/ui/themes/b;
+    new-instance p1, Lcom/vk/core/ui/themes/DynamicColorHolder;
 
     const p5, 0x7f040224
 
-    invoke-direct {p1, p5}, Lcom/vk/core/ui/themes/b;-><init>(I)V
+    invoke-direct {p1, p5}, Lcom/vk/core/ui/themes/DynamicColorHolder;-><init>(I)V
 
-    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->E:Lcom/vk/core/ui/themes/b;
+    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->E:Lcom/vk/core/ui/themes/DynamicColorHolder;
 
     .line 11
     new-instance p1, Landroid/graphics/Paint;
@@ -173,9 +173,9 @@
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
     .line 12
-    iget-object p5, p0, Lcom/vk/profile/ui/cover/CoverDialog;->E:Lcom/vk/core/ui/themes/b;
+    iget-object p5, p0, Lcom/vk/profile/ui/cover/CoverDialog;->E:Lcom/vk/core/ui/themes/DynamicColorHolder;
 
-    invoke-virtual {p5}, Lcom/vk/core/ui/themes/b;->a()I
+    invoke-virtual {p5}, Lcom/vk/core/ui/themes/DynamicColorHolder;->a()I
 
     move-result p5
 
@@ -192,7 +192,7 @@
     invoke-direct {p1, p0, p5}, Lcom/vk/profile/ui/cover/CoverDialog$c;-><init>(Lcom/vk/profile/ui/cover/CoverDialog;Landroid/content/Context;)V
 
     .line 15
-    sget p5, Lcom/vk/profile/ui/c;->V0:I
+    sget p5, Lcom/vk/profile/ui/BaseProfileFragment;->V0:I
 
     iput p5, p0, Lcom/vk/profile/ui/cover/CoverDialog;->D:I
 
@@ -203,7 +203,7 @@
 
     const-string v0, "context"
 
-    invoke-static {p5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/content/Context;)I
 
@@ -220,7 +220,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;JLkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;JLkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     .line 18
     iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->G:Landroid/widget/FrameLayout;
@@ -233,13 +233,13 @@
     iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->H:Landroid/os/Handler;
 
     .line 20
-    new-instance p1, Lcom/vk/core/utils/e;
+    new-instance p1, Lcom/vk/core/utils/OrientationListener;
 
     iget-object p5, p0, Lcom/vk/profile/ui/cover/CoverDialog;->O:Landroid/app/Activity;
 
-    invoke-direct {p1, p5}, Lcom/vk/core/utils/e;-><init>(Landroid/app/Activity;)V
+    invoke-direct {p1, p5}, Lcom/vk/core/utils/OrientationListener;-><init>(Landroid/app/Activity;)V
 
-    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->J:Lcom/vk/core/utils/e;
+    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->J:Lcom/vk/core/utils/OrientationListener;
 
     .line 21
     invoke-virtual {p0}, Lcom/vk/profile/ui/cover/CoverDialog;->d()Lcom/vk/profile/data/cover/model/CommunityCoverModel;
@@ -258,13 +258,13 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/c;
+    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/ValidatorSet;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1, p4, p2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, p4, p2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 23
     :cond_1
@@ -274,7 +274,7 @@
     invoke-static {}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->b()V
 
     .line 25
-    new-instance p1, Lcom/vtosters/lite/audio/utils/f;
+    new-instance p1, Lcom/vtosters/lite/audio/utils/WakeLockEx;
 
     iget-object p5, p0, Lcom/vk/profile/ui/cover/CoverDialog;->b:Landroid/app/Activity;
 
@@ -284,9 +284,9 @@
 
     move-result-object v0
 
-    invoke-direct {p1, p5, v0}, Lcom/vtosters/lite/audio/utils/f;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {p1, p5, v0}, Lcom/vtosters/lite/audio/utils/WakeLockEx;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->K:Lcom/vtosters/lite/audio/utils/f;
+    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->K:Lcom/vtosters/lite/audio/utils/WakeLockEx;
 
     .line 26
     iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->Q:Lcom/vk/profile/presenter/CommunityPresenter;
@@ -328,14 +328,14 @@
     invoke-virtual {p1}, Landroid/app/Activity;->getRequestedOrientation()I
 
     .line 30
-    iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->J:Lcom/vk/core/utils/e;
+    iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->J:Lcom/vk/core/utils/OrientationListener;
 
     invoke-virtual {p1}, Landroid/view/OrientationEventListener;->enable()V
 
     .line 31
-    iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->J:Lcom/vk/core/utils/e;
+    iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->J:Lcom/vk/core/utils/OrientationListener;
 
-    invoke-virtual {p1}, Lcom/vk/core/utils/e;->e()V
+    invoke-virtual {p1}, Lcom/vk/core/utils/OrientationListener;->e()V
 
     .line 32
     iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->f:Landroid/widget/FrameLayout;
@@ -368,11 +368,11 @@
     invoke-virtual {p1, p5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 36
-    iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->d:Lcom/vk/profile/ui/cover/a;
+    iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->d:Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     iget-object p5, p0, Lcom/vk/profile/ui/cover/CoverDialog;->I:Landroid/view/View;
 
-    invoke-virtual {p1, p5}, Lcom/vk/profile/ui/cover/a;->b(Landroid/view/View;)V
+    invoke-virtual {p1, p5}, Lcom/vk/profile/ui/cover/CoverDialogAnimator;->b(Landroid/view/View;)V
 
     .line 37
     iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->O:Landroid/app/Activity;
@@ -385,7 +385,7 @@
 
     const-string p5, "activity.findViewById(android.R.id.content)"
 
-    invoke-static {p1, p5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->C:Landroid/view/View;
 
@@ -460,7 +460,7 @@
     goto :goto_0
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
@@ -478,7 +478,7 @@
 
     invoke-direct {p5, p0}, Lcom/vk/profile/ui/cover/CoverDialog$2;-><init>(Lcom/vk/profile/ui/cover/CoverDialog;)V
 
-    invoke-static {p1, p5}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+    invoke-static {p1, p5}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
 
     .line 45
     invoke-virtual {p0}, Lcom/vk/profile/ui/cover/CoverDialog;->d()Lcom/vk/profile/data/cover/model/CommunityCoverModel;
@@ -487,13 +487,13 @@
 
     if-eqz p1, :cond_8
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->p()Lb/h/g/t/c;
+    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->p()Lb/h/g/t/ValidatorSet;
 
     move-result-object p1
 
     if-eqz p1, :cond_8
 
-    invoke-virtual {p1, p4, p2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, p4, p2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 46
     :cond_8
@@ -539,7 +539,7 @@
 
     move-result p3
 
-    invoke-static {p2, p1, p3}, Lcom/vk/profile/e/d;->a(ZLjava/lang/String;I)V
+    invoke-static {p2, p1, p3}, Lcom/vk/profile/e/LiveCoversTracker;->a(ZLjava/lang/String;I)V
 
     .line 47
     iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->C:Landroid/view/View;
@@ -550,45 +550,45 @@
 
     .line 48
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     .line 49
     :cond_c
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     .line 50
     :cond_d
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     :cond_e
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/profile/ui/cover/a;
+.method public final a()Lcom/vk/profile/ui/cover/CoverDialogAnimator;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->d:Lcom/vk/profile/ui/cover/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->d:Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     return-object v0
 .end method
@@ -644,19 +644,19 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->a:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->a:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -713,13 +713,13 @@
     if-nez v0, :cond_b
 
     .line 10
-    iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->d:Lcom/vk/profile/ui/cover/a;
+    iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->d:Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->P:Landroid/view/View;
 
     iget-object v1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->C:Landroid/view/View;
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/profile/ui/cover/a;->a(Landroid/view/View;Landroid/view/View;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/profile/ui/cover/CoverDialogAnimator;->a(Landroid/view/View;Landroid/view/View;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverDialog;->R:Landroid/view/View;
@@ -812,7 +812,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/ui/cover/CoverDialog$dismiss$2;-><init>(Lcom/vk/profile/ui/cover/CoverDialog;)V
 
-    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
 
     .line 17
     :cond_a
@@ -891,7 +891,7 @@
 
     move-result v2
 
-    invoke-static {v1, v0, v2}, Lcom/vk/profile/e/d;->a(ZLjava/lang/String;I)V
+    invoke-static {v1, v0, v2}, Lcom/vk/profile/e/LiveCoversTracker;->a(ZLjava/lang/String;I)V
 
     .line 22
     iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->e:Lcom/vk/profile/ui/cover/CoverViewPager;
@@ -915,13 +915,13 @@
     :cond_c
     iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->e:Lcom/vk/profile/ui/cover/CoverViewPager;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getCurrentViewItem()Lcom/vk/profile/ui/cover/c;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getCurrentViewItem()Lcom/vk/profile/ui/cover/CoverViewItem;
 
     move-result-object v0
 
     if-eqz v0, :cond_d
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/c;->getVideoTextureView()Lcom/vk/media/player/video/view/VideoTextureView;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewItem;->getVideoTextureView()Lcom/vk/media/player/video/view/VideoTextureView;
 
     .line 25
     :cond_d
@@ -964,7 +964,7 @@
 
     if-eqz v0, :cond_f
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->p()Lb/h/g/t/c;
+    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->p()Lb/h/g/t/ValidatorSet;
 
     move-result-object v0
 
@@ -972,7 +972,7 @@
 
     const/4 v1, 0x2
 
-    invoke-virtual {v0, v1, p1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, p1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 28
     :cond_f
@@ -990,26 +990,26 @@
 
     .line 29
     :cond_10
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_11
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_12
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
 
-.method public final b()Lcom/vk/core/ui/themes/b;
+.method public final b()Lcom/vk/core/ui/themes/DynamicColorHolder;
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->E:Lcom/vk/core/ui/themes/b;
+    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->E:Lcom/vk/core/ui/themes/DynamicColorHolder;
 
     return-object v0
 .end method
@@ -1058,7 +1058,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/g$a;->a(Lcom/vk/navigation/g;)V
+    invoke-static {p0}, Lcom/vk/navigation/Dismissed$a;->a(Lcom/vk/navigation/Dismissed;)V
 
     return-void
 .end method
@@ -1231,9 +1231,9 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->K:Lcom/vtosters/lite/audio/utils/f;
+    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->K:Lcom/vtosters/lite/audio/utils/WakeLockEx;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/utils/f;->b()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/utils/WakeLockEx;->b()V
 
     .line 2
     invoke-static {}, Lcom/vk/music/notifications/headset/HeadsetNotificationManager;->h()V
@@ -1378,28 +1378,28 @@
 
     if-eqz v0, :cond_b
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->p()Lb/h/g/t/c;
+    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->p()Lb/h/g/t/ValidatorSet;
 
     move-result-object v0
 
     if-eqz v0, :cond_b
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 12
     :cond_b
-    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->d:Lcom/vk/profile/ui/cover/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->d:Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverDialogAnimator;->a()V
 
     .line 13
-    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->d:Lcom/vk/profile/ui/cover/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->d:Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     iget-object v3, p0, Lcom/vk/profile/ui/cover/CoverDialog;->P:Landroid/view/View;
 
     iget-object v4, p0, Lcom/vk/profile/ui/cover/CoverDialog;->C:Landroid/view/View;
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/profile/ui/cover/a;->a(Landroid/view/View;Landroid/view/View;)V
+    invoke-virtual {v0, v3, v4}, Lcom/vk/profile/ui/cover/CoverDialogAnimator;->a(Landroid/view/View;Landroid/view/View;)V
 
     .line 14
     iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->G:Landroid/widget/FrameLayout;
@@ -1426,7 +1426,7 @@
 
     const-string v3, "activity.window"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
@@ -1441,15 +1441,15 @@
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     .line 16
-    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->a:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->a:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_d
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     .line 17
     :cond_d
@@ -1463,17 +1463,17 @@
 
     .line 18
     :cond_e
-    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->J:Lcom/vk/core/utils/e;
+    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->J:Lcom/vk/core/utils/OrientationListener;
 
-    invoke-virtual {v0}, Lcom/vk/core/utils/e;->g()V
+    invoke-virtual {v0}, Lcom/vk/core/utils/OrientationListener;->g()V
 
     .line 19
-    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->J:Lcom/vk/core/utils/e;
+    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->J:Lcom/vk/core/utils/OrientationListener;
 
-    invoke-virtual {v0}, Lcom/vk/core/utils/e;->f()V
+    invoke-virtual {v0}, Lcom/vk/core/utils/OrientationListener;->f()V
 
     .line 20
-    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->J:Lcom/vk/core/utils/e;
+    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog;->J:Lcom/vk/core/utils/OrientationListener;
 
     invoke-virtual {v0}, Landroid/view/OrientationEventListener;->disable()V
 
@@ -1494,7 +1494,7 @@
 
     if-eqz v0, :cond_10
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/c;
+    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/ValidatorSet;
 
     move-result-object v0
 
@@ -1502,7 +1502,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     :cond_10
     return-void

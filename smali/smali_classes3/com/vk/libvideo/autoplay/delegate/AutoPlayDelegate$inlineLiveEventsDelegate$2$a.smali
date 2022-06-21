@@ -3,12 +3,12 @@
 .source "AutoPlayDelegate.kt"
 
 # interfaces
-.implements Lcom/vk/libvideo/live/views/live/d;
+.implements Lcom/vk/libvideo/live/views/live/LiveStateListner;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$inlineLiveEventsDelegate$2;->invoke()Lcom/vk/libvideo/autoplay/delegate/b;
+    value = Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$inlineLiveEventsDelegate$2;->invoke()Lcom/vk/libvideo/autoplay/delegate/InlineLiveEventsDelegate;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -48,7 +48,7 @@
 
     iget-object v0, v0, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$inlineLiveEventsDelegate$2;->this$0:Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -78,7 +78,7 @@
 
     iget-object v3, v3, Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate$inlineLiveEventsDelegate$2;->this$0:Lcom/vk/libvideo/autoplay/delegate/AutoPlayDelegate;
 
-    invoke-virtual {v3}, Lcom/vk/libvideo/autoplay/delegate/a;->getVideoConfig()Lcom/vk/libvideo/autoplay/AutoPlayConfig;
+    invoke-virtual {v3}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->getVideoConfig()Lcom/vk/libvideo/autoplay/AutoPlayConfig;
 
     move-result-object v3
 
@@ -93,7 +93,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/libvideo/live/views/live/d$a;->b(Lcom/vk/libvideo/live/views/live/d;)V
+    invoke-static {p0}, Lcom/vk/libvideo/live/views/live/LiveStateListner$a;->b(Lcom/vk/libvideo/live/views/live/LiveStateListner;)V
 
     return-void
 .end method
@@ -102,7 +102,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/libvideo/live/views/live/d$a;->a(Lcom/vk/libvideo/live/views/live/d;)V
+    invoke-static {p0}, Lcom/vk/libvideo/live/views/live/LiveStateListner$a;->a(Lcom/vk/libvideo/live/views/live/LiveStateListner;)V
 
     return-void
 .end method
@@ -111,7 +111,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/libvideo/live/views/live/d$a;->c(Lcom/vk/libvideo/live/views/live/d;)V
+    invoke-static {p0}, Lcom/vk/libvideo/live/views/live/LiveStateListner$a;->c(Lcom/vk/libvideo/live/views/live/LiveStateListner;)V
 
     return-void
 .end method

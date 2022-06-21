@@ -3,7 +3,7 @@
 .source "MusicNotificationManagerProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/music/notification/MusicNotificationManagerProvider$showSubscriptionNotification$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -60,13 +60,13 @@
     .locals 2
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/e;->a()Lcom/vk/bridges/d;
+    invoke-static {}, Lcom/vk/bridges/AudioBridge;->a()Lcom/vk/bridges/AudioBridge1;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/music/notification/MusicNotificationManagerProvider$showSubscriptionNotification$1;->$context:Landroid/content/Context;
 
-    invoke-interface {v0, v1}, Lcom/vk/bridges/d;->a(Landroid/content/Context;)V
+    invoke-interface {v0, v1}, Lcom/vk/bridges/AudioBridge1;->a(Landroid/content/Context;)V
 
     return-void
 .end method

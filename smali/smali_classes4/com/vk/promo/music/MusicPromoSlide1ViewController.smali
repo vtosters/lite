@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/promo/f;
+.field private a:Lcom/vk/promo/PromoNavigator;
 
 .field private final b:Z
 
@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/promo/music/MusicPromoSlide1ViewController$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/promo/music/MusicPromoSlide1ViewController$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/promo/music/MusicPromoSlide1ViewController$a;
@@ -96,11 +96,11 @@
 
 
 # virtual methods
-.method public a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/f;)Landroid/view/View;
+.method public a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/PromoNavigator;)Landroid/view/View;
     .locals 2
 
     .line 1
-    iput-object p3, p0, Lcom/vk/promo/music/MusicPromoSlide1ViewController;->a:Lcom/vk/promo/f;
+    iput-object p3, p0, Lcom/vk/promo/music/MusicPromoSlide1ViewController;->a:Lcom/vk/promo/PromoNavigator;
 
     const/4 p3, 0x0
 
@@ -113,7 +113,7 @@
 
     const-string v0, "inflater.inflate(R.layou\u2026slide1, container, false)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0a025b
 
@@ -161,7 +161,7 @@
 
     const-string v1, "view.findViewById<View>(R.id.divider)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p3}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -247,7 +247,7 @@
 
     .line 3
     :cond_1
-    sget-object v1, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v1, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -255,7 +255,7 @@
 
     const-string p1, "v.context"
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -265,7 +265,7 @@
 
     const-string v3, "https://vk.cc/9uFgyl"
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -279,11 +279,11 @@
 
     .line 5
     :cond_3
-    iget-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide1ViewController;->a:Lcom/vk/promo/f;
+    iget-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide1ViewController;->a:Lcom/vk/promo/PromoNavigator;
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lcom/vk/promo/f;->close()V
+    invoke-interface {p1}, Lcom/vk/promo/PromoNavigator;->close()V
 
     goto :goto_0
 
@@ -297,11 +297,11 @@
 
     .line 7
     :cond_5
-    iget-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide1ViewController;->a:Lcom/vk/promo/f;
+    iget-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide1ViewController;->a:Lcom/vk/promo/PromoNavigator;
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1, p0}, Lcom/vk/promo/f;->a(Lcom/vk/promo/PromoViewController;)V
+    invoke-interface {p1, p0}, Lcom/vk/promo/PromoNavigator;->a(Lcom/vk/promo/PromoViewController;)V
 
     :cond_6
     :goto_0

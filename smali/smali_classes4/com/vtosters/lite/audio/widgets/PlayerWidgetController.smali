@@ -12,20 +12,20 @@
 
 
 # instance fields
-.field private a:Lc/a/n;
+.field private a:Lio/reactivex/ObservableEmitter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/n<",
+            "Lio/reactivex/ObservableEmitter<",
             "Landroid/content/Context;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final b:Lc/a/m;
+.field private final b:Lio/reactivex/Observable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/content/Context;",
             ">;"
         }
@@ -41,7 +41,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -57,15 +57,15 @@
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController$c;-><init>(Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;)V
 
-    invoke-static {v0}, Lc/a/m;->a(Lc/a/o;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->a(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "Observable.create { observer = it }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->b:Lc/a/m;
+    iput-object v0, p0, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->b:Lio/reactivex/Observable;
 
     .line 3
     invoke-direct {p0}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->a()V
@@ -82,32 +82,32 @@
     .end annotation
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->b:Lc/a/m;
+    iget-object v0, p0, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->b:Lio/reactivex/Observable;
 
     .line 5
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v2, 0xc8
 
-    invoke-virtual {v0, v2, v3, v1}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v0, v2, v3, v1}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 6
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 7
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -116,12 +116,12 @@
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController$b;-><init>(Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method private final a(Landroid/content/Context;Ljava/lang/Class;Lkotlin/jvm/b/c;)V
+.method private final a(Landroid/content/Context;Ljava/lang/Class;Lkotlin/jvm/b/Functions1;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -129,11 +129,11 @@
             "Landroid/content/Context;",
             "Ljava/lang/Class<",
             "*>;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/appwidget/AppWidgetManager;",
             "-[I",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -179,9 +179,9 @@
     const-string p2, "awm"
 
     .line 12
-    invoke-static {v1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p3, v1, p1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v1, p1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -209,11 +209,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;Lc/a/n;)V
+.method public static final synthetic a(Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;Lio/reactivex/ObservableEmitter;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->a:Lc/a/n;
+    iput-object p1, p0, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->a:Lio/reactivex/ObservableEmitter;
 
     return-void
 .end method
@@ -228,7 +228,7 @@
 
     invoke-direct {v1, p1}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController$updateAllWidget$1;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->a(Landroid/content/Context;Ljava/lang/Class;Lkotlin/jvm/b/c;)V
+    invoke-direct {p0, p1, v0, v1}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->a(Landroid/content/Context;Ljava/lang/Class;Lkotlin/jvm/b/Functions1;)V
 
     .line 2
     const-class v0, Lcom/vtosters/lite/audio/widgets/PlayerBigWidget;
@@ -237,7 +237,7 @@
 
     invoke-direct {v1, p1}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController$updateAllWidget$2;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->a(Landroid/content/Context;Ljava/lang/Class;Lkotlin/jvm/b/c;)V
+    invoke-direct {p0, p1, v0, v1}, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->a(Landroid/content/Context;Ljava/lang/Class;Lkotlin/jvm/b/Functions1;)V
 
     return-void
 .end method
@@ -248,11 +248,11 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->a:Lc/a/n;
+    iget-object v0, p0, Lcom/vtosters/lite/audio/widgets/PlayerWidgetController;->a:Lio/reactivex/ObservableEmitter;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lc/a/f;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lio/reactivex/Emitter;->b(Ljava/lang/Object;)V
 
     :cond_0
     return-void

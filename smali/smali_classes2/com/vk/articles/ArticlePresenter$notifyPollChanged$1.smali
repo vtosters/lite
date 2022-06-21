@@ -3,7 +3,7 @@
 .source "ArticlePresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/attachments/PollAttachment;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -65,7 +65,7 @@
     invoke-static {v0, v1}, Lcom/vk/articles/ArticlePresenter;->a(Lcom/vk/articles/ArticlePresenter;I)V
 
     .line 2
-    sget-object v0, Lb/h/t/k/b;->a:Lb/h/t/k/b;
+    sget-object v0, Lb/h/t/k/PollController;->a:Lb/h/t/k/PollController;
 
     invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
@@ -73,20 +73,20 @@
 
     const-string v2, "it.poll"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lb/h/t/k/b;->a(Lcom/vk/dto/polls/Poll;)V
+    invoke-virtual {v0, v1}, Lb/h/t/k/PollController;->a(Lcom/vk/dto/polls/Poll;)V
 
     .line 3
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
     const/16 v1, 0x78
 
-    invoke-virtual {v0, v1, p1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -99,7 +99,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/articles/ArticlePresenter$notifyPollChanged$1;->a(Lcom/vtosters/lite/attachments/PollAttachment;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

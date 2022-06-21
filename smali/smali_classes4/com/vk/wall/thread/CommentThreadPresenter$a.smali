@@ -3,12 +3,12 @@
 .source "CommentThreadPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/thread/CommentThreadPresenter;->b(Lcom/vtosters/lite/q;)V
+    value = Lcom/vk/wall/thread/CommentThreadPresenter;->b(Lcom/vtosters/lite/Comment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/user/UserProfile;",
         ">;>;"
@@ -33,16 +33,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-.field final synthetic b:Lcom/vtosters/lite/q;
+.field final synthetic b:Lcom/vtosters/lite/Comment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/wall/thread/CommentThreadPresenter;Lcom/vtosters/lite/q;)V
+.method constructor <init>(Lcom/vk/wall/thread/CommentThreadPresenter;Lcom/vtosters/lite/Comment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    iput-object p2, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vtosters/lite/q;
+    iput-object p2, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vtosters/lite/Comment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -68,27 +68,27 @@
     invoke-direct {v0}, Lcom/vk/dto/user/UserProfile;-><init>()V
 
     .line 2
-    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vtosters/lite/q;
+    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vtosters/lite/Comment;
 
-    invoke-interface {v1}, Lcom/vtosters/lite/q;->getUid()I
+    invoke-interface {v1}, Lcom/vtosters/lite/Comment;->getUid()I
 
     move-result v1
 
     iput v1, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
     .line 3
-    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vtosters/lite/q;
+    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vtosters/lite/Comment;
 
-    invoke-interface {v1}, Lcom/vtosters/lite/q;->U0()Ljava/lang/String;
+    invoke-interface {v1}, Lcom/vtosters/lite/Comment;->U0()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/vk/dto/user/UserProfile;->d:Ljava/lang/String;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vtosters/lite/q;
+    iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$a;->b:Lcom/vtosters/lite/Comment;
 
-    invoke-interface {v1}, Lcom/vtosters/lite/q;->l1()Ljava/lang/String;
+    invoke-interface {v1}, Lcom/vtosters/lite/Comment;->l1()Ljava/lang/String;
 
     move-result-object v1
 
@@ -104,7 +104,7 @@
     const-string v1, "users"
 
     .line 6
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->g(Ljava/util/List;)Ljava/lang/Object;
 
@@ -136,7 +136,7 @@
 
     const-string v1, "r"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lcom/vk/wall/thread/CommentThreadPresenter;Lcom/vk/dto/user/UserProfile;)V
 

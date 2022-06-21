@@ -22,7 +22,7 @@
 
 .field private final c:Ljava/lang/String;
 
-.field private final d:Lcom/vk/dto/market/cart/b;
+.field private final d:Lcom/vk/dto/market/cart/MarketOrderSettings3;
 
 .field private final e:Ljava/lang/String;
 
@@ -30,7 +30,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/dto/market/cart/a;",
+            "Lcom/vk/dto/market/cart/MarketOrderSettings1;",
             ">;"
         }
     .end annotation
@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/market/cart/MarketDeliveryOption$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/market/cart/MarketDeliveryOption$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->g:Lcom/vk/dto/market/cart/MarketDeliveryOption$Companion;
 
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/market/cart/b;Ljava/lang/String;Ljava/util/List;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/market/cart/MarketOrderSettings3;Ljava/lang/String;Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -68,10 +68,10 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            "Lcom/vk/dto/market/cart/b;",
+            "Lcom/vk/dto/market/cart/MarketOrderSettings3;",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/vk/dto/market/cart/a;",
+            "Lcom/vk/dto/market/cart/MarketOrderSettings1;",
             ">;)V"
         }
     .end annotation
@@ -85,7 +85,7 @@
 
     iput-object p3, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->c:Ljava/lang/String;
 
-    iput-object p4, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->d:Lcom/vk/dto/market/cart/b;
+    iput-object p4, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->d:Lcom/vk/dto/market/cart/MarketOrderSettings3;
 
     iput-object p5, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->e:Ljava/lang/String;
 
@@ -120,7 +120,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/dto/market/cart/a;",
+            "Lcom/vk/dto/market/cart/MarketOrderSettings1;",
             ">;"
         }
     .end annotation
@@ -131,11 +131,11 @@
     return-object v0
 .end method
 
-.method public final d()Lcom/vk/dto/market/cart/b;
+.method public final d()Lcom/vk/dto/market/cart/MarketOrderSettings3;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->d:Lcom/vk/dto/market/cart/b;
+    iget-object v0, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->d:Lcom/vk/dto/market/cart/MarketOrderSettings3;
 
     return-object v0
 .end method
@@ -164,7 +164,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/market/cart/MarketDeliveryOption;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -174,7 +174,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/market/cart/MarketDeliveryOption;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -184,17 +184,17 @@
 
     iget-object v1, p1, Lcom/vk/dto/market/cart/MarketDeliveryOption;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->d:Lcom/vk/dto/market/cart/b;
+    iget-object v0, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->d:Lcom/vk/dto/market/cart/MarketOrderSettings3;
 
-    iget-object v1, p1, Lcom/vk/dto/market/cart/MarketDeliveryOption;->d:Lcom/vk/dto/market/cart/b;
+    iget-object v1, p1, Lcom/vk/dto/market/cart/MarketDeliveryOption;->d:Lcom/vk/dto/market/cart/MarketOrderSettings3;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -204,7 +204,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/market/cart/MarketDeliveryOption;->e:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -214,7 +214,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/market/cart/MarketDeliveryOption;->f:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -300,11 +300,11 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->d:Lcom/vk/dto/market/cart/b;
+    iget-object v2, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->d:Lcom/vk/dto/market/cart/MarketOrderSettings3;
 
     if-eqz v2, :cond_3
 
-    invoke-virtual {v2}, Lcom/vk/dto/market/cart/b;->hashCode()I
+    invoke-virtual {v2}, Lcom/vk/dto/market/cart/MarketOrderSettings3;->hashCode()I
 
     move-result v2
 
@@ -385,7 +385,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->d:Lcom/vk/dto/market/cart/b;
+    iget-object v1, p0, Lcom/vk/dto/market/cart/MarketDeliveryOption;->d:Lcom/vk/dto/market/cart/MarketOrderSettings3;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

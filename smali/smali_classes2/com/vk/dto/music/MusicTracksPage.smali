@@ -22,10 +22,10 @@
     .end annotation
 .end field
 
-.field public static final c:Lcom/vk/dto/common/data/c;
+.field public static final c:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/music/MusicTracksPage;",
             ">;"
         }
@@ -55,7 +55,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/music/MusicTracksPage$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/music/MusicTracksPage$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/music/MusicTracksPage$b;
@@ -70,7 +70,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/music/MusicTracksPage$a;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/music/MusicTracksPage;->c:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/music/MusicTracksPage;->c:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method
@@ -133,13 +133,13 @@
     .locals 3
 
     .line 2
-    sget-object v0, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
+    sget-object v0, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
 
-    sget-object v1, Lcom/vk/dto/music/MusicTrack;->W:Lcom/vk/dto/common/data/c;
+    sget-object v1, Lcom/vk/dto/music/MusicTrack;->W:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v2, "audios"
 
-    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/dto/common/data/c$a;->b(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
+    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/dto/common/data/JsonParser$a;->b(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -191,7 +191,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/music/MusicTracksPage;->a:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -201,7 +201,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/music/MusicTracksPage;->b:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

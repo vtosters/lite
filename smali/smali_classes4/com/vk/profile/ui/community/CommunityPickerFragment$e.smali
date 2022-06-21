@@ -3,7 +3,7 @@
 .source "CommunityPickerFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/util/p1/e;
+.implements Lcom/vk/core/util/p1/PaginatedListDataProvider;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/core/util/p1/e<",
+        "Lcom/vk/core/util/p1/PaginatedListDataProvider<",
         "Lcom/vk/dto/group/Group;",
         ">;"
     }
@@ -38,16 +38,16 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/core/util/a0;I)Lc/a/m;
+.method public a(Lcom/vk/core/util/Either;I)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/util/a0<",
+            "Lcom/vk/core/util/Either<",
             "Ljava/lang/Integer;",
             "Ljava/lang/String;",
             ">;I)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/group/Group;",
             ">;>;"
@@ -55,27 +55,27 @@
     .end annotation
 
     .line 1
-    instance-of v0, p1, Lcom/vk/core/util/a0$a;
+    instance-of v0, p1, Lcom/vk/core/util/Either$a;
 
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/api/groups/f;
+    new-instance v0, Lcom/vk/api/groups/GroupsGet;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/api/groups/f;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/groups/GroupsGet;-><init>(I)V
 
     .line 3
-    check-cast p1, Lcom/vk/core/util/a0$a;
+    check-cast p1, Lcom/vk/core/util/Either$a;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/a0$a;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/core/util/Either$a;->a()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -85,18 +85,18 @@
 
     move-result p1
 
-    invoke-virtual {v0, p2, p1}, Lcom/vk/api/groups/f;->a(II)Lcom/vk/api/groups/f;
+    invoke-virtual {v0, p2, p1}, Lcom/vk/api/groups/GroupsGet;->a(II)Lcom/vk/api/groups/GroupsGet;
 
     const-string p1, "can_enable_notifications"
 
     .line 4
-    invoke-virtual {v0, p1}, Lcom/vk/api/groups/f;->d(Ljava/lang/String;)Lcom/vk/api/groups/f;
+    invoke-virtual {v0, p1}, Lcom/vk/api/groups/GroupsGet;->d(Ljava/lang/String;)Lcom/vk/api/groups/GroupsGet;
 
     const/4 p1, 0x1
 
     const/4 p2, 0x0
 
-    invoke-static {v0, p2, p1, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p2, p1, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 

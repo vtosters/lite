@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private a:Lcom/vk/sharing/target/o;
+.field private a:Lcom/vk/sharing/target/TargetsLoader;
 
-.field private b:Lcom/vk/sharing/attachment/j;
+.field private b:Lcom/vk/sharing/attachment/AttachmentViewHolder;
 
 
 # direct methods
@@ -39,38 +39,38 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/sharing/SharingActivity$b;Lcom/vk/sharing/attachment/j;)Lcom/vk/sharing/attachment/j;
+.method static synthetic a(Lcom/vk/sharing/SharingActivity$b;Lcom/vk/sharing/attachment/AttachmentViewHolder;)Lcom/vk/sharing/attachment/AttachmentViewHolder;
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/sharing/SharingActivity$b;->b:Lcom/vk/sharing/attachment/j;
+    iput-object p1, p0, Lcom/vk/sharing/SharingActivity$b;->b:Lcom/vk/sharing/attachment/AttachmentViewHolder;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/vk/sharing/SharingActivity$b;)Lcom/vk/sharing/target/o;
+.method static synthetic a(Lcom/vk/sharing/SharingActivity$b;)Lcom/vk/sharing/target/TargetsLoader;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/sharing/SharingActivity$b;->a:Lcom/vk/sharing/target/o;
+    iget-object p0, p0, Lcom/vk/sharing/SharingActivity$b;->a:Lcom/vk/sharing/target/TargetsLoader;
 
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/vk/sharing/SharingActivity$b;Lcom/vk/sharing/target/o;)Lcom/vk/sharing/target/o;
+.method static synthetic a(Lcom/vk/sharing/SharingActivity$b;Lcom/vk/sharing/target/TargetsLoader;)Lcom/vk/sharing/target/TargetsLoader;
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/sharing/SharingActivity$b;->a:Lcom/vk/sharing/target/o;
+    iput-object p1, p0, Lcom/vk/sharing/SharingActivity$b;->a:Lcom/vk/sharing/target/TargetsLoader;
 
     return-object p1
 .end method
 
-.method static synthetic b(Lcom/vk/sharing/SharingActivity$b;)Lcom/vk/sharing/attachment/j;
+.method static synthetic b(Lcom/vk/sharing/SharingActivity$b;)Lcom/vk/sharing/attachment/AttachmentViewHolder;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/sharing/SharingActivity$b;->b:Lcom/vk/sharing/attachment/j;
+    iget-object p0, p0, Lcom/vk/sharing/SharingActivity$b;->b:Lcom/vk/sharing/attachment/AttachmentViewHolder;
 
     return-object p0
 .end method

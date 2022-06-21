@@ -3,7 +3,7 @@
 .source "DefaultMediaPlayer.kt"
 
 # interfaces
-.implements Lcom/vk/audiomsg/player/j/a;
+.implements Lcom/vk/audiomsg/player/j/MediaPlayer;
 
 
 # annotations
@@ -21,29 +21,29 @@
 
 .field private final b:Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$b;
 
-.field private final c:Lcom/vk/audiofocus/a;
+.field private final c:Lcom/vk/audiofocus/AudioFocusManager;
 
 .field private final d:Ljava/util/concurrent/CopyOnWriteArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/CopyOnWriteArrayList<",
-            "Lcom/vk/audiomsg/player/j/b;",
+            "Lcom/vk/audiomsg/player/j/MediaPlayerListener;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final e:Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+.field private final e:Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
     .annotation build Landroidx/annotation/GuardedBy;
         value = "this"
     .end annotation
 .end field
 
-.field private final f:Lkotlin/jvm/b/a;
+.field private final f:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lcom/vk/audiomsg/player/k/a;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lcom/vk/audiomsg/player/k/TrackPlayer;",
             ">;"
         }
     .end annotation
@@ -58,20 +58,20 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
-            "Lcom/vk/audiomsg/player/k/a;",
+            "Lcom/vk/audiomsg/player/k/TrackPlayer;",
             ">;)V"
         }
     .end annotation
@@ -79,7 +79,7 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->f:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->f:Lkotlin/jvm/b/Functions;
 
     .line 2
     new-instance p2, Landroid/os/Handler;
@@ -100,7 +100,7 @@
     iput-object p2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b:Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$b;
 
     .line 4
-    new-instance p2, Lcom/vk/audiofocus/b;
+    new-instance p2, Lcom/vk/audiofocus/AudioFocusManagerCompat;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -108,17 +108,17 @@
 
     const-string v0, "context.applicationContext"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p2, p1}, Lcom/vk/audiofocus/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/audiofocus/AudioFocusManagerCompat;-><init>(Landroid/content/Context;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b:Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$b;
 
-    invoke-virtual {p2, p1}, Lcom/vk/audiofocus/b;->a(Lcom/vk/audiofocus/a$a;)V
+    invoke-virtual {p2, p1}, Lcom/vk/audiofocus/AudioFocusManagerCompat;->a(Lcom/vk/audiofocus/AudioFocusManager$a;)V
 
     .line 6
-    iput-object p2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->c:Lcom/vk/audiofocus/a;
+    iput-object p2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->c:Lcom/vk/audiofocus/AudioFocusManager;
 
     .line 7
     new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -128,22 +128,22 @@
     iput-object p1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     .line 8
-    iget-object p1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->f:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->f:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
     move-object v1, p1
 
-    check-cast v1, Lcom/vk/audiomsg/player/k/a;
+    check-cast v1, Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     .line 9
     new-instance p1, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;
 
     invoke-direct {p1, p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$TrackPlayerListenerImpl;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)V
 
-    invoke-interface {v1, p1}, Lcom/vk/audiomsg/player/k/a;->a(Lcom/vk/audiomsg/player/k/b;)V
+    invoke-interface {v1, p1}, Lcom/vk/audiomsg/player/k/TrackPlayer;->a(Lcom/vk/audiomsg/player/k/TrackPlayerListener;)V
 
     .line 10
     invoke-static {}, Lkotlin/collections/l;->a()Ljava/util/List;
@@ -151,7 +151,7 @@
     move-result-object v2
 
     .line 11
-    new-instance p1, Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    new-instance p1, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     const/4 v3, 0x1
 
@@ -163,41 +163,41 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;-><init>(Lcom/vk/audiomsg/player/k/a;Ljava/util/List;ZZLjava/lang/Float;Z)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;-><init>(Lcom/vk/audiomsg/player/k/TrackPlayer;Ljava/util/List;ZZLjava/lang/Float;Z)V
 
-    iput-object p1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e:Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    iput-object p1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e:Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiofocus/a;
+.method public static final synthetic a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiofocus/AudioFocusManager;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->c:Lcom/vk/audiofocus/a;
+    iget-object p0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->c:Lcom/vk/audiofocus/AudioFocusManager;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
+.method public static final synthetic a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
+.method public static final synthetic a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(ZLkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(ZLkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method private final a(ZLkotlin/jvm/b/b;)V
+.method private final a(ZLkotlin/jvm/b/Functions2;)V
     .locals 6
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -205,10 +205,10 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vk/audiomsg/player/j/b;",
-            "Lkotlin/m;",
+            "Lcom/vk/audiomsg/player/j/MediaPlayerListener;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -237,14 +237,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/audiomsg/player/j/b;
+    check-cast v0, Lcom/vk/audiomsg/player/j/MediaPlayerListener;
 
     const-string v1, "it"
 
     .line 9
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -271,19 +271,19 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/audiomsg/player/j/b;
+    check-cast v0, Lcom/vk/audiomsg/player/j/MediaPlayerListener;
 
     .line 12
     new-instance v1, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$notifyListeners$$inlined$forEach$lambda$1;
 
-    invoke-direct {v1, v0, p0, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$notifyListeners$$inlined$forEach$lambda$1;-><init>(Lcom/vk/audiomsg/player/j/b;Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, v0, p0, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$notifyListeners$$inlined$forEach$lambda$1;-><init>(Lcom/vk/audiomsg/player/j/MediaPlayerListener;Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lkotlin/jvm/b/Functions2;)V
 
     .line 13
     iget-object v2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a:Landroid/os/Handler;
 
-    new-instance v3, Lcom/vk/audiomsg/player/mediaplayer/impl/a;
+    new-instance v3, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer1;
 
-    invoke-direct {v3, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/a;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v3, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -297,16 +297,16 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+.method public static final synthetic b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e:Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    iget-object p0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e:Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     return-object p0
 .end method
 
-.method private final declared-synchronized b(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
+.method private final declared-synchronized b(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
     .locals 2
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -315,23 +315,23 @@
 
     .line 21
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 22
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 23
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -339,9 +339,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/audiomsg/player/d;
+    check-cast v1, Lcom/vk/audiomsg/player/AudioMsgTrack;
 
-    invoke-static {v1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -350,16 +350,16 @@
     const/4 v1, 0x1
 
     .line 24
-    invoke-virtual {v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->b(Z)V
 
     const/4 v0, 0x0
 
     .line 25
     new-instance v1, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$handleTrackComplete$$inlined$accessState$lambda$1;
 
-    invoke-direct {v1, p0, p2, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$handleTrackComplete$$inlined$accessState$lambda$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/d;Lcom/vk/audiomsg/player/f;)V
+    invoke-direct {v1, p0, p2, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$handleTrackComplete$$inlined$accessState$lambda$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/AudioMsgTrack;Lcom/vk/audiomsg/player/Source;)V
 
-    invoke-static {p0, v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
+    invoke-static {p0, v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
 
     .line 26
     invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->h(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)V
@@ -368,10 +368,10 @@
 
     .line 27
     :cond_0
-    invoke-static {p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
+    invoke-static {p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
 
     .line 28
-    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/f;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/Source;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -402,16 +402,16 @@
     throw p1
 .end method
 
-.method public static final synthetic b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
+.method public static final synthetic b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->c(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->c(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
 
     return-void
 .end method
 
-.method private final declared-synchronized c(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
+.method private final declared-synchronized c(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
     .locals 2
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -420,23 +420,23 @@
 
     .line 4
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 5
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -447,7 +447,7 @@
     if-ltz p2, :cond_0
 
     .line 7
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -458,7 +458,7 @@
     if-ge p2, v1, :cond_0
 
     .line 8
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -468,9 +468,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/audiomsg/player/d;
+    check-cast p2, Lcom/vk/audiomsg/player/AudioMsgTrack;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -546,18 +546,18 @@
 
     .line 2
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 3
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
@@ -565,10 +565,10 @@
     invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->j(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)V
 
     .line 5
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->k(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lkotlin/m;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->k(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lkotlin/Unit;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->g()V
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->g()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -616,18 +616,18 @@
 
     .line 2
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 3
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
@@ -639,20 +639,20 @@
     if-eqz v1, :cond_0
 
     .line 5
-    sget-object v1, Lcom/vk/audiomsg/player/g;->f:Lcom/vk/audiomsg/player/g;
+    sget-object v1, Lcom/vk/audiomsg/player/Sources;->f:Lcom/vk/audiomsg/player/Sources;
 
-    invoke-virtual {v1}, Lcom/vk/audiomsg/player/g;->b()Lcom/vk/audiomsg/player/f;
+    invoke-virtual {v1}, Lcom/vk/audiomsg/player/Sources;->b()Lcom/vk/audiomsg/player/Source;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/f;)V
+    invoke-virtual {p0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/Source;)V
 
     .line 6
     :cond_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->k(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lkotlin/m;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->k(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lkotlin/Unit;
 
     .line 7
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->g()V
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->g()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -700,18 +700,18 @@
 
     .line 2
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 3
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
@@ -725,16 +725,16 @@
     const/4 v1, 0x1
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->a(Z)V
 
     .line 6
-    sget-object v0, Lcom/vk/audiomsg/player/g;->f:Lcom/vk/audiomsg/player/g;
+    sget-object v0, Lcom/vk/audiomsg/player/Sources;->f:Lcom/vk/audiomsg/player/Sources;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/g;->b()Lcom/vk/audiomsg/player/f;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/Sources;->b()Lcom/vk/audiomsg/player/Source;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/f;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/Source;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -785,18 +785,18 @@
 
     .line 2
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 3
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
@@ -809,12 +809,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->a(Ljava/lang/Float;)V
+    invoke-virtual {v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->a(Ljava/lang/Float;)V
 
     .line 5
-    sget-object v0, Lcom/vk/audiomsg/player/g;->f:Lcom/vk/audiomsg/player/g;
+    sget-object v0, Lcom/vk/audiomsg/player/Sources;->f:Lcom/vk/audiomsg/player/Sources;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/g;->b()Lcom/vk/audiomsg/player/f;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/Sources;->b()Lcom/vk/audiomsg/player/Source;
 
     move-result-object v0
 
@@ -826,7 +826,7 @@
 
     mul-float v1, v1, v2
 
-    invoke-virtual {p0, v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/f;F)V
+    invoke-virtual {p0, v0, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/Source;F)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -865,11 +865,11 @@
     return-void
 .end method
 
-.method public static final synthetic k(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lkotlin/m;
+.method public static final synthetic k(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lkotlin/Unit;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->o()Lkotlin/m;
+    invoke-direct {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->o()Lkotlin/Unit;
 
     move-result-object p0
 
@@ -896,33 +896,33 @@
 
     .line 1
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 2
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 3
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiofocus/a;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiofocus/AudioFocusManager;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/audiofocus/a;->a()V
+    invoke-interface {v1}, Lcom/vk/audiofocus/AudioFocusManager;->a()V
 
     .line 4
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->k(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lkotlin/m;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->k(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lkotlin/Unit;
 
     .line 5
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->g()V
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->g()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -961,37 +961,37 @@
 
     .line 1
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 2
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 3
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiofocus/a;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiofocus/AudioFocusManager;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/audiofocus/a;->requestFocus()Z
+    invoke-interface {v1}, Lcom/vk/audiofocus/AudioFocusManager;->requestFocus()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 4
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->k(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lkotlin/m;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->k(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lkotlin/Unit;
 
     .line 5
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->g()V
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->g()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1038,36 +1038,36 @@
 
     .line 1
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 2
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->a()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 4
-    sget-object v0, Lcom/vk/audiomsg/player/g;->f:Lcom/vk/audiomsg/player/g;
+    sget-object v0, Lcom/vk/audiomsg/player/Sources;->f:Lcom/vk/audiomsg/player/Sources;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/g;->b()Lcom/vk/audiomsg/player/f;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/Sources;->b()Lcom/vk/audiomsg/player/Source;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/f;)V
+    invoke-virtual {p0, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/Source;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1098,7 +1098,7 @@
     throw v0
 .end method
 
-.method private final declared-synchronized o()Lkotlin/m;
+.method private final declared-synchronized o()Lkotlin/Unit;
     .locals 2
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -1107,23 +1107,23 @@
 
     .line 1
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 2
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->b()Ljava/lang/Float;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->b()Ljava/lang/Float;
 
     move-result-object v0
 
@@ -1134,16 +1134,16 @@
     move-result v0
 
     .line 4
-    sget-object v1, Lcom/vk/audiomsg/player/g;->f:Lcom/vk/audiomsg/player/g;
+    sget-object v1, Lcom/vk/audiomsg/player/Sources;->f:Lcom/vk/audiomsg/player/Sources;
 
-    invoke-virtual {v1}, Lcom/vk/audiomsg/player/g;->b()Lcom/vk/audiomsg/player/f;
+    invoke-virtual {v1}, Lcom/vk/audiomsg/player/Sources;->b()Lcom/vk/audiomsg/player/Source;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/f;F)V
+    invoke-virtual {p0, v1, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/Source;F)V
 
     .line 5
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1195,27 +1195,27 @@
 
     .line 1
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 2
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/a;->R()F
+    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/TrackPlayer;->R()F
 
     move-result v0
     :try_end_0
@@ -1246,7 +1246,7 @@
     throw v0
 .end method
 
-.method public declared-synchronized S()Lcom/vk/audiomsg/player/d;
+.method public declared-synchronized S()Lcom/vk/audiomsg/player/AudioMsgTrack;
     .locals 2
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -1255,27 +1255,27 @@
 
     .line 1
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 2
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/a;->u0()Lcom/vk/audiomsg/player/d;
+    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/TrackPlayer;->u0()Lcom/vk/audiomsg/player/AudioMsgTrack;
 
     move-result-object v0
     :try_end_0
@@ -1315,27 +1315,27 @@
 
     .line 1
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 2
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/a;->T()Lcom/vk/audiomsg/player/Speed;
+    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/TrackPlayer;->T()Lcom/vk/audiomsg/player/Speed;
 
     move-result-object v0
     :try_end_0
@@ -1375,7 +1375,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/audiomsg/player/d;",
+            "Lcom/vk/audiomsg/player/AudioMsgTrack;",
             ">;"
         }
     .end annotation
@@ -1384,23 +1384,23 @@
 
     .line 1
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 2
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->f()Ljava/util/List;
 
     move-result-object v0
     :try_end_0
@@ -1450,7 +1450,7 @@
     return v0
 .end method
 
-.method public declared-synchronized a(Lcom/vk/audiomsg/player/f;)V
+.method public declared-synchronized a(Lcom/vk/audiomsg/player/Source;)V
     .locals 2
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -1459,23 +1459,23 @@
 
     .line 33
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 34
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 35
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -1487,11 +1487,11 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/audiomsg/player/k/a;->b()Z
+    invoke-interface {v1}, Lcom/vk/audiomsg/player/k/TrackPlayer;->b()Z
 
     move-result v1
 
@@ -1504,16 +1504,16 @@
     if-eqz v1, :cond_0
 
     .line 36
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Lcom/vk/audiomsg/player/k/a;->a(Lcom/vk/audiomsg/player/f;)V
+    invoke-interface {v1, p1}, Lcom/vk/audiomsg/player/k/TrackPlayer;->a(Lcom/vk/audiomsg/player/Source;)V
 
     const/4 p1, 0x0
 
     .line 37
-    invoke-virtual {v0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->b(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1544,7 +1544,7 @@
     throw p1
 .end method
 
-.method public declared-synchronized a(Lcom/vk/audiomsg/player/f;F)V
+.method public declared-synchronized a(Lcom/vk/audiomsg/player/Source;F)V
     .locals 1
     .param p2    # F
         .annotation build Landroidx/annotation/FloatRange;
@@ -1559,27 +1559,27 @@
 
     .line 44
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 45
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 46
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/audiomsg/player/k/a;->a(Lcom/vk/audiomsg/player/f;F)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/audiomsg/player/k/TrackPlayer;->a(Lcom/vk/audiomsg/player/Source;F)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1609,7 +1609,7 @@
     throw p1
 .end method
 
-.method public declared-synchronized a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/SpeakerType;)V
+.method public declared-synchronized a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/SpeakerType;)V
     .locals 1
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -1618,27 +1618,27 @@
 
     .line 49
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 50
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 51
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/audiomsg/player/k/a;->a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/SpeakerType;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/audiomsg/player/k/TrackPlayer;->a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/SpeakerType;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1668,7 +1668,7 @@
     throw p1
 .end method
 
-.method public declared-synchronized a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/Speed;)V
+.method public declared-synchronized a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/Speed;)V
     .locals 1
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -1677,27 +1677,27 @@
 
     .line 54
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 55
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 56
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/audiomsg/player/k/a;->a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/Speed;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/audiomsg/player/k/TrackPlayer;->a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/Speed;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1726,7 +1726,7 @@
     throw p1
 .end method
 
-.method public declared-synchronized a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
+.method public declared-synchronized a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
     .locals 2
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -1735,23 +1735,23 @@
 
     .line 26
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 27
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 28
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -1762,16 +1762,16 @@
     if-eqz v1, :cond_0
 
     .line 29
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v1
 
-    invoke-interface {v1, p1, p2}, Lcom/vk/audiomsg/player/k/a;->a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
+    invoke-interface {v1, p1, p2}, Lcom/vk/audiomsg/player/k/TrackPlayer;->a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
 
     const/4 p1, 0x0
 
     .line 30
-    invoke-virtual {v0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->b(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1802,7 +1802,7 @@
     throw p1
 .end method
 
-.method public declared-synchronized a(Lcom/vk/audiomsg/player/f;Ljava/util/List;)V
+.method public declared-synchronized a(Lcom/vk/audiomsg/player/Source;Ljava/util/List;)V
     .locals 4
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -1810,9 +1810,9 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/audiomsg/player/f;",
+            "Lcom/vk/audiomsg/player/Source;",
             "Ljava/util/List<",
-            "Lcom/vk/audiomsg/player/d;",
+            "Lcom/vk/audiomsg/player/AudioMsgTrack;",
             ">;)V"
         }
     .end annotation
@@ -1821,52 +1821,52 @@
 
     .line 14
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 15
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 16
-    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e(Lcom/vk/audiomsg/player/f;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e(Lcom/vk/audiomsg/player/Source;)V
 
     .line 17
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->c()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->c()Z
 
     move-result v1
 
     .line 18
-    invoke-virtual {v0, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->a(Ljava/util/List;)V
+    invoke-virtual {v0, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->a(Ljava/util/List;)V
 
     .line 19
     invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->b(Z)V
+    invoke-virtual {v0, v2}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->b(Z)V
 
     .line 20
     new-instance v2, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;
 
-    invoke-direct {v2, p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/f;Ljava/util/List;)V
+    invoke-direct {v2, p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/Source;Ljava/util/List;)V
 
     const/4 v3, 0x0
 
-    invoke-static {p0, v3, v2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
+    invoke-static {p0, v3, v2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
 
     if-nez v1, :cond_0
 
     .line 21
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->c()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->c()Z
 
     move-result v1
 
@@ -1875,13 +1875,13 @@
     .line 22
     new-instance v1, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$2;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$2;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/f;Ljava/util/List;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$2;-><init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/Source;Ljava/util/List;)V
 
-    invoke-static {p0, v3, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/b;)V
+    invoke-static {p0, v3, v1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;ZLkotlin/jvm/b/Functions2;)V
 
     .line 23
     :cond_0
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
@@ -1889,9 +1889,9 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/audiomsg/player/d;
+    check-cast p2, Lcom/vk/audiomsg/player/AudioMsgTrack;
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/audiomsg/player/k/a;->a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/audiomsg/player/k/TrackPlayer;->a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1921,7 +1921,7 @@
     throw p1
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/j/b;)V
+.method public a(Lcom/vk/audiomsg/player/j/MediaPlayerListener;)V
     .locals 1
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -1948,23 +1948,23 @@
 
     .line 40
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 41
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 42
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->c()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->c()Z
 
     move-result v0
     :try_end_0
@@ -1995,7 +1995,7 @@
     throw v0
 .end method
 
-.method public declared-synchronized b(Lcom/vk/audiomsg/player/f;)V
+.method public declared-synchronized b(Lcom/vk/audiomsg/player/Source;)V
     .locals 2
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -2004,38 +2004,38 @@
 
     .line 8
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 9
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 10
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/audiomsg/player/k/a;->b()Z
+    invoke-interface {v1}, Lcom/vk/audiomsg/player/k/TrackPlayer;->b()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 11
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/audiomsg/player/k/a;->b(Lcom/vk/audiomsg/player/f;)V
+    invoke-interface {v0, p1}, Lcom/vk/audiomsg/player/k/TrackPlayer;->b(Lcom/vk/audiomsg/player/Source;)V
 
     .line 12
     invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->h(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)V
@@ -2069,7 +2069,7 @@
     throw p1
 .end method
 
-.method public declared-synchronized b(Lcom/vk/audiomsg/player/f;F)V
+.method public declared-synchronized b(Lcom/vk/audiomsg/player/Source;F)V
     .locals 2
     .param p2    # F
         .annotation build Landroidx/annotation/FloatRange;
@@ -2084,32 +2084,32 @@
 
     .line 15
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 16
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 17
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v1
 
-    invoke-interface {v1, p1, p2}, Lcom/vk/audiomsg/player/k/a;->b(Lcom/vk/audiomsg/player/f;F)V
+    invoke-interface {v1, p1, p2}, Lcom/vk/audiomsg/player/k/TrackPlayer;->b(Lcom/vk/audiomsg/player/Source;F)V
 
     const/4 p1, 0x0
 
     .line 18
-    invoke-virtual {v0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->a(Ljava/lang/Float;)V
+    invoke-virtual {v0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->a(Ljava/lang/Float;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -2139,7 +2139,7 @@
     throw p1
 .end method
 
-.method public b(Lcom/vk/audiomsg/player/j/b;)V
+.method public b(Lcom/vk/audiomsg/player/j/MediaPlayerListener;)V
     .locals 1
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -2161,27 +2161,27 @@
 
     .line 4
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 5
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/a;->b()Z
+    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/TrackPlayer;->b()Z
 
     move-result v0
     :try_end_0
@@ -2212,22 +2212,22 @@
     throw v0
 .end method
 
-.method public c(Lcom/vk/audiomsg/player/f;)V
+.method public c(Lcom/vk/audiomsg/player/Source;)V
     .locals 1
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->d(Lcom/vk/audiomsg/player/f;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->d(Lcom/vk/audiomsg/player/Source;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e:Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e:Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/audiomsg/player/k/a;->c(Lcom/vk/audiomsg/player/f;)V
+    invoke-interface {v0, p1}, Lcom/vk/audiomsg/player/k/TrackPlayer;->c(Lcom/vk/audiomsg/player/Source;)V
 
     return-void
 .end method
@@ -2241,27 +2241,27 @@
 
     .line 11
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 12
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 13
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/a;->c()Z
+    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/TrackPlayer;->c()Z
 
     move-result v0
     :try_end_0
@@ -2306,27 +2306,27 @@
 
     .line 9
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 10
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 11
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/a;->d()F
+    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/TrackPlayer;->d()F
 
     move-result v0
     :try_end_0
@@ -2357,7 +2357,7 @@
     throw v0
 .end method
 
-.method public declared-synchronized d(Lcom/vk/audiomsg/player/f;)V
+.method public declared-synchronized d(Lcom/vk/audiomsg/player/Source;)V
     .locals 2
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -2366,9 +2366,9 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e:Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e:Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
@@ -2379,35 +2379,35 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/f;Ljava/util/List;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/Source;Ljava/util/List;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->c:Lcom/vk/audiofocus/a;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->c:Lcom/vk/audiofocus/AudioFocusManager;
 
     iget-object v1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b:Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$b;
 
-    invoke-interface {v0, v1}, Lcom/vk/audiofocus/a;->b(Lcom/vk/audiofocus/a$a;)V
+    invoke-interface {v0, v1}, Lcom/vk/audiofocus/AudioFocusManager;->b(Lcom/vk/audiofocus/AudioFocusManager$a;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->c:Lcom/vk/audiofocus/a;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->c:Lcom/vk/audiofocus/AudioFocusManager;
 
-    invoke-interface {v0}, Lcom/vk/audiofocus/a;->a()V
+    invoke-interface {v0}, Lcom/vk/audiofocus/AudioFocusManager;->a()V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e:Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e:Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/audiomsg/player/k/a;->e(Lcom/vk/audiomsg/player/f;)V
+    invoke-interface {v0, p1}, Lcom/vk/audiomsg/player/k/TrackPlayer;->e(Lcom/vk/audiomsg/player/Source;)V
 
     .line 7
-    iget-object p1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e:Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    iget-object p1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->e:Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->c(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->c(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -2425,7 +2425,7 @@
     throw p1
 .end method
 
-.method public declared-synchronized e(Lcom/vk/audiomsg/player/f;)V
+.method public declared-synchronized e(Lcom/vk/audiomsg/player/Source;)V
     .locals 2
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -2434,47 +2434,47 @@
 
     .line 6
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 7
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 8
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/audiomsg/player/k/a;->b()Z
+    invoke-interface {v1}, Lcom/vk/audiomsg/player/k/TrackPlayer;->b()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/audiomsg/player/k/a;->C()Z
+    invoke-interface {v1}, Lcom/vk/audiomsg/player/k/TrackPlayer;->C()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/audiomsg/player/k/a;->a()Z
+    invoke-interface {v1}, Lcom/vk/audiomsg/player/k/TrackPlayer;->a()Z
 
     move-result v1
 
@@ -2482,11 +2482,11 @@
 
     .line 9
     :cond_0
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/audiomsg/player/k/a;->d(Lcom/vk/audiomsg/player/f;)V
+    invoke-interface {v0, p1}, Lcom/vk/audiomsg/player/k/TrackPlayer;->d(Lcom/vk/audiomsg/player/Source;)V
 
     .line 10
     invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->h(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)V
@@ -2529,27 +2529,27 @@
 
     .line 2
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 3
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/a;->t0()Z
+    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/TrackPlayer;->t0()Z
 
     move-result v0
     :try_end_0
@@ -2589,27 +2589,27 @@
 
     .line 2
     :try_start_0
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 3
-    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/b;
+    invoke-static {p0}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->b(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;)Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;
 
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/b;->d()Lcom/vk/audiomsg/player/k/a;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/mediaplayer/impl/PlayerState;->d()Lcom/vk/audiomsg/player/k/TrackPlayer;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/a;->f()Lcom/vk/audiomsg/player/SpeakerType;
+    invoke-interface {v0}, Lcom/vk/audiomsg/player/k/TrackPlayer;->f()Lcom/vk/audiomsg/player/SpeakerType;
 
     move-result-object v0
     :try_end_0

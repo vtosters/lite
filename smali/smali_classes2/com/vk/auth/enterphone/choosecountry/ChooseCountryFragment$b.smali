@@ -3,7 +3,7 @@
 .source "ChooseCountryFragment.kt"
 
 # interfaces
-.implements Lcom/vk/auth/utils/c$a;
+.implements Lcom/vk/auth/utils/KeyboardController$a;
 
 
 # annotations
@@ -46,11 +46,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment$b;->a:Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment;
 
-    invoke-static {v0}, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment;->b(Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment;)Lcom/vk/auth/main/i$a;
+    invoke-static {v0}, Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment;->b(Lcom/vk/auth/enterphone/choosecountry/ChooseCountryFragment;)Lcom/vk/auth/main/AuthUiManager$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/auth/main/i$a;->a()V
+    invoke-interface {v0}, Lcom/vk/auth/main/AuthUiManager$a;->a()V
 
     return-void
 .end method

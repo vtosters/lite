@@ -39,7 +39,7 @@
     .locals 1
 
     .line 1
-    new-instance p1, Lcom/vk/api/account/a;
+    new-instance p1, Lcom/vk/api/account/AccountBan;
 
     iget-object p2, p0, Lcom/vtosters/lite/fragments/ProfileFragment$f$a;->a:Lcom/vtosters/lite/fragments/ProfileFragment$f;
 
@@ -51,7 +51,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p2, v0}, Lcom/vk/api/account/a;-><init>(IZ)V
+    invoke-direct {p1, p2, v0}, Lcom/vk/api/account/AccountBan;-><init>(IZ)V
 
     new-instance p2, Lcom/vtosters/lite/fragments/ProfileFragment$f$a$a;
 
@@ -61,7 +61,7 @@
 
     invoke-direct {p2, p0, v0}, Lcom/vtosters/lite/fragments/ProfileFragment$f$a$a;-><init>(Lcom/vtosters/lite/fragments/ProfileFragment$f$a;Lcom/vk/core/fragments/FragmentImpl;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {p1, p2}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
@@ -74,9 +74,9 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/api/base/b;->a(Landroid/content/Context;)Lcom/vk/api/base/b;
+    invoke-virtual {p1, p2}, Lcom/vk/api/base/ApiCallbackDisposable;->a(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
 
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

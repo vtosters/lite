@@ -3,12 +3,12 @@
 .source "FaveController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/FaveController;->b(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;)V
+    value = Lcom/vk/fave/FaveController;->b(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lb/h/h/f/a;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lb/h/h/f/Favable;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lb/h/h/f/a;)V
+.method public final a(Lb/h/h/f/Favable;)V
     .locals 0
 
     return-void
@@ -66,11 +66,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/h/f/a;
+    check-cast p1, Lb/h/h/f/Favable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/fave/FaveController$toggleFave$2;->a(Lb/h/h/f/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/fave/FaveController$toggleFave$2;->a(Lb/h/h/f/Favable;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

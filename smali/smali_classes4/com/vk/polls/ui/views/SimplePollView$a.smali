@@ -46,13 +46,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView$a;->a:Lcom/vk/polls/ui/views/SimplePollView;
 
-    invoke-static {p1}, Lcom/vk/polls/ui/views/SimplePollView;->a(Lcom/vk/polls/ui/views/SimplePollView;)Lb/h/t/k/a;
+    invoke-static {p1}, Lcom/vk/polls/ui/views/SimplePollView;->a(Lcom/vk/polls/ui/views/SimplePollView;)Lb/h/t/k/DefaultPollVoteController;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/polls/ui/views/SimplePollView$a;->a:Lcom/vk/polls/ui/views/SimplePollView;
 
-    invoke-virtual {p1, v0}, Lb/h/t/k/a;->a(Lb/h/t/k/a$a;)V
+    invoke-virtual {p1, v0}, Lb/h/t/k/DefaultPollVoteController;->a(Lb/h/t/k/DefaultPollVoteController$a;)V
 
     return-void
 .end method
@@ -63,11 +63,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView$a;->a:Lcom/vk/polls/ui/views/SimplePollView;
 
-    invoke-static {p1}, Lcom/vk/polls/ui/views/SimplePollView;->a(Lcom/vk/polls/ui/views/SimplePollView;)Lb/h/t/k/a;
+    invoke-static {p1}, Lcom/vk/polls/ui/views/SimplePollView;->a(Lcom/vk/polls/ui/views/SimplePollView;)Lb/h/t/k/DefaultPollVoteController;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/t/k/a;->a()V
+    invoke-virtual {p1}, Lb/h/t/k/DefaultPollVoteController;->a()V
 
     return-void
 .end method

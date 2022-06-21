@@ -3,7 +3,7 @@
 .source "ImRequestsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/l;
+.implements Lio/reactivex/functions/Predicate;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/l<",
-        "Lcom/vk/im/engine/events/s;",
+        "Lio/reactivex/functions/Predicate<",
+        "Lcom/vk/im/engine/events/OnDialogsCountUpdateEvent;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/events/s;)Z
+.method public final a(Lcom/vk/im/engine/events/OnDialogsCountUpdateEvent;)Z
     .locals 2
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/events/s;->d()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
+    invoke-virtual {p1}, Lcom/vk/im/engine/events/OnDialogsCountUpdateEvent;->d()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/events/s;->c()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/events/OnDialogsCountUpdateEvent;->c()I
 
     move-result p1
 
@@ -89,9 +89,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/s;
+    check-cast p1, Lcom/vk/im/engine/events/OnDialogsCountUpdateEvent;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/fragments/ImRequestsFragment$f;->a(Lcom/vk/im/engine/events/s;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/fragments/ImRequestsFragment$f;->a(Lcom/vk/im/engine/events/OnDialogsCountUpdateEvent;)Z
 
     move-result p1
 

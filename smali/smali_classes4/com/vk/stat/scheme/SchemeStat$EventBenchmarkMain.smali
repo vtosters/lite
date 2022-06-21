@@ -42,7 +42,7 @@
     .end annotation
 .end field
 
-.field private final f:Lcom/vk/stat/scheme/d;
+.field private final f:Lcom/vk/stat/scheme/SchemeStat4;
     .annotation runtime Lcom/google/gson/t/c;
         value = "type_mini_app_start"
     .end annotation
@@ -50,7 +50,7 @@
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain$Type;Lcom/vk/stat/scheme/SchemeStat$TypeNetworkCommon;Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts;Lcom/vk/stat/scheme/d;)V
+.method public constructor <init>(ILjava/lang/String;Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain$Type;Lcom/vk/stat/scheme/SchemeStat$TypeNetworkCommon;Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts;Lcom/vk/stat/scheme/SchemeStat4;)V
     .locals 0
 
     .line 1
@@ -66,12 +66,12 @@
 
     iput-object p5, p0, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->e:Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts;
 
-    iput-object p6, p0, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->f:Lcom/vk/stat/scheme/d;
+    iput-object p6, p0, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->f:Lcom/vk/stat/scheme/SchemeStat4;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain$Type;Lcom/vk/stat/scheme/SchemeStat$TypeNetworkCommon;Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts;Lcom/vk/stat/scheme/d;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILjava/lang/String;Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain$Type;Lcom/vk/stat/scheme/SchemeStat$TypeNetworkCommon;Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts;Lcom/vk/stat/scheme/SchemeStat4;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 9
 
     and-int/lit8 v0, p7, 0x8
@@ -121,7 +121,7 @@
     move-object v5, p3
 
     .line 2
-    invoke-direct/range {v2 .. v8}, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;-><init>(ILjava/lang/String;Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain$Type;Lcom/vk/stat/scheme/SchemeStat$TypeNetworkCommon;Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts;Lcom/vk/stat/scheme/d;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;-><init>(ILjava/lang/String;Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain$Type;Lcom/vk/stat/scheme/SchemeStat$TypeNetworkCommon;Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts;Lcom/vk/stat/scheme/SchemeStat4;)V
 
     return-void
 .end method
@@ -167,7 +167,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -177,7 +177,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->c:Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain$Type;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -187,7 +187,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->d:Lcom/vk/stat/scheme/SchemeStat$TypeNetworkCommon;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -197,17 +197,17 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->e:Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->f:Lcom/vk/stat/scheme/d;
+    iget-object v0, p0, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->f:Lcom/vk/stat/scheme/SchemeStat4;
 
-    iget-object p1, p1, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->f:Lcom/vk/stat/scheme/d;
+    iget-object p1, p1, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->f:Lcom/vk/stat/scheme/SchemeStat4;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -308,11 +308,11 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->f:Lcom/vk/stat/scheme/d;
+    iget-object v1, p0, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->f:Lcom/vk/stat/scheme/SchemeStat4;
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1}, Lcom/vk/stat/scheme/d;->hashCode()I
+    invoke-virtual {v1}, Lcom/vk/stat/scheme/SchemeStat4;->hashCode()I
 
     move-result v2
 
@@ -373,7 +373,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->f:Lcom/vk/stat/scheme/d;
+    iget-object v1, p0, Lcom/vk/stat/scheme/SchemeStat$EventBenchmarkMain;->f:Lcom/vk/stat/scheme/SchemeStat4;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

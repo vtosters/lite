@@ -3,12 +3,12 @@
 .source "NotificationClickHandler.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationClickHandler;->d(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/notifications/i;)V
+    value = Lcom/vk/notifications/NotificationClickHandler;->d(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/notifications/NotificationsContainer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -34,18 +34,18 @@
 
 .field final synthetic b:Lcom/vk/dto/notifications/NotificationItem;
 
-.field final synthetic c:Lcom/vk/notifications/i;
+.field final synthetic c:Lcom/vk/notifications/NotificationsContainer;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/notifications/NotificationAction;Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;)V
+.method constructor <init>(Lcom/vk/dto/notifications/NotificationAction;Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/NotificationsContainer;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$k;->a:Lcom/vk/dto/notifications/NotificationAction;
 
     iput-object p3, p0, Lcom/vk/notifications/NotificationClickHandler$k;->b:Lcom/vk/dto/notifications/NotificationItem;
 
-    iput-object p4, p0, Lcom/vk/notifications/NotificationClickHandler$k;->c:Lcom/vk/notifications/i;
+    iput-object p4, p0, Lcom/vk/notifications/NotificationClickHandler$k;->c:Lcom/vk/notifications/NotificationsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -66,7 +66,7 @@
 
     const-string v0, "tag_photo_accept"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -117,11 +117,11 @@
 
     .line 8
     :goto_0
-    iget-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$k;->c:Lcom/vk/notifications/i;
+    iget-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$k;->c:Lcom/vk/notifications/NotificationsContainer;
 
     iget-object v0, p0, Lcom/vk/notifications/NotificationClickHandler$k;->b:Lcom/vk/dto/notifications/NotificationItem;
 
-    invoke-interface {p1, v0}, Lcom/vk/notifications/i;->a(Lcom/vk/dto/notifications/NotificationItem;)V
+    invoke-interface {p1, v0}, Lcom/vk/notifications/NotificationsContainer;->a(Lcom/vk/dto/notifications/NotificationItem;)V
 
     return-void
 .end method

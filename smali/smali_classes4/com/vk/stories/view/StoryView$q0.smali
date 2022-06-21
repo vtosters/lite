@@ -52,7 +52,7 @@
 
     iget-object v1, p0, Lcom/vk/stories/view/StoryView$q0;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-object v1, v1, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, v1, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoriesContainer;->w1()Ljava/lang/String;
 
@@ -61,17 +61,17 @@
     iput-object v1, v0, Lcom/vk/dto/common/VideoFile;->u0:Ljava/lang/String;
 
     .line 3
-    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
+    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
 
     move-result-object v0
 
     iget-object p1, p1, Lcom/vk/dto/stories/model/StoryEntry;->F:Lcom/vk/dto/common/VideoFile;
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/w;->a(Lcom/vk/dto/common/VideoFile;)Lcom/vk/bridges/y;
+    invoke-interface {v0, p1}, Lcom/vk/bridges/PostsBridge2;->a(Lcom/vk/dto/common/VideoFile;)Lcom/vk/bridges/PostsBridge;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/bridges/y;->h()Lcom/vk/bridges/y;
+    invoke-virtual {p1}, Lcom/vk/bridges/PostsBridge;->h()Lcom/vk/bridges/PostsBridge;
 
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$q0;->a:Lcom/vk/stories/view/StoryView;
 
@@ -83,7 +83,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     :cond_0
     return-void

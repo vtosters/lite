@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field private final a:Lkotlin/jvm/b/a;
+.field private final a:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -29,13 +29,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/core/dialogs/snackbar/VkSnackbarAnimator;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Lcom/vk/core/dialogs/snackbar/VkSnackbarAnimator;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -45,7 +45,7 @@
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbarAnimator$b;->a:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbarAnimator$b;->a:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -68,15 +68,15 @@
     invoke-static {p1, v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbarAnimator;->a(Lcom/vk/core/dialogs/snackbar/VkSnackbarAnimator;Landroid/animation/ValueAnimator;)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbarAnimator$b;->a:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbarAnimator$b;->a:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

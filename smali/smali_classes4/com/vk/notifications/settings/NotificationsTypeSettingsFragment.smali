@@ -1,9 +1,9 @@
 .class public final Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "NotificationsTypeSettingsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$p;
+.implements Lcom/vk/lists/PaginationHelper$p;
 
 
 # annotations
@@ -16,8 +16,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/b;",
-        "Lcom/vk/lists/t$p<",
+        "Lcom/vk/core/fragments/BaseFragment1;",
+        "Lcom/vk/lists/PaginationHelper$p<",
         "Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;",
         ">;"
     }
@@ -31,11 +31,11 @@
 
 .field private H:Landroidx/appcompat/widget/Toolbar;
 
-.field private I:Lcom/vk/lists/t;
+.field private I:Lcom/vk/lists/PaginationHelper;
 
 .field private J:Lcom/vk/lists/RecyclerPaginatedView;
 
-.field private K:Lcom/vk/notifications/settings/a;
+.field private K:Lcom/vk/notifications/settings/CategorySettingsAdapter;
 
 .field private L:Z
 
@@ -48,7 +48,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -57,16 +57,16 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;)Lcom/vk/notifications/settings/a;
+.method public static final synthetic a(Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;)Lcom/vk/notifications/settings/CategorySettingsAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/a;
+    iget-object p0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/CategorySettingsAdapter;
 
     return-object p0
 .end method
@@ -82,14 +82,14 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;",
             ">;"
         }
@@ -98,22 +98,22 @@
     const-string p2, "0"
 
     .line 2
-    invoke-virtual {p0, p2, p1}, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+.method public a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;",
             ">;"
         }
@@ -137,13 +137,13 @@
     iput-object p2, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->G:Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;
 
     .line 6
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "Observable.just(c)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -158,21 +158,21 @@
     if-eqz p1, :cond_1
 
     .line 8
-    new-instance v2, Lb/h/c/q/a;
+    new-instance v2, Lcom/vk/api/notifications/NotificationGetSettingsCategory;
 
-    sget-object v3, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v3, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v3}, Lcom/vk/core/util/u;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/vk/core/util/DeviceIdProvider;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "notifications"
 
-    invoke-direct {v2, v3, p1, v1}, Lb/h/c/q/a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, p1, v1}, Lcom/vk/api/notifications/NotificationGetSettingsCategory;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2, p2, v0, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v2, p2, v0, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -180,15 +180,15 @@
 
     .line 9
     :cond_1
-    new-instance p1, Lb/h/c/q/a;
+    new-instance p1, Lcom/vk/api/notifications/NotificationGetSettingsCategory;
 
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/vk/core/util/u;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/core/util/DeviceIdProvider;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -200,24 +200,24 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v6}, Lb/h/c/q/a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/api/notifications/NotificationGetSettingsCategory;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-static {p1, p2, v0, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, p2, v0, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;",
             ">;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -225,13 +225,13 @@
     .line 10
     new-instance p2, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$c;
 
-    invoke-direct {p2, p0, p3}, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$c;-><init>(Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;Lcom/vk/lists/t;)V
+    invoke-direct {p2, p0, p3}, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$c;-><init>(Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;Lcom/vk/lists/PaginationHelper;)V
 
     .line 11
     sget-object p3, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$d;->a:Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$d;
 
     .line 12
-    invoke-virtual {p1, p2, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -251,7 +251,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
 
     :cond_0
     return-void
@@ -261,7 +261,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -322,7 +322,7 @@
     const-string p2, "view"
 
     .line 2
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x2
 
@@ -330,7 +330,7 @@
 
     const v0, 0x7f0a0d9d
 
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -347,13 +347,13 @@
 
     invoke-direct {v1, p0}, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$onCreateView$1;-><init>(Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;)V
 
-    invoke-static {v0, p0, v1}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, p0, v1}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     :cond_0
     const v0, 0x7f0a0b7a
 
     .line 4
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -392,24 +392,24 @@
 
     .line 7
     :cond_2
-    new-instance p2, Lcom/vk/notifications/settings/a;
+    new-instance p2, Lcom/vk/notifications/settings/CategorySettingsAdapter;
 
-    invoke-direct {p2}, Lcom/vk/notifications/settings/a;-><init>()V
+    invoke-direct {p2}, Lcom/vk/notifications/settings/CategorySettingsAdapter;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/a;
+    iput-object p2, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/CategorySettingsAdapter;
 
     .line 8
     iget-object p2, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->J:Lcom/vk/lists/RecyclerPaginatedView;
 
     if-eqz p2, :cond_3
 
-    iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/a;
+    iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/CategorySettingsAdapter;
 
     invoke-virtual {p2, v0}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 9
     :cond_3
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p2
 
@@ -420,22 +420,22 @@
 
     if-eqz p2, :cond_5
 
-    new-instance v0, Lcom/vk/core/ui/m;
+    new-instance v0, Lcom/vk/core/ui/MilkshakeDecoration;
 
-    invoke-direct {v0}, Lcom/vk/core/ui/m;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/ui/MilkshakeDecoration;-><init>()V
 
-    iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/a;
+    iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/CategorySettingsAdapter;
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/ui/m;->a(Lcom/vk/core/ui/n;)Lcom/vk/core/ui/m;
+    invoke-virtual {v0, v1}, Lcom/vk/core/ui/MilkshakeDecoration;->a(Lcom/vk/core/ui/MilkshakeProvider;)Lcom/vk/core/ui/MilkshakeDecoration;
 
     invoke-virtual {p2, v0}, Lcom/vk/lists/RecyclerPaginatedView;->setItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     goto :goto_0
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
@@ -454,14 +454,14 @@
 
     const-string v1, "context!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p2, v0}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Landroid/content/Context;)V
+    invoke-static {p2, v0}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Landroid/content/Context;)V
 
     goto :goto_1
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
@@ -473,34 +473,34 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p2, p3, v0, p3}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
+    invoke-static {p2, p3, v0, p3}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
 
     .line 13
     :cond_8
     :goto_1
-    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$p;)Lcom/vk/lists/t$k;
+    invoke-static {p0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$p;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object p2
 
     const-string v0, "PaginationHelper\n       \u2026createWithStartFrom(this)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->J:Lcom/vk/lists/RecyclerPaginatedView;
 
     if-eqz v0, :cond_9
 
-    invoke-static {p2, v0}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p2, v0}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->I:Lcom/vk/lists/t;
+    iput-object p2, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->I:Lcom/vk/lists/PaginationHelper;
 
     return-object p1
 
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 .end method
@@ -517,18 +517,18 @@
     iput-object v0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->J:Lcom/vk/lists/RecyclerPaginatedView;
 
     .line 3
-    iput-object v0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/a;
+    iput-object v0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/CategorySettingsAdapter;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->I:Lcom/vk/lists/t;
+    iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->I:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/lists/t;->j()V
+    invoke-virtual {v1}, Lcom/vk/lists/PaginationHelper;->j()V
 
     .line 5
     :cond_0
-    iput-object v0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->I:Lcom/vk/lists/t;
+    iput-object v0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->I:Lcom/vk/lists/PaginationHelper;
 
     .line 6
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onDestroyView()V
@@ -540,14 +540,14 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/a;
+    iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/CategorySettingsAdapter;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/notifications/settings/a;->j()Z
+    invoke-virtual {v0}, Lcom/vk/notifications/settings/CategorySettingsAdapter;->j()Z
 
     move-result v0
 
@@ -563,11 +563,11 @@
     if-eq v1, v0, :cond_2
 
     .line 4
-    iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/a;
+    iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->K:Lcom/vk/notifications/settings/CategorySettingsAdapter;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lcom/vk/notifications/settings/a;->C()V
+    invoke-virtual {v1}, Lcom/vk/notifications/settings/CategorySettingsAdapter;->C()V
 
     .line 5
     :cond_1

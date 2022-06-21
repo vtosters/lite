@@ -3,7 +3,7 @@
 .source "CommunityCoverModel.kt"
 
 # interfaces
-.implements Lc/a/z/l;
+.implements Lio/reactivex/functions/Predicate;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/l<",
+        "Lio/reactivex/functions/Predicate<",
         "Ljava/lang/Object;",
         ">;"
     }

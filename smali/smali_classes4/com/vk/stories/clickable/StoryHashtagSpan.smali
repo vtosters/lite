@@ -3,7 +3,7 @@
 .source "StoryMentionSpan.kt"
 
 # interfaces
-.implements Lcom/vk/stories/clickable/f;
+.implements Lcom/vk/stories/clickable/StoryMentionSpan1;
 
 
 # instance fields

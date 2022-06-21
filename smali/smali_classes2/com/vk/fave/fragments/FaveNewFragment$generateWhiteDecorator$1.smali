@@ -3,12 +3,12 @@
 .source "FaveNewFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/fragments/FaveNewFragment;->d5()Lkotlin/jvm/b/c;
+    value = Lcom/vk/fave/fragments/FaveNewFragment;->d5()Lkotlin/jvm/b/Functions1;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Landroidx/recyclerview/widget/RecyclerView;",
         "Ljava/lang/Boolean;",
-        "Lcom/vk/core/ui/d;",
+        "Lcom/vk/core/ui/CardItemDecorator;",
         ">;"
     }
 .end annotation
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;Z)Lcom/vk/core/ui/d;
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;Z)Lcom/vk/core/ui/CardItemDecorator;
     .locals 9
 
     .line 2
@@ -66,18 +66,18 @@
     move-result-object v0
 
     .line 3
-    instance-of v1, v0, Lcom/vk/lists/s;
+    instance-of v1, v0, Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     if-eqz v1, :cond_0
 
     .line 4
-    check-cast v0, Lcom/vk/lists/s;
+    check-cast v0, Lcom/vk/lists/PaginatedRecyclerAdapter;
 
-    iget-object v0, v0, Lcom/vk/lists/s;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, v0, Lcom/vk/lists/PaginatedRecyclerAdapter;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     .line 5
     :cond_0
-    new-instance v8, Lcom/vk/core/ui/d;
+    new-instance v8, Lcom/vk/core/ui/CardItemDecorator;
 
     .line 6
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
@@ -89,7 +89,7 @@
     .line 7
     move-object v3, v0
 
-    check-cast v3, Lcom/vk/core/ui/o;
+    check-cast v3, Lcom/vk/core/ui/Provider;
 
     .line 8
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -110,7 +110,7 @@
     move v5, p2
 
     .line 10
-    invoke-direct/range {v1 .. v7}, Lcom/vk/core/ui/d;-><init>(Landroid/content/res/Resources;Lcom/vk/core/ui/o;Landroidx/recyclerview/widget/RecyclerView$LayoutManager;ZIF)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/core/ui/CardItemDecorator;-><init>(Landroid/content/res/Resources;Lcom/vk/core/ui/Provider;Landroidx/recyclerview/widget/RecyclerView$LayoutManager;ZIF)V
 
     return-object v8
 
@@ -137,7 +137,7 @@
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/fave/fragments/FaveNewFragment$generateWhiteDecorator$1;->a(Landroidx/recyclerview/widget/RecyclerView;Z)Lcom/vk/core/ui/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/fave/fragments/FaveNewFragment$generateWhiteDecorator$1;->a(Landroidx/recyclerview/widget/RecyclerView;Z)Lcom/vk/core/ui/CardItemDecorator;
 
     move-result-object p1
 

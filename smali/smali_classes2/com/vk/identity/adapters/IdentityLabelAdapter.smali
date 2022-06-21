@@ -34,12 +34,12 @@
     .end annotation
 .end field
 
-.field private final d:Lkotlin/jvm/b/b;
+.field private final d:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/dto/identity/IdentityLabel;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -47,7 +47,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,10 +55,10 @@
             "Ljava/util/List<",
             "Lcom/vk/dto/identity/IdentityLabel;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/identity/IdentityLabel;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -68,7 +68,7 @@
 
     iput-object p1, p0, Lcom/vk/identity/adapters/IdentityLabelAdapter;->c:Ljava/util/List;
 
-    iput-object p2, p0, Lcom/vk/identity/adapters/IdentityLabelAdapter;->d:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/identity/adapters/IdentityLabelAdapter;->d:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
@@ -82,11 +82,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/identity/adapters/IdentityLabelAdapter;)Lkotlin/jvm/b/b;
+.method public static final synthetic b(Lcom/vk/identity/adapters/IdentityLabelAdapter;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/identity/adapters/IdentityLabelAdapter;->d:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/identity/adapters/IdentityLabelAdapter;->d:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -122,7 +122,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -244,7 +244,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -312,7 +312,7 @@
     .line 2
     new-instance p2, Lcom/vk/identity/adapters/IdentityLabelAdapter$LabelHolder;
 
-    new-instance v6, Lcom/vk/identity/c/a;
+    new-instance v6, Lcom/vk/identity/c/CheckedTextView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -320,7 +320,7 @@
 
     const-string p1, "parent.context"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -332,7 +332,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/identity/c/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/identity/c/CheckedTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-direct {p2, p0, v6}, Lcom/vk/identity/adapters/IdentityLabelAdapter$LabelHolder;-><init>(Lcom/vk/identity/adapters/IdentityLabelAdapter;Landroid/view/View;)V
 

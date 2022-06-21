@@ -1,10 +1,10 @@
 .class public Lcom/vk/dto/user/UserProfile;
-.super Lcom/vk/dto/common/e;
+.super Lcom/vk/dto/common/Model;
 .source "UserProfile.java"
 
 # interfaces
 .implements Lcom/vk/core/serialize/Serializer$StreamParcelable;
-.implements Lcom/vk/dto/common/c;
+.implements Lcom/vk/dto/common/Indexable;
 
 
 # annotations
@@ -28,10 +28,10 @@
 
 .field public static final f0:Lcom/vk/dto/user/UserProfile;
 
-.field public static final g0:Lcom/vk/dto/common/data/c;
+.field public static final g0:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/user/UserProfile;",
             ">;"
         }
@@ -165,7 +165,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/user/UserProfile$b;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/user/UserProfile;->g0:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/user/UserProfile;->g0:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method
@@ -174,7 +174,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const-string v0, "DELETED"
 
@@ -241,7 +241,7 @@
     .locals 3
 
     .line 59
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const-string v0, "DELETED"
 
@@ -588,7 +588,7 @@
     .end param
 
     .line 248
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const-string v0, "DELETED"
 
@@ -718,7 +718,7 @@
     .locals 2
 
     .line 226
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const-string v0, "DELETED"
 
@@ -842,7 +842,7 @@
     .locals 2
 
     .line 202
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const-string v0, "DELETED"
 
@@ -968,7 +968,7 @@
     .locals 2
 
     .line 14
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const-string v0, "DELETED"
 
@@ -1220,7 +1220,7 @@
     move-object/from16 v1, p1
 
     .line 101
-    invoke-direct/range {p0 .. p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct/range {p0 .. p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const-string v2, "DELETED"
 
@@ -1274,14 +1274,14 @@
     iput-object v3, v0, Lcom/vk/dto/user/UserProfile;->Q:Lcom/vk/dto/common/VerifyInfo;
 
     .line 113
-    sget-object v3, Lb/h/h/a;->b:Lb/h/h/a$a;
+    sget-object v3, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
 
-    invoke-interface {v3}, Lb/h/h/a$a;->a()F
+    invoke-interface {v3}, Lb/h/h/ModelConfig$a;->a()F
 
     move-result v3
 
     .line 114
-    sget-boolean v4, Lb/h/h/a;->a:Z
+    sget-boolean v4, Lb/h/h/ModelConfig;->a:Z
 
     .line 115
     new-instance v5, Landroid/os/Bundle;

@@ -3,7 +3,7 @@
 .source "UsersStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/models/UserStorageModel;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -66,11 +66,11 @@
     new-array p1, p1, [Ljava/lang/Object;
 
     .line 1
-    sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/users/c;->a:Lcom/vk/im/engine/internal/storage/delegates/users/c;
+    sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;->a:Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$changeOnline$2;->$online:Lcom/vk/dto/user/OnlineInfo;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/users/c;->c(Lcom/vk/dto/user/OnlineInfo;)I
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;->c(Lcom/vk/dto/user/OnlineInfo;)I
 
     move-result v0
 
@@ -83,11 +83,11 @@
     aput-object v0, p1, v1
 
     .line 2
-    sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/users/c;->a:Lcom/vk/im/engine/internal/storage/delegates/users/c;
+    sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;->a:Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$changeOnline$2;->$online:Lcom/vk/dto/user/OnlineInfo;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/users/c;->a(Lcom/vk/dto/user/OnlineInfo;)J
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;->a(Lcom/vk/dto/user/OnlineInfo;)J
 
     move-result-wide v0
 
@@ -100,11 +100,11 @@
     aput-object v0, p1, v1
 
     .line 3
-    sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/users/c;->a:Lcom/vk/im/engine/internal/storage/delegates/users/c;
+    sget-object v0, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;->a:Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$changeOnline$2;->$online:Lcom/vk/dto/user/OnlineInfo;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/users/c;->b(Lcom/vk/dto/user/OnlineInfo;)I
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/users/UserContentWriter;->b(Lcom/vk/dto/user/OnlineInfo;)I
 
     move-result v0
 
@@ -141,11 +141,11 @@
     .line 6
     iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$changeOnline$2;->this$0:Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;)Lcom/vk/im/engine/internal/storage/b;
+    invoke-static {v0}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;)Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -164,7 +164,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager$changeOnline$2;->a(Lcom/vk/im/engine/internal/storage/models/UserStorageModel;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

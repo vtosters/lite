@@ -3,7 +3,7 @@
 .source "BaseProfileSectionsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/profile/adapter/items/b;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/profile/adapter/items/AudioInfoItem;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/profile/adapter/items/b;)V
+.method public final a(Lcom/vk/profile/adapter/items/AudioInfoItem;)V
     .locals 2
 
     .line 1
@@ -60,15 +60,15 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->X()Lcom/vk/music/player/d;
+    invoke-virtual {v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->X()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/b;->P()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AudioInfoItem;->P()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->c(Lcom/vk/dto/music/MusicTrack;)Z
+    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->c(Lcom/vk/dto/music/MusicTrack;)Z
 
     move-result v0
 
@@ -81,11 +81,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->X()Lcom/vk/music/player/d;
+    invoke-virtual {v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->X()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->y0()V
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->y0()V
 
     goto :goto_0
 
@@ -97,7 +97,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/i0/d;->a(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/vtosters/lite/auth/VKAuth;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -113,15 +113,15 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->X()Lcom/vk/music/player/d;
+    invoke-virtual {v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->X()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/b;->P()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AudioInfoItem;->P()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->c(Lcom/vk/dto/music/MusicTrack;)Z
+    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->c(Lcom/vk/dto/music/MusicTrack;)Z
 
     move-result v0
 
@@ -133,11 +133,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->X()Lcom/vk/music/player/d;
+    invoke-virtual {v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->X()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->Q()Lcom/vk/music/player/PlayState;
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->Q()Lcom/vk/music/player/PlayState;
 
     move-result-object v0
 
@@ -155,7 +155,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/b;->P()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AudioInfoItem;->P()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v1
 
@@ -165,7 +165,7 @@
 
     .line 6
     :goto_0
-    new-instance v0, Lcom/vk/profile/e/b;
+    new-instance v0, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$1;->$profile:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
@@ -173,20 +173,20 @@
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     const-string v1, "content_3_audio"
 
     .line 7
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string v1, "element"
 
     .line 8
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->d(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->d(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 9
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/b;->P()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/AudioInfoItem;->P()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object p1
 
@@ -196,10 +196,10 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/e/b;->b(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->b(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 10
-    invoke-virtual {v0}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     return-void
 .end method
@@ -208,11 +208,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/profile/adapter/items/b;
+    check-cast p1, Lcom/vk/profile/adapter/items/AudioInfoItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$1;->a(Lcom/vk/profile/adapter/items/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$1;->a(Lcom/vk/profile/adapter/items/AudioInfoItem;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

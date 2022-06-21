@@ -11,9 +11,9 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lkotlin/d;->e:Lkotlin/d;
+    sget-object v0, Lkotlin/KotlinVersion;->e:Lkotlin/KotlinVersion;
 
-    invoke-virtual {v0}, Lkotlin/d;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lkotlin/KotlinVersion;->toString()Ljava/lang/String;
 
     move-result-object v0
     :try_end_0

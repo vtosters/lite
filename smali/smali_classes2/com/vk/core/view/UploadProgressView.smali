@@ -1555,12 +1555,12 @@
     move-result v5
 
     .line 7
-    invoke-static {p1, v2, v4, v0}, Lcom/vk/core/utils/d;->a(IIII)I
+    invoke-static {p1, v2, v4, v0}, Lcom/vk/core/utils/MeasureUtils;->a(IIII)I
 
     move-result v6
 
     .line 8
-    invoke-static {p2, v3, v5, v1}, Lcom/vk/core/utils/d;->a(IIII)I
+    invoke-static {p2, v3, v5, v1}, Lcom/vk/core/utils/MeasureUtils;->a(IIII)I
 
     move-result v7
 
@@ -1614,14 +1614,14 @@
     const/4 v7, 0x0
 
     .line 14
-    invoke-static {p1, v2, v4, v7, v0}, Lcom/vk/core/utils/d;->a(IIIII)I
+    invoke-static {p1, v2, v4, v7, v0}, Lcom/vk/core/utils/MeasureUtils;->a(IIIII)I
 
     move-result p1
 
     add-int/2addr v1, v6
 
     .line 15
-    invoke-static {p2, v3, v5, v7, v1}, Lcom/vk/core/utils/d;->a(IIIII)I
+    invoke-static {p2, v3, v5, v7, v1}, Lcom/vk/core/utils/MeasureUtils;->a(IIIII)I
 
     move-result p2
 

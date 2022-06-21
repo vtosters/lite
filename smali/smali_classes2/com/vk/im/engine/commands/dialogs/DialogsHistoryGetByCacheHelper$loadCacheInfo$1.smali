@@ -3,12 +3,12 @@
 .source "DialogsHistoryGetByCacheHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
+    value = Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;",
         ">;"
@@ -28,22 +28,22 @@
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/d;
+.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
 
 .field final synthetic $filter:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
 .field final synthetic $limit:I
 
-.field final synthetic $since:Lcom/vk/im/engine/models/q;
+.field final synthetic $since:Lcom/vk/im/engine/models/Weight;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)V
+.method constructor <init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;->$env:Lcom/vk/im/engine/d;
+    iput-object p1, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
-    iput-object p2, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;->$since:Lcom/vk/im/engine/models/q;
+    iput-object p2, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;->$since:Lcom/vk/im/engine/models/Weight;
 
     iput-object p3, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;->$filter:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
@@ -64,15 +64,15 @@
     .line 1
     sget-object p1, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;->a:Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;->$since:Lcom/vk/im/engine/models/q;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;->$since:Lcom/vk/im/engine/models/Weight;
 
     iget-object v2, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;->$filter:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     iget v3, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$loadCacheInfo$1;->$limit:I
 
-    invoke-static {p1, v0, v1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;->a(Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
+    invoke-static {p1, v0, v1, v2, v3}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;->a(Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper;Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;I)Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByCacheHelper$a;
 
     move-result-object p1
 

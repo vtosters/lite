@@ -3,7 +3,7 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lb/h/t/l/a/a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lb/h/t/l/a/PollUpdatedEvent;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lb/h/t/l/a/a;)V
+.method public final a(Lb/h/t/l/a/PollUpdatedEvent;)V
     .locals 10
 
     .line 1
@@ -64,7 +64,7 @@
 
     new-instance v9, Lcom/vk/im/engine/models/attaches/AttachPoll;
 
-    invoke-virtual {p1}, Lb/h/t/l/a/a;->a()Lcom/vk/dto/polls/Poll;
+    invoke-virtual {p1}, Lb/h/t/l/a/PollUpdatedEvent;->a()Lcom/vk/dto/polls/Poll;
 
     move-result-object v4
 
@@ -80,7 +80,7 @@
 
     move-object v1, v9
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/im/engine/models/attaches/AttachPoll;-><init>(ILcom/vk/im/engine/models/attaches/AttachSyncState;Lcom/vk/dto/polls/Poll;JILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/im/engine/models/attaches/AttachPoll;-><init>(ILcom/vk/im/engine/models/attaches/AttachSyncState;Lcom/vk/dto/polls/Poll;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-static {v0, v9}, Lcom/vtosters/lite/im/ImEngineProvider;->b(Lcom/vtosters/lite/im/ImEngineProvider;Lcom/vk/im/engine/models/attaches/AttachWithId;)V
 
@@ -91,9 +91,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/t/l/a/a;
+    check-cast p1, Lb/h/t/l/a/PollUpdatedEvent;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider$j;->a(Lb/h/t/l/a/a;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/im/ImEngineProvider$j;->a(Lb/h/t/l/a/PollUpdatedEvent;)V
 
     return-void
 .end method

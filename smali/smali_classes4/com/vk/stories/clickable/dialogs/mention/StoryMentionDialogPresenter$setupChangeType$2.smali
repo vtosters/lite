@@ -3,7 +3,7 @@
 .source "StoryMentionDialogPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/c<",
-        "Lcom/vk/stories/clickable/models/h;",
-        "Lkotlin/m;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions1<",
+        "Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;",
+        "Lkotlin/Unit;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -45,18 +45,18 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stories/clickable/models/h;
+    check-cast p1, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;
 
-    check-cast p2, Lkotlin/m;
+    check-cast p2, Lkotlin/Unit;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter$setupChangeType$2;->a(Lcom/vk/stories/clickable/models/h;Lkotlin/m;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter$setupChangeType$2;->a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;Lkotlin/Unit;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/stories/clickable/models/h;Lkotlin/m;)V
+.method public final a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;Lkotlin/Unit;)V
     .locals 1
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
@@ -64,7 +64,7 @@
     check-cast v0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;
 
     .line 2
-    invoke-static {v0, p1, p2}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->a(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;Lcom/vk/stories/clickable/models/h;Lkotlin/m;)V
+    invoke-static {v0, p1, p2}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->a(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;Lkotlin/Unit;)V
 
     return-void
 .end method
@@ -77,12 +77,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
     const-class v0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 

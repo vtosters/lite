@@ -3,12 +3,12 @@
 .source "ImageCoverItem.kt"
 
 # interfaces
-.implements Lcom/vk/imageloader/g;
+.implements Lcom/vk/imageloader/OnLoadCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/data/cover/model/ImageCoverItem;->b(Lcom/vk/profile/ui/cover/c;)V
+    value = Lcom/vk/profile/data/cover/model/ImageCoverItem;->b(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/data/cover/model/ImageCoverItem;
 
-.field final synthetic b:Lcom/vk/profile/ui/cover/c;
+.field final synthetic b:Lcom/vk/profile/ui/cover/CoverViewItem;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/data/cover/model/ImageCoverItem;Lcom/vk/profile/ui/cover/c;)V
+.method constructor <init>(Lcom/vk/profile/data/cover/model/ImageCoverItem;Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/profile/ui/cover/c;",
+            "Lcom/vk/profile/ui/cover/CoverViewItem;",
             ")V"
         }
     .end annotation
@@ -37,7 +37,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$a;->a:Lcom/vk/profile/data/cover/model/ImageCoverItem;
 
-    iput-object p2, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$a;->b:Lcom/vk/profile/ui/cover/c;
+    iput-object p2, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$a;->b:Lcom/vk/profile/ui/cover/CoverViewItem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -70,7 +70,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->h()Lcom/vk/profile/ui/cover/c;
+    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->h()Lcom/vk/profile/ui/cover/CoverViewItem;
 
     move-result-object p1
 
@@ -83,7 +83,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->h()Lcom/vk/profile/ui/cover/c;
+    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->h()Lcom/vk/profile/ui/cover/CoverViewItem;
 
     move-result-object p1
 
@@ -99,7 +99,7 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/profile/ui/cover/c;
+    check-cast p2, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     goto :goto_0
 
@@ -107,7 +107,7 @@
     const/4 p2, 0x0
 
     :goto_0
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -132,9 +132,9 @@
     invoke-virtual {v0, v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->b(I)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$a;->b:Lcom/vk/profile/ui/cover/c;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$a;->b:Lcom/vk/profile/ui/cover/CoverViewItem;
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/cover/c;->setHasError(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/cover/CoverViewItem;->setHasError(Z)V
 
     return-void
 .end method

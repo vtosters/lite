@@ -3,12 +3,12 @@
 .source "CreateChatCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/chats/CreateChatCmd;->a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/chats/CreateChatCmd$a;
+    value = Lcom/vk/im/engine/commands/chats/CreateChatCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/chats/CreateChatCmd$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/models/users/User;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -28,14 +28,14 @@
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/d;
+.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/d;)V
+.method constructor <init>(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/engine/commands/chats/CreateChatCmd$onExecute$1;->$env:Lcom/vk/im/engine/d;
+    iput-object p1, p0, Lcom/vk/im/engine/commands/chats/CreateChatCmd$onExecute$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     const/4 p1, 0x1
 
@@ -54,9 +54,9 @@
 
     move-result p1
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/chats/CreateChatCmd$onExecute$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/chats/CreateChatCmd$onExecute$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/d;->Z()Lcom/vk/im/engine/models/Member;
+    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->Z()Lcom/vk/im/engine/models/Member;
 
     move-result-object v0
 

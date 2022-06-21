@@ -1,5 +1,5 @@
 .class public final Lcom/vk/menu/MenuFragment$c;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "MenuFragment.kt"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
-        "Lcom/vk/menu/d;",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vk/menu/MenuViewItem;",
         ">;"
     }
 .end annotation
@@ -40,7 +40,7 @@
     const v0, 0x7f0d0321
 
     .line 1
-    invoke-direct {p0, v0, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     new-instance v0, Lcom/vk/menu/MenuFragment$b;
@@ -49,7 +49,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p1, v2, v1, v2}, Lcom/vk/menu/MenuFragment$b;-><init>(Lcom/vk/menu/MenuFragment;Lcom/vk/dto/common/data/VkAppsList;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, p1, v2, v1, v2}, Lcom/vk/menu/MenuFragment$b;-><init>(Lcom/vk/menu/MenuFragment;Lcom/vk/dto/common/data/VkAppsList;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v0, p0, Lcom/vk/menu/MenuFragment$c;->c:Lcom/vk/menu/MenuFragment$b;
 
@@ -108,7 +108,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/menu/d;)V
+.method public a(Lcom/vk/menu/MenuViewItem;)V
     .locals 2
 
     const/4 v0, 0x0
@@ -116,7 +116,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/menu/d;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/menu/MenuViewItem;->a()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -155,9 +155,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/menu/d;
+    check-cast p1, Lcom/vk/menu/MenuViewItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuFragment$c;->a(Lcom/vk/menu/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/menu/MenuFragment$c;->a(Lcom/vk/menu/MenuViewItem;)V
 
     return-void
 .end method

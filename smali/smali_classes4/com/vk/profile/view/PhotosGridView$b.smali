@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/view/PhotosGridView$b;->a:Lcom/vk/profile/view/PhotosGridView;
 
-    invoke-static {v0}, Lcom/vk/profile/view/PhotosGridView;->a(Lcom/vk/profile/view/PhotosGridView;)Lkotlin/jvm/b/b;
+    invoke-static {v0}, Lcom/vk/profile/view/PhotosGridView;->a(Lcom/vk/profile/view/PhotosGridView;)Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
@@ -56,11 +56,11 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

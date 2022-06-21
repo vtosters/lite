@@ -44,7 +44,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView$c;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorView;
 
-    invoke-static {p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->a(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)Lcom/vk/stories/editor/multi/g;
+    invoke-static {p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->a(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)Lcom/vk/stories/editor/multi/MultiCameraEditorContract;
 
     move-result-object p1
 
@@ -56,7 +56,7 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lcom/vk/stories/editor/multi/g;->a(Ljava/lang/Integer;)V
+    invoke-interface {p1, p2}, Lcom/vk/stories/editor/multi/MultiCameraEditorContract;->a(Ljava/lang/Integer;)V
 
     :cond_0
     return-void

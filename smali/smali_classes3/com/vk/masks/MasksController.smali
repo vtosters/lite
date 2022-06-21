@@ -14,10 +14,10 @@
 # static fields
 .field private static volatile l:Lcom/vk/masks/MasksController;
 
-.field private static final m:Lc/a/z/j;
+.field private static final m:Lio/reactivex/functions/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             ">;"
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/masks/d;
+.field private final a:Lcom/vk/masks/MasksStorage;
 
 .field private final b:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
@@ -51,34 +51,34 @@
 
 .field private d:I
 
-.field private e:Lc/a/m;
+.field private e:Lio/reactivex/Observable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private f:Lio/reactivex/disposables/b;
+.field private f:Lio/reactivex/disposables/Disposable;
 
-.field private final g:Lc/a/z/j;
+.field private final g:Lio/reactivex/functions/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "Lcom/vk/api/masks/MasksGetModel$MasksGetModelResponse;",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private final h:Lc/a/z/j;
+.field private final h:Lio/reactivex/functions/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "Ljava/util/List<",
             "Lcom/vk/dto/masks/MasksCatalogItem;",
             ">;",
@@ -89,10 +89,10 @@
     .end annotation
 .end field
 
-.field private final i:Lc/a/z/j;
+.field private final i:Lio/reactivex/functions/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "Ljava/util/List<",
             "Lcom/vk/dto/masks/MasksCatalogItem;",
             ">;",
@@ -103,29 +103,29 @@
     .end annotation
 .end field
 
-.field private final j:Lc/a/z/j;
+.field private final j:Lio/reactivex/functions/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "Ljava/util/List<",
             "Lcom/vk/dto/masks/MasksCatalogItem;",
             ">;",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private final k:Lc/a/z/j;
+.field private final k:Lio/reactivex/functions/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "Ljava/util/List<",
             "Lcom/vk/dto/masks/Mask;",
             ">;",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;>;"
         }
     .end annotation
@@ -141,7 +141,7 @@
 
     invoke-direct {v0}, Lcom/vk/masks/MasksController$g;-><init>()V
 
-    sput-object v0, Lcom/vk/masks/MasksController;->m:Lc/a/z/j;
+    sput-object v0, Lcom/vk/masks/MasksController;->m:Lio/reactivex/functions/Function;
 
     return-void
 .end method
@@ -157,47 +157,47 @@
 
     invoke-direct {v0, p0}, Lcom/vk/masks/MasksController$h;-><init>(Lcom/vk/masks/MasksController;)V
 
-    iput-object v0, p0, Lcom/vk/masks/MasksController;->g:Lc/a/z/j;
+    iput-object v0, p0, Lcom/vk/masks/MasksController;->g:Lio/reactivex/functions/Function;
 
     .line 3
     new-instance v0, Lcom/vk/masks/MasksController$i;
 
     invoke-direct {v0, p0}, Lcom/vk/masks/MasksController$i;-><init>(Lcom/vk/masks/MasksController;)V
 
-    iput-object v0, p0, Lcom/vk/masks/MasksController;->h:Lc/a/z/j;
+    iput-object v0, p0, Lcom/vk/masks/MasksController;->h:Lio/reactivex/functions/Function;
 
     .line 4
     new-instance v0, Lcom/vk/masks/MasksController$j;
 
     invoke-direct {v0, p0}, Lcom/vk/masks/MasksController$j;-><init>(Lcom/vk/masks/MasksController;)V
 
-    iput-object v0, p0, Lcom/vk/masks/MasksController;->i:Lc/a/z/j;
+    iput-object v0, p0, Lcom/vk/masks/MasksController;->i:Lio/reactivex/functions/Function;
 
     .line 5
     new-instance v0, Lcom/vk/masks/MasksController$l;
 
     invoke-direct {v0, p0}, Lcom/vk/masks/MasksController$l;-><init>(Lcom/vk/masks/MasksController;)V
 
-    iput-object v0, p0, Lcom/vk/masks/MasksController;->j:Lc/a/z/j;
+    iput-object v0, p0, Lcom/vk/masks/MasksController;->j:Lio/reactivex/functions/Function;
 
     .line 6
     new-instance v0, Lcom/vk/masks/MasksController$m;
 
     invoke-direct {v0, p0}, Lcom/vk/masks/MasksController$m;-><init>(Lcom/vk/masks/MasksController;)V
 
-    iput-object v0, p0, Lcom/vk/masks/MasksController;->k:Lc/a/z/j;
+    iput-object v0, p0, Lcom/vk/masks/MasksController;->k:Lio/reactivex/functions/Function;
 
     .line 7
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/vk/media/camera/j;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/vk/media/camera/CameraUtils;->a(Landroid/content/Context;)V
 
     .line 8
-    new-instance v0, Lcom/vk/masks/d;
+    new-instance v0, Lcom/vk/masks/MasksStorage;
 
-    invoke-direct {v0}, Lcom/vk/masks/d;-><init>()V
+    invoke-direct {v0}, Lcom/vk/masks/MasksStorage;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/d;
+    iput-object v0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/MasksStorage;
 
     .line 9
     new-instance v0, Ljava/util/HashSet;
@@ -207,14 +207,14 @@
     iput-object v0, p0, Lcom/vk/masks/MasksController;->b:Ljava/util/HashSet;
 
     .line 10
-    invoke-static {}, Lcom/vk/media/camera/e;->w()Z
+    invoke-static {}, Lcom/vk/media/camera/CameraProcessRender;->w()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 11
-    invoke-static {}, Lcom/vk/media/camera/e;->v()I
+    invoke-static {}, Lcom/vk/media/camera/CameraProcessRender;->v()I
 
     move-result v0
 
@@ -239,52 +239,52 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/masks/MasksController;Lc/a/m;)Lc/a/m;
+.method static synthetic a(Lcom/vk/masks/MasksController;Lio/reactivex/Observable;)Lio/reactivex/Observable;
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/masks/MasksController;->e:Lc/a/m;
+    iput-object p1, p0, Lcom/vk/masks/MasksController;->e:Lio/reactivex/Observable;
 
     return-object p1
 .end method
 
-.method static synthetic a(Ljava/io/File;)Lc/a/z/j;
+.method static synthetic a(Ljava/io/File;)Lio/reactivex/functions/Function;
     .locals 0
 
     .line 2
-    invoke-static {p0}, Lcom/vk/masks/MasksController;->b(Ljava/io/File;)Lc/a/z/j;
+    invoke-static {p0}, Lcom/vk/masks/MasksController;->b(Ljava/io/File;)Lio/reactivex/functions/Function;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/d;
+.method static synthetic a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/MasksStorage;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/d;
+    iget-object p0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/MasksStorage;
 
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/vk/masks/MasksController;Lio/reactivex/disposables/b;)V
+.method static synthetic a(Lcom/vk/masks/MasksController;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/masks/MasksController;->a(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, p1}, Lcom/vk/masks/MasksController;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
 
-.method private declared-synchronized a(Lio/reactivex/disposables/b;)V
+.method private declared-synchronized a(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     monitor-enter p0
 
     .line 21
     :try_start_0
-    iput-object p1, p0, Lcom/vk/masks/MasksController;->f:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/masks/MasksController;->f:Lio/reactivex/disposables/Disposable;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -301,14 +301,14 @@
     throw p1
 .end method
 
-.method private static b(Ljava/io/File;)Lc/a/z/j;
+.method private static b(Ljava/io/File;)Lio/reactivex/functions/Function;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/io/File;",
             ")",
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             ">;"
@@ -343,11 +343,11 @@
     return p0
 .end method
 
-.method static synthetic g()Lc/a/z/j;
+.method static synthetic g()Lio/reactivex/functions/Function;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/masks/MasksController;->m:Lc/a/z/j;
+    sget-object v0, Lcom/vk/masks/MasksController;->m:Lio/reactivex/functions/Function;
 
     return-object v0
 .end method
@@ -471,23 +471,23 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/media/camera/l/a;->d()I
+    invoke-static {}, Lcom/vk/media/camera/l/CameraMasksUtils;->d()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/vk/media/camera/l/a;->c()Z
+    invoke-static {}, Lcom/vk/media/camera/l/CameraMasksUtils;->c()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/d;
+    iget-object v1, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/MasksStorage;
 
     .line 3
-    invoke-virtual {v1}, Lcom/vk/masks/d;->b()I
+    invoke-virtual {v1}, Lcom/vk/masks/MasksStorage;->b()I
 
     move-result v1
 
@@ -564,14 +564,14 @@
 
 
 # virtual methods
-.method public a(Z)Lc/a/m;
+.method public a(Z)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;>;"
         }
     .end annotation
@@ -579,32 +579,32 @@
     const/4 v0, 0x1
 
     .line 6
-    invoke-virtual {p0, p1, v0}, Lcom/vk/masks/MasksController;->a(ZZ)Lc/a/m;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/masks/MasksController;->a(ZZ)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(ZZ)Lc/a/m;
+.method public a(ZZ)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZZ)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;>;"
         }
     .end annotation
 
     .line 7
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "masks_catalog"
 
     .line 8
-    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -613,29 +613,29 @@
     invoke-direct {v1, p0}, Lcom/vk/masks/MasksController$q;-><init>(Lcom/vk/masks/MasksController;)V
 
     .line 9
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     if-eqz p2, :cond_0
 
-    iget-object v1, p0, Lcom/vk/masks/MasksController;->h:Lc/a/z/j;
+    iget-object v1, p0, Lcom/vk/masks/MasksController;->h:Lio/reactivex/functions/Function;
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lcom/vk/masks/MasksController;->i:Lc/a/z/j;
+    iget-object v1, p0, Lcom/vk/masks/MasksController;->i:Lio/reactivex/functions/Function;
 
     .line 10
     :goto_0
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/masks/MasksController;->j:Lc/a/z/j;
+    iget-object v1, p0, Lcom/vk/masks/MasksController;->j:Lio/reactivex/functions/Function;
 
     .line 11
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -644,18 +644,18 @@
     invoke-direct {v1, p0}, Lcom/vk/masks/MasksController$p;-><init>(Lcom/vk/masks/MasksController;)V
 
     .line 12
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     if-eqz p1, :cond_1
 
     .line 13
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -663,20 +663,20 @@
 
     .line 14
     :cond_1
-    new-instance p1, Lcom/vk/api/masks/b;
+    new-instance p1, Lcom/vk/api/masks/MasksGetCatalog;
 
-    invoke-direct {p1}, Lcom/vk/api/masks/b;-><init>()V
+    invoke-direct {p1}, Lcom/vk/api/masks/MasksGetCatalog;-><init>()V
 
-    invoke-virtual {p1}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 15
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -685,51 +685,51 @@
     invoke-direct {v1, p0}, Lcom/vk/masks/MasksController$r;-><init>(Lcom/vk/masks/MasksController;)V
 
     .line 16
-    invoke-virtual {p1, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p1, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     if-eqz p2, :cond_2
 
-    iget-object p2, p0, Lcom/vk/masks/MasksController;->h:Lc/a/z/j;
+    iget-object p2, p0, Lcom/vk/masks/MasksController;->h:Lio/reactivex/functions/Function;
 
     goto :goto_1
 
     :cond_2
-    iget-object p2, p0, Lcom/vk/masks/MasksController;->i:Lc/a/z/j;
+    iget-object p2, p0, Lcom/vk/masks/MasksController;->i:Lio/reactivex/functions/Function;
 
     .line 17
     :goto_1
-    invoke-virtual {p1, p2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/vk/masks/MasksController;->j:Lc/a/z/j;
+    iget-object p2, p0, Lcom/vk/masks/MasksController;->j:Lio/reactivex/functions/Function;
 
     .line 18
-    invoke-virtual {p1, p2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 19
-    invoke-static {}, Lc/a/m;->l()Lc/a/m;
+    invoke-static {}, Lio/reactivex/Observable;->l()Lio/reactivex/Observable;
 
     move-result-object p2
 
-    invoke-virtual {v0, p2}, Lc/a/m;->d(Lc/a/p;)Lc/a/m;
+    invoke-virtual {v0, p2}, Lio/reactivex/Observable;->d(Lio/reactivex/ObservableSource;)Lio/reactivex/Observable;
 
     move-result-object p2
 
-    invoke-static {p2, p1}, Lc/a/m;->a(Lc/a/p;Lc/a/p;)Lc/a/m;
+    invoke-static {p2, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 20
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -743,7 +743,7 @@
 
     .line 23
     :try_start_0
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "masks_catalog"
 
@@ -751,12 +751,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a([Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a([Ljava/lang/String;)V
 
     .line 24
-    iget-object v0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/d;
+    iget-object v0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/MasksStorage;
 
-    invoke-virtual {v0}, Lcom/vk/masks/d;->a()V
+    invoke-virtual {v0}, Lcom/vk/masks/MasksStorage;->a()V
 
     .line 25
     invoke-virtual {p0}, Lcom/vk/masks/MasksController;->b()V
@@ -764,7 +764,7 @@
     const/4 v0, 0x0
 
     .line 26
-    iput-object v0, p0, Lcom/vk/masks/MasksController;->e:Lc/a/m;
+    iput-object v0, p0, Lcom/vk/masks/MasksController;->e:Lio/reactivex/Observable;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -792,14 +792,14 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/dto/masks/Mask;)Lc/a/m;
+.method public b(Lcom/vk/dto/masks/Mask;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/masks/Mask;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -808,24 +808,24 @@
     if-eqz p1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/d;
+    iget-object v0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/MasksStorage;
 
-    invoke-virtual {v0, p1}, Lcom/vk/masks/d;->c(Lcom/vk/dto/masks/Mask;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/masks/MasksStorage;->c(Lcom/vk/dto/masks/Mask;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    new-instance v0, Lcom/vk/api/masks/a;
+    new-instance v0, Lcom/vk/api/masks/MasksGetById;
 
     invoke-virtual {p1}, Lcom/vk/dto/masks/Mask;->x1()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/api/masks/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/masks/MasksGetById;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -834,7 +834,7 @@
     invoke-direct {v1, p0}, Lcom/vk/masks/MasksController$t;-><init>(Lcom/vk/masks/MasksController;)V
 
     .line 4
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -843,16 +843,16 @@
     invoke-direct {v1, p0, p1}, Lcom/vk/masks/MasksController$s;-><init>(Lcom/vk/masks/MasksController;Lcom/vk/dto/masks/Mask;)V
 
     .line 5
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 6
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -871,19 +871,19 @@
 
     .line 7
     :try_start_0
-    iget-object v0, p0, Lcom/vk/masks/MasksController;->f:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/masks/MasksController;->f:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
     .line 8
-    iget-object v0, p0, Lcom/vk/masks/MasksController;->f:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/masks/MasksController;->f:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     const/4 v0, 0x0
 
     .line 9
-    iput-object v0, p0, Lcom/vk/masks/MasksController;->e:Lc/a/m;
+    iput-object v0, p0, Lcom/vk/masks/MasksController;->e:Lio/reactivex/Observable;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -901,12 +901,12 @@
     throw v0
 .end method
 
-.method public declared-synchronized c()Lc/a/m;
+.method public declared-synchronized c()Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             ">;"
         }
@@ -916,49 +916,49 @@
 
     .line 7
     :try_start_0
-    iget-object v0, p0, Lcom/vk/masks/MasksController;->e:Lc/a/m;
+    iget-object v0, p0, Lcom/vk/masks/MasksController;->e:Lio/reactivex/Observable;
 
     if-nez v0, :cond_0
 
     .line 8
     new-instance v0, Lcom/vk/api/masks/MasksGetModel;
 
-    invoke-static {}, Lcom/vk/media/camera/e;->v()I
+    invoke-static {}, Lcom/vk/media/camera/CameraProcessRender;->v()I
 
     move-result v1
 
     invoke-direct {v0, v1}, Lcom/vk/api/masks/MasksGetModel;-><init>(I)V
 
     .line 9
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/api/masks/MasksGetModel;->F:Lcom/vk/api/masks/MasksGetModel$MasksGetModelResponse;
 
     .line 10
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Ljava/lang/Object;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/masks/MasksController;->g:Lc/a/z/j;
+    iget-object v1, p0, Lcom/vk/masks/MasksController;->g:Lio/reactivex/functions/Function;
 
     .line 11
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/masks/MasksController;->m:Lc/a/z/j;
+    sget-object v1, Lcom/vk/masks/MasksController;->m:Lio/reactivex/functions/Function;
 
     .line 12
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
     .line 13
-    invoke-virtual {v0, v1}, Lc/a/m;->c(I)Lc/a/b0/a;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(I)Lio/reactivex/observables/ConnectableObservable;
 
     move-result-object v0
 
@@ -967,7 +967,7 @@
     invoke-direct {v2, p0}, Lcom/vk/masks/MasksController$e;-><init>(Lcom/vk/masks/MasksController;)V
 
     .line 14
-    invoke-virtual {v0, v1, v2}, Lc/a/b0/a;->a(ILc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/observables/ConnectableObservable;->a(ILio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -976,7 +976,7 @@
     invoke-direct {v1, p0}, Lcom/vk/masks/MasksController$d;-><init>(Lcom/vk/masks/MasksController;)V
 
     .line 15
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -985,7 +985,7 @@
     invoke-direct {v1, p0}, Lcom/vk/masks/MasksController$c;-><init>(Lcom/vk/masks/MasksController;)V
 
     .line 16
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -994,33 +994,33 @@
     invoke-direct {v1, p0}, Lcom/vk/masks/MasksController$b;-><init>(Lcom/vk/masks/MasksController;)V
 
     .line 17
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 18
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 19
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/masks/MasksController;->e:Lc/a/m;
+    iput-object v0, p0, Lcom/vk/masks/MasksController;->e:Lio/reactivex/Observable;
 
     .line 20
     :cond_0
-    iget-object v0, p0, Lcom/vk/masks/MasksController;->e:Lc/a/m;
+    iget-object v0, p0, Lcom/vk/masks/MasksController;->e:Lio/reactivex/Observable;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1036,30 +1036,30 @@
     throw v0
 .end method
 
-.method public c(Lcom/vk/dto/masks/Mask;)Lc/a/m;
+.method public c(Lcom/vk/dto/masks/Mask;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/masks/Mask;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/core/network/RxFileDownloader$c;",
             ">;"
         }
     .end annotation
 
     .line 2
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1068,12 +1068,12 @@
     invoke-direct {v1, p0, p1}, Lcom/vk/masks/MasksController$u;-><init>(Lcom/vk/masks/MasksController;Lcom/vk/dto/masks/Mask;)V
 
     .line 4
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/masks/MasksController;->c()Lc/a/m;
+    invoke-virtual {p0}, Lcom/vk/masks/MasksController;->c()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1081,73 +1081,73 @@
 
     invoke-direct {v1, p0}, Lcom/vk/masks/MasksController$a;-><init>(Lcom/vk/masks/MasksController;)V
 
-    invoke-static {p1, v0, v1}, Lc/a/m;->a(Lc/a/p;Lc/a/p;Lc/a/z/c;)Lc/a/m;
+    invoke-static {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;Lio/reactivex/functions/BiFunction;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 6
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public d()Lc/a/m;
+.method public d()Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;>;"
         }
     .end annotation
 
     .line 4
-    new-instance v0, Lcom/vk/api/masks/c;
+    new-instance v0, Lcom/vk/api/masks/MasksGetVoipCatalog;
 
-    invoke-direct {v0}, Lcom/vk/api/masks/c;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/masks/MasksGetVoipCatalog;-><init>()V
 
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/masks/MasksController;->k:Lc/a/z/j;
+    iget-object v1, p0, Lcom/vk/masks/MasksController;->k:Lio/reactivex/functions/Function;
 
     .line 6
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 7
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1208,14 +1208,14 @@
     return p1
 .end method
 
-.method public e(Lcom/vk/dto/masks/Mask;)Lc/a/m;
+.method public e(Lcom/vk/dto/masks/Mask;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/masks/Mask;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -1235,7 +1235,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1243,24 +1243,24 @@
 
     .line 4
     :cond_0
-    new-instance v0, Lcom/vk/api/masks/e;
+    new-instance v0, Lcom/vk/api/masks/MasksMarkAsViewed;
 
     invoke-virtual {p1}, Lcom/vk/dto/masks/Mask;->x1()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/api/masks/e;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/masks/MasksMarkAsViewed;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1269,7 +1269,7 @@
     invoke-direct {v1, p0}, Lcom/vk/masks/MasksController$o;-><init>(Lcom/vk/masks/MasksController;)V
 
     .line 6
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1278,7 +1278,7 @@
     invoke-direct {v1, p0, p1}, Lcom/vk/masks/MasksController$n;-><init>(Lcom/vk/masks/MasksController;Lcom/vk/dto/masks/Mask;)V
 
     .line 7
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1287,16 +1287,16 @@
     invoke-direct {v0, p0}, Lcom/vk/masks/MasksController$k;-><init>(Lcom/vk/masks/MasksController;)V
 
     .line 8
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 9
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1307,21 +1307,21 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/media/camera/e;->w()Z
+    invoke-static {}, Lcom/vk/media/camera/CameraProcessRender;->w()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/bridges/a;->l()Z
+    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->l()Z
 
     move-result v0
 
@@ -1350,9 +1350,9 @@
     invoke-static {}, Lcom/vk/core/util/ThreadUtils;->b()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/d;
+    iget-object v0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/MasksStorage;
 
-    invoke-virtual {v0}, Lcom/vk/masks/d;->f()J
+    invoke-virtual {v0}, Lcom/vk/masks/MasksStorage;->f()J
 
     move-result-wide v0
     :try_end_0
@@ -1374,9 +1374,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/d;
+    iget-object v0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/MasksStorage;
 
-    invoke-virtual {v0, p1}, Lcom/vk/masks/d;->c(Lcom/vk/dto/masks/Mask;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/masks/MasksStorage;->c(Lcom/vk/dto/masks/Mask;)Z
 
     move-result v0
 
@@ -1407,9 +1407,9 @@
     if-eqz p1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/d;
+    iget-object v0, p0, Lcom/vk/masks/MasksController;->a:Lcom/vk/masks/MasksStorage;
 
-    invoke-virtual {v0, p1}, Lcom/vk/masks/d;->e(Lcom/vk/dto/masks/Mask;)V
+    invoke-virtual {v0, p1}, Lcom/vk/masks/MasksStorage;->e(Lcom/vk/dto/masks/Mask;)V
 
     :cond_0
     return-void

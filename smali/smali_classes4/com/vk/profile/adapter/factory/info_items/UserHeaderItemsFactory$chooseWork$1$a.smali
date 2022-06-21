@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$chooseWork$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/w;
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$chooseWork$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/OverviewInfoItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -38,21 +38,21 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/webapp/fragments/i$a;
+    new-instance v0, Lcom/vk/webapp/fragments/ProfileEditFragment$a;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v1}, Lcom/vk/webapp/fragments/i$a;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v1}, Lcom/vk/webapp/fragments/ProfileEditFragment$a;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v0}, Lcom/vk/webapp/fragments/i$a;->h()Lcom/vk/webapp/fragments/i$a;
+    invoke-virtual {v0}, Lcom/vk/webapp/fragments/ProfileEditFragment$a;->h()Lcom/vk/webapp/fragments/ProfileEditFragment$a;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$chooseWork$1$a;->a:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$chooseWork$1;
 
     iget-object v1, v1, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$chooseWork$1;->$context:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "DiscoverSearchFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/search/fragment/c;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/search/fragment/PeopleSearchFragment;",
         ">;"
     }
 .end annotation
@@ -45,11 +45,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/search/fragment/c;
+.method public final invoke()Lcom/vk/search/fragment/PeopleSearchFragment;
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/search/fragment/c;
+    new-instance v0, Lcom/vk/search/fragment/PeopleSearchFragment;
 
     iget-object v1, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$1;->this$0:Lcom/vk/search/fragment/DiscoverSearchFragment;
 
@@ -61,7 +61,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/search/fragment/c;-><init>(Lcom/vk/search/PeopleSearchParams;)V
+    invoke-direct {v0, v1}, Lcom/vk/search/fragment/PeopleSearchFragment;-><init>(Lcom/vk/search/PeopleSearchParams;)V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$1;->invoke()Lcom/vk/search/fragment/c;
+    invoke-virtual {p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$1;->invoke()Lcom/vk/search/fragment/PeopleSearchFragment;
 
     move-result-object v0
 

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private H:Lcom/vk/stickers/views/animation/a;
+.field private H:Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;
 
 .field private I:Ljava/lang/String;
 
@@ -54,11 +54,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stickers/views/animation/VKAnimationView;)Lcom/vk/stickers/views/animation/a;
+.method public static final synthetic a(Lcom/vk/stickers/views/animation/VKAnimationView;)Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stickers/views/animation/VKAnimationView;->H:Lcom/vk/stickers/views/animation/a;
+    iget-object p0, p0, Lcom/vk/stickers/views/animation/VKAnimationView;->H:Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;
 
     return-object p0
 .end method
@@ -67,16 +67,16 @@
     .locals 3
 
     .line 36
-    new-instance v0, Lcom/vk/api/store/i;
+    new-instance v0, Lcom/vk/api/store/StoreGetStickerStockItemByStickerId;
 
-    invoke-direct {v0, p1}, Lcom/vk/api/store/i;-><init>(I)V
+    invoke-direct {v0, p1}, Lcom/vk/api/store/StoreGetStickerStockItemByStickerId;-><init>(I)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 37
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -91,7 +91,7 @@
     invoke-direct {p1, p0}, Lcom/vk/stickers/views/animation/VKAnimationView$f;-><init>(Lcom/vk/stickers/views/animation/VKAnimationView;)V
 
     .line 40
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -174,7 +174,7 @@
     .line 22
     iget-object v0, p0, Lcom/vk/stickers/views/animation/VKAnimationView;->I:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -214,11 +214,11 @@
     .line 28
     :cond_2
     :goto_0
-    iget-object p1, p0, Lcom/vk/stickers/views/animation/VKAnimationView;->H:Lcom/vk/stickers/views/animation/a;
+    iget-object p1, p0, Lcom/vk/stickers/views/animation/VKAnimationView;->H:Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lcom/vk/stickers/views/animation/a;->a()V
+    invoke-interface {p1}, Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;->a()V
 
     :cond_3
     return-void
@@ -243,7 +243,7 @@
     .line 32
     sget-object v0, Lcom/vk/stickers/views/animation/VKAnimationLoader;->d:Lcom/vk/stickers/views/animation/VKAnimationLoader;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->a(Ljava/lang/String;Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->a(Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -257,7 +257,7 @@
     invoke-direct {p3, p0}, Lcom/vk/stickers/views/animation/VKAnimationView$d;-><init>(Lcom/vk/stickers/views/animation/VKAnimationView;)V
 
     .line 34
-    invoke-virtual {p2, v0, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, v0, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     .line 35
     iput-object p1, p0, Lcom/vk/stickers/views/animation/VKAnimationView;->I:Ljava/lang/String;
@@ -271,7 +271,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/stickers/views/animation/VKAnimationView;->I:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -311,11 +311,11 @@
     .line 12
     :cond_2
     :goto_0
-    iget-object p1, p0, Lcom/vk/stickers/views/animation/VKAnimationView;->H:Lcom/vk/stickers/views/animation/a;
+    iget-object p1, p0, Lcom/vk/stickers/views/animation/VKAnimationView;->H:Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lcom/vk/stickers/views/animation/a;->a()V
+    invoke-interface {p1}, Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;->a()V
 
     :cond_3
     return-void
@@ -358,7 +358,7 @@
     :goto_1
     sget-object v1, Lcom/vk/stickers/views/animation/VKAnimationLoader;->d:Lcom/vk/stickers/views/animation/VKAnimationLoader;
 
-    invoke-virtual {v1, p1, v0}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->a(Ljava/lang/String;Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v1, p1, v0}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->a(Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -372,7 +372,7 @@
     invoke-direct {v2, p0, p3, p2}, Lcom/vk/stickers/views/animation/VKAnimationView$b;-><init>(Lcom/vk/stickers/views/animation/VKAnimationView;IZ)V
 
     .line 20
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     .line 21
     iput-object p1, p0, Lcom/vk/stickers/views/animation/VKAnimationView;->I:Ljava/lang/String;
@@ -495,18 +495,18 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public final setOnLoadAnimationCallback(Lcom/vk/stickers/views/animation/a;)V
+.method public final setOnLoadAnimationCallback(Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/stickers/views/animation/VKAnimationView;->H:Lcom/vk/stickers/views/animation/a;
+    iput-object p1, p0, Lcom/vk/stickers/views/animation/VKAnimationView;->H:Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;
 
     return-void
 .end method

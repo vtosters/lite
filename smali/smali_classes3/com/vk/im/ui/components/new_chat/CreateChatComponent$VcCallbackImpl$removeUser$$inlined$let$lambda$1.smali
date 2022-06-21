@@ -3,7 +3,7 @@
 .source "CreateChatComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/models/j;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/models/Profile;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/j;)Z
+.method public final a(Lcom/vk/im/engine/models/Profile;)Z
     .locals 1
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/models/u;->getId()I
+    invoke-interface {p1}, Lcom/vk/im/engine/models/WithId;->getId()I
 
     move-result p1
 
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/j;
+    check-cast p1, Lcom/vk/im/engine/models/Profile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl$removeUser$$inlined$let$lambda$1;->a(Lcom/vk/im/engine/models/j;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$VcCallbackImpl$removeUser$$inlined$let$lambda$1;->a(Lcom/vk/im/engine/models/Profile;)Z
 
     move-result p1
 

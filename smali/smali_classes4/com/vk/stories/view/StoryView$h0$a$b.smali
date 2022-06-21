@@ -62,7 +62,7 @@
 
     iget-object v0, v0, Lcom/vk/stories/view/StoryView$h0;->c:Lcom/vk/stories/view/StoryView;
 
-    iget-object v0, v0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, v0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     .line 3
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
@@ -89,7 +89,7 @@
     invoke-direct {v7, p0}, Lcom/vk/stories/view/StoryView$h0$a$b$a;-><init>(Lcom/vk/stories/view/StoryView$h0$a$b;)V
 
     .line 5
-    invoke-static/range {v2 .. v7}, Lcom/vk/stories/StoriesController;->a(IIIILandroid/content/Context;Lcom/vk/api/base/a;)V
+    invoke-static/range {v2 .. v7}, Lcom/vk/stories/StoriesController;->a(IIIILandroid/content/Context;Lcom/vk/api/base/ApiCallback;)V
 
     return-void
 .end method

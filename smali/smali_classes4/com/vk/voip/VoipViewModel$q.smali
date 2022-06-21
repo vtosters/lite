@@ -67,7 +67,7 @@
     .line 2
     sget-object v0, Lcom/vk/voip/VoipViewModel;->Z:Lcom/vk/voip/VoipViewModel;
 
-    invoke-static {v0}, Lcom/vk/voip/VoipViewModel;->f(Lcom/vk/voip/VoipViewModel;)Lcom/vk/voip/r;
+    invoke-static {v0}, Lcom/vk/voip/VoipViewModel;->f(Lcom/vk/voip/VoipViewModel;)Lcom/vk/voip/VoipSimpleAudioPlayer;
 
     move-result-object v1
 
@@ -83,7 +83,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/voip/r;->a(Lcom/vk/voip/r;IZZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/voip/VoipSimpleAudioPlayer;->a(Lcom/vk/voip/VoipSimpleAudioPlayer;IZZILjava/lang/Object;)V
 
     :cond_0
     return-void

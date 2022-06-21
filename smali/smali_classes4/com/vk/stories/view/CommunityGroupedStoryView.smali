@@ -36,16 +36,16 @@
 
 .field private L1:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private M1:Lcom/vk/stories/view/z1/a;
+.field private M1:Lcom/vk/stories/view/z1/GroupedStoriesAdapter;
 
 .field private final N1:Landroid/view/GestureDetector;
 
 .field private O1:Z
 
-.field private final P1:Lb/h/g/l/e;
+.field private final P1:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Ljava/util/List<",
             "Lcom/vk/dto/stories/model/StoryEntry;",
             ">;>;"
@@ -53,10 +53,10 @@
     .end annotation
 .end field
 
-.field private final Q1:Lb/h/g/l/e;
+.field private final Q1:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/dto/stories/model/StoriesContainer;",
             ">;"
         }
@@ -72,14 +72,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/view/CommunityGroupedStoryView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/view/CommunityGroupedStoryView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/stories/view/CommunityGroupedStoryView;->R1:Lcom/vk/stories/view/CommunityGroupedStoryView$a;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;ZLcom/vk/stories/StoriesController$SourceType;ILandroid/view/View$OnTouchListener;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/view/StoryView$u0;Lcom/vk/stories/view/p1;)V
+.method public constructor <init>(Landroid/content/Context;ZLcom/vk/stories/StoriesController$SourceType;ILandroid/view/View$OnTouchListener;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/view/StoryView$u0;Lcom/vk/stories/view/StorySettings;)V
     .locals 11
 
     move-object v10, p0
@@ -105,7 +105,7 @@
     move-object/from16 v8, p8
 
     .line 1
-    invoke-direct/range {v0 .. v9}, Lcom/vk/stories/view/StoryView;-><init>(Landroid/content/Context;ZLcom/vk/stories/StoriesController$SourceType;ILandroid/view/View$OnTouchListener;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/view/StoryView$u0;Lcom/vk/stories/view/p1;Lcom/vk/stories/view/j1;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/stories/view/StoryView;-><init>(Landroid/content/Context;ZLcom/vk/stories/StoriesController$SourceType;ILandroid/view/View$OnTouchListener;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/view/StoryView$u0;Lcom/vk/stories/view/StorySettings;Lcom/vk/stories/view/OnStorySelectedNavigationListener;)V
 
     .line 2
     new-instance v0, Landroid/view/GestureDetector;
@@ -132,14 +132,14 @@
 
     invoke-direct {v0, p0, v1}, Lcom/vk/stories/view/CommunityGroupedStoryView$h;-><init>(Lcom/vk/stories/view/CommunityGroupedStoryView;Lcom/vk/dto/stories/model/StoriesContainer;)V
 
-    iput-object v0, v10, Lcom/vk/stories/view/CommunityGroupedStoryView;->P1:Lb/h/g/l/e;
+    iput-object v0, v10, Lcom/vk/stories/view/CommunityGroupedStoryView;->P1:Lb/h/g/l/NotificationListener;
 
     .line 5
     new-instance v0, Lcom/vk/stories/view/CommunityGroupedStoryView$hideStoriesListener$1;
 
     invoke-direct {v0, p0}, Lcom/vk/stories/view/CommunityGroupedStoryView$hideStoriesListener$1;-><init>(Lcom/vk/stories/view/CommunityGroupedStoryView;)V
 
-    iput-object v0, v10, Lcom/vk/stories/view/CommunityGroupedStoryView;->Q1:Lb/h/g/l/e;
+    iput-object v0, v10, Lcom/vk/stories/view/CommunityGroupedStoryView;->Q1:Lb/h/g/l/NotificationListener;
 
     return-void
 .end method
@@ -156,7 +156,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-eqz v0, :cond_0
 
@@ -167,7 +167,7 @@
     invoke-direct {p0}, Lcom/vk/stories/view/CommunityGroupedStoryView;->X()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     if-eqz v0, :cond_1
 
@@ -186,15 +186,15 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
 
     move-result-object v0
 
     const-string v1, "storiesContainer"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vk/dto/stories/d/a;->h(Lcom/vk/dto/stories/model/StoriesContainer;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->h(Lcom/vk/dto/stories/model/StoriesContainer;)Ljava/util/List;
 
     move-result-object v0
 
@@ -222,7 +222,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->b()V
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->b()V
 
     :goto_0
     return-void
@@ -265,7 +265,7 @@
 
     const-string p2, "alpha(endAlphaValue)\n   \u2026     }\n                })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -301,7 +301,7 @@
 
     if-eqz p2, :cond_1
 
-    sget-object p2, Lcom/vk/stories/util/k;->a:Lcom/vk/stories/util/k;
+    sget-object p2, Lcom/vk/stories/util/StoriesUtil;->a:Lcom/vk/stories/util/StoriesUtil;
 
     check-cast p1, Lcom/vk/dto/stories/model/CommunityGroupedStoriesContainer;
 
@@ -309,7 +309,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/stories/util/k;->b(Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-virtual {p2, p1}, Lcom/vk/stories/util/StoriesUtil;->b(Ljava/util/List;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -317,7 +317,7 @@
 
     .line 43
     :cond_1
-    sget-object p2, Lcom/vk/stories/util/k;->a:Lcom/vk/stories/util/k;
+    sget-object p2, Lcom/vk/stories/util/StoriesUtil;->a:Lcom/vk/stories/util/StoriesUtil;
 
     check-cast p1, Lcom/vk/dto/stories/model/CommunityGroupedStoriesContainer;
 
@@ -325,7 +325,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/stories/util/k;->a(Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-virtual {p2, p1}, Lcom/vk/stories/util/StoriesUtil;->a(Ljava/util/List;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -375,7 +375,7 @@
 
     const-string v1, "view.animate()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0, p2, p1}, Lcom/vk/stories/view/CommunityGroupedStoryView;->a(Landroid/view/ViewPropertyAnimator;FLandroid/view/View;)Landroid/view/ViewPropertyAnimator;
 
@@ -392,20 +392,20 @@
     return-void
 .end method
 
-.method private final a(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/lists/y;)V
+.method private final a(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/lists/PreloadCallback;)V
     .locals 2
 
     .line 44
-    new-instance v0, Lcom/vk/lists/z;
+    new-instance v0, Lcom/vk/lists/PreloadScrollListener;
 
     const/16 v1, 0xf
 
-    invoke-direct {v0, v1, p2}, Lcom/vk/lists/z;-><init>(ILcom/vk/lists/y;)V
+    invoke-direct {v0, v1, p2}, Lcom/vk/lists/PreloadScrollListener;-><init>(ILcom/vk/lists/PreloadCallback;)V
 
     .line 45
-    new-instance p2, Lcom/vk/lists/x;
+    new-instance p2, Lcom/vk/lists/PagingOnScrollListenerWrapper;
 
-    invoke-direct {p2, v0}, Lcom/vk/lists/x;-><init>(Lcom/vk/lists/w;)V
+    invoke-direct {p2, v0}, Lcom/vk/lists/PagingOnScrollListenerWrapper;-><init>(Lcom/vk/lists/PagingOnScrollListener;)V
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
@@ -416,7 +416,7 @@
     .locals 9
 
     .line 26
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-eqz v0, :cond_0
 
@@ -430,7 +430,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -439,13 +439,13 @@
     if-eqz v3, :cond_2
 
     .line 28
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
 
     move-result-object v0
 
     const-string v1, "storiesContainer"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0, p1}, Lcom/vk/stories/view/CommunityGroupedStoryView;->a(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/dto/stories/model/StoriesContainer;)Ljava/util/ArrayList;
 
@@ -467,10 +467,10 @@
     invoke-direct {v6, p0}, Lcom/vk/stories/view/CommunityGroupedStoryView$openStories$1;-><init>(Lcom/vk/stories/view/CommunityGroupedStoryView;)V
 
     .line 32
-    iget-object v7, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v7, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     .line 33
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     if-eqz p1, :cond_1
 
@@ -497,15 +497,15 @@
     invoke-virtual {v0, p1}, Lcom/vk/stories/StoryViewDialog;->a(Lcom/vk/stories/StoryViewDialog$InOutAnimation;)Lcom/vk/stories/StoryViewDialog;
 
     .line 36
-    new-instance p1, Lcom/vk/stories/view/p1;
+    new-instance p1, Lcom/vk/stories/view/StorySettings;
 
-    invoke-direct {p1}, Lcom/vk/stories/view/p1;-><init>()V
+    invoke-direct {p1}, Lcom/vk/stories/view/StorySettings;-><init>()V
 
     const/4 v1, 0x1
 
-    iput-boolean v1, p1, Lcom/vk/stories/view/p1;->c:Z
+    iput-boolean v1, p1, Lcom/vk/stories/view/StorySettings;->c:Z
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/StoryViewDialog;->a(Lcom/vk/stories/view/p1;)Lcom/vk/stories/StoryViewDialog;
+    invoke-virtual {v0, p1}, Lcom/vk/stories/StoryViewDialog;->a(Lcom/vk/stories/view/StorySettings;)Lcom/vk/stories/StoryViewDialog;
 
     .line 37
     invoke-virtual {v0}, Lcom/vk/stories/StoryViewDialog;->show()V
@@ -521,7 +521,7 @@
     .locals 0
 
     .line 39
-    iget-object p2, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object p2, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     invoke-static {p1, p2}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/StoriesController$SourceType;)V
 
@@ -598,7 +598,7 @@
 
     const-string v2, "this?.adapter ?: return false"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 47
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -659,7 +659,7 @@
 
     const-string v2, "layoutManager.getChildAt\u2026ount - 1) ?: return false"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 52
     new-instance v2, Landroid/graphics/Rect;
@@ -769,11 +769,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/view/CommunityGroupedStoryView;)Lcom/vk/stories/view/z1/a;
+.method public static final synthetic b(Lcom/vk/stories/view/CommunityGroupedStoryView;)Lcom/vk/stories/view/z1/GroupedStoriesAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->M1:Lcom/vk/stories/view/z1/a;
+    iget-object p0, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->M1:Lcom/vk/stories/view/z1/GroupedStoriesAdapter;
 
     return-object p0
 .end method
@@ -793,7 +793,7 @@
 
     invoke-direct {v1}, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment$a;-><init>()V
 
-    invoke-virtual {v1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 3
     sget-object v0, Lcom/vk/dto/stories/model/StoryViewAction;->SET_GROUP_VIEW:Lcom/vk/dto/stories/model/StoryViewAction;
@@ -936,7 +936,7 @@
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->e()V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     if-eqz p1, :cond_0
 
@@ -1033,13 +1033,13 @@
 
     const-string v4, "findViewById<View>(R.id.settings)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v4, Lcom/vk/stories/view/CommunityGroupedStoryView$init$$inlined$apply$lambda$1;
 
     invoke-direct {v4, p0}, Lcom/vk/stories/view/CommunityGroupedStoryView$init$$inlined$apply$lambda$1;-><init>(Lcom/vk/stories/view/CommunityGroupedStoryView;)V
 
-    invoke-static {v3, v4}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v3, v4}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     const v3, 0x7f0a025b
 
@@ -1050,20 +1050,20 @@
 
     const-string v4, "findViewById<View>(R.id.close)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v4, Lcom/vk/stories/view/CommunityGroupedStoryView$init$$inlined$apply$lambda$2;
 
     invoke-direct {v4, p0}, Lcom/vk/stories/view/CommunityGroupedStoryView$init$$inlined$apply$lambda$2;-><init>(Lcom/vk/stories/view/CommunityGroupedStoryView;)V
 
-    invoke-static {v3, v4}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v3, v4}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 10
     new-instance v3, Lcom/vk/stories/view/CommunityGroupedStoryView$init$$inlined$apply$lambda$3;
 
     invoke-direct {v3, p0}, Lcom/vk/stories/view/CommunityGroupedStoryView$init$$inlined$apply$lambda$3;-><init>(Lcom/vk/stories/view/CommunityGroupedStoryView;)V
 
-    invoke-static {v0, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 11
     iput-object v0, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->J1:Landroid/view/View;
@@ -1074,7 +1074,7 @@
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 13
-    invoke-static {}, Lcom/vk/camera/j/c;->a()Z
+    invoke-static {}, Lcom/vk/camera/j/CadreUtils1;->a()Z
 
     move-result v0
 
@@ -1090,12 +1090,12 @@
     const/4 v0, 0x2
 
     .line 15
-    invoke-static {p0, v1, v0, v3}, Lcom/vk/camera/j/c;->a(Landroid/view/View;ZILjava/lang/Object;)Lcom/vk/camera/j/b;
+    invoke-static {p0, v1, v0, v3}, Lcom/vk/camera/j/CadreUtils1;->a(Landroid/view/View;ZILjava/lang/Object;)Lcom/vk/camera/j/CadreUtils2;
 
     move-result-object v0
 
     .line 16
-    invoke-virtual {v0}, Lcom/vk/camera/j/b;->e()F
+    invoke-virtual {v0}, Lcom/vk/camera/j/CadreUtils2;->e()F
 
     move-result v4
 
@@ -1106,7 +1106,7 @@
 
     if-eqz v4, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/camera/j/b;->e()F
+    invoke-virtual {v0}, Lcom/vk/camera/j/CadreUtils2;->e()F
 
     move-result v0
 
@@ -1159,7 +1159,7 @@
     check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
 
     .line 25
-    new-instance v4, Lcom/vk/lists/l0/b;
+    new-instance v4, Lcom/vk/lists/l0/GridSpacingItemDecoration;
 
     const/4 v5, 0x3
 
@@ -1167,7 +1167,7 @@
 
     move-result v6
 
-    invoke-direct {v4, v5, v6, v1}, Lcom/vk/lists/l0/b;-><init>(IIZ)V
+    invoke-direct {v4, v5, v6, v1}, Lcom/vk/lists/l0/GridSpacingItemDecoration;-><init>(IIZ)V
 
     invoke-virtual {v0, v4}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -1192,18 +1192,18 @@
 
     invoke-direct {v4, p0}, Lcom/vk/stories/view/CommunityGroupedStoryView$f;-><init>(Lcom/vk/stories/view/CommunityGroupedStoryView;)V
 
-    invoke-direct {p0, v0, v4}, Lcom/vk/stories/view/CommunityGroupedStoryView;->a(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/lists/y;)V
+    invoke-direct {p0, v0, v4}, Lcom/vk/stories/view/CommunityGroupedStoryView;->a(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/lists/PreloadCallback;)V
 
     const-string v4, "this@apply"
 
     .line 29
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v4, Lcom/vk/stories/view/CommunityGroupedStoryView$init$$inlined$apply$lambda$7;
 
     invoke-direct {v4, v0, p0}, Lcom/vk/stories/view/CommunityGroupedStoryView$init$$inlined$apply$lambda$7;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/stories/view/CommunityGroupedStoryView;)V
 
-    invoke-static {v0, v4}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v4}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     .line 30
     new-instance v4, Lcom/vk/stories/view/CommunityGroupedStoryView$g;
@@ -1227,7 +1227,7 @@
 
     invoke-direct {v4, p0}, Lcom/vk/stories/view/CommunityGroupedStoryView$init$$inlined$apply$lambda$9;-><init>(Lcom/vk/stories/view/CommunityGroupedStoryView;)V
 
-    invoke-static {v0, v4}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v4}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     const v0, 0x7f0a047d
 
@@ -1241,10 +1241,10 @@
 
     invoke-direct {v2, p0}, Lcom/vk/stories/view/CommunityGroupedStoryView$init$$inlined$apply$lambda$10;-><init>(Lcom/vk/stories/view/CommunityGroupedStoryView;)V
 
-    invoke-static {v0, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 36
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
 
     move-result-object v0
 
@@ -1258,7 +1258,7 @@
     check-cast v0, Lcom/vk/dto/stories/model/CommunityGroupedStoriesContainer;
 
     .line 37
-    new-instance v2, Lcom/vk/stories/view/z1/a;
+    new-instance v2, Lcom/vk/stories/view/z1/GroupedStoriesAdapter;
 
     new-instance v4, Lcom/vk/stories/view/CommunityGroupedStoryView$init$7;
 
@@ -1272,7 +1272,7 @@
 
     invoke-direct {v6, p0}, Lcom/vk/stories/view/CommunityGroupedStoryView$init$9;-><init>(Lcom/vk/stories/view/CommunityGroupedStoryView;)V
 
-    invoke-direct {v2, v4, v5, v6}, Lcom/vk/stories/view/z1/a;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/c;)V
+    invoke-direct {v2, v4, v5, v6}, Lcom/vk/stories/view/z1/GroupedStoriesAdapter;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions1;)V
 
     if-eqz v0, :cond_2
 
@@ -1282,7 +1282,7 @@
     move-result-object v3
 
     :cond_2
-    invoke-virtual {v2, v3}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v2, v3}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 39
     iget-object v0, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->L1:Landroidx/recyclerview/widget/RecyclerView;
@@ -1293,13 +1293,13 @@
 
     .line 40
     :cond_3
-    iput-object v2, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->M1:Lcom/vk/stories/view/z1/a;
+    iput-object v2, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->M1:Lcom/vk/stories/view/z1/GroupedStoriesAdapter;
 
     .line 41
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->N()V
 
     .line 42
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     if-eqz v0, :cond_4
 
@@ -1307,7 +1307,7 @@
 
     .line 43
     :cond_4
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->bringChildToFront(Landroid/view/View;)V
 
@@ -1328,7 +1328,7 @@
     .locals 1
 
     .line 17
-    iget-boolean p1, p0, Lcom/vk/stories/view/e1;->E:Z
+    iget-boolean p1, p0, Lcom/vk/stories/view/BaseStoryView;->E:Z
 
     if-eqz p1, :cond_0
 
@@ -1338,10 +1338,10 @@
     const/4 p1, 0x0
 
     .line 18
-    iput p1, p0, Lcom/vk/stories/view/e1;->I:I
+    iput p1, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     .line 19
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     if-eqz v0, :cond_1
 
@@ -1354,10 +1354,10 @@
     const/4 p1, 0x1
 
     .line 21
-    invoke-virtual {p0, p1}, Lcom/vk/stories/view/e1;->c(Z)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/view/BaseStoryView;->c(Z)V
 
     .line 22
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->x()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->x()Z
 
     move-result p1
 
@@ -1380,21 +1380,21 @@
 
     invoke-direct {v0, p1}, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$1;-><init>(Lcom/vk/dto/stories/model/StoryViewAction;)V
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/stories/view/CommunityGroupedStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/stories/view/CommunityGroupedStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/b;)V
+.method public a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/StoryViewAction;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vtosters/lite/data/n$l;",
-            "Lkotlin/m;",
+            "Lcom/vtosters/lite/data/Analytics$l;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1402,9 +1402,9 @@
     .line 16
     new-instance v0, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$2;
 
-    invoke-direct {v0, p2, p1}, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$2;-><init>(Lkotlin/jvm/b/b;Lcom/vk/dto/stories/model/StoryViewAction;)V
+    invoke-direct {v0, p2, p1}, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$2;-><init>(Lkotlin/jvm/b/Functions2;Lcom/vk/dto/stories/model/StoryViewAction;)V
 
-    invoke-super {p0, p1, v0}, Lcom/vk/stories/view/e1;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/b;)V
+    invoke-super {p0, p1, v0}, Lcom/vk/stories/view/BaseStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1425,7 +1425,7 @@
     .locals 0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->x()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->x()Z
 
     move-result p1
 
@@ -1510,7 +1510,7 @@
     invoke-super {p0}, Lcom/vk/stories/view/StoryView;->h()V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->getPosition()I
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->getPosition()I
 
     move-result v0
 
@@ -1522,7 +1522,7 @@
     invoke-direct {p0, v0}, Lcom/vk/stories/view/CommunityGroupedStoryView;->setShouldEndOnLastSegmentByExpiredTime(Z)V
 
     .line 5
-    invoke-virtual {p0, v0}, Lcom/vk/stories/view/e1;->c(Z)V
+    invoke-virtual {p0, v0}, Lcom/vk/stories/view/BaseStoryView;->c(Z)V
 
     :cond_0
     return-void
@@ -1535,28 +1535,28 @@
     invoke-super {p0}, Lcom/vk/stories/view/StoryView;->onAttachedToWindow()V
 
     .line 2
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->P1:Lb/h/g/l/e;
+    iget-object v1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->P1:Lb/h/g/l/NotificationListener;
 
     const/16 v2, 0x64
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 4
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
     .line 5
-    iget-object v1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->Q1:Lb/h/g/l/e;
+    iget-object v1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->Q1:Lb/h/g/l/NotificationListener;
 
     const/16 v2, 0x72
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     return-void
 .end method
@@ -1565,22 +1565,22 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->P1:Lb/h/g/l/e;
+    iget-object v1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->P1:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 2
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->Q1:Lb/h/g/l/e;
+    iget-object v1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView;->Q1:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 3
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
@@ -1633,7 +1633,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-super {p0}, Lcom/vk/stories/view/e1;->r()Z
+    invoke-super {p0}, Lcom/vk/stories/view/BaseStoryView;->r()Z
 
     move-result v0
 

@@ -3,7 +3,7 @@
 .source "PhotoFeedAdapter.kt"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/photo/Photo;",
         ">;>;"
@@ -84,7 +84,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a$a;->a:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;)Ld/a/a/c/c;
+    invoke-static {v0}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;)Lme/grishka/appkit/utils/Preloader;
 
     move-result-object v0
 
@@ -94,15 +94,15 @@
 
     iget-object v3, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a$a;->a:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;
 
-    invoke-static {v3}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;)Ld/a/a/c/c;
+    invoke-static {v3}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;)Lme/grishka/appkit/utils/Preloader;
 
     move-result-object v3
 
     const-string v4, "preloader"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Ld/a/a/c/c;->a()Ljava/util/ArrayList;
+    invoke-virtual {v3}, Lme/grishka/appkit/utils/Preloader;->a()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -112,13 +112,13 @@
 
     iget-object v5, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a$a;->a:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;
 
-    invoke-static {v5}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;)Ld/a/a/c/c;
+    invoke-static {v5}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$a;)Lme/grishka/appkit/utils/Preloader;
 
     move-result-object v5
 
-    invoke-static {v5, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v5}, Ld/a/a/c/c;->b()Ljava/util/ArrayList;
+    invoke-virtual {v5}, Lme/grishka/appkit/utils/Preloader;->b()Ljava/util/ArrayList;
 
     move-result-object v4
 
@@ -139,7 +139,7 @@
     const/4 v1, 0x1
 
     :cond_0
-    invoke-virtual {v0, p1, v1}, Ld/a/a/c/c;->a(Ljava/util/List;Z)V
+    invoke-virtual {v0, p1, v1}, Lme/grishka/appkit/utils/Preloader;->a(Ljava/util/List;Z)V
 
     return-void
 .end method

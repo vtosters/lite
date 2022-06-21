@@ -68,13 +68,13 @@
     move-result-object p1
 
     .line 6
-    invoke-direct {v0, v1, v3, p1, v2}, Lcom/vk/dto/stories/entities/stat/ClickableStickerStatInfo;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v3, p1, v2}, Lcom/vk/dto/stories/entities/stat/ClickableStickerStatInfo;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 
     .line 7
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -110,13 +110,13 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v3, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v3, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     new-array v4, v2, [Ljava/lang/String;
 
     aput-object v0, v4, v1
 
-    invoke-virtual {v3, v4}, Lcom/vk/common/j/a;->a([Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Lcom/vk/common/cache/SerializerCache;->a([Ljava/lang/String;)V
 
     :cond_0
     const-string v0, "newsfeed_cache_items"
@@ -128,13 +128,13 @@
 
     if-eqz p1, :cond_1
 
-    sget-object p2, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object p2, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     new-array v0, v2, [Ljava/lang/String;
 
     aput-object p1, v0, v1
 
-    invoke-virtual {p2, v0}, Lcom/vk/common/j/a;->a([Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Lcom/vk/common/cache/SerializerCache;->a([Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -163,7 +163,7 @@
     move/from16 v11, p5
 
     .line 1
-    sget-object v12, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v12, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "newsfeed_cache_info"
 
@@ -191,16 +191,16 @@
 
     move-object/from16 v5, p3
 
-    invoke-direct/range {v1 .. v9}, Lcom/vk/dto/newsfeed/NewsfeedData$Info;-><init>(Ljava/lang/String;IZLjava/util/List;JILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v9}, Lcom/vk/dto/newsfeed/NewsfeedData$Info;-><init>(Ljava/lang/String;IZLjava/util/List;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-static {v14}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v12, v13, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v12, v13, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Ljava/util/List;)V
 
     .line 2
-    sget-object v1, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v1, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v2, "newsfeed_cache_items"
 
@@ -217,21 +217,21 @@
     .line 3
     sget-object v4, Lcom/vk/dto/newsfeed/NewsfeedData$Companion$saveNewsfeedCache$1$1;->a:Lcom/vk/dto/newsfeed/NewsfeedData$Companion$saveNewsfeedCache$1$1;
 
-    invoke-static {v3, v4}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
+    invoke-static {v3, v4}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
 
     .line 4
-    invoke-virtual {v1, v2, v3}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v1, v2, v3}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Ljava/util/List;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final b(IZ)Lc/a/m;
+.method public final b(IZ)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(IZ)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/newsfeed/NewsfeedData;",
             ">;>;"
@@ -259,29 +259,29 @@
     if-eqz p1, :cond_0
 
     .line 3
-    sget-object p2, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object p2, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
-    invoke-virtual {p2, v0}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 4
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, p1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 5
     sget-object v0, Lcom/vk/dto/newsfeed/NewsfeedData$Companion$a;->a:Lcom/vk/dto/newsfeed/NewsfeedData$Companion$a;
 
-    invoke-static {p2, p1, v0}, Lc/a/m;->b(Lc/a/p;Lc/a/p;Lc/a/z/c;)Lc/a/m;
+    invoke-static {p2, p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;Lio/reactivex/functions/BiFunction;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "Observable.zip(oInfo, oI\u2026e listOf()\n            })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -291,11 +291,11 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -305,11 +305,11 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

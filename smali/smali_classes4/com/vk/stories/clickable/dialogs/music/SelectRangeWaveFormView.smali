@@ -133,7 +133,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/dialogs/music/SelectRangeWaveFormView$d;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/dialogs/music/SelectRangeWaveFormView$d;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/stories/clickable/dialogs/music/SelectRangeWaveFormView;->w0:Lcom/vk/stories/clickable/dialogs/music/SelectRangeWaveFormView$d;
 
@@ -289,7 +289,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f06020f
 
@@ -322,7 +322,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f060023
 
@@ -364,11 +364,11 @@
     invoke-direct {p1, v0}, Landroid/graphics/Paint;-><init>(I)V
 
     .line 23
-    sget-object v4, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v4, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v5, "AppContextHolder.context"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v4, v3}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
 
@@ -416,7 +416,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0803d6
 
@@ -441,7 +441,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v0, v1}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
+    invoke-static {p1, v0, v1}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -624,7 +624,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f06020f
 
@@ -657,7 +657,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f060023
 
@@ -699,11 +699,11 @@
     invoke-direct {p1, p2}, Landroid/graphics/Paint;-><init>(I)V
 
     .line 73
-    sget-object v3, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v3, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v4, "AppContextHolder.context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v3, v2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
 
@@ -751,7 +751,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f0803d6
 
@@ -776,7 +776,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, p2, v0}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
+    invoke-static {p1, p2, v0}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -959,7 +959,7 @@
 
     const-string v0, "context"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f06020f
 
@@ -992,7 +992,7 @@
 
     move-result-object p3
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f060023
 
@@ -1034,11 +1034,11 @@
     invoke-direct {p1, p2}, Landroid/graphics/Paint;-><init>(I)V
 
     .line 123
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v3, "AppContextHolder.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v2, v1}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
 
@@ -1086,7 +1086,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f0803d6
 
@@ -1111,7 +1111,7 @@
 
     const/4 p3, 0x0
 
-    invoke-static {p1, p2, p3}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
+    invoke-static {p1, p2, p3}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -1460,7 +1460,7 @@
 
     move-result v4
 
-    invoke-static {v1, v2, v4}, Lcom/vk/core/util/o0;->a(FFF)F
+    invoke-static {v1, v2, v4}, Lcom/vk/core/util/MathUtils;->a(FFF)F
 
     move-result v1
 
@@ -1642,7 +1642,7 @@
     if-nez v1, :cond_0
 
     .line 5
-    invoke-static {p1}, Lcom/vk/libvideo/t;->c(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/libvideo/VideoUtils;->c(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1780,7 +1780,7 @@
 
     sub-float/2addr v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/o0;->a(FFF)F
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/MathUtils;->a(FFF)F
 
     move-result v0
 
@@ -1863,7 +1863,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v4, v1}, Lcom/vk/core/util/o0;->a(III)I
+    invoke-static {v0, v4, v1}, Lcom/vk/core/util/MathUtils;->a(III)I
 
     move-result v0
 
@@ -1981,7 +1981,7 @@
 
     div-int/lit8 v1, v1, 0x4
 
-    invoke-static {v0, v4, v1}, Lcom/vk/core/util/o0;->a(III)I
+    invoke-static {v0, v4, v1}, Lcom/vk/core/util/MathUtils;->a(III)I
 
     move-result v0
 
@@ -2201,7 +2201,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1}, Lcom/vk/core/util/o0;->a(III)I
+    invoke-static {v0, v2, v1}, Lcom/vk/core/util/MathUtils;->a(III)I
 
     move-result v0
 
@@ -2222,7 +2222,7 @@
 
     iget v3, p0, Lcom/vk/stories/clickable/dialogs/music/SelectRangeWaveFormView;->c:I
 
-    invoke-static {v1, v2, v3}, Lcom/vk/core/util/o0;->a(III)I
+    invoke-static {v1, v2, v3}, Lcom/vk/core/util/MathUtils;->a(III)I
 
     move-result v1
 
@@ -3049,7 +3049,7 @@
 
     sub-int/2addr v4, v0
 
-    invoke-static {v3, v1, v4}, Lcom/vk/core/util/o0;->a(III)I
+    invoke-static {v3, v1, v4}, Lcom/vk/core/util/MathUtils;->a(III)I
 
     move-result v3
 
@@ -3256,7 +3256,7 @@
 
     const-string v0, "context"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0702bc
 
@@ -3450,7 +3450,7 @@
 
     move-result v0
 
-    invoke-static {p2, p1, v0}, Lcom/vk/core/util/o0;->a(FFF)F
+    invoke-static {p2, p1, v0}, Lcom/vk/core/util/MathUtils;->a(FFF)F
 
     move-result p1
 

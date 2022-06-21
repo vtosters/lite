@@ -1,5 +1,5 @@
 .class public Lcom/vk/api/video/VideoSave;
-.super Lcom/vk/api/base/d;
+.super Lcom/vk/api/base/ApiRequest;
 .source "VideoSave.java"
 
 
@@ -13,7 +13,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/d<",
+        "Lcom/vk/api/base/ApiRequest<",
         "Lcom/vk/api/video/VideoSave$a;",
         ">;"
     }
@@ -42,12 +42,12 @@
     const-string p1, "link"
 
     .line 10
-    invoke-virtual {p0, p1, p5}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p5}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "album_id"
 
     .line 11
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -58,7 +58,7 @@
     const-string v0, "video.save"
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     if-gez p1, :cond_0
 
@@ -67,7 +67,7 @@
     const-string v0, "group_id"
 
     .line 2
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     .line 3
     :cond_0
@@ -80,7 +80,7 @@
     const-string p1, "name"
 
     .line 4
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 5
     :cond_1
@@ -93,7 +93,7 @@
     const-string p1, "description"
 
     .line 6
-    invoke-virtual {p0, p1, p3}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p3}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_2
     if-eqz p5, :cond_3
@@ -103,7 +103,7 @@
     const-string p2, "preview"
 
     .line 7
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     :cond_3
     if-nez p4, :cond_4
@@ -125,7 +125,7 @@
     :goto_0
     const-string p2, "target"
 
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -153,11 +153,11 @@
     invoke-direct {v0}, Lcom/vk/api/video/VideoSave$a;-><init>()V
 
     .line 4
-    invoke-static {p1}, Lcom/vk/dto/common/data/i;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/data/i;
+    invoke-static {p1}, Lcom/vk/dto/common/data/UploadServer;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/data/UploadServer;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vk/api/video/VideoSave$a;->a:Lcom/vk/dto/common/data/i;
+    iput-object v1, v0, Lcom/vk/api/video/VideoSave$a;->a:Lcom/vk/dto/common/data/UploadServer;
 
     const-string v1, "video_id"
 

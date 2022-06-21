@@ -3,12 +3,12 @@
 .source "LocalGalleryProvider.kt"
 
 # interfaces
-.implements Lc/a/z/a;
+.implements Lio/reactivex/functions/Action;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photogallery/LocalGalleryProvider;->reloadFromMediaStore()Lc/a/m;
+    value = Lcom/vk/photogallery/LocalGalleryProvider;->reloadFromMediaStore()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

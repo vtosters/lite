@@ -3,7 +3,7 @@
 .source "EventIdGenerator.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/s/c;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/s/Random;",
         ">;"
     }
 .end annotation
@@ -59,14 +59,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stat/utils/EventIdGenerator$random$2;->invoke()Lkotlin/s/c;
+    invoke-virtual {p0}, Lcom/vk/stat/utils/EventIdGenerator$random$2;->invoke()Lkotlin/s/Random;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final invoke()Lkotlin/s/c;
+.method public final invoke()Lkotlin/s/Random;
     .locals 2
 
     .line 2
@@ -74,7 +74,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lkotlin/s/d;->a(J)Lkotlin/s/c;
+    invoke-static {v0, v1}, Lkotlin/s/Random1;->a(J)Lkotlin/s/Random;
 
     move-result-object v0
 

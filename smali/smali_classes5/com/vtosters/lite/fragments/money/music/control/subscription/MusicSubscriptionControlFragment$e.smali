@@ -88,11 +88,11 @@
 
     iget-object p1, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$e;->a:Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->b(Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;)Lcom/vk/music/restriction/h;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->b(Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;)Lcom/vk/music/restriction/MusicRestrictionManager;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/music/restriction/h;->b()V
+    invoke-interface {p1}, Lcom/vk/music/restriction/MusicRestrictionManager;->b()V
 
     .line 4
     :cond_1

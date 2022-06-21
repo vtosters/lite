@@ -1,11 +1,11 @@
 .class public final Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$b;
-.super Lcom/vtosters/lite/fragments/m2/a$c;
+.super Lcom/vtosters/lite/fragments/m2/GridFragment$c;
 .source "GiftCategoryFragment.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;->c5()Lcom/vtosters/lite/fragments/m2/a$c;
+    value = Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;->c5()Lcom/vtosters/lite/fragments/m2/GridFragment$c;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,10 +15,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/fragments/m2/a<",
+        "Lcom/vtosters/lite/fragments/m2/GridFragment<",
         "Lcom/vk/dto/gift/CatalogedGift;",
         ">.c<",
-        "Lcom/vtosters/lite/fragments/gifts/e;",
+        "Lcom/vtosters/lite/fragments/gifts/GiftHolder;",
         ">;"
     }
 .end annotation
@@ -40,14 +40,14 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$b;->b:Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;
 
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/m2/a$c;-><init>(Lcom/vtosters/lite/fragments/m2/a;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/m2/GridFragment$c;-><init>(Lcom/vtosters/lite/fragments/m2/GridFragment;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vtosters/lite/fragments/gifts/e;I)V
+.method public a(Lcom/vtosters/lite/fragments/gifts/GiftHolder;I)V
     .locals 1
 
     .line 2
@@ -57,20 +57,20 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/fragments/gifts/e;->p(I)Lcom/vtosters/lite/fragments/gifts/e;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/fragments/gifts/GiftHolder;->p(I)Lcom/vtosters/lite/fragments/gifts/GiftHolder;
 
-    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/fragments/m2/a$c;->a(Lcom/vtosters/lite/ui/b0/i;I)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/fragments/m2/GridFragment$c;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
 
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vtosters/lite/ui/b0/i;I)V
+.method public bridge synthetic a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/fragments/gifts/e;
+    check-cast p1, Lcom/vtosters/lite/fragments/gifts/GiftHolder;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$b;->a(Lcom/vtosters/lite/fragments/gifts/e;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$b;->a(Lcom/vtosters/lite/fragments/gifts/GiftHolder;I)V
 
     return-void
 .end method
@@ -110,9 +110,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/fragments/gifts/e;
+    check-cast p1, Lcom/vtosters/lite/fragments/gifts/GiftHolder;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$b;->a(Lcom/vtosters/lite/fragments/gifts/e;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$b;->a(Lcom/vtosters/lite/fragments/gifts/GiftHolder;I)V
 
     return-void
 .end method
@@ -121,28 +121,28 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$b;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/fragments/gifts/e;
+    invoke-virtual {p0, p1, p2}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$b;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/fragments/gifts/GiftHolder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/fragments/gifts/e;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/fragments/gifts/GiftHolder;
     .locals 0
 
     .line 2
-    new-instance p2, Lcom/vtosters/lite/fragments/gifts/e;
+    new-instance p2, Lcom/vtosters/lite/fragments/gifts/GiftHolder;
 
-    invoke-direct {p2, p1}, Lcom/vtosters/lite/fragments/gifts/e;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vtosters/lite/fragments/gifts/GiftHolder;-><init>(Landroid/view/ViewGroup;)V
 
     iget-object p1, p0, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$b;->b:Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;->d(Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;)Lcom/vk/common/g/g;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;->d(Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;)Lcom/vk/common/g/VoidF1;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vtosters/lite/fragments/gifts/e;->a(Lcom/vk/common/g/g;)Lcom/vtosters/lite/fragments/gifts/e;
+    invoke-virtual {p2, p1}, Lcom/vtosters/lite/fragments/gifts/GiftHolder;->a(Lcom/vk/common/g/VoidF1;)Lcom/vtosters/lite/fragments/gifts/GiftHolder;
 
     iget-object p1, p0, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment$b;->b:Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;
 
@@ -150,11 +150,11 @@
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lcom/vtosters/lite/fragments/gifts/e;->p(I)Lcom/vtosters/lite/fragments/gifts/e;
+    invoke-virtual {p2, p1}, Lcom/vtosters/lite/fragments/gifts/GiftHolder;->p(I)Lcom/vtosters/lite/fragments/gifts/GiftHolder;
 
     const-string p1, "GiftHolder(parent).onCli\u2026ender).setSize(itemWidth)"
 
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p2
 .end method

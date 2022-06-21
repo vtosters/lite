@@ -69,7 +69,7 @@
 
     iget-object v0, v0, Lcom/vk/profile/ui/cover/CoverDialog$2;->this$0:Lcom/vk/profile/ui/cover/CoverDialog;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/a;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     move-result-object v1
 
@@ -115,7 +115,7 @@
 
     const/4 v6, 0x1
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/profile/ui/cover/a;->a(Lcom/vk/profile/ui/cover/CoverViewPager;Landroid/view/View;Landroid/view/View;Lcom/vk/profile/ui/community/CommunityParallax;Z)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/profile/ui/cover/CoverDialogAnimator;->a(Lcom/vk/profile/ui/cover/CoverViewPager;Landroid/view/View;Landroid/view/View;Lcom/vk/profile/ui/community/CommunityParallax;Z)V
 
     .line 4
     iget-object v1, p0, Lcom/vk/profile/ui/cover/CoverDialog$2$1;->a:Lcom/vk/profile/ui/cover/CoverDialog$2;
@@ -254,20 +254,20 @@
 
     iget-object v1, v1, Lcom/vk/profile/ui/cover/CoverDialog$2;->this$0:Lcom/vk/profile/ui/cover/CoverDialog;
 
-    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/a;
+    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v2}, Lcom/vk/profile/ui/cover/a;->a(Z)V
+    invoke-virtual {v1, v2}, Lcom/vk/profile/ui/cover/CoverDialogAnimator;->a(Z)V
 
     .line 15
     iget-object v1, p0, Lcom/vk/profile/ui/cover/CoverDialog$2$1;->a:Lcom/vk/profile/ui/cover/CoverDialog$2;
 
     iget-object v1, v1, Lcom/vk/profile/ui/cover/CoverDialog$2;->this$0:Lcom/vk/profile/ui/cover/CoverDialog;
 
-    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/a;
+    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     move-result-object v2
 
@@ -311,14 +311,14 @@
 
     const/high16 v7, 0x3f800000    # 1.0f
 
-    invoke-virtual/range {v2 .. v7}, Lcom/vk/profile/ui/cover/a;->a(Lcom/vk/profile/ui/cover/CoverViewPager;Landroid/view/View;Landroid/view/View;Lcom/vk/profile/ui/community/CommunityParallax;F)V
+    invoke-virtual/range {v2 .. v7}, Lcom/vk/profile/ui/cover/CoverDialogAnimator;->a(Lcom/vk/profile/ui/cover/CoverViewPager;Landroid/view/View;Landroid/view/View;Lcom/vk/profile/ui/community/CommunityParallax;F)V
 
     .line 16
     iget-object v1, p0, Lcom/vk/profile/ui/cover/CoverDialog$2$1;->a:Lcom/vk/profile/ui/cover/CoverDialog$2;
 
     iget-object v1, v1, Lcom/vk/profile/ui/cover/CoverDialog$2;->this$0:Lcom/vk/profile/ui/cover/CoverDialog;
 
-    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/a;
+    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     move-result-object v2
 
@@ -364,24 +364,24 @@
 
     invoke-direct {v7, p0}, Lcom/vk/profile/ui/cover/CoverDialog$2$1$3;-><init>(Lcom/vk/profile/ui/cover/CoverDialog$2$1;)V
 
-    invoke-virtual/range {v2 .. v7}, Lcom/vk/profile/ui/cover/a;->a(Lcom/vk/profile/ui/cover/CoverViewPager;Landroid/view/View;Landroid/view/View;Lcom/vk/profile/ui/community/CommunityParallax;Lkotlin/jvm/b/a;)V
+    invoke-virtual/range {v2 .. v7}, Lcom/vk/profile/ui/cover/CoverDialogAnimator;->a(Lcom/vk/profile/ui/cover/CoverViewPager;Landroid/view/View;Landroid/view/View;Lcom/vk/profile/ui/community/CommunityParallax;Lkotlin/jvm/b/Functions;)V
 
     return-void
 
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 17
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 18
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method

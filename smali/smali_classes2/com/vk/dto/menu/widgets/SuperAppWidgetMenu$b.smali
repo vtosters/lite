@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -130,7 +130,7 @@
     .line 8
     new-instance v2, Lcom/vk/dto/menu/widgets/SuperAppWidgetMenu;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v2, v1, p1, v4}, Lcom/vk/dto/menu/widgets/SuperAppWidgetMenu;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
 

@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # instance fields
@@ -30,7 +30,7 @@
 
     check-cast p1, Lcom/vk/dto/stickers/AnimatedStickerInfo;
 
-    invoke-static {v0, p1}, Lcom/vk/stories/editor/base/k0;->a(Ljava/lang/String;Lcom/vk/dto/stickers/AnimatedStickerInfo;)Lcom/vk/stories/editor/base/k0$c;
+    invoke-static {v0, p1}, Lcom/vk/stories/editor/base/StickerEditorViewListener;->a(Ljava/lang/String;Lcom/vk/dto/stickers/AnimatedStickerInfo;)Lcom/vk/stories/editor/base/StickerEditorViewListener$c;
 
     move-result-object p1
 

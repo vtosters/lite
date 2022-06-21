@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;
-.super Lcom/vk/im/ui/components/chat_settings/vc/e;
+.super Lcom/vk/im/ui/components/chat_settings/vc/VhBase;
 .source "VhHeader.kt"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/components/chat_settings/vc/e<",
-        "Lcom/vk/im/ui/components/chat_settings/vc/b$a;",
+        "Lcom/vk/im/ui/components/chat_settings/vc/VhBase<",
+        "Lcom/vk/im/ui/components/chat_settings/vc/ListItems$a;",
         ">;"
     }
 .end annotation
@@ -55,27 +55,27 @@
 
 .field private final p:Lcom/vk/im/ui/views/settings/LabelSettingsView;
 
-.field private final q:Lcom/vk/im/ui/formatters/d;
+.field private final q:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
-.field private final r:Lcom/vk/im/ui/formatters/q;
+.field private final r:Lcom/vk/im/ui/formatters/MsgShortContentFormatter;
 
 .field private s:Ljava/lang/String;
 
 .field private t:Z
 
-.field private final u:Lcom/vk/im/ui/components/chat_settings/vc/a;
+.field private final u:Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/ui/components/chat_settings/vc/a;Landroid/view/ViewGroup;)V
+.method public constructor <init>(Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;Landroid/view/ViewGroup;)V
     .locals 1
 
     .line 1
     sget v0, Lcom/vk/im/ui/j;->vkim_chat_settings_header:I
 
-    invoke-direct {p0, v0, p2}, Lcom/vk/im/ui/components/chat_settings/vc/e;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p2}, Lcom/vk/im/ui/components/chat_settings/vc/VhBase;-><init>(ILandroid/view/ViewGroup;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->u:Lcom/vk/im/ui/components/chat_settings/vc/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->u:Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -268,14 +268,14 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->p:Lcom/vk/im/ui/views/settings/LabelSettingsView;
 
     .line 18
-    new-instance p1, Lcom/vk/im/ui/formatters/d;
+    new-instance p1, Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
-    invoke-direct {p1}, Lcom/vk/im/ui/formatters/d;-><init>()V
+    invoke-direct {p1}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->q:Lcom/vk/im/ui/formatters/d;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->q:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     .line 19
-    new-instance p1, Lcom/vk/im/ui/formatters/q;
+    new-instance p1, Lcom/vk/im/ui/formatters/MsgShortContentFormatter;
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -283,11 +283,11 @@
 
     const-string v0, "parent.context"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, p2}, Lcom/vk/im/ui/formatters/q;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/ui/formatters/MsgShortContentFormatter;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->r:Lcom/vk/im/ui/formatters/q;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->r:Lcom/vk/im/ui/formatters/MsgShortContentFormatter;
 
     const/4 p1, 0x1
 
@@ -299,13 +299,13 @@
 
     const-string p2, "avatarView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$1;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$1;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 22
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->b:Landroid/widget/EditText;
@@ -321,7 +321,7 @@
 
     const-string p2, "titleView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$b;
 
@@ -343,104 +343,104 @@
 
     const-string p2, "attaches"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$5;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$5;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 26
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->e:Landroid/view/View;
 
     const-string p2, "search"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$6;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$6;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 27
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->f:Landroid/view/View;
 
     const-string p2, "pinned"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$7;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$7;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 28
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->i:Lcom/vk/im/ui/views/settings/LabelSettingsView;
 
     const-string p2, "link"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$8;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$8;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 29
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->j:Landroid/view/View;
 
     const-string p2, "owner"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$9;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$9;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 30
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->k:Landroid/view/View;
 
     const-string p2, "clearBtn"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$10;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$10;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 31
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->l:Lcom/vk/im/ui/views/settings/LabelSettingsView;
 
     const-string p2, "returnBtn"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$11;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$11;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 32
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->m:Lcom/vk/im/ui/views/settings/LabelSettingsView;
 
     const-string p2, "leaveBtn"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$12;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$12;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -449,7 +449,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/d;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
@@ -521,7 +521,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->s:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -532,17 +532,17 @@
     if-eqz p2, :cond_0
 
     .line 3
-    iget-object p2, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->u:Lcom/vk/im/ui/components/chat_settings/vc/a;
+    iget-object p2, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->u:Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
 
-    invoke-interface {p2, p1}, Lcom/vk/im/ui/components/chat_settings/vc/a;->a(Ljava/lang/String;)V
+    invoke-interface {p2, p1}, Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->u:Lcom/vk/im/ui/components/chat_settings/vc/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->u:Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/chat_settings/vc/a;->e()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;->e()V
 
     :goto_0
     return-void
@@ -550,21 +550,21 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/ui/components/chat_settings/vc/b$a;)V
+.method public a(Lcom/vk/im/ui/components/chat_settings/vc/ListItems$a;)V
     .locals 11
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/vc/b$a;->c()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/vc/ListItems$a;->c()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v0
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/vc/b$a;->d()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/vc/ListItems$a;->d()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object v1
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/vc/b$a;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/vc/ListItems$a;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -582,7 +582,7 @@
 
     const-string v6, "itemView"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
@@ -600,7 +600,7 @@
 
     const-string v7, "casperInfo"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/Dialog;->U1()Z
 
@@ -618,7 +618,7 @@
 
     const-string v7, "avatarView"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Lcom/vk/im/engine/models/dialogs/ChatSettings;->v1()Z
 
@@ -642,7 +642,7 @@
 
     const-string v7, "titleView"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Landroid/widget/EditText;->getSelectionStart()I
 
@@ -665,7 +665,7 @@
     .line 19
     iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->b:Landroid/widget/EditText;
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Lcom/vk/im/engine/models/dialogs/ChatSettings;->v1()Z
 
@@ -676,7 +676,7 @@
     .line 20
     iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->b:Landroid/widget/EditText;
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getSelectionStart()I
 
@@ -721,7 +721,7 @@
     .line 24
     iget-object v2, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->b:Landroid/widget/EditText;
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -753,7 +753,7 @@
 
     const-string v6, "attaches"
 
-    invoke-static {v2, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/Dialog;->S1()Z
 
@@ -769,7 +769,7 @@
     move-result-wide v6
 
     .line 29
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/vc/b$a;->c()Lcom/vk/im/engine/models/dialogs/Dialog;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/vc/ListItems$a;->c()Lcom/vk/im/engine/models/dialogs/Dialog;
 
     move-result-object v2
 
@@ -806,7 +806,7 @@
     .line 34
     iget-object v6, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->f:Landroid/view/View;
 
-    invoke-static {v6, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v6, v10}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -815,15 +815,15 @@
 
     const-string v6, "pinnedMsgSender"
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v6, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->q:Lcom/vk/im/ui/formatters/d;
+    iget-object v6, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->q:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     invoke-virtual {v2}, Lcom/vk/im/engine/models/messages/PinnedMsg;->getFrom()Lcom/vk/im/engine/models/Member;
 
     move-result-object v7
 
-    invoke-virtual {v6, v7, v1}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesInfo;)Ljava/lang/String;
+    invoke-virtual {v6, v7, v1}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesInfo;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -834,11 +834,11 @@
 
     const-string v4, "pinnedMsgContent"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->r:Lcom/vk/im/ui/formatters/q;
+    iget-object v4, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->r:Lcom/vk/im/ui/formatters/MsgShortContentFormatter;
 
-    invoke-virtual {v4, v2}, Lcom/vk/im/ui/formatters/q;->a(Lcom/vk/im/engine/models/messages/WithUserContent;)Ljava/lang/CharSequence;
+    invoke-virtual {v4, v2}, Lcom/vk/im/ui/formatters/MsgShortContentFormatter;->a(Lcom/vk/im/engine/models/messages/WithUserContent;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -850,7 +850,7 @@
     :cond_5
     iget-object v1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->f:Landroid/view/View;
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1, v9}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -860,7 +860,7 @@
 
     const-string v2, "notifications"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/Dialog;->z1()Lcom/vk/im/engine/models/dialogs/ChatSettings;
 
@@ -889,7 +889,7 @@
 
     const-string v2, "owner"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/Dialog;->V1()Z
 
@@ -907,7 +907,7 @@
     if-ne v2, v10, :cond_7
 
     .line 41
-    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/d;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -919,7 +919,7 @@
 
     const-string v4, "context.getString(R.stri\u2026vkim_channel_invite_link)"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_5
 
@@ -927,7 +927,7 @@
     if-nez v2, :cond_11
 
     .line 42
-    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/d;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -939,7 +939,7 @@
 
     const-string v4, "context.getString(R.string.vkim_chat_invite_link)"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 43
     :goto_5
@@ -950,7 +950,7 @@
 
     const-string v2, "link"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/Dialog;->V1()Z
 
@@ -988,7 +988,7 @@
     if-ne v2, v10, :cond_a
 
     .line 46
-    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/d;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -1000,7 +1000,7 @@
 
     const-string v4, "context.getString(R.stri\u2026_channel_settings_return)"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_8
 
@@ -1008,7 +1008,7 @@
     if-nez v2, :cond_10
 
     .line 47
-    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/d;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -1020,7 +1020,7 @@
 
     const-string v4, "context.getString(R.stri\u2026_settings_members_return)"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 48
     :goto_8
@@ -1031,7 +1031,7 @@
 
     const-string v2, "returnBtn"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/Dialog;->z1()Lcom/vk/im/engine/models/dialogs/ChatSettings;
 
@@ -1065,7 +1065,7 @@
     if-ne v2, v10, :cond_c
 
     .line 51
-    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/d;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -1077,7 +1077,7 @@
 
     const-string v4, "context.getString(R.stri\u2026m_channel_settings_leave)"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_a
 
@@ -1085,7 +1085,7 @@
     if-nez v2, :cond_f
 
     .line 52
-    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/d;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -1097,7 +1097,7 @@
 
     const-string v4, "context.getString(R.stri\u2026t_settings_members_leave)"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 53
     :goto_a
@@ -1108,7 +1108,7 @@
 
     const-string v2, "leaveBtn"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/Dialog;->z1()Lcom/vk/im/engine/models/dialogs/ChatSettings;
 
@@ -1132,7 +1132,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -1143,7 +1143,7 @@
     .line 56
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->p:Lcom/vk/im/ui/views/settings/LabelSettingsView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, v10}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -1158,20 +1158,20 @@
 
     const-string v2, "resources.getString(R.st\u2026ettings_open_casper_chat)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Lcom/vk/im/ui/views/settings/LabelSettingsView;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 58
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->p:Lcom/vk/im/ui/views/settings/LabelSettingsView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$bind$1;
 
     invoke-direct {v0, p0, v3}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$bind$1;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;Lcom/vk/im/engine/models/dialogs/ChatSettings;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_b
 
@@ -1179,9 +1179,9 @@
     :cond_e
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->p:Lcom/vk/im/ui/views/settings/LabelSettingsView;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/vc/b$a;->a()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/chat_settings/vc/ListItems$a;->a()Z
 
     move-result p1
 
@@ -1198,20 +1198,20 @@
 
     const-string v2, "resources.getString(R.st\u2026tings_create_casper_chat)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Lcom/vk/im/ui/views/settings/LabelSettingsView;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 61
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->p:Lcom/vk/im/ui/views/settings/LabelSettingsView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$bind$2;
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader$bind$2;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     :goto_b
     return-void
@@ -1242,38 +1242,38 @@
 
     .line 65
     :cond_12
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/ui/components/chat_settings/vc/b;)V
+.method public bridge synthetic a(Lcom/vk/im/ui/components/chat_settings/vc/ListItems;)V
     .locals 0
 
     .line 4
-    check-cast p1, Lcom/vk/im/ui/components/chat_settings/vc/b$a;
+    check-cast p1, Lcom/vk/im/ui/components/chat_settings/vc/ListItems$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->a(Lcom/vk/im/ui/components/chat_settings/vc/b$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->a(Lcom/vk/im/ui/components/chat_settings/vc/ListItems$a;)V
 
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/c;)V
+.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)V
     .locals 0
 
     .line 5
-    check-cast p1, Lcom/vk/im/ui/components/chat_settings/vc/b$a;
+    check-cast p1, Lcom/vk/im/ui/components/chat_settings/vc/ListItems$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->a(Lcom/vk/im/ui/components/chat_settings/vc/b$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->a(Lcom/vk/im/ui/components/chat_settings/vc/ListItems$a;)V
 
     return-void
 .end method
 
-.method public final e0()Lcom/vk/im/ui/components/chat_settings/vc/a;
+.method public final e0()Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->u:Lcom/vk/im/ui/components/chat_settings/vc/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhHeader;->u:Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
 
     return-object v0
 .end method

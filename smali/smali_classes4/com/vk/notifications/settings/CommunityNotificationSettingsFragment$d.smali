@@ -3,7 +3,7 @@
 .source "CommunityNotificationSettingsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,10 +22,10 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/List<",
         "+",
-        "Lb/h/h/g/a;",
+        "Lb/h/h/g/SettingsSection;",
         ">;>;"
     }
 .end annotation
@@ -54,7 +54,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lb/h/h/g/a;",
+            "Lb/h/h/g/SettingsSection;",
             ">;)V"
         }
     .end annotation
@@ -74,7 +74,7 @@
     const-string v2, "it"
 
     .line 3
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -95,7 +95,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lb/h/h/g/a;
+    check-cast v2, Lb/h/h/g/SettingsSection;
 
     .line 5
     new-instance v4, Ljava/util/ArrayList;
@@ -103,7 +103,7 @@
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     .line 6
-    invoke-virtual {v2}, Lb/h/h/g/a;->a()Ljava/util/ArrayList;
+    invoke-virtual {v2}, Lb/h/h/g/SettingsSection;->a()Ljava/util/ArrayList;
 
     move-result-object v5
 
@@ -121,7 +121,7 @@
     .line 8
     new-instance v3, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$c;
 
-    invoke-virtual {v2}, Lb/h/h/g/a;->b()Ljava/lang/String;
+    invoke-virtual {v2}, Lb/h/h/g/SettingsSection;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -145,14 +145,14 @@
 
     move-result-object v3
 
-    check-cast v3, Lb/h/h/g/b;
+    check-cast v3, Lb/h/h/g/SettingsSectionItem;
 
     .line 10
     new-instance v5, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;
 
     iget-object v6, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$d;->a:Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;
 
-    invoke-direct {v5, v6, v3}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;-><init>(Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;Lb/h/h/g/b;)V
+    invoke-direct {v5, v6, v3}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;-><init>(Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;Lb/h/h/g/SettingsSectionItem;)V
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -160,15 +160,15 @@
 
     .line 11
     :cond_1
-    new-instance v2, Lcom/vk/profile/adapter/b/a$b;
+    new-instance v2, Lcom/vk/profile/adapter/b/BaseItemsFactory$b;
 
-    invoke-direct {v2, v4}, Lcom/vk/profile/adapter/b/a$b;-><init>(Ljava/util/List;)V
+    invoke-direct {v2, v4}, Lcom/vk/profile/adapter/b/BaseItemsFactory$b;-><init>(Ljava/util/List;)V
 
     .line 12
-    invoke-virtual {v2, v1}, Lcom/vk/profile/adapter/b/a$a;->a(I)V
+    invoke-virtual {v2, v1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$a;->a(I)V
 
     .line 13
-    invoke-virtual {v2, v0}, Lcom/vk/profile/adapter/b/a$b;->a(Ljava/util/List;)V
+    invoke-virtual {v2, v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory$b;->a(Ljava/util/List;)V
 
     .line 14
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
@@ -186,7 +186,7 @@
     if-eqz p1, :cond_3
 
     .line 16
-    new-instance p1, Lcom/vk/profile/adapter/b/a$b;
+    new-instance p1, Lcom/vk/profile/adapter/b/BaseItemsFactory$b;
 
     new-array v1, v3, [Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$DisableItem;
 
@@ -204,13 +204,13 @@
 
     move-result-object v1
 
-    invoke-direct {p1, v1}, Lcom/vk/profile/adapter/b/a$b;-><init>(Ljava/util/List;)V
+    invoke-direct {p1, v1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$b;-><init>(Ljava/util/List;)V
 
     .line 17
-    invoke-virtual {p1, v0}, Lcom/vk/profile/adapter/b/a$b;->a(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory$b;->a(Ljava/util/List;)V
 
     .line 18
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/b/a$b;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$b;->a()Ljava/util/List;
 
     move-result-object p1
 
@@ -220,11 +220,11 @@
     :cond_3
     iget-object p1, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$d;->a:Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;
 
-    invoke-virtual {p1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->P4()Lcom/vk/profile/adapter/a;
+    invoke-virtual {p1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;->P4()Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 20
     iget-object p1, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$d;->a:Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;

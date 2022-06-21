@@ -95,7 +95,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/playlist/MusicEditPlaylistDataContainer$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/playlist/MusicEditPlaylistDataContainer$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/music/playlist/MusicEditPlaylistDataContainer$a;
@@ -139,7 +139,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v13}, Lcom/vk/music/playlist/MusicEditPlaylistDataContainer;-><init>(ZILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/music/Thumb;Lcom/vk/dto/music/Playlist;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v13}, Lcom/vk/music/playlist/MusicEditPlaylistDataContainer;-><init>(ZILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/music/Thumb;Lcom/vk/dto/music/Playlist;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -363,7 +363,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/music/Thumb;Lcom/vk/dto/music/Playlist;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ZILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/music/Thumb;Lcom/vk/dto/music/Playlist;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 11
 
     move/from16 v0, p12

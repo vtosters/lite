@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/engine/commands/attaches/HideAudioMsgTranscriptCmd;
-.super Lcom/vk/im/engine/i/a;
+.super Lcom/vk/im/engine/i/BaseImEngineCmd;
 .source "HideAudioMsgTranscriptCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/a<",
-        "Lkotlin/m;",
+        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/commands/attaches/HideAudioMsgTranscriptCmd;->b:I
 
@@ -39,18 +39,18 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/attaches/HideAudioMsgTranscriptCmd;->a(Lcom/vk/im/engine/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/attaches/HideAudioMsgTranscriptCmd;->a(Lcom/vk/im/engine/ImEnvironment;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/d;)V
+.method public a(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 3
 
     .line 2
@@ -63,15 +63,15 @@
     iput-boolean v1, v0, Lkotlin/jvm/internal/Ref$BooleanRef;->element:Z
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
     new-instance v2, Lcom/vk/im/engine/commands/attaches/HideAudioMsgTranscriptCmd$onExecute$1;
 
-    invoke-direct {v2, p0, v0, p1}, Lcom/vk/im/engine/commands/attaches/HideAudioMsgTranscriptCmd$onExecute$1;-><init>(Lcom/vk/im/engine/commands/attaches/HideAudioMsgTranscriptCmd;Lkotlin/jvm/internal/Ref$BooleanRef;Lcom/vk/im/engine/d;)V
+    invoke-direct {v2, p0, v0, p1}, Lcom/vk/im/engine/commands/attaches/HideAudioMsgTranscriptCmd$onExecute$1;-><init>(Lcom/vk/im/engine/commands/attaches/HideAudioMsgTranscriptCmd;Lkotlin/jvm/internal/Ref$BooleanRef;Lcom/vk/im/engine/ImEnvironment;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     .line 4
     iget-boolean v0, v0, Lkotlin/jvm/internal/Ref$BooleanRef;->element:Z
@@ -79,7 +79,7 @@
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->n0()Lcom/vk/im/engine/internal/c;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->n0()Lcom/vk/im/engine/internal/EventHelper;
 
     move-result-object p1
 
@@ -87,7 +87,7 @@
 
     iget v1, p0, Lcom/vk/im/engine/commands/attaches/HideAudioMsgTranscriptCmd;->b:I
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/internal/c;->c(Ljava/lang/Object;I)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/internal/EventHelper;->c(Ljava/lang/Object;I)V
 
     :cond_0
     return-void

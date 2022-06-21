@@ -9,7 +9,7 @@
 
 
 # static fields
-.field static final synthetic g:[Lkotlin/u/j;
+.field static final synthetic g:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -19,11 +19,11 @@
 
 .field private final c:Landroidx/appcompat/widget/Toolbar;
 
-.field private final d:Lkotlin/e;
+.field private final d:Lkotlin/Lazy2;
 
 .field private e:Z
 
-.field private f:Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/a;
+.field private f:Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVcCallback;
 
 
 # direct methods
@@ -32,13 +32,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -46,15 +46,15 @@
 
     const-string v4, "getPopupVc()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->g:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->g:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -103,11 +103,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc$popupVc$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->d:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->d:Lkotlin/Lazy2;
 
     .line 6
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->c:Landroidx/appcompat/widget/Toolbar;
@@ -131,7 +131,7 @@
 
     .line 8
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -159,15 +159,15 @@
 .method private final f()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->d:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->g:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->g:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -180,7 +180,7 @@
     .locals 8
 
     .line 1
-    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;
+    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;
 
     .line 2
     sget v1, Lcom/vk/im/ui/c;->im_ic_pinned_msg_show:I
@@ -200,15 +200,15 @@
 
     const-string v3, "context.getString(R.stri\u2026g_option_pinned_msg_show)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x1
 
     .line 4
-    invoke-direct {v0, v3, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;-><init>(ILandroid/graphics/drawable/Drawable;Ljava/lang/String;)V
+    invoke-direct {v0, v3, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;-><init>(ILandroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
     .line 5
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;
 
     .line 6
     sget v2, Lcom/vk/im/ui/c;->im_ic_pinned_msg_hide:I
@@ -228,15 +228,15 @@
 
     const-string v5, "context.getString(R.stri\u2026g_option_pinned_msg_hide)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x2
 
     .line 8
-    invoke-direct {v1, v5, v2, v4}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;-><init>(ILandroid/graphics/drawable/Drawable;Ljava/lang/String;)V
+    invoke-direct {v1, v5, v2, v4}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;-><init>(ILandroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
     .line 9
-    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;
+    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;
 
     .line 10
     sget v4, Lcom/vk/im/ui/c;->im_ic_pinned_msg_detach:I
@@ -256,12 +256,12 @@
 
     const-string v6, "context.getString(R.stri\u2026option_pinned_msg_detach)"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v6, 0x3
 
     .line 12
-    invoke-direct {v2, v6, v4, v5}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;-><init>(ILandroid/graphics/drawable/Drawable;Ljava/lang/String;)V
+    invoke-direct {v2, v6, v4, v5}, Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;-><init>(ILandroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
     .line 13
     invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->f()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
@@ -291,12 +291,12 @@
 
     xor-int/2addr v3, v7
 
-    invoke-static {v6, v0, v3}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Ljava/lang/Object;Z)V
+    invoke-static {v6, v0, v3}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
     .line 17
     iget-boolean v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->e:Z
 
-    invoke-static {v6, v1, v3}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Ljava/lang/Object;Z)V
+    invoke-static {v6, v1, v3}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
     .line 18
     invoke-interface {v6, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -304,10 +304,10 @@
     .line 19
     new-instance v3, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc$showActionsForPinnedMsg$2;
 
-    invoke-direct {v3, p0, v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc$showActionsForPinnedMsg$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;Lcom/vk/im/ui/components/viewcontrollers/popup/h/a;)V
+    invoke-direct {v3, p0, v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc$showActionsForPinnedMsg$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;Lcom/vk/im/ui/components/viewcontrollers/popup/h/ActionItem;)V
 
     .line 20
-    invoke-virtual {v4, v5, v6, v3}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Landroid/view/View;Ljava/util/List;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v4, v5, v6, v3}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateCommon;->a(Landroid/view/View;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -327,11 +327,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/a;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVcCallback;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->f:Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->f:Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVcCallback;
 
     return-void
 .end method
@@ -345,11 +345,11 @@
     return-void
 .end method
 
-.method public final b()Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/a;
+.method public final b()Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVcCallback;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->f:Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->f:Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVcCallback;
 
     return-object v0
 .end method
@@ -371,7 +371,7 @@
 
     const-string v1, "toolbarView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
 

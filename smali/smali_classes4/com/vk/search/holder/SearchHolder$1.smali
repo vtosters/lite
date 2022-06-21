@@ -3,12 +3,12 @@
 .source "SearchHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/search/holder/SearchHolder;-><init>(Lcom/vk/search/b/a;Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/search/holder/SearchHolder;-><init>(Lcom/vk/search/b/BaseSearchAdapter;Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -88,13 +88,13 @@
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
@@ -112,7 +112,7 @@
 
     const-string v6, "search"
 
-    invoke-static/range {v3 .. v12}, Lcom/vk/webapp/helpers/a;->a(Landroid/content/Context;Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lio/reactivex/disposables/b;
+    invoke-static/range {v3 .. v12}, Lcom/vk/webapp/helpers/AppsHelper;->a(Landroid/content/Context;Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
 
     .line 3
     iget-object v0, p0, Lcom/vk/search/holder/SearchHolder$1;->this$0:Lcom/vk/search/holder/SearchHolder;
@@ -122,7 +122,7 @@
     invoke-static {v0, v2}, Lcom/vk/search/holder/SearchHolder;->a(Lcom/vk/search/holder/SearchHolder;Lcom/vk/search/SearchStatsTracker$Action;)V
 
     .line 4
-    sget-object v2, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v2, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_0
 
@@ -161,25 +161,25 @@
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
     iget-object v0, p0, Lcom/vk/search/holder/SearchHolder$1;->this$0:Lcom/vk/search/holder/SearchHolder;
 
-    invoke-static {v0}, Lcom/vk/search/holder/SearchHolder;->b(Lcom/vk/search/holder/SearchHolder;)Lcom/vk/dto/discover/b/d;
+    invoke-static {v0}, Lcom/vk/search/holder/SearchHolder;->b(Lcom/vk/search/holder/SearchHolder;)Lcom/vk/dto/discover/b/SearchProfileItem;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/vk/dto/discover/b/d;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/dto/discover/b/SearchProfileItem;->d()Ljava/lang/String;
 
     move-result-object v2
 
@@ -192,7 +192,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v3 .. v9}, Lcom/vk/extensions/a;->a(Lcom/vk/dto/common/Action;Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Z
+    invoke-static/range {v3 .. v9}, Lcom/vk/extensions/ActionExt;->a(Lcom/vk/dto/common/Action;Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Z
 
     .line 6
     :cond_4
@@ -203,7 +203,7 @@
     invoke-static {v0, v2}, Lcom/vk/search/holder/SearchHolder;->a(Lcom/vk/search/holder/SearchHolder;Lcom/vk/search/SearchStatsTracker$Action;)V
 
     .line 7
-    sget-object v2, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v2, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     :cond_5
     :goto_0
@@ -240,7 +240,7 @@
 
     const-string v1, "item"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/user/UserProfile;->H()Z
 
@@ -258,7 +258,7 @@
     :goto_1
     invoke-static {p1, v0}, Lcom/vk/search/holder/SearchHolder;->a(Lcom/vk/search/holder/SearchHolder;Lcom/vk/search/SearchStatsTracker$Action;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_2
 
@@ -281,13 +281,13 @@
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p1, p0, Lcom/vk/search/holder/SearchHolder$1;->this$0:Lcom/vk/search/holder/SearchHolder;
 
@@ -313,7 +313,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v2 .. v11}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/f;ILjava/lang/Object;)Z
+    invoke-static/range {v2 .. v11}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;IZILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;ILjava/lang/Object;)Z
 
     .line 12
     iget-object p1, p0, Lcom/vk/search/holder/SearchHolder$1;->this$0:Lcom/vk/search/holder/SearchHolder;
@@ -323,7 +323,7 @@
     invoke-static {p1, v0}, Lcom/vk/search/holder/SearchHolder;->a(Lcom/vk/search/holder/SearchHolder;Lcom/vk/search/SearchStatsTracker$Action;)V
 
     :cond_9
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     :goto_2
     return-void
@@ -337,7 +337,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/search/holder/SearchHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

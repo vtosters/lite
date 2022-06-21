@@ -34,69 +34,69 @@
 
 .field private J:Lcom/vk/articles/ArticleWebView$f;
 
-.field private K:Lkotlin/jvm/b/c;
+.field private K:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/webkit/WebView;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private L:Lkotlin/jvm/b/c;
+.field private L:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/webkit/WebView;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private M:Lkotlin/jvm/b/c;
+.field private M:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/webkit/WebView;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private N:Lkotlin/jvm/b/c;
+.field private N:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/webkit/WebView;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final O:Lcom/vk/articles/c;
+.field private final O:Lcom/vk/articles/ArticlePlayerListener;
 
 .field private P:Z
 
-.field private final a:Lcom/vk/webapp/helpers/f;
+.field private final a:Lcom/vk/webapp/helpers/WebClients4;
 
-.field private b:Lio/reactivex/disposables/b;
+.field private b:Lio/reactivex/disposables/Disposable;
 
 .field private c:Lorg/json/JSONObject;
 
@@ -116,7 +116,7 @@
 
 .field private g:Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;
 
-.field private final h:Lcom/vk/music/player/d;
+.field private final h:Lcom/vk/music/player/PlayerModel;
 
 
 # direct methods
@@ -127,7 +127,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/articles/ArticleWebView$d;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/articles/ArticleWebView$d;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -139,11 +139,11 @@
     invoke-direct {p0, p1}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance v0, Lcom/vk/webapp/helpers/f;
+    new-instance v0, Lcom/vk/webapp/helpers/WebClients4;
 
-    invoke-direct {v0}, Lcom/vk/webapp/helpers/f;-><init>()V
+    invoke-direct {v0}, Lcom/vk/webapp/helpers/WebClients4;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/articles/ArticleWebView;->a:Lcom/vk/webapp/helpers/f;
+    iput-object v0, p0, Lcom/vk/articles/ArticleWebView;->a:Lcom/vk/webapp/helpers/WebClients4;
 
     .line 3
     new-instance v0, Lcom/vk/articles/ArticleWebView$j;
@@ -171,24 +171,24 @@
     iput-object v0, p0, Lcom/vk/articles/ArticleWebView;->f:Lcom/vk/articles/ArticleWebView$c;
 
     .line 6
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/articles/ArticleWebView;->h:Lcom/vk/music/player/d;
+    invoke-interface {v0}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/vk/articles/ArticleWebView;->h:Lcom/vk/music/player/PlayerModel;
 
     .line 7
-    new-instance v0, Lcom/vk/articles/c;
+    new-instance v0, Lcom/vk/articles/ArticlePlayerListener;
 
-    invoke-direct {v0, p0}, Lcom/vk/articles/c;-><init>(Lcom/vk/articles/ArticleWebView;)V
+    invoke-direct {v0, p0}, Lcom/vk/articles/ArticlePlayerListener;-><init>(Lcom/vk/articles/ArticleWebView;)V
 
-    iput-object v0, p0, Lcom/vk/articles/ArticleWebView;->O:Lcom/vk/articles/c;
+    iput-object v0, p0, Lcom/vk/articles/ArticleWebView;->O:Lcom/vk/articles/ArticlePlayerListener;
 
     const/4 v0, 0x0
 
@@ -203,7 +203,7 @@
     invoke-virtual {p0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
     .line 10
-    iget-object p1, p0, Lcom/vk/articles/ArticleWebView;->a:Lcom/vk/webapp/helpers/f;
+    iget-object p1, p0, Lcom/vk/articles/ArticleWebView;->a:Lcom/vk/webapp/helpers/WebClients4;
 
     invoke-virtual {p0, p1}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
@@ -221,9 +221,9 @@
 
     move-result-object p1
 
-    sget-object v2, Lcom/vk/articles/preload/a;->k:Lcom/vk/articles/preload/a;
+    sget-object v2, Lcom/vk/articles/preload/WebCachePreloader;->k:Lcom/vk/articles/preload/WebCachePreloader;
 
-    invoke-virtual {v2}, Lcom/vk/articles/preload/a;->b()Ljava/io/File;
+    invoke-virtual {v2}, Lcom/vk/articles/preload/WebCachePreloader;->b()Ljava/io/File;
 
     move-result-object v2
 
@@ -240,7 +240,7 @@
 
     const-string v2, "settings"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroid/webkit/WebSettings;->setAllowFileAccess(Z)V
 
@@ -249,7 +249,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
@@ -258,7 +258,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
 
@@ -267,7 +267,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroid/webkit/WebSettings;->setCacheMode(I)V
 
@@ -276,7 +276,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Landroid/webkit/WebSettings;->setMediaPlaybackRequiresUserGesture(Z)V
 
@@ -344,7 +344,7 @@
     invoke-direct {v1, p0}, Lcom/vk/articles/webinterfaces/article/ArticleWebInterfaceImpl;-><init>(Lcom/vk/articles/ArticleWebView;)V
 
     .line 3
-    new-instance v2, Lcom/vk/articles/webinterfaces/d/b;
+    new-instance v2, Lcom/vk/articles/webinterfaces/d/AudioWebInterfaceImpl;
 
     invoke-virtual {p0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
 
@@ -352,9 +352,9 @@
 
     const-string v4, "context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v2, v3}, Lcom/vk/articles/webinterfaces/d/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v3}, Lcom/vk/articles/webinterfaces/d/AudioWebInterfaceImpl;-><init>(Landroid/content/Context;)V
 
     .line 4
     new-instance v3, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;
@@ -363,16 +363,16 @@
 
     move-result-object v5
 
-    invoke-static {v5, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v4, Lcom/vk/articles/ArticleWebView$setJavascriptBridge$1;
 
     invoke-direct {v4, p0}, Lcom/vk/articles/ArticleWebView$setJavascriptBridge$1;-><init>(Lcom/vk/articles/ArticleWebView;)V
 
-    invoke-direct {v3, v5, v4}, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;-><init>(Landroid/content/Context;Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v5, v4}, Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceImpl;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
 
     .line 5
-    invoke-direct {p1, p0, v1, v2, v3}, Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;-><init>(Lcom/vk/articles/ArticleWebView;Lcom/vk/articles/webinterfaces/article/a;Lcom/vk/articles/webinterfaces/d/a;Lcom/vk/articles/webinterfaces/poll/a;)V
+    invoke-direct {p1, p0, v1, v2, v3}, Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;-><init>(Lcom/vk/articles/ArticleWebView;Lcom/vk/articles/webinterfaces/article/ArticleWebInterface;Lcom/vk/articles/webinterfaces/d/AudioWebInterface;Lcom/vk/articles/webinterfaces/poll/PollWebInterfaceI;)V
 
     iput-object p1, p0, Lcom/vk/articles/ArticleWebView;->g:Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface;
 
@@ -381,7 +381,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1, p0}, Lcom/vk/webapp/bridges/a;->a(Landroid/webkit/WebView;)V
+    invoke-virtual {p1, p0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Landroid/webkit/WebView;)V
 
     .line 7
     :cond_0
@@ -394,7 +394,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -468,9 +468,9 @@
     .locals 1
 
     .line 18
-    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->a:Lcom/vk/webapp/helpers/f;
+    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->a:Lcom/vk/webapp/helpers/WebClients4;
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/helpers/f;->a(Landroid/widget/FrameLayout;)V
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/helpers/WebClients4;->a(Landroid/widget/FrameLayout;)V
 
     return-void
 .end method
@@ -484,7 +484,7 @@
     if-eqz v0, :cond_0
 
     .line 16
-    invoke-static {p0, p1}, Lcom/vk/webapp/utils/d;->a(Landroid/webkit/WebView;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/vk/webapp/utils/WebViewExt;->a(Landroid/webkit/WebView;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -573,7 +573,7 @@
     const-string v2, "uri"
 
     .line 7
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
 
@@ -581,7 +581,7 @@
 
     const-string v3, "uri.queryParameterNames"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     instance-of v3, v2, Ljava/util/Collection;
@@ -623,19 +623,19 @@
     const-string v5, "audio_bridge"
 
     .line 10
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    invoke-static {v1, v5}, Lcom/vk/core/extensions/d0;->b(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v5}, Lcom/vk/core/extensions/UriExt;->b(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v5, "1"
 
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -717,9 +717,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->a:Lcom/vk/webapp/helpers/f;
+    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->a:Lcom/vk/webapp/helpers/WebClients4;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/helpers/f;->a()V
+    invoke-virtual {v0}, Lcom/vk/webapp/helpers/WebClients4;->a()V
 
     const/4 v0, 0x0
 
@@ -757,7 +757,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/articles/ArticleWebView$g;-><init>(Lcom/vk/articles/ArticleWebView;)V
 
-    invoke-static {v1}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v1}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -766,27 +766,27 @@
     .line 5
     sget-object v4, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v1, v2, v3, v4}, Lc/a/m;->h(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v1, v2, v3, v4}, Lio/reactivex/Observable;->h(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 6
     sget-object v2, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v2}, Lcom/vk/core/concurrent/VkExecutors;->i()Lc/a/s;
+    invoke-virtual {v2}, Lcom/vk/core/concurrent/VkExecutors;->i()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 7
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -801,11 +801,11 @@
     invoke-direct {v3, v0}, Lcom/vk/articles/ArticleWebView$i;-><init>(Lcom/vk/articles/ArticleWebView$onWebViewShown$1;)V
 
     .line 10
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/articles/ArticleWebView;->b:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/articles/ArticleWebView;->b:Lio/reactivex/disposables/Disposable;
 
     :goto_0
     return-void
@@ -815,9 +815,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->a:Lcom/vk/webapp/helpers/f;
+    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->a:Lcom/vk/webapp/helpers/WebClients4;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/helpers/f;->a()V
+    invoke-virtual {v0}, Lcom/vk/webapp/helpers/WebClients4;->a()V
 
     const/4 v0, 0x0
 
@@ -878,78 +878,78 @@
     return-object v0
 .end method
 
-.method public final getOnPageErrorListener()Lkotlin/jvm/b/c;
+.method public final getOnPageErrorListener()Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Landroid/webkit/WebView;",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->N:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->N:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
 
-.method public final getOnPageFinishedListener()Lkotlin/jvm/b/c;
+.method public final getOnPageFinishedListener()Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Landroid/webkit/WebView;",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->M:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->M:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
 
-.method public final getOnPagePreloadErrorListener()Lkotlin/jvm/b/c;
+.method public final getOnPagePreloadErrorListener()Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Landroid/webkit/WebView;",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->L:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->L:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
 
-.method public final getOnPagePreloadFinishedListener()Lkotlin/jvm/b/c;
+.method public final getOnPagePreloadFinishedListener()Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Landroid/webkit/WebView;",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->K:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->K:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
@@ -1053,18 +1053,18 @@
     iput-boolean v0, p0, Lcom/vk/articles/ArticleWebView;->D:Z
 
     .line 3
-    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->h:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->h:Lcom/vk/music/player/PlayerModel;
 
-    iget-object v1, p0, Lcom/vk/articles/ArticleWebView;->O:Lcom/vk/articles/c;
+    iget-object v1, p0, Lcom/vk/articles/ArticleWebView;->O:Lcom/vk/articles/ArticlePlayerListener;
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/c;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerListener;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->b:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->b:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     const/4 v0, 0x0
@@ -1087,13 +1087,13 @@
     iput-boolean v0, p0, Lcom/vk/articles/ArticleWebView;->D:Z
 
     .line 3
-    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->h:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/articles/ArticleWebView;->h:Lcom/vk/music/player/PlayerModel;
 
-    iget-object v1, p0, Lcom/vk/articles/ArticleWebView;->O:Lcom/vk/articles/c;
+    iget-object v1, p0, Lcom/vk/articles/ArticleWebView;->O:Lcom/vk/articles/ArticlePlayerListener;
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/c;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerListener;Z)V
 
     return-void
 .end method
@@ -1135,7 +1135,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -1274,86 +1274,86 @@
     return-void
 .end method
 
-.method public final setOnPageErrorListener(Lkotlin/jvm/b/c;)V
+.method public final setOnPageErrorListener(Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/webkit/WebView;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/articles/ArticleWebView;->N:Lkotlin/jvm/b/c;
+    iput-object p1, p0, Lcom/vk/articles/ArticleWebView;->N:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method
 
-.method public final setOnPageFinishedListener(Lkotlin/jvm/b/c;)V
+.method public final setOnPageFinishedListener(Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/webkit/WebView;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/articles/ArticleWebView;->M:Lkotlin/jvm/b/c;
+    iput-object p1, p0, Lcom/vk/articles/ArticleWebView;->M:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method
 
-.method public final setOnPagePreloadErrorListener(Lkotlin/jvm/b/c;)V
+.method public final setOnPagePreloadErrorListener(Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/webkit/WebView;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/articles/ArticleWebView;->L:Lkotlin/jvm/b/c;
+    iput-object p1, p0, Lcom/vk/articles/ArticleWebView;->L:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method
 
-.method public final setOnPagePreloadFinishedListener(Lkotlin/jvm/b/c;)V
+.method public final setOnPagePreloadFinishedListener(Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/webkit/WebView;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/articles/ArticleWebView;->K:Lkotlin/jvm/b/c;
+    iput-object p1, p0, Lcom/vk/articles/ArticleWebView;->K:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method
@@ -1412,7 +1412,7 @@
 
     const-string v0, "jsExecuteQueue.poll()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Ljava/lang/String;
 

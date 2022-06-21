@@ -1,13 +1,13 @@
 .class public final Lcom/vk/newsfeed/holders/attachments/PodcastHolder;
-.super Lcom/vk/newsfeed/holders/attachments/k;
+.super Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;
 .source "PodcastHolder.kt"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 .implements Landroid/view/View$OnAttachStateChangeListener;
-.implements Lcom/vk/music/player/c;
-.implements Lcom/vk/api/fave/q;
-.implements Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;
+.implements Lcom/vk/music/player/PlayerListener;
+.implements Lcom/vk/api/fave/FavePodcastEpisode;
+.implements Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;
 
 
 # annotations
@@ -41,7 +41,7 @@
 
 .field private R:Landroid/content/res/ColorStateList;
 
-.field private final S:Lcom/vk/music/player/d;
+.field private final S:Lcom/vk/music/player/PlayerModel;
 
 
 # direct methods
@@ -52,23 +52,23 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(ILandroid/view/ViewGroup;Lcom/vk/music/player/d;)V
+.method public constructor <init>(ILandroid/view/ViewGroup;Lcom/vk/music/player/PlayerModel;)V
     .locals 3
 
     .line 17
-    invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/holders/attachments/k;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 18
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x2
 
@@ -76,7 +76,7 @@
 
     const v2, 0x7f0a057f
 
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -93,11 +93,11 @@
     .line 21
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0a0d80
 
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -108,11 +108,11 @@
     .line 22
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0a032b
 
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -123,7 +123,7 @@
     .line 23
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0a03e5
 
@@ -136,7 +136,7 @@
     .line 24
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0a09c7
 
@@ -151,11 +151,11 @@
     .line 25
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0a0d7d
 
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -166,11 +166,11 @@
     .line 26
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0a03db
 
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -179,24 +179,24 @@
     .line 27
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f0a00ec
 
-    invoke-static {p1, p2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->O:Landroid/view/View;
 
     .line 28
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
     const-string p2, "parent"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -214,16 +214,16 @@
 
     const-string v0, "ColorStateList.valueOf(C\u2026 R.color.steel_gray_300))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->Q:Landroid/content/res/ColorStateList;
 
     .line 29
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -241,7 +241,7 @@
 
     const-string p2, "ColorStateList.valueOf(C\u2026.context, R.color.white))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->R:Landroid/content/res/ColorStateList;
 
@@ -256,25 +256,25 @@
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 32
-    iput-object p3, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/d;
+    iput-object p3, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/PlayerModel;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/music/player/d;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/music/player/PlayerModel;)V
     .locals 4
 
     const v0, 0x7f0d008b
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/attachments/k;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
@@ -282,7 +282,7 @@
 
     const v3, 0x7f0a057f
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -299,11 +299,11 @@
     .line 5
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a0d80
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -314,11 +314,11 @@
     .line 6
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a032b
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -329,7 +329,7 @@
     .line 7
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a03e5
 
@@ -342,7 +342,7 @@
     .line 8
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a09c7
 
@@ -357,11 +357,11 @@
     .line 9
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a0d7d
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -372,11 +372,11 @@
     .line 10
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a03db
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -385,24 +385,24 @@
     .line 11
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0a00ec
 
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->O:Landroid/view/View;
 
     .line 12
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
     const-string v0, "parent"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -420,16 +420,16 @@
 
     const-string v1, "ColorStateList.valueOf(C\u2026 R.color.steel_gray_300))"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->Q:Landroid/content/res/ColorStateList;
 
     .line 13
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -447,7 +447,7 @@
 
     const-string v0, "ColorStateList.valueOf(C\u2026.context, R.color.white))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->R:Landroid/content/res/ColorStateList;
 
@@ -462,7 +462,7 @@
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 16
-    iput-object p2, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/d;
+    iput-object p2, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/PlayerModel;
 
     return-void
 .end method
@@ -571,9 +571,9 @@
     .line 2
     iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->L:Landroid/widget/TextView;
 
-    new-instance v2, Lcom/vk/core/drawable/i;
+    new-instance v2, Lcom/vk/core/drawable/RecoloredDrawable;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/b0/i;->l(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->l(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -583,9 +583,9 @@
 
     move-result v3
 
-    invoke-direct {v2, p1, v3}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v2, p1, v3}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/a0;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/TextViewExt;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_2
 
@@ -593,13 +593,13 @@
     :cond_2
     iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->L:Landroid/widget/TextView;
 
-    invoke-static {v1, p1}, Lcom/vk/core/extensions/a0;->b(Landroid/widget/TextView;I)V
+    invoke-static {v1, p1}, Lcom/vk/core/extensions/TextViewExt;->b(Landroid/widget/TextView;I)V
 
     .line 4
     :goto_2
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->L:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->m(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -612,7 +612,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     instance-of v0, v0, Lcom/vk/dto/newsfeed/entries/FaveEntry;
 
@@ -664,11 +664,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/e;)V
+.method public a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/TrackInfo;)V
     .locals 3
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object v0
 
@@ -691,7 +691,7 @@
     if-eqz p2, :cond_1
 
     .line 4
-    invoke-virtual {p2}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p2}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v1
 
@@ -700,11 +700,11 @@
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {p2}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p2}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object p2
 
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -736,17 +736,17 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/player/e;)V
+.method public a(Lcom/vk/music/player/TrackInfo;)V
     .locals 0
 
     return-void
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;)V
+.method public a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;)V
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/f$a;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;)V
+    invoke-static {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces$a;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;)V
 
     return-void
 .end method
@@ -755,7 +755,7 @@
     .locals 3
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object v0
 
@@ -797,7 +797,7 @@
 
     .line 5
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 
@@ -805,7 +805,7 @@
 
     check-cast p1, Lcom/vtosters/lite/attachments/PodcastAttachment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/k;->a(Lcom/vk/dto/common/Attachment;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->a(Lcom/vk/dto/common/Attachment;)V
 
     goto :goto_0
 
@@ -827,7 +827,7 @@
     .locals 4
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 
@@ -852,7 +852,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->e0()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -935,30 +935,30 @@
     .line 12
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->M:Landroid/widget/TextView;
 
-    sget-object v1, Lcom/vk/music/n/f;->a:Lcom/vk/music/n/f;
+    sget-object v1, Lcom/vk/music/n/PodcastFormatter;->a:Lcom/vk/music/n/PodcastFormatter;
 
     iget p1, p1, Lcom/vk/dto/music/MusicTrack;->h:I
 
-    invoke-virtual {v1, p1}, Lcom/vk/music/n/f;->a(I)Ljava/lang/String;
+    invoke-virtual {v1, p1}, Lcom/vk/music/n/PodcastFormatter;->a(I)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 13
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {p1}, Lcom/vk/music/player/d;->Q()Lcom/vk/music/player/PlayState;
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->Q()Lcom/vk/music/player/PlayState;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->v0()Lcom/vk/music/player/e;
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->v0()Lcom/vk/music/player/TrackInfo;
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/e;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/TrackInfo;)V
 
     return-void
 
@@ -973,7 +973,7 @@
     throw p1
 .end method
 
-.method public b(Lcom/vk/music/player/e;)V
+.method public b(Lcom/vk/music/player/TrackInfo;)V
     .locals 0
 
     return-void
@@ -1032,7 +1032,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/f$a;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;Z)V
+    invoke-static {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces$a;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;Z)V
 
     return-void
 .end method
@@ -1041,7 +1041,7 @@
     .locals 10
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object v0
 
@@ -1059,7 +1059,7 @@
     .line 3
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1074,7 +1074,7 @@
     invoke-direct {p1, v1, v2}, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$a;-><init>(II)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->j0()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->j0()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1086,19 +1086,19 @@
     invoke-virtual {p1, v0}, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$a;->b(Ljava/lang/String;)Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$a;
 
     .line 6
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
     const-string v1, "parent"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     goto/16 :goto_0
 
@@ -1106,7 +1106,7 @@
     :cond_0
     iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->K:Landroid/view/View;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1117,7 +1117,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1125,14 +1125,14 @@
 
     const-string p1, "itemView.context"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
-    new-instance p1, Lcom/vk/fave/entities/e;
+    new-instance p1, Lcom/vk/fave/entities/FaveMetaInfo;
 
     iget-object v4, v0, Lcom/vk/dto/music/MusicTrack;->J:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->j0()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->j0()Ljava/lang/String;
 
     move-result-object v5
 
@@ -1146,7 +1146,7 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v3 .. v9}, Lcom/vk/fave/entities/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/fave/entities/FaveMetaInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 10
     new-instance v4, Lcom/vk/newsfeed/holders/attachments/PodcastHolder$onClick$1;
@@ -1165,7 +1165,7 @@
     const/4 v8, 0x0
 
     .line 12
-    invoke-static/range {v1 .. v8}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;ZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v8}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;ZILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -1173,14 +1173,14 @@
     :cond_1
     iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->L:Landroid/widget/TextView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
     .line 14
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->j0()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->j0()Ljava/lang/String;
 
     move-result-object p1
 
@@ -1189,21 +1189,21 @@
     move-result-object p1
 
     .line 15
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/d;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v1}, Lcom/vk/music/player/d;->S()Lcom/vk/dto/music/MusicTrack;
+    invoke-interface {v1}, Lcom/vk/music/player/PlayerModel;->S()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/d;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v1}, Lcom/vk/music/player/d;->Q()Lcom/vk/music/player/PlayState;
+    invoke-interface {v1}, Lcom/vk/music/player/PlayerModel;->Q()Lcom/vk/music/player/PlayState;
 
     move-result-object v1
 
@@ -1212,49 +1212,49 @@
     if-ne v1, v3, :cond_2
 
     .line 16
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0, p1}, Lcom/vk/music/player/d;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-interface {v0, p1}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     .line 17
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {p1}, Lcom/vk/music/player/d;->e()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->e()V
 
     goto :goto_0
 
     .line 18
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->j0()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->j0()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v3, "fave"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
     .line 19
-    sget-object v1, Lcom/vk/fave/h;->a:Lcom/vk/fave/h;
+    sget-object v1, Lcom/vk/fave/FaveReporter;->a:Lcom/vk/fave/FaveReporter;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->k0()Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->k0()Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3, v2}, Lcom/vk/fave/h;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lb/h/h/f/a;)V
+    invoke-virtual {v1, v3, v2}, Lcom/vk/fave/FaveReporter;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lb/h/h/f/Favable;)V
 
     .line 20
     :cond_3
-    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/d;
+    iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/PlayerModel;
 
     invoke-static {v0}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
 
-    invoke-interface {v1, v0, v2, p1}, Lcom/vk/music/player/d;->b(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-interface {v1, v0, v2, p1}, Lcom/vk/music/player/PlayerModel;->b(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     :cond_4
     :goto_0
@@ -1275,16 +1275,16 @@
     .locals 1
 
     .line 1
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/PlayerModel;
 
     const/4 v0, 0x1
 
-    invoke-interface {p1, p0, v0}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/c;Z)V
+    invoke-interface {p1, p0, v0}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerListener;Z)V
 
     .line 2
     sget-object p1, Lcom/vk/api/fave/FavePodcastEpisode$Controller;->d:Lcom/vk/api/fave/FavePodcastEpisode$Controller;
 
-    invoke-virtual {p1, p0}, Lcom/vk/api/fave/FavePodcastEpisode$Controller;->a(Lcom/vk/api/fave/q;)V
+    invoke-virtual {p1, p0}, Lcom/vk/api/fave/FavePodcastEpisode$Controller;->a(Lcom/vk/api/fave/FavePodcastEpisode;)V
 
     return-void
 .end method
@@ -1293,14 +1293,14 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/PodcastHolder;->S:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {p1, p0}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/c;)V
+    invoke-interface {p1, p0}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerListener;)V
 
     .line 2
     sget-object p1, Lcom/vk/api/fave/FavePodcastEpisode$Controller;->d:Lcom/vk/api/fave/FavePodcastEpisode$Controller;
 
-    invoke-virtual {p1, p0}, Lcom/vk/api/fave/FavePodcastEpisode$Controller;->b(Lcom/vk/api/fave/q;)V
+    invoke-virtual {p1, p0}, Lcom/vk/api/fave/FavePodcastEpisode$Controller;->b(Lcom/vk/api/fave/FavePodcastEpisode;)V
 
     return-void
 .end method

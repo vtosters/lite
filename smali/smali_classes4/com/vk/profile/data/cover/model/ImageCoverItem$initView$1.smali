@@ -3,12 +3,12 @@
 .source "ImageCoverItem.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/data/cover/model/ImageCoverItem;->d(Lcom/vk/profile/ui/cover/c;)V
+    value = Lcom/vk/profile/data/cover/model/ImageCoverItem;->d(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $view:Lcom/vk/profile/ui/cover/c;
+.field final synthetic $view:Lcom/vk/profile/ui/cover/CoverViewItem;
 
 .field final synthetic this$0:Lcom/vk/profile/data/cover/model/ImageCoverItem;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/data/cover/model/ImageCoverItem;Lcom/vk/profile/ui/cover/c;)V
+.method constructor <init>(Lcom/vk/profile/data/cover/model/ImageCoverItem;Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$initView$1;->this$0:Lcom/vk/profile/data/cover/model/ImageCoverItem;
 
-    iput-object p2, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$initView$1;->$view:Lcom/vk/profile/ui/cover/c;
+    iput-object p2, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$initView$1;->$view:Lcom/vk/profile/ui/cover/CoverViewItem;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/profile/data/cover/model/ImageCoverItem$initView$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -64,9 +64,9 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$initView$1;->$view:Lcom/vk/profile/ui/cover/c;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$initView$1;->$view:Lcom/vk/profile/ui/cover/CoverViewItem;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v0
 
@@ -82,9 +82,9 @@
     .line 4
     iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$initView$1;->this$0:Lcom/vk/profile/data/cover/model/ImageCoverItem;
 
-    iget-object v1, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$initView$1;->$view:Lcom/vk/profile/ui/cover/c;
+    iget-object v1, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem$initView$1;->$view:Lcom/vk/profile/ui/cover/CoverViewItem;
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/data/cover/model/ImageCoverItem;->b(Lcom/vk/profile/ui/cover/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/data/cover/model/ImageCoverItem;->b(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     return-void
 .end method

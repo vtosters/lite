@@ -1,10 +1,10 @@
 .class public final Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;
-.super Lcom/vk/core/fragments/c;
+.super Lcom/vk/core/fragments/BaseMvpFragment;
 .source "NewsfeedFeedbackPollFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/feedback/b;
-.implements Lcom/vk/navigation/b0/k;
+.implements Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract1;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
 .implements Lcom/google/android/material/tabs/TabLayout$d;
 
 
@@ -18,11 +18,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/c<",
-        "Lcom/vk/newsfeed/feedback/a;",
+        "Lcom/vk/core/fragments/BaseMvpFragment<",
+        "Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;",
         ">;",
-        "Lcom/vk/newsfeed/feedback/b;",
-        "Lcom/vk/navigation/b0/k;",
+        "Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract1;",
+        "Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;",
         "Lcom/google/android/material/tabs/TabLayout$d;"
     }
 .end annotation
@@ -53,7 +53,7 @@
 
 .field private R:Landroid/widget/TextView;
 
-.field private S:Lcom/vk/newsfeed/feedback/a;
+.field private S:Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;
 
 
 # direct methods
@@ -61,14 +61,14 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/newsfeed/feedback/e;
+    new-instance v0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollPresenter;
 
-    invoke-direct {v0, p0}, Lcom/vk/newsfeed/feedback/e;-><init>(Lcom/vk/newsfeed/feedback/b;)V
+    invoke-direct {v0, p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollPresenter;-><init>(Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract1;)V
 
-    iput-object v0, p0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->S:Lcom/vk/newsfeed/feedback/a;
+    iput-object v0, p0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->S:Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;
 
     return-void
 .end method
@@ -77,7 +77,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;
 
     move-result-object v0
 
@@ -85,13 +85,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/feedback/a;->Z0()Z
+    invoke-interface {v0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;->Z0()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/feedback/a;->W0()Z
+    invoke-interface {v0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;->W0()Z
 
     move-result v0
 
@@ -143,7 +143,7 @@
 
     const-string v1, "activity ?: return"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v1, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
@@ -200,7 +200,7 @@
 
     new-instance v1, Landroid/view/ContextThemeWrapper;
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
 
@@ -229,7 +229,7 @@
 
     invoke-direct {v1, p0, p2}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$addButton$1;-><init>(Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;Lcom/vk/dto/newsfeed/entries/FeedbackPoll$Answer;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 22
     new-instance p2, Landroid/widget/LinearLayout$LayoutParams;
@@ -249,23 +249,23 @@
     return-void
 .end method
 
-.method private final a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+.method private final a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/appcompat/widget/Toolbar;",
             "Lcom/vk/core/fragments/FragmentImpl;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 26
-    invoke-static {p2, p1}, Lcom/vtosters/lite/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)Z
+    invoke-static {p2, p1}, Lcom/vtosters/lite/m0/ToolbarHelper;->b(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)Z
 
     move-result p2
 
@@ -274,14 +274,14 @@
     const p2, 0x7f0803ad
 
     .line 27
-    invoke-static {p1, p2}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/ViewUtils;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     if-eqz p3, :cond_0
 
     .line 28
-    new-instance p2, Lcom/vk/newsfeed/feedback/c;
+    new-instance p2, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment1;
 
-    invoke-direct {p2, p3}, Lcom/vk/newsfeed/feedback/c;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p3}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
@@ -560,14 +560,14 @@
 
     .line 3
     :goto_0
-    instance-of v0, p1, Lcom/vk/navigation/v;
+    instance-of v0, p1, Lcom/vk/navigation/ScrolledToTop;
 
     if-eqz v0, :cond_1
 
     .line 4
-    check-cast p1, Lcom/vk/navigation/v;
+    check-cast p1, Lcom/vk/navigation/ScrolledToTop;
 
-    invoke-interface {p1}, Lcom/vk/navigation/v;->F()Z
+    invoke-interface {p1}, Lcom/vk/navigation/ScrolledToTop;->F()Z
 
     :cond_1
     return-void
@@ -613,22 +613,22 @@
     return-void
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/c;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseScreenContract;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/newsfeed/feedback/a;
+.method public getPresenter()Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->S:Lcom/vk/newsfeed/feedback/a;
+    iget-object v0, p0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->S:Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;
 
     return-object v0
 .end method
@@ -652,7 +652,7 @@
 
     .line 3
     :cond_0
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->o()Z
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->o()Z
 
     move-result v0
 
@@ -668,7 +668,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
@@ -754,10 +754,10 @@
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$onCreateView$$inlined$also$lambda$1;-><init>(Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;)V
 
-    invoke-direct {p0, p2, p0, v0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p2, p0, v0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
@@ -766,7 +766,7 @@
     invoke-virtual {p2, v0, v1}, Landroidx/appcompat/widget/Toolbar;->setTitleTextAppearance(Landroid/content/Context;I)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
@@ -795,7 +795,7 @@
     const-string v0, "pager"
 
     .line 8
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -871,7 +871,7 @@
     const-string v0, "it"
 
     .line 20
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
 
@@ -888,11 +888,11 @@
 
     const-string v3, "resources"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v3, 0x41000000    # 8.0f
 
-    invoke-static {v2, v3}, Lcom/vk/extensions/j;->a(Landroid/content/res/Resources;F)I
+    invoke-static {v2, v3}, Lcom/vk/extensions/ResourcesExt;->a(Landroid/content/res/Resources;F)I
 
     move-result v2
 
@@ -905,7 +905,7 @@
 
     const-string v3, "paint"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, p3}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -927,13 +927,13 @@
     const-string p3, "button"
 
     .line 26
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p3, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$onCreateView$$inlined$also$lambda$2;
 
     invoke-direct {p3, p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$onCreateView$$inlined$also$lambda$2;-><init>(Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;)V
 
-    invoke-static {p2, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 27
     iput-object p2, p0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->N:Landroid/widget/TextView;
@@ -979,13 +979,13 @@
     check-cast p2, Landroid/widget/TextView;
 
     .line 32
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p3, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$onCreateView$$inlined$also$lambda$3;
 
     invoke-direct {p3, p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$onCreateView$$inlined$also$lambda$3;-><init>(Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;)V
 
-    invoke-static {p2, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 33
     iput-object p2, p0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->R:Landroid/widget/TextView;
@@ -1032,7 +1032,7 @@
     iput-object v0, p0, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->K:Landroid/view/View;
 
     .line 12
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroyView()V
 
     return-void
 .end method
@@ -1044,13 +1044,13 @@
     invoke-super {p0, p1}, Lcom/vk/core/fragments/FragmentImpl;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/feedback/a;->onSaveInstanceState()Landroid/os/Bundle;
+    invoke-interface {v0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;->onSaveInstanceState()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -1075,7 +1075,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;
 
     move-result-object v0
 
@@ -1085,21 +1085,21 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/feedback/a;->b(Landroid/os/Bundle;)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;->b(Landroid/os/Bundle;)V
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment;->getPresenter()Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p2}, Lcom/vk/newsfeed/feedback/a;->c(Landroid/os/Bundle;)V
+    invoke-interface {v0, p2}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollContract;->c(Landroid/os/Bundle;)V
 
     .line 3
     :cond_1
-    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/c;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/BaseMvpFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     return-void
 .end method

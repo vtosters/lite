@@ -3,12 +3,12 @@
 .source "LoadEventListenerDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;-><init>(Lcom/vk/audiomsg/player/fileloader/impl/b;)V
+    value = Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListenerDelegate;-><init>(Lcom/vk/audiomsg/player/fileloader/impl/LoadEventListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Landroid/os/Handler;",
         ">;"
     }

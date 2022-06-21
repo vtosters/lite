@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$e;->a:Lcom/vk/core/dialogs/snackbar/VkSnackbar;
 
-    invoke-static {p1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;->d(Lcom/vk/core/dialogs/snackbar/VkSnackbar;)Lkotlin/jvm/b/a;
+    invoke-static {p1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;->d(Lcom/vk/core/dialogs/snackbar/VkSnackbar;)Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

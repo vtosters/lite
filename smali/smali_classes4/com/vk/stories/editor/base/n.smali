@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/stories/editor/base/d0$c;
+.field private final synthetic a:Lcom/vk/stories/editor/base/BaseCameraEditorView$c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/stories/editor/base/d0$c;)V
+.method public synthetic constructor <init>(Lcom/vk/stories/editor/base/BaseCameraEditorView$c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/editor/base/n;->a:Lcom/vk/stories/editor/base/d0$c;
+    iput-object p1, p0, Lcom/vk/stories/editor/base/n;->a:Lcom/vk/stories/editor/base/BaseCameraEditorView$c;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/stories/editor/base/n;->a:Lcom/vk/stories/editor/base/d0$c;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/n;->a:Lcom/vk/stories/editor/base/BaseCameraEditorView$c;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/editor/base/d0$c;->b(Landroid/content/DialogInterface;)V
+    invoke-virtual {v0, p1}, Lcom/vk/stories/editor/base/BaseCameraEditorView$c;->b(Landroid/content/DialogInterface;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "ContactsModel.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/ContactsModel;->a(Lcom/vk/im/ui/components/contacts/e;)Ljava/util/List;
+    value = Lcom/vk/im/ui/components/contacts/ContactsModel;->a(Lcom/vk/im/ui/components/contacts/ContactsModel1;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/models/j;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/models/Profile;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/j;)I
+.method public final a(Lcom/vk/im/engine/models/Profile;)I
     .locals 0
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->f0()I
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->f0()I
 
     move-result p1
 
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/j;
+    check-cast p1, Lcom/vk/im/engine/models/Profile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel$toListItems$selected$1;->a(Lcom/vk/im/engine/models/j;)I
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel$toListItems$selected$1;->a(Lcom/vk/im/engine/models/Profile;)I
 
     move-result p1
 

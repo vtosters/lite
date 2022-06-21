@@ -82,7 +82,7 @@
     const-string v1, "it"
 
     .line 5
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vtosters/lite/SendActivity$j;->a()I
 
@@ -102,7 +102,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, v2, v0}, Lcom/vk/cameraui/StoryGalleryData;-><init>(ZLandroid/net/Uri;)V
 
@@ -126,7 +126,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, v2, v0}, Lcom/vk/cameraui/StoryGalleryData;-><init>(ZLandroid/net/Uri;)V
 
@@ -168,17 +168,17 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/cameraui/builder/a;
+    new-instance v0, Lcom/vk/cameraui/builder/CameraBuilder;
 
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$TypeNavgo$Subtype;->SYSTEM:Lcom/vk/stat/scheme/SchemeStat$TypeNavgo$Subtype;
 
-    invoke-static {v1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$TypeNavgo$Subtype;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$TypeNavgo$Subtype;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "system_sharing"
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v1, p0, Lcom/vk/stories/StoryShareActivity$a;->c:Ljava/util/List;
@@ -200,7 +200,7 @@
 
     const-string v1, "destinationScreen"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

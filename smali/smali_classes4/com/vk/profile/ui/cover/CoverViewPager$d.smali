@@ -69,7 +69,7 @@
     :goto_0
     iget-object v1, p0, Lcom/vk/profile/ui/cover/CoverViewPager$d;->a:Lcom/vk/profile/ui/cover/CoverViewPager;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -84,7 +84,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/c;
+    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/ValidatorSet;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, v1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     :cond_1
     return-void

@@ -22,11 +22,11 @@
 
 .field final synthetic b:Z
 
-.field final synthetic c:Lcom/vk/log/d/a;
+.field final synthetic c:Lcom/vk/log/d/Archive;
 
 
 # direct methods
-.method constructor <init>(ZZLcom/vk/log/d/a;)V
+.method constructor <init>(ZZLcom/vk/log/d/Archive;)V
     .locals 0
 
     .line 1
@@ -34,7 +34,7 @@
 
     iput-boolean p2, p0, Lcom/vk/utils/AppUtils$c;->b:Z
 
-    iput-object p3, p0, Lcom/vk/utils/AppUtils$c;->c:Lcom/vk/log/d/a;
+    iput-object p3, p0, Lcom/vk/utils/AppUtils$c;->c:Lcom/vk/log/d/Archive;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -67,7 +67,7 @@
     const-string v2, "\u041e\u0448\u0438\u0431\u043a\u0430 \u0437\u0430\u043f\u0438\u0441\u0438! \u041f\u0440\u043e\u0432\u0435\u0440\u044c\u0442\u0435 \u0441\u0432\u043e\u0431\u043e\u0434\u043d\u043e\u0435 \u043c\u0435\u0441\u0442\u043e \u0438 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u044f \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f!"
 
     .line 5
-    invoke-static {v2, p1, v0, v1}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {v2, p1, v0, v1}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -102,11 +102,11 @@
     sget-object v0, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
 
     .line 2
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v2, "AppContextHolder.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v2, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
 

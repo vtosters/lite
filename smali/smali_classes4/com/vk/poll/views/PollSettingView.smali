@@ -48,7 +48,7 @@
 
     const-string v0, "findViewById(R.id.poll_option_checkbox)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/CheckBox;
 
@@ -63,7 +63,7 @@
 
     const-string v0, "findViewById(R.id.poll_option_tv)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -117,7 +117,7 @@
 
     const-string v2, "findViewById(R.id.poll_option_checkbox)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/CheckBox;
 
@@ -132,7 +132,7 @@
 
     const-string v2, "findViewById(R.id.poll_option_tv)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/TextView;
 
@@ -242,15 +242,15 @@
     return-void
 .end method
 
-.method public final setOnCheckedChangeListener(Lkotlin/jvm/b/b;)V
+.method public final setOnCheckedChangeListener(Lkotlin/jvm/b/Functions2;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -260,7 +260,7 @@
 
     new-instance v1, Lcom/vk/poll/views/PollSettingView$b;
 
-    invoke-direct {v1, p1}, Lcom/vk/poll/views/PollSettingView$b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p1}, Lcom/vk/poll/views/PollSettingView$b;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 

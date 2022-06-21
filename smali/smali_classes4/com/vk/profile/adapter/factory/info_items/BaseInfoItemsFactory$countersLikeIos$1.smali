@@ -3,12 +3,12 @@
 .source "BaseInfoItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/newsfeed/k0/b/b/i;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "TT;",
-        "Lcom/vk/profile/adapter/items/k;",
+        "Lcom/vk/profile/adapter/items/CountersInfoItemLikeIos;",
         ">;"
     }
 .end annotation
@@ -46,12 +46,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/k;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/CountersInfoItemLikeIos;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)",
-            "Lcom/vk/profile/adapter/items/k;"
+            "Lcom/vk/profile/adapter/items/CountersInfoItemLikeIos;"
         }
     .end annotation
 
@@ -68,18 +68,18 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->W()Lcom/vk/profile/data/d/b;
+    invoke-virtual {v1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->W()Lcom/vk/profile/data/d/MainSectionStrategy;
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/d/b;)Z
+    invoke-virtual {v0, p1, v1}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/d/MainSectionStrategy;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 2
-    new-instance v0, Lcom/vk/profile/adapter/items/k;
+    new-instance v0, Lcom/vk/profile/adapter/items/CountersInfoItemLikeIos;
 
     .line 3
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$countersLikeIos$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;
@@ -98,7 +98,7 @@
     move-result-object v2
 
     .line 5
-    invoke-direct {v0, v1, p1, v2}, Lcom/vk/profile/adapter/items/k;-><init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
+    invoke-direct {v0, v1, p1, v2}, Lcom/vk/profile/adapter/items/CountersInfoItemLikeIos;-><init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
 
     return-object v0
 
@@ -124,7 +124,7 @@
     .line 1
     check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$countersLikeIos$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/k;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$countersLikeIos$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/CountersInfoItemLikeIos;
 
     move-result-object p1
 

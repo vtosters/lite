@@ -1,9 +1,9 @@
 .class public final Lcom/vk/search/fragment/AppsSearchFragment$AppSearchAdapter;
-.super Lcom/vk/search/b/a;
+.super Lcom/vk/search/b/BaseSearchAdapter;
 .source "AppsSearchFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/n;
+.implements Lcom/vk/core/ui/MilkshakeProvider;
 
 
 # annotations
@@ -33,10 +33,10 @@
     .line 1
     iput-object p1, p0, Lcom/vk/search/fragment/AppsSearchFragment$AppSearchAdapter;->h:Lcom/vk/search/fragment/AppsSearchFragment;
 
-    invoke-direct {p0}, Lcom/vk/search/b/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/search/b/BaseSearchAdapter;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/search/holder/g;
+    new-instance v0, Lcom/vk/search/holder/SearchRecentAppHeader;
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
@@ -44,7 +44,7 @@
 
     const-string v2, "requireContext()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/search/fragment/AppsSearchFragment;->a(Lcom/vk/search/fragment/AppsSearchFragment;)Z
 
@@ -54,9 +54,9 @@
 
     invoke-direct {v4, p0}, Lcom/vk/search/fragment/AppsSearchFragment$AppSearchAdapter$1;-><init>(Lcom/vk/search/fragment/AppsSearchFragment$AppSearchAdapter;)V
 
-    invoke-direct {v0, v1, v3, v4}, Lcom/vk/search/holder/g;-><init>(Landroid/content/Context;ZLkotlin/jvm/b/a;)V
+    invoke-direct {v0, v1, v3, v4}, Lcom/vk/search/holder/SearchRecentAppHeader;-><init>(Landroid/content/Context;ZLkotlin/jvm/b/Functions;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/m;->a(Lcom/vk/lists/m$b;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/HeaderAdapter;->a(Lcom/vk/lists/HeaderAdapter$b;)V
 
     .line 3
     new-instance v0, Lcom/vk/search/fragment/AppsSearchFragment$c;
@@ -65,11 +65,11 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, p1}, Lcom/vk/search/fragment/AppsSearchFragment$c;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/m;->a(Lcom/vk/lists/m$b;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/HeaderAdapter;->a(Lcom/vk/lists/HeaderAdapter$b;)V
 
     return-void
 .end method
@@ -87,13 +87,13 @@
     .locals 12
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {p0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
     const-string v1, "list"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -112,7 +112,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/common/i/b;
+    check-cast v2, Lcom/vk/common/i/RecyclerItem;
 
     if-eqz v2, :cond_3
 
@@ -125,7 +125,7 @@
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v2}, Lcom/vk/common/i/b;->b()I
+    invoke-virtual {v2}, Lcom/vk/common/i/RecyclerItem;->b()I
 
     move-result v3
 
@@ -142,7 +142,7 @@
 
     if-nez v3, :cond_3
 
-    invoke-virtual {v2}, Lcom/vk/common/i/b;->b()I
+    invoke-virtual {v2}, Lcom/vk/common/i/RecyclerItem;->b()I
 
     move-result v2
 
@@ -152,10 +152,10 @@
 
     .line 3
     :cond_1
-    invoke-virtual {p0, v1}, Lcom/vk/lists/i0;->j(I)V
+    invoke-virtual {p0, v1}, Lcom/vk/lists/SimpleAdapter;->j(I)V
 
     .line 4
-    new-instance v0, Lb/h/c/n/c;
+    new-instance v0, Lcom/vk/api/apps/AppsClearRecents;
 
     iget-object v1, p0, Lcom/vk/search/fragment/AppsSearchFragment$AppSearchAdapter;->h:Lcom/vk/search/fragment/AppsSearchFragment;
 
@@ -173,14 +173,14 @@
     const-string v1, "vk_apps"
 
     :goto_1
-    invoke-direct {v0, v1}, Lb/h/c/n/c;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/apps/AppsClearRecents;-><init>(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 5
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -203,7 +203,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -212,18 +212,18 @@
 
     sget-object v2, Lcom/vk/search/fragment/AppsSearchFragment$AppSearchAdapter$b;->a:Lcom/vk/search/fragment/AppsSearchFragment$AppSearchAdapter$b;
 
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "AppsClearRecents(if (isG\u2026       .subscribe({}, {})"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     iget-object v1, p0, Lcom/vk/search/fragment/AppsSearchFragment$AppSearchAdapter;->h:Lcom/vk/search/fragment/AppsSearchFragment;
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 
@@ -254,7 +254,7 @@
     if-eq p2, v0, :cond_0
 
     .line 2
-    invoke-super {p0, p1, p2}, Lcom/vk/search/b/a;->a(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+    invoke-super {p0, p1, p2}, Lcom/vk/search/b/BaseSearchAdapter;->a(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object p1
 
@@ -264,31 +264,31 @@
 
     .line 3
     :cond_0
-    new-instance p2, Lcom/vk/search/holder/h;
+    new-instance p2, Lcom/vk/search/holder/SearchRecentAppsHolder;
 
-    invoke-direct {p2, p1}, Lcom/vk/search/holder/h;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/search/holder/SearchRecentAppsHolder;-><init>(Landroid/view/ViewGroup;)V
 
     goto :goto_0
 
     .line 4
     :cond_1
-    new-instance p2, Lcom/vk/search/holder/a;
+    new-instance p2, Lcom/vk/search/holder/AppSearchHolder;
 
-    invoke-direct {p2, p1}, Lcom/vk/search/holder/a;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/search/holder/AppSearchHolder;-><init>(Landroid/view/ViewGroup;)V
 
     goto :goto_0
 
     .line 5
     :cond_2
-    new-instance p2, Lcom/vk/search/holder/c;
+    new-instance p2, Lcom/vk/search/holder/SearchGameListHolder;
 
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->SEARCH_GAMES:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v0}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/search/holder/c;-><init>(Landroid/view/ViewGroup;Ljava/lang/String;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/search/holder/SearchGameListHolder;-><init>(Landroid/view/ViewGroup;Ljava/lang/String;)V
 
     :goto_0
     return-object p2
@@ -298,93 +298,93 @@
     .locals 2
 
     .line 6
-    instance-of v0, p1, Lcom/vk/search/holder/c;
+    instance-of v0, p1, Lcom/vk/search/holder/SearchGameListHolder;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    instance-of v0, p2, Lcom/vk/dto/discover/b/b;
+    instance-of v0, p2, Lcom/vk/dto/discover/b/SearchGameListItem;
 
     if-nez v0, :cond_0
 
     move-object p2, v1
 
     :cond_0
-    check-cast p2, Lcom/vk/dto/discover/b/b;
+    check-cast p2, Lcom/vk/dto/discover/b/SearchGameListItem;
 
     if-eqz p2, :cond_6
 
     .line 7
-    check-cast p1, Lcom/vk/search/holder/c;
+    check-cast p1, Lcom/vk/search/holder/SearchGameListHolder;
 
-    invoke-virtual {p1, p2}, Lcom/vk/search/holder/c;->a(Lcom/vk/dto/discover/b/b;)V
+    invoke-virtual {p1, p2}, Lcom/vk/search/holder/SearchGameListHolder;->a(Lcom/vk/dto/discover/b/SearchGameListItem;)V
 
     goto :goto_0
 
     .line 8
     :cond_1
-    instance-of v0, p1, Lcom/vk/search/holder/h;
+    instance-of v0, p1, Lcom/vk/search/holder/SearchRecentAppsHolder;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    instance-of v0, p2, Lcom/vk/dto/discover/b/f;
+    instance-of v0, p2, Lcom/vk/dto/discover/b/SearchRecentAppsItems;
 
     if-nez v0, :cond_2
 
     move-object p2, v1
 
     :cond_2
-    check-cast p2, Lcom/vk/dto/discover/b/f;
+    check-cast p2, Lcom/vk/dto/discover/b/SearchRecentAppsItems;
 
     if-eqz p2, :cond_6
 
     .line 9
-    check-cast p1, Lcom/vk/search/holder/h;
+    check-cast p1, Lcom/vk/search/holder/SearchRecentAppsHolder;
 
-    invoke-virtual {p1, p2}, Lcom/vk/search/holder/h;->a(Lcom/vk/dto/discover/b/f;)V
+    invoke-virtual {p1, p2}, Lcom/vk/search/holder/SearchRecentAppsHolder;->a(Lcom/vk/dto/discover/b/SearchRecentAppsItems;)V
 
     goto :goto_0
 
     .line 10
     :cond_3
-    instance-of v0, p1, Lcom/vk/search/holder/a;
+    instance-of v0, p1, Lcom/vk/search/holder/AppSearchHolder;
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    instance-of v0, p2, Lcom/vk/dto/discover/b/a;
+    instance-of v0, p2, Lcom/vk/dto/discover/b/SearchAppItem;
 
     if-nez v0, :cond_4
 
     move-object p2, v1
 
     :cond_4
-    check-cast p2, Lcom/vk/dto/discover/b/a;
+    check-cast p2, Lcom/vk/dto/discover/b/SearchAppItem;
 
     if-eqz p2, :cond_6
 
     .line 11
-    check-cast p1, Lcom/vk/search/holder/a;
+    check-cast p1, Lcom/vk/search/holder/AppSearchHolder;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 12
     :cond_5
-    invoke-super {p0, p1, p2}, Lcom/vk/search/b/a;->a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
+    invoke-super {p0, p1, p2}, Lcom/vk/search/b/BaseSearchAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
 
     :cond_6
     :goto_0
@@ -397,7 +397,7 @@
     if-nez p1, :cond_0
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p1
 
@@ -405,7 +405,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 

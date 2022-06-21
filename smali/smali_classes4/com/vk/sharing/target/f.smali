@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # static fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$a;
 
-    invoke-static {p1}, Lcom/vk/sharing/target/o;->a(Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$a;)Ljava/util/ArrayList;
+    invoke-static {p1}, Lcom/vk/sharing/target/TargetsLoader;->a(Lcom/vk/im/engine/commands/contacts/RecentAndHintsDialogsGetCmd$a;)Ljava/util/ArrayList;
 
     move-result-object p1
 

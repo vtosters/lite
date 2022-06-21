@@ -3,12 +3,12 @@
 .source "MusicArtistSelector.kt"
 
 # interfaces
-.implements Lcom/vk/music/view/v/d$c;
+.implements Lcom/vk/music/view/v/ItemViewHolder$c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/artists/chooser/MusicArtistSelector;->n0(I)Lcom/vk/music/view/v/c;
+    value = Lcom/vk/music/artists/chooser/MusicArtistSelector;->n0(I)Lcom/vk/music/view/v/ItemAdapter;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/music/view/v/d$c<",
+        "Lcom/vk/music/view/v/ItemViewHolder$c<",
         "Lcom/vk/dto/music/Artist;",
         ">;"
     }
@@ -52,17 +52,17 @@
     .line 2
     iget-object p1, p0, Lcom/vk/music/artists/chooser/MusicArtistSelector$b;->a:Lcom/vk/music/artists/chooser/MusicArtistSelector;
 
-    invoke-virtual {p1}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet;->D4()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet;->D4()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     .line 3
     :cond_0

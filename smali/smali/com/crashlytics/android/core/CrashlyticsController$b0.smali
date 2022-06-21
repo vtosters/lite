@@ -3,7 +3,7 @@
 .source "CrashlyticsController.java"
 
 # interfaces
-.implements Lcom/crashlytics/android/core/y$b;
+.implements Lcom/crashlytics/android/core/LogFileManager$b;
 
 
 # annotations
@@ -18,18 +18,18 @@
 
 
 # instance fields
-.field private final a:Lio/fabric/sdk/android/m/c/a;
+.field private final a:Lio/fabric/sdk/android/m/c/FileStore;
 
 
 # direct methods
-.method public constructor <init>(Lio/fabric/sdk/android/m/c/a;)V
+.method public constructor <init>(Lio/fabric/sdk/android/m/c/FileStore;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController$b0;->a:Lio/fabric/sdk/android/m/c/a;
+    iput-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController$b0;->a:Lio/fabric/sdk/android/m/c/FileStore;
 
     return-void
 .end method
@@ -42,9 +42,9 @@
     .line 1
     new-instance v0, Ljava/io/File;
 
-    iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController$b0;->a:Lio/fabric/sdk/android/m/c/a;
+    iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController$b0;->a:Lio/fabric/sdk/android/m/c/FileStore;
 
-    invoke-interface {v1}, Lio/fabric/sdk/android/m/c/a;->a()Ljava/io/File;
+    invoke-interface {v1}, Lio/fabric/sdk/android/m/c/FileStore;->a()Ljava/io/File;
 
     move-result-object v1
 

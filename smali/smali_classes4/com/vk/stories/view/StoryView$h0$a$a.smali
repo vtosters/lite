@@ -64,7 +64,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/stories/view/StoryView$h0$a$a$a;-><init>(Lcom/vk/stories/view/StoryView$h0$a$a;)V
 
-    invoke-static {v1, v0, v2}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/dto/stories/model/StoryEntry;Landroid/content/Context;Lcom/vk/api/base/a;)V
+    invoke-static {v1, v0, v2}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/dto/stories/model/StoryEntry;Landroid/content/Context;Lcom/vk/api/base/ApiCallback;)V
 
     return-void
 .end method

@@ -539,7 +539,7 @@
     .locals 2
 
     .line 18
-    invoke-static {p0, p1, p2}, Lru/ok/android/sdk/h;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1, p2}, Lru/ok/android/sdk/TokenStore;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 19
     new-instance v0, Landroid/content/Intent;

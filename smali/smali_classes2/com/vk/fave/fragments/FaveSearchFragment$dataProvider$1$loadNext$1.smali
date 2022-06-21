@@ -3,12 +3,12 @@
 .source "FaveSearchFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+    value = Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lc/a/m<",
-        "Lcom/vk/fave/entities/k;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lio/reactivex/Observable<",
+        "Lcom/vk/fave/entities/FaveResponseEntries;",
         ">;>;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final invoke()Lc/a/m;
+.method public final invoke()Lio/reactivex/Observable;
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
-            "Lcom/vk/fave/entities/k;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/fave/entities/FaveResponseEntries;",
             ">;"
         }
     .end annotation
@@ -62,7 +62,7 @@
 
     iget-object v0, v0, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a:Lcom/vk/fave/fragments/FaveSearchFragment;
 
-    invoke-static {v0}, Lcom/vk/fave/fragments/FaveSearchFragment;->a(Lcom/vk/fave/fragments/FaveSearchFragment;)Lcom/vk/fave/entities/k;
+    invoke-static {v0}, Lcom/vk/fave/fragments/FaveSearchFragment;->a(Lcom/vk/fave/fragments/FaveSearchFragment;)Lcom/vk/fave/entities/FaveResponseEntries;
 
     move-result-object v0
 
@@ -110,7 +110,7 @@
 
     .line 6
     :goto_0
-    new-instance v10, Lcom/vk/fave/entities/e;
+    new-instance v10, Lcom/vk/fave/entities/FaveMetaInfo;
 
     const/4 v4, 0x0
 
@@ -134,10 +134,10 @@
     move-object v3, v10
 
     .line 8
-    invoke-direct/range {v3 .. v9}, Lcom/vk/fave/entities/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/fave/entities/FaveMetaInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 9
-    invoke-virtual {v0, v1, v2, v10}, Lcom/vk/fave/FaveController;->a(Ljava/lang/String;Ljava/lang/Integer;Lcom/vk/fave/entities/e;)Lc/a/m;
+    invoke-virtual {v0, v1, v2, v10}, Lcom/vk/fave/FaveController;->a(Ljava/lang/String;Ljava/lang/Integer;Lcom/vk/fave/entities/FaveMetaInfo;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -146,13 +146,13 @@
 
     invoke-direct {v1, p0}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$loadNext$1$a;-><init>(Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$loadNext$1;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "FaveController.getAllPag\u2026                        }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -162,17 +162,17 @@
 
     iget-object v0, v0, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1;->a:Lcom/vk/fave/fragments/FaveSearchFragment;
 
-    invoke-static {v0}, Lcom/vk/fave/fragments/FaveSearchFragment;->a(Lcom/vk/fave/fragments/FaveSearchFragment;)Lcom/vk/fave/entities/k;
+    invoke-static {v0}, Lcom/vk/fave/fragments/FaveSearchFragment;->a(Lcom/vk/fave/fragments/FaveSearchFragment;)Lcom/vk/fave/entities/FaveResponseEntries;
 
     move-result-object v0
 
-    invoke-static {v0}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "Observable.just(allPagesResult)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_1
     return-object v0
@@ -182,7 +182,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$loadNext$1;->invoke()Lc/a/m;
+    invoke-virtual {p0}, Lcom/vk/fave/fragments/FaveSearchFragment$dataProvider$1$loadNext$1;->invoke()Lio/reactivex/Observable;
 
     move-result-object v0
 

@@ -237,21 +237,21 @@
     return-object p0
 .end method
 
-.method private final a(Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+.method private final a(Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -275,12 +275,12 @@
     move-object v6, p3
 
     .line 90
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/documents/list/DocumentsUtils;Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+.method static synthetic a(Lcom/vk/documents/list/DocumentsUtils;Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -300,12 +300,12 @@
 
     .line 87
     :cond_1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/documents/list/DocumentsUtils;->a(Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/documents/list/DocumentsUtils;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/documents/list/DocumentsUtils;Lcom/vk/api/base/Document;Landroid/app/Activity;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/documents/list/DocumentsUtils;Lcom/vk/api/base/Document;Landroid/app/Activity;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x4
@@ -316,7 +316,7 @@
 
     .line 10
     :cond_0
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vk/api/base/Document;Landroid/app/Activity;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vk/api/base/Document;Landroid/app/Activity;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -366,7 +366,7 @@
     const-string p2, "bundle.getParcelableArra\u2026      ?: return documents"
 
     .line 34
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 35
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -389,7 +389,7 @@
     const-string v1, "uri"
 
     .line 36
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
@@ -397,7 +397,7 @@
 
     const-string v2, "file"
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -411,7 +411,7 @@
 
     const-string v2, "content"
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -489,18 +489,18 @@
 
     .line 39
     :goto_2
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v1, p2}, Lcom/vk/im/engine/internal/h/a;->a(Landroid/content/Context;Landroid/net/Uri;)Lcom/vk/im/engine/internal/h/a$a;
+    invoke-static {v1, p2}, Lcom/vk/im/engine/internal/h/FileDocUtils;->a(Landroid/content/Context;Landroid/net/Uri;)Lcom/vk/im/engine/internal/h/FileDocUtils$a;
 
     move-result-object v1
 
     .line 40
-    iget-boolean v2, v1, Lcom/vk/im/engine/internal/h/a$a;->d:Z
+    iget-boolean v2, v1, Lcom/vk/im/engine/internal/h/FileDocUtils$a;->d:Z
 
     if-nez v2, :cond_3
 
-    iget-boolean v1, v1, Lcom/vk/im/engine/internal/h/a$a;->e:Z
+    iget-boolean v1, v1, Lcom/vk/im/engine/internal/h/FileDocUtils$a;->e:Z
 
     if-eqz v1, :cond_4
 
@@ -514,7 +514,7 @@
 
     const-string v1, "if (analyzeResult.isImag\u2026                  else \"\""
 
-    invoke-static {v8, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 41
     new-instance v1, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;
@@ -841,7 +841,7 @@
 
     .line 64
     :cond_1
-    invoke-virtual {v6}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v6}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v4
 
@@ -853,7 +853,7 @@
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 66
-    sget-object v4, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v4, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-virtual {v3}, Lcom/vtosters/lite/api/execute/DocsGetTypes$b;->b()Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;
 
@@ -890,7 +890,7 @@
     return-object p1
 .end method
 
-.method public final a(IILjava/lang/String;Landroid/content/Context;Lcom/vk/common/links/f;)V
+.method public final a(IILjava/lang/String;Landroid/content/Context;Lcom/vk/common/links/OpenCallback;)V
     .locals 9
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -906,30 +906,30 @@
     if-eqz p4, :cond_1
 
     .line 4
-    new-instance v0, Lb/h/c/i/e;
+    new-instance v0, Lcom/vk/api/docs/DocsGetById;
 
     if-eqz p3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object p3
 
-    invoke-interface {p3}, Lcom/vk/bridges/f;->M1()Ljava/lang/String;
+    invoke-interface {p3}, Lcom/vk/bridges/AuthBridge3;->M1()Ljava/lang/String;
 
     move-result-object p3
 
     :goto_0
-    invoke-direct {v0, p1, p2, p3}, Lb/h/c/i/e;-><init>(IILjava/lang/String;)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/vk/api/docs/DocsGetById;-><init>(IILjava/lang/String;)V
 
     const/4 p1, 0x1
 
     const/4 p2, 0x0
 
     .line 5
-    invoke-static {v0, p2, p1, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p2, p1, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -948,28 +948,28 @@
     move-object v1, p4
 
     .line 6
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 7
     new-instance p2, Lcom/vk/documents/list/DocumentsUtils$open$1;
 
-    invoke-direct {p2, p4, p5}, Lcom/vk/documents/list/DocumentsUtils$open$1;-><init>(Landroid/app/Activity;Lcom/vk/common/links/f;)V
+    invoke-direct {p2, p4, p5}, Lcom/vk/documents/list/DocumentsUtils$open$1;-><init>(Landroid/app/Activity;Lcom/vk/common/links/OpenCallback;)V
 
     .line 8
     new-instance p3, Lcom/vk/documents/list/DocumentsUtils$a;
 
-    invoke-direct {p3, p5}, Lcom/vk/documents/list/DocumentsUtils$a;-><init>(Lcom/vk/common/links/f;)V
+    invoke-direct {p3, p5}, Lcom/vk/documents/list/DocumentsUtils$a;-><init>(Lcom/vk/common/links/OpenCallback;)V
 
     .line 9
-    invoke-virtual {p1, p2, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_1
     return-void
 .end method
 
-.method public final a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Lkotlin/jvm/b/a;)V
+.method public final a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -978,8 +978,8 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -999,30 +999,30 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$1;-><init>(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$1;-><init>(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     .line 20
     new-instance p1, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$2;
 
-    invoke-direct {p1, p4, p5}, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$2;-><init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
+    invoke-direct {p1, p4, p5}, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$2;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
 
     .line 21
-    invoke-direct {p0, p4, v6, p1}, Lcom/vk/documents/list/DocumentsUtils;->a(Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p4, v6, p1}, Lcom/vk/documents/list/DocumentsUtils;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/api/base/Document;Landroid/app/Activity;Lkotlin/jvm/b/b;)V
+.method public final a(Lcom/vk/api/base/Document;Landroid/app/Activity;Lkotlin/jvm/b/Functions2;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/api/base/Document;",
             "Landroid/app/Activity;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/api/base/Document;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1063,17 +1063,17 @@
     if-eqz v0, :cond_2
 
     .line 14
-    new-instance p3, Lcom/vtosters/lite/fragments/j2$g;
+    new-instance p3, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
     iget-object v0, p1, Lcom/vk/api/base/Document;->B:Ljava/lang/String;
 
-    invoke-direct {p3, v0}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {p3, v0}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;-><init>(Ljava/lang/String;)V
 
     .line 15
-    invoke-virtual {p3, p1}, Lcom/vtosters/lite/fragments/j2$g;->a(Lcom/vk/api/base/Document;)Lcom/vtosters/lite/fragments/j2$g;
+    invoke-virtual {p3, p1}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;->a(Lcom/vk/api/base/Document;)Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
     .line 16
-    invoke-virtual {p3, p2}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p3, p2}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     goto :goto_2
 
@@ -1081,17 +1081,17 @@
     if-eqz p3, :cond_4
 
     .line 17
-    invoke-interface {p3, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     goto :goto_2
 
     .line 18
     :cond_3
-    invoke-static {}, Lcom/vk/bridges/q;->a()Lcom/vk/bridges/p;
+    invoke-static {}, Lcom/vk/bridges/ImageViewer1;->a()Lcom/vk/bridges/ImageViewer;
 
     move-result-object p3
 
@@ -1107,7 +1107,7 @@
 
     invoke-direct {v2, p1}, Lcom/vk/documents/list/DocumentsUtils$b;-><init>(Lcom/vk/api/base/Document;)V
 
-    invoke-interface {p3, v1, v0, p2, v2}, Lcom/vk/bridges/p;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
+    invoke-interface {p3, v1, v0, p2, v2}, Lcom/vk/bridges/ImageViewer;->a(ILjava/util/List;Landroid/app/Activity;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
 
     :cond_4
     :goto_2
@@ -1132,7 +1132,7 @@
 
     move-object v1, p2
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vk/documents/list/DocumentsUtils;Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/documents/list/DocumentsUtils;->a(Lcom/vk/documents/list/DocumentsUtils;Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1141,19 +1141,19 @@
     .locals 3
 
     .line 28
-    new-instance v0, Lcom/vtosters/lite/fragments/x2/a$d;
+    new-instance v0, Lcom/vtosters/lite/fragments/x2/FilePickerFragment$d;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/fragments/x2/a$d;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/x2/FilePickerFragment$d;-><init>()V
 
     const-wide/32 v1, 0xc800000
 
     .line 29
-    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/fragments/x2/a$d;->a(J)Lcom/vtosters/lite/fragments/x2/a$d;
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/fragments/x2/FilePickerFragment$d;->a(J)Lcom/vtosters/lite/fragments/x2/FilePickerFragment$d;
 
     const/16 v1, 0x67
 
     .line 30
-    invoke-virtual {v0, p1, v1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     return-void
 .end method
@@ -1199,7 +1199,7 @@
 
     const-string v0, "Intent(fragment.activity\u2026DIA_TYPE_PHOTO_AND_VIDEO)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v0, 0x65
 

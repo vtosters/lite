@@ -23,7 +23,7 @@
         ">",
         "Ljava/lang/Object;",
         "Ljava/util/concurrent/Callable<",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TT;>;>;"
     }
 .end annotation
@@ -56,19 +56,19 @@
 
 
 # virtual methods
-.method public final call()Lc/a/m;
+.method public final call()Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/menu/MenuResponse;",
             ">;"
         }
     .end annotation
 
     .line 2
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -83,7 +83,7 @@
 
     .line 3
     :goto_0
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -106,19 +106,19 @@
 
     .line 4
     :goto_1
-    new-instance v2, Lb/h/c/n/a;
+    new-instance v2, Lcom/vk/api/apps/AccountGetMenu;
 
-    invoke-direct {v2, v1, v0}, Lb/h/c/n/a;-><init>(ILjava/lang/String;)V
+    invoke-direct {v2, v1, v0}, Lcom/vk/api/apps/AccountGetMenu;-><init>(ILjava/lang/String;)V
 
     .line 5
-    invoke-virtual {v2}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
+    invoke-virtual {v2}, Lcom/vk/api/base/ApiRequest;->h()Lcom/vk/api/base/ApiRequest;
 
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
     .line 6
-    invoke-static {v2, v1, v0, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v2, v1, v0, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -129,7 +129,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/menu/MenuCache$h;->call()Lc/a/m;
+    invoke-virtual {p0}, Lcom/vk/menu/MenuCache$h;->call()Lio/reactivex/Observable;
 
     move-result-object v0
 

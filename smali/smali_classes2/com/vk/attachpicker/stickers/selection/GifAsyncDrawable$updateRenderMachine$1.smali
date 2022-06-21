@@ -18,12 +18,12 @@
 
 
 # instance fields
-.field private final a:Lkotlin/jvm/b/b;
+.field private final a:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Landroid/graphics/Bitmap;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -49,19 +49,19 @@
     .line 2
     sget-object p1, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$updateRenderMachine$1$resourceReleaser$1;->a:Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$updateRenderMachine$1$resourceReleaser$1;
 
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$updateRenderMachine$1;->a:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$updateRenderMachine$1;->a:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)Lcom/facebook/common/references/a;
+.method public a(I)Lcom/facebook/common/references/CloseableReference;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lcom/facebook/common/references/a<",
+            "Lcom/facebook/common/references/CloseableReference<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -85,20 +85,20 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$updateRenderMachine$1;->a:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable$updateRenderMachine$1;->a:Lkotlin/jvm/b/Functions2;
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vk/attachpicker/stickers/selection/c;
+    new-instance v1, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable1;
 
-    invoke-direct {v1, v0}, Lcom/vk/attachpicker/stickers/selection/c;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, v0}, Lcom/vk/attachpicker/stickers/selection/GifAsyncDrawable1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object v0, v1
 
     :cond_0
-    check-cast v0, Lcom/facebook/common/references/c;
+    check-cast v0, Lcom/facebook/common/references/ResourceReleaser;
 
-    invoke-static {p1, v0}, Lcom/facebook/common/references/a;->a(Ljava/lang/Object;Lcom/facebook/common/references/c;)Lcom/facebook/common/references/a;
+    invoke-static {p1, v0}, Lcom/facebook/common/references/CloseableReference;->a(Ljava/lang/Object;Lcom/facebook/common/references/ResourceReleaser;)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p1
 

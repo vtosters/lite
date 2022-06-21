@@ -17,13 +17,13 @@
 # instance fields
 .field private final a:Z
 
-.field private final b:Lcom/vk/media/camera/qrcode/a$b;
+.field private final b:Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
 
 .field private c:Z
 
 
 # direct methods
-.method public constructor <init>(ZLcom/vk/media/camera/qrcode/a$b;Z)V
+.method public constructor <init>(ZLcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;Z)V
     .locals 0
 
     .line 1
@@ -31,7 +31,7 @@
 
     iput-boolean p1, p0, Lcom/vk/qrcode/QRStatsTracker$a;->a:Z
 
-    iput-object p2, p0, Lcom/vk/qrcode/QRStatsTracker$a;->b:Lcom/vk/media/camera/qrcode/a$b;
+    iput-object p2, p0, Lcom/vk/qrcode/QRStatsTracker$a;->b:Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
 
     iput-boolean p3, p0, Lcom/vk/qrcode/QRStatsTracker$a;->c:Z
 
@@ -40,11 +40,11 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/media/camera/qrcode/a$b;
+.method public final a()Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/qrcode/QRStatsTracker$a;->b:Lcom/vk/media/camera/qrcode/a$b;
+    iget-object v0, p0, Lcom/vk/qrcode/QRStatsTracker$a;->b:Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
 
     return-object v0
 .end method
@@ -75,11 +75,11 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/qrcode/QRStatsTracker$a;->b:Lcom/vk/media/camera/qrcode/a$b;
+    iget-object v0, p0, Lcom/vk/qrcode/QRStatsTracker$a;->b:Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
 
-    iget-object v1, p1, Lcom/vk/qrcode/QRStatsTracker$a;->b:Lcom/vk/media/camera/qrcode/a$b;
+    iget-object v1, p1, Lcom/vk/qrcode/QRStatsTracker$a;->b:Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -119,11 +119,11 @@
     :cond_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/qrcode/QRStatsTracker$a;->b:Lcom/vk/media/camera/qrcode/a$b;
+    iget-object v2, p0, Lcom/vk/qrcode/QRStatsTracker$a;->b:Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Lcom/vk/media/camera/qrcode/a$b;->hashCode()I
+    invoke-virtual {v2}, Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;->hashCode()I
 
     move-result v2
 
@@ -171,7 +171,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/qrcode/QRStatsTracker$a;->b:Lcom/vk/media/camera/qrcode/a$b;
+    iget-object v1, p0, Lcom/vk/qrcode/QRStatsTracker$a;->b:Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

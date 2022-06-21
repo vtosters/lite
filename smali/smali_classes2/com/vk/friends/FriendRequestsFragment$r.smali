@@ -3,7 +3,7 @@
 .source "FriendRequestsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -142,7 +142,7 @@
     :cond_3
     iget-object p1, p0, Lcom/vk/friends/FriendRequestsFragment$r;->a:Lcom/vk/friends/FriendRequestsFragment;
 
-    invoke-static {p1}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/a;
+    invoke-static {p1}, Lcom/vk/friends/FriendRequestsFragment;->a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/FriendRequestsAdapter;
 
     move-result-object p1
 
@@ -150,7 +150,7 @@
 
     iget-object v0, p0, Lcom/vk/friends/FriendRequestsFragment$r;->b:Lcom/vk/dto/user/RequestUserProfile;
 
-    invoke-virtual {p1, v0, v0}, Lcom/vk/lists/i0;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {p1, v0, v0}, Lcom/vk/lists/SimpleAdapter;->a(Ljava/lang/Object;Ljava/lang/Object;)V
 
     :cond_4
     return-void

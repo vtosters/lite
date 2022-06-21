@@ -42,7 +42,7 @@
     .locals 8
 
     .line 1
-    sget-object v0, Lcom/vk/core/widget/b;->b:Lcom/vk/core/widget/b;
+    sget-object v0, Lcom/vk/core/widget/LikeAnimator;->b:Lcom/vk/core/widget/LikeAnimator;
 
     iget-object p1, p0, Lcom/vk/libvideo/ui/VideoToolbarView$c;->a:Lcom/vk/libvideo/ui/VideoToolbarView;
 
@@ -70,7 +70,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/core/widget/b;->a(Lcom/vk/core/widget/b;Landroid/view/View;Landroid/view/View;ZZFILjava/lang/Object;)V
+    invoke-static/range {v0 .. v7}, Lcom/vk/core/widget/LikeAnimator;->a(Lcom/vk/core/widget/LikeAnimator;Landroid/view/View;Landroid/view/View;ZZFILjava/lang/Object;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/libvideo/ui/VideoToolbarView$c;->a:Lcom/vk/libvideo/ui/VideoToolbarView;

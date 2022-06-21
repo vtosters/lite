@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # instance fields
@@ -36,7 +36,7 @@
 
     check-cast p1, Ljava/lang/Boolean;
 
-    invoke-static {v0, v1, p1}, Lcom/vk/stories/view/StoryView;->a(ILjava/lang/String;Ljava/lang/Boolean;)Lc/a/p;
+    invoke-static {v0, v1, p1}, Lcom/vk/stories/view/StoryView;->a(ILjava/lang/String;Ljava/lang/Boolean;)Lio/reactivex/ObservableSource;
 
     move-result-object p1
 

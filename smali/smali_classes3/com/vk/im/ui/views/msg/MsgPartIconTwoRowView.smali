@@ -3,7 +3,7 @@
 .source "MsgPartIconTwoRowView.java"
 
 # interfaces
-.implements Lcom/vk/im/ui/views/msg/a;
+.implements Lcom/vk/im/ui/views/msg/WithTime;
 
 
 # instance fields
@@ -712,7 +712,7 @@
     move-result v7
 
     .line 7
-    invoke-static {v1, v4, v6, v2}, Lcom/vk/im/ui/views/e;->a(IIII)I
+    invoke-static {v1, v4, v6, v2}, Lcom/vk/im/ui/views/MeasureUtils;->a(IIII)I
 
     move-result v8
 
@@ -722,14 +722,14 @@
     iget v10, v0, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->g:I
 
     .line 9
-    invoke-static {v10}, Lcom/vk/im/ui/views/e;->b(I)I
+    invoke-static {v10}, Lcom/vk/im/ui/views/MeasureUtils;->b(I)I
 
     move-result v10
 
     iget v11, v0, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->h:I
 
     .line 10
-    invoke-static {v11}, Lcom/vk/im/ui/views/e;->b(I)I
+    invoke-static {v11}, Lcom/vk/im/ui/views/MeasureUtils;->b(I)I
 
     move-result v11
 
@@ -767,12 +767,12 @@
     iget-object v12, v0, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->b:Lcom/vk/im/ui/views/FixTextView;
 
     .line 16
-    invoke-static {v8}, Lcom/vk/im/ui/views/e;->a(I)I
+    invoke-static {v8}, Lcom/vk/im/ui/views/MeasureUtils;->a(I)I
 
     move-result v13
 
     .line 17
-    invoke-static {}, Lcom/vk/im/ui/views/e;->a()I
+    invoke-static {}, Lcom/vk/im/ui/views/MeasureUtils;->a()I
 
     move-result v14
 
@@ -808,12 +808,12 @@
     iget-object v11, v0, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->d:Landroid/widget/TextView;
 
     .line 23
-    invoke-static {v8}, Lcom/vk/im/ui/views/e;->a(I)I
+    invoke-static {v8}, Lcom/vk/im/ui/views/MeasureUtils;->a(I)I
 
     move-result v14
 
     .line 24
-    invoke-static {}, Lcom/vk/im/ui/views/e;->a()I
+    invoke-static {}, Lcom/vk/im/ui/views/MeasureUtils;->a()I
 
     move-result v15
 
@@ -854,14 +854,14 @@
     iget-object v15, v0, Lcom/vk/im/ui/views/msg/MsgPartIconTwoRowView;->c:Lcom/vk/im/ui/views/FixTextView;
 
     .line 30
-    invoke-static {v8}, Lcom/vk/im/ui/views/e;->a(I)I
+    invoke-static {v8}, Lcom/vk/im/ui/views/MeasureUtils;->a(I)I
 
     move-result v8
 
     move/from16 v16, v5
 
     .line 31
-    invoke-static {}, Lcom/vk/im/ui/views/e;->a()I
+    invoke-static {}, Lcom/vk/im/ui/views/MeasureUtils;->a()I
 
     move-result v5
 
@@ -929,7 +929,7 @@
     add-int/2addr v3, v5
 
     .line 41
-    invoke-static {v1, v4, v6, v2}, Lcom/vk/im/ui/views/e;->b(IIII)I
+    invoke-static {v1, v4, v6, v2}, Lcom/vk/im/ui/views/MeasureUtils;->b(IIII)I
 
     move-result v1
 
@@ -938,7 +938,7 @@
     move/from16 v4, v16
 
     .line 42
-    invoke-static {v2, v4, v7, v3}, Lcom/vk/im/ui/views/e;->b(IIII)I
+    invoke-static {v2, v4, v7, v3}, Lcom/vk/im/ui/views/MeasureUtils;->b(IIII)I
 
     move-result v2
 

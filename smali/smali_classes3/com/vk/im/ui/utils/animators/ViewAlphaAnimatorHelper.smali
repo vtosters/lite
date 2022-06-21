@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic m:[Lkotlin/u/j;
+.field static final synthetic m:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -25,13 +25,13 @@
 
 .field private final c:Landroid/os/Handler;
 
-.field private final d:Lkotlin/e;
+.field private final d:Lkotlin/Lazy2;
 
-.field private final e:Lkotlin/e;
+.field private final e:Lkotlin/Lazy2;
 
-.field private final f:Lkotlin/e;
+.field private final f:Lkotlin/Lazy2;
 
-.field private final g:Lkotlin/e;
+.field private final g:Lkotlin/Lazy2;
 
 .field private final h:Landroid/view/View;
 
@@ -52,11 +52,11 @@
 
     const/4 v1, 0x4
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -64,9 +64,9 @@
 
     const-string v5, "getShowInstantDelayedRunnable()Ljava/lang/Runnable;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -74,7 +74,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -82,9 +82,9 @@
 
     const-string v5, "getShowAnimatedDelayedRunnable()Ljava/lang/Runnable;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x1
 
@@ -92,7 +92,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -100,9 +100,9 @@
 
     const-string v5, "getHideInstantDelayedRunnable()Ljava/lang/Runnable;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x2
 
@@ -110,7 +110,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -118,15 +118,15 @@
 
     const-string v4, "getHideAnimatedDelayedRunnable()Ljava/lang/Runnable;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x3
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->m:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->m:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -163,49 +163,49 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper$showInstantDelayedRunnable$2;-><init>(Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->d:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->d:Lkotlin/Lazy2;
 
     .line 4
     new-instance p1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper$showAnimatedDelayedRunnable$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper$showAnimatedDelayedRunnable$2;-><init>(Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->e:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->e:Lkotlin/Lazy2;
 
     .line 5
     new-instance p1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper$hideInstantDelayedRunnable$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper$hideInstantDelayedRunnable$2;-><init>(Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->f:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->f:Lkotlin/Lazy2;
 
     .line 6
     new-instance p1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper$hideAnimatedDelayedRunnable$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper$hideAnimatedDelayedRunnable$2;-><init>(Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->g:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->g:Lkotlin/Lazy2;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/view/View;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;JIILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/view/View;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;JIILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 7
 
     and-int/lit8 p8, p7, 0x2
@@ -450,15 +450,15 @@
 .method private final d()Ljava/lang/Runnable;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->g:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->g:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->m:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -470,15 +470,15 @@
 .method private final e()Ljava/lang/Runnable;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->f:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->m:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -490,15 +490,15 @@
 .method private final f()Ljava/lang/Runnable;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->e:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->e:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->m:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -510,15 +510,15 @@
 .method private final g()Ljava/lang/Runnable;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->d:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->m:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;->m:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

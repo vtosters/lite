@@ -3,7 +3,7 @@
 .source "NotificationView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -34,7 +34,7 @@
 # instance fields
 .field private final B:[Landroid/widget/TextView;
 
-.field private final C:Lcom/vk/notifications/c;
+.field private final C:Lcom/vk/notifications/NotificationAttachmentsView;
 
 .field private final D:Landroid/widget/ImageView;
 
@@ -68,13 +68,13 @@
 
 .field private final S:I
 
-.field private final T:Lcom/vk/notifications/f;
+.field private final T:Lcom/vk/notifications/NotificationLayoutHelper;
 
 .field private U:Z
 
 .field private final V:Landroid/view/GestureDetector;
 
-.field private final W:Lcom/vk/notifications/i;
+.field private final W:Lcom/vk/notifications/NotificationsContainer;
 
 .field private a:Lcom/vk/dto/notifications/NotificationItem;
 
@@ -101,7 +101,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/notifications/NotificationView$i;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/notifications/NotificationView$i;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/notifications/NotificationView;->d0:Lcom/vk/notifications/NotificationView$i;
 
@@ -112,7 +112,7 @@
 
     const-string v1, "RoundingParams.asCircle()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/notifications/NotificationView;->a0:Lcom/facebook/drawee/generic/RoundingParams;
 
@@ -131,7 +131,7 @@
 
     const-string v1, "RoundingParams.fromCorne\u2026(Screen.dp(2f).toFloat())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/notifications/NotificationView;->b0:Lcom/facebook/drawee/generic/RoundingParams;
 
@@ -145,7 +145,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/notifications/i;Landroid/content/Context;)V
+.method public constructor <init>(Lcom/vk/notifications/NotificationsContainer;Landroid/content/Context;)V
     .locals 20
 
     move-object/from16 v8, p0
@@ -157,7 +157,7 @@
 
     move-object/from16 v0, p1
 
-    iput-object v0, v8, Lcom/vk/notifications/NotificationView;->W:Lcom/vk/notifications/i;
+    iput-object v0, v8, Lcom/vk/notifications/NotificationView;->W:Lcom/vk/notifications/NotificationsContainer;
 
     .line 2
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
@@ -368,7 +368,7 @@
     iput v0, v8, Lcom/vk/notifications/NotificationView;->S:I
 
     .line 16
-    new-instance v0, Lcom/vk/notifications/f;
+    new-instance v0, Lcom/vk/notifications/NotificationLayoutHelper;
 
     invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
@@ -376,11 +376,11 @@
 
     const-string v2, "resources"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/notifications/f;-><init>(Landroid/content/res/Resources;)V
+    invoke-direct {v0, v1}, Lcom/vk/notifications/NotificationLayoutHelper;-><init>(Landroid/content/res/Resources;)V
 
-    iput-object v0, v8, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iput-object v0, v8, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
     const v0, 0x7f0802f7
 
@@ -397,7 +397,7 @@
 
     invoke-direct {v0, v8, v9}, Lcom/vk/notifications/NotificationView$1;-><init>(Lcom/vk/notifications/NotificationView;Landroid/content/Context;)V
 
-    invoke-static {v8, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v8, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 20
     new-instance v0, Lcom/vk/notifications/NotificationView$f;
@@ -437,14 +437,14 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    invoke-virtual {v6, v0}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v6, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 24
     new-instance v0, Lcom/vk/notifications/NotificationView$$special$$inlined$apply$lambda$1;
 
     invoke-direct {v0, v8, v9}, Lcom/vk/notifications/NotificationView$$special$$inlined$apply$lambda$1;-><init>(Lcom/vk/notifications/NotificationView;Landroid/content/Context;)V
 
-    invoke-static {v6, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v6, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 25
     iput-object v6, v8, Lcom/vk/notifications/NotificationView;->b:Lcom/vk/imageloader/view/VKImageView;
@@ -478,7 +478,7 @@
 
     invoke-direct {v0, v8, v9}, Lcom/vk/notifications/NotificationView$$special$$inlined$apply$lambda$2;-><init>(Lcom/vk/notifications/NotificationView;Landroid/content/Context;)V
 
-    invoke-static {v12, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v12, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 29
     new-instance v0, Lcom/vk/notifications/NotificationView$a;
@@ -492,7 +492,7 @@
 
     invoke-direct {v0, v12}, Lcom/vk/notifications/NotificationView$g;-><init>(Lcom/vk/imageloader/view/VKImageView;)V
 
-    invoke-virtual {v12, v0}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/g;)V
+    invoke-virtual {v12, v0}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/OnLoadCallback;)V
 
     .line 31
     invoke-virtual {v12, v10}, Landroid/widget/ImageView;->setBackgroundColor(I)V
@@ -567,7 +567,7 @@
     const v7, 0x7f04059a
 
     .line 41
-    invoke-static {v12, v7}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v12, v7}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     const/4 v6, 0x5
 
@@ -652,7 +652,7 @@
     invoke-virtual {v12, v0, v15}, Landroid/widget/TextView;->setLineSpacing(FF)V
 
     .line 52
-    invoke-static {v12, v11}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v12, v11}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 53
     invoke-virtual {v12, v10}, Landroid/widget/TextView;->setTextDirection(I)V
@@ -721,7 +721,7 @@
     const v12, 0x7f04059b
 
     .line 63
-    invoke-static {v11, v12}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v11, v12}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 64
     invoke-virtual {v11, v10}, Landroid/widget/TextView;->setTextDirection(I)V
@@ -765,7 +765,7 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    invoke-virtual {v6, v0}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v6, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     const v0, 0x7f120066
 
@@ -781,7 +781,7 @@
 
     invoke-direct {v0, v8, v9}, Lcom/vk/notifications/NotificationView$$special$$inlined$apply$lambda$7;-><init>(Lcom/vk/notifications/NotificationView;Landroid/content/Context;)V
 
-    invoke-static {v6, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v6, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 72
     iput-object v6, v8, Lcom/vk/notifications/NotificationView;->g:Lcom/vk/imageloader/view/VKImageView;
@@ -877,7 +877,7 @@
 
     invoke-direct {v0, v14, v10, v8, v9}, Lcom/vk/notifications/NotificationView$$special$$inlined$Array$lambda$1;-><init>(ILandroid/widget/TextView;Lcom/vk/notifications/NotificationView;Landroid/content/Context;)V
 
-    invoke-static {v10, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v10, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 83
     aput-object v10, v11, v14
@@ -896,7 +896,7 @@
     iput-object v11, v8, Lcom/vk/notifications/NotificationView;->B:[Landroid/widget/TextView;
 
     .line 84
-    new-instance v6, Lcom/vk/notifications/c;
+    new-instance v6, Lcom/vk/notifications/NotificationAttachmentsView;
 
     .line 85
     iget v2, v8, Lcom/vk/notifications/NotificationView;->H:I
@@ -914,12 +914,12 @@
     move-object/from16 v1, p2
 
     .line 86
-    invoke-direct/range {v0 .. v5}, Lcom/vk/notifications/c;-><init>(Landroid/content/Context;IIILkotlin/jvm/b/a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/notifications/NotificationAttachmentsView;-><init>(Landroid/content/Context;IIILkotlin/jvm/b/Functions;)V
 
-    iput-object v6, v8, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/c;
+    iput-object v6, v8, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/NotificationAttachmentsView;
 
     .line 87
-    iget-object v1, v8, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/c;
+    iget-object v1, v8, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/NotificationAttachmentsView;
 
     const/4 v2, -0x1
 
@@ -957,7 +957,7 @@
     const/4 v2, 0x2
 
     .line 89
-    invoke-static {v7, v0, v1, v2, v1}, Lcom/vk/extensions/e;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
+    invoke-static {v7, v0, v1, v2, v1}, Lcom/vk/extensions/ImageViewExt;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
 
     .line 90
     iget v3, v8, Lcom/vk/notifications/NotificationView;->K:I
@@ -987,7 +987,7 @@
     const v0, 0x7f04059b
 
     .line 93
-    invoke-static {v12, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v12, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 94
     invoke-virtual {v12, v13}, Landroid/widget/TextView;->setTextSize(F)V
@@ -1891,11 +1891,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/notifications/NotificationView;)Lcom/vk/notifications/i;
+.method public static final synthetic a(Lcom/vk/notifications/NotificationView;)Lcom/vk/notifications/NotificationsContainer;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/notifications/NotificationView;->W:Lcom/vk/notifications/i;
+    iget-object p0, p0, Lcom/vk/notifications/NotificationView;->W:Lcom/vk/notifications/NotificationsContainer;
 
     return-object p0
 .end method
@@ -1924,7 +1924,7 @@
     :goto_0
     const-string v1, "send_gift"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1963,7 +1963,7 @@
     const p2, 0x7f0400df
 
     .line 35
-    invoke-static {p1, p2}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     const p2, 0x7f080b6c
 
@@ -1976,7 +1976,7 @@
     const p2, 0x7f0400e3
 
     .line 37
-    invoke-static {p1, p2}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     const p2, 0x7f080b72
 
@@ -2289,41 +2289,41 @@
 
     .line 25
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p4
 
-    check-cast p4, Lcom/facebook/drawee/generic/a;
+    check-cast p4, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v0, Lcom/vk/notifications/NotificationView;->b0:Lcom/facebook/drawee/generic/RoundingParams;
 
-    invoke-virtual {p4, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {p4, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     goto :goto_1
 
     .line 26
     :cond_2
     :goto_0
-    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p4
 
-    check-cast p4, Lcom/facebook/drawee/generic/a;
+    check-cast p4, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v0, Lcom/vk/notifications/NotificationView;->a0:Lcom/facebook/drawee/generic/RoundingParams;
 
-    invoke-virtual {p4, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {p4, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     .line 27
     invoke-direct {p0, p1, p2}, Lcom/vk/notifications/NotificationView;->a(Lcom/vk/imageloader/view/VKImageView;Lcom/vk/dto/notifications/NotificationEntity;)V
 
     .line 28
     :goto_1
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object p4
 
@@ -2331,7 +2331,7 @@
 
     move-result-object v0
 
-    invoke-interface {p4, v0}, Lcom/vk/bridges/k0;->a(Lcom/vk/dto/common/VideoFile;)Z
+    invoke-interface {p4, v0}, Lcom/vk/bridges/VideoBridge1;->a(Lcom/vk/dto/common/VideoFile;)Z
 
     move-result p4
 
@@ -2339,7 +2339,7 @@
 
     sget-object p4, Lcom/vk/libvideo/ui/VideoRestrictionView;->F:Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;
 
-    invoke-virtual {p4}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a()Lcom/facebook/x/i/a;
+    invoke-virtual {p4}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a()Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
 
     move-result-object p4
 
@@ -2350,7 +2350,7 @@
 
     .line 29
     :goto_2
-    invoke-virtual {p1, p4}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {p1, p4}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 30
     sget-object p4, Lcom/vk/notifications/NotificationView;->d0:Lcom/vk/notifications/NotificationView$i;
@@ -2462,7 +2462,7 @@
     const-string v1, "notify"
 
     .line 97
-    invoke-static {v1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v1}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v1
 
@@ -2471,12 +2471,12 @@
     const-string v3, "click"
 
     .line 98
-    invoke-virtual {v1, v2, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1, v2, v3}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     const-string v2, "region"
 
     .line 99
-    invoke-virtual {v1, v2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1, v2, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 100
     invoke-virtual {v0}, Lcom/vk/dto/notifications/NotificationItem;->getId()Ljava/lang/String;
@@ -2485,10 +2485,10 @@
 
     const-string v0, "notify_id"
 
-    invoke-virtual {v1, v0, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1, v0, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 101
-    invoke-virtual {v1}, Lcom/vtosters/lite/data/n$l;->e()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/Analytics$l;->e()Lcom/vtosters/lite/data/Analytics$l;
 
     :cond_0
     return-void
@@ -2628,7 +2628,7 @@
 
     const-string v4, "getChildAt(i)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v2}, Landroid/view/View;->setVisibility(I)V
 
@@ -2755,7 +2755,7 @@
     invoke-direct {p0, v0, v4}, Lcom/vk/notifications/NotificationView;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
 
     .line 11
-    iget-object v0, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/c;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/NotificationAttachmentsView;
 
     iget-object v4, p0, Lcom/vk/notifications/NotificationView;->a:Lcom/vk/dto/notifications/NotificationItem;
 
@@ -2771,7 +2771,7 @@
     move-object v4, v3
 
     :goto_5
-    invoke-virtual {v0, v4}, Lcom/vk/notifications/c;->setNotification(Ljava/util/ArrayList;)V
+    invoke-virtual {v0, v4}, Lcom/vk/notifications/NotificationAttachmentsView;->setNotification(Ljava/util/ArrayList;)V
 
     .line 12
     iget-object v0, p0, Lcom/vk/notifications/NotificationView;->a:Lcom/vk/dto/notifications/NotificationItem;
@@ -2811,7 +2811,7 @@
 
     const-string v5, "context"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v4}, Lcom/vk/dto/notifications/NotificationItem$b;->a(Landroid/content/Context;)Ljava/lang/CharSequence;
 
@@ -3195,9 +3195,9 @@
     sub-int/2addr p4, p5
 
     .line 19
-    iget-object p5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object p5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
-    invoke-virtual {p5}, Lcom/vk/notifications/f;->a()V
+    invoke-virtual {p5}, Lcom/vk/notifications/NotificationLayoutHelper;->a()V
 
     .line 20
     iget-object p5, p0, Lcom/vk/notifications/NotificationView;->d:Lcom/vk/core/view/links/LinkedTextView;
@@ -3209,7 +3209,7 @@
     if-eqz p5, :cond_4
 
     .line 21
-    iget-object p5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object p5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
     iget-object v0, p0, Lcom/vk/notifications/NotificationView;->d:Lcom/vk/core/view/links/LinkedTextView;
 
@@ -3217,7 +3217,7 @@
 
     move-result v0
 
-    invoke-virtual {p5, v0}, Lcom/vk/notifications/f;->d(I)I
+    invoke-virtual {p5, v0}, Lcom/vk/notifications/NotificationLayoutHelper;->d(I)I
 
     move-result p5
 
@@ -3254,7 +3254,7 @@
     if-eqz p5, :cond_5
 
     .line 27
-    iget-object p5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object p5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
     iget-object v0, p0, Lcom/vk/notifications/NotificationView;->e:Lcom/vk/core/view/links/LinkedTextView;
 
@@ -3262,7 +3262,7 @@
 
     move-result v0
 
-    invoke-virtual {p5, v0}, Lcom/vk/notifications/f;->d(I)I
+    invoke-virtual {p5, v0}, Lcom/vk/notifications/NotificationLayoutHelper;->d(I)I
 
     move-result p5
 
@@ -3290,7 +3290,7 @@
 
     .line 32
     :cond_5
-    iget-object p5, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/c;
+    iget-object p5, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/NotificationAttachmentsView;
 
     invoke-direct {p0, p5}, Lcom/vk/notifications/NotificationView;->a(Landroid/view/View;)Z
 
@@ -3299,20 +3299,20 @@
     if-eqz p5, :cond_6
 
     .line 33
-    iget-object p5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object p5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
-    iget-object v0, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/c;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/NotificationAttachmentsView;
 
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v0
 
-    invoke-virtual {p5, v0}, Lcom/vk/notifications/f;->a(I)I
+    invoke-virtual {p5, v0}, Lcom/vk/notifications/NotificationLayoutHelper;->a(I)I
 
     move-result p5
 
     .line 34
-    iget-object v0, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/c;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/NotificationAttachmentsView;
 
     .line 35
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
@@ -3322,7 +3322,7 @@
     add-int/2addr v1, p1
 
     .line 36
-    iget-object v2, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/c;
+    iget-object v2, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/NotificationAttachmentsView;
 
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -3344,7 +3344,7 @@
     if-eqz p5, :cond_7
 
     .line 39
-    iget-object p5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object p5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
     iget-object v0, p0, Lcom/vk/notifications/NotificationView;->f:Lcom/vk/core/view/links/LinkedTextView;
 
@@ -3352,7 +3352,7 @@
 
     move-result v0
 
-    invoke-virtual {p5, v0}, Lcom/vk/notifications/f;->c(I)I
+    invoke-virtual {p5, v0}, Lcom/vk/notifications/NotificationLayoutHelper;->c(I)I
 
     move-result p5
 
@@ -3389,7 +3389,7 @@
     if-eqz p5, :cond_9
 
     .line 45
-    iget-object p2, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object p2, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
     iget-object p4, p0, Lcom/vk/notifications/NotificationView;->E:Landroid/widget/TextView;
 
@@ -3405,7 +3405,7 @@
 
     move-result p4
 
-    invoke-virtual {p2, p4}, Lcom/vk/notifications/f;->b(I)I
+    invoke-virtual {p2, p4}, Lcom/vk/notifications/NotificationLayoutHelper;->b(I)I
 
     move-result p2
 
@@ -3559,11 +3559,11 @@
     add-int/2addr p5, p1
 
     .line 65
-    iget-object v0, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
     iget v1, p0, Lcom/vk/notifications/NotificationView;->I:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/notifications/f;->b(I)I
+    invoke-virtual {v0, v1}, Lcom/vk/notifications/NotificationLayoutHelper;->b(I)I
 
     .line 66
     :goto_3
@@ -3581,9 +3581,9 @@
     sub-int v0, p5, v0
 
     .line 68
-    iget-object v2, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object v2, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
-    invoke-virtual {v2}, Lcom/vk/notifications/f;->c()I
+    invoke-virtual {v2}, Lcom/vk/notifications/NotificationLayoutHelper;->c()I
 
     move-result v2
 
@@ -3598,9 +3598,9 @@
     sub-int/2addr v2, v3
 
     .line 69
-    iget-object v3, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object v3, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
-    invoke-virtual {v3}, Lcom/vk/notifications/f;->c()I
+    invoke-virtual {v3}, Lcom/vk/notifications/NotificationLayoutHelper;->c()I
 
     move-result v3
 
@@ -3707,9 +3707,9 @@
 
     .line 8
     :cond_3
-    iget-object v2, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object v2, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
-    invoke-virtual {v2}, Lcom/vk/notifications/f;->a()V
+    invoke-virtual {v2}, Lcom/vk/notifications/NotificationLayoutHelper;->a()V
 
     .line 9
     iget-object v2, p0, Lcom/vk/notifications/NotificationView;->g:Lcom/vk/imageloader/view/VKImageView;
@@ -3798,7 +3798,7 @@
     invoke-virtual {p0, v5, v4, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     .line 19
-    iget-object v5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object v5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
     iget-object v6, p0, Lcom/vk/notifications/NotificationView;->d:Lcom/vk/core/view/links/LinkedTextView;
 
@@ -3806,7 +3806,7 @@
 
     move-result v6
 
-    invoke-virtual {v5, v6}, Lcom/vk/notifications/f;->d(I)I
+    invoke-virtual {v5, v6}, Lcom/vk/notifications/NotificationLayoutHelper;->d(I)I
 
     .line 20
     :cond_5
@@ -3824,7 +3824,7 @@
     invoke-virtual {p0, v5, v4, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     .line 22
-    iget-object v5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object v5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
     iget-object v6, p0, Lcom/vk/notifications/NotificationView;->e:Lcom/vk/core/view/links/LinkedTextView;
 
@@ -3832,11 +3832,11 @@
 
     move-result v6
 
-    invoke-virtual {v5, v6}, Lcom/vk/notifications/f;->d(I)I
+    invoke-virtual {v5, v6}, Lcom/vk/notifications/NotificationLayoutHelper;->d(I)I
 
     .line 23
     :cond_6
-    iget-object v5, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/c;
+    iget-object v5, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/NotificationAttachmentsView;
 
     invoke-direct {p0, v5}, Lcom/vk/notifications/NotificationView;->a(Landroid/view/View;)Z
 
@@ -3845,20 +3845,20 @@
     if-eqz v5, :cond_7
 
     .line 24
-    iget-object v5, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/c;
+    iget-object v5, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/NotificationAttachmentsView;
 
     invoke-virtual {p0, v5, v4, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     .line 25
-    iget-object v5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object v5, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
-    iget-object v6, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/c;
+    iget-object v6, p0, Lcom/vk/notifications/NotificationView;->C:Lcom/vk/notifications/NotificationAttachmentsView;
 
     invoke-virtual {v6}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v6
 
-    invoke-virtual {v5, v6}, Lcom/vk/notifications/f;->a(I)I
+    invoke-virtual {v5, v6}, Lcom/vk/notifications/NotificationLayoutHelper;->a(I)I
 
     .line 26
     :cond_7
@@ -3876,7 +3876,7 @@
     invoke-virtual {p0, v5, v4, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     .line 28
-    iget-object v4, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object v4, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
     iget-object v5, p0, Lcom/vk/notifications/NotificationView;->f:Lcom/vk/core/view/links/LinkedTextView;
 
@@ -3884,7 +3884,7 @@
 
     move-result v5
 
-    invoke-virtual {v4, v5}, Lcom/vk/notifications/f;->c(I)I
+    invoke-virtual {v4, v5}, Lcom/vk/notifications/NotificationLayoutHelper;->c(I)I
 
     .line 29
     :cond_8
@@ -3934,7 +3934,7 @@
     invoke-virtual {p0, v2, v1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
     .line 35
-    iget-object p2, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object p2, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
     iget-object v1, p0, Lcom/vk/notifications/NotificationView;->E:Landroid/widget/TextView;
 
@@ -3950,7 +3950,7 @@
 
     move-result v1
 
-    invoke-virtual {p2, v1}, Lcom/vk/notifications/f;->b(I)I
+    invoke-virtual {p2, v1}, Lcom/vk/notifications/NotificationLayoutHelper;->b(I)I
 
     goto :goto_7
 
@@ -4033,11 +4033,11 @@
     move-result v5
 
     .line 45
-    iget-object v6, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object v6, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
     iget v7, p0, Lcom/vk/notifications/NotificationView;->I:I
 
-    invoke-virtual {v6, v7}, Lcom/vk/notifications/f;->b(I)I
+    invoke-virtual {v6, v7}, Lcom/vk/notifications/NotificationLayoutHelper;->b(I)I
 
     :goto_6
     add-int/lit8 v1, v1, 0x1
@@ -4047,14 +4047,14 @@
     .line 46
     :cond_d
     :goto_7
-    iget-object p2, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object p2, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
-    invoke-virtual {p2}, Lcom/vk/notifications/f;->b()I
+    invoke-virtual {p2}, Lcom/vk/notifications/NotificationLayoutHelper;->b()I
 
     .line 47
-    iget-object p2, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/f;
+    iget-object p2, p0, Lcom/vk/notifications/NotificationView;->T:Lcom/vk/notifications/NotificationLayoutHelper;
 
-    invoke-virtual {p2}, Lcom/vk/notifications/f;->c()I
+    invoke-virtual {p2}, Lcom/vk/notifications/NotificationLayoutHelper;->c()I
 
     move-result p2
 
@@ -4179,7 +4179,7 @@
 
     invoke-direct {v1, v3}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/notifications/NotificationView;->g:Lcom/vk/imageloader/view/VKImageView;
@@ -4192,7 +4192,7 @@
 
     invoke-direct {v1, v2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method

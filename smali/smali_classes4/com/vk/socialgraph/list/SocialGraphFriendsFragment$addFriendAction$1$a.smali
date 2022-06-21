@@ -3,7 +3,7 @@
 .source "SocialGraphFriendsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -91,13 +91,13 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object p1
 
     const-string v0, "adapter.list"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -117,21 +117,21 @@
 
     move-object v1, v0
 
-    check-cast v1, Lcom/vk/socialgraph/list/a;
+    check-cast v1, Lcom/vk/socialgraph/list/Item;
 
-    instance-of v2, v1, Lcom/vk/socialgraph/list/a$a;
+    instance-of v2, v1, Lcom/vk/socialgraph/list/Item$a;
 
     if-eqz v2, :cond_3
 
-    check-cast v1, Lcom/vk/socialgraph/list/a$a;
+    check-cast v1, Lcom/vk/socialgraph/list/Item$a;
 
-    invoke-virtual {v1}, Lcom/vk/socialgraph/list/a$a;->a()Lcom/vk/dto/user/RequestUserProfile;
+    invoke-virtual {v1}, Lcom/vk/socialgraph/list/Item$a;->a()Lcom/vk/dto/user/RequestUserProfile;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$addFriendAction$1$a;->b:Lcom/vk/dto/user/RequestUserProfile;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -153,7 +153,7 @@
     const/4 v0, 0x0
 
     :goto_2
-    check-cast v0, Lcom/vk/socialgraph/list/a;
+    check-cast v0, Lcom/vk/socialgraph/list/Item;
 
     if-eqz v0, :cond_5
 
@@ -166,7 +166,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v0, v0}, Lcom/vk/lists/i0;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {p1, v0, v0}, Lcom/vk/lists/SimpleAdapter;->a(Ljava/lang/Object;Ljava/lang/Object;)V
 
     :cond_5
     return-void

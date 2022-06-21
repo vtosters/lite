@@ -3,12 +3,12 @@
 .source "CommunityHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/i;Lcom/vk/profile/presenter/f/b;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Lcom/vk/profile/presenter/f/CommunityLocationController;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/CommunityDataScope;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/api/i;",
-        "Lcom/vk/profile/adapter/items/community/a;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
+        "Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/a;
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;
     .locals 3
 
     .line 1
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->c(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/CommunityExt;->c(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result v0
 
@@ -64,17 +64,17 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->z()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->z()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/profile/adapter/items/community/a;
+    new-instance v0, Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;
 
     .line 3
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v2, 0x7f120229
 
@@ -84,31 +84,31 @@
 
     const-string v2, "AppContextHolder.context\u2026ommunity_admins_messages)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0805b9
 
     .line 4
-    invoke-direct {v0, v1, v2}, Lcom/vk/profile/adapter/items/community/a;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;-><init>(Ljava/lang/String;I)V
 
     .line 5
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->x()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->x()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/a;->h(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;->h(I)V
 
     const/4 v1, 0x1
 
     .line 6
-    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/a;->g(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;->g(I)V
 
     .line 7
     new-instance v1, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;-><init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1;Lcom/vtosters/lite/api/i;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1$$special$$inlined$apply$lambda$1;-><init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/a;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;->a(Lkotlin/jvm/b/Functions;)V
 
     return-object v0
 
@@ -122,9 +122,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/a;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$unreadMessages$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/community/CommunityAdminBlocksItem;
 
     move-result-object p1
 

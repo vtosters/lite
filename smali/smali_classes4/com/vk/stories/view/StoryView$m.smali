@@ -3,7 +3,7 @@
 .source "StoryView.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/d;
+.implements Lkotlin/jvm/b/Functions4;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/d<",
+        "Lkotlin/jvm/b/Functions4<",
         "Landroid/view/View;",
         "Ljava/lang/Float;",
         "Ljava/lang/Float;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -57,18 +57,18 @@
 
     check-cast p3, Ljava/lang/Float;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/stories/view/StoryView$m;->a(Landroid/view/View;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/m;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/stories/view/StoryView$m;->a(Landroid/view/View;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/Unit;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Landroid/view/View;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/m;
+.method public a(Landroid/view/View;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/Unit;
     .locals 2
 
     .line 2
-    new-instance p1, Lcom/vk/stories/view/w1$a;
+    new-instance p1, Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$m;->a:Lcom/vk/stories/view/StoryView;
 
@@ -93,10 +93,10 @@
 
     move-result p3
 
-    invoke-direct {p1, v0, p2, p3}, Lcom/vk/stories/view/w1$a;-><init>(Ljava/lang/String;FF)V
+    invoke-direct {p1, v0, p2, p3}, Lcom/vk/stories/view/StoryViewTooltipParams$a;-><init>(Ljava/lang/String;FF)V
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/stories/view/w1$a;->a()Lcom/vk/stories/view/w1;
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a()Lcom/vk/stories/view/StoryViewTooltipParams;
 
     move-result-object p1
 
@@ -107,7 +107,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/stories/view/i;-><init>(Lcom/vk/stories/view/StoryView$m;)V
 
-    invoke-virtual {p2, p1, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
+    invoke-virtual {p2, p1, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
 
     const/4 p1, 0x0
 

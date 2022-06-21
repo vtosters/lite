@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/TipTextWindow$d;Landroid/graphics/RectF;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/core/tips/TipTextWindow;->a(Lcom/vk/core/tips/TipTextWindow$d;Landroid/graphics/RectF;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/core/tips/TipTextWindow;
 
-.field final synthetic b:Lkotlin/jvm/b/b;
+.field final synthetic b:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/tips/TipTextWindow;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lcom/vk/core/tips/TipTextWindow;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/core/tips/TipTextWindow$e;->a:Lcom/vk/core/tips/TipTextWindow;
 
-    iput-object p2, p0, Lcom/vk/core/tips/TipTextWindow$e;->b:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/core/tips/TipTextWindow$e;->b:Lkotlin/jvm/b/Functions2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -63,7 +63,7 @@
 
     .line 3
     :cond_0
-    iget-object p1, p0, Lcom/vk/core/tips/TipTextWindow$e;->b:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/core/tips/TipTextWindow$e;->b:Lkotlin/jvm/b/Functions2;
 
     const/4 v0, 0x3
 
@@ -71,7 +71,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_0
     return-void

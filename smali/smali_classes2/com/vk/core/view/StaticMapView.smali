@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/view/StaticMapView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/view/StaticMapView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/view/StaticMapView;->E:Lcom/vk/core/view/StaticMapView$a;
 
@@ -367,7 +367,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -705,7 +705,7 @@
 
     iget v3, p0, Lcom/vk/core/view/StaticMapView;->f:I
 
-    invoke-static {p1, v2, v3, v0}, Lcom/vk/core/utils/d;->a(IIII)I
+    invoke-static {p1, v2, v3, v0}, Lcom/vk/core/utils/MeasureUtils;->a(IIII)I
 
     move-result v2
 
@@ -716,7 +716,7 @@
 
     iget v4, p0, Lcom/vk/core/view/StaticMapView;->g:I
 
-    invoke-static {p2, v3, v4, v1}, Lcom/vk/core/utils/d;->a(IIII)I
+    invoke-static {p2, v3, v4, v1}, Lcom/vk/core/utils/MeasureUtils;->a(IIII)I
 
     move-result v3
 
@@ -765,7 +765,7 @@
 
     iget v6, p0, Lcom/vk/core/view/StaticMapView;->f:I
 
-    invoke-static {p1, v4, v6, v0, v2}, Lcom/vk/core/utils/d;->a(IIIII)I
+    invoke-static {p1, v4, v6, v0, v2}, Lcom/vk/core/utils/MeasureUtils;->a(IIIII)I
 
     move-result p1
 
@@ -776,7 +776,7 @@
 
     iget v4, p0, Lcom/vk/core/view/StaticMapView;->g:I
 
-    invoke-static {p2, v2, v4, v1, v3}, Lcom/vk/core/utils/d;->a(IIIII)I
+    invoke-static {p2, v2, v4, v1, v3}, Lcom/vk/core/utils/MeasureUtils;->a(IIIII)I
 
     move-result p2
 
@@ -799,15 +799,15 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/vk/core/utils/d;->a:Lcom/vk/core/utils/d;
+    sget-object v3, Lcom/vk/core/utils/MeasureUtils;->a:Lcom/vk/core/utils/MeasureUtils;
 
-    invoke-virtual {v3, v0}, Lcom/vk/core/utils/d;->a(I)I
+    invoke-virtual {v3, v0}, Lcom/vk/core/utils/MeasureUtils;->a(I)I
 
     move-result v0
 
-    sget-object v3, Lcom/vk/core/utils/d;->a:Lcom/vk/core/utils/d;
+    sget-object v3, Lcom/vk/core/utils/MeasureUtils;->a:Lcom/vk/core/utils/MeasureUtils;
 
-    invoke-virtual {v3, v1}, Lcom/vk/core/utils/d;->a(I)I
+    invoke-virtual {v3, v1}, Lcom/vk/core/utils/MeasureUtils;->a(I)I
 
     move-result v1
 

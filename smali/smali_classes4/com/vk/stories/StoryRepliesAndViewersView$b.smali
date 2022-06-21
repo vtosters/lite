@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -46,7 +46,7 @@
     if-ne v0, v1, :cond_0
 
     .line 14
-    sget-object p1, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
+    sget-object p1, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->a:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
 
     const/4 p1, 0x1
 
@@ -78,7 +78,7 @@
 
     const-string p2, "java.lang.String.format(format, *args)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -92,7 +92,7 @@
 
     const-string p2, "ctx.getString(R.string.story_stat_off)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1
@@ -107,7 +107,7 @@
             "Lcom/vk/dto/stories/entities/StoryStatistic;",
             "ZZ)",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/c;",
+            "Lcom/vk/stories/d1/StoryStatItem;",
             ">;"
         }
     .end annotation
@@ -273,7 +273,7 @@
             "(",
             "Landroid/content/Context;",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/c;",
+            "Lcom/vk/stories/d1/StoryStatItem;",
             ">;I",
             "Lcom/vk/dto/stories/entities/StoryStat;",
             "Z)V"
@@ -295,7 +295,7 @@
 
     .line 12
     :cond_0
-    new-instance v0, Lcom/vk/stories/d1/c;
+    new-instance v0, Lcom/vk/stories/d1/StoryStatItem;
 
     invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -303,13 +303,13 @@
 
     const-string v1, "ctx.getString(nameRes)"
 
-    invoke-static {p3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1, p4}, Lcom/vk/stories/StoryRepliesAndViewersView$b;->a(Landroid/content/Context;Lcom/vk/dto/stories/entities/StoryStat;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, p3, p1, p5}, Lcom/vk/stories/d1/c;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-direct {v0, p3, p1, p5}, Lcom/vk/stories/d1/StoryStatItem;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 

@@ -42,7 +42,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity$i;->a:Lcom/vk/stories/StoryChooseReceiversActivity;
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
 
     :cond_0
     return-void

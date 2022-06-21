@@ -40,9 +40,9 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/view/search/MilkshakeSearchView$setOnBackClickListener$1$a;->a:Lcom/vk/core/view/search/MilkshakeSearchView$setOnBackClickListener$1;
 
-    iget-object v0, v0, Lcom/vk/core/view/search/MilkshakeSearchView$setOnBackClickListener$1;->$listener:Lkotlin/jvm/b/a;
+    iget-object v0, v0, Lcom/vk/core/view/search/MilkshakeSearchView$setOnBackClickListener$1;->$listener:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

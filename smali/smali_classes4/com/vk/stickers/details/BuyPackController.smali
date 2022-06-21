@@ -13,9 +13,9 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/stickers/bridge/o;
+.field private final a:Lcom/vk/stickers/bridge/StickersBridge1;
 
-.field private final b:Lio/reactivex/disposables/a;
+.field private final b:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private c:Lcom/vk/stickers/details/BuyPackController$a;
 
@@ -36,35 +36,35 @@
     iput-object p2, p0, Lcom/vk/stickers/details/BuyPackController;->e:Lcom/vk/stickers/bridge/GiftData;
 
     .line 2
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/vk/stickers/details/BuyPackController;->d:Landroid/app/Activity;
 
-    invoke-interface {p1, p2}, Lcom/vk/stickers/bridge/k;->a(Landroid/app/Activity;)Lcom/vk/stickers/bridge/o;
+    invoke-interface {p1, p2}, Lcom/vk/stickers/bridge/StickersBridge;->a(Landroid/app/Activity;)Lcom/vk/stickers/bridge/StickersBridge1;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stickers/details/BuyPackController;->a:Lcom/vk/stickers/bridge/o;
+    iput-object p1, p0, Lcom/vk/stickers/details/BuyPackController;->a:Lcom/vk/stickers/bridge/StickersBridge1;
 
     .line 3
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stickers/bridge/k;->e()Lcom/vk/stickers/bridge/n;
+    invoke-interface {p1}, Lcom/vk/stickers/bridge/StickersBridge;->e()Lcom/vk/stickers/bridge/StickersBridge2;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stickers/bridge/n;->a()Z
+    invoke-interface {p1}, Lcom/vk/stickers/bridge/StickersBridge2;->a()Z
 
     .line 4
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stickers/details/BuyPackController;->b:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/stickers/details/BuyPackController;->b:Lio/reactivex/disposables/CompositeDisposable;
 
     return-void
 .end method
@@ -87,16 +87,16 @@
 
     const-string v0, "AppCompatResources.getCo\u2026r.themedContext(), color)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/stickers/details/BuyPackController;)Lio/reactivex/disposables/a;
+.method public static final synthetic a(Lcom/vk/stickers/details/BuyPackController;)Lio/reactivex/disposables/CompositeDisposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stickers/details/BuyPackController;->b:Lio/reactivex/disposables/a;
+    iget-object p0, p0, Lcom/vk/stickers/details/BuyPackController;->b:Lio/reactivex/disposables/CompositeDisposable;
 
     return-object p0
 .end method
@@ -118,7 +118,7 @@
     const-string v0, "store"
 
     .line 21
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -153,14 +153,14 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/stickers/details/BuyPackController$initListeners$1;-><init>(Lcom/vk/stickers/details/BuyPackController;Lcom/vk/dto/stickers/StickerStockItem;)V
 
-    invoke-static {p3, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p3, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 20
     new-instance p3, Lcom/vk/stickers/details/BuyPackController$initListeners$2;
 
     invoke-direct {p3, p0, p1, p2}, Lcom/vk/stickers/details/BuyPackController$initListeners$2;-><init>(Lcom/vk/stickers/details/BuyPackController;Lcom/vk/dto/stickers/StickerStockItem;Ljava/util/Collection;)V
 
-    invoke-static {p4, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p4, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -232,11 +232,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/stickers/details/BuyPackController;)Lcom/vk/stickers/bridge/o;
+.method public static final synthetic b(Lcom/vk/stickers/details/BuyPackController;)Lcom/vk/stickers/bridge/StickersBridge1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stickers/details/BuyPackController;->a:Lcom/vk/stickers/bridge/o;
+    iget-object p0, p0, Lcom/vk/stickers/details/BuyPackController;->a:Lcom/vk/stickers/bridge/StickersBridge1;
 
     return-object p0
 .end method
@@ -576,7 +576,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v2
 
@@ -597,7 +597,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v2
 
@@ -747,7 +747,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v2
 
@@ -768,7 +768,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v2
 
@@ -815,7 +815,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v3
 
@@ -992,26 +992,26 @@
     if-eqz v1, :cond_0
 
     .line 7
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/stickers/bridge/k;->b()Lcom/vk/stickers/bridge/j;
+    invoke-interface {v1}, Lcom/vk/stickers/bridge/StickersBridge;->b()Lcom/vk/stickers/bridge/StickersBridge7;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/stickers/bridge/j;->a()Z
+    invoke-interface {v1}, Lcom/vk/stickers/bridge/StickersBridge7;->a()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 8
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/stickers/bridge/k;->a()Z
+    invoke-interface {v1}, Lcom/vk/stickers/bridge/StickersBridge;->a()Z
 
     move-result v1
 
@@ -1024,17 +1024,17 @@
 
     const-string v1, "buyContainer.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/vk/stickers/bridge/k;->b()Lcom/vk/stickers/bridge/j;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/stickers/bridge/j;->b()Ljava/lang/String;
+    invoke-interface {v1}, Lcom/vk/stickers/bridge/StickersBridge;->b()Lcom/vk/stickers/bridge/StickersBridge7;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/vk/stickers/bridge/StickersBridge7;->b()Ljava/lang/String;
 
     move-result-object v1
 

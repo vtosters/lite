@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -74,7 +74,7 @@
     :cond_0
     new-instance p1, Lcom/vk/pushes/notifications/base/PushButton$Action;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, v1, v2, v3}, Lcom/vk/pushes/notifications/base/PushButton$Action;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 

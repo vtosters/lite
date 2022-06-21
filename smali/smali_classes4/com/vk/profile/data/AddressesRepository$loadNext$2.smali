@@ -3,12 +3,12 @@
 .source "AddressesRepository.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/data/AddressesRepository;->f()Lc/a/m;
+    value = Lcom/vk/profile/data/AddressesRepository;->f()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -64,7 +64,7 @@
     .line 1
     sget-object v0, Lcom/vk/profile/data/AddressesRepository$loadNext$2$map$1;->a:Lcom/vk/profile/data/AddressesRepository$loadNext$2$map$1;
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Lkotlin/jvm/b/b;)Ljava/util/Map;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -174,7 +174,7 @@
     goto :goto_1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v5
 
@@ -205,7 +205,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v5
 

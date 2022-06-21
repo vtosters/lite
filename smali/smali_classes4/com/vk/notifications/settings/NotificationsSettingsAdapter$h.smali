@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->a(Lb/h/c/q/k$a;)V
+    value = Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->a(Lcom/vk/api/notifications/NotificationsGetSettings$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -489,13 +489,13 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/util/t;->f()Z
+    invoke-static {}, Lcom/vk/core/util/Device;->f()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lcom/vk/core/util/t;->g()Z
+    invoke-static {}, Lcom/vk/core/util/Device;->g()Z
 
     move-result v0
 

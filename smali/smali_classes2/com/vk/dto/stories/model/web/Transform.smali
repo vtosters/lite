@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/web/Transform$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/web/Transform$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/stories/model/web/Transform;->f:Lcom/vk/dto/stories/model/web/Transform$b;
 
@@ -79,7 +79,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/dto/stories/model/web/Transform;-><init>(IFFLjava/lang/Float;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/dto/stories/model/web/Transform;-><init>(IFFLjava/lang/Float;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -103,7 +103,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IFFLjava/lang/Float;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IFFLjava/lang/Float;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 3
 
     and-int/lit8 p7, p6, 0x1
@@ -212,7 +212,7 @@
 
     .line 9
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -293,7 +293,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/stories/model/web/Transform;->d:Ljava/lang/Float;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -303,7 +303,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/stories/model/web/Transform;->e:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

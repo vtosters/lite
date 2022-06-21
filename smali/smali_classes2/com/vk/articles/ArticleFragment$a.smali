@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -50,7 +50,7 @@
     if-nez v0, :cond_0
 
     .line 25
-    invoke-static {p1}, Lcom/vk/core/extensions/a;->a(Landroid/app/Activity;)V
+    invoke-static {p1}, Lcom/vk/core/extensions/ActivityExt;->a(Landroid/app/Activity;)V
 
     :cond_0
     return-void
@@ -194,15 +194,15 @@
     invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 23
-    new-instance p1, Lcom/vk/api/stats/e;
+    new-instance p1, Lcom/vk/api/stats/StatsTrackEvents;
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vk/api/stats/e;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vk/api/stats/StatsTrackEvents;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/api/base/d;->c()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiRequest;->c()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -301,18 +301,18 @@
 
     .line 14
     :cond_3
-    new-instance p2, Lcom/vk/navigation/o;
+    new-instance p2, Lcom/vk/navigation/Navigator;
 
     const-class p3, Lcom/vk/articles/ArticleFragment;
 
-    invoke-direct {p2, p3, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-direct {p2, p3, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     const/4 p3, 0x1
 
     .line 15
-    invoke-virtual {p2, p3}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;
+    invoke-virtual {p2, p3}, Lcom/vk/navigation/Navigator;->b(Z)Lcom/vk/navigation/Navigator;
 
-    invoke-virtual {p2, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p2, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     goto :goto_1
 
@@ -363,7 +363,7 @@
     const/4 p4, 0x0
 
     .line 19
-    invoke-static {p1, p2, p3, p4}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, p2, p3, p4}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :goto_1
     return-void

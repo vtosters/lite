@@ -26,7 +26,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/identity/b/b;",
+            "Lcom/vk/identity/b/IdentityAdapterItem3;",
             ">;"
         }
     .end annotation
@@ -34,13 +34,13 @@
 
 .field private final b:Lcom/vk/identity/IdentityContext;
 
-.field private final c:Lkotlin/jvm/b/c;
+.field private final c:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Lcom/vk/identity/IdentityContext;",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -48,18 +48,18 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/identity/IdentityContext;Lkotlin/jvm/b/c;)V
+.method public constructor <init>(Lcom/vk/identity/IdentityContext;Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/identity/IdentityContext;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Lcom/vk/identity/IdentityContext;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -69,14 +69,14 @@
 
     iput-object p1, p0, Lcom/vk/identity/adapters/IdentityContextAdapter;->b:Lcom/vk/identity/IdentityContext;
 
-    iput-object p2, p0, Lcom/vk/identity/adapters/IdentityContextAdapter;->c:Lkotlin/jvm/b/c;
+    iput-object p2, p0, Lcom/vk/identity/adapters/IdentityContextAdapter;->c:Lkotlin/jvm/b/Functions1;
 
     .line 2
-    sget-object p1, Lcom/vk/identity/a;->a:Lcom/vk/identity/a;
+    sget-object p1, Lcom/vk/identity/IdentityHelper;->a:Lcom/vk/identity/IdentityHelper;
 
     iget-object p2, p0, Lcom/vk/identity/adapters/IdentityContextAdapter;->b:Lcom/vk/identity/IdentityContext;
 
-    invoke-virtual {p1, p2}, Lcom/vk/identity/a;->a(Lcom/vk/identity/IdentityContext;)Ljava/util/List;
+    invoke-virtual {p1, p2}, Lcom/vk/identity/IdentityHelper;->a(Lcom/vk/identity/IdentityContext;)Ljava/util/List;
 
     move-result-object p1
 
@@ -85,11 +85,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/identity/adapters/IdentityContextAdapter;)Lkotlin/jvm/b/c;
+.method public static final synthetic a(Lcom/vk/identity/adapters/IdentityContextAdapter;)Lkotlin/jvm/b/Functions1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/identity/adapters/IdentityContextAdapter;->c:Lkotlin/jvm/b/c;
+    iget-object p0, p0, Lcom/vk/identity/adapters/IdentityContextAdapter;->c:Lkotlin/jvm/b/Functions1;
 
     return-object p0
 .end method
@@ -137,9 +137,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/identity/b/b;
+    check-cast p1, Lcom/vk/identity/b/IdentityAdapterItem3;
 
-    invoke-virtual {p1}, Lcom/vk/identity/b/b;->a()I
+    invoke-virtual {p1}, Lcom/vk/identity/b/IdentityAdapterItem3;->a()I
 
     move-result p1
 
@@ -156,7 +156,7 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/identity/b/b;
+    check-cast p2, Lcom/vk/identity/b/IdentityAdapterItem3;
 
     .line 2
     instance-of v0, p1, Lcom/vk/identity/adapters/IdentityContextAdapter$a;
@@ -167,9 +167,9 @@
 
     if-eqz p2, :cond_0
 
-    check-cast p2, Lcom/vk/identity/b/a;
+    check-cast p2, Lcom/vk/identity/b/IdentityAdapterItem1;
 
-    invoke-virtual {p1, p2}, Lcom/vk/identity/adapters/IdentityContextAdapter$a;->a(Lcom/vk/identity/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/identity/adapters/IdentityContextAdapter$a;->a(Lcom/vk/identity/b/IdentityAdapterItem1;)V
 
     goto :goto_0
 
@@ -192,9 +192,9 @@
 
     if-eqz p2, :cond_2
 
-    check-cast p2, Lcom/vk/identity/b/c;
+    check-cast p2, Lcom/vk/identity/b/IdentityAdapterItem2;
 
-    invoke-virtual {p2}, Lcom/vk/identity/b/c;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/identity/b/IdentityAdapterItem2;->b()Ljava/lang/String;
 
     move-result-object p2
 
@@ -221,9 +221,9 @@
 
     if-eqz p2, :cond_4
 
-    check-cast p2, Lcom/vk/identity/b/g;
+    check-cast p2, Lcom/vk/identity/b/IdentityAdapterItem;
 
-    invoke-virtual {p2}, Lcom/vk/identity/b/g;->b()Lcom/vk/dto/identity/IdentityCard;
+    invoke-virtual {p2}, Lcom/vk/identity/b/IdentityAdapterItem;->b()Lcom/vk/dto/identity/IdentityCard;
 
     move-result-object p2
 
@@ -279,7 +279,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, p0, p1}, Lcom/vk/identity/adapters/IdentityContextAdapter$IdentityHolder;-><init>(Lcom/vk/identity/adapters/IdentityContextAdapter;Landroid/view/View;)V
 
@@ -311,7 +311,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, p0, p1}, Lcom/vk/identity/adapters/IdentityContextAdapter$AddIdentityHolder;-><init>(Lcom/vk/identity/adapters/IdentityContextAdapter;Landroid/view/View;)V
 
@@ -319,7 +319,7 @@
 
     .line 4
     :cond_2
-    new-instance p2, Lcom/vk/identity/c/b;
+    new-instance p2, Lcom/vk/identity/c/IdentityHeaderView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -327,7 +327,7 @@
 
     const-string p1, "parent.context"
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -339,7 +339,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/identity/c/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/identity/c/IdentityHeaderView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 5
     new-instance p1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;

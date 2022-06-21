@@ -57,7 +57,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/stickers/SpecialEvent$Animation$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/stickers/SpecialEvent$Animation$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/stickers/SpecialEvent$Animation;->f:Lcom/vk/dto/stickers/SpecialEvent$Animation$b;
 
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;JIIJILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;JIIJILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x4

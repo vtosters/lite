@@ -3,12 +3,12 @@
 .source "RxExt.kt"
 
 # interfaces
-.implements Lio/reactivex/disposables/b;
+.implements Lio/reactivex/disposables/Disposable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/extensions/RxExtKt;->a(Ljava/util/concurrent/Future;Lio/reactivex/disposables/a;)V
+    value = Lcom/vk/core/extensions/RxExtKt;->a(Ljava/util/concurrent/Future;Lio/reactivex/disposables/CompositeDisposable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

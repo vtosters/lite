@@ -3,12 +3,12 @@
 .source "StoryChooseActivityLoader.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Ljava/util/List;I)Lc/a/m;
+    value = Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Ljava/util/List;I)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,10 +57,10 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;)",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;"
         }
     .end annotation
@@ -89,7 +89,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/stories/d1/a;
+    check-cast v1, Lcom/vk/stories/d1/StoryDialogItem;
 
     .line 3
     invoke-interface {v0}, Ljava/util/List;->size()I

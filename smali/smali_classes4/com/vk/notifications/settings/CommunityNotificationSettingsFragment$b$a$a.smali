@@ -61,7 +61,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    new-instance p1, Lb/h/c/q/b;
+    new-instance p1, Lcom/vk/api/notifications/NotificationSetGroupsSetting;
 
     iget-object v1, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a$a;->a:Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a;
 
@@ -77,11 +77,11 @@
 
     iget-object v3, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a$a;->b:Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;
 
-    invoke-virtual {v3}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/b;
+    invoke-virtual {v3}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/SettingsSectionItem;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lb/h/h/g/b;->b()I
+    invoke-virtual {v3}, Lb/h/h/g/SettingsSectionItem;->b()I
 
     move-result v3
 
@@ -99,12 +99,12 @@
 
     move-result-object v2
 
-    invoke-direct {p1, v1, v2}, Lb/h/c/q/b;-><init>(ILjava/util/Map;)V
+    invoke-direct {p1, v1, v2}, Lcom/vk/api/notifications/NotificationSetGroupsSetting;-><init>(ILjava/util/Map;)V
 
     const/4 v1, 0x0
 
     .line 3
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -131,7 +131,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -146,7 +146,7 @@
     invoke-direct {v1, p0, p2}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a$a$b;-><init>(Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a$a;Z)V
 
     .line 7
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
 
@@ -154,23 +154,23 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a$a;->b:Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;
 
-    invoke-virtual {p1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/b;
+    invoke-virtual {p1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/SettingsSectionItem;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a$a;->b:Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;
 
-    invoke-virtual {p2}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/b;
+    invoke-virtual {p2}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/SettingsSectionItem;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lb/h/h/g/b;->d()Z
+    invoke-virtual {p2}, Lb/h/h/g/SettingsSectionItem;->d()Z
 
     move-result p2
 
     xor-int/2addr p2, v0
 
-    invoke-virtual {p1, p2}, Lb/h/h/g/b;->a(Z)V
+    invoke-virtual {p1, p2}, Lb/h/h/g/SettingsSectionItem;->a(Z)V
 
     :goto_0
     return-void

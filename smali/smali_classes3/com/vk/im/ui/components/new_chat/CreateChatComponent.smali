@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
-.super Lcom/vk/im/ui/q/c;
+.super Lcom/vk/im/ui/q/Component;
 .source "CreateChatComponent.kt"
 
 
@@ -13,30 +13,30 @@
 
 
 # static fields
-.field static final synthetic I:[Lkotlin/u/j;
+.field static final synthetic I:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final B:Lcom/vk/core/util/u0;
+.field private final B:Lcom/vk/core/util/Provider2;
 
-.field private final C:Lcom/vk/im/ui/components/new_chat/e;
+.field private final C:Lcom/vk/im/ui/components/new_chat/Model;
 
 .field private D:Lcom/vk/im/ui/components/new_chat/CreateChatComponent$a;
 
 .field private final E:Landroid/content/Context;
 
-.field private final F:Lcom/vk/im/engine/a;
+.field private final F:Lcom/vk/im/engine/ImEngine;
 
-.field private final G:Lcom/vk/im/ui/p/b;
+.field private final G:Lcom/vk/im/ui/p/ImBridge8;
 
-.field private final H:Lcom/vk/navigation/a;
+.field private final H:Lcom/vk/navigation/ActivityLauncher;
 
 .field private final g:I
 
-.field private final h:Lcom/vk/core/util/u0;
+.field private final h:Lcom/vk/core/util/Provider2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/util/u0<",
+            "Lcom/vk/core/util/Provider2<",
             "Lcom/vk/im/ui/components/new_chat/CreateChatVC;",
             ">;"
         }
@@ -50,13 +50,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -64,32 +64,32 @@
 
     const-string v4, "getVc()Lcom/vk/im/ui/components/new_chat/CreateChatVC;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->I:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->I:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/navigation/a;[IZ)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/navigation/ActivityLauncher;[IZ)V
     .locals 9
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/q/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/q/Component;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->E:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->F:Lcom/vk/im/engine/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->F:Lcom/vk/im/engine/ImEngine;
 
-    iput-object p3, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->G:Lcom/vk/im/ui/p/b;
+    iput-object p3, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->G:Lcom/vk/im/ui/p/ImBridge8;
 
-    iput-object p4, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->H:Lcom/vk/navigation/a;
+    iput-object p4, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->H:Lcom/vk/navigation/ActivityLauncher;
 
     const/4 p1, 0x1
 
@@ -101,19 +101,19 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$vcHolder$1;-><init>(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)V
 
-    invoke-static {p1}, Lcom/vk/core/util/w0;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/u0;
+    invoke-static {p1}, Lcom/vk/core/util/Provider1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/Provider2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->h:Lcom/vk/core/util/u0;
+    iput-object p1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->h:Lcom/vk/core/util/Provider2;
 
     .line 4
-    iget-object p1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->h:Lcom/vk/core/util/u0;
+    iget-object p1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->h:Lcom/vk/core/util/Provider2;
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->B:Lcom/vk/core/util/u0;
+    iput-object p1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->B:Lcom/vk/core/util/Provider2;
 
     .line 5
-    new-instance p1, Lcom/vk/im/ui/components/new_chat/e;
+    new-instance p1, Lcom/vk/im/ui/components/new_chat/Model;
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -139,18 +139,18 @@
 
     move v2, p6
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/im/ui/components/new_chat/e;-><init>(Ljava/util/List;ZLcom/vk/im/engine/models/j;Ljava/util/List;Ljava/lang/CharSequence;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/im/ui/components/new_chat/Model;-><init>(Ljava/util/List;ZLcom/vk/im/engine/models/Profile;Ljava/util/List;Ljava/lang/CharSequence;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/e;
+.method public static final synthetic a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/Model;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object p0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
     return-object p0
 .end method
@@ -178,15 +178,15 @@
 .method private final x()Lcom/vk/im/ui/components/new_chat/CreateChatVC;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->B:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->B:Lcom/vk/core/util/Provider2;
 
-    sget-object v1, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->I:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->I:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/w0;->a(Lcom/vk/core/util/u0;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/Provider1;->a(Lcom/vk/core/util/Provider2;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -199,17 +199,17 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->F:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->F:Lcom/vk/im/engine/ImEngine;
 
-    new-instance v1, Lcom/vk/im/ui/components/new_chat/d;
+    new-instance v1, Lcom/vk/im/ui/components/new_chat/LoadNewChatModelCmd;
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object v2, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
-    invoke-virtual {v2}, Lcom/vk/im/ui/components/new_chat/e;->c()Ljava/util/List;
+    invoke-virtual {v2}, Lcom/vk/im/ui/components/new_chat/Model;->c()Ljava/util/List;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/vk/im/ui/components/new_chat/d;-><init>(Ljava/util/List;)V
+    invoke-direct {v1, v2}, Lcom/vk/im/ui/components/new_chat/LoadNewChatModelCmd;-><init>(Ljava/util/List;)V
 
     .line 2
     new-instance v2, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$e;
@@ -222,16 +222,16 @@
     invoke-direct {v3, p0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$f;-><init>(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)V
 
     .line 4
-    invoke-virtual {v0, p0, v1, v2, v3}, Lcom/vk/im/engine/a;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, p0, v1, v2, v3}, Lcom/vk/im/engine/ImEngine;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "engine.submitBlocking(th\u2026or(it)\n                })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    invoke-static {v0, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {v0, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     return-void
 .end method
@@ -242,12 +242,12 @@
     .locals 1
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vk/im/ui/q/c;->a(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/res/Configuration;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->h:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->h:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {v0}, Lcom/vk/core/util/u0;->isInitialized()Z
+    invoke-interface {v0}, Lcom/vk/core/util/Provider2;->isInitialized()Z
 
     move-result v0
 
@@ -267,7 +267,7 @@
     .locals 3
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
     const-string v1, ""
 
@@ -287,10 +287,10 @@
     move-object v2, v1
 
     :goto_0
-    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/new_chat/e;->a(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/new_chat/Model;->a(Ljava/lang/CharSequence;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
     if-eqz p1, :cond_1
 
@@ -308,16 +308,16 @@
     move-object p1, v1
 
     :goto_1
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/new_chat/e;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/new_chat/Model;->a(Ljava/lang/String;)V
 
     .line 7
     invoke-direct {p0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->x()Lcom/vk/im/ui/components/new_chat/CreateChatVC;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/new_chat/CreateChatVC;->a(Lcom/vk/im/ui/components/new_chat/e;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/new_chat/CreateChatVC;->a(Lcom/vk/im/ui/components/new_chat/Model;)V
 
     return-void
 .end method
@@ -335,9 +335,9 @@
     .locals 0
 
     .line 2
-    iget-object p3, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->h:Lcom/vk/core/util/u0;
+    iget-object p3, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->h:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {p3}, Lcom/vk/core/util/u0;->reset()V
+    invoke-interface {p3}, Lcom/vk/core/util/Provider2;->reset()V
 
     .line 3
     invoke-direct {p0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->x()Lcom/vk/im/ui/components/new_chat/CreateChatVC;
@@ -365,9 +365,9 @@
     .locals 2
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/new_chat/e;->e()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/new_chat/Model;->e()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -380,9 +380,9 @@
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/new_chat/e;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/new_chat/Model;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -408,9 +408,9 @@
     invoke-virtual {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatVC;->b()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->h:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->h:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {v0}, Lcom/vk/core/util/u0;->u()V
+    invoke-interface {v0}, Lcom/vk/core/util/Provider2;->u()V
 
     return-void
 .end method
@@ -458,9 +458,9 @@
     if-nez p2, :cond_3
 
     .line 3
-    iget-object p2, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object p2, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
-    invoke-virtual {p2, p1}, Lcom/vk/im/ui/components/new_chat/e;->a(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/vk/im/ui/components/new_chat/Model;->a(Ljava/lang/String;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->x()Lcom/vk/im/ui/components/new_chat/CreateChatVC;
@@ -484,7 +484,7 @@
     if-eqz p1, :cond_4
 
     .line 6
-    iget-object p2, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object p2, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -492,9 +492,9 @@
 
     const-string p3, "resultUri.toString()"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p2, p1}, Lcom/vk/im/ui/components/new_chat/e;->a(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/vk/im/ui/components/new_chat/Model;->a(Ljava/lang/String;)V
 
     .line 7
     invoke-direct {p0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->x()Lcom/vk/im/ui/components/new_chat/CreateChatVC;
@@ -512,9 +512,9 @@
     .locals 7
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/new_chat/e;->e()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/new_chat/Model;->e()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -535,15 +535,15 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
 
     return-void
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/new_chat/e;->d()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/new_chat/Model;->d()Ljava/util/List;
 
     move-result-object v0
 
@@ -575,10 +575,10 @@
     move-result-object v1
 
     .line 6
-    check-cast v1, Lcom/vk/im/engine/models/j;
+    check-cast v1, Lcom/vk/im/engine/models/Profile;
 
     .line 7
-    invoke-interface {v1}, Lcom/vk/im/engine/models/j;->f0()I
+    invoke-interface {v1}, Lcom/vk/im/engine/models/Profile;->f0()I
 
     move-result v1
 
@@ -594,21 +594,21 @@
     :cond_1
     new-instance v0, Lcom/vk/im/engine/commands/chats/CreateChatCmd;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object v1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/e;->e()Ljava/lang/CharSequence;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/Model;->e()Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object v1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/e;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/Model;->a()Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/e;
+    iget-object v1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->C:Lcom/vk/im/ui/components/new_chat/Model;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/e;->b()Z
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/new_chat/Model;->b()Z
 
     move-result v5
 
@@ -619,9 +619,9 @@
     invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/chats/CreateChatCmd;-><init>(Ljava/lang/CharSequence;Ljava/lang/String;Ljava/util/List;ZZ)V
 
     .line 9
-    iget-object v1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->F:Lcom/vk/im/engine/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->F:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -630,7 +630,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$createChat$1;-><init>(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -639,7 +639,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$b;-><init>(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/z/a;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Action;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -654,25 +654,25 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$d;-><init>(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)V
 
     .line 14
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "engine.submitWithCancelO\u2026or(it)\n                })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
-    invoke-static {v0, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {v0, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     return-void
 .end method
 
-.method public final t()Lcom/vk/im/ui/p/b;
+.method public final t()Lcom/vk/im/ui/p/ImBridge8;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->G:Lcom/vk/im/ui/p/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->G:Lcom/vk/im/ui/p/ImBridge8;
 
     return-object v0
 .end method
@@ -695,11 +695,11 @@
     return-object v0
 .end method
 
-.method public final w()Lcom/vk/navigation/a;
+.method public final w()Lcom/vk/navigation/ActivityLauncher;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->H:Lcom/vk/navigation/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->H:Lcom/vk/navigation/ActivityLauncher;
 
     return-object v0
 .end method

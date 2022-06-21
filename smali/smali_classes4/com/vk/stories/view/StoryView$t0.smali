@@ -41,14 +41,14 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$t0;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-object p1, p1, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p1, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-static {p1}, Lcom/vk/stories/StoriesController;->g(Lcom/vk/dto/stories/model/StoryEntry;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$t0;->a:Lcom/vk/stories/view/StoryView;
 
-    iget v0, p1, Lcom/vk/stories/view/e1;->I:I
+    iget v0, p1, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     invoke-virtual {p1, v0}, Lcom/vk/stories/view/StoryView;->a(I)V
 

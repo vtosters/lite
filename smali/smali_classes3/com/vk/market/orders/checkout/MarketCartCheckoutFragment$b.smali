@@ -40,16 +40,16 @@
     .line 1
     iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$b;->a:Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment;
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment$b;->a:Lcom/vk/market/orders/checkout/MarketCartCheckoutFragment;
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object p1
 

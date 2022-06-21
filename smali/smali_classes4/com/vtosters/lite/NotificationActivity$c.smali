@@ -64,13 +64,13 @@
 
     iget-object p2, p0, Lcom/vtosters/lite/NotificationActivity$c;->a:Ljava/lang/String;
 
-    new-instance v0, Lcom/vk/common/links/c$b;
+    new-instance v0, Lcom/vk/common/links/LinkProcessor$b;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lcom/vk/common/links/c$b;-><init>(Z)V
+    invoke-direct {v0, v1}, Lcom/vk/common/links/LinkProcessor$b;-><init>(Z)V
 
-    invoke-static {p1, p2, v0}, Lcom/vk/common/links/c;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;)V
+    invoke-static {p1, p2, v0}, Lcom/vk/common/links/LinkProcessor;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;)V
 
     goto :goto_0
 

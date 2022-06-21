@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;
-.super Lcom/vk/im/ui/components/attaches_history/attaches/l/a;
+.super Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;
 .source "SimpleAttachesModel.kt"
 
 
@@ -9,7 +9,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/components/attaches_history/attaches/l/a<",
+        "Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel<",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
         ">;"
     }
@@ -17,10 +17,10 @@
 
 
 # instance fields
-.field private final a:Lkotlin/jvm/b/b;
+.field private final a:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/im/engine/models/attaches/HistoryAttach;",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
             ">;"
@@ -28,10 +28,10 @@
     .end annotation
 .end field
 
-.field private final b:Lio/reactivex/subjects/a;
+.field private final b:Lio/reactivex/subjects/BehaviorSubject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/subjects/a<",
+            "Lio/reactivex/subjects/BehaviorSubject<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/pagination/PageLoadingState<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
             ">;>;"
@@ -45,12 +45,12 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/l/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;-><init>()V
 
     .line 2
     sget-object v0, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel$mapper$1;->a:Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel$mapper$1;
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;->a:Lkotlin/jvm/b/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;->a:Lkotlin/jvm/b/Functions2;
 
     .line 3
     new-instance v0, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesState;
@@ -65,27 +65,27 @@
     .line 5
     invoke-direct {v0, v1, v2, v2, v2}, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesState;-><init>(Ljava/util/List;ZZZ)V
 
-    invoke-static {v0}, Lio/reactivex/subjects/a;->h(Ljava/lang/Object;)Lio/reactivex/subjects/a;
+    invoke-static {v0}, Lio/reactivex/subjects/BehaviorSubject;->h(Ljava/lang/Object;)Lio/reactivex/subjects/BehaviorSubject;
 
     move-result-object v0
 
     const-string v1, "BehaviorSubject.createDe\u2026     refreshing = false))"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;->b:Lio/reactivex/subjects/a;
+    iput-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;->b:Lio/reactivex/subjects/BehaviorSubject;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lc/a/m;
+.method public a()Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
             ">;>;"
@@ -93,29 +93,29 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;->c()Lio/reactivex/subjects/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;->c()Lio/reactivex/subjects/BehaviorSubject;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel$a;->a:Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel$a;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "subject.map { it.list }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method protected b()Lkotlin/jvm/b/b;
+.method protected b()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/im/engine/models/attaches/HistoryAttach;",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
             ">;"
@@ -123,17 +123,17 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;->a:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;->a:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
 
-.method protected c()Lio/reactivex/subjects/a;
+.method protected c()Lio/reactivex/subjects/BehaviorSubject;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lio/reactivex/subjects/a<",
+            "Lio/reactivex/subjects/BehaviorSubject<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/pagination/PageLoadingState<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
             ">;>;"
@@ -141,7 +141,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;->b:Lio/reactivex/subjects/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;->b:Lio/reactivex/subjects/BehaviorSubject;
 
     return-object v0
 .end method
@@ -150,11 +150,11 @@
     .locals 2
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;->c()Lio/reactivex/subjects/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachesModel;->c()Lio/reactivex/subjects/BehaviorSubject;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lio/reactivex/subjects/a;->p()Ljava/lang/Object;
+    invoke-virtual {v0}, Lio/reactivex/subjects/BehaviorSubject;->p()Ljava/lang/Object;
 
     move-result-object v0
 

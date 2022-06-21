@@ -46,7 +46,7 @@
     .end annotation
 
     .line 2
-    sget-object v0, Lcom/vk/im/engine/models/dialogs/f;->c:Lcom/vk/im/engine/models/dialogs/f$a;
+    sget-object v0, Lcom/vk/im/engine/models/dialogs/DialogThemeName;->c:Lcom/vk/im/engine/models/dialogs/DialogThemeName$a;
 
     invoke-virtual {p1}, Lcom/vk/core/serialize/Serializer;->v()Ljava/lang/String;
 
@@ -54,7 +54,7 @@
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/dialogs/f$a;->a(Ljava/lang/String;)Lcom/vk/im/engine/models/dialogs/f;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/dialogs/DialogThemeName$a;->a(Ljava/lang/String;)Lcom/vk/im/engine/models/dialogs/DialogThemeName;
 
     move-result-object v0
 
@@ -127,7 +127,7 @@
     :cond_2
     new-instance p1, Lcom/vk/im/engine/models/dialogs/DialogTheme;
 
-    invoke-direct {p1, v0, v2}, Lcom/vk/im/engine/models/dialogs/DialogTheme;-><init>(Lcom/vk/im/engine/models/dialogs/f;Ljava/util/Map;)V
+    invoke-direct {p1, v0, v2}, Lcom/vk/im/engine/models/dialogs/DialogTheme;-><init>(Lcom/vk/im/engine/models/dialogs/DialogThemeName;Ljava/util/Map;)V
 
     return-object p1
 
@@ -143,7 +143,7 @@
 
     .line 12
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

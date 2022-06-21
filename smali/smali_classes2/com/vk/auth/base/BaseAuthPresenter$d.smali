@@ -3,7 +3,7 @@
 .source "BaseAuthPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -57,14 +57,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/auth/api/models/d;)Lc/a/m;
+.method public final a(Lcom/vk/auth/api/models/SignUpResult;)Lio/reactivex/Observable;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/auth/api/models/d;",
+            "Lcom/vk/auth/api/models/SignUpResult;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/auth/api/models/AuthResult;",
             ">;"
         }
@@ -90,7 +90,7 @@
     move-result-object v5
 
     .line 2
-    sget-object v2, Lcom/vk/auth/b;->a:Lcom/vk/auth/b;
+    sget-object v2, Lcom/vk/auth/AuthHelper;->a:Lcom/vk/auth/AuthHelper;
 
     iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter$d;->a:Lcom/vk/auth/base/BaseAuthPresenter;
 
@@ -100,29 +100,29 @@
 
     iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter$d;->a:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/s;
+    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->o()Lcom/vk/auth/main/SignUpModel;
 
     move-result-object v4
 
     iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter$d;->a:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->u()Lcom/vk/auth/main/x;
+    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->u()Lcom/vk/auth/main/UsersStore;
 
     move-result-object v6
 
     iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter$d;->a:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->s()Lcom/vk/auth/main/v;
+    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->s()Lcom/vk/auth/main/TrustedHashProvider;
 
     move-result-object v7
 
     iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter$d;->a:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->h()Lcom/vk/auth/main/h;
+    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->h()Lcom/vk/auth/main/AuthStateTransformer;
 
     move-result-object v8
 
-    invoke-virtual/range {v2 .. v8}, Lcom/vk/auth/b;->a(Landroid/content/Context;Lcom/vk/auth/main/f;Lcom/vk/auth/main/VkAuthState;Lcom/vk/auth/main/x;Lcom/vk/auth/main/v;Lcom/vk/auth/main/h;)Lc/a/m;
+    invoke-virtual/range {v2 .. v8}, Lcom/vk/auth/AuthHelper;->a(Landroid/content/Context;Lcom/vk/auth/main/AuthModel;Lcom/vk/auth/main/VkAuthState;Lcom/vk/auth/main/UsersStore;Lcom/vk/auth/main/TrustedHashProvider;Lcom/vk/auth/main/AuthStateTransformer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -133,9 +133,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/auth/api/models/d;
+    check-cast p1, Lcom/vk/auth/api/models/SignUpResult;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter$d;->a(Lcom/vk/auth/api/models/d;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter$d;->a(Lcom/vk/auth/api/models/SignUpResult;)Lio/reactivex/Observable;
 
     move-result-object p1
 

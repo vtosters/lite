@@ -4,21 +4,21 @@
 
 
 # static fields
-.field static final synthetic h:[Lkotlin/u/j;
+.field static final synthetic h:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lkotlin/e;
+.field private final a:Lkotlin/Lazy2;
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
-.field private final c:Lkotlin/e;
+.field private final c:Lkotlin/Lazy2;
 
-.field private final d:Lkotlin/e;
+.field private final d:Lkotlin/Lazy2;
 
-.field private final e:Lcom/vk/core/formatters/b;
+.field private final e:Lcom/vk/core/formatters/TimeAgoFormatter1;
 
-.field private final f:Lkotlin/e;
+.field private final f:Lkotlin/Lazy2;
 
 .field private final g:Landroid/content/Context;
 
@@ -31,11 +31,11 @@
 
     const/4 v1, 0x5
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -43,9 +43,9 @@
 
     const-string v5, "getClSeen()Ljava/util/Calendar;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -53,7 +53,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -61,9 +61,9 @@
 
     const-string v5, "getClNow()Ljava/util/Calendar;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x1
 
@@ -71,7 +71,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -79,9 +79,9 @@
 
     const-string v5, "getFormatterMale()Lcom/vk/core/formatters/lastseen/MaleStrategy;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x2
 
@@ -89,7 +89,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -97,9 +97,9 @@
 
     const-string v5, "getFormatterFemale()Lcom/vk/core/formatters/lastseen/FemaleStrategy;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x3
 
@@ -107,7 +107,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -115,15 +115,15 @@
 
     const-string v4, "getSb()Ljava/lang/StringBuilder;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x4
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/core/formatters/OnlineFormatter;->h:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/core/formatters/OnlineFormatter;->h:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -139,56 +139,56 @@
     .line 2
     sget-object p1, Lcom/vk/core/formatters/OnlineFormatter$clSeen$2;->a:Lcom/vk/core/formatters/OnlineFormatter$clSeen$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->a:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->a:Lkotlin/Lazy2;
 
     .line 3
     sget-object p1, Lcom/vk/core/formatters/OnlineFormatter$clNow$2;->a:Lcom/vk/core/formatters/OnlineFormatter$clNow$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->b:Lkotlin/Lazy2;
 
     .line 4
     new-instance p1, Lcom/vk/core/formatters/OnlineFormatter$formatterMale$2;
 
     invoke-direct {p1, p0}, Lcom/vk/core/formatters/OnlineFormatter$formatterMale$2;-><init>(Lcom/vk/core/formatters/OnlineFormatter;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->c:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->c:Lkotlin/Lazy2;
 
     .line 5
     new-instance p1, Lcom/vk/core/formatters/OnlineFormatter$formatterFemale$2;
 
     invoke-direct {p1, p0}, Lcom/vk/core/formatters/OnlineFormatter$formatterFemale$2;-><init>(Lcom/vk/core/formatters/OnlineFormatter;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->d:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->d:Lkotlin/Lazy2;
 
     .line 6
-    sget-object p1, Lcom/vk/core/formatters/b;->a:Lcom/vk/core/formatters/b;
+    sget-object p1, Lcom/vk/core/formatters/TimeAgoFormatter1;->a:Lcom/vk/core/formatters/TimeAgoFormatter1;
 
-    iput-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->e:Lcom/vk/core/formatters/b;
+    iput-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->e:Lcom/vk/core/formatters/TimeAgoFormatter1;
 
     .line 7
     sget-object p1, Lcom/vk/core/formatters/OnlineFormatter$sb$2;->a:Lcom/vk/core/formatters/OnlineFormatter$sb$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->f:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->f:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -246,7 +246,7 @@
 
     const-string p2, "sb.toString()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -317,7 +317,7 @@
 
     const-string p2, "if (isFemale) context.ge\u2026string.online_long_ago_m)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_4
 
@@ -343,7 +343,7 @@
 
     const-string p2, "if (isFemale) context.ge\u2026ring.online_last_month_m)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_4
 
@@ -369,7 +369,7 @@
 
     const-string p2, "if (isFemale) context.ge\u2026tring.online_last_week_m)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_4
 
@@ -395,7 +395,7 @@
 
     const-string p2, "if (isFemale) context.ge\u2026string.online_recently_m)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_4
     return-object p1
@@ -418,14 +418,14 @@
     if-eqz p1, :cond_1
 
     .line 11
-    invoke-direct {p0}, Lcom/vk/core/formatters/OnlineFormatter;->d()Lcom/vk/core/formatters/d/a;
+    invoke-direct {p0}, Lcom/vk/core/formatters/OnlineFormatter;->d()Lcom/vk/core/formatters/d/FemaleStrategy;
 
     move-result-object p1
 
     goto :goto_0
 
     :cond_1
-    invoke-direct {p0}, Lcom/vk/core/formatters/OnlineFormatter;->e()Lcom/vk/core/formatters/d/b;
+    invoke-direct {p0}, Lcom/vk/core/formatters/OnlineFormatter;->e()Lcom/vk/core/formatters/d/MaleStrategy;
 
     move-result-object p1
 
@@ -495,7 +495,7 @@
 
     move-result p2
 
-    invoke-interface {p1, p2, p4}, Lcom/vk/core/formatters/d/c;->b(ILjava/lang/StringBuilder;)V
+    invoke-interface {p1, p2, p4}, Lcom/vk/core/formatters/d/Strategy;->b(ILjava/lang/StringBuilder;)V
 
     goto :goto_1
 
@@ -515,7 +515,7 @@
 
     move-result p2
 
-    invoke-interface {p1, p2, p4}, Lcom/vk/core/formatters/d/c;->a(ILjava/lang/StringBuilder;)V
+    invoke-interface {p1, p2, p4}, Lcom/vk/core/formatters/d/Strategy;->a(ILjava/lang/StringBuilder;)V
 
     goto :goto_1
 
@@ -537,7 +537,7 @@
 
     move-result p2
 
-    invoke-interface {p1, p2, p4}, Lcom/vk/core/formatters/d/c;->c(ILjava/lang/StringBuilder;)V
+    invoke-interface {p1, p2, p4}, Lcom/vk/core/formatters/d/Strategy;->c(ILjava/lang/StringBuilder;)V
 
     goto :goto_1
 
@@ -557,7 +557,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-interface {p1, p2, p3, p4}, Lcom/vk/core/formatters/d/c;->d(JLjava/lang/StringBuilder;)V
+    invoke-interface {p1, p2, p3, p4}, Lcom/vk/core/formatters/d/Strategy;->d(JLjava/lang/StringBuilder;)V
 
     goto :goto_1
 
@@ -577,7 +577,7 @@
 
     if-eqz v0, :cond_6
 
-    invoke-interface {p1, p2, p3, p4}, Lcom/vk/core/formatters/d/c;->b(JLjava/lang/StringBuilder;)V
+    invoke-interface {p1, p2, p3, p4}, Lcom/vk/core/formatters/d/Strategy;->b(JLjava/lang/StringBuilder;)V
 
     goto :goto_1
 
@@ -597,13 +597,13 @@
 
     if-eqz v0, :cond_7
 
-    invoke-interface {p1, p2, p3, p4}, Lcom/vk/core/formatters/d/c;->c(JLjava/lang/StringBuilder;)V
+    invoke-interface {p1, p2, p3, p4}, Lcom/vk/core/formatters/d/Strategy;->c(JLjava/lang/StringBuilder;)V
 
     goto :goto_1
 
     .line 22
     :cond_7
-    invoke-interface {p1, p2, p3, p4}, Lcom/vk/core/formatters/d/c;->a(JLjava/lang/StringBuilder;)V
+    invoke-interface {p1, p2, p3, p4}, Lcom/vk/core/formatters/d/Strategy;->a(JLjava/lang/StringBuilder;)V
 
     :goto_1
     return-void
@@ -706,15 +706,15 @@
 .method private final b()Ljava/util/Calendar;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/formatters/OnlineFormatter;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/core/formatters/OnlineFormatter;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/formatters/OnlineFormatter;->h:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/formatters/OnlineFormatter;->h:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -766,15 +766,15 @@
 .method private final c()Ljava/util/Calendar;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/formatters/OnlineFormatter;->a:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/core/formatters/OnlineFormatter;->a:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/formatters/OnlineFormatter;->h:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/formatters/OnlineFormatter;->h:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -806,42 +806,42 @@
     return p1
 .end method
 
-.method private final d()Lcom/vk/core/formatters/d/a;
+.method private final d()Lcom/vk/core/formatters/d/FemaleStrategy;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/formatters/OnlineFormatter;->d:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/core/formatters/OnlineFormatter;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/formatters/OnlineFormatter;->h:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/formatters/OnlineFormatter;->h:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/formatters/d/a;
+    check-cast v0, Lcom/vk/core/formatters/d/FemaleStrategy;
 
     return-object v0
 .end method
 
-.method private final e()Lcom/vk/core/formatters/d/b;
+.method private final e()Lcom/vk/core/formatters/d/MaleStrategy;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/formatters/OnlineFormatter;->c:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/core/formatters/OnlineFormatter;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/formatters/OnlineFormatter;->h:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/formatters/OnlineFormatter;->h:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/formatters/d/b;
+    check-cast v0, Lcom/vk/core/formatters/d/MaleStrategy;
 
     return-object v0
 .end method
@@ -849,15 +849,15 @@
 .method private final f()Ljava/lang/StringBuilder;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/core/formatters/OnlineFormatter;->f:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/core/formatters/OnlineFormatter;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/formatters/OnlineFormatter;->h:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/formatters/OnlineFormatter;->h:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x4
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -960,7 +960,7 @@
     const-string p2, "when {\n                o\u2026lastSeenMs)\n            }"
 
     .line 7
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_1
     return-object p1
@@ -977,7 +977,7 @@
     .locals 9
 
     .line 24
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     .line 25
     sget-object v1, Lcom/vk/core/network/TimeProvider;->f:Lcom/vk/core/network/TimeProvider;
@@ -1164,13 +1164,13 @@
     invoke-virtual {p3, p1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
     .line 43
-    iget-object p2, p0, Lcom/vk/core/formatters/OnlineFormatter;->e:Lcom/vk/core/formatters/b;
+    iget-object p2, p0, Lcom/vk/core/formatters/OnlineFormatter;->e:Lcom/vk/core/formatters/TimeAgoFormatter1;
 
     invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v1
 
-    invoke-virtual {p2, v1, v2, p3}, Lcom/vk/core/formatters/b;->a(JLjava/lang/StringBuffer;)V
+    invoke-virtual {p2, v1, v2, p3}, Lcom/vk/core/formatters/TimeAgoFormatter1;->a(JLjava/lang/StringBuffer;)V
 
     .line 44
     invoke-virtual {p3, p1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;

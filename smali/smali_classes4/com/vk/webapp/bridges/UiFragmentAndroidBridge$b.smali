@@ -3,7 +3,7 @@
 .source "UiFragmentAndroidBridge.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/auth/api/models/AuthResult;",
         ">;"
     }
@@ -50,7 +50,7 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/auth/c;->a:Lcom/vk/auth/c;
+    sget-object v0, Lcom/vk/auth/AuthIntentHelper;->a:Lcom/vk/auth/AuthIntentHelper;
 
     new-instance v1, Landroid/content/Intent;
 
@@ -58,9 +58,9 @@
 
     const-string v2, "it"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/auth/c;->a(Landroid/content/Intent;Lcom/vk/auth/api/models/AuthResult;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/auth/AuthIntentHelper;->a(Landroid/content/Intent;Lcom/vk/auth/api/models/AuthResult;)Landroid/content/Intent;
 
     move-result-object p1
 
@@ -69,7 +69,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$b$a;-><init>(Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$b;Landroid/content/Intent;)V
 
-    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/ViewUtils;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method

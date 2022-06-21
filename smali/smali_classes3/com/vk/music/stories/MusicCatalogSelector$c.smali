@@ -3,7 +3,7 @@
 .source "MusicCatalogSelector.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lb/h/v/e;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lb/h/v/TextViewTextChangeEvent;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lb/h/v/e;)V
+.method public final a(Lb/h/v/TextViewTextChangeEvent;)V
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lb/h/v/e;->d()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lb/h/v/TextViewTextChangeEvent;->d()Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -88,29 +88,29 @@
     .line 3
     iget-object v0, p0, Lcom/vk/music/stories/MusicCatalogSelector$c;->a:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    invoke-static {v0}, Lcom/vk/music/stories/MusicCatalogSelector;->c(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/catalog2/core/y/e/a;
+    invoke-static {v0}, Lcom/vk/music/stories/MusicCatalogSelector;->c(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/catalog2/core/y/e/MusicStorySelectorCatalogVh;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/y/e/a;->m()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/y/e/MusicStorySelectorCatalogVh;->m()V
 
     .line 4
     iget-object v0, p0, Lcom/vk/music/stories/MusicCatalogSelector$c;->a:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    invoke-static {v0}, Lcom/vk/music/stories/MusicCatalogSelector;->c(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/catalog2/core/y/e/a;
+    invoke-static {v0}, Lcom/vk/music/stories/MusicCatalogSelector;->c(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/catalog2/core/y/e/MusicStorySelectorCatalogVh;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/y/e/a;->o()V
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/y/e/MusicStorySelectorCatalogVh;->o()V
 
     .line 5
     iget-object v0, p0, Lcom/vk/music/stories/MusicCatalogSelector$c;->a:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    invoke-static {v0}, Lcom/vk/music/stories/MusicCatalogSelector;->c(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/catalog2/core/y/e/a;
+    invoke-static {v0}, Lcom/vk/music/stories/MusicCatalogSelector;->c(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/catalog2/core/y/e/MusicStorySelectorCatalogVh;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/y/e/a;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/catalog2/core/y/e/MusicStorySelectorCatalogVh;->b(Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -130,9 +130,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/v/e;
+    check-cast p1, Lb/h/v/TextViewTextChangeEvent;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/stories/MusicCatalogSelector$c;->a(Lb/h/v/e;)V
+    invoke-virtual {p0, p1}, Lcom/vk/music/stories/MusicCatalogSelector$c;->a(Lb/h/v/TextViewTextChangeEvent;)V
 
     return-void
 .end method

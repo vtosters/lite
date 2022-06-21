@@ -3,7 +3,7 @@
 .source "ApiWrapper.kt"
 
 # interfaces
-.implements Lcom/vk/api/sdk/f;
+.implements Lcom/vk/api/sdk/VKApiIllegalCredentialsListener;
 
 
 # annotations
@@ -35,7 +35,7 @@
     const-string v0, "account.unregisterDevice"
 
     .line 1
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -55,11 +55,11 @@
 
     if-nez p1, :cond_2
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {p1}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result p1
 
@@ -82,15 +82,15 @@
     if-eqz p2, :cond_1
 
     .line 5
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/bridges/t;->b:Ljava/lang/String;
+    sget-object v1, Lcom/vk/bridges/AuthBridge2;->b:Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/bridges/f;->a(Ljava/lang/String;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/bridges/AuthBridge3;->a(Ljava/lang/String;Z)V
 
     .line 6
     sget-object v0, Lcom/vk/webapp/fragments/BannedFragment;->H0:Lcom/vk/webapp/fragments/BannedFragment$b;
@@ -104,7 +104,7 @@
 
     .line 7
     :cond_2
-    invoke-static {}, Lcom/vtosters/lite/i0/d;->a()V
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAuth;->a()V
 
     return-void
 .end method

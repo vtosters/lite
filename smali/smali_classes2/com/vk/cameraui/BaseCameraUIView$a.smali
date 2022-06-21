@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/cameraui/BaseCameraUIView;->a(Landroid/view/View;ZLkotlin/jvm/b/a;)V
+    value = Lcom/vk/cameraui/BaseCameraUIView;->a(Landroid/view/View;ZLkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,17 +22,17 @@
 
 .field final synthetic b:Landroid/view/View;
 
-.field final synthetic c:Lkotlin/jvm/b/a;
+.field final synthetic c:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/cameraui/BaseCameraUIView;Landroid/view/View;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lcom/vk/cameraui/BaseCameraUIView;Landroid/view/View;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/a;",
+            "Lkotlin/jvm/b/Functions;",
             ")V"
         }
     .end annotation
@@ -42,7 +42,7 @@
 
     iput-object p2, p0, Lcom/vk/cameraui/BaseCameraUIView$a;->b:Landroid/view/View;
 
-    iput-object p3, p0, Lcom/vk/cameraui/BaseCameraUIView$a;->c:Lkotlin/jvm/b/a;
+    iput-object p3, p0, Lcom/vk/cameraui/BaseCameraUIView$a;->c:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -82,9 +82,9 @@
     invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     .line 4
-    iget-object v0, p0, Lcom/vk/cameraui/BaseCameraUIView$a;->c:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/cameraui/BaseCameraUIView$a;->c:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void

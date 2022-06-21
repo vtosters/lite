@@ -73,7 +73,7 @@
 
     iget-object p2, p0, Lcom/vk/profile/presenter/UserPresenter$e;->d:Landroid/content/Context;
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, p2}, Lcom/vk/profile/presenter/UserPresenter;->a(Lcom/vk/profile/presenter/UserPresenter;Landroid/content/Context;)V
 
@@ -95,7 +95,7 @@
 
     iget-object p2, p0, Lcom/vk/profile/presenter/UserPresenter$e;->d:Landroid/content/Context;
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Lcom/vk/profile/presenter/BaseProfilePresenter;->b(Landroid/content/Context;)V
 

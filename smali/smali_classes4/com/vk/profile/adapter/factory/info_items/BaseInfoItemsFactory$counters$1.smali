@@ -3,12 +3,12 @@
 .source "BaseInfoItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/newsfeed/k0/b/b/i;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "TT;",
-        "Lcom/vk/profile/adapter/items/j;",
+        "Lcom/vk/profile/adapter/items/CountersInfoItem;",
         ">;"
     }
 .end annotation
@@ -46,12 +46,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/j;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/CountersInfoItem;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)",
-            "Lcom/vk/profile/adapter/items/j;"
+            "Lcom/vk/profile/adapter/items/CountersInfoItem;"
         }
     .end annotation
 
@@ -66,14 +66,14 @@
 
     const/4 v2, 0x2
 
-    invoke-static {v0, p1, v1, v2, v1}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/d/b;ILjava/lang/Object;)Z
+    invoke-static {v0, p1, v1, v2, v1}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/d/MainSectionStrategy;ILjava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 2
-    new-instance v0, Lcom/vk/profile/adapter/items/j;
+    new-instance v0, Lcom/vk/profile/adapter/items/CountersInfoItem;
 
     .line 3
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$counters$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;
@@ -92,7 +92,7 @@
     move-result-object v2
 
     .line 5
-    invoke-direct {v0, v1, p1, v2}, Lcom/vk/profile/adapter/items/j;-><init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
+    invoke-direct {v0, v1, p1, v2}, Lcom/vk/profile/adapter/items/CountersInfoItem;-><init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)V
 
     return-object v0
 
@@ -116,7 +116,7 @@
     .line 1
     check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$counters$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/j;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$counters$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/CountersInfoItem;
 
     move-result-object p1
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/SettingsListFragment$f$c;->invoke()Lkotlin/m;
+    value = Lcom/vtosters/lite/fragments/SettingsListFragment$f$c;->invoke()Lkotlin/Unit;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

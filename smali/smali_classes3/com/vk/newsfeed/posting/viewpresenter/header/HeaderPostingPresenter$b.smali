@@ -3,7 +3,7 @@
 .source "HeaderPostingPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -58,7 +58,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -82,7 +82,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/newsfeed/posting/f$a;->a(Lcom/vk/newsfeed/posting/f;Lcom/vk/sharing/target/Target;ZZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/newsfeed/posting/PostingContracts$a6;->a(Lcom/vk/newsfeed/posting/PostingContracts13;Lcom/vk/sharing/target/Target;ZZILjava/lang/Object;)V
 
     goto :goto_1
 
@@ -91,22 +91,22 @@
     :goto_0
     iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter$b;->a:Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;->d(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;)Lcom/vk/newsfeed/posting/g;
+    invoke-static {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;->d(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts;
 
     move-result-object p1
 
     const/4 v1, 0x1
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/newsfeed/posting/g;->b(ZZ)V
+    invoke-interface {p1, v1, v0}, Lcom/vk/newsfeed/posting/PostingContracts;->b(ZZ)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter$b;->a:Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;->c(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;)Lcom/vk/newsfeed/posting/j;
+    invoke-static {p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;->c(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts14;
 
     move-result-object p1
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/j;->c(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/posting/PostingContracts14;->c(Z)V
 
     :goto_1
     return-void

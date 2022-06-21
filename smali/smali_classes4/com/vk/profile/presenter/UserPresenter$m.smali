@@ -52,14 +52,14 @@
 
     iget-object v1, p0, Lcom/vk/profile/presenter/UserPresenter$m;->c:Lcom/vk/profile/presenter/UserPresenter$b;
 
-    invoke-static {p1, v0, v1}, Lcom/vk/profile/presenter/UserPresenter;->a(Lcom/vk/profile/presenter/UserPresenter;Landroid/content/Context;Lcom/vk/navigation/g;)V
+    invoke-static {p1, v0, v1}, Lcom/vk/profile/presenter/UserPresenter;->a(Lcom/vk/profile/presenter/UserPresenter;Landroid/content/Context;Lcom/vk/navigation/Dismissed;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/profile/presenter/UserPresenter$m;->a:Lcom/vk/profile/presenter/UserPresenter;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/profile/presenter/UserPresenter;->a(Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/core/dialogs/bottomsheet/e;)V
+    invoke-static {p1, v0}, Lcom/vk/profile/presenter/UserPresenter;->a(Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
 
     return-void
 .end method

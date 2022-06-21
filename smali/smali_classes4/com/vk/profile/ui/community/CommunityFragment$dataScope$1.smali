@@ -3,7 +3,7 @@
 .source "CommunityFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vtosters/lite/api/i;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vtosters/lite/api/i;
+.method public final invoke()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
     .locals 1
 
     .line 2
@@ -55,11 +55,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vtosters/lite/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     return-object v0
 .end method
@@ -68,7 +68,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/ui/community/CommunityFragment$dataScope$1;->invoke()Lcom/vtosters/lite/api/i;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/community/CommunityFragment$dataScope$1;->invoke()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v0
 

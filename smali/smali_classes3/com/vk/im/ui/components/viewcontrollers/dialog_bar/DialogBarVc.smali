@@ -9,7 +9,7 @@
 
 
 # static fields
-.field static final synthetic o:[Lkotlin/u/j;
+.field static final synthetic o:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -33,13 +33,13 @@
 
 .field private final j:I
 
-.field private final k:Lkotlin/e;
+.field private final k:Lkotlin/Lazy2;
 
-.field private final l:Lkotlin/e;
+.field private final l:Lkotlin/Lazy2;
 
-.field private final m:Lkotlin/e;
+.field private final m:Lkotlin/Lazy2;
 
-.field private n:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;
+.field private n:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;
 
 
 # direct methods
@@ -50,11 +50,11 @@
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -62,9 +62,9 @@
 
     const-string v5, "getEmojiFormatter()Lcom/vk/im/ui/formatters/EmojiFormatter;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -72,7 +72,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -80,9 +80,9 @@
 
     const-string v5, "getLinkParser()Lcom/vk/im/ui/formatters/linkparser/LinkParser;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x1
 
@@ -90,7 +90,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -98,15 +98,15 @@
 
     const-string v4, "getPopupDialogsVc()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x2
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->o:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->o:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -148,7 +148,7 @@
 
     const-string p2, "view.findViewById(R.id.content_container)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->c:Landroid/view/View;
 
@@ -163,7 +163,7 @@
 
     const-string p2, "view.findViewById(R.id.content_icon)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/FrescoImageView;
 
@@ -180,7 +180,7 @@
 
     const-string p2, "view.findViewById(R.id.content_text)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/span/SpanPressableTextView;
 
@@ -197,7 +197,7 @@
 
     const-string p2, "view.findViewById(R.id.content_buttons)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/ConversationBarButtonsView;
 
@@ -214,7 +214,7 @@
 
     const-string p2, "view.findViewById(R.id.content_hide)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->g:Landroid/view/View;
 
@@ -229,7 +229,7 @@
 
     const-string p2, "view.findViewById(R.id.loading)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->h:Landroid/view/View;
 
@@ -244,7 +244,7 @@
 
     const-string p2, "view.findViewById(R.id.error)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -255,7 +255,7 @@
 
     const-string p2, "context"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -272,33 +272,33 @@
     .line 12
     sget-object p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$emojiFormatter$2;->a:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$emojiFormatter$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->k:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->k:Lkotlin/Lazy2;
 
     .line 13
     new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$linkParser$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$linkParser$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->l:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->l:Lkotlin/Lazy2;
 
     .line 14
     new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$popupDialogsVc$2;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$popupDialogsVc$2;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->m:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->m:Lkotlin/Lazy2;
 
     .line 15
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->b:Landroid/view/View;
@@ -321,7 +321,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$3;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;)V
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 18
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->f:Lcom/vk/im/ui/views/ConversationBarButtonsView;
@@ -330,24 +330,24 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc$4;-><init>(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/ConversationBarButtonsView;->setOnButtonClickListener(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, p2}, Lcom/vk/im/ui/views/ConversationBarButtonsView;->setOnButtonClickListener(Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
     .line 19
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;)Lcom/vk/im/ui/formatters/linkparser/a;
+.method public static final synthetic a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;)Lcom/vk/im/ui/formatters/linkparser/LinkParser;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->i()Lcom/vk/im/ui/formatters/linkparser/a;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->i()Lcom/vk/im/ui/formatters/linkparser/LinkParser;
 
     move-result-object p0
 
@@ -358,19 +358,19 @@
     .locals 2
 
     .line 21
-    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->k()Lcom/vk/im/ui/formatters/linkparser/a;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->k()Lcom/vk/im/ui/formatters/linkparser/LinkParser;
 
     move-result-object v0
 
-    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->j()Lcom/vk/im/ui/formatters/e;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->j()Lcom/vk/im/ui/formatters/EmojiFormatter;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/im/ui/formatters/e;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, p1}, Lcom/vk/im/ui/formatters/EmojiFormatter;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/formatters/linkparser/a;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/formatters/linkparser/LinkParser;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -386,7 +386,7 @@
     return-object p0
 .end method
 
-.method private final i()Lcom/vk/im/ui/formatters/linkparser/a;
+.method private final i()Lcom/vk/im/ui/formatters/linkparser/LinkParser;
     .locals 4
 
     .line 1
@@ -424,49 +424,49 @@
     invoke-interface {v0, v1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
 
     .line 5
-    new-instance v1, Lcom/vk/im/ui/formatters/linkparser/a;
+    new-instance v1, Lcom/vk/im/ui/formatters/linkparser/LinkParser;
 
-    invoke-direct {v1, v0}, Lcom/vk/im/ui/formatters/linkparser/a;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v1, v0}, Lcom/vk/im/ui/formatters/linkparser/LinkParser;-><init>(Ljava/util/Collection;)V
 
     return-object v1
 .end method
 
-.method private final j()Lcom/vk/im/ui/formatters/e;
+.method private final j()Lcom/vk/im/ui/formatters/EmojiFormatter;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->k:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->k:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->o:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->o:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/formatters/e;
+    check-cast v0, Lcom/vk/im/ui/formatters/EmojiFormatter;
 
     return-object v0
 .end method
 
-.method private final k()Lcom/vk/im/ui/formatters/linkparser/a;
+.method private final k()Lcom/vk/im/ui/formatters/linkparser/LinkParser;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->l:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->l:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->o:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->o:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/formatters/linkparser/a;
+    check-cast v0, Lcom/vk/im/ui/formatters/linkparser/LinkParser;
 
     return-object v0
 .end method
@@ -474,15 +474,15 @@
 .method private final l()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->m:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->m:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->o:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->o:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -654,33 +654,33 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->n:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->n:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/views/span/b;)V
+.method public final a(Lcom/vk/im/ui/views/span/OnSpanClickListener;)V
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->e:Lcom/vk/im/ui/views/span/SpanPressableTextView;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/span/SpanPressableTextView;->setOnSpanClickListener(Lcom/vk/im/ui/views/span/b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/span/SpanPressableTextView;->setOnSpanClickListener(Lcom/vk/im/ui/views/span/OnSpanClickListener;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/views/span/c;)V
+.method public final a(Lcom/vk/im/ui/views/span/OnSpanLongPressListener;)V
     .locals 1
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->e:Lcom/vk/im/ui/views/span/SpanPressableTextView;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/span/SpanPressableTextView;->setOnSpanLongPressListener(Lcom/vk/im/ui/views/span/c;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/span/SpanPressableTextView;->setOnSpanLongPressListener(Lcom/vk/im/ui/views/span/OnSpanLongPressListener;)V
 
     return-void
 .end method
@@ -701,7 +701,7 @@
     .line 19
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->i:Landroid/widget/TextView;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->b(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -731,7 +731,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -749,11 +749,11 @@
     return-void
 .end method
 
-.method public final d()Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;
+.method public final d()Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->n:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVc;->n:Lcom/vk/im/ui/components/viewcontrollers/dialog_bar/DialogBarVcCallback;
 
     return-object v0
 .end method
@@ -787,7 +787,7 @@
     const/4 v2, 0x1
 
     .line 3
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateConversationBar;->b(Lkotlin/jvm/b/a;Z)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateConversationBar;->b(Lkotlin/jvm/b/Functions;Z)V
 
     return-void
 .end method
@@ -812,7 +812,7 @@
     const/4 v2, 0x1
 
     .line 3
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateConversationBar;->a(Lkotlin/jvm/b/a;Z)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateConversationBar;->a(Lkotlin/jvm/b/Functions;Z)V
 
     return-void
 .end method

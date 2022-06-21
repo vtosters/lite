@@ -3,7 +3,7 @@
 .source "QueueSubscribeApiCmd.kt"
 
 # interfaces
-.implements Lcom/vk/api/sdk/h;
+.implements Lcom/vk/api/sdk/VKApiResponseParser;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/sdk/h<",
-        "Lcom/vk/queue/sync/models/d;",
+        "Lcom/vk/api/sdk/VKApiResponseParser<",
+        "Lcom/vk/queue/sync/models/QueueSubscribeResponse;",
         ">;"
     }
 .end annotation
@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method private final a(Lorg/json/JSONObject;)Lcom/vk/queue/sync/models/b;
+.method private final a(Lorg/json/JSONObject;)Lcom/vk/queue/sync/models/QueueAccessParams;
     .locals 9
 
     const-string v0, "info"
@@ -81,7 +81,7 @@
     move-result-object v0
 
     .line 6
-    new-instance v8, Lcom/vk/queue/sync/models/b;
+    new-instance v8, Lcom/vk/queue/sync/models/QueueAccessParams;
 
     const-string v2, "queue_id"
 
@@ -92,7 +92,7 @@
 
     const-string p1, "this.getString(\"queue_id\")"
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p1, "base_url"
 
@@ -103,7 +103,7 @@
 
     const-string p1, "joInfo.getString(\"base_url\")"
 
-    invoke-static {v4, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p1, "key"
 
@@ -114,7 +114,7 @@
 
     const-string p1, "joQueueInfo.getString(\"key\")"
 
-    invoke-static {v5, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p1, "timestamp"
 
@@ -126,12 +126,12 @@
     move-object v2, v8
 
     .line 11
-    invoke-direct/range {v2 .. v7}, Lcom/vk/queue/sync/models/b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/queue/sync/models/QueueAccessParams;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
     return-object v8
 .end method
 
-.method private final b(Ljava/lang/String;)Lcom/vk/queue/sync/models/d;
+.method private final b(Ljava/lang/String;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
     .locals 10
 
     .line 1
@@ -192,7 +192,7 @@
 
     const-string v8, "this.getJSONObject(i)"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v8, "queue_id"
 
@@ -205,7 +205,7 @@
     :try_start_0
     sget-object v9, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$b;->a:Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$b;
 
-    invoke-direct {v9, v7}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$b;->a(Lorg/json/JSONObject;)Lcom/vk/queue/sync/models/b;
+    invoke-direct {v9, v7}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$b;->a(Lorg/json/JSONObject;)Lcom/vk/queue/sync/models/QueueAccessParams;
 
     move-result-object v7
 
@@ -305,9 +305,9 @@
 
     .line 17
     :cond_4
-    new-instance p1, Lcom/vk/queue/sync/models/d;
+    new-instance p1, Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/queue/sync/models/d;-><init>(Ljava/util/Map;Ljava/util/Map;)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/queue/sync/models/QueueSubscribeResponse;-><init>(Ljava/util/Map;Ljava/util/Map;)V
 
     return-object p1
 .end method
@@ -317,11 +317,11 @@
 
     .line 18
     :try_start_0
-    sget-object v0, Lcom/vk/api/sdk/internal/e;->a:Lcom/vk/api/sdk/internal/e;
+    sget-object v0, Lcom/vk/api/sdk/internal/VKErrorUtils;->a:Lcom/vk/api/sdk/internal/VKErrorUtils;
 
     const-string v1, "execute"
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/api/sdk/internal/e;->a(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/vk/api/sdk/exceptions/VKApiException;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/api/sdk/internal/VKErrorUtils;->a(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/vk/api/sdk/exceptions/VKApiException;
 
     move-result-object p1
     :try_end_0
@@ -338,12 +338,12 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)Lcom/vk/queue/sync/models/d;
+.method public a(Ljava/lang/String;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
     .locals 1
 
     .line 2
     :try_start_0
-    invoke-direct {p0, p1}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$b;->b(Ljava/lang/String;)Lcom/vk/queue/sync/models/d;
+    invoke-direct {p0, p1}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$b;->b(Ljava/lang/String;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
     move-result-object p1
     :try_end_0
@@ -366,7 +366,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$b;->a(Ljava/lang/String;)Lcom/vk/queue/sync/models/d;
+    invoke-virtual {p0, p1}, Lcom/vk/queue/sync/api/QueueSubscribeApiCmd$b;->a(Ljava/lang/String;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
     move-result-object p1
 

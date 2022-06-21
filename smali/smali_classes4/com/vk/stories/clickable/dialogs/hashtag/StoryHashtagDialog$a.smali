@@ -3,12 +3,12 @@
 .source "StoryHashtagDialog.kt"
 
 # interfaces
-.implements Lcom/vk/stories/clickable/views/a;
+.implements Lcom/vk/stories/clickable/views/StoryGradientEditText1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;-><init>(Landroid/content/Context;ZLcom/vk/stories/clickable/models/d;Lcom/vk/stories/clickable/dialogs/hashtag/a;Ljava/util/List;I)V
+    value = Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;-><init>(Landroid/content/Context;ZLcom/vk/stories/clickable/models/StoryHashtagTypeParams5;Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog1;Ljava/util/List;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -46,13 +46,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog$a;->a:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/b;
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/b;->t1()V
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;->t1()V
 
     :cond_0
     return-void
@@ -64,13 +64,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog$a;->a:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/b;
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/b;->t1()V
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;->t1()V
 
     :cond_0
     return-void

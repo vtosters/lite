@@ -1,11 +1,11 @@
 .class public abstract Lcom/vk/wall/BaseCommentsFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "BaseCommentsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/k;
-.implements Lcom/vk/wall/f;
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/wall/CommentsListContract2;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<P::",
-        "Lb/h/r/a;",
+        "Lb/h/r/BaseContract;",
         ">",
-        "Lcom/vk/core/fragments/b;",
-        "Lcom/vk/navigation/b0/k;",
-        "Lcom/vk/wall/f<",
+        "Lcom/vk/core/fragments/BaseFragment1;",
+        "Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;",
+        "Lcom/vk/wall/CommentsListContract2<",
         "TP;>;",
-        "Lcom/vk/core/ui/themes/f;"
+        "Lcom/vk/core/ui/themes/Themable;"
     }
 .end annotation
 
 
 # instance fields
-.field private F:Lcom/vk/wall/e;
+.field private F:Lcom/vk/wall/CommentsListContract;
 
 .field private G:Lcom/vk/common/widget/BottomSwipePaginatedView;
 
-.field private H:Lcom/vk/wall/h/d;
+.field private H:Lcom/vk/wall/replybar/ReplyBarView;
 
 .field private I:Landroid/view/View;
 
-.field private J:Lcom/vk/mentions/j;
+.field private J:Lcom/vk/mentions/MentionSelectInterfaces1;
 
 .field private K:Landroid/view/View;
 
@@ -47,9 +47,9 @@
 
 .field private final M:Landroid/os/Handler;
 
-.field private final N:Lcom/vk/stickers/e;
+.field private final N:Lcom/vk/stickers/PauseAnimationScrollListener;
 
-.field private final O:Ld/a/a/b/c;
+.field private final O:Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;
 
 
 # direct methods
@@ -57,7 +57,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     const/4 v0, 0x2
 
@@ -80,35 +80,35 @@
     iput-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->M:Landroid/os/Handler;
 
     .line 4
-    new-instance v0, Lcom/vk/stickers/e;
+    new-instance v0, Lcom/vk/stickers/PauseAnimationScrollListener;
 
-    invoke-direct {v0}, Lcom/vk/stickers/e;-><init>()V
+    invoke-direct {v0}, Lcom/vk/stickers/PauseAnimationScrollListener;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/e;
+    iput-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/PauseAnimationScrollListener;
 
     .line 5
-    new-instance v0, Ld/a/a/b/c;
+    new-instance v0, Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;
 
-    iget-object v1, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/e;
+    iget-object v1, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/PauseAnimationScrollListener;
 
-    invoke-direct {v0, v1}, Ld/a/a/b/c;-><init>(Landroid/widget/AbsListView$OnScrollListener;)V
+    invoke-direct {v0, v1}, Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;-><init>(Landroid/widget/AbsListView$OnScrollListener;)V
 
     .line 6
     new-instance v1, Lcom/vk/wall/BaseCommentsFragment$a;
 
     invoke-direct {v1, p0}, Lcom/vk/wall/BaseCommentsFragment$a;-><init>(Lcom/vk/wall/BaseCommentsFragment;)V
 
-    invoke-virtual {v0, v1}, Ld/a/a/b/c;->a(Landroid/widget/AbsListView$OnScrollListener;)V
+    invoke-virtual {v0, v1}, Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;->a(Landroid/widget/AbsListView$OnScrollListener;)V
 
     .line 7
     new-instance v1, Lcom/vk/wall/BaseCommentsFragment$b;
 
     invoke-direct {v1, p0}, Lcom/vk/wall/BaseCommentsFragment$b;-><init>(Lcom/vk/wall/BaseCommentsFragment;)V
 
-    invoke-virtual {v0, v1}, Ld/a/a/b/c;->a(Landroid/widget/AbsListView$OnScrollListener;)V
+    invoke-virtual {v0, v1}, Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;->a(Landroid/widget/AbsListView$OnScrollListener;)V
 
     .line 8
-    iput-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->O:Ld/a/a/b/c;
+    iput-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->O:Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;
 
     return-void
 
@@ -121,11 +121,11 @@
     .end array-data
 .end method
 
-.method public static final synthetic a(Lcom/vk/wall/BaseCommentsFragment;)Lcom/vk/stickers/e;
+.method public static final synthetic a(Lcom/vk/wall/BaseCommentsFragment;)Lcom/vk/stickers/PauseAnimationScrollListener;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/e;
+    iget-object p0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/PauseAnimationScrollListener;
 
     return-object p0
 .end method
@@ -140,14 +140,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/wall/h/d;->b()V
+    invoke-virtual {v0}, Lcom/vk/wall/replybar/ReplyBarView;->b()V
 
     :cond_0
     return-void
@@ -157,11 +157,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/wall/h/d;->k()V
+    invoke-virtual {v0}, Lcom/vk/wall/replybar/ReplyBarView;->k()V
 
     :cond_0
     return-void
@@ -171,11 +171,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/wall/h/d;->d()V
+    invoke-virtual {v0}, Lcom/vk/wall/replybar/ReplyBarView;->d()V
 
     :cond_0
     return-void
@@ -201,11 +201,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/wall/h/d;->e()V
+    invoke-virtual {v0}, Lcom/vk/wall/replybar/ReplyBarView;->e()V
 
     :cond_0
     return-void
@@ -215,19 +215,19 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/wall/h/d;->f()V
+    invoke-virtual {v0}, Lcom/vk/wall/replybar/ReplyBarView;->f()V
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/wall/h/d;->e()V
+    invoke-virtual {v0}, Lcom/vk/wall/replybar/ReplyBarView;->e()V
 
     :cond_1
     return-void
@@ -237,7 +237,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/wall/f$a;->a(Lcom/vk/wall/f;I)V
+    invoke-static {p0, p1}, Lcom/vk/wall/CommentsListContract$a;->a(Lcom/vk/wall/CommentsListContract2;I)V
 
     return-void
 .end method
@@ -251,11 +251,11 @@
     return-object v0
 .end method
 
-.method protected final Q4()Lcom/vk/mentions/j;
+.method protected final Q4()Lcom/vk/mentions/MentionSelectInterfaces1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->J:Lcom/vk/mentions/j;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->J:Lcom/vk/mentions/MentionSelectInterfaces1;
 
     return-object v0
 .end method
@@ -315,11 +315,11 @@
     return-void
 .end method
 
-.method protected final S4()Lcom/vk/wall/h/d;
+.method protected final S4()Lcom/vk/wall/replybar/ReplyBarView;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     return-object v0
 .end method
@@ -335,24 +335,24 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/stickers/bridge/k;->c()Lcom/vk/stickers/bridge/m;
+    invoke-interface {v1}, Lcom/vk/stickers/bridge/StickersBridge;->c()Lcom/vk/stickers/bridge/StickersBridge3;
 
     move-result-object v1
 
     const-string v2, "it"
 
     .line 3
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v2, Lcom/vk/stickers/bridge/GiftData;->c:Lcom/vk/stickers/bridge/GiftData;
 
     const-string v3, "message"
 
-    invoke-interface {v1, v0, p1, v2, v3}, Lcom/vk/stickers/bridge/m;->a(Landroid/content/Context;ILcom/vk/stickers/bridge/GiftData;Ljava/lang/String;)V
+    invoke-interface {v1, v0, p1, v2, v3}, Lcom/vk/stickers/bridge/StickersBridge3;->a(Landroid/content/Context;ILcom/vk/stickers/bridge/GiftData;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -458,12 +458,12 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/lists/i0;)V
+.method public a(Lcom/vk/lists/SimpleAdapter;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/i0<",
+            "Lcom/vk/lists/SimpleAdapter<",
             "*",
             "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
             ">;)V"
@@ -481,7 +481,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/lists/t;)V
+.method public a(Lcom/vk/lists/PaginationHelper;)V
     .locals 6
 
     .line 6
@@ -497,34 +497,34 @@
 
     move-object v0, p1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$q;ZZJ)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$q;ZZJ)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public a(Lcom/vk/navigation/o;I)V
+.method public a(Lcom/vk/navigation/Navigator;I)V
     .locals 0
 
     .line 7
-    invoke-virtual {p1, p0, p2}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {p1, p0, p2}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/sharing/l;)V
+.method public a(Lcom/vk/sharing/Picking;)V
     .locals 3
 
     .line 10
     new-instance v0, Lcom/vk/wall/BaseCommentsFragment$showGroupPicker$lambda$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/wall/BaseCommentsFragment$showGroupPicker$lambda$1;-><init>(Lcom/vk/wall/BaseCommentsFragment;Lcom/vk/sharing/l;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/wall/BaseCommentsFragment$showGroupPicker$lambda$1;-><init>(Lcom/vk/wall/BaseCommentsFragment;Lcom/vk/sharing/Picking;)V
 
     .line 11
     sget-object p1, Lcom/vk/core/vc/KeyboardController;->g:Lcom/vk/core/vc/KeyboardController;
@@ -540,46 +540,46 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
 
     const-wide/16 v1, 0x12c
 
     .line 13
-    invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/fragments/b;->b(Lkotlin/jvm/b/a;J)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/fragments/BaseFragment1;->b(Lkotlin/jvm/b/Functions;J)V
 
     goto :goto_0
 
     .line 14
     :cond_0
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     :goto_0
     return-void
 .end method
 
-.method protected final a(Lcom/vk/wall/e;)V
+.method protected final a(Lcom/vk/wall/CommentsListContract;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/wall/BaseCommentsFragment;->F:Lcom/vk/wall/e;
+    iput-object p1, p0, Lcom/vk/wall/BaseCommentsFragment;->F:Lcom/vk/wall/CommentsListContract;
 
     return-void
 .end method
 
-.method protected final a(Lcom/vk/wall/h/d;)V
+.method protected final a(Lcom/vk/wall/replybar/ReplyBarView;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iput-object p1, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     return-void
 .end method
 
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/b;->b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->b(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -588,14 +588,14 @@
     .locals 1
 
     .line 8
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/e;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/PauseAnimationScrollListener;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/stickers/e;->a(Ljava/lang/String;Lcom/vk/stickers/views/animation/VKAnimationView;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/stickers/PauseAnimationScrollListener;->a(Ljava/lang/String;Lcom/vk/stickers/views/animation/VKAnimationView;)V
 
     return-void
 .end method
 
-.method public b(Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
+.method public b(Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
     .locals 1
 
     .line 1
@@ -603,14 +603,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1, v0}, Lcom/vk/lists/u;->a(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p1, v0}, Lcom/vk/lists/PaginationHelperExt;->a(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -621,21 +621,21 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/wall/h/d;->a()V
+    invoke-virtual {v0}, Lcom/vk/wall/replybar/ReplyBarView;->a()V
 
     :cond_0
     return-void
 .end method
 
-.method public c()Lcom/vk/navigation/a;
+.method public c()Lcom/vk/navigation/ActivityLauncher;
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/a;
+    invoke-static {p0}, Lcom/vk/navigation/ActivityLauncher1;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/ActivityLauncher;
 
     move-result-object v0
 
@@ -646,11 +646,11 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/wall/h/d;->a(ILjava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/wall/replybar/ReplyBarView;->a(ILjava/lang/String;)V
 
     :cond_0
     return-void
@@ -681,13 +681,13 @@
     return v1
 .end method
 
-.method public f(Lkotlin/jvm/b/a;)V
+.method public f(Lkotlin/jvm/b/Functions;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -704,7 +704,7 @@
     .line 2
     new-instance v0, Lcom/vk/wall/BaseCommentsFragment$c;
 
-    invoke-direct {v0, p1}, Lcom/vk/wall/BaseCommentsFragment$c;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p1}, Lcom/vk/wall/BaseCommentsFragment$c;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 3
     sget-object v1, Lcom/vk/core/vc/KeyboardController;->g:Lcom/vk/core/vc/KeyboardController;
@@ -712,7 +712,7 @@
     invoke-virtual {v1, v0}, Lcom/vk/core/vc/KeyboardController;->a(Lcom/vk/core/vc/KeyboardController$a;)Z
 
     .line 4
-    iget-object v1, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v1, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v1, :cond_1
 
@@ -720,15 +720,15 @@
 
     iget-object v3, p0, Lcom/vk/wall/BaseCommentsFragment;->M:Landroid/os/Handler;
 
-    invoke-direct {v2, p0, v0, p1, v3}, Lcom/vk/wall/BaseCommentsFragment$onKeyboardOpened$1;-><init>(Lcom/vk/wall/BaseCommentsFragment;Lcom/vk/wall/BaseCommentsFragment$c;Lkotlin/jvm/b/a;Landroid/os/Handler;)V
+    invoke-direct {v2, p0, v0, p1, v3}, Lcom/vk/wall/BaseCommentsFragment$onKeyboardOpened$1;-><init>(Lcom/vk/wall/BaseCommentsFragment;Lcom/vk/wall/BaseCommentsFragment$c;Lkotlin/jvm/b/Functions;Landroid/os/Handler;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/wall/h/d;->a(Landroid/os/ResultReceiver;)V
+    invoke-virtual {v1, v2}, Lcom/vk/wall/replybar/ReplyBarView;->a(Landroid/os/ResultReceiver;)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     :cond_1
     :goto_0
@@ -739,7 +739,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/wall/f$a;->b(Lcom/vk/wall/f;)V
+    invoke-static {p0}, Lcom/vk/wall/CommentsListContract$a;->b(Lcom/vk/wall/CommentsListContract2;)V
 
     return-void
 .end method
@@ -748,9 +748,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/e;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/PauseAnimationScrollListener;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stickers/e;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/stickers/PauseAnimationScrollListener;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -759,7 +759,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/wall/f$a;->c(Lcom/vk/wall/f;)V
+    invoke-static {p0}, Lcom/vk/wall/CommentsListContract$a;->c(Lcom/vk/wall/CommentsListContract2;)V
 
     return-void
 .end method
@@ -768,11 +768,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/wall/h/d;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/wall/replybar/ReplyBarView;->a(I)V
 
     :cond_0
     return-void
@@ -782,11 +782,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/wall/h/d;->g()Z
+    invoke-virtual {v0}, Lcom/vk/wall/replybar/ReplyBarView;->g()Z
 
     move-result v0
 
@@ -841,7 +841,7 @@
     const/4 v0, 0x2
 
     .line 3
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -864,14 +864,14 @@
     iput-object p2, p0, Lcom/vk/wall/BaseCommentsFragment;->G:Lcom/vk/common/widget/BottomSwipePaginatedView;
 
     .line 6
-    iget-object p2, p0, Lcom/vk/wall/BaseCommentsFragment;->F:Lcom/vk/wall/e;
+    iget-object p2, p0, Lcom/vk/wall/BaseCommentsFragment;->F:Lcom/vk/wall/CommentsListContract;
 
     if-eqz p2, :cond_1
 
     .line 7
     new-instance v1, Lcom/vk/mentions/MentionSelectViewControllerImpl;
 
-    invoke-direct {v1, p2}, Lcom/vk/mentions/MentionSelectViewControllerImpl;-><init>(Lcom/vk/mentions/i;)V
+    invoke-direct {v1, p2}, Lcom/vk/mentions/MentionSelectViewControllerImpl;-><init>(Lcom/vk/mentions/MentionSelectInterfaces;)V
 
     const p2, 0x7f0a02bc
 
@@ -885,7 +885,7 @@
     const-string v2, "coordinatorLayout"
 
     .line 9
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, p2}, Lcom/vk/mentions/MentionSelectViewControllerImpl;->a(Landroid/view/ViewGroup;)Landroid/view/View;
 
@@ -895,13 +895,13 @@
     invoke-virtual {p2, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     .line 11
-    iput-object v1, p0, Lcom/vk/wall/BaseCommentsFragment;->J:Lcom/vk/mentions/j;
+    iput-object v1, p0, Lcom/vk/wall/BaseCommentsFragment;->J:Lcom/vk/mentions/MentionSelectInterfaces1;
 
     :cond_1
     const p2, 0x7f0a0d9d
 
     .line 12
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -910,7 +910,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/wall/BaseCommentsFragment$onCreateView$$inlined$also$lambda$1;-><init>(Lcom/vk/wall/BaseCommentsFragment;)V
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 14
     iget-object p2, p0, Lcom/vk/wall/BaseCommentsFragment;->G:Lcom/vk/common/widget/BottomSwipePaginatedView;
@@ -923,7 +923,7 @@
 
     if-eqz p2, :cond_2
 
-    iget-object p3, p0, Lcom/vk/wall/BaseCommentsFragment;->O:Ld/a/a/b/c;
+    iget-object p3, p0, Lcom/vk/wall/BaseCommentsFragment;->O:Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;
 
     invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
@@ -945,7 +945,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/vk/wall/BaseCommentsFragment;->O:Ld/a/a/b/c;
+    iget-object v1, p0, Lcom/vk/wall/BaseCommentsFragment;->O:Lme/grishka/appkit/preloading/RecyclerToListViewScrollListener;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
@@ -956,15 +956,15 @@
     iput-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->G:Lcom/vk/common/widget/BottomSwipePaginatedView;
 
     .line 3
-    iput-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iput-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     .line 4
     iput-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->I:Landroid/view/View;
 
     .line 5
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/e;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/PauseAnimationScrollListener;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/e;->c()V
+    invoke-virtual {v0}, Lcom/vk/stickers/PauseAnimationScrollListener;->c()V
 
     .line 6
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onDestroyView()V
@@ -976,12 +976,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/e;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/PauseAnimationScrollListener;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/e;->b()V
+    invoke-virtual {v0}, Lcom/vk/stickers/PauseAnimationScrollListener;->b()V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onPause()V
 
     return-void
 .end method
@@ -990,12 +990,12 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/e;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->N:Lcom/vk/stickers/PauseAnimationScrollListener;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/e;->d()V
+    invoke-virtual {v0}, Lcom/vk/stickers/PauseAnimationScrollListener;->d()V
 
     return-void
 .end method
@@ -1007,11 +1007,11 @@
     invoke-super {p0, p1}, Lcom/vk/core/fragments/FragmentImpl;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/wall/h/d;->j()Landroid/os/Bundle;
+    invoke-virtual {v0}, Lcom/vk/wall/replybar/ReplyBarView;->j()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -1139,7 +1139,7 @@
     move v4, v0
 
     .line 7
-    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/h/d;
+    iget-object v0, p0, Lcom/vk/wall/BaseCommentsFragment;->H:Lcom/vk/wall/replybar/ReplyBarView;
 
     if-eqz v0, :cond_3
 
@@ -1153,7 +1153,7 @@
 
     invoke-direct/range {v2 .. v8}, Lcom/vk/wall/BaseCommentsFragment$ensurePositionVisibleFromBottom$1;-><init>(Lcom/vk/wall/BaseCommentsFragment;IIILandroidx/recyclerview/widget/LinearLayoutManager;I)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/wall/h/d;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/wall/replybar/ReplyBarView;->a(Lkotlin/jvm/b/Functions;)V
 
     :cond_3
     return-void
@@ -1179,7 +1179,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/wall/f$a;->a(Lcom/vk/wall/f;)V
+    invoke-static {p0}, Lcom/vk/wall/CommentsListContract$a;->a(Lcom/vk/wall/CommentsListContract2;)V
 
     return-void
 .end method

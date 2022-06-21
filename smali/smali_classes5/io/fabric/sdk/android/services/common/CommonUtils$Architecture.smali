@@ -292,7 +292,7 @@
     if-eqz v1, :cond_0
 
     .line 3
-    invoke-static {}, Lio/fabric/sdk/android/c;->f()Lio/fabric/sdk/android/k;
+    invoke-static {}, Lio/fabric/sdk/android/Fabric;->f()Lio/fabric/sdk/android/Logger;
 
     move-result-object v0
 
@@ -300,7 +300,7 @@
 
     const-string v2, "Architecture#getValue()::Build.CPU_ABI returned null or empty"
 
-    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/k;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     sget-object v0, Lio/fabric/sdk/android/services/common/CommonUtils$Architecture;->UNKNOWN:Lio/fabric/sdk/android/services/common/CommonUtils$Architecture;

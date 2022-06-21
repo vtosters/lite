@@ -168,7 +168,7 @@
     const-string v1, "updatedBitmap"
 
     .line 27
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v3
 .end method
@@ -191,7 +191,7 @@
 
     const-string v1, "(drawable as BitmapDrawable).bitmap"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0}, Lcom/vk/stories/clickable/views/StoryGradientImageView;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
@@ -287,7 +287,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/stories/clickable/views/StoryGradientImageView$init$1;-><init>(Lcom/vk/stories/clickable/views/StoryGradientImageView;)V
 
-    invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+    invoke-static {p0, p1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
 
     return-void
 

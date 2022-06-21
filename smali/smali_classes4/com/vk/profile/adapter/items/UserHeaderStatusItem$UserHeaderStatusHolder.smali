@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/UserHeaderStatusItem$UserHeaderStatusHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "UserHeaderStatusItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/profile/adapter/items/UserHeaderStatusItem;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     const p1, 0x7f0d04ba
 
-    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -67,7 +67,7 @@
 
     const-string v0, "itemView.findViewById(R.id.title)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/common/view/TextViewEllipsizeEnd;
 
@@ -84,7 +84,7 @@
 
     const-string v0, "itemView.findViewById(R.id.subtitle)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -101,7 +101,7 @@
 
     const-string v0, "itemView.findViewById(R.id.online)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -118,7 +118,7 @@
 
     const-string v0, "itemView.findViewById(R.id.user_photo)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/stories/view/StoryCircleImageView;
 
@@ -135,7 +135,7 @@
 
     const-string v0, "itemView.findViewById(R.id.add_photo_label)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/profile/adapter/items/UserHeaderStatusItem$UserHeaderStatusHolder;->g:Landroid/view/View;
 
@@ -148,7 +148,7 @@
 
     const-string v0, "parent.context"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, p2}, Lcom/vk/core/formatters/OnlineFormatter;-><init>(Landroid/content/Context;)V
 
@@ -161,7 +161,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/profile/adapter/items/UserHeaderStatusItem$UserHeaderStatusHolder$1;-><init>(Lcom/vk/profile/adapter/items/UserHeaderStatusItem$UserHeaderStatusHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 9
     iget-object p1, p0, Lcom/vk/profile/adapter/items/UserHeaderStatusItem$UserHeaderStatusHolder;->f:Lcom/vk/stories/view/StoryCircleImageView;
@@ -170,7 +170,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/profile/adapter/items/UserHeaderStatusItem$UserHeaderStatusHolder$2;-><init>(Lcom/vk/profile/adapter/items/UserHeaderStatusItem$UserHeaderStatusHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 10
     iget-object p1, p0, Lcom/vk/profile/adapter/items/UserHeaderStatusItem$UserHeaderStatusHolder;->f:Lcom/vk/stories/view/StoryCircleImageView;
@@ -188,7 +188,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/profile/adapter/items/UserHeaderStatusItem;
 
@@ -239,7 +239,7 @@
     const/high16 v5, 0x40c00000    # 6.0f
 
     .line 6
-    invoke-static {v5}, Lcom/vk/core/utils/f;->a(F)Landroid/text/Spannable;
+    invoke-static {v5}, Lcom/vk/core/utils/SpannableUtils1;->a(F)Landroid/text/Spannable;
 
     move-result-object v5
 
@@ -248,7 +248,7 @@
     move-result-object v1
 
     .line 7
-    new-instance v5, Lcom/vk/core/utils/c;
+    new-instance v5, Lcom/vk/core/utils/SpannableUtils;
 
     sget-object v6, Lcom/vk/core/utils/VerifyInfoHelper;->h:Lcom/vk/core/utils/VerifyInfoHelper;
 
@@ -258,13 +258,13 @@
 
     const-string v8, "profile.profile.verifyInfo"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v8, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v12, "itemView"
 
-    invoke-static {v8, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v8}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -272,7 +272,7 @@
 
     const-string v13, "itemView.context"
 
-    invoke-static {v8, v13}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v13}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v9, 0x0
 
@@ -284,29 +284,29 @@
 
     move-result-object v6
 
-    invoke-direct {v5, v3, v6, v2, v3}, Lcom/vk/core/utils/c;-><init>(Ljava/lang/Integer;Landroid/graphics/drawable/Drawable;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v5, v3, v6, v2, v3}, Lcom/vk/core/utils/SpannableUtils;-><init>(Ljava/lang/Integer;Landroid/graphics/drawable/Drawable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 8
-    sget-object v6, Lcom/vk/core/utils/c;->n:Lcom/vk/core/utils/c$a;
+    sget-object v6, Lcom/vk/core/utils/SpannableUtils;->n:Lcom/vk/core/utils/SpannableUtils$a;
 
-    invoke-virtual {v6}, Lcom/vk/core/utils/c$a;->a()I
+    invoke-virtual {v6}, Lcom/vk/core/utils/SpannableUtils$a;->a()I
 
     move-result v6
 
-    invoke-virtual {v5, v6}, Lcom/vk/core/utils/c;->a(I)Lcom/vk/core/utils/c;
+    invoke-virtual {v5, v6}, Lcom/vk/core/utils/SpannableUtils;->a(I)Lcom/vk/core/utils/SpannableUtils;
 
     .line 9
     iget-object v6, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v6, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-static {v6, v13}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v13}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v5, v6}, Lcom/vk/core/utils/c;->a(Landroid/content/Context;)Landroid/text/Spannable;
+    invoke-virtual {v5, v6}, Lcom/vk/core/utils/SpannableUtils;->a(Landroid/content/Context;)Landroid/text/Spannable;
 
     move-result-object v5
 
@@ -317,7 +317,7 @@
 
     const-string v5, "SpannableStringBuilder()\u2026.build(itemView.context))"
 
-    invoke-static {v1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
     iget-object v5, p0, Lcom/vk/profile/adapter/items/UserHeaderStatusItem$UserHeaderStatusHolder;->c:Lcom/vk/common/view/TextViewEllipsizeEnd;
@@ -328,13 +328,13 @@
 
     .line 12
     :cond_0
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v1
 
     iget-object v5, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->m:Ljava/lang/String;
 
-    invoke-virtual {v1, v5}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v5}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -343,12 +343,12 @@
 
     const v6, 0x7f04059a
 
-    invoke-static {v5, v6}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v5, v6}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     const-string v5, "statusLabel"
 
     .line 14
-    invoke-static {v1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
@@ -398,7 +398,7 @@
     .line 17
     :cond_3
     :goto_1
-    invoke-static {v0}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v1
 
@@ -409,7 +409,7 @@
 
     const v5, 0x7f120b8c
 
-    invoke-virtual {p0, v5}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v5}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->m(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -420,7 +420,7 @@
 
     const v5, 0x7f040022
 
-    invoke-static {v1, v5}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v1, v5}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 20
     iget-object v1, p0, Lcom/vk/profile/adapter/items/UserHeaderStatusItem$UserHeaderStatusHolder;->d:Landroid/widget/TextView;
@@ -445,9 +445,9 @@
 
     const-string v8, "profile.profile"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v5, v7}, Lcom/vk/profile/utils/c;->a(Lcom/vk/core/formatters/OnlineFormatter;Lcom/vk/dto/user/UserProfile;)Ljava/lang/CharSequence;
+    invoke-static {v5, v7}, Lcom/vk/profile/utils/OnlineFormatterExt;->a(Lcom/vk/core/formatters/OnlineFormatter;Lcom/vk/dto/user/UserProfile;)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -568,7 +568,7 @@
 
     const v3, 0x7f080a5a
 
-    invoke-virtual {v1, v3}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(I)V
+    invoke-virtual {v1, v3}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(I)V
 
     .line 33
     iget-object v1, p0, Lcom/vk/profile/adapter/items/UserHeaderStatusItem$UserHeaderStatusHolder;->f:Lcom/vk/stories/view/StoryCircleImageView;
@@ -600,7 +600,7 @@
 
     if-nez v1, :cond_c
 
-    invoke-static {v0}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v1
 
@@ -660,7 +660,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result p1
 

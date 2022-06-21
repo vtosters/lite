@@ -3,7 +3,7 @@
 .source "PostViewPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -141,9 +141,9 @@
     invoke-virtual {p1, v0, v4}, Lcom/vk/dto/newsfeed/Flags;->c(IZ)V
 
     .line 4
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
@@ -151,16 +151,16 @@
 
     iget-object v4, p0, Lcom/vk/wall/post/PostViewPresenter$g;->b:Lcom/vk/dto/newsfeed/entries/Post;
 
-    invoke-virtual {p1, v0, v4}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, v4}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/wall/post/PostViewPresenter$g;->a:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/c;
+    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/PostViewContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/wall/post/c;->q1()V
+    invoke-interface {p1}, Lcom/vk/wall/post/PostViewContract;->q1()V
 
     .line 6
     iget-object p1, p0, Lcom/vk/wall/post/PostViewPresenter$g;->b:Lcom/vk/dto/newsfeed/entries/Post;
@@ -178,40 +178,40 @@
     .line 7
     iget-object p1, p0, Lcom/vk/wall/post/PostViewPresenter$g;->a:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/c;
+    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/PostViewContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/wall/f;->J2()V
+    invoke-interface {p1}, Lcom/vk/wall/CommentsListContract2;->J2()V
 
     .line 8
     iget-object p1, p0, Lcom/vk/wall/post/PostViewPresenter$g;->a:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/c;
+    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/PostViewContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/wall/f;->M1()V
+    invoke-interface {p1}, Lcom/vk/wall/CommentsListContract2;->M1()V
 
     .line 9
     iget-object p1, p0, Lcom/vk/wall/post/PostViewPresenter$g;->a:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/c;
+    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/PostViewContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/wall/f;->D()V
+    invoke-interface {p1}, Lcom/vk/wall/CommentsListContract2;->D()V
 
     .line 10
     iget-object p1, p0, Lcom/vk/wall/post/PostViewPresenter$g;->a:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-static {p1}, Lcom/vk/wall/post/PostViewPresenter;->a(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/wall/e;
+    invoke-static {p1}, Lcom/vk/wall/post/PostViewPresenter;->a(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/wall/CommentsListContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1, v1}, Lcom/vk/wall/e;->a(Z)V
+    invoke-interface {p1, v1}, Lcom/vk/wall/CommentsListContract;->a(Z)V
 
     goto :goto_1
 
@@ -219,23 +219,23 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/wall/post/PostViewPresenter$g;->a:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-static {p1}, Lcom/vk/wall/post/PostViewPresenter;->a(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/wall/e;
+    invoke-static {p1}, Lcom/vk/wall/post/PostViewPresenter;->a(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/wall/CommentsListContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1, v2}, Lcom/vk/wall/e;->a(Z)V
+    invoke-interface {p1, v2}, Lcom/vk/wall/CommentsListContract;->a(Z)V
 
     .line 12
     :cond_2
     iget-object p1, p0, Lcom/vk/wall/post/PostViewPresenter$g;->a:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/c;
+    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/PostViewContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/wall/f;->F2()V
+    invoke-interface {p1}, Lcom/vk/wall/CommentsListContract2;->F2()V
 
     :cond_3
     :goto_1

@@ -38,13 +38,13 @@
 # instance fields
 .field private final k0:Z
 
-.field private final l0:Lcom/vk/profile/data/d/c;
+.field private final l0:Lcom/vk/profile/data/d/UserMainSectionStrategy;
 
 .field private m0:Z
 
-.field private final n0:Lcom/vk/profile/adapter/a;
+.field private final n0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-.field private o0:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private o0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 
 # direct methods
@@ -55,7 +55,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/presenter/UserPresenter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/presenter/UserPresenter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/profile/presenter/UserPresenter;->q0:Lcom/vk/profile/presenter/UserPresenter$a;
 
@@ -80,7 +80,7 @@
 
     invoke-direct {v2, v3, v4, v5}, Lcom/vk/profile/presenter/UserPresenter$a$a;-><init>(III)V
 
-    invoke-static {v1, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -105,7 +105,7 @@
 
     invoke-direct {v2, v3, v4, v5}, Lcom/vk/profile/presenter/UserPresenter$a$a;-><init>(III)V
 
-    invoke-static {v1, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -130,7 +130,7 @@
 
     invoke-direct {v2, v3, v4, v5}, Lcom/vk/profile/presenter/UserPresenter$a$a;-><init>(III)V
 
-    invoke-static {v1, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -148,28 +148,28 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/newsfeed/contracts/u;Lcom/vk/music/player/d;)V
+.method public constructor <init>(Lcom/vk/newsfeed/contracts/ProfileContract;Lcom/vk/music/player/PlayerModel;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/newsfeed/contracts/u<",
+            "Lcom/vk/newsfeed/contracts/ProfileContract<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">;",
-            "Lcom/vk/music/player/d;",
+            "Lcom/vk/music/player/PlayerModel;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/profile/presenter/BaseProfilePresenter;-><init>(Lcom/vk/newsfeed/contracts/u;Lcom/vk/music/player/d;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/profile/presenter/BaseProfilePresenter;-><init>(Lcom/vk/newsfeed/contracts/ProfileContract;Lcom/vk/music/player/PlayerModel;)V
 
     .line 2
     sget-object p1, Lcom/vk/music/common/MusicPlaybackLaunchContext;->G:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     const-string p2, "MusicPlaybackLaunchContext.USER_MUSIC"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
@@ -177,52 +177,52 @@
     iput-boolean p1, p0, Lcom/vk/profile/presenter/UserPresenter;->k0:Z
 
     .line 4
-    new-instance p2, Lcom/vk/profile/data/d/c;
+    new-instance p2, Lcom/vk/profile/data/d/UserMainSectionStrategy;
 
-    invoke-direct {p2}, Lcom/vk/profile/data/d/c;-><init>()V
+    invoke-direct {p2}, Lcom/vk/profile/data/d/UserMainSectionStrategy;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/profile/presenter/UserPresenter;->l0:Lcom/vk/profile/data/d/c;
+    iput-object p2, p0, Lcom/vk/profile/presenter/UserPresenter;->l0:Lcom/vk/profile/data/d/UserMainSectionStrategy;
 
     .line 5
     iput-boolean p1, p0, Lcom/vk/profile/presenter/UserPresenter;->m0:Z
 
     .line 6
-    new-instance p2, Lcom/vk/profile/adapter/a;
+    new-instance p2, Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     const/4 v0, 0x0
 
-    invoke-direct {p2, v0, p1, v0}, Lcom/vk/profile/adapter/a;-><init>(Lcom/vk/lists/o;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p2, v0, p1, v0}, Lcom/vk/profile/adapter/InfoItemsAdapter;-><init>(Lcom/vk/lists/ListDataSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object p2, p0, Lcom/vk/profile/presenter/UserPresenter;->n0:Lcom/vk/profile/adapter/a;
+    iput-object p2, p0, Lcom/vk/profile/presenter/UserPresenter;->n0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/presenter/UserPresenter;)Lcom/vk/profile/adapter/a;
+.method public static final synthetic a(Lcom/vk/profile/presenter/UserPresenter;)Lcom/vk/profile/adapter/InfoItemsAdapter;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/profile/presenter/UserPresenter;->n0:Lcom/vk/profile/adapter/a;
+    iget-object p0, p0, Lcom/vk/profile/presenter/UserPresenter;->n0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     return-object p0
 .end method
 
-.method private final a(Landroid/content/Context;Lcom/vk/navigation/g;)V
+.method private final a(Landroid/content/Context;Lcom/vk/navigation/Dismissed;)V
     .locals 1
 
     .line 36
-    instance-of v0, p1, Lcom/vk/navigation/n;
+    instance-of v0, p1, Lcom/vk/navigation/NavigationDelegateProvider;
 
     if-eqz v0, :cond_0
 
     .line 37
-    check-cast p1, Lcom/vk/navigation/n;
+    check-cast p1, Lcom/vk/navigation/NavigationDelegateProvider;
 
-    invoke-interface {p1}, Lcom/vk/navigation/n;->E0()Lcom/vk/navigation/NavigationDelegate;
+    invoke-interface {p1}, Lcom/vk/navigation/NavigationDelegateProvider;->E0()Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/g;)V
+    invoke-virtual {p1, p2}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/Dismissed;)V
 
     :cond_0
     return-void
@@ -237,11 +237,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/presenter/UserPresenter;Landroid/content/Context;Lcom/vk/navigation/g;)V
+.method public static final synthetic a(Lcom/vk/profile/presenter/UserPresenter;Landroid/content/Context;Lcom/vk/navigation/Dismissed;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2}, Lcom/vk/profile/presenter/UserPresenter;->b(Landroid/content/Context;Lcom/vk/navigation/g;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/profile/presenter/UserPresenter;->b(Landroid/content/Context;Lcom/vk/navigation/Dismissed;)V
 
     return-void
 .end method
@@ -255,11 +255,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method public static final synthetic a(Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/profile/presenter/UserPresenter;->o0:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object p1, p0, Lcom/vk/profile/presenter/UserPresenter;->o0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method
@@ -273,31 +273,31 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/profile/presenter/UserPresenter;)Lcom/vk/core/dialogs/bottomsheet/e;
+.method public static final synthetic b(Lcom/vk/profile/presenter/UserPresenter;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/presenter/UserPresenter;->o0:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object p0, p0, Lcom/vk/profile/presenter/UserPresenter;->o0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-object p0
 .end method
 
-.method private final b(Landroid/content/Context;Lcom/vk/navigation/g;)V
+.method private final b(Landroid/content/Context;Lcom/vk/navigation/Dismissed;)V
     .locals 1
 
     .line 24
-    instance-of v0, p1, Lcom/vk/navigation/n;
+    instance-of v0, p1, Lcom/vk/navigation/NavigationDelegateProvider;
 
     if-eqz v0, :cond_0
 
     .line 25
-    check-cast p1, Lcom/vk/navigation/n;
+    check-cast p1, Lcom/vk/navigation/NavigationDelegateProvider;
 
-    invoke-interface {p1}, Lcom/vk/navigation/n;->E0()Lcom/vk/navigation/NavigationDelegate;
+    invoke-interface {p1}, Lcom/vk/navigation/NavigationDelegateProvider;->E0()Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/g;)V
+    invoke-virtual {p1, p2}, Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/Dismissed;)V
 
     :cond_0
     return-void
@@ -336,7 +336,7 @@
 
     const-string v2, "view.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1}, Lcom/vk/core/util/ContextExtKt;->f(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -348,7 +348,7 @@
     const-string p2, "container"
 
     .line 21
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->I1()Ljava/lang/String;
 
@@ -365,7 +365,7 @@
     .line 24
     sget-object p1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PROFILE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {p1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -433,7 +433,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->H()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->H()I
 
     move-result v0
 
@@ -452,22 +452,22 @@
 
 
 # virtual methods
-.method public bridge synthetic W()Lcom/vk/profile/data/d/b;
+.method public bridge synthetic W()Lcom/vk/profile/data/d/MainSectionStrategy;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/presenter/UserPresenter;->W()Lcom/vk/profile/data/d/c;
+    invoke-virtual {p0}, Lcom/vk/profile/presenter/UserPresenter;->W()Lcom/vk/profile/data/d/UserMainSectionStrategy;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public W()Lcom/vk/profile/data/d/c;
+.method public W()Lcom/vk/profile/data/d/UserMainSectionStrategy;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/presenter/UserPresenter;->l0:Lcom/vk/profile/data/d/c;
+    iget-object v0, p0, Lcom/vk/profile/presenter/UserPresenter;->l0:Lcom/vk/profile/data/d/UserMainSectionStrategy;
 
     return-object v0
 .end method
@@ -485,7 +485,7 @@
     .locals 2
 
     .line 34
-    iget-object v0, p0, Lcom/vk/profile/presenter/UserPresenter;->o0:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object v0, p0, Lcom/vk/profile/presenter/UserPresenter;->o0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz v0, :cond_1
 
@@ -497,14 +497,14 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 35
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
@@ -515,7 +515,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -532,7 +532,7 @@
     .line 7
     iget-object p2, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
-    invoke-static {p1, p2, p3}, Lcom/vtosters/lite/fragments/gifts/h;->a(Landroid/content/Context;Lcom/vk/dto/user/UserProfile;Ljava/lang/String;)V
+    invoke-static {p1, p2, p3}, Lcom/vtosters/lite/fragments/gifts/GiftsCatalogFragment;->a(Landroid/content/Context;Lcom/vk/dto/user/UserProfile;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -541,13 +541,13 @@
     .locals 2
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
     const-string v1, "notification"
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/newsfeed/contracts/u;->a(Landroid/view/View;Ljava/lang/String;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/newsfeed/contracts/ProfileContract;->a(Landroid/view/View;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -561,7 +561,7 @@
     move-result-object v0
 
     .line 10
-    invoke-static {p2}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p2}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v1
 
@@ -576,7 +576,7 @@
     if-nez v1, :cond_0
 
     .line 11
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->b(Landroid/content/Context;)V
 
@@ -584,7 +584,7 @@
 
     .line 12
     :cond_0
-    invoke-static {p2}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p2}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v1
 
@@ -611,12 +611,12 @@
     :cond_1
     new-instance v1, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, v0}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 15
-    invoke-static {p2}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p2}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v2
 
@@ -797,7 +797,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
@@ -809,11 +809,11 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/u;->g2()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/ProfileContract;->g2()V
 
     return-void
 .end method
@@ -822,17 +822,17 @@
     .locals 2
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/presenters/i;->b(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->b(Landroid/os/Bundle;)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
     if-nez p1, :cond_2
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result p1
 
@@ -845,7 +845,7 @@
     if-eqz p1, :cond_0
 
     .line 5
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
@@ -853,21 +853,21 @@
     iput-boolean v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->G1:Z
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    invoke-interface {v1, p1}, Lcom/vk/newsfeed/contracts/ProfileContract;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/newsfeed/contracts/u;->a1()V
+    invoke-interface {v1}, Lcom/vk/newsfeed/contracts/ProfileContract;->a1()V
 
     .line 9
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/i;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 10
     invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
@@ -877,35 +877,35 @@
     if-nez p1, :cond_0
 
     .line 11
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/contracts/u;->d1()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/contracts/ProfileContract;->d1()V
 
     .line 12
     :cond_0
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result p1
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v1
 
     if-eq p1, v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result p1
 
@@ -913,15 +913,15 @@
 
     .line 13
     :cond_1
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/h/d/c;->e1()Lcom/vk/dto/user/UserProfile;
+    invoke-virtual {p1}, Lcom/vk/auth/api/VKAccount;->e1()Lcom/vk/dto/user/UserProfile;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
@@ -929,21 +929,21 @@
     iput-boolean v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->G1:Z
 
     .line 15
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/ProfileContract;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 16
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/u;->a1()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/ProfileContract;->a1()V
 
     .line 17
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/i;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     :cond_2
     return-void
@@ -953,7 +953,7 @@
     .locals 8
 
     .line 18
-    new-instance v7, Lcom/vk/core/dialogs/actionspopup/a$b;
+    new-instance v7, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     const v0, 0x7f040022
 
@@ -963,14 +963,14 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {v7, p1, v1, v0}, Lcom/vk/core/dialogs/actionspopup/a$b;-><init>(Landroid/view/View;ZI)V
+    invoke-direct {v7, p1, v1, v0}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;-><init>(Landroid/view/View;ZI)V
 
     const p1, 0x7f040254
 
     const v0, 0x7f0806af
 
     .line 19
-    invoke-static {v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v2
 
@@ -989,12 +989,12 @@
     move-object v0, v7
 
     .line 20
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     const v0, 0x7f080855
 
     .line 21
-    invoke-static {v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v2
 
@@ -1007,12 +1007,12 @@
     move-object v0, v7
 
     .line 22
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     const/4 p1, 0x0
 
     .line 23
-    invoke-virtual {v7, p1}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Z)Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {v7, p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Z)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     return-void
 .end method
@@ -1021,7 +1021,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->H()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->H()I
 
     move-result v0
 
@@ -1042,17 +1042,17 @@
     .locals 3
 
     .line 13
-    new-instance v0, Lcom/vk/cameraui/builder/a;
+    new-instance v0, Lcom/vk/cameraui/builder/CameraBuilder;
 
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PROFILE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "profile_button"
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 14
     sget-object v1, Lcom/vk/cameraui/CameraUI;->d:Lcom/vk/cameraui/CameraUI$a;
@@ -1078,7 +1078,7 @@
     .locals 5
 
     .line 1
-    invoke-static {p2}, Lcom/vk/profile/utils/d;->e(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p2}, Lcom/vk/profile/utils/ProfileExt;->e(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -1108,7 +1108,7 @@
 
     const-string v4, "context.getString(R.string.dialog_try_action)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v2, p2, p1, v3}, Lcom/vk/profile/presenter/UserPresenter$j;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;Landroid/content/Context;Ljava/lang/String;)V
 
@@ -1145,7 +1145,7 @@
 
     const-string v2, "context.getString(R.stri\u2026money_transfer_read_more)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, p1, v1}, Lcom/vk/profile/presenter/UserPresenter$k;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -1158,12 +1158,12 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/w;
+    invoke-virtual {v0, p1}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/Dismissable;
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -1193,7 +1193,7 @@
     invoke-virtual {v0, p2}, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;->a(Lcom/vk/dto/user/UserProfile;)Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$a;
 
     .line 12
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     :goto_0
     return-void
@@ -1203,11 +1203,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/u;->g2()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/ProfileContract;->g2()V
 
     return-void
 .end method
@@ -1216,20 +1216,20 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/cameraui/builder/a;
+    new-instance v0, Lcom/vk/cameraui/builder/CameraBuilder;
 
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PROFILE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "profile_button"
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {v0, p1}, Lcom/vk/cameraui/builder/a;->c(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/cameraui/builder/CameraBuilder;->c(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -1238,9 +1238,9 @@
     .locals 2
 
     .line 3
-    sget-object v0, Lcom/vk/newsfeed/posting/l;->T0:Lcom/vk/newsfeed/posting/l$a;
+    sget-object v0, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->T0:Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/l$a;->a()Lcom/vk/newsfeed/posting/l;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;->a()Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
 
     move-result-object v0
 
@@ -1250,45 +1250,45 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p2, v1}, Lcom/vk/newsfeed/posting/l;->a(IZ)Lcom/vk/newsfeed/posting/l;
+    invoke-virtual {v0, p2, v1}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->a(IZ)Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method public final e(Ljava/lang/String;)Lcom/vk/api/friends/b;
+.method public final e(Ljava/lang/String;)Lcom/vk/api/friends/FriendsAddWithRecommendations;
     .locals 2
 
     .line 1
     sget-object v0, Lcom/vk/common/subscribe/SubscribeHelper;->a:Lcom/vk/common/subscribe/SubscribeHelper;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v1
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/common/subscribe/SubscribeHelper;->b(ILjava/lang/String;)Lcom/vk/api/friends/b;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/common/subscribe/SubscribeHelper;->b(ILjava/lang/String;)Lcom/vk/api/friends/FriendsAddWithRecommendations;
 
     move-result-object p1
 
     .line 2
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PROFILE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v0}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/api/friends/b;->d(Ljava/lang/String;)Lcom/vk/api/friends/b;
+    invoke-virtual {p1, v0}, Lcom/vk/api/friends/FriendsAddWithRecommendations;->d(Ljava/lang/String;)Lcom/vk/api/friends/FriendsAddWithRecommendations;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->J()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->J()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/api/friends/b;->e(Ljava/lang/String;)Lcom/vk/api/friends/b;
+    invoke-virtual {p1, v0}, Lcom/vk/api/friends/FriendsAddWithRecommendations;->e(Ljava/lang/String;)Lcom/vk/api/friends/FriendsAddWithRecommendations;
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
@@ -1307,7 +1307,7 @@
 
     :cond_1
     :goto_0
-    invoke-virtual {p1, v1}, Lcom/vk/api/friends/b;->c(Z)Lcom/vk/api/friends/b;
+    invoke-virtual {p1, v1}, Lcom/vk/api/friends/FriendsAddWithRecommendations;->c(Z)Lcom/vk/api/friends/FriendsAddWithRecommendations;
 
     return-object p1
 .end method
@@ -1321,13 +1321,13 @@
     invoke-direct {v0, p1, p0}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/UserPresenter;)V
 
     .line 12
-    iget-object v1, p0, Lcom/vk/profile/presenter/UserPresenter;->n0:Lcom/vk/profile/adapter/a;
+    iget-object v1, p0, Lcom/vk/profile/presenter/UserPresenter;->n0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
-    invoke-virtual {v0, p2}, Lcom/vk/profile/adapter/b/a;->b(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v0, p2}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p2
 
-    invoke-virtual {v1, p2}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v1, p2}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 13
     new-instance p2, Lcom/vk/profile/presenter/UserPresenter$b;
@@ -1335,22 +1335,22 @@
     invoke-direct {p2, p0}, Lcom/vk/profile/presenter/UserPresenter$b;-><init>(Lcom/vk/profile/presenter/UserPresenter;)V
 
     .line 14
-    invoke-direct {p0, p1, p2}, Lcom/vk/profile/presenter/UserPresenter;->a(Landroid/content/Context;Lcom/vk/navigation/g;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/profile/presenter/UserPresenter;->a(Landroid/content/Context;Lcom/vk/navigation/Dismissed;)V
 
     .line 15
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     const v1, 0x7f120bc8
 
     .line 16
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v1, 0x7f040095
 
     .line 17
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 18
     new-instance v1, Landroidx/recyclerview/widget/RecyclerView;
@@ -1368,7 +1368,7 @@
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setId(I)V
 
     .line 21
-    iget-object v2, p0, Lcom/vk/profile/presenter/UserPresenter;->n0:Lcom/vk/profile/adapter/a;
+    iget-object v2, p0, Lcom/vk/profile/presenter/UserPresenter;->n0:Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -1380,115 +1380,115 @@
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     .line 23
-    new-instance v2, Lcom/vk/core/ui/m;
+    new-instance v2, Lcom/vk/core/ui/MilkshakeDecoration;
 
-    invoke-direct {v2}, Lcom/vk/core/ui/m;-><init>()V
+    invoke-direct {v2}, Lcom/vk/core/ui/MilkshakeDecoration;-><init>()V
 
     .line 24
     new-instance v3, Lcom/vk/profile/presenter/UserPresenter$l;
 
     invoke-direct {v3, p0, p1}, Lcom/vk/profile/presenter/UserPresenter$l;-><init>(Lcom/vk/profile/presenter/UserPresenter;Landroid/content/Context;)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/core/ui/m;->a(Lcom/vk/core/ui/n;)Lcom/vk/core/ui/m;
+    invoke-virtual {v2, v3}, Lcom/vk/core/ui/MilkshakeDecoration;->a(Lcom/vk/core/ui/MilkshakeProvider;)Lcom/vk/core/ui/MilkshakeDecoration;
 
     .line 25
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     .line 26
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 27
-    new-instance v1, Lcom/vk/profile/ui/e/a;
+    new-instance v1, Lcom/vk/profile/ui/e/DetailsContentSnapStrategy;
 
-    invoke-direct {v1}, Lcom/vk/profile/ui/e/a;-><init>()V
+    invoke-direct {v1}, Lcom/vk/profile/ui/e/DetailsContentSnapStrategy;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 28
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c()Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 29
     new-instance v1, Lcom/vk/profile/presenter/UserPresenter$m;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/vk/profile/presenter/UserPresenter$m;-><init>(Lcom/vk/profile/presenter/UserPresenter;Landroid/content/Context;Lcom/vk/profile/presenter/UserPresenter$b;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 p1, 0x0
 
     const/4 p2, 0x1
 
     .line 30
-    invoke-static {v0, p1, p2, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v0, p1, p2, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/profile/presenter/UserPresenter;->o0:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object p1, p0, Lcom/vk/profile/presenter/UserPresenter;->o0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method
 
-.method public j1()Lc/a/m;
+.method public j1()Lio/reactivex/Observable;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/api/execute/h;
+    new-instance v0, Lcom/vtosters/lite/api/execute/GetFullUserProfile;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v1
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->D()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->D()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->G()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->G()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/api/execute/h;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vtosters/lite/api/execute/GetFullUserProfile;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     .line 2
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PROFILE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "ref"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->J()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->J()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "track_code"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 4
     iget-boolean v1, p0, Lcom/vk/profile/presenter/UserPresenter;->m0:Z
 
     const-string v2, "track_events"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/base/d;->a(Ljava/lang/String;Z)Lcom/vk/api/base/d;
+    invoke-virtual {v0, v2, v1}, Lcom/vk/api/base/ApiRequest;->a(Ljava/lang/String;Z)Lcom/vk/api/base/ApiRequest;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 5
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1497,7 +1497,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/presenter/UserPresenter$h;-><init>(Lcom/vk/profile/presenter/UserPresenter;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1506,13 +1506,13 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/presenter/UserPresenter$i;-><init>(Lcom/vk/profile/presenter/UserPresenter;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "GetFullUserProfile(uid, \u2026())\n                    }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

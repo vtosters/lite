@@ -3,7 +3,7 @@
 .source "AppUtils.kt"
 
 # interfaces
-.implements Lcom/vk/stat/b/b;
+.implements Lcom/vk/stat/b/EventSender;
 
 
 # annotations
@@ -33,11 +33,11 @@
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vk/api/stats/a;
+    new-instance v0, Lcom/vk/api/stats/StatEventsAdd;
 
-    invoke-direct {v0, p1}, Lcom/vk/api/stats/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/vk/api/stats/StatEventsAdd;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->d()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->d()Ljava/lang/Object;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "LocalGalleryProvider.kt"
 
 # interfaces
-.implements Lcom/vk/photogallery/a;
+.implements Lcom/vk/photogallery/GalleryProvider;
 
 
 # annotations
@@ -18,10 +18,10 @@
 
 
 # instance fields
-.field private final albums:Lio/reactivex/subjects/a;
+.field private final albums:Lio/reactivex/subjects/BehaviorSubject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/subjects/a<",
+            "Lio/reactivex/subjects/BehaviorSubject<",
             "Ljava/util/List<",
             "Lcom/vk/photogallery/LocalGalleryProvider$a;",
             ">;>;"
@@ -48,7 +48,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/vk/photogallery/LocalGalleryProvider;-><init>(IILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/vk/photogallery/LocalGalleryProvider;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -62,20 +62,20 @@
     iput p1, p0, Lcom/vk/photogallery/LocalGalleryProvider;->mediaType:I
 
     .line 2
-    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     iput-object p1, p0, Lcom/vk/photogallery/LocalGalleryProvider;->context:Landroid/content/Context;
 
     .line 3
-    invoke-static {}, Lio/reactivex/subjects/a;->r()Lio/reactivex/subjects/a;
+    invoke-static {}, Lio/reactivex/subjects/BehaviorSubject;->r()Lio/reactivex/subjects/BehaviorSubject;
 
     move-result-object p1
 
     const-string v0, "BehaviorSubject.create()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/photogallery/LocalGalleryProvider;->albums:Lio/reactivex/subjects/a;
+    iput-object p1, p0, Lcom/vk/photogallery/LocalGalleryProvider;->albums:Lio/reactivex/subjects/BehaviorSubject;
 
     .line 4
     new-instance p1, Lcom/vk/photogallery/LocalGalleryProvider$a;
@@ -95,7 +95,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -111,11 +111,11 @@
     return-void
 .end method
 
-.method public static final synthetic access$getAlbums$p(Lcom/vk/photogallery/LocalGalleryProvider;)Lio/reactivex/subjects/a;
+.method public static final synthetic access$getAlbums$p(Lcom/vk/photogallery/LocalGalleryProvider;)Lio/reactivex/subjects/BehaviorSubject;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/photogallery/LocalGalleryProvider;->albums:Lio/reactivex/subjects/a;
+    iget-object p0, p0, Lcom/vk/photogallery/LocalGalleryProvider;->albums:Lio/reactivex/subjects/BehaviorSubject;
 
     return-object p0
 .end method
@@ -167,12 +167,12 @@
     return-object p0
 .end method
 
-.method private final reloadFromMediaStore()Lc/a/m;
+.method private final reloadFromMediaStore()Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/photogallery/LocalGalleryProvider$a;",
             ">;>;"
@@ -180,11 +180,11 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->j()Lcom/vk/mediastore/system/b;
+    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->j()Lcom/vk/mediastore/system/MediaStoreController;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/mediastore/system/b;->b()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/mediastore/system/MediaStoreController;->b()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -195,7 +195,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -203,7 +203,7 @@
 
     .line 3
     :cond_0
-    invoke-static {}, Lc/a/m;->l()Lc/a/m;
+    invoke-static {}, Lio/reactivex/Observable;->l()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -211,18 +211,18 @@
     const-string v1, "if (lastLoadedPhotoVideo\u2026} else Observable.empty()"
 
     .line 4
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     new-instance v1, Lcom/vk/photogallery/LocalGalleryProvider$e;
 
     invoke-direct {v1, p0}, Lcom/vk/photogallery/LocalGalleryProvider$e;-><init>(Lcom/vk/photogallery/LocalGalleryProvider;)V
 
-    invoke-static {v1}, Lc/a/m;->a(Lc/a/o;)Lc/a/m;
+    invoke-static {v1}, Lio/reactivex/Observable;->a(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/p;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/ObservableSource;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -231,7 +231,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/photogallery/LocalGalleryProvider$f;-><init>(Lcom/vk/photogallery/LocalGalleryProvider;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -240,24 +240,24 @@
 
     invoke-direct {v1, p0}, Lcom/vk/photogallery/LocalGalleryProvider$g;-><init>(Lcom/vk/photogallery/LocalGalleryProvider;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 8
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->d()Lc/a/s;
+    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->d()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "cachedAlbums.concatWith(\u2026kExecutors.idleScheduler)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -268,7 +268,7 @@
         value = {
             "(",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/mediastore/system/a;",
+            "Lcom/vk/mediastore/system/AlbumEntry;",
             ">;)",
             "Ljava/util/List<",
             "Lcom/vk/photogallery/LocalGalleryProvider$a;",
@@ -304,30 +304,30 @@
     move-result-object v2
 
     .line 3
-    check-cast v2, Lcom/vk/mediastore/system/a;
+    check-cast v2, Lcom/vk/mediastore/system/AlbumEntry;
 
     .line 4
-    invoke-virtual {v2}, Lcom/vk/mediastore/system/a;->e()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/mediastore/system/AlbumEntry;->e()Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "it.name"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {v2}, Lcom/vk/mediastore/system/a;->b()I
+    invoke-virtual {v2}, Lcom/vk/mediastore/system/AlbumEntry;->b()I
 
     move-result v4
 
     .line 6
-    invoke-virtual {v2}, Lcom/vk/mediastore/system/a;->a()Ljava/util/ArrayList;
+    invoke-virtual {v2}, Lcom/vk/mediastore/system/AlbumEntry;->a()Ljava/util/ArrayList;
 
     move-result-object v2
 
     const-string v5, "it.bucketImages"
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     new-instance v5, Ljava/util/ArrayList;
@@ -358,13 +358,13 @@
     check-cast v6, Lcom/vk/mediastore/system/MediaStoreEntry;
 
     .line 10
-    sget-object v7, Lcom/vk/photogallery/dto/c;->a:Lcom/vk/photogallery/dto/c$a;
+    sget-object v7, Lcom/vk/photogallery/dto/GalleryState2;->a:Lcom/vk/photogallery/dto/GalleryState$a;
 
     const-string v8, "it"
 
-    invoke-static {v6, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v7, v6}, Lcom/vk/photogallery/dto/c$a;->a(Lcom/vk/mediastore/system/MediaStoreEntry;)Lcom/vk/photogallery/dto/e;
+    invoke-virtual {v7, v6}, Lcom/vk/photogallery/dto/GalleryState$a;->a(Lcom/vk/mediastore/system/MediaStoreEntry;)Lcom/vk/photogallery/dto/GalleryState3;
 
     move-result-object v6
 
@@ -401,7 +401,7 @@
 
     const-string v0, "context.getString(R.string.photo_gallery_all)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -415,14 +415,14 @@
     return v0
 .end method
 
-.method public loadAlbums()Lc/a/m;
+.method public loadAlbums()Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/photogallery/dto/a;",
+            "Lcom/vk/photogallery/dto/GalleryState;",
             ">;>;"
         }
     .end annotation
@@ -432,53 +432,53 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/photogallery/LocalGalleryProvider;->albums:Lio/reactivex/subjects/a;
+    iget-object v0, p0, Lcom/vk/photogallery/LocalGalleryProvider;->albums:Lio/reactivex/subjects/BehaviorSubject;
 
-    invoke-virtual {v0}, Lio/reactivex/subjects/a;->q()Z
+    invoke-virtual {v0}, Lio/reactivex/subjects/BehaviorSubject;->q()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Lcom/vk/photogallery/LocalGalleryProvider;->prefetch(Landroid/content/Context;)V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/photogallery/LocalGalleryProvider;->albums:Lio/reactivex/subjects/a;
+    iget-object v0, p0, Lcom/vk/photogallery/LocalGalleryProvider;->albums:Lio/reactivex/subjects/BehaviorSubject;
 
     sget-object v1, Lcom/vk/photogallery/LocalGalleryProvider$b;->a:Lcom/vk/photogallery/LocalGalleryProvider$b;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "albums.map { it as List<Album> }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public loadDefaultAlbum()Lc/a/m;
+.method public loadDefaultAlbum()Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
-            "Lcom/vk/photogallery/dto/a;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/photogallery/dto/GalleryState;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/photogallery/LocalGalleryProvider;->loadAlbums()Lc/a/m;
+    invoke-virtual {p0}, Lcom/vk/photogallery/LocalGalleryProvider;->loadAlbums()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -486,26 +486,26 @@
 
     invoke-direct {v1, p0}, Lcom/vk/photogallery/LocalGalleryProvider$c;-><init>(Lcom/vk/photogallery/LocalGalleryProvider;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "loadAlbums().map { it.fi\u2026tOrNull() ?: emptyAlbum }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public loadEntries(Lcom/vk/photogallery/dto/a;II)Lc/a/m;
+.method public loadEntries(Lcom/vk/photogallery/dto/GalleryState;II)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/photogallery/dto/a;",
+            "Lcom/vk/photogallery/dto/GalleryState;",
             "II)",
-            "Lc/a/m<",
-            "Lcom/vk/photogallery/dto/m;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/photogallery/dto/GalleryState1;",
             ">;"
         }
     .end annotation
@@ -518,7 +518,7 @@
     move-result-object p1
 
     .line 2
-    new-instance p2, Lcom/vk/photogallery/dto/m;
+    new-instance p2, Lcom/vk/photogallery/dto/GalleryState1;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -530,24 +530,24 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p2, p1, v1, p3, v0}, Lcom/vk/photogallery/dto/m;-><init>(Ljava/util/List;III)V
+    invoke-direct {p2, p1, v1, p3, v0}, Lcom/vk/photogallery/dto/GalleryState1;-><init>(Ljava/util/List;III)V
 
-    invoke-static {p2}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p2}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "Observable.just(Paginate\u2026 media.size, media.size))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public onAlbumSelected(Lcom/vk/photogallery/dto/a;)V
+.method public onAlbumSelected(Lcom/vk/photogallery/dto/GalleryState;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/photogallery/a$a;->a(Lcom/vk/photogallery/a;Lcom/vk/photogallery/dto/a;)V
+    invoke-static {p0, p1}, Lcom/vk/photogallery/GalleryProvider$a;->a(Lcom/vk/photogallery/GalleryProvider;Lcom/vk/photogallery/dto/GalleryState;)V
 
     return-void
 .end method
@@ -561,7 +561,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/photogallery/LocalGalleryProvider;->reloadFromMediaStore()Lc/a/m;
+    invoke-direct {p0}, Lcom/vk/photogallery/LocalGalleryProvider;->reloadFromMediaStore()Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -569,7 +569,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/photogallery/LocalGalleryProvider$d;-><init>(Lcom/vk/photogallery/LocalGalleryProvider;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

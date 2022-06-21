@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(ILcom/vk/common/links/f;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(ILcom/vk/common/links/OpenCallback;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/group/Group;",
         ">;"
     }
@@ -34,18 +34,18 @@
 
 .field final synthetic b:Landroid/content/Context;
 
-.field final synthetic c:Lcom/vk/common/links/f;
+.field final synthetic c:Lcom/vk/common/links/OpenCallback;
 
 
 # direct methods
-.method constructor <init>(ILandroid/content/Context;Lcom/vk/common/links/f;)V
+.method constructor <init>(ILandroid/content/Context;Lcom/vk/common/links/OpenCallback;)V
     .locals 0
 
     iput p1, p0, Lcom/vk/common/links/OpenFunctionsKt$n;->a:I
 
     iput-object p2, p0, Lcom/vk/common/links/OpenFunctionsKt$n;->b:Landroid/content/Context;
 
-    iput-object p3, p0, Lcom/vk/common/links/OpenFunctionsKt$n;->c:Lcom/vk/common/links/f;
+    iput-object p3, p0, Lcom/vk/common/links/OpenFunctionsKt$n;->c:Lcom/vk/common/links/OpenCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,7 +58,7 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/fragments/j2$g;
+    new-instance v0, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -76,45 +76,45 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;-><init>(Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p1, Lcom/vk/dto/group/Group;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/j2$g;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/j2$g;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;->a(Ljava/lang/String;)Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
     .line 3
-    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;->m()Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/j2$g;->j()Lcom/vtosters/lite/fragments/j2$g;
+    invoke-virtual {v0}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;->j()Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
     .line 5
     iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$n;->b:Landroid/content/Context;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 6
-    new-instance p1, Lcom/vk/profile/e/b;
+    new-instance p1, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     iget v0, p0, Lcom/vk/common/links/OpenFunctionsKt$n;->a:I
 
-    invoke-direct {p1, v0}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     const-string v0, "unread_messages"
 
     .line 7
-    invoke-virtual {p1, v0}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     .line 9
-    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$n;->c:Lcom/vk/common/links/f;
+    iget-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$n;->c:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/common/links/f;->a()V
+    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->a()V
 
     :cond_0
     return-void

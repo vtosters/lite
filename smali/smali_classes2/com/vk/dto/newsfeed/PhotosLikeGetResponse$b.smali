@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -49,7 +49,7 @@
     move-result-object v1
 
     .line 2
-    sget-object v2, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/c;
+    sget-object v2, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/JsonParser;
 
     if-eqz v1, :cond_1
 
@@ -79,7 +79,7 @@
     if-eqz v6, :cond_0
 
     .line 5
-    invoke-virtual {v2, v6}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {v2, v6}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object v6
 

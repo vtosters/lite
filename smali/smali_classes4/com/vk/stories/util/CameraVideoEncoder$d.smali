@@ -68,12 +68,12 @@
 
     move-result-object v0
 
-    check-cast v0, Lb/h/p/a;
+    check-cast v0, Lb/h/p/MediaEncoder;
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-interface {v0}, Lb/h/p/a;->a()V
+    invoke-interface {v0}, Lb/h/p/MediaEncoder;->a()V
 
     .line 5
     iget-object v0, p0, Lcom/vk/stories/util/CameraVideoEncoder$d;->a:Lcom/vk/stories/util/CameraVideoEncoder;

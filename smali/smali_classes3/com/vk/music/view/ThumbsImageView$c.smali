@@ -3,12 +3,12 @@
 .source "ThumbsImageView.kt"
 
 # interfaces
-.implements Lcom/facebook/common/internal/j;
+.implements Lcom/facebook/common/internal/Supplier;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/view/ThumbsImageView;->a(Lcom/facebook/u/b/a/e;Ljava/util/List;)Lcom/facebook/u/b/a/e;
+    value = Lcom/vk/music/view/ThumbsImageView;->a(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;Ljava/util/List;)Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,10 +22,10 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/facebook/common/internal/j<",
-        "Lcom/facebook/datasource/b<",
-        "Lcom/facebook/common/references/a<",
-        "Lcom/facebook/x/g/c;",
+        "Lcom/facebook/common/internal/Supplier<",
+        "Lcom/facebook/datasource/DataSource<",
+        "Lcom/facebook/common/references/CloseableReference<",
+        "Lcom/facebook/x/g/CloseableImage;",
         ">;>;>;"
     }
 .end annotation

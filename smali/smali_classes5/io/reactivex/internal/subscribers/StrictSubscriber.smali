@@ -3,8 +3,8 @@
 .source "StrictSubscriber.java"
 
 # interfaces
-.implements Lc/a/h;
-.implements Le/b/d;
+.implements Lio/reactivex/FlowableSubscriber;
+.implements Le/b/Subscription;
 
 
 # annotations
@@ -14,9 +14,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lc/a/h<",
+        "Lio/reactivex/FlowableSubscriber<",
         "TT;>;",
-        "Le/b/d;"
+        "Le/b/Subscription;"
     }
 .end annotation
 
@@ -28,10 +28,10 @@
 # instance fields
 .field volatile done:Z
 
-.field final downstream:Le/b/c;
+.field final downstream:Le/b/Subscriber;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TT;>;"
         }
     .end annotation
@@ -47,7 +47,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Le/b/d;",
+            "Le/b/Subscription;",
             ">;"
         }
     .end annotation
@@ -55,12 +55,12 @@
 
 
 # direct methods
-.method public constructor <init>(Le/b/c;)V
+.method public constructor <init>(Le/b/Subscriber;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TT;>;)V"
         }
     .end annotation
@@ -69,7 +69,7 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->downstream:Le/b/c;
+    iput-object p1, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->downstream:Le/b/Subscriber;
 
     .line 3
     new-instance p1, Lio/reactivex/internal/util/AtomicThrowable;
@@ -151,7 +151,7 @@
     return-void
 .end method
 
-.method public a(Le/b/d;)V
+.method public a(Le/b/Subscription;)V
     .locals 3
 
     .line 4
@@ -168,22 +168,22 @@
     if-eqz v0, :cond_0
 
     .line 5
-    iget-object v0, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->downstream:Le/b/Subscriber;
 
-    invoke-interface {v0, p0}, Le/b/c;->a(Le/b/d;)V
+    invoke-interface {v0, p0}, Le/b/Subscriber;->a(Le/b/Subscription;)V
 
     .line 6
     iget-object v0, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->upstream:Ljava/util/concurrent/atomic/AtomicReference;
 
     iget-object v1, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->requested:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-static {v0, v1, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicLong;Le/b/d;)Z
+    invoke-static {v0, v1, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicLong;Le/b/Subscription;)Z
 
     goto :goto_0
 
     .line 7
     :cond_0
-    invoke-interface {p1}, Le/b/d;->cancel()V
+    invoke-interface {p1}, Le/b/Subscription;->cancel()V
 
     .line 8
     invoke-virtual {p0}, Lio/reactivex/internal/subscribers/StrictSubscriber;->cancel()V
@@ -210,11 +210,11 @@
     iput-boolean v0, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->done:Z
 
     .line 11
-    iget-object v0, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->downstream:Le/b/Subscriber;
 
     iget-object v1, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->error:Lio/reactivex/internal/util/AtomicThrowable;
 
-    invoke-static {v0, p1, p0, v1}, Lio/reactivex/internal/util/f;->a(Le/b/c;Ljava/lang/Throwable;Ljava/util/concurrent/atomic/AtomicInteger;Lio/reactivex/internal/util/AtomicThrowable;)V
+    invoke-static {v0, p1, p0, v1}, Lio/reactivex/internal/util/HalfSerializer;->a(Le/b/Subscriber;Ljava/lang/Throwable;Ljava/util/concurrent/atomic/AtomicInteger;Lio/reactivex/internal/util/AtomicThrowable;)V
 
     return-void
 .end method
@@ -228,11 +228,11 @@
     iput-boolean v0, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->done:Z
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->downstream:Le/b/Subscriber;
 
     iget-object v1, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->error:Lio/reactivex/internal/util/AtomicThrowable;
 
-    invoke-static {v0, p0, v1}, Lio/reactivex/internal/util/f;->a(Le/b/c;Ljava/util/concurrent/atomic/AtomicInteger;Lio/reactivex/internal/util/AtomicThrowable;)V
+    invoke-static {v0, p0, v1}, Lio/reactivex/internal/util/HalfSerializer;->a(Le/b/Subscriber;Ljava/util/concurrent/atomic/AtomicInteger;Lio/reactivex/internal/util/AtomicThrowable;)V
 
     return-void
 .end method
@@ -246,11 +246,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->downstream:Le/b/c;
+    iget-object v0, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->downstream:Le/b/Subscriber;
 
     iget-object v1, p0, Lio/reactivex/internal/subscribers/StrictSubscriber;->error:Lio/reactivex/internal/util/AtomicThrowable;
 
-    invoke-static {v0, p1, p0, v1}, Lio/reactivex/internal/util/f;->a(Le/b/c;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicInteger;Lio/reactivex/internal/util/AtomicThrowable;)V
+    invoke-static {v0, p1, p0, v1}, Lio/reactivex/internal/util/HalfSerializer;->a(Le/b/Subscriber;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicInteger;Lio/reactivex/internal/util/AtomicThrowable;)V
 
     return-void
 .end method

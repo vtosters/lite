@@ -3,7 +3,7 @@
 .source "NarrativeController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/imageloader/o/f;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/imageloader/o/StoryPreviewPostProcessor;",
         ">;"
     }
 .end annotation
@@ -55,15 +55,15 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/imageloader/o/f;
+.method public final invoke()Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/imageloader/o/f;
+    new-instance v0, Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
     const/16 v1, 0xa
 
-    invoke-direct {v0, v1}, Lcom/vk/imageloader/o/f;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/imageloader/o/StoryPreviewPostProcessor;-><init>(I)V
 
     return-object v0
 .end method
@@ -72,7 +72,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/narratives/NarrativeController$storyNarrativeProcessor$2;->invoke()Lcom/vk/imageloader/o/f;
+    invoke-virtual {p0}, Lcom/vk/narratives/NarrativeController$storyNarrativeProcessor$2;->invoke()Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
     move-result-object v0
 

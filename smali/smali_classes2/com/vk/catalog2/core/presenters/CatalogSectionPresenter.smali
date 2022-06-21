@@ -1,5 +1,5 @@
 .class public Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;
-.super Lcom/vk/catalog2/core/presenters/c;
+.super Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;
 .source "CatalogSectionPresenter.kt"
 
 
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/catalog2/core/presenters/c<",
-        "Lcom/vk/catalog2/core/api/dto/d<",
+        "Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter<",
+        "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
         "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
         ">;>;"
     }
@@ -27,9 +27,9 @@
 
 
 # instance fields
-.field private final B:Lcom/vk/catalog2/core/e;
+.field private final B:Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
-.field private final C:Lcom/vk/catalog2/core/presenters/e;
+.field private final C:Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;
 
 .field private final D:Z
 
@@ -39,19 +39,19 @@
 
 .field private e:Z
 
-.field private f:Lio/reactivex/disposables/b;
+.field private f:Lio/reactivex/disposables/Disposable;
 
-.field private final g:Lcom/vk/catalog2/core/api/f;
+.field private final g:Lcom/vk/catalog2/core/api/CatalogRequestFactory;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/catalog2/core/api/f<",
+            "Lcom/vk/catalog2/core/api/CatalogRequestFactory<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final h:Lcom/vk/catalog2/core/i;
+.field private final h:Lcom/vk/catalog2/core/CatalogResponseTransformer;
 
 
 # direct methods
@@ -62,7 +62,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$a;
@@ -81,17 +81,17 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/catalog2/core/api/f;Lcom/vk/catalog2/core/i;Lcom/vk/catalog2/core/e;Lcom/vk/catalog2/core/presenters/e;ZLcom/vk/catalog2/core/blocks/UIBlockList;)V
+.method public constructor <init>(Lcom/vk/catalog2/core/api/CatalogRequestFactory;Lcom/vk/catalog2/core/CatalogResponseTransformer;Lcom/vk/catalog2/core/CatalogEntryPointParams;Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;ZLcom/vk/catalog2/core/blocks/UIBlockList;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/catalog2/core/api/f<",
+            "Lcom/vk/catalog2/core/api/CatalogRequestFactory<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;",
-            "Lcom/vk/catalog2/core/i;",
-            "Lcom/vk/catalog2/core/e;",
-            "Lcom/vk/catalog2/core/presenters/e;",
+            "Lcom/vk/catalog2/core/CatalogResponseTransformer;",
+            "Lcom/vk/catalog2/core/CatalogEntryPointParams;",
+            "Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;",
             "Z",
             "Lcom/vk/catalog2/core/blocks/UIBlockList;",
             ")V"
@@ -99,15 +99,15 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/catalog2/core/presenters/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->g:Lcom/vk/catalog2/core/api/f;
+    iput-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->g:Lcom/vk/catalog2/core/api/CatalogRequestFactory;
 
-    iput-object p2, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->h:Lcom/vk/catalog2/core/i;
+    iput-object p2, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->h:Lcom/vk/catalog2/core/CatalogResponseTransformer;
 
-    iput-object p3, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->B:Lcom/vk/catalog2/core/e;
+    iput-object p3, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->B:Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
-    iput-object p4, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->C:Lcom/vk/catalog2/core/presenters/e;
+    iput-object p4, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->C:Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;
 
     iput-boolean p5, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->D:Z
 
@@ -116,31 +116,31 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)Lcom/vk/catalog2/core/e;
+.method public static final synthetic a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)Lcom/vk/catalog2/core/CatalogEntryPointParams;
     .locals 0
 
     .line 3
-    iget-object p0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->B:Lcom/vk/catalog2/core/e;
+    iget-object p0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->B:Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;Lcom/vk/catalog2/core/w/e/o;)Lcom/vk/catalog2/core/holders/common/i;
+.method public static final synthetic a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;Lcom/vk/catalog2/core/w/e/CatalogCommand2;)Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/w/e/o;)Lcom/vk/catalog2/core/holders/common/i;
+    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lcom/vk/catalog2/core/w/e/CatalogCommand2;)Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/catalog2/core/w/e/o;)Lcom/vk/catalog2/core/holders/common/i;
+.method private final a(Lcom/vk/catalog2/core/w/e/CatalogCommand2;)Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;
     .locals 1
 
     .line 26
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/o;->c()Z
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/CatalogCommand2;->c()Z
 
     move-result v0
 
@@ -153,7 +153,7 @@
     :cond_0
     new-instance v0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$d;
 
-    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$d;-><init>(Lcom/vk/catalog2/core/w/e/o;)V
+    invoke-direct {v0, p1}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$d;-><init>(Lcom/vk/catalog2/core/w/e/CatalogCommand2;)V
 
     move-object p1, v0
 
@@ -165,13 +165,13 @@
     .locals 1
 
     .line 25
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/c;->o()Lcom/vk/catalog2/core/holders/common/g;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->o()Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/h;->b(Lcom/vk/catalog2/core/blocks/UIBlock;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogPaginatedViewHolder;->b(Lcom/vk/catalog2/core/blocks/UIBlock;)V
 
     :cond_0
     return-void
@@ -204,7 +204,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;ZLcom/vk/catalog2/core/holders/common/i;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;ZLcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;ILjava/lang/Object;)V
     .locals 0
 
     if-nez p4, :cond_2
@@ -224,7 +224,7 @@
     sget-object p2, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->F:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$a;
 
     :cond_1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(ZLcom/vk/catalog2/core/holders/common/i;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(ZLcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;)V
 
     return-void
 
@@ -254,7 +254,7 @@
     if-ge p2, p3, :cond_0
 
     .line 27
-    invoke-static {p2, p3}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {p2, p3}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v0
 
@@ -263,7 +263,7 @@
     :cond_0
     add-int/lit8 v0, p3, 0x1
 
-    invoke-static {p2, v0}, Lkotlin/t/e;->c(II)Lkotlin/t/b;
+    invoke-static {p2, v0}, Lkotlin/t/e;->c(II)Lkotlin/t/Progressions;
 
     move-result-object v0
 
@@ -279,15 +279,15 @@
 
     .line 28
     :goto_1
-    invoke-virtual {v0}, Lkotlin/t/b;->a()I
+    invoke-virtual {v0}, Lkotlin/t/Progressions;->a()I
 
     move-result p3
 
-    invoke-virtual {v0}, Lkotlin/t/b;->b()I
+    invoke-virtual {v0}, Lkotlin/t/Progressions;->b()I
 
     move-result v1
 
-    invoke-virtual {v0}, Lkotlin/t/b;->c()I
+    invoke-virtual {v0}, Lkotlin/t/Progressions;->c()I
 
     move-result v0
 
@@ -325,7 +325,7 @@
             "Lcom/vk/catalog2/core/blocks/UIBlock;",
             ">;",
             "Ljava/util/List<",
-            "Lcom/vk/catalog2/core/util/k;",
+            "Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;",
             ">;)V"
         }
     .end annotation
@@ -354,18 +354,18 @@
 
     move-object v2, v1
 
-    check-cast v2, Lcom/vk/catalog2/core/util/k;
+    check-cast v2, Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;
 
     .line 31
-    invoke-virtual {v2}, Lcom/vk/catalog2/core/util/k;->b()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;->b()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2}, Lcom/vk/catalog2/core/util/k;->c()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;->c()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -394,7 +394,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/catalog2/core/util/k;
+    check-cast v0, Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;
 
     .line 33
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -426,11 +426,11 @@
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/util/k;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;->b()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -471,11 +471,11 @@
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/util/k;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/util/ReorderBlockIdInfo;->c()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -501,11 +501,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)Lcom/vk/catalog2/core/presenters/e;
+.method public static final synthetic b(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->C:Lcom/vk/catalog2/core/presenters/e;
+    iget-object p0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->C:Lcom/vk/catalog2/core/presenters/CatalogReorderingPresenter;
 
     return-object p0
 .end method
@@ -529,7 +529,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/c;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
@@ -546,7 +546,7 @@
     move-object v7, v0
 
     .line 11
-    new-instance v8, Lcom/vk/catalog2/core/util/b;
+    new-instance v8, Lcom/vk/catalog2/core/util/BlockListDiffCallback;
 
     const/4 v3, 0x0
 
@@ -560,7 +560,7 @@
 
     move-object v2, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/util/b;-><init>(Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/catalog2/core/util/BlockListDiffCallback;-><init>(Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-static {v8}, Landroidx/recyclerview/widget/DiffUtil;->calculateDiff(Landroidx/recyclerview/widget/DiffUtil$Callback;)Landroidx/recyclerview/widget/DiffUtil$DiffResult;
 
@@ -568,19 +568,19 @@
 
     const-string v1, "DiffUtil.calculateDiff(B\u2026llback(oldData, newData))"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     iput-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->E:Lcom/vk/catalog2/core/blocks/UIBlockList;
 
     .line 13
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/c;->o()Lcom/vk/catalog2/core/holders/common/g;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->o()Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v1, v0, v7, v6, p1}, Lcom/vk/catalog2/core/holders/common/h;->a(Landroidx/recyclerview/widget/DiffUtil$DiffResult;Ljava/util/List;Ljava/util/List;Lcom/vk/catalog2/core/blocks/UIBlockList;)V
+    invoke-interface {v1, v0, v7, v6, p1}, Lcom/vk/catalog2/core/holders/common/CatalogPaginatedViewHolder;->a(Landroidx/recyclerview/widget/DiffUtil$DiffResult;Ljava/util/List;Ljava/util/List;Lcom/vk/catalog2/core/blocks/UIBlockList;)V
 
     :cond_1
     return-void
@@ -608,13 +608,13 @@
     .locals 1
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/c;->o()Lcom/vk/catalog2/core/holders/common/g;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->o()Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/n;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
 
     :cond_0
     return-void
@@ -638,11 +638,11 @@
     return p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)Lcom/vk/catalog2/core/i;
+.method public static final synthetic d(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)Lcom/vk/catalog2/core/CatalogResponseTransformer;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->h:Lcom/vk/catalog2/core/i;
+    iget-object p0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->h:Lcom/vk/catalog2/core/CatalogResponseTransformer;
 
     return-object p0
 .end method
@@ -695,17 +695,17 @@
     return p0
 .end method
 
-.method private final r()Lio/reactivex/disposables/b;
+.method private final r()Lio/reactivex/disposables/Disposable;
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->B:Lcom/vk/catalog2/core/e;
+    iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->B:Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/e;->e()Lcom/vk/catalog2/core/w/a;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/CatalogEntryPointParams;->e()Lcom/vk/catalog2/core/w/CatalogCommandsBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/w/a;->a()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/w/CatalogCommandsBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -717,35 +717,35 @@
     sget-object v2, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$h;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$h;
 
     .line 3
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "entryPointParams.command\u2026       L.e(it)\n        })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
-            "Lcom/vk/catalog2/core/api/dto/d<",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;>;"
         }
     .end annotation
 
     .line 20
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/c;->o()Lcom/vk/catalog2/core/holders/common/g;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->o()Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;
 
     move-result-object v0
 
@@ -753,18 +753,18 @@
 
     sget-object v1, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->G:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$b;
 
-    invoke-interface {v0, v1}, Lcom/vk/catalog2/core/holders/common/f;->a(Lcom/vk/catalog2/core/holders/common/i;)V
+    invoke-interface {v0, v1}, Lcom/vk/catalog2/core/holders/common/CatalogListViewHolder;->a(Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;)V
 
     .line 21
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/vk/catalog2/core/presenters/c;->a(Lcom/vk/lists/t;Z)Lc/a/m;
+    invoke-super {p0, p1, p2}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Ljava/lang/String;Ljava/lang/Integer;)Lc/a/m;
+.method public a(Ljava/lang/String;Ljava/lang/Integer;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -772,15 +772,15 @@
             "Ljava/lang/String;",
             "Ljava/lang/Integer;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/catalog2/core/api/dto/d<",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;>;"
         }
     .end annotation
 
     .line 23
-    iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->g:Lcom/vk/catalog2/core/api/f;
+    iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->g:Lcom/vk/catalog2/core/api/CatalogRequestFactory;
 
     iget-object v1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->E:Lcom/vk/catalog2/core/blocks/UIBlockList;
 
@@ -796,22 +796,22 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-interface {v0, v1, p1, p2}, Lcom/vk/catalog2/core/api/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Lc/a/m;
+    invoke-interface {v0, v1, p1, p2}, Lcom/vk/catalog2/core/api/CatalogRequestFactory;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 24
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "observable.observeOn(And\u2026dSchedulers.mainThread())"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -827,16 +827,16 @@
     return-void
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
-            "Lcom/vk/catalog2/core/api/dto/d<",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;>;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -846,7 +846,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$e;-><init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;)V
 
-    invoke-virtual {p1, p3}, Lc/a/m;->b(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {p1, p3}, Lio/reactivex/Observable;->b(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -859,25 +859,25 @@
     sget-object p2, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$g;->a:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$g;
 
     .line 9
-    invoke-virtual {p1, p3, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p3, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 10
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/c;->e()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->e()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p2, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
 
-.method public a(Lcom/vk/catalog2/core/holders/common/g;)V
+.method public a(Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;)V
     .locals 4
 
     .line 11
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/presenters/c;->c(Lcom/vk/catalog2/core/holders/common/g;)V
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->c(Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;)V
 
     .line 12
     iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->E:Lcom/vk/catalog2/core/blocks/UIBlockList;
@@ -900,23 +900,23 @@
 
     iget-object v3, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->E:Lcom/vk/catalog2/core/blocks/UIBlockList;
 
-    invoke-interface {p1, v0, v1, v2, v3}, Lcom/vk/catalog2/core/holders/common/h;->a(Ljava/lang/String;ZZLcom/vk/catalog2/core/blocks/UIBlockList;)Lcom/vk/lists/t;
+    invoke-interface {p1, v0, v1, v2, v3}, Lcom/vk/catalog2/core/holders/common/CatalogPaginatedViewHolder;->a(Ljava/lang/String;ZZLcom/vk/catalog2/core/blocks/UIBlockList;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/presenters/c;->a(Lcom/vk/lists/t;)V
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->a(Lcom/vk/lists/PaginationHelper;)V
 
     .line 13
-    invoke-direct {p0}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->r()Lio/reactivex/disposables/b;
+    invoke-direct {p0}, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->r()Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->f:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->f:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public final a(ZLcom/vk/catalog2/core/holders/common/i;)V
+.method public final a(ZLcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;)V
     .locals 1
 
     const/4 v0, 0x1
@@ -928,17 +928,17 @@
     iput-boolean p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->e:Z
 
     .line 18
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/c;->o()Lcom/vk/catalog2/core/holders/common/g;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->o()Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1, p2}, Lcom/vk/catalog2/core/holders/common/f;->a(Lcom/vk/catalog2/core/holders/common/i;)V
+    invoke-interface {p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogListViewHolder;->a(Lcom/vk/catalog2/core/holders/common/CatalogScrollToTopStrategy;)V
 
     .line 19
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/c;->b()Lcom/vk/lists/t;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->b()Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
@@ -946,21 +946,21 @@
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, p2}, Lcom/vk/lists/t;->a(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/lists/PaginationHelper;->a(Z)V
 
     :cond_1
     return-void
 .end method
 
-.method public b(Lcom/vk/catalog2/core/holders/common/g;)V
+.method public b(Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;)V
     .locals 1
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/c;->o()Lcom/vk/catalog2/core/holders/common/g;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->o()Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -969,31 +969,31 @@
     const/4 p1, 0x0
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/presenters/c;->c(Lcom/vk/catalog2/core/holders/common/g;)V
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->c(Lcom/vk/catalog2/core/holders/common/CatalogPaginatedListViewHolder;)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/c;->b()Lcom/vk/lists/t;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->b()Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->j()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->j()V
 
     .line 7
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/c;->e()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;->e()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lio/reactivex/disposables/a;->a()V
+    invoke-virtual {p1}, Lio/reactivex/disposables/CompositeDisposable;->a()V
 
     .line 8
-    iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->f:Lio/reactivex/disposables/b;
+    iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->f:Lio/reactivex/disposables/Disposable;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_1
     return-void
@@ -1016,7 +1016,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p0}, Lcom/vk/core/extensions/k;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vk/core/extensions/GeneralFunctions;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 

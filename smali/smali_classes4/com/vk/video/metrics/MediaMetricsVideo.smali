@@ -14,9 +14,9 @@
 # instance fields
 .field private a:Ljava/lang/String;
 
-.field private b:Lcom/vigo/metrics/listeners/b;
+.field private b:Lcom/vigo/metrics/listeners/VigoPlayerListener;
 
-.field private c:Lcom/vigo/metrics/x;
+.field private c:Lcom/vigo/metrics/VigoSession;
 
 .field public d:Lcom/vk/video/metrics/MediaMetricsVideo$a;
 
@@ -92,11 +92,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/video/metrics/MediaMetricsVideo;)Lcom/vigo/metrics/listeners/b;
+.method public static final synthetic a(Lcom/vk/video/metrics/MediaMetricsVideo;)Lcom/vigo/metrics/listeners/VigoPlayerListener;
     .locals 0
 
     .line 3
-    iget-object p0, p0, Lcom/vk/video/metrics/MediaMetricsVideo;->b:Lcom/vigo/metrics/listeners/b;
+    iget-object p0, p0, Lcom/vk/video/metrics/MediaMetricsVideo;->b:Lcom/vigo/metrics/listeners/VigoPlayerListener;
 
     return-object p0
 .end method
@@ -118,11 +118,11 @@
     if-eqz p2, :cond_1
 
     .line 27
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/k0;->b()Z
+    invoke-interface {p1}, Lcom/vk/bridges/VideoBridge1;->b()Z
 
     move-result p1
 
@@ -141,11 +141,11 @@
     if-eqz p1, :cond_3
 
     .line 28
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/k0;->b()Z
+    invoke-interface {p1}, Lcom/vk/bridges/VideoBridge1;->b()Z
 
     move-result p1
 
@@ -162,11 +162,11 @@
 
     .line 29
     :cond_3
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/k0;->b()Z
+    invoke-interface {p1}, Lcom/vk/bridges/VideoBridge1;->b()Z
 
     move-result p1
 
@@ -207,7 +207,7 @@
     .line 17
     sget-object p1, Lcom/vk/video/metrics/MediaMetricsHolder;->d:Lcom/vk/video/metrics/MediaMetricsHolder;
 
-    invoke-virtual {p1}, Lcom/vk/video/metrics/MediaMetricsHolder;->a()Lcom/vigo/metrics/l;
+    invoke-virtual {p1}, Lcom/vk/video/metrics/MediaMetricsHolder;->a()Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     move-result-object p1
 
@@ -215,14 +215,14 @@
 
     move-result-object p4
 
-    invoke-virtual {p1, p4}, Lcom/vigo/metrics/l;->a(Ljava/lang/String;)Lcom/vigo/metrics/x;
+    invoke-virtual {p1, p4}, Lcom/vigo/metrics/VigoBootstrapBuilder;->a(Ljava/lang/String;)Lcom/vigo/metrics/VigoSession;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/video/metrics/MediaMetricsVideo;->c:Lcom/vigo/metrics/x;
+    iput-object p1, p0, Lcom/vk/video/metrics/MediaMetricsVideo;->c:Lcom/vigo/metrics/VigoSession;
 
     .line 18
-    iget-object v0, p0, Lcom/vk/video/metrics/MediaMetricsVideo;->c:Lcom/vigo/metrics/x;
+    iget-object v0, p0, Lcom/vk/video/metrics/MediaMetricsVideo;->c:Lcom/vigo/metrics/VigoSession;
 
     if-eqz v0, :cond_0
 
@@ -249,7 +249,7 @@
     move-object v2, p2
 
     .line 21
-    invoke-virtual/range {v0 .. v6}, Lcom/vigo/metrics/x;->a(Ljava/lang/String;Ljava/lang/String;BZLcom/vigo/metrics/listeners/a;Landroid/os/Handler;)Lcom/vigo/metrics/listeners/b;
+    invoke-virtual/range {v0 .. v6}, Lcom/vigo/metrics/VigoSession;->a(Ljava/lang/String;Ljava/lang/String;BZLcom/vigo/metrics/listeners/VigoHeartbeatDataProvider;Landroid/os/Handler;)Lcom/vigo/metrics/listeners/VigoPlayerListener;
 
     move-result-object p1
 
@@ -259,18 +259,18 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-object p1, p0, Lcom/vk/video/metrics/MediaMetricsVideo;->b:Lcom/vigo/metrics/listeners/b;
+    iput-object p1, p0, Lcom/vk/video/metrics/MediaMetricsVideo;->b:Lcom/vigo/metrics/listeners/VigoPlayerListener;
 
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/a;)V
+.method private final a(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -284,9 +284,9 @@
 
     if-eqz p1, :cond_0
 
-    new-instance v1, Lcom/vk/video/metrics/a;
+    new-instance v1, Lcom/vk/video/metrics/MediaMetricsVideo1;
 
-    invoke-direct {v1, p1}, Lcom/vk/video/metrics/a;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/video/metrics/MediaMetricsVideo1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     move-object p1, v1
 
@@ -340,11 +340,11 @@
     return p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/video/metrics/MediaMetricsVideo;)Lcom/vigo/metrics/x;
+.method public static final synthetic b(Lcom/vk/video/metrics/MediaMetricsVideo;)Lcom/vigo/metrics/VigoSession;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/video/metrics/MediaMetricsVideo;->c:Lcom/vigo/metrics/x;
+    iget-object p0, p0, Lcom/vk/video/metrics/MediaMetricsVideo;->c:Lcom/vigo/metrics/VigoSession;
 
     return-object p0
 .end method
@@ -373,7 +373,7 @@
     :cond_0
     const-string v0, "provider"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -402,7 +402,7 @@
 
     move-object v0, p0
 
-    invoke-direct {p0, v9}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v9}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -424,7 +424,7 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/video/metrics/MediaMetricsVideo$onBitrateChanged$1;-><init>(Lcom/vk/video/metrics/MediaMetricsVideo;ILkotlin/Pair;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -437,7 +437,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/video/metrics/MediaMetricsVideo$setHost$1;-><init>(Lcom/vk/video/metrics/MediaMetricsVideo;Landroid/net/Uri;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -473,7 +473,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/vk/video/metrics/MediaMetricsVideo$start$1;-><init>(Lcom/vk/video/metrics/MediaMetricsVideo;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0, v7}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v7}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -486,7 +486,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/video/metrics/MediaMetricsVideo$onPlayerError$1;-><init>(Lcom/vk/video/metrics/MediaMetricsVideo;Ljava/lang/Throwable;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -499,7 +499,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/video/metrics/MediaMetricsVideo$onLoadingChanged$1;-><init>(Lcom/vk/video/metrics/MediaMetricsVideo;Z)V
 
-    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -528,7 +528,7 @@
 
     move-object v0, p0
 
-    invoke-direct {p0, v9}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v9}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -557,7 +557,7 @@
 
     move-object v0, p0
 
-    invoke-direct {p0, v9}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v9}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -596,19 +596,19 @@
 
     invoke-direct/range {v3 .. v8}, Lcom/vk/video/metrics/MediaMetricsVideo$onPlayerPaused$1;-><init>(Lcom/vk/video/metrics/MediaMetricsVideo;JJ)V
 
-    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 
     .line 6
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 7
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -647,19 +647,19 @@
 
     invoke-direct/range {v3 .. v8}, Lcom/vk/video/metrics/MediaMetricsVideo$onPlayerPlay$1;-><init>(Lcom/vk/video/metrics/MediaMetricsVideo;JJ)V
 
-    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 
     .line 5
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 6
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -698,19 +698,19 @@
 
     invoke-direct/range {v3 .. v8}, Lcom/vk/video/metrics/MediaMetricsVideo$onPlayerRelease$1;-><init>(Lcom/vk/video/metrics/MediaMetricsVideo;JJ)V
 
-    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 
     .line 4
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 5
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -723,7 +723,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/video/metrics/MediaMetricsVideo$stop$1;-><init>(Lcom/vk/video/metrics/MediaMetricsVideo;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method

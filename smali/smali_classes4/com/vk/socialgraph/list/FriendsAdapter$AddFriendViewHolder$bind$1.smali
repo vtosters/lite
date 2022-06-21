@@ -3,7 +3,7 @@
 .source "FriendsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder$bind$1;->this$0:Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;
 
-    invoke-static {p1}, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->b(Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;)Lkotlin/jvm/b/b;
+    invoke-static {p1}, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->b(Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;)Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder$bind$1;->$requestUserProfile:Lcom/vk/dto/user/RequestUserProfile;
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder$bind$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

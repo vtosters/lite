@@ -42,7 +42,7 @@
 
     iget-object v0, v0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->e:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->p(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/b0/a;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->p(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/b0/VideoSessionController;
 
     move-result-object v0
 
@@ -50,20 +50,20 @@
 
     iget-object v1, v1, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->e:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-virtual {v1}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {v1}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2, v2}, Lcom/vk/libvideo/b0/a;->a(Landroid/view/View;ZZ)V
+    invoke-virtual {v0, v1, v2, v2}, Lcom/vk/libvideo/b0/VideoSessionController;->a(Landroid/view/View;ZZ)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g$a;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;
 
     iget-object v0, v0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->e:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->p(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/b0/a;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->p(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/b0/VideoSessionController;
 
     move-result-object v0
 
@@ -71,11 +71,11 @@
 
     iget-object v1, v1, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;->e:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-virtual {v1}, Lcom/vk/libvideo/dialogs/d;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
+    invoke-virtual {v1}, Lcom/vk/libvideo/dialogs/BaseAnimationDialog;->q()Lcom/vk/libvideo/ui/layout/AbstractSwipeLayout;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/b0/a;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/b0/VideoSessionController;->a(Landroid/view/View;)V
 
     return-void
 .end method

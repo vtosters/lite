@@ -3,7 +3,7 @@
 .source "ProfileCounters.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/lang/Integer;",
         ">;"
@@ -60,20 +60,20 @@
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vtosters/lite/api/i;
+    instance-of v0, p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->p()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->p()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->o()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->o()I
 
     move-result p1
 

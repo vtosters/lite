@@ -3,7 +3,7 @@
 .source "CommunityPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -57,25 +57,25 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Boolean;)Lc/a/m;
+.method public final a(Ljava/lang/Boolean;)Lio/reactivex/Observable;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Boolean;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance p1, Lcom/vk/api/groups/s;
+    new-instance p1, Lcom/vk/api/groups/GroupsJoin;
 
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$f;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v0
 
@@ -99,7 +99,7 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/api/groups/s;-><init>(IZLjava/lang/String;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/api/groups/GroupsJoin;-><init>(IZLjava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$f;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
@@ -107,11 +107,11 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/api/groups/s;->e(Ljava/lang/String;)Lcom/vk/api/groups/s;
+    invoke-virtual {p1, v0}, Lcom/vk/api/groups/GroupsJoin;->e(Ljava/lang/String;)Lcom/vk/api/groups/GroupsJoin;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, v8, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, v0, v8, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -124,7 +124,7 @@
     .line 1
     check-cast p1, Ljava/lang/Boolean;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$f;->a(Ljava/lang/Boolean;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$f;->a(Ljava/lang/Boolean;)Lio/reactivex/Observable;
 
     move-result-object p1
 

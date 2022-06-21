@@ -3,12 +3,12 @@
 .source "DefaultNewsfeedLoadingDelegate.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate;->a(Lc/a/m;ILc/a/m;)Lc/a/m;
+    value = Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate;->a(Lio/reactivex/Observable;ILio/reactivex/Observable;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -37,18 +37,18 @@
 
 .field final synthetic b:I
 
-.field final synthetic c:Lc/a/m;
+.field final synthetic c:Lio/reactivex/Observable;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate;ILc/a/m;)V
+.method constructor <init>(Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate;ILio/reactivex/Observable;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate$a;->a:Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate;
 
     iput p2, p0, Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate$a;->b:I
 
-    iput-object p3, p0, Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate$a;->c:Lc/a/m;
+    iput-object p3, p0, Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate$a;->c:Lio/reactivex/Observable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,14 +57,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Lc/a/m;
+.method public final a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
@@ -80,7 +80,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -95,13 +95,13 @@
     invoke-virtual {p1, v0}, Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate;->c(I)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate$a;->c:Lc/a/m;
+    iget-object p1, p0, Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate$a;->c:Lio/reactivex/Observable;
 
     new-instance v0, Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate$a$a;
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate$a$a;-><init>(Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate$a;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -115,7 +115,7 @@
     .line 1
     check-cast p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate$a;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/loading/DefaultNewsfeedLoadingDelegate$a;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)Lio/reactivex/Observable;
 
     move-result-object p1
 

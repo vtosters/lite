@@ -15,11 +15,11 @@
 
 
 # static fields
-.field static final synthetic k:[Lkotlin/u/j;
+.field static final synthetic k:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lkotlin/e;
+.field private final a:Lkotlin/Lazy2;
 
 .field private final b:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$a;
 
@@ -46,13 +46,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -60,15 +60,15 @@
 
     const-string v4, "getFields()Ljava/util/List;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->k:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->k:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -104,11 +104,11 @@
 
     invoke-direct {p2, p0}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload$fields$2;-><init>(Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;)V
 
-    invoke-static {p1, p2}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1, p2}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->a:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->a:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -173,7 +173,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -191,7 +191,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -220,7 +220,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -238,7 +238,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -317,7 +317,7 @@
     goto/16 :goto_0
 
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v7
 
@@ -354,15 +354,15 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->a:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->a:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->k:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->k:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -395,7 +395,7 @@
 
     iget-object v1, p1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->b:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -405,7 +405,7 @@
 
     iget-object v1, p1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->c:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -415,7 +415,7 @@
 
     iget-object v1, p1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->d:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -425,7 +425,7 @@
 
     iget-object v1, p1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->e:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -435,7 +435,7 @@
 
     iget-object v1, p1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->f:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -445,7 +445,7 @@
 
     iget-object v1, p1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->g:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -455,7 +455,7 @@
 
     iget-object v1, p1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->h:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -465,7 +465,7 @@
 
     iget-object v1, p1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->i:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$a;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -475,7 +475,7 @@
 
     iget-object p1, p1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;->j:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$a;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

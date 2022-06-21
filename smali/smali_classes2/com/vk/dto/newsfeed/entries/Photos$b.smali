@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -73,7 +73,7 @@
 
     move-object v7, v4
 
-    invoke-direct/range {v7 .. v15}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v15}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 24
     iget-object v1, v0, Lcom/vk/dto/photo/Photo;->T:Lcom/vk/dto/user/UserProfile;
@@ -390,7 +390,7 @@
 
     move-object v5, v0
 
-    invoke-direct/range {v5 .. v15}, Lcom/vk/dto/newsfeed/entries/Photos;-><init>(IIILcom/vk/dto/newsfeed/Owner;ILjava/util/ArrayList;ILcom/vk/dto/newsfeed/CommentPreview;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v5 .. v15}, Lcom/vk/dto/newsfeed/entries/Photos;-><init>(IIILcom/vk/dto/newsfeed/Owner;ILjava/util/ArrayList;ILcom/vk/dto/newsfeed/CommentPreview;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 

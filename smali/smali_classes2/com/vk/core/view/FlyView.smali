@@ -21,10 +21,10 @@
 
 .field private c:I
 
-.field private d:Lkotlin/jvm/b/b;
+.field private d:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/view/View;",
             "Landroid/animation/ObjectAnimator;",
@@ -69,7 +69,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/view/FlyView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/view/FlyView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -89,7 +89,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/FlyView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/FlyView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -109,7 +109,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/FlyView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/FlyView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -174,7 +174,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -328,7 +328,7 @@
 
     if-lt p2, v0, :cond_0
 
-    invoke-static {}, Lb/h/g/g/b;->j()Z
+    invoke-static {}, Lb/h/g/g/BuildInfo;->j()Z
 
     move-result v0
 
@@ -492,11 +492,11 @@
     float-to-int v3, v3
 
     .line 6
-    iget-object v4, p0, Lcom/vk/core/view/FlyView;->d:Lkotlin/jvm/b/b;
+    iget-object v4, p0, Lcom/vk/core/view/FlyView;->d:Lkotlin/jvm/b/Functions2;
 
     if-eqz v4, :cond_1
 
-    invoke-interface {v4, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -516,7 +516,7 @@
     .line 8
     iget-object v6, p0, Lcom/vk/core/view/FlyView;->h:Ljava/util/Map;
 
-    invoke-static {v5, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v5, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v7
 
@@ -753,12 +753,12 @@
     return v0
 .end method
 
-.method public final getCustomAnimationWhileFlyingProvider()Lkotlin/jvm/b/b;
+.method public final getCustomAnimationWhileFlyingProvider()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Landroid/view/View;",
             "Landroid/animation/ObjectAnimator;",
             ">;"
@@ -766,7 +766,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/view/FlyView;->d:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/core/view/FlyView;->d:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
@@ -848,12 +848,12 @@
     return-void
 .end method
 
-.method public final setCustomAnimationWhileFlyingProvider(Lkotlin/jvm/b/b;)V
+.method public final setCustomAnimationWhileFlyingProvider(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/view/View;",
             "Landroid/animation/ObjectAnimator;",
@@ -862,7 +862,7 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/core/view/FlyView;->d:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/core/view/FlyView;->d:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
@@ -897,7 +897,7 @@
     const-string v1, "it"
 
     .line 4
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 

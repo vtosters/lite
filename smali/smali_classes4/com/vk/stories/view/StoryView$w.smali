@@ -3,7 +3,7 @@
 .source "StoryView.java"
 
 # interfaces
-.implements Lcom/vk/imageloader/g;
+.implements Lcom/vk/imageloader/OnLoadCallback;
 
 
 # annotations
@@ -61,7 +61,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$w;->b:Lcom/vk/stories/view/StoryView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/e1;->t()V
+    invoke-virtual {v0}, Lcom/vk/stories/view/BaseStoryView;->t()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$w;->b:Lcom/vk/stories/view/StoryView;

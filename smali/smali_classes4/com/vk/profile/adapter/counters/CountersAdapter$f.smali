@@ -60,52 +60,52 @@
     .line 3
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$f;->h:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/a;
+    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const-string p2, "imageView.hierarchy"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->o:Lcom/facebook/drawee/drawable/r$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->o:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/drawable/r$b;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$f;->h:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/a;
+    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 p2, 0x40000000    # 2.0f
 
-    invoke-static {p2}, Ld/a/a/c/e;->a(F)I
+    invoke-static {p2}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v0
 
     int-to-float v0, v0
 
-    invoke-static {p2}, Ld/a/a/c/e;->a(F)I
+    invoke-static {p2}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v1
 
     int-to-float v1, v1
 
-    invoke-static {p2}, Ld/a/a/c/e;->a(F)I
+    invoke-static {p2}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v2
 
     int-to-float v2, v2
 
-    invoke-static {p2}, Ld/a/a/c/e;->a(F)I
+    invoke-static {p2}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result p2
 
@@ -115,16 +115,16 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$f;->h:Lcom/vk/imageloader/view/VKImageView;
 
-    new-instance p2, Lcom/vk/imageloader/o/e;
+    new-instance p2, Lcom/vk/imageloader/o/StoriesProfileButtonTransform;
 
-    invoke-direct {p2}, Lcom/vk/imageloader/o/e;-><init>()V
+    invoke-direct {p2}, Lcom/vk/imageloader/o/StoriesProfileButtonTransform;-><init>()V
 
-    invoke-virtual {p1, p2}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 6
     invoke-virtual {p0}, Lcom/vk/profile/adapter/counters/CountersAdapter$c;->g0()Landroid/widget/FrameLayout;
@@ -157,7 +157,7 @@
 
     const-string v1, "data.storiesContainers[0]"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/dto/stories/model/StoriesContainer;
 
@@ -220,13 +220,13 @@
 
     const-string v1, "contentFrame"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -234,7 +234,7 @@
 
     const-string v2, "itemView.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoriesContainer;->t1()I

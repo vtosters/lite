@@ -65,11 +65,11 @@
 
     iget-object v2, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem$load$1$a;->b:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->a(Lcom/vk/profile/data/cover/model/VideoCoverItem;Ljava/lang/String;)Lcom/vk/media/player/video/e;
+    invoke-static {v1, v2}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->a(Lcom/vk/profile/data/cover/model/VideoCoverItem;Ljava/lang/String;)Lcom/vk/media/player/video/ExoVideoSource2;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/media/player/ExoPlayerBase;->a(Lcom/vk/media/player/video/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/media/player/ExoPlayerBase;->a(Lcom/vk/media/player/video/ExoVideoSource1;)V
 
     :cond_0
     return-void

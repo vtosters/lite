@@ -51,7 +51,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog$dismiss$5;->a:Lcom/vk/profile/ui/cover/CoverDialog;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/a;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     move-result-object v2
 
@@ -87,12 +87,12 @@
 
     const/4 v7, 0x1
 
-    invoke-virtual/range {v2 .. v7}, Lcom/vk/profile/ui/cover/a;->a(Lcom/vk/profile/ui/cover/CoverViewPager;Landroid/view/View;Landroid/view/View;Lcom/vk/profile/ui/community/CommunityParallax;Z)V
+    invoke-virtual/range {v2 .. v7}, Lcom/vk/profile/ui/cover/CoverDialogAnimator;->a(Lcom/vk/profile/ui/cover/CoverViewPager;Landroid/view/View;Landroid/view/View;Lcom/vk/profile/ui/community/CommunityParallax;Z)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverDialog$dismiss$5;->a:Lcom/vk/profile/ui/cover/CoverDialog;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/a;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     move-result-object v2
 
@@ -130,18 +130,18 @@
 
     invoke-direct {v7, p0}, Lcom/vk/profile/ui/cover/CoverDialog$dismiss$5$1;-><init>(Lcom/vk/profile/ui/cover/CoverDialog$dismiss$5;)V
 
-    invoke-virtual/range {v2 .. v7}, Lcom/vk/profile/ui/cover/a;->b(Lcom/vk/profile/ui/cover/CoverViewPager;Landroid/view/View;Landroid/view/View;Lcom/vk/profile/ui/community/CommunityParallax;Lkotlin/jvm/b/a;)V
+    invoke-virtual/range {v2 .. v7}, Lcom/vk/profile/ui/cover/CoverDialogAnimator;->b(Lcom/vk/profile/ui/cover/CoverViewPager;Landroid/view/View;Landroid/view/View;Lcom/vk/profile/ui/community/CommunityParallax;Lkotlin/jvm/b/Functions;)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 4
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method

@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static final a(Lkotlin/sequences/j;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/Appendable;
+.method public static final a(Lkotlin/sequences/Sequence;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/Appendable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -13,14 +13,14 @@
             "A::",
             "Ljava/lang/Appendable;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;TA;",
             "Ljava/lang/CharSequence;",
             "Ljava/lang/CharSequence;",
             "Ljava/lang/CharSequence;",
             "I",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;+",
             "Ljava/lang/CharSequence;",
             ">;)TA;"
@@ -31,7 +31,7 @@
     invoke-interface {p1, p3}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
     .line 12
-    invoke-interface {p0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
@@ -64,7 +64,7 @@
 
     .line 14
     :cond_1
-    invoke-static {p1, v0, p7}, Lkotlin/text/l;->a(Ljava/lang/Appendable;Ljava/lang/Object;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0, p7}, Lkotlin/text/l;->a(Ljava/lang/Appendable;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
@@ -83,21 +83,21 @@
     return-object p1
 .end method
 
-.method public static final a(Lkotlin/sequences/j;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/String;
+.method public static final a(Lkotlin/sequences/Sequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/String;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;",
             "Ljava/lang/CharSequence;",
             "Ljava/lang/CharSequence;",
             "Ljava/lang/CharSequence;",
             "I",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;+",
             "Ljava/lang/CharSequence;",
             ">;)",
@@ -126,7 +126,7 @@
 
     move-object v7, p6
 
-    invoke-static/range {v0 .. v7}, Lkotlin/sequences/SequencesKt___SequencesKt;->a(Lkotlin/sequences/j;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/Appendable;
+    invoke-static/range {v0 .. v7}, Lkotlin/sequences/SequencesKt___SequencesKt;->a(Lkotlin/sequences/Sequence;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/Appendable;
 
     check-cast v8, Ljava/lang/StringBuilder;
 
@@ -136,12 +136,12 @@
 
     const-string p1, "joinTo(StringBuilder(), \u2026ed, transform).toString()"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
-.method public static synthetic a(Lkotlin/sequences/j;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+.method public static synthetic a(Lkotlin/sequences/Sequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
     .locals 4
 
     and-int/lit8 p8, p7, 0x1
@@ -222,14 +222,14 @@
     move-object p8, v3
 
     .line 17
-    invoke-static/range {p2 .. p8}, Lkotlin/sequences/SequencesKt___SequencesKt;->a(Lkotlin/sequences/j;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/String;
+    invoke-static/range {p2 .. p8}, Lkotlin/sequences/SequencesKt___SequencesKt;->a(Lkotlin/sequences/Sequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final a(Lkotlin/sequences/j;Ljava/util/Collection;)Ljava/util/Collection;
+.method public static final a(Lkotlin/sequences/Sequence;Ljava/util/Collection;)Ljava/util/Collection;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -238,13 +238,13 @@
             "C::",
             "Ljava/util/Collection<",
             "-TT;>;>(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;TC;)TC;"
         }
     .end annotation
 
     .line 6
-    invoke-interface {p0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
@@ -268,16 +268,16 @@
     return-object p1
 .end method
 
-.method public static a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
+.method public static a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;I)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "TT;>;"
         }
     .end annotation
@@ -297,7 +297,7 @@
     if-nez p1, :cond_1
 
     .line 1
-    invoke-static {}, Lkotlin/sequences/m;->a()Lkotlin/sequences/j;
+    invoke-static {}, Lkotlin/sequences/m;->a()Lkotlin/sequences/Sequence;
 
     move-result-object p0
 
@@ -305,13 +305,13 @@
 
     .line 2
     :cond_1
-    instance-of v0, p0, Lkotlin/sequences/d;
+    instance-of v0, p0, Lkotlin/sequences/Sequences7;
 
     if-eqz v0, :cond_2
 
-    check-cast p0, Lkotlin/sequences/d;
+    check-cast p0, Lkotlin/sequences/Sequences7;
 
-    invoke-interface {p0, p1}, Lkotlin/sequences/d;->a(I)Lkotlin/sequences/j;
+    invoke-interface {p0, p1}, Lkotlin/sequences/Sequences7;->a(I)Lkotlin/sequences/Sequence;
 
     move-result-object p0
 
@@ -319,9 +319,9 @@
 
     .line 3
     :cond_2
-    new-instance v0, Lkotlin/sequences/p;
+    new-instance v0, Lkotlin/sequences/Sequences1;
 
-    invoke-direct {v0, p0, p1}, Lkotlin/sequences/p;-><init>(Lkotlin/sequences/j;I)V
+    invoke-direct {v0, p0, p1}, Lkotlin/sequences/Sequences1;-><init>(Lkotlin/sequences/Sequence;I)V
 
     move-object p0, v0
 
@@ -359,18 +359,18 @@
     throw p1
 .end method
 
-.method public static a(Lkotlin/sequences/j;Ljava/util/Comparator;)Lkotlin/sequences/j;
+.method public static a(Lkotlin/sequences/Sequence;Ljava/util/Comparator;)Lkotlin/sequences/Sequence;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;",
             "Ljava/util/Comparator<",
             "-TT;>;)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "TT;>;"
         }
     .end annotation
@@ -378,12 +378,12 @@
     .line 5
     new-instance v0, Lkotlin/sequences/SequencesKt___SequencesKt$b;
 
-    invoke-direct {v0, p0, p1}, Lkotlin/sequences/SequencesKt___SequencesKt$b;-><init>(Lkotlin/sequences/j;Ljava/util/Comparator;)V
+    invoke-direct {v0, p0, p1}, Lkotlin/sequences/SequencesKt___SequencesKt$b;-><init>(Lkotlin/sequences/Sequence;Ljava/util/Comparator;)V
 
     return-object v0
 .end method
 
-.method public static a(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+.method public static a(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -392,24 +392,24 @@
             "K:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;+TK;>;)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "TT;>;"
         }
     .end annotation
 
     .line 9
-    new-instance v0, Lkotlin/sequences/c;
+    new-instance v0, Lkotlin/sequences/Sequences2;
 
-    invoke-direct {v0, p0, p1}, Lkotlin/sequences/c;-><init>(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p0, p1}, Lkotlin/sequences/Sequences2;-><init>(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)V
 
     return-object v0
 .end method
 
-.method public static a(Lkotlin/sequences/j;Lkotlin/jvm/b/c;)Lkotlin/sequences/j;
+.method public static a(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions1;)Lkotlin/sequences/Sequence;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -418,44 +418,44 @@
             "R:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/Integer;",
             "-TT;+TR;>;)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "TR;>;"
         }
     .end annotation
 
     .line 8
-    new-instance v0, Lkotlin/sequences/q;
+    new-instance v0, Lkotlin/sequences/Sequences9;
 
-    invoke-direct {v0, p0, p1}, Lkotlin/sequences/q;-><init>(Lkotlin/sequences/j;Lkotlin/jvm/b/c;)V
+    invoke-direct {v0, p0, p1}, Lkotlin/sequences/Sequences9;-><init>(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions1;)V
 
     return-object v0
 .end method
 
-.method public static a(Lkotlin/sequences/j;Lkotlin/sequences/j;)Lkotlin/sequences/j;
+.method public static a(Lkotlin/sequences/Sequence;Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "TT;>;"
         }
     .end annotation
 
     const/4 v0, 0x2
 
-    new-array v0, v0, [Lkotlin/sequences/j;
+    new-array v0, v0, [Lkotlin/sequences/Sequence;
 
     const/4 v1, 0x0
 
@@ -466,74 +466,74 @@
     aput-object p1, v0, p0
 
     .line 10
-    invoke-static {v0}, Lkotlin/sequences/m;->a([Ljava/lang/Object;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/sequences/m;->a([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
 
     move-result-object p0
 
-    invoke-static {p0}, Lkotlin/sequences/SequencesKt__SequencesKt;->b(Lkotlin/sequences/j;)Lkotlin/sequences/j;
+    invoke-static {p0}, Lkotlin/sequences/SequencesKt__SequencesKt;->b(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+.method public static b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;",
             "Ljava/lang/Boolean;",
             ">;)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "TT;>;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lkotlin/sequences/f;
+    new-instance v0, Lkotlin/sequences/Sequences10;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1, p1}, Lkotlin/sequences/f;-><init>(Lkotlin/sequences/j;ZLkotlin/jvm/b/b;)V
+    invoke-direct {v0, p0, v1, p1}, Lkotlin/sequences/Sequences10;-><init>(Lkotlin/sequences/Sequence;ZLkotlin/jvm/b/Functions2;)V
 
     return-object v0
 .end method
 
-.method public static c(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+.method public static c(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;",
             "Ljava/lang/Boolean;",
             ">;)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "TT;>;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lkotlin/sequences/f;
+    new-instance v0, Lkotlin/sequences/Sequences10;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1, p1}, Lkotlin/sequences/f;-><init>(Lkotlin/sequences/j;ZLkotlin/jvm/b/b;)V
+    invoke-direct {v0, p0, v1, p1}, Lkotlin/sequences/Sequences10;-><init>(Lkotlin/sequences/Sequence;ZLkotlin/jvm/b/Functions2;)V
 
     return-object v0
 .end method
 
-.method public static d(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+.method public static d(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -542,41 +542,41 @@
             "R:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;+",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TR;>;>;)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "TR;>;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lkotlin/sequences/g;
+    new-instance v0, Lkotlin/sequences/Sequences;
 
     sget-object v1, Lkotlin/sequences/SequencesKt___SequencesKt$flatMap$1;->a:Lkotlin/sequences/SequencesKt___SequencesKt$flatMap$1;
 
-    invoke-direct {v0, p0, p1, v1}, Lkotlin/sequences/g;-><init>(Lkotlin/sequences/j;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p0, p1, v1}, Lkotlin/sequences/Sequences;-><init>(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     return-object v0
 .end method
 
-.method public static d(Lkotlin/sequences/j;)Z
+.method public static d(Lkotlin/sequences/Sequence;)Z
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;)Z"
         }
     .end annotation
 
     .line 2
-    invoke-interface {p0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
@@ -587,14 +587,14 @@
     return p0
 .end method
 
-.method public static e(Lkotlin/sequences/j;)Ljava/lang/Iterable;
+.method public static e(Lkotlin/sequences/Sequence;)Ljava/lang/Iterable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;)",
             "Ljava/lang/Iterable<",
             "TT;>;"
@@ -604,12 +604,12 @@
     .line 2
     new-instance v0, Lkotlin/sequences/SequencesKt___SequencesKt$a;
 
-    invoke-direct {v0, p0}, Lkotlin/sequences/SequencesKt___SequencesKt$a;-><init>(Lkotlin/sequences/j;)V
+    invoke-direct {v0, p0}, Lkotlin/sequences/SequencesKt___SequencesKt$a;-><init>(Lkotlin/sequences/Sequence;)V
 
     return-object v0
 .end method
 
-.method public static e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+.method public static e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -618,37 +618,37 @@
             "R:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;+TR;>;)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "TR;>;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lkotlin/sequences/r;
+    new-instance v0, Lkotlin/sequences/Sequences4;
 
-    invoke-direct {v0, p0, p1}, Lkotlin/sequences/r;-><init>(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p0, p1}, Lkotlin/sequences/Sequences4;-><init>(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)V
 
     return-object v0
 .end method
 
-.method public static f(Lkotlin/sequences/j;)I
+.method public static f(Lkotlin/sequences/Sequence;)I
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;)I"
         }
     .end annotation
 
     .line 2
-    invoke-interface {p0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
@@ -680,7 +680,7 @@
     return v0
 .end method
 
-.method public static f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+.method public static f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -689,37 +689,37 @@
             "R:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;+TR;>;)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "TR;>;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lkotlin/sequences/r;
+    new-instance v0, Lkotlin/sequences/Sequences4;
 
-    invoke-direct {v0, p0, p1}, Lkotlin/sequences/r;-><init>(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p0, p1}, Lkotlin/sequences/Sequences4;-><init>(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)V
 
-    invoke-static {v0}, Lkotlin/sequences/m;->g(Lkotlin/sequences/j;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/sequences/m;->g(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static g(Lkotlin/sequences/j;)Lkotlin/sequences/j;
+.method public static g(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "TT;>;"
         }
     .end annotation
@@ -727,7 +727,7 @@
     .line 1
     sget-object v0, Lkotlin/sequences/SequencesKt___SequencesKt$filterNotNull$1;->a:Lkotlin/sequences/SequencesKt___SequencesKt$filterNotNull$1;
 
-    invoke-static {p0, v0}, Lkotlin/sequences/m;->c(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {p0, v0}, Lkotlin/sequences/m;->c(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p0
 
@@ -745,20 +745,20 @@
     throw p0
 .end method
 
-.method public static h(Lkotlin/sequences/j;)Ljava/lang/Object;
+.method public static h(Lkotlin/sequences/Sequence;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;)TT;"
         }
     .end annotation
 
     .line 1
-    invoke-interface {p0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
@@ -787,20 +787,20 @@
     throw p0
 .end method
 
-.method public static i(Lkotlin/sequences/j;)Ljava/lang/Object;
+.method public static i(Lkotlin/sequences/Sequence;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;)TT;"
         }
     .end annotation
 
     .line 1
-    invoke-interface {p0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
@@ -824,20 +824,20 @@
     return-object p0
 .end method
 
-.method public static j(Lkotlin/sequences/j;)Ljava/lang/Comparable;
+.method public static j(Lkotlin/sequences/Sequence;)Ljava/lang/Comparable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
             "Ljava/lang/Comparable<",
             "-TT;>;>(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;)TT;"
         }
     .end annotation
 
     .line 1
-    invoke-interface {p0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
@@ -891,12 +891,12 @@
     return-object v0
 .end method
 
-.method public static k(Lkotlin/sequences/j;)Ljava/lang/Float;
+.method public static k(Lkotlin/sequences/Sequence;)Ljava/lang/Float;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "Ljava/lang/Float;",
             ">;)",
             "Ljava/lang/Float;"
@@ -904,7 +904,7 @@
     .end annotation
 
     .line 1
-    invoke-interface {p0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
@@ -995,14 +995,14 @@
     return-object p0
 .end method
 
-.method public static l(Lkotlin/sequences/j;)Ljava/util/List;
+.method public static l(Lkotlin/sequences/Sequence;)Ljava/util/List;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;)",
             "Ljava/util/List<",
             "TT;>;"
@@ -1010,7 +1010,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lkotlin/sequences/m;->m(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {p0}, Lkotlin/sequences/m;->m(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object p0
 
@@ -1021,14 +1021,14 @@
     return-object p0
 .end method
 
-.method public static m(Lkotlin/sequences/j;)Ljava/util/List;
+.method public static m(Lkotlin/sequences/Sequence;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;)",
             "Ljava/util/List<",
             "TT;>;"
@@ -1040,21 +1040,21 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {p0, v0}, Lkotlin/sequences/SequencesKt___SequencesKt;->a(Lkotlin/sequences/j;Ljava/util/Collection;)Ljava/util/Collection;
+    invoke-static {p0, v0}, Lkotlin/sequences/SequencesKt___SequencesKt;->a(Lkotlin/sequences/Sequence;Ljava/util/Collection;)Ljava/util/Collection;
 
     check-cast v0, Ljava/util/List;
 
     return-object v0
 .end method
 
-.method public static n(Lkotlin/sequences/j;)Ljava/util/Set;
+.method public static n(Lkotlin/sequences/Sequence;)Ljava/util/Set;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;)",
             "Ljava/util/Set<",
             "TT;>;"
@@ -1066,7 +1066,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    invoke-static {p0, v0}, Lkotlin/sequences/SequencesKt___SequencesKt;->a(Lkotlin/sequences/j;Ljava/util/Collection;)Ljava/util/Collection;
+    invoke-static {p0, v0}, Lkotlin/sequences/SequencesKt___SequencesKt;->a(Lkotlin/sequences/Sequence;Ljava/util/Collection;)Ljava/util/Collection;
 
     check-cast v0, Ljava/util/Set;
 
@@ -1077,25 +1077,25 @@
     return-object p0
 .end method
 
-.method public static o(Lkotlin/sequences/j;)Lkotlin/sequences/j;
+.method public static o(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "+TT;>;)",
-            "Lkotlin/sequences/j<",
-            "Lkotlin/collections/x<",
+            "Lkotlin/sequences/Sequence<",
+            "Lkotlin/collections/IndexedValue<",
             "TT;>;>;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lkotlin/sequences/i;
+    new-instance v0, Lkotlin/sequences/Sequences5;
 
-    invoke-direct {v0, p0}, Lkotlin/sequences/i;-><init>(Lkotlin/sequences/j;)V
+    invoke-direct {v0, p0}, Lkotlin/sequences/Sequences5;-><init>(Lkotlin/sequences/Sequence;)V
 
     return-object v0
 .end method

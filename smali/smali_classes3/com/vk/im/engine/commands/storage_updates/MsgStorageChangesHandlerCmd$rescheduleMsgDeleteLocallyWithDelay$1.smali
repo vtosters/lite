@@ -3,12 +3,12 @@
 .source "MsgStorageChangesHandlerCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/storage_updates/MsgStorageChangesHandlerCmd;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/Msg;)V
+    value = Lcom/vk/im/engine/commands/storage_updates/MsgStorageChangesHandlerCmd;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/Msg;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/instantjobs/InstantJob;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -50,13 +50,13 @@
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vk/im/engine/internal/jobs/msg/b;
+    instance-of v0, p1, Lcom/vk/im/engine/internal/jobs/msg/MsgDeleteLocallyWithDelayJob;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vk/im/engine/internal/jobs/msg/b;
+    check-cast p1, Lcom/vk/im/engine/internal/jobs/msg/MsgDeleteLocallyWithDelayJob;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/jobs/msg/b;->l()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/jobs/msg/MsgDeleteLocallyWithDelayJob;->l()I
 
     move-result p1
 

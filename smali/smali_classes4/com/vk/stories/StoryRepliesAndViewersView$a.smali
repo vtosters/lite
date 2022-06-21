@@ -44,64 +44,64 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryAddedToUploadQueueListener()Lb/h/g/l/e;
+    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryAddedToUploadQueueListener()Lb/h/g/l/NotificationListener;
 
     move-result-object v0
 
     const/16 v1, 0x6b
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryUploadDoneListener()Lb/h/g/l/e;
+    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryUploadDoneListener()Lb/h/g/l/NotificationListener;
 
     move-result-object v0
 
     const/16 v1, 0x66
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryDeletedListener()Lb/h/g/l/e;
+    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryDeletedListener()Lb/h/g/l/NotificationListener;
 
     move-result-object v0
 
     const/16 v1, 0x6c
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryUploadCancelledListener()Lb/h/g/l/e;
+    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryUploadCancelledListener()Lb/h/g/l/NotificationListener;
 
     move-result-object v0
 
     const/16 v1, 0x6d
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryAllRepliesAreHiddenListener()Lb/h/g/l/e;
+    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryAllRepliesAreHiddenListener()Lb/h/g/l/NotificationListener;
 
     move-result-object v0
 
     const/16 v1, 0x6f
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView;
@@ -119,54 +119,54 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryAddedToUploadQueueListener()Lb/h/g/l/e;
+    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryAddedToUploadQueueListener()Lb/h/g/l/NotificationListener;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {p1, v0}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryUploadDoneListener()Lb/h/g/l/e;
+    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryUploadDoneListener()Lb/h/g/l/NotificationListener;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {p1, v0}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryDeletedListener()Lb/h/g/l/e;
+    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryDeletedListener()Lb/h/g/l/NotificationListener;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {p1, v0}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryUploadCancelledListener()Lb/h/g/l/e;
+    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryUploadCancelledListener()Lb/h/g/l/NotificationListener;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {p1, v0}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryAllRepliesAreHiddenListener()Lb/h/g/l/e;
+    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getStoryAllRepliesAreHiddenListener()Lb/h/g/l/NotificationListener;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {p1, v0}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView;

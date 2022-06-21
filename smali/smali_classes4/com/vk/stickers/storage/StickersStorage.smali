@@ -12,9 +12,9 @@
 
 .field private final d:Ljava/lang/String;
 
-.field private final e:Lcom/vk/stickers/storage/a;
+.field private final e:Lcom/vk/stickers/storage/BaseStickersStorage;
 
-.field private final f:Lcom/vk/stickers/storage/a;
+.field private final f:Lcom/vk/stickers/storage/BaseStickersStorage;
 
 .field private final g:I
 
@@ -49,23 +49,23 @@
     iput-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->d:Ljava/lang/String;
 
     .line 6
-    new-instance v0, Lcom/vk/stickers/storage/b;
+    new-instance v0, Lcom/vk/stickers/storage/FavoritesStickersStorage;
 
-    invoke-direct {v0}, Lcom/vk/stickers/storage/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/stickers/storage/FavoritesStickersStorage;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->e:Lcom/vk/stickers/storage/a;
+    iput-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->e:Lcom/vk/stickers/storage/BaseStickersStorage;
 
     .line 7
-    new-instance v0, Lcom/vk/stickers/storage/c;
+    new-instance v0, Lcom/vk/stickers/storage/RecentStickersStorage;
 
-    invoke-direct {v0}, Lcom/vk/stickers/storage/c;-><init>()V
+    invoke-direct {v0}, Lcom/vk/stickers/storage/RecentStickersStorage;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->f:Lcom/vk/stickers/storage/a;
+    iput-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->f:Lcom/vk/stickers/storage/BaseStickersStorage;
 
     .line 8
-    sget-object v0, Lb/h/g/g/b;->i:Lb/h/g/g/b;
+    sget-object v0, Lb/h/g/g/BuildInfo;->i:Lb/h/g/g/BuildInfo;
 
-    invoke-virtual {v0}, Lb/h/g/g/b;->e()I
+    invoke-virtual {v0}, Lb/h/g/g/BuildInfo;->e()I
 
     move-result v0
 
@@ -157,14 +157,14 @@
     invoke-direct {p0}, Lcom/vk/stickers/storage/StickersStorage;->g()V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->e:Lcom/vk/stickers/storage/a;
+    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->e:Lcom/vk/stickers/storage/BaseStickersStorage;
 
-    invoke-interface {v0}, Lcom/vk/stickers/storage/a;->clear()V
+    invoke-interface {v0}, Lcom/vk/stickers/storage/BaseStickersStorage;->clear()V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->f:Lcom/vk/stickers/storage/a;
+    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->f:Lcom/vk/stickers/storage/BaseStickersStorage;
 
-    invoke-interface {v0}, Lcom/vk/stickers/storage/a;->clear()V
+    invoke-interface {v0}, Lcom/vk/stickers/storage/BaseStickersStorage;->clear()V
 
     return-void
 .end method
@@ -197,32 +197,32 @@
     if-nez v0, :cond_0
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->e:Lcom/vk/stickers/storage/a;
+    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->e:Lcom/vk/stickers/storage/BaseStickersStorage;
 
     new-instance v1, Lcom/vk/stickers/storage/StickersStorage$updateFavoritesIfNeeded$1;
 
     invoke-direct {v1, p0, p1}, Lcom/vk/stickers/storage/StickersStorage$updateFavoritesIfNeeded$1;-><init>(Lcom/vk/stickers/storage/StickersStorage;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/stickers/storage/a;->a(Lkotlin/jvm/b/a;)V
+    invoke-interface {v0, v1}, Lcom/vk/stickers/storage/BaseStickersStorage;->a(Lkotlin/jvm/b/Functions;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final b()Lcom/vk/stickers/storage/a;
+.method public final b()Lcom/vk/stickers/storage/BaseStickersStorage;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->e:Lcom/vk/stickers/storage/a;
+    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->e:Lcom/vk/stickers/storage/BaseStickersStorage;
 
     return-object v0
 .end method
 
-.method public final c()Lcom/vk/stickers/storage/a;
+.method public final c()Lcom/vk/stickers/storage/BaseStickersStorage;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->f:Lcom/vk/stickers/storage/a;
+    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->f:Lcom/vk/stickers/storage/BaseStickersStorage;
 
     return-object v0
 .end method
@@ -253,14 +253,14 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->e:Lcom/vk/stickers/storage/a;
+    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->e:Lcom/vk/stickers/storage/BaseStickersStorage;
 
-    invoke-interface {v0}, Lcom/vk/stickers/storage/a;->a()V
+    invoke-interface {v0}, Lcom/vk/stickers/storage/BaseStickersStorage;->a()V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->f:Lcom/vk/stickers/storage/a;
+    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->f:Lcom/vk/stickers/storage/BaseStickersStorage;
 
-    invoke-interface {v0}, Lcom/vk/stickers/storage/a;->a()V
+    invoke-interface {v0}, Lcom/vk/stickers/storage/BaseStickersStorage;->a()V
 
     return-void
 .end method
@@ -301,13 +301,13 @@
     if-lez v4, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->f:Lcom/vk/stickers/storage/a;
+    iget-object v0, p0, Lcom/vk/stickers/storage/StickersStorage;->f:Lcom/vk/stickers/storage/BaseStickersStorage;
 
     new-instance v1, Lcom/vk/stickers/storage/StickersStorage$updateRecentIfNeeded$1;
 
     invoke-direct {v1, p0}, Lcom/vk/stickers/storage/StickersStorage$updateRecentIfNeeded$1;-><init>(Lcom/vk/stickers/storage/StickersStorage;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/stickers/storage/a;->a(Lkotlin/jvm/b/a;)V
+    invoke-interface {v0, v1}, Lcom/vk/stickers/storage/BaseStickersStorage;->a(Lkotlin/jvm/b/Functions;)V
 
     :cond_0
     return-void

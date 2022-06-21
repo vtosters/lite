@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/vtosters/lite/l;->a:Lcom/vtosters/lite/SendActivity;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/SendActivity;->w1()Lkotlin/m;
+    invoke-virtual {v0}, Lcom/vtosters/lite/SendActivity;->w1()Lkotlin/Unit;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "VkUiFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/webapp/bridges/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/webapp/bridges/AndroidBridge;",
         ">;"
     }
 .end annotation
@@ -45,13 +45,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/webapp/bridges/a;
+.method public final invoke()Lcom/vk/webapp/bridges/AndroidBridge;
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/webapp/VkUiFragment$androidBridge$2;->this$0:Lcom/vk/webapp/VkUiFragment;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiFragment;->q5()Lcom/vk/webapp/bridges/a;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiFragment;->q5()Lcom/vk/webapp/bridges/AndroidBridge;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment$androidBridge$2;->invoke()Lcom/vk/webapp/bridges/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment$androidBridge$2;->invoke()Lcom/vk/webapp/bridges/AndroidBridge;
 
     move-result-object v0
 

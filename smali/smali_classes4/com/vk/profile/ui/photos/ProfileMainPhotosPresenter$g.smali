@@ -3,7 +3,7 @@
 .source "ProfileMainPhotosPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,12 +22,12 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lkotlin/Pair<",
         "+",
         "Lcom/vk/api/photos/PhotosGetAlbums$b;",
         "+",
-        "Lcom/vk/api/photos/p$a;",
+        "Lcom/vk/api/photos/PhotosGetNewTags$a;",
         ">;>;"
     }
 .end annotation
@@ -59,7 +59,7 @@
             "+",
             "Lcom/vk/api/photos/PhotosGetAlbums$b;",
             "+",
-            "Lcom/vk/api/photos/p$a;",
+            "Lcom/vk/api/photos/PhotosGetNewTags$a;",
             ">;)V"
         }
     .end annotation
@@ -81,9 +81,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/api/photos/p$a;
+    check-cast p1, Lcom/vk/api/photos/PhotosGetNewTags$a;
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$a;->a(Lcom/vk/api/photos/PhotosGetAlbums$b;Lcom/vk/api/photos/p$a;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$a;->a(Lcom/vk/api/photos/PhotosGetAlbums$b;Lcom/vk/api/photos/PhotosGetNewTags$a;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$g;->a:Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;

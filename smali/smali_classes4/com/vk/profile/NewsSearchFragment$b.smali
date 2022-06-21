@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -41,9 +41,9 @@
     if-lez p1, :cond_0
 
     .line 1
-    new-instance v0, Lcom/vk/profile/c$a;
+    new-instance v0, Lcom/vk/profile/ProfileNewsSearchFragment$a;
 
-    invoke-direct {v0}, Lcom/vk/profile/c$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/profile/ProfileNewsSearchFragment$a;-><init>()V
 
     goto :goto_0
 
@@ -51,9 +51,9 @@
     if-gez p1, :cond_1
 
     .line 2
-    new-instance v0, Lcom/vk/profile/b$a;
+    new-instance v0, Lcom/vk/profile/CommunityNewsSearchFragment$a;
 
-    invoke-direct {v0}, Lcom/vk/profile/b$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/profile/CommunityNewsSearchFragment$a;-><init>()V
 
     goto :goto_0
 
@@ -65,7 +65,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, v1, v2}, Lcom/vk/profile/NewsSearchFragment$a;-><init>(Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v2, v1, v2}, Lcom/vk/profile/NewsSearchFragment$a;-><init>(Ljava/lang/Class;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 4
     :goto_0

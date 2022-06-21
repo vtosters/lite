@@ -15,14 +15,14 @@
 
 
 # virtual methods
-.method public abstract getAppAuthToken(Ljava/lang/String;Ljava/lang/String;)Lf/b;
+.method public abstract getAppAuthToken(Ljava/lang/String;Ljava/lang/String;)Lretrofit2/Call;
     .param p1    # Ljava/lang/String;
-        .annotation runtime Lf/q/h;
+        .annotation runtime Lf/q/Header;
             value = "Authorization"
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation runtime Lf/q/b;
+        .annotation runtime Lf/q/Field;
             value = "grant_type"
         .end annotation
     .end param
@@ -32,29 +32,29 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ")",
-            "Lf/b<",
+            "Lretrofit2/Call<",
             "Lcom/twitter/sdk/android/core/internal/oauth/OAuth2Token;",
             ">;"
         }
     .end annotation
 
-    .annotation runtime Lf/q/d;
+    .annotation runtime Lf/q/FormUrlEncoded;
     .end annotation
 
-    .annotation runtime Lf/q/i;
+    .annotation runtime Lf/q/Headers;
         value = {
             "Content-Type: application/x-www-form-urlencoded;charset=UTF-8"
         }
     .end annotation
 
-    .annotation runtime Lf/q/m;
+    .annotation runtime Lf/q/POST;
         value = "/oauth2/token"
     .end annotation
 .end method
 
-.method public abstract getGuestToken(Ljava/lang/String;)Lf/b;
+.method public abstract getGuestToken(Ljava/lang/String;)Lretrofit2/Call;
     .param p1    # Ljava/lang/String;
-        .annotation runtime Lf/q/h;
+        .annotation runtime Lf/q/Header;
             value = "Authorization"
         .end annotation
     .end param
@@ -63,13 +63,13 @@
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lf/b<",
-            "Lcom/twitter/sdk/android/core/internal/oauth/a;",
+            "Lretrofit2/Call<",
+            "Lcom/twitter/sdk/android/core/internal/oauth/GuestTokenResponse;",
             ">;"
         }
     .end annotation
 
-    .annotation runtime Lf/q/m;
+    .annotation runtime Lf/q/POST;
         value = "/1.1/guest/activate.json"
     .end annotation
 .end method

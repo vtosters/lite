@@ -1,12 +1,12 @@
 .class public final Lcom/vk/im/engine/internal/merge/users/UsersMergeTask;
-.super Lcom/vk/im/engine/internal/k/a;
+.super Lcom/vk/im/engine/internal/k/MergeTask;
 .source "UsersMergeTask.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/internal/k/a<",
+        "Lcom/vk/im/engine/internal/k/MergeTask<",
         "Landroid/util/SparseArray<",
         "Lcom/vk/im/engine/models/users/User;",
         ">;>;"
@@ -41,7 +41,7 @@
     .end annotation
 
     .line 9
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/MergeTask;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/merge/users/UsersMergeTask;->a:Landroid/util/SparseArray;
 
@@ -63,7 +63,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/k/MergeTask;-><init>()V
 
     .line 2
     new-instance v0, Landroid/util/SparseArray;
@@ -126,12 +126,12 @@
 
 
 # virtual methods
-.method protected b(Lcom/vk/im/engine/d;)Landroid/util/SparseArray;
+.method protected b(Lcom/vk/im/engine/ImEnvironment;)Landroid/util/SparseArray;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/users/User;",
@@ -140,7 +140,7 @@
     .end annotation
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -150,11 +150,11 @@
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/users/UsersMergeTask;->a:Landroid/util/SparseArray;
 
-    invoke-static {v1}, Lcom/vk/im/engine/utils/collection/e;->a(Landroid/util/SparseArray;)Lcom/vk/im/engine/utils/collection/h;
+    invoke-static {v1}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Landroid/util/SparseArray;)Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->b(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/contacts/ContactsStorageManager;->b(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
 
     move-result-object v0
 
@@ -165,12 +165,12 @@
 
     invoke-direct {v2, p0, v0}, Lcom/vk/im/engine/internal/merge/users/UsersMergeTask$onMerge$usersToMerge$1;-><init>(Lcom/vk/im/engine/internal/merge/users/UsersMergeTask;Landroid/util/SparseArray;)V
 
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/x;->c(Landroid/util/SparseArray;Lkotlin/jvm/b/b;)Landroid/util/SparseArray;
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/SparseArrayExt1;->c(Landroid/util/SparseArray;Lkotlin/jvm/b/Functions2;)Landroid/util/SparseArray;
 
     move-result-object v0
 
     .line 4
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
@@ -178,45 +178,45 @@
 
     move-result-object v1
 
-    invoke-static {v0}, Lcom/vk/core/extensions/x;->h(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/SparseArrayExt1;->h(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Lcom/vk/im/engine/internal/storage/delegates/users/UsersStorageManager;->a(Ljava/util/Collection;)V
 
     .line 5
-    new-instance v0, Lcom/vk/im/engine/i/i/c;
+    new-instance v0, Lcom/vk/im/engine/i/i/UsersGetByIdCmd;
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/users/UsersMergeTask;->a:Landroid/util/SparseArray;
 
-    invoke-static {v1}, Lcom/vk/core/extensions/x;->d(Landroid/util/SparseArray;)Ljava/util/Set;
+    invoke-static {v1}, Lcom/vk/core/extensions/SparseArrayExt1;->d(Landroid/util/SparseArray;)Ljava/util/Set;
 
     move-result-object v1
 
     sget-object v2, Lcom/vk/im/engine/models/Source;->CACHE:Lcom/vk/im/engine/models/Source;
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/i/i/c;-><init>(Ljava/util/Collection;Lcom/vk/im/engine/models/Source;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/im/engine/i/i/UsersGetByIdCmd;-><init>(Ljava/util/Collection;Lcom/vk/im/engine/models/Source;)V
 
-    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/a;
+    check-cast p1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    iget-object p1, p1, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object p1, p1, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     const-string v0, "env.submitCommandDirect(\u2026(), Source.CACHE)).cached"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public bridge synthetic b(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic b(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/users/UsersMergeTask;->b(Lcom/vk/im/engine/d;)Landroid/util/SparseArray;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/users/UsersMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)Landroid/util/SparseArray;
 
     move-result-object p1
 

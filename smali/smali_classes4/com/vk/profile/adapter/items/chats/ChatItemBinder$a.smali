@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -39,11 +39,11 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -77,7 +77,7 @@
 
     const-string v0, "AppContextHolder.context\u2026ount, chat.activityCount)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
@@ -87,7 +87,7 @@
 
     const-string v0, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Landroid/text/SpannableStringBuilder;
@@ -104,7 +104,7 @@
 
     move-result p1
 
-    invoke-static {v0, v1, v3, p1}, Lcom/vk/extensions/k;->b(Landroid/text/SpannableStringBuilder;III)Landroid/text/SpannableStringBuilder;
+    invoke-static {v0, v1, v3, p1}, Lcom/vk/extensions/SpannableExt;->b(Landroid/text/SpannableStringBuilder;III)Landroid/text/SpannableStringBuilder;
 
     return-object v0
 

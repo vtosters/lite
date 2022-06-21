@@ -3,12 +3,12 @@
 .source "FriendsImportFragment.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,12 +57,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/account/s$c;)Lcom/vk/dto/common/data/VKFromList;
+.method public final a(Lcom/vk/api/account/AccountSearchContacts$c;)Lcom/vk/dto/common/data/VKFromList;
     .locals 14
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/api/account/s$c;",
+            "Lcom/vk/api/account/AccountSearchContacts$c;",
             ")",
             "Lcom/vk/dto/common/data/VKFromList<",
             "Lcom/vk/friends/recommendations/Item;",
@@ -78,7 +78,7 @@
     invoke-direct {v0, v1}, Lcom/vk/dto/common/data/VKFromList;-><init>(Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/api/account/s$c;->a()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/vk/api/account/AccountSearchContacts$c;->a()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -125,7 +125,7 @@
 
     move-object v3, v2
 
-    invoke-direct/range {v3 .. v13}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v13}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -133,7 +133,7 @@
 
     .line 5
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/api/account/s$c;->b()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/vk/api/account/AccountSearchContacts$c;->b()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -170,12 +170,12 @@
 
     move-object v2, v1
 
-    invoke-direct/range {v2 .. v12}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v12}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/api/account/s$c;->b()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/vk/api/account/AccountSearchContacts$c;->b()Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -222,7 +222,7 @@
 
     move-object v2, v1
 
-    invoke-direct/range {v2 .. v12}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v12}, Lcom/vk/friends/recommendations/Item;-><init>(Lcom/vk/friends/recommendations/Item$Type;IIILcom/vk/dto/user/RequestUserProfile;ILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -236,9 +236,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/account/s$c;
+    check-cast p1, Lcom/vk/api/account/AccountSearchContacts$c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/friends/recommendations/FriendsImportFragment$i;->a(Lcom/vk/api/account/s$c;)Lcom/vk/dto/common/data/VKFromList;
+    invoke-virtual {p0, p1}, Lcom/vk/friends/recommendations/FriendsImportFragment$i;->a(Lcom/vk/api/account/AccountSearchContacts$c;)Lcom/vk/dto/common/data/VKFromList;
 
     move-result-object p1
 

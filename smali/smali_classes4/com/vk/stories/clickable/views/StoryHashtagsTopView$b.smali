@@ -58,7 +58,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView$b;->a:Lcom/vk/stories/clickable/views/StoryHashtagsTopView;
 
-    invoke-static {p1}, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->a(Lcom/vk/stories/clickable/views/StoryHashtagsTopView;)Lcom/vk/stories/clickable/k/a;
+    invoke-static {p1}, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->a(Lcom/vk/stories/clickable/views/StoryHashtagsTopView;)Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
     move-result-object p1
 
@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     return-void
 .end method

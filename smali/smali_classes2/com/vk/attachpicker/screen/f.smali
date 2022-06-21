@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/attachpicker/screen/d0;
+.field private final synthetic a:Lcom/vk/attachpicker/screen/EditorScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/attachpicker/screen/d0;)V
+.method public synthetic constructor <init>(Lcom/vk/attachpicker/screen/EditorScreen;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/screen/f;->a:Lcom/vk/attachpicker/screen/d0;
+    iput-object p1, p0, Lcom/vk/attachpicker/screen/f;->a:Lcom/vk/attachpicker/screen/EditorScreen;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/attachpicker/screen/f;->a:Lcom/vk/attachpicker/screen/d0;
+    iget-object v0, p0, Lcom/vk/attachpicker/screen/f;->a:Lcom/vk/attachpicker/screen/EditorScreen;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/screen/d0;->a(Landroid/content/DialogInterface;I)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/attachpicker/screen/EditorScreen;->a(Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "ThemedFeedFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/discover/DiscoverCategoriesContainer;",
         ">;"
     }
@@ -71,7 +71,7 @@
 
     const-string v1, "container"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverCategoriesContainer;)V
 
@@ -154,15 +154,15 @@
     :cond_0
     new-instance v3, Lkotlin/Pair;
 
-    new-instance v4, Lcom/vk/shoppingcenter/fragment/c$a;
+    new-instance v4, Lcom/vk/shoppingcenter/fragment/ShoppingCenterCatalogFragment$a;
 
-    invoke-direct {v4}, Lcom/vk/shoppingcenter/fragment/c$a;-><init>()V
+    invoke-direct {v4}, Lcom/vk/shoppingcenter/fragment/ShoppingCenterCatalogFragment$a;-><init>()V
 
     .line 8
-    invoke-virtual {v4}, Lcom/vk/shoppingcenter/fragment/c$a;->i()Lcom/vk/shoppingcenter/fragment/c$a;
+    invoke-virtual {v4}, Lcom/vk/shoppingcenter/fragment/ShoppingCenterCatalogFragment$a;->i()Lcom/vk/shoppingcenter/fragment/ShoppingCenterCatalogFragment$a;
 
     .line 9
-    invoke-virtual {v4}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v4}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v4
 
@@ -175,13 +175,13 @@
 
     .line 11
     :cond_1
-    new-instance v12, Lcom/vk/discover/p$a;
+    new-instance v12, Lcom/vk/discover/ThemedFeedTabFragment$a;
 
     invoke-virtual {v11}, Lcom/vk/dto/discover/DiscoverCategory;->getId()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {v12, v3}, Lcom/vk/discover/p$a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v12, v3}, Lcom/vk/discover/ThemedFeedTabFragment$a;-><init>(Ljava/lang/String;)V
 
     .line 12
     invoke-virtual {v11}, Lcom/vk/dto/discover/DiscoverCategory;->getId()Ljava/lang/String;
@@ -196,14 +196,14 @@
 
     move-object v3, v12
 
-    invoke-static/range {v3 .. v8}, Lcom/vk/newsfeed/n$a;->a(Lcom/vk/newsfeed/n$a;Ljava/lang/String;IZILjava/lang/Object;)Lcom/vk/newsfeed/n$a;
+    invoke-static/range {v3 .. v8}, Lcom/vk/newsfeed/NewsfeedCustomFragment$a;->a(Lcom/vk/newsfeed/NewsfeedCustomFragment$a;Ljava/lang/String;IZILjava/lang/Object;)Lcom/vk/newsfeed/NewsfeedCustomFragment$a;
 
     .line 13
     invoke-virtual {v11}, Lcom/vk/dto/discover/DiscoverCategory;->w()Lcom/vk/dto/discover/DiscoverCategory$Ref;
 
     move-result-object v3
 
-    invoke-virtual {v12, v3}, Lcom/vk/newsfeed/n$a;->a(Lcom/vk/dto/discover/DiscoverCategory$Ref;)Lcom/vk/newsfeed/n$a;
+    invoke-virtual {v12, v3}, Lcom/vk/newsfeed/NewsfeedCustomFragment$a;->a(Lcom/vk/dto/discover/DiscoverCategory$Ref;)Lcom/vk/newsfeed/NewsfeedCustomFragment$a;
 
     .line 14
     invoke-virtual {p1}, Lcom/vk/discover/DiscoverCategoriesContainer;->s()Ljava/util/List;
@@ -217,11 +217,11 @@
     if-ne v3, v9, :cond_2
 
     .line 15
-    invoke-virtual {v12}, Lcom/vk/newsfeed/n$a;->h()Lcom/vk/newsfeed/n$a;
+    invoke-virtual {v12}, Lcom/vk/newsfeed/NewsfeedCustomFragment$a;->h()Lcom/vk/newsfeed/NewsfeedCustomFragment$a;
 
     .line 16
     :cond_2
-    invoke-virtual {v12}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v12}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v3
 
@@ -263,7 +263,7 @@
 
     const-string v6, "discover_category_common/discover"
 
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -272,15 +272,15 @@
     .line 20
     new-instance v3, Lcom/vk/discover/DiscoverFragment$a;
 
-    invoke-direct {v3, v4, v9, v4}, Lcom/vk/discover/DiscoverFragment$a;-><init>(Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v3, v4, v9, v4}, Lcom/vk/discover/DiscoverFragment$a;-><init>(Ljava/lang/Class;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_2
 
     .line 21
     :cond_5
-    new-instance v3, Lcom/vk/discover/k$a;
+    new-instance v3, Lcom/vk/discover/DiscoverTabFragment$a;
 
-    invoke-direct {v3}, Lcom/vk/discover/k$a;-><init>()V
+    invoke-direct {v3}, Lcom/vk/discover/DiscoverTabFragment$a;-><init>()V
 
     :goto_2
     move-object v12, v3
@@ -318,7 +318,7 @@
     invoke-virtual {v12}, Lcom/vk/discover/DiscoverFragment$a;->h()Lcom/vk/discover/DiscoverFragment$a;
 
     .line 26
-    invoke-virtual {v12}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v12}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v3
 

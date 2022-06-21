@@ -14,7 +14,7 @@
 # static fields
 .field private static a:Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;
 
-.field private static b:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private static b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 .field public static final c:Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet;
 
@@ -63,9 +63,9 @@
     .line 23
     sget v1, Lcom/vk/libvideo/h;->actions_popup_item:I
 
-    sget-object v2, Lcom/vk/libvideo/bottomsheet/a;->a:Lcom/vk/libvideo/bottomsheet/a;
+    sget-object v2, Lcom/vk/libvideo/bottomsheet/DarkThemeHelper;->a:Lcom/vk/libvideo/bottomsheet/DarkThemeHelper;
 
-    invoke-virtual {v2, p1}, Lcom/vk/libvideo/bottomsheet/a;->a(Landroid/content/Context;)Landroid/content/Context;
+    invoke-virtual {v2, p1}, Lcom/vk/libvideo/bottomsheet/DarkThemeHelper;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -75,7 +75,7 @@
 
     const-string v3, "LayoutInflater.from(Dark\u2026.getDarkContext(context))"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(ILandroid/view/LayoutInflater;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
@@ -84,7 +84,7 @@
 
     invoke-direct {v1}, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet$b;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter1;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 25
     new-instance v1, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet$c;
@@ -110,27 +110,27 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet;Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method public static final synthetic a(Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 0
 
     .line 2
-    sput-object p1, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object p1, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
+.method public static final synthetic b(Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
     .locals 0
 
     .line 1
-    sget-object p0, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/e;
+    sget-object p0, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/app/Activity;Landroidx/core/util/Pair;Landroid/util/SparseArray;Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;Lcom/vk/navigation/k;)Lcom/vk/core/util/w;
+.method public final a(Landroid/app/Activity;Landroidx/core/util/Pair;Landroid/util/SparseArray;Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;Lcom/vk/navigation/ModalDialogCallback;)Lcom/vk/core/util/Dismissable;
     .locals 18
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -148,9 +148,9 @@
             "Ljava/lang/String;",
             ">;>;",
             "Lcom/vk/libvideo/bottomsheet/ModalDialogsController$a;",
-            "Lcom/vk/navigation/k;",
+            "Lcom/vk/navigation/ModalDialogCallback;",
             ")",
-            "Lcom/vk/core/util/w;"
+            "Lcom/vk/core/util/Dismissable;"
         }
     .end annotation
 
@@ -184,7 +184,7 @@
 
     const-string v8, "activity.getString(R.str\u2026o_playback_subtitles_off)"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v8, -0x1
 
@@ -272,7 +272,7 @@
     const-string v9, "lang"
 
     .line 11
-    invoke-static {v8, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v8}, Ljava/lang/CharSequence;->length()I
 
@@ -300,7 +300,7 @@
 
     const-string v13, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {v12, v13}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v12, v13}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v12, :cond_4
 
@@ -310,7 +310,7 @@
 
     const-string v13, "(this as java.lang.String).toUpperCase()"
 
-    invoke-static {v12, v13}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v12, v13}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -320,7 +320,7 @@
 
     const-string v12, "(this as java.lang.String).substring(startIndex)"
 
-    invoke-static {v8, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -348,7 +348,7 @@
 
     const-string v13, "title"
 
-    invoke-static {v8, v13}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v13}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v1, :cond_6
 
@@ -400,23 +400,23 @@
     invoke-virtual {v13, v4}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->setItems(Ljava/util/List;)V
 
     .line 15
-    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 16
     new-instance v0, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet$d;
 
-    invoke-direct {v0, v3}, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet$d;-><init>(Lcom/vk/navigation/k;)V
+    invoke-direct {v0, v3}, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet$d;-><init>(Lcom/vk/navigation/ModalDialogCallback;)V
 
-    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 17
     new-instance v0, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet$e;
 
-    invoke-direct {v0, v3}, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet$e;-><init>(Lcom/vk/navigation/k;)V
+    invoke-direct {v0, v3}, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet$e;-><init>(Lcom/vk/navigation/ModalDialogCallback;)V
 
-    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$f;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v14, 0x1
 
@@ -429,22 +429,22 @@
     move-object v12, v1
 
     .line 18
-    invoke-static/range {v12 .. v17}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static/range {v12 .. v17}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 19
     sget-object v0, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet$show$dialog$3;->a:Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet$show$dialog$3;
 
-    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const-string v0, "video_subtitles"
 
     .line 20
-    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v0
 
     .line 21
-    sput-object v0, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object v0, Lcom/vk/libvideo/bottomsheet/VideoSubtitlesBottomSheet;->b:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-object v0
 .end method

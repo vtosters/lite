@@ -1,5 +1,5 @@
 .class public final Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$a;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "CommunityNotificationSettingsFragment.kt"
 
 
@@ -21,19 +21,19 @@
     .line 1
     const-class v0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/q;->h:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->h:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object v0, Lcom/vk/navigation/q;->d:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->d:Ljava/lang/String;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -46,7 +46,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "communityAlreadyAdded"
 

@@ -3,12 +3,12 @@
 .source "LocalGalleryProvider.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photogallery/LocalGalleryProvider;->loadDefaultAlbum()Lc/a/m;
+    value = Lcom/vk/photogallery/LocalGalleryProvider;->loadDefaultAlbum()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -47,16 +47,16 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)Lcom/vk/photogallery/dto/a;
+.method public final a(Ljava/util/List;)Lcom/vk/photogallery/dto/GalleryState;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/photogallery/dto/a;",
+            "Lcom/vk/photogallery/dto/GalleryState;",
             ">;)",
-            "Lcom/vk/photogallery/dto/a;"
+            "Lcom/vk/photogallery/dto/GalleryState;"
         }
     .end annotation
 
@@ -65,7 +65,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/photogallery/dto/a;
+    check-cast p1, Lcom/vk/photogallery/dto/GalleryState;
 
     if-eqz p1, :cond_0
 
@@ -88,7 +88,7 @@
     .line 1
     check-cast p1, Ljava/util/List;
 
-    invoke-virtual {p0, p1}, Lcom/vk/photogallery/LocalGalleryProvider$c;->a(Ljava/util/List;)Lcom/vk/photogallery/dto/a;
+    invoke-virtual {p0, p1}, Lcom/vk/photogallery/LocalGalleryProvider$c;->a(Ljava/util/List;)Lcom/vk/photogallery/dto/GalleryState;
 
     move-result-object p1
 

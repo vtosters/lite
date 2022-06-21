@@ -1,11 +1,11 @@
 .class public final Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;
-.super Lcom/vk/imageloader/c;
+.super Lcom/vk/imageloader/ControllerListenerAdapter;
 .source "ImageViewerPage.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;->a(Lcom/facebook/u/e/a;)Lcom/facebook/drawee/controller/a;
+    value = Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;->a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/drawee/controller/AbstractDraweeController;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,14 +30,14 @@
     .line 1
     iput-object p1, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;->a:Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;
 
-    invoke-direct {p0}, Lcom/vk/imageloader/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/imageloader/ControllerListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/String;Lcom/facebook/x/g/f;Landroid/graphics/drawable/Animatable;)V
+.method public a(Ljava/lang/String;Lcom/facebook/x/g/ImageInfo;Landroid/graphics/drawable/Animatable;)V
     .locals 0
 
     .line 4
@@ -68,7 +68,7 @@
 
     new-instance p3, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d$a;
 
-    invoke-direct {p3, p0, p2}, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d$a;-><init>(Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;Lcom/facebook/x/g/f;)V
+    invoke-direct {p3, p0, p2}, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d$a;-><init>(Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;Lcom/facebook/x/g/ImageInfo;)V
 
     invoke-static {p1, p3}, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;->a(Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;Ljava/lang/Runnable;)V
 
@@ -88,9 +88,9 @@
     .locals 0
 
     .line 1
-    check-cast p2, Lcom/facebook/x/g/f;
+    check-cast p2, Lcom/facebook/x/g/ImageInfo;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;->a(Ljava/lang/String;Lcom/facebook/x/g/f;Landroid/graphics/drawable/Animatable;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;->a(Ljava/lang/String;Lcom/facebook/x/g/ImageInfo;Landroid/graphics/drawable/Animatable;)V
 
     return-void
 .end method
@@ -99,7 +99,7 @@
     .locals 0
 
     .line 2
-    invoke-super {p0, p1, p2}, Lcom/vk/imageloader/c;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/imageloader/ControllerListenerAdapter;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;->a:Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;

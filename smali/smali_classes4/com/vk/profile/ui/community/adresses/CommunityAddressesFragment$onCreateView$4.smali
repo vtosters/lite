@@ -45,7 +45,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$onCreateView$4;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lcom/vk/profile/ui/community/adresses/a;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
 
     move-result-object v0
 
@@ -59,11 +59,11 @@
 
     iget-object v2, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$onCreateView$4;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-virtual {v2}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->U4()Lkotlin/jvm/b/c;
+    invoke-virtual {v2}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->U4()Lkotlin/jvm/b/Functions1;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/profile/ui/community/adresses/a;->a(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/c;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/profile/ui/community/adresses/AddressesAdapter;->a(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions1;)V
 
     .line 2
     :cond_0

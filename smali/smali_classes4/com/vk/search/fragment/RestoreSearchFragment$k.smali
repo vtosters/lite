@@ -3,7 +3,7 @@
 .source "RestoreSearchFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -103,18 +103,18 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     .line 5
     iget-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment$k;->a:Lcom/vk/search/fragment/RestoreSearchFragment;
 
-    invoke-static {p1}, Lcom/vk/search/fragment/RestoreSearchFragment;->b(Lcom/vk/search/fragment/RestoreSearchFragment;)Lcom/vk/lists/t;
+    invoke-static {p1}, Lcom/vk/search/fragment/RestoreSearchFragment;->b(Lcom/vk/search/fragment/RestoreSearchFragment;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
 
     :cond_0
     return-void

@@ -3,7 +3,7 @@
 .source "SlidingWindow.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,21 +19,21 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/coroutines/jvm/internal/RestrictedSuspendLambda;",
-        "Lkotlin/jvm/b/c<",
-        "Lkotlin/sequences/l<",
+        "Lkotlin/jvm/b/Functions1<",
+        "Lkotlin/sequences/SequenceBuilder2<",
         "-",
         "Ljava/util/List<",
         "+TT;>;>;",
-        "Lkotlin/coroutines/a<",
+        "Lkotlin/coroutines/Continuation<",
         "-",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;",
         "Ljava/lang/Object;",
         ">;"
     }
 .end annotation
 
-.annotation runtime Lkotlin/coroutines/jvm/internal/c;
+.annotation runtime Lkotlin/coroutines/jvm/internal/DebugMetadata;
     c = "kotlin.collections.SlidingWindowKt$windowedIterator$1"
     f = "SlidingWindow.kt"
     l = {
@@ -74,11 +74,11 @@
 
 .field label:I
 
-.field private p$:Lkotlin/sequences/l;
+.field private p$:Lkotlin/sequences/SequenceBuilder2;
 
 
 # direct methods
-.method constructor <init>(IILjava/util/Iterator;ZZLkotlin/coroutines/a;)V
+.method constructor <init>(IILjava/util/Iterator;ZZLkotlin/coroutines/Continuation;)V
     .locals 0
 
     iput p1, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->$size:I
@@ -93,7 +93,7 @@
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p6}, Lkotlin/coroutines/jvm/internal/RestrictedSuspendLambda;-><init>(ILkotlin/coroutines/a;)V
+    invoke-direct {p0, p1, p6}, Lkotlin/coroutines/jvm/internal/RestrictedSuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -134,7 +134,7 @@
 
     iget-object v0, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->L$1:Ljava/lang/Object;
 
-    check-cast v0, Lkotlin/collections/j0;
+    check-cast v0, Lkotlin/collections/SlidingWindow;
 
     goto :goto_0
 
@@ -152,7 +152,7 @@
     :cond_1
     iget-object v1, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->L$1:Ljava/lang/Object;
 
-    check-cast v1, Lkotlin/collections/j0;
+    check-cast v1, Lkotlin/collections/SlidingWindow;
 
     iget v4, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->I$1:I
 
@@ -160,9 +160,9 @@
 
     iget-object v7, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->L$0:Ljava/lang/Object;
 
-    check-cast v7, Lkotlin/sequences/l;
+    check-cast v7, Lkotlin/sequences/SequenceBuilder2;
 
-    invoke-static {p1}, Lkotlin/j;->a(Ljava/lang/Object;)V
+    invoke-static {p1}, Lkotlin/Result1;->a(Ljava/lang/Object;)V
 
     move-object p1, p0
 
@@ -175,7 +175,7 @@
 
     iget-object v5, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->L$1:Ljava/lang/Object;
 
-    check-cast v5, Lkotlin/collections/j0;
+    check-cast v5, Lkotlin/collections/SlidingWindow;
 
     iget v7, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->I$1:I
 
@@ -183,9 +183,9 @@
 
     iget-object v9, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->L$0:Ljava/lang/Object;
 
-    check-cast v9, Lkotlin/sequences/l;
+    check-cast v9, Lkotlin/sequences/SequenceBuilder2;
 
-    invoke-static {p1}, Lkotlin/j;->a(Ljava/lang/Object;)V
+    invoke-static {p1}, Lkotlin/Result1;->a(Ljava/lang/Object;)V
 
     move-object p1, p0
 
@@ -199,9 +199,9 @@
     :goto_0
     iget-object v0, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->L$0:Ljava/lang/Object;
 
-    check-cast v0, Lkotlin/sequences/l;
+    check-cast v0, Lkotlin/sequences/SequenceBuilder2;
 
-    invoke-static {p1}, Lkotlin/j;->a(Ljava/lang/Object;)V
+    invoke-static {p1}, Lkotlin/Result1;->a(Ljava/lang/Object;)V
 
     goto/16 :goto_a
 
@@ -220,9 +220,9 @@
 
     iget-object v7, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->L$0:Ljava/lang/Object;
 
-    check-cast v7, Lkotlin/sequences/l;
+    check-cast v7, Lkotlin/sequences/SequenceBuilder2;
 
-    invoke-static {p1}, Lkotlin/j;->a(Ljava/lang/Object;)V
+    invoke-static {p1}, Lkotlin/Result1;->a(Ljava/lang/Object;)V
 
     move-object p1, p0
 
@@ -233,9 +233,9 @@
     goto :goto_2
 
     :cond_5
-    invoke-static {p1}, Lkotlin/j;->a(Ljava/lang/Object;)V
+    invoke-static {p1}, Lkotlin/Result1;->a(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->p$:Lkotlin/sequences/l;
+    iget-object p1, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->p$:Lkotlin/sequences/SequenceBuilder2;
 
     .line 4
     iget v1, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->$size:I
@@ -327,7 +327,7 @@
 
     iput v6, p1, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->label:I
 
-    invoke-virtual {v7, v2, p1}, Lkotlin/sequences/l;->a(Ljava/lang/Object;Lkotlin/coroutines/a;)Ljava/lang/Object;
+    invoke-virtual {v7, v2, p1}, Lkotlin/sequences/SequenceBuilder2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -394,7 +394,7 @@
 
     iput v5, p1, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->label:I
 
-    invoke-virtual {v7, v2, p1}, Lkotlin/sequences/l;->a(Ljava/lang/Object;Lkotlin/coroutines/a;)Ljava/lang/Object;
+    invoke-virtual {v7, v2, p1}, Lkotlin/sequences/SequenceBuilder2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -404,9 +404,9 @@
 
     .line 14
     :cond_c
-    new-instance v5, Lkotlin/collections/j0;
+    new-instance v5, Lkotlin/collections/SlidingWindow;
 
-    invoke-direct {v5, v1}, Lkotlin/collections/j0;-><init>(I)V
+    invoke-direct {v5, v1}, Lkotlin/collections/SlidingWindow;-><init>(I)V
 
     .line 15
     iget-object v8, p0, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->$iterator:Ljava/util/Iterator;
@@ -434,10 +434,10 @@
     move-result-object v10
 
     .line 16
-    invoke-virtual {v5, v10}, Lkotlin/collections/j0;->add(Ljava/lang/Object;)V
+    invoke-virtual {v5, v10}, Lkotlin/collections/SlidingWindow;->add(Ljava/lang/Object;)V
 
     .line 17
-    invoke-virtual {v5}, Lkotlin/collections/j0;->b()Z
+    invoke-virtual {v5}, Lkotlin/collections/SlidingWindow;->b()Z
 
     move-result v11
 
@@ -452,7 +452,7 @@
 
     if-ge v11, v12, :cond_e
 
-    invoke-virtual {v5, v12}, Lkotlin/collections/j0;->a(I)Lkotlin/collections/j0;
+    invoke-virtual {v5, v12}, Lkotlin/collections/SlidingWindow;->a(I)Lkotlin/collections/SlidingWindow;
 
     move-result-object v5
 
@@ -488,7 +488,7 @@
 
     iput v4, p1, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->label:I
 
-    invoke-virtual {v9, v11, p1}, Lkotlin/sequences/l;->a(Ljava/lang/Object;Lkotlin/coroutines/a;)Ljava/lang/Object;
+    invoke-virtual {v9, v11, p1}, Lkotlin/sequences/SequenceBuilder2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object v10
 
@@ -501,7 +501,7 @@
     :goto_6
     iget v10, p1, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->$step:I
 
-    invoke-virtual {v5, v10}, Lkotlin/collections/j0;->b(I)V
+    invoke-virtual {v5, v10}, Lkotlin/collections/SlidingWindow;->b(I)V
 
     goto :goto_4
 
@@ -554,7 +554,7 @@
 
     iput v3, p1, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->label:I
 
-    invoke-virtual {v7, v8, p1}, Lkotlin/sequences/l;->a(Ljava/lang/Object;Lkotlin/coroutines/a;)Ljava/lang/Object;
+    invoke-virtual {v7, v8, p1}, Lkotlin/sequences/SequenceBuilder2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object v8
 
@@ -567,7 +567,7 @@
     :goto_9
     iget v8, p1, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->$step:I
 
-    invoke-virtual {v1, v8}, Lkotlin/collections/j0;->b(I)V
+    invoke-virtual {v1, v8}, Lkotlin/collections/SlidingWindow;->b(I)V
 
     goto :goto_7
 
@@ -591,7 +591,7 @@
 
     iput v2, p1, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->label:I
 
-    invoke-virtual {v7, v1, p1}, Lkotlin/sequences/l;->a(Ljava/lang/Object;Lkotlin/coroutines/a;)Ljava/lang/Object;
+    invoke-virtual {v7, v1, p1}, Lkotlin/sequences/SequenceBuilder2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -602,7 +602,7 @@
     .line 26
     :cond_15
     :goto_a
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -610,15 +610,15 @@
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/a;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->a(Ljava/lang/Object;Lkotlin/coroutines/a;)Lkotlin/coroutines/a;
+    invoke-virtual {p0, p1, p2}, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;
 
-    sget-object p2, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p2, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     invoke-virtual {p1, p2}, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -627,16 +627,16 @@
     return-object p1
 .end method
 
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/a;)Lkotlin/coroutines/a;
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Object;",
-            "Lkotlin/coroutines/a<",
+            "Lkotlin/coroutines/Continuation<",
             "*>;)",
-            "Lkotlin/coroutines/a<",
-            "Lkotlin/m;",
+            "Lkotlin/coroutines/Continuation<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -657,11 +657,11 @@
 
     move-object v6, p2
 
-    invoke-direct/range {v0 .. v6}, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;-><init>(IILjava/util/Iterator;ZZLkotlin/coroutines/a;)V
+    invoke-direct/range {v0 .. v6}, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;-><init>(IILjava/util/Iterator;ZZLkotlin/coroutines/Continuation;)V
 
-    check-cast p1, Lkotlin/sequences/l;
+    check-cast p1, Lkotlin/sequences/SequenceBuilder2;
 
-    iput-object p1, v7, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->p$:Lkotlin/sequences/l;
+    iput-object p1, v7, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;->p$:Lkotlin/sequences/SequenceBuilder2;
 
     return-object v7
 .end method

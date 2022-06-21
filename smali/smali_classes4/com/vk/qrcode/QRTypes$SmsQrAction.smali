@@ -1,5 +1,5 @@
 .class public final Lcom/vk/qrcode/QRTypes$SmsQrAction;
-.super Lcom/vk/qrcode/l;
+.super Lcom/vk/qrcode/QRTypes6;
 .source "QRTypes.kt"
 
 
@@ -22,7 +22,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/qrcode/l;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
+    invoke-direct {p0, p1}, Lcom/vk/qrcode/QRTypes6;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
 
     .line 2
     check-cast p1, Lcom/google/zxing/client/result/SMSParsedResult;
@@ -117,7 +117,7 @@
 
     const-string v1, "qr.body"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v1, Lcom/vk/qrcode/QRTypes$SmsQrAction$FieldType;->BODY:Lcom/vk/qrcode/QRTypes$SmsQrAction$FieldType;
 
@@ -137,14 +137,14 @@
 
 
 # virtual methods
-.method public a()Lc/a/m;
+.method public a()Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;"
         }
     .end annotation
@@ -184,7 +184,7 @@
     :cond_0
     const-string v0, "payload"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

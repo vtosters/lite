@@ -44,7 +44,7 @@
 
     iget-object v1, p0, Lcom/vk/stories/holders/StoriesItemHolder$a;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

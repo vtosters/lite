@@ -3,12 +3,12 @@
 .source "FaveController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/FaveController;->a(ILjava/lang/Integer;ILcom/vk/fave/entities/e;)Lc/a/m;
+    value = Lcom/vk/fave/FaveController;->a(ILjava/lang/Integer;ILcom/vk/fave/entities/FaveMetaInfo;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/fave/entities/h;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/fave/entities/FaveResponseEntries2;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/fave/entities/h;)V
+.method public final a(Lcom/vk/fave/entities/FaveResponseEntries2;)V
     .locals 0
 
     .line 1
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/fave/entities/h;
+    check-cast p1, Lcom/vk/fave/entities/FaveResponseEntries2;
 
-    invoke-virtual {p0, p1}, Lcom/vk/fave/FaveController$d;->a(Lcom/vk/fave/entities/h;)V
+    invoke-virtual {p0, p1}, Lcom/vk/fave/FaveController$d;->a(Lcom/vk/fave/entities/FaveResponseEntries2;)V
 
     return-void
 .end method

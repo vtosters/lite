@@ -1,9 +1,9 @@
 .class public Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;
-.super Lcom/vk/api/base/d;
+.super Lcom/vk/api/base/ApiRequest;
 .source "NewsfeedGet.java"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/h;
+.implements Lcom/vk/dto/common/data/ServerKeys;
 
 
 # annotations
@@ -15,10 +15,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/d<",
+        "Lcom/vk/api/base/ApiRequest<",
         "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
         ">;",
-        "Lcom/vk/dto/common/data/h;"
+        "Lcom/vk/dto/common/data/ServerKeys;"
     }
 .end annotation
 
@@ -96,7 +96,7 @@
     const-string v6, "execute.getNewsfeedSmart"
 
     .line 2
-    invoke-direct {p0, v6}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v6}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     .line 3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -121,67 +121,67 @@
     const/16 v7, 0xb
 
     .line 7
-    invoke-virtual {p0, v6, v7}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v6, v7}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     .line 8
-    invoke-static {}, Lcom/vk/core/network/utils/e;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/network/utils/NetworkUtils;->b()Ljava/lang/String;
 
     move-result-object v6
 
     const-string v7, "connection_type"
 
-    invoke-virtual {p0, v7, v6}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v7, v6}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 9
-    invoke-static {}, Lcom/vk/core/network/utils/e;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/network/utils/NetworkUtils;->a()Ljava/lang/String;
 
     move-result-object v6
 
     const-string v7, "connection_subtype"
 
-    invoke-virtual {p0, v7, v6}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v7, v6}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 10
-    invoke-static {}, Lcom/vtosters/lite/utils/l;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/utils/Utils;->b()Ljava/lang/String;
 
     move-result-object v6
 
     const-string v7, "user_options"
 
-    invoke-virtual {p0, v7, v6}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v7, v6}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     const-string v6, "start_from"
 
     .line 11
-    invoke-virtual {p0, v6, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v6, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     const/4 v6, 0x1
 
     const-string v7, "with_lives"
 
     .line 12
-    invoke-virtual {p0, v7, v6}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v7, v6}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     const-string v7, "count"
 
     move v8, p2
 
     .line 13
-    invoke-virtual {p0, v7, p2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v7, p2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     const-string v7, "fields"
 
     const-string v8, "id,first_name,first_name_dat,last_name,last_name_dat,sex,screen_name,photo_50,photo_100,online_info,video_files,verified,trending,is_member,friend_status,can_upload_story"
 
     .line 14
-    invoke-virtual {p0, v7, v8}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v7, v8}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     if-eqz p10, :cond_0
 
     const-string v7, "forced_notifications"
 
     .line 15
-    invoke-virtual {p0, v7, v6}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v7, v6}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     :cond_0
     const/4 v7, -0x6
@@ -200,7 +200,7 @@
 
     .line 16
     :cond_1
-    invoke-virtual {p0, v8, v6}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v8, v6}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     goto :goto_0
 
@@ -208,10 +208,10 @@
     const-string v7, "live_recommended"
 
     .line 17
-    invoke-virtual {p0, v9, v7}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v9, v7}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 18
-    invoke-virtual {p0, v8, v6}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v8, v6}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     :goto_0
     const/4 v7, -0x4
@@ -234,7 +234,7 @@
     invoke-direct {v11, v12}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     .line 20
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v12
 
@@ -257,11 +257,11 @@
     invoke-interface {v11, v12}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     .line 24
-    invoke-static {v12}, Lcom/vtosters/lite/utils/l;->b([Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v12}, Lcom/vtosters/lite/utils/Utils;->b([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
-    invoke-virtual {p0, v8, v11}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v8, v11}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     goto :goto_1
 
@@ -269,7 +269,7 @@
     const-string v11, "photo,photo_tag,wall_photo"
 
     .line 25
-    invoke-virtual {p0, v8, v11}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v8, v11}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     goto :goto_1
 
@@ -277,7 +277,7 @@
     const-string v11, "video"
 
     .line 26
-    invoke-virtual {p0, v8, v11}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v8, v11}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :goto_1
     const-string v8, "section"
@@ -317,10 +317,10 @@
 
     move-result-object v7
 
-    invoke-virtual {p0, v11, v7}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v11, v7}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 28
-    invoke-virtual {p0, v8, v10}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v8, v10}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     goto :goto_2
 
@@ -328,18 +328,18 @@
     const-string v7, "news"
 
     .line 29
-    invoke-virtual {p0, v8, v7}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v8, v7}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     goto :goto_2
 
     .line 30
     :cond_7
-    invoke-virtual {p0, v11, v10}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v11, v10}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     const-string v7, "friends"
 
     .line 31
-    invoke-virtual {p0, v8, v7}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v8, v7}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     goto :goto_2
 
@@ -347,23 +347,23 @@
     const-string v7, "groups,pages"
 
     .line 32
-    invoke-virtual {p0, v11, v7}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v11, v7}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     const-string v7, "groups"
 
     .line 33
-    invoke-virtual {p0, v8, v7}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v8, v7}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     goto :goto_2
 
     .line 34
     :cond_9
-    invoke-virtual {p0, v11, v10}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v11, v10}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     const-string v7, "photos"
 
     .line 35
-    invoke-virtual {p0, v8, v7}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v8, v7}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     goto :goto_2
 
@@ -371,7 +371,7 @@
     const-string v7, "videos"
 
     .line 36
-    invoke-virtual {p0, v8, v7}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v8, v7}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_b
     :goto_2
@@ -405,15 +405,15 @@
     move-object v7, v8
 
     :goto_3
-    invoke-virtual {p0, v9, v7}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v9, v7}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     goto :goto_5
 
     .line 39
     :cond_d
-    sget-object v1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/controllers/a;->l()Z
+    invoke-virtual {v1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->l()Z
 
     move-result v1
 
@@ -434,7 +434,7 @@
     :goto_4
     const-string v1, "forced_feed_type"
 
-    invoke-virtual {p0, v1, v7}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v1, v7}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_f
     :goto_5
@@ -447,7 +447,7 @@
 
     const-string v7, "update_position"
 
-    invoke-virtual {p0, v7, v1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v7, v1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_10
     if-ltz v5, :cond_11
@@ -473,7 +473,7 @@
 
     const-string v4, "update_post"
 
-    invoke-virtual {p0, v4, v1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v4, v1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_11
     if-ltz p9, :cond_12
@@ -485,7 +485,7 @@
 
     const-string v4, "update_away_time"
 
-    invoke-virtual {p0, v4, v1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v4, v1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_12
     if-eqz v2, :cond_13
@@ -493,7 +493,7 @@
     const-string v1, "is_not_newsfeed"
 
     .line 44
-    invoke-virtual {p0, v1, v6}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v1, v6}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     .line 45
     :cond_13
@@ -504,13 +504,13 @@
     const-string v1, "feed_id"
 
     .line 46
-    invoke-virtual {p0, v1, v3}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v1, v3}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_14
     const-string v1, "photo_sizes"
 
     .line 47
-    invoke-virtual {p0, v1, v6}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v1, v6}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     .line 48
     invoke-static {}, Lcom/vk/core/preference/Preference;->b()Landroid/content/SharedPreferences;
@@ -544,20 +544,20 @@
 
     const-string v2, "last_request_notification_sec"
 
-    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     .line 50
     :cond_15
-    invoke-static {}, Lcom/vtosters/lite/utils/l;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vtosters/lite/utils/Utils;->a()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "device_info"
 
-    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 51
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -565,7 +565,7 @@
 
     const-string v2, "app_package_id"
 
-    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     if-eqz p12, :cond_16
 
@@ -576,17 +576,17 @@
 
     const-string v2, "geo_data"
 
-    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 53
     :cond_16
-    invoke-static {}, Lcom/vk/core/util/v;->V()Z
+    invoke-static {}, Lcom/vk/core/util/DeviceState;->V()Z
 
     move-result v1
 
     const-string v2, "low_power_mode"
 
-    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/d;->a(Ljava/lang/String;Z)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/ApiRequest;->a(Ljava/lang/String;Z)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -771,7 +771,7 @@
     :try_start_1
     iget-object v3, p0, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;->H:Ljava/lang/String;
 
-    invoke-static {v2, p1, v3}, Lcom/vk/dto/newsfeed/entries/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;Ljava/lang/String;)Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-static {v2, p1, v3}, Lcom/vk/dto/newsfeed/entries/NewsEntryFactory;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;Ljava/lang/String;)Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v2
     :try_end_1
@@ -1139,9 +1139,9 @@
     .line 18
     :cond_0
     :goto_0
-    sget-object v1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v1, v3}, Lcom/vk/newsfeed/controllers/a;->b(Z)V
+    invoke-virtual {v1, v3}, Lcom/vk/newsfeed/controllers/NewsfeedController;->b(Z)V
 
     if-eqz v0, :cond_1
 
@@ -1604,7 +1604,7 @@
     const-string v0, "intent"
 
     .line 1
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     return-object p0
 .end method

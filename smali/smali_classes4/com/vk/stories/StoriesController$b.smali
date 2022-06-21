@@ -3,12 +3,12 @@
 .source "StoriesController.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/StoriesController;->a(ILandroid/content/Context;Lcom/vk/api/base/a;)V
+    value = Lcom/vk/stories/StoriesController;->a(ILandroid/content/Context;Lcom/vk/api/base/ApiCallback;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Lcom/vk/dto/stories/model/GetStoriesResponse;",
         ">;"
     }
@@ -27,15 +27,15 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/api/base/a;
+.field final synthetic a:Lcom/vk/api/base/ApiCallback;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/api/base/a;)V
+.method constructor <init>(Lcom/vk/api/base/ApiCallback;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/stories/StoriesController$b;->a:Lcom/vk/api/base/a;
+    iput-object p1, p0, Lcom/vk/stories/StoriesController$b;->a:Lcom/vk/api/base/ApiCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,12 +48,12 @@
     .locals 1
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/StoriesController$b;->a:Lcom/vk/api/base/a;
+    iget-object v0, p0, Lcom/vk/stories/StoriesController$b;->a:Lcom/vk/api/base/ApiCallback;
 
     if-eqz v0, :cond_0
 
     .line 7
-    invoke-interface {v0, p1}, Lcom/vk/api/base/a;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-interface {v0, p1}, Lcom/vk/api/base/ApiCallback;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     :cond_0
     return-void
@@ -66,7 +66,7 @@
     invoke-static {p1}, Lcom/vk/stories/StoriesController;->c(Lcom/vk/dto/stories/model/GetStoriesResponse;)V
 
     .line 3
-    invoke-static {}, Lcom/vk/stories/StoriesController;->a()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
@@ -78,15 +78,15 @@
 
     const/16 v2, 0x65
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/StoriesController$b;->a:Lcom/vk/api/base/a;
+    iget-object v0, p0, Lcom/vk/stories/StoriesController$b;->a:Lcom/vk/api/base/ApiCallback;
 
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-interface {v0, p1}, Lcom/vk/api/base/a;->a(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lcom/vk/api/base/ApiCallback;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void

@@ -74,18 +74,18 @@
     if-eqz p1, :cond_2
 
     .line 3
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object p1
 
     .line 4
     iget-object v2, p0, Lcom/vk/stories/util/ClickableStickerDelegate$h;->c:Landroid/content/Context;
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/stories/util/ClickableStickerDelegate$h;->b:Lcom/vk/dto/stories/model/clickable/ClickableMarketItem;
@@ -116,19 +116,19 @@
     const-string v3, "stories"
 
     .line 7
-    invoke-interface {p1, v2, v0, v1, v3}, Lcom/vk/im/ui/p/a;->a(Landroid/content/Context;IILjava/lang/String;)V
+    invoke-interface {p1, v2, v0, v1, v3}, Lcom/vk/im/ui/p/ImBridge1;->a(Landroid/content/Context;IILjava/lang/String;)V
 
     goto :goto_0
 
     .line 8
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 9
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -143,17 +143,17 @@
     if-eqz p1, :cond_4
 
     .line 11
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object p1
 
     iget-object v2, p0, Lcom/vk/stories/util/ClickableStickerDelegate$h;->c:Landroid/content/Context;
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/stories/util/ClickableStickerDelegate$h;->b:Lcom/vk/dto/stories/model/clickable/ClickableMarketItem;
 
@@ -163,12 +163,12 @@
 
     if-eqz v0, :cond_3
 
-    invoke-interface {p1, v2, v0}, Lcom/vk/im/ui/p/a;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lcom/vk/im/ui/p/ImBridge1;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 

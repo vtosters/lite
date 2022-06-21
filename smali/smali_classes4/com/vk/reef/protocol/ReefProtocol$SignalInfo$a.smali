@@ -3,7 +3,7 @@
 .source "ReefProtocol.java"
 
 # interfaces
-.implements Lcom/vk/reef/protocol/f0;
+.implements Lcom/vk/reef/protocol/ReefProtocol25;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;",
         "Lcom/vk/reef/protocol/ReefProtocol$SignalInfo$a;",
         ">;",
-        "Lcom/vk/reef/protocol/f0;"
+        "Lcom/vk/reef/protocol/ReefProtocol25;"
     }
 .end annotation
 
@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/vk/reef/protocol/a;)V
+.method synthetic constructor <init>(Lcom/vk/reef/protocol/ReefProtocol1;)V
     .locals 0
 
     .line 1
@@ -68,7 +68,7 @@
     return-object p0
 .end method
 
-.method public a(Lcom/vk/reef/protocol/b0$a;)Lcom/vk/reef/protocol/ReefProtocol$SignalInfo$a;
+.method public a(Lcom/vk/reef/protocol/ReefProtocol$a9;)Lcom/vk/reef/protocol/ReefProtocol$SignalInfo$a;
     .locals 1
 
     .line 5
@@ -79,12 +79,12 @@
 
     check-cast v0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;
 
-    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->a(Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;Lcom/vk/reef/protocol/b0$a;)V
+    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->a(Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;Lcom/vk/reef/protocol/ReefProtocol$a9;)V
 
     return-object p0
 .end method
 
-.method public a(Lcom/vk/reef/protocol/d0$a;)Lcom/vk/reef/protocol/ReefProtocol$SignalInfo$a;
+.method public a(Lcom/vk/reef/protocol/ReefProtocol$a2;)Lcom/vk/reef/protocol/ReefProtocol$SignalInfo$a;
     .locals 1
 
     .line 7
@@ -95,12 +95,12 @@
 
     check-cast v0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;
 
-    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->a(Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;Lcom/vk/reef/protocol/d0$a;)V
+    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->a(Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;Lcom/vk/reef/protocol/ReefProtocol$a2;)V
 
     return-object p0
 .end method
 
-.method public a(Lcom/vk/reef/protocol/v;)Lcom/vk/reef/protocol/ReefProtocol$SignalInfo$a;
+.method public a(Lcom/vk/reef/protocol/ReefProtocol14;)Lcom/vk/reef/protocol/ReefProtocol$SignalInfo$a;
     .locals 1
 
     .line 3
@@ -111,7 +111,7 @@
 
     check-cast v0, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;
 
-    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->a(Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;Lcom/vk/reef/protocol/v;)V
+    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;->a(Lcom/vk/reef/protocol/ReefProtocol$SignalInfo;Lcom/vk/reef/protocol/ReefProtocol14;)V
 
     return-object p0
 .end method

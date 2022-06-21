@@ -3,7 +3,7 @@
 .source "PostViewPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/Integer;",
-        "Lcom/vtosters/lite/ui/f0/b;",
-        "Lkotlin/m;",
+        "Lcom/vtosters/lite/ui/f0/PostDisplayItem;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -57,34 +57,34 @@
     .line 1
     check-cast p1, Ljava/lang/Integer;
 
-    check-cast p2, Lcom/vtosters/lite/ui/f0/b;
+    check-cast p2, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/wall/post/PostViewPresenter$updateAttachmentInEntry$1;->a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/b;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/wall/post/PostViewPresenter$updateAttachmentInEntry$1;->a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public final a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/b;)V
+.method public final a(Ljava/lang/Integer;Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
     .locals 9
 
     .line 2
-    instance-of v0, p2, Lcom/vk/newsfeed/h0/a;
+    instance-of v0, p2, Lcom/vk/newsfeed/h0/AttachmentPostDisplayItem;
 
     if-eqz v0, :cond_0
 
     move-object v0, p2
 
-    check-cast v0, Lcom/vk/newsfeed/h0/a;
+    check-cast v0, Lcom/vk/newsfeed/h0/AttachmentPostDisplayItem;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/h0/a;->f()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/h0/AttachmentPostDisplayItem;->f()Lcom/vk/dto/common/Attachment;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/wall/post/PostViewPresenter$updateAttachmentInEntry$1;->$attachment:Lcom/vk/dto/common/Attachment;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -93,47 +93,47 @@
     .line 3
     iget-object v1, p0, Lcom/vk/wall/post/PostViewPresenter$updateAttachmentInEntry$1;->this$0:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-static {v1}, Lcom/vk/wall/post/PostViewPresenter;->d(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/lists/o;
+    invoke-static {v1}, Lcom/vk/wall/post/PostViewPresenter;->d(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/lists/ListDataSet;
 
     move-result-object v1
 
     const-string v2, "i"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
-    new-instance v8, Lcom/vk/newsfeed/h0/a;
+    new-instance v8, Lcom/vk/newsfeed/h0/AttachmentPostDisplayItem;
 
-    iget-object v3, p2, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v3, p2, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     const-string v2, "displayItem.entry"
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v4, p2, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v4, p2, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     const-string p2, "displayItem.rootEntry"
 
-    invoke-static {v4, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/b;->e()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->e()I
 
     move-result v5
 
     iget-object v6, p0, Lcom/vk/wall/post/PostViewPresenter$updateAttachmentInEntry$1;->$attachment:Lcom/vk/dto/common/Attachment;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/h0/a;->g()Ljava/lang/Boolean;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/h0/AttachmentPostDisplayItem;->g()Ljava/lang/Boolean;
 
     move-result-object v7
 
     move-object v2, v8
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/newsfeed/h0/a;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;ILcom/vk/dto/common/Attachment;Ljava/lang/Boolean;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/newsfeed/h0/AttachmentPostDisplayItem;-><init>(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/newsfeed/entries/NewsEntry;ILcom/vk/dto/common/Attachment;Ljava/lang/Boolean;)V
 
-    invoke-virtual {v1, p1, v8}, Lcom/vk/lists/o;->b(ILjava/lang/Object;)V
+    invoke-virtual {v1, p1, v8}, Lcom/vk/lists/ListDataSet;->b(ILjava/lang/Object;)V
 
     :cond_0
     return-void

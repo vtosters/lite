@@ -1,26 +1,26 @@
 .class public final Lcom/vk/im/engine/internal/upload/AudioMsgUploader;
-.super Lcom/vk/im/engine/internal/upload/c;
+.super Lcom/vk/im/engine/internal/upload/GenericUploader;
 .source "AudioMsgUploader.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/internal/upload/c<",
+        "Lcom/vk/im/engine/internal/upload/GenericUploader<",
         "Lcom/vk/im/engine/models/attaches/AttachAudioMsg;",
-        "Lcom/vk/im/engine/models/upload/a;",
+        "Lcom/vk/im/engine/models/upload/UploadServer;",
         "Ljava/lang/String;",
-        "Lcom/vk/im/engine/models/attaches/h/a;",
+        "Lcom/vk/im/engine/models/attaches/h/AudioUploadModels;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private final h:Lcom/vk/im/engine/internal/upload/b;
+.field private final h:Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/internal/upload/b<",
+            "Lcom/vk/im/engine/internal/upload/FallbackUploadHelper<",
             "Ljava/lang/String;",
             ">;"
         }
@@ -29,49 +29,49 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/attaches/AttachAudioMsg;)V
+.method public constructor <init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/attaches/AttachAudioMsg;)V
     .locals 1
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/upload/c;-><init>(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/attaches/Attach;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/upload/GenericUploader;-><init>(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/attaches/Attach;)V
 
     .line 2
-    new-instance p1, Lcom/vk/im/engine/internal/upload/b;
+    new-instance p1, Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;
 
     new-instance p2, Lcom/vk/im/engine/internal/upload/AudioMsgUploader$uploadHelper$1;
 
     invoke-direct {p2, p0}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader$uploadHelper$1;-><init>(Lcom/vk/im/engine/internal/upload/AudioMsgUploader;)V
 
-    sget-object v0, Lcom/vk/im/engine/internal/g/i;->a:Lcom/vk/im/engine/internal/g/i;
+    sget-object v0, Lcom/vk/im/engine/internal/api_parsers/DocUploadParser;->a:Lcom/vk/im/engine/internal/api_parsers/DocUploadParser;
 
-    invoke-direct {p1, p2, v0}, Lcom/vk/im/engine/internal/upload/b;-><init>(Lkotlin/jvm/b/b;Lcom/vk/api/sdk/h;)V
+    invoke-direct {p1, p2, v0}, Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;-><init>(Lkotlin/jvm/b/Functions2;Lcom/vk/api/sdk/VKApiResponseParser;)V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->h:Lcom/vk/im/engine/internal/upload/b;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->h:Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/upload/AudioMsgUploader;Ljava/lang/String;)Lcom/vk/api/internal/c;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/upload/AudioMsgUploader;Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->b(Ljava/lang/String;)Lcom/vk/api/internal/c;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->b(Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final b(Ljava/lang/String;)Lcom/vk/api/internal/c;
+.method private final b(Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall;
     .locals 7
 
     .line 4
-    new-instance v0, Lcom/vk/api/internal/c$a;
+    new-instance v0, Lcom/vk/api/internal/HttpPostCall$a;
 
-    invoke-direct {v0}, Lcom/vk/api/internal/c$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/internal/HttpPostCall$a;-><init>()V
 
     .line 5
-    invoke-virtual {v0, p1}, Lcom/vk/api/internal/c$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/c$a;
+    invoke-virtual {v0, p1}, Lcom/vk/api/internal/HttpPostCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall$a;
 
     .line 6
     invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->e()Landroid/net/Uri;
@@ -80,14 +80,14 @@
 
     const-string v1, "getLocalFileUri()"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "file"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/api/internal/c$a;->a(Ljava/lang/String;Landroid/net/Uri;)Lcom/vk/api/internal/c$a;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/api/internal/HttpPostCall$a;->a(Ljava/lang/String;Landroid/net/Uri;)Lcom/vk/api/internal/HttpPostCall$a;
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->c()Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->c()Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object p1
 
@@ -103,7 +103,7 @@
 
     const-string p1, "Arrays.toString(attach.waveForm)"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, " "
 
@@ -121,19 +121,19 @@
 
     const-string v1, "waveform"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/api/internal/c$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/c$a;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/api/internal/HttpPostCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall$a;
 
     const/4 p1, 0x1
 
     .line 8
-    invoke-virtual {v0, p1}, Lcom/vk/api/internal/c$a;->a(Z)Lcom/vk/api/internal/c$a;
+    invoke-virtual {v0, p1}, Lcom/vk/api/internal/HttpPostCall$a;->a(Z)Lcom/vk/api/internal/HttpPostCall$a;
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->d()Lcom/vk/im/engine/d;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->d()Lcom/vk/im/engine/ImEnvironment;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->c0()Lcom/vk/im/engine/ImConfig;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object p1
 
@@ -141,10 +141,10 @@
 
     move-result-wide v1
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/api/internal/c$a;->a(J)Lcom/vk/api/internal/c$a;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/api/internal/HttpPostCall$a;->a(J)Lcom/vk/api/internal/HttpPostCall$a;
 
     .line 10
-    invoke-virtual {v0}, Lcom/vk/api/internal/c$a;->e()Lcom/vk/api/internal/c;
+    invoke-virtual {v0}, Lcom/vk/api/internal/HttpPostCall$a;->e()Lcom/vk/api/internal/HttpPostCall;
 
     move-result-object p1
 
@@ -153,11 +153,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/models/attaches/h/a;)Lcom/vk/im/engine/models/attaches/Attach;
+.method public a(Lcom/vk/im/engine/models/attaches/h/AudioUploadModels;)Lcom/vk/im/engine/models/attaches/Attach;
     .locals 2
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->c()Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->c()Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object v0
 
@@ -168,35 +168,35 @@
     move-result-object v0
 
     .line 13
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/a;->c()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/AudioUploadModels;->c()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachAudioMsg;->c(I)V
 
     .line 14
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/a;->b()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/AudioUploadModels;->b()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachAudioMsg;->b(I)V
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/a;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/AudioUploadModels;->e()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachAudioMsg;->c(Ljava/lang/String;)V
 
     .line 16
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/a;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/AudioUploadModels;->d()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachAudioMsg;->b(Ljava/lang/String;)V
 
     .line 17
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/a;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/h/AudioUploadModels;->a()Ljava/lang/String;
 
     move-result-object p1
 
@@ -205,50 +205,50 @@
     return-object v0
 .end method
 
-.method public a(Ljava/lang/String;)Lcom/vk/im/engine/models/attaches/h/a;
+.method public a(Ljava/lang/String;)Lcom/vk/im/engine/models/attaches/h/AudioUploadModels;
     .locals 2
 
     .line 6
-    new-instance v0, Lcom/vk/api/internal/k$a;
+    new-instance v0, Lcom/vk/api/internal/MethodCall$a;
 
-    invoke-direct {v0}, Lcom/vk/api/internal/k$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
 
     const-string v1, "docs.save"
 
     .line 7
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     const-string v1, "file"
 
     .line 8
-    invoke-virtual {v0, v1, p1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     const/4 p1, 0x1
 
     .line 9
-    invoke-virtual {v0, p1}, Lcom/vk/api/internal/k$a;->b(Z)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, p1}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
 
     .line 10
-    invoke-virtual {v0}, Lcom/vk/api/internal/k$a;->a()Lcom/vk/api/internal/k;
+    invoke-virtual {v0}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
 
     move-result-object p1
 
     .line 11
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->d()Lcom/vk/im/engine/d;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->d()Lcom/vk/im/engine/ImEnvironment;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/im/engine/internal/g/c;->a:Lcom/vk/im/engine/internal/g/c;
+    sget-object v1, Lcom/vk/im/engine/internal/api_parsers/UploadParsers1;->a:Lcom/vk/im/engine/internal/api_parsers/UploadParsers1;
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/l;Lcom/vk/api/sdk/h;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/VKMethodCall;Lcom/vk/api/sdk/VKApiResponseParser;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/attaches/h/a;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/h/AudioUploadModels;
 
     return-object p1
 .end method
@@ -259,7 +259,7 @@
     .line 2
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->a(Ljava/lang/String;)Lcom/vk/im/engine/models/attaches/h/a;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->a(Ljava/lang/String;)Lcom/vk/im/engine/models/attaches/h/AudioUploadModels;
 
     move-result-object p1
 
@@ -270,34 +270,34 @@
     .locals 0
 
     .line 3
-    check-cast p1, Lcom/vk/im/engine/models/upload/a;
+    check-cast p1, Lcom/vk/im/engine/models/upload/UploadServer;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->a(Lcom/vk/im/engine/models/upload/a;Landroid/net/Uri;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->a(Lcom/vk/im/engine/models/upload/UploadServer;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/models/upload/a;Landroid/net/Uri;)Ljava/lang/String;
+.method public a(Lcom/vk/im/engine/models/upload/UploadServer;Landroid/net/Uri;)Ljava/lang/String;
     .locals 2
 
     .line 5
-    iget-object p2, p0, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->h:Lcom/vk/im/engine/internal/upload/b;
+    iget-object p2, p0, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->h:Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;
 
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->d()Lcom/vk/im/engine/d;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->d()Lcom/vk/im/engine/ImEnvironment;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {v0}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v0
 
     const-string v1, "env.apiManager"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p2, v0, p1, p0}, Lcom/vk/im/engine/internal/upload/b;->a(Lcom/vk/api/sdk/VKApiManager;Lcom/vk/im/engine/models/upload/a;Lcom/vk/api/sdk/g;)Ljava/lang/Object;
+    invoke-virtual {p2, v0, p1, p0}, Lcom/vk/im/engine/internal/upload/FallbackUploadHelper;->a(Lcom/vk/api/sdk/VKApiManager;Lcom/vk/im/engine/models/upload/UploadServer;Lcom/vk/api/sdk/VKApiProgressListener;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -330,9 +330,9 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/im/engine/models/attaches/h/a;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/h/AudioUploadModels;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->a(Lcom/vk/im/engine/models/attaches/h/a;)Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->a(Lcom/vk/im/engine/models/attaches/h/AudioUploadModels;)Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object p1
 
@@ -349,7 +349,7 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v1}, Lkotlin/NotImplementedError;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v1}, Lkotlin/NotImplementedError;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     throw v0
 .end method
@@ -358,7 +358,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->c()Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->c()Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object v0
 
@@ -375,52 +375,52 @@
     return-object v0
 .end method
 
-.method public f()Lcom/vk/im/engine/models/upload/a;
+.method public f()Lcom/vk/im/engine/models/upload/UploadServer;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/api/internal/k$a;
+    new-instance v0, Lcom/vk/api/internal/MethodCall$a;
 
-    invoke-direct {v0}, Lcom/vk/api/internal/k$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
 
     const-string v1, "docs.getUploadServer"
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     const-string v1, "type"
 
     const-string v2, "audio_message"
 
     .line 4
-    invoke-virtual {v0, v1, v2}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     const/4 v1, 0x1
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/k$a;->b(Z)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/api/internal/k$a;->a()Lcom/vk/api/internal/k;
+    invoke-virtual {v0}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
 
     move-result-object v0
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/c;->d()Lcom/vk/im/engine/d;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/GenericUploader;->d()Lcom/vk/im/engine/ImEnvironment;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {v1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v1
 
-    sget-object v2, Lcom/vk/im/engine/internal/g/j;->a:Lcom/vk/im/engine/internal/g/j;
+    sget-object v2, Lcom/vk/im/engine/internal/api_parsers/DocUploadParser2;->a:Lcom/vk/im/engine/internal/api_parsers/DocUploadParser2;
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/l;Lcom/vk/api/sdk/h;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, v2}, Lcom/vk/api/sdk/VKApiManager;->b(Lcom/vk/api/sdk/VKMethodCall;Lcom/vk/api/sdk/VKApiResponseParser;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/models/upload/a;
+    check-cast v0, Lcom/vk/im/engine/models/upload/UploadServer;
 
     return-object v0
 .end method
@@ -429,7 +429,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->f()Lcom/vk/im/engine/models/upload/a;
+    invoke-virtual {p0}, Lcom/vk/im/engine/internal/upload/AudioMsgUploader;->f()Lcom/vk/im/engine/models/upload/UploadServer;
 
     move-result-object v0
 

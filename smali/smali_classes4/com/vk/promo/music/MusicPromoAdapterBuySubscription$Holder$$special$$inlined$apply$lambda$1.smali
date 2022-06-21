@@ -3,12 +3,12 @@
 .source "MusicPromoAdapterBuySubscription.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/subscription/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/music/subscription/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $model$inlined:Lcom/vk/music/subscription/a;
+.field final synthetic $model$inlined:Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;
 
-.field final synthetic $onBuySubscription$inlined:Lkotlin/jvm/b/b;
+.field final synthetic $onBuySubscription$inlined:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/subscription/a;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$$special$$inlined$apply$lambda$1;->$model$inlined:Lcom/vk/music/subscription/a;
+    iput-object p1, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$$special$$inlined$apply$lambda$1;->$model$inlined:Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;
 
-    iput-object p2, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$$special$$inlined$apply$lambda$1;->$onBuySubscription$inlined:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$$special$$inlined$apply$lambda$1;->$onBuySubscription$inlined:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x0
 
@@ -49,11 +49,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/music/subscription/a;
+.method public final invoke()Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$$special$$inlined$apply$lambda$1;->$model$inlined:Lcom/vk/music/subscription/a;
+    iget-object v0, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$$special$$inlined$apply$lambda$1;->$model$inlined:Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;
 
     return-object v0
 .end method
@@ -62,7 +62,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$$special$$inlined$apply$lambda$1;->invoke()Lcom/vk/music/subscription/a;
+    invoke-virtual {p0}, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$$special$$inlined$apply$lambda$1;->invoke()Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;
 
     move-result-object v0
 

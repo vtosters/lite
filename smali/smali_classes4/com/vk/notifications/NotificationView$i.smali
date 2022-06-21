@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -63,7 +63,7 @@
 
     const-string p2, "images"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
     new-instance p2, Ljava/util/ArrayList;
@@ -94,7 +94,7 @@
     const-string v1, "it"
 
     .line 13
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/common/ImageSize;->getHeight()I
 
@@ -202,17 +202,17 @@
 
     move-result p1
 
-    sget-object v4, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v4, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v5, "AppContextHolder.context"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    invoke-static {p1, v4}, Lcom/vk/core/util/i1;->a(ILandroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {p1, v4}, Lcom/vk/core/util/TimeUtils;->a(ILandroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -274,7 +274,7 @@
 
     const-string v2, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1}, Lkotlin/text/l;->d(Ljava/lang/String;)Ljava/lang/String;
 
@@ -290,7 +290,7 @@
 
     const-string v0, "(this as java.lang.String).substring(startIndex)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -382,7 +382,7 @@
     if-eqz v1, :cond_1
 
     .line 5
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
@@ -399,12 +399,12 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/common/links/b;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v1}, Lcom/vk/common/links/LinkParser;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
     .line 7
-    invoke-virtual {v0, v1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -454,7 +454,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
@@ -471,12 +471,12 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/common/links/b;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {p1}, Lcom/vk/common/links/LinkParser;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     .line 4
-    invoke-virtual {v0, p1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -514,7 +514,7 @@
     if-eqz v1, :cond_1
 
     .line 3
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
@@ -531,12 +531,12 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/common/links/b;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v1}, Lcom/vk/common/links/LinkParser;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -591,7 +591,7 @@
     if-eqz v1, :cond_1
 
     .line 17
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
@@ -608,16 +608,16 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/common/links/b;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v1}, Lcom/vk/common/links/LinkParser;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
     .line 19
-    invoke-virtual {v0, v1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/common/links/b;->d(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v0}, Lcom/vk/common/links/LinkParser;->d(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -897,7 +897,7 @@
 
     const-string v3, "attachments[i]"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v2, Lcom/vk/dto/notifications/NotificationEntity;
 
@@ -927,13 +927,13 @@
 
     .line 11
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 12
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 

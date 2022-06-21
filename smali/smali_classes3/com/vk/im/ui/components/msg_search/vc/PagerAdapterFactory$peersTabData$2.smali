@@ -3,12 +3,12 @@
 .source "PagerAdapterFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/msg_search/vc/p;Landroid/view/LayoutInflater;)V
+    value = Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;-><init>(Landroid/content/Context;Lcom/vk/im/ui/components/msg_search/vc/VcCallback;Landroid/view/LayoutInflater;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/im/ui/components/msg_search/vc/l;",
+        "Lcom/vk/im/ui/components/msg_search/vc/SearchPageData;",
         ">;>;"
     }
 .end annotation
@@ -64,13 +64,13 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/components/msg_search/vc/l;",
+            "Lcom/vk/im/ui/components/msg_search/vc/SearchPageData;",
             ">;"
         }
     .end annotation
 
     .line 2
-    new-instance v10, Lcom/vk/im/ui/components/msg_search/vc/l;
+    new-instance v10, Lcom/vk/im/ui/components/msg_search/vc/SearchPageData;
 
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory$peersTabData$2;->this$0:Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;
 
@@ -86,18 +86,18 @@
 
     const-string v0, "context.getString(R.stri\u2026search_tab_title_dialogs)"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     new-instance v2, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory$peersTabData$2$1;
 
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory$peersTabData$2;->this$0:Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;->a(Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;)Lcom/vk/im/ui/components/msg_search/vc/p;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;->a(Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;)Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory$peersTabData$2$1;-><init>(Lcom/vk/im/ui/components/msg_search/vc/p;)V
+    invoke-direct {v2, v0}, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory$peersTabData$2$1;-><init>(Lcom/vk/im/ui/components/msg_search/vc/VcCallback;)V
 
     .line 4
     sget-object v3, Lcom/vk/im/engine/models/SearchMode;->PEERS:Lcom/vk/im/engine/models/SearchMode;
@@ -114,7 +114,7 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory$peersTabData$2;->this$0:Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;->a(Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;)Lcom/vk/im/ui/components/msg_search/vc/p;
+    invoke-static {v0}, Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;->a(Lcom/vk/im/ui/components/msg_search/vc/PagerAdapterFactory;)Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     move-result-object v0
 
@@ -124,7 +124,7 @@
 
     move-result-object v7
 
-    invoke-direct {v6, v0, v7}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter;-><init>(Lcom/vk/im/ui/components/msg_search/vc/p;Landroid/view/LayoutInflater;)V
+    invoke-direct {v6, v0, v7}, Lcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter;-><init>(Lcom/vk/im/ui/components/msg_search/vc/VcCallback;Landroid/view/LayoutInflater;)V
 
     const/4 v7, 0x0
 
@@ -135,7 +135,7 @@
     move-object v0, v10
 
     .line 7
-    invoke-direct/range {v0 .. v9}, Lcom/vk/im/ui/components/msg_search/vc/l;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;Lcom/vk/im/engine/models/SearchMode;JLcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/im/ui/components/msg_search/vc/SearchPageData;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;Lcom/vk/im/engine/models/SearchMode;JLcom/vk/im/ui/components/msg_search/vc/MsgSearchListAdapter;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-static {v10}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 

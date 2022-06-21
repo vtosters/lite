@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;
-.super Lcom/vk/im/engine/internal/j/a;
+.super Lcom/vk/im/engine/internal/j/ImInstantJob;
 .source "InvalidateMsgsWithAttachesJob.kt"
 
 
@@ -33,7 +33,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-string v0, "InvalidateMsgsWithAttachesJob"
 
@@ -47,7 +47,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/j/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/j/ImInstantJob;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;->b:I
 
@@ -62,7 +62,7 @@
     .locals 3
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/models/u;->getId()I
+    invoke-interface {p1}, Lcom/vk/im/engine/models/WithId;->getId()I
 
     move-result v0
 
@@ -70,9 +70,9 @@
 
     move-result v1
 
-    sget-object v2, Lcom/vk/im/engine/internal/storage/delegates/messages/a;->b:Lcom/vk/im/engine/internal/storage/delegates/messages/a;
+    sget-object v2, Lcom/vk/im/engine/internal/storage/delegates/messages/AttachDbUtils;->b:Lcom/vk/im/engine/internal/storage/delegates/messages/AttachDbUtils;
 
-    invoke-virtual {v2, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/a;->b(Lcom/vk/im/engine/models/attaches/Attach;)I
+    invoke-virtual {v2, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/AttachDbUtils;->b(Lcom/vk/im/engine/models/attaches/Attach;)I
 
     move-result p1
 
@@ -81,7 +81,7 @@
     return-void
 .end method
 
-.method private final a(Ljava/util/List;Lcom/vk/im/engine/d;)V
+.method private final a(Ljava/util/List;Lcom/vk/im/engine/ImEnvironment;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -89,16 +89,16 @@
             "Ljava/util/List<",
             "Ljava/lang/Integer;",
             ">;",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")V"
         }
     .end annotation
 
     .line 9
-    new-instance v0, Lcom/vk/im/engine/commands/dialogs/q;
+    new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdArgs;
 
     .line 10
-    invoke-static {p1}, Lcom/vk/im/engine/utils/collection/e;->a(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/d;
+    invoke-static {p1}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/IntCollection;
 
     move-result-object p1
 
@@ -111,19 +111,19 @@
     const/4 v3, 0x1
 
     .line 13
-    invoke-direct {v0, p1, v1, v3, v2}, Lcom/vk/im/engine/commands/dialogs/q;-><init>(Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+    invoke-direct {v0, p1, v1, v3, v2}, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdArgs;-><init>(Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
     .line 14
-    new-instance p1, Lcom/vk/im/engine/commands/dialogs/r;
+    new-instance p1, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdCmd;
 
-    invoke-direct {p1, v0}, Lcom/vk/im/engine/commands/dialogs/r;-><init>(Lcom/vk/im/engine/commands/dialogs/q;)V
+    invoke-direct {p1, v0}, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdCmd;-><init>(Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdArgs;)V
 
-    invoke-interface {p2, p0, p1}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+    invoke-interface {p2, p0, p1}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method private final b(Ljava/util/List;Lcom/vk/im/engine/d;)V
+.method private final b(Ljava/util/List;Lcom/vk/im/engine/ImEnvironment;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -132,7 +132,7 @@
             "+",
             "Lcom/vk/im/engine/models/messages/Msg;",
             ">;",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")V"
         }
     .end annotation
@@ -146,7 +146,7 @@
     .line 3
     sget-object v0, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob$updateMsgs$cmd$1;->a:Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob$updateMsgs$cmd$1;
 
-    invoke-static {p1, v0}, Lcom/vk/im/engine/utils/collection/e;->b(Ljava/util/Collection;Lkotlin/jvm/b/b;)Lcom/vk/im/engine/utils/collection/h;
+    invoke-static {p1, v0}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->b(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object v2
 
@@ -161,10 +161,10 @@
     move-object v0, v6
 
     .line 6
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
     .line 7
-    invoke-interface {p2, p0, v6}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+    invoke-interface {p2, p0, v6}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -180,11 +180,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/d;Lcom/vk/instantjobs/InstantJob$b;)V
+.method public a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/instantjobs/InstantJob$b;)V
     .locals 3
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p2
 
@@ -213,19 +213,19 @@
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-direct {p0, p2, p1}, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;->b(Ljava/util/List;Lcom/vk/im/engine/d;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;->b(Ljava/util/List;Lcom/vk/im/engine/ImEnvironment;)V
 
     .line 5
     :cond_0
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object p2
 
@@ -250,7 +250,7 @@
     if-eqz v0, :cond_1
 
     .line 8
-    invoke-direct {p0, p2, p1}, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;->a(Ljava/util/List;Lcom/vk/im/engine/d;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/im/engine/internal/jobs/attaches/InvalidateMsgsWithAttachesJob;->a(Ljava/util/List;Lcom/vk/im/engine/ImEnvironment;)V
 
     :cond_1
     return-void
@@ -312,13 +312,13 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/im/engine/internal/d;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/im/engine/internal/QueueNames;->a()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "QueueNames.forAttachesUpdates()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

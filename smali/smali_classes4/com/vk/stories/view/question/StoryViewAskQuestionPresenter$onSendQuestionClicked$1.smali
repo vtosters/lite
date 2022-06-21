@@ -3,7 +3,7 @@
 .source "StoryViewAskQuestionPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -60,7 +60,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onSendQuestionClicked$1;->this$0:Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/a;
+    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
 
     move-result-object v0
 
@@ -68,25 +68,25 @@
 
     iget-boolean v2, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onSendQuestionClicked$1;->$isAnonymous:Z
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/stories/view/question/a;->a(ZZ)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract;->a(ZZ)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onSendQuestionClicked$1;->this$0:Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/c;
+    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/stories/view/question/c;->m(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->m(Ljava/lang/String;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onSendQuestionClicked$1;->this$0:Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;
 
-    invoke-static {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/c;
+    invoke-static {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stories/view/question/c;->dismiss()V
+    invoke-interface {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->dismiss()V
 
     return-void
 .end method
@@ -99,7 +99,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onSendQuestionClicked$1;->a(Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

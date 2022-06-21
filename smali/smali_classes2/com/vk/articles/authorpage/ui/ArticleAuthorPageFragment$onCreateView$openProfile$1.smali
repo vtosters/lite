@@ -3,7 +3,7 @@
 .source "ArticleAuthorPageFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,33 +52,33 @@
     .line 1
     iget-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$onCreateView$openProfile$1;->this$0:Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;
 
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/articles/authorpage/a;->U0()Lcom/vk/dto/articles/a;
+    invoke-interface {p1}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->U0()Lcom/vk/dto/articles/ArticleAuthor;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    new-instance v0, Lcom/vk/profile/ui/c$z;
+    new-instance v0, Lcom/vk/profile/ui/BaseProfileFragment$z;
 
-    invoke-virtual {p1}, Lcom/vk/dto/articles/a;->b()I
+    invoke-virtual {p1}, Lcom/vk/dto/articles/ArticleAuthor;->b()I
 
     move-result p1
 
-    invoke-direct {v0, p1}, Lcom/vk/profile/ui/c$z;-><init>(I)V
+    invoke-direct {v0, p1}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
 
     iget-object p1, p0, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$onCreateView$openProfile$1;->this$0:Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     :cond_0
     return-void
@@ -92,7 +92,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$onCreateView$openProfile$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

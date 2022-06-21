@@ -3,7 +3,7 @@
 .source "AppUtils.kt"
 
 # interfaces
-.implements Lcom/vk/webapp/h$a;
+.implements Lcom/vk/webapp/SuperappSettings$a;
 
 
 # annotations
@@ -33,7 +33,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 

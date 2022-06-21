@@ -18,7 +18,7 @@
 .method public static a(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$a;DD)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3, p4}, Lcom/vk/im/ui/components/msg_send/picker/location/f$a;->a(Lcom/vk/im/ui/components/msg_send/picker/location/f;DD)V
+    invoke-static {p0, p1, p2, p3, p4}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback$a;->a(Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;DD)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 .method public static a(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$a;)Z
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/f$a;->a(Lcom/vk/im/ui/components/msg_send/picker/location/f;)Z
+    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback$a;->a(Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;)Z
 
     move-result p0
 
@@ -54,7 +54,7 @@
 .method public static b(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$a;)Z
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/f$a;->b(Lcom/vk/im/ui/components/msg_send/picker/location/f;)Z
+    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback$a;->b(Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;)Z
 
     move-result p0
 
@@ -64,7 +64,7 @@
 .method public static c(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$a;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/f$a;->c(Lcom/vk/im/ui/components/msg_send/picker/location/f;)V
+    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback$a;->c(Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;)V
 
     return-void
 .end method
@@ -72,7 +72,7 @@
 .method public static d(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$a;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/f$a;->d(Lcom/vk/im/ui/components/msg_send/picker/location/f;)V
+    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback$a;->d(Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;)V
 
     return-void
 .end method
@@ -80,7 +80,7 @@
 .method public static e(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$a;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/f$a;->e(Lcom/vk/im/ui/components/msg_send/picker/location/f;)V
+    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback$a;->e(Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;)V
 
     return-void
 .end method
@@ -88,7 +88,7 @@
 .method public static f(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$a;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/menu/b$a;->a(Lcom/vk/im/ui/components/msg_send/picker/menu/b;)V
+    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/menu/MenuTitleCallback$a;->a(Lcom/vk/im/ui/components/msg_send/picker/menu/MenuTitleCallback;)V
 
     return-void
 .end method
@@ -96,7 +96,7 @@
 .method public static g(Lcom/vk/im/ui/components/msg_send/picker/location/ImLocationVc$a;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/f$a;->f(Lcom/vk/im/ui/components/msg_send/picker/location/f;)V
+    invoke-static {p0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback$a;->f(Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;)V
 
     return-void
 .end method

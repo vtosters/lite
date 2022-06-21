@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/vk/music/view/x/a;->a:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lcom/vk/music/view/x/p;->a(Ljava/lang/String;Landroid/content/DialogInterface;)V
+    invoke-static {v0, p1}, Lcom/vk/music/view/x/ControlsHolder;->a(Ljava/lang/String;Landroid/content/DialogInterface;)V
 
     return-void
 .end method

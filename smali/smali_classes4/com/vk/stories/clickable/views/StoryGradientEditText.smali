@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private a:Lcom/vk/stories/clickable/views/a;
+.field private a:Lcom/vk/stories/clickable/views/StoryGradientEditText1;
 
 .field private b:Lcom/vk/common/view/SelectionChangeEditText$a;
 
-.field private c:Lcom/vk/stories/clickable/models/a;
+.field private c:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
-.field private d:Lcom/vk/stories/clickable/models/a;
+.field private d:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
 .field private e:Landroid/graphics/Shader;
 
@@ -32,11 +32,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/clickable/views/StoryGradientEditText;)Lcom/vk/stories/clickable/views/a;
+.method public static final synthetic a(Lcom/vk/stories/clickable/views/StoryGradientEditText;)Lcom/vk/stories/clickable/views/StoryGradientEditText1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->a:Lcom/vk/stories/clickable/views/a;
+    iget-object p0, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->a:Lcom/vk/stories/clickable/views/StoryGradientEditText1;
 
     return-object p0
 .end method
@@ -45,7 +45,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
     .line 2
     iget-object v1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->e:Landroid/graphics/Shader;
@@ -67,7 +67,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    sget-object v1, Lcom/vk/stories/clickable/g;->a:Lcom/vk/stories/clickable/g;
+    sget-object v1, Lcom/vk/stories/clickable/StoryGradientUtils;->a:Lcom/vk/stories/clickable/StoryGradientUtils;
 
     invoke-virtual {p0}, Landroid/widget/EditText;->getWidth()I
 
@@ -77,7 +77,7 @@
 
     move-result v3
 
-    invoke-virtual {v1, v0, v2, v3}, Lcom/vk/stories/clickable/g;->a(Lcom/vk/stories/clickable/models/a;II)Landroid/graphics/LinearGradient;
+    invoke-virtual {v1, v0, v2, v3}, Lcom/vk/stories/clickable/StoryGradientUtils;->a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;II)Landroid/graphics/LinearGradient;
 
     move-result-object v0
 
@@ -92,11 +92,11 @@
 
 
 # virtual methods
-.method public final getGradient()Lcom/vk/stories/clickable/models/a;
+.method public final getGradient()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
     return-object v0
 .end method
@@ -114,7 +114,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->a:Lcom/vk/stories/clickable/views/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->a:Lcom/vk/stories/clickable/views/StoryGradientEditText1;
 
     const/4 v1, 0x1
 
@@ -131,11 +131,11 @@
     if-ne v0, v1, :cond_0
 
     .line 2
-    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->a:Lcom/vk/stories/clickable/views/a;
+    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->a:Lcom/vk/stories/clickable/views/StoryGradientEditText1;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/stories/clickable/views/a;->o()V
+    invoke-interface {p1}, Lcom/vk/stories/clickable/views/StoryGradientEditText1;->o()V
 
     goto :goto_0
 
@@ -159,11 +159,11 @@
     if-nez p1, :cond_0
 
     .line 2
-    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->c:Lcom/vk/stories/clickable/models/a;
+    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->c:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
-    iget-object p2, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/a;
+    iget-object p2, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -173,7 +173,7 @@
 
     .line 3
     :cond_0
-    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/a;
+    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
     .line 4
     invoke-virtual {p0}, Landroid/widget/EditText;->getPaint()Landroid/text/TextPaint;
@@ -182,11 +182,11 @@
 
     const-string p3, "paint"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p1, :cond_1
 
-    sget-object p3, Lcom/vk/stories/clickable/g;->a:Lcom/vk/stories/clickable/g;
+    sget-object p3, Lcom/vk/stories/clickable/StoryGradientUtils;->a:Lcom/vk/stories/clickable/StoryGradientUtils;
 
     invoke-virtual {p0}, Landroid/widget/EditText;->getWidth()I
 
@@ -196,7 +196,7 @@
 
     move-result p5
 
-    invoke-virtual {p3, p1, p4, p5}, Lcom/vk/stories/clickable/g;->a(Lcom/vk/stories/clickable/models/a;II)Landroid/graphics/LinearGradient;
+    invoke-virtual {p3, p1, p4, p5}, Lcom/vk/stories/clickable/StoryGradientUtils;->a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;II)Landroid/graphics/LinearGradient;
 
     move-result-object p1
 
@@ -209,9 +209,9 @@
     invoke-virtual {p2, p1}, Landroid/text/TextPaint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
     .line 5
-    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/a;
+    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->c:Lcom/vk/stories/clickable/models/a;
+    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->c:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
     :cond_2
     return-void
@@ -237,16 +237,16 @@
     return-void
 .end method
 
-.method public final setGradient(Lcom/vk/stories/clickable/models/a;)V
+.method public final setGradient(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
-    iput-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->c:Lcom/vk/stories/clickable/models/a;
+    iput-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->c:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
     .line 2
-    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/a;
+    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->d:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
     const/4 p1, 0x0
 
@@ -262,11 +262,11 @@
     return-void
 .end method
 
-.method public final setPressKey(Lcom/vk/stories/clickable/views/a;)V
+.method public final setPressKey(Lcom/vk/stories/clickable/views/StoryGradientEditText1;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->a:Lcom/vk/stories/clickable/views/a;
+    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText;->a:Lcom/vk/stories/clickable/views/StoryGradientEditText1;
 
     return-void
 .end method

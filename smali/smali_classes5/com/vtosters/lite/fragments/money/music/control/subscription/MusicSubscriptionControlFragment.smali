@@ -1,9 +1,9 @@
 .class public final Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;
-.super Lcom/vk/core/fragments/c;
+.super Lcom/vk/core/fragments/BaseMvpFragment;
 .source "MusicSubscriptionControlFragment.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/fragments/money/music/control/subscription/b;
+.implements Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlContract1;
 
 
 # annotations
@@ -17,10 +17,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/c<",
-        "Lcom/vtosters/lite/fragments/money/music/control/subscription/a;",
+        "Lcom/vk/core/fragments/BaseMvpFragment<",
+        "Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlContract;",
         ">;",
-        "Lcom/vtosters/lite/fragments/money/music/control/subscription/b;"
+        "Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlContract1;"
     }
 .end annotation
 
@@ -30,12 +30,12 @@
 
 .field private H:Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;
 
-.field private final I:Lcom/vk/music/restriction/h;
+.field private final I:Lcom/vk/music/restriction/MusicRestrictionManager;
 
-.field private final J:Lcom/vtosters/lite/fragments/money/r/a;
+.field private final J:Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vtosters/lite/fragments/money/r/a<",
+            "Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper<",
             "Lcom/vk/dto/common/data/Subscription;",
             ">;"
         }
@@ -53,7 +53,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -62,23 +62,23 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
 
     .line 2
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->f()Lcom/vk/music/restriction/h;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->f()Lcom/vk/music/restriction/MusicRestrictionManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->I:Lcom/vk/music/restriction/h;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->I:Lcom/vk/music/restriction/MusicRestrictionManager;
 
     .line 3
-    new-instance v0, Lcom/vtosters/lite/fragments/money/r/a;
+    new-instance v0, Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/fragments/money/r/a;-><init>()V
+    invoke-direct {v0}, Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->J:Lcom/vtosters/lite/fragments/money/r/a;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->J:Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;
 
     .line 4
     new-instance v0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$e;
@@ -88,11 +88,11 @@
     iput-object v0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->K:Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$e;
 
     .line 5
-    new-instance v0, Lcom/vtosters/lite/fragments/money/music/control/subscription/a;
+    new-instance v0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlContract;
 
-    invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/money/music/control/subscription/a;-><init>(Lcom/vtosters/lite/fragments/money/music/control/subscription/b;)V
+    invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlContract;-><init>(Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlContract1;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/c;->a(Lb/h/r/c;)V
+    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/BaseMvpFragment;->a(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -101,11 +101,11 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vtosters/lite/fragments/money/music/control/subscription/a;
+    check-cast v0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlContract;
 
     if-eqz v0, :cond_0
 
@@ -113,7 +113,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/a;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlContract;->a(I)V
 
     :cond_0
     return-void
@@ -144,20 +144,20 @@
     return v0
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;)Lcom/vtosters/lite/fragments/money/r/a;
+.method public static final synthetic a(Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;)Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->J:Lcom/vtosters/lite/fragments/money/r/a;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->J:Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;)Lcom/vk/music/restriction/h;
+.method public static final synthetic b(Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;)Lcom/vk/music/restriction/MusicRestrictionManager;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->I:Lcom/vk/music/restriction/h;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->I:Lcom/vk/music/restriction/MusicRestrictionManager;
 
     return-object p0
 .end method
@@ -175,7 +175,7 @@
     .locals 9
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
@@ -256,7 +256,7 @@
     if-eq v2, v1, :cond_2
 
     .line 18
-    sget-object v2, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
+    sget-object v2, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->a:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
 
     const/4 v2, 0x3
 
@@ -298,13 +298,13 @@
 
     move-result-object p1
 
-    invoke-static {p1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
     .line 19
     :cond_2
-    sget-object v1, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
+    sget-object v1, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->a:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
 
     new-array p2, p2, [Ljava/lang/Object;
 
@@ -338,7 +338,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -402,7 +402,7 @@
     const-string v0, "adapter"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -413,7 +413,7 @@
     .locals 7
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
@@ -474,7 +474,7 @@
     const-string v2, "if (isInPurchaseRetrying\u2026ubscription.expiredDate))"
 
     .line 7
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     iget-object v2, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->H:Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;
@@ -486,13 +486,13 @@
 
     const-string v5, "subscription.title"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v5, p1, Lcom/vk/dto/common/data/Subscription;->D:Ljava/lang/String;
 
     const-string v6, "subscription.description"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v4, v5}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;
 
@@ -501,7 +501,7 @@
 
     const-string v5, "subscription.merchant_title"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v4}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;->f(Ljava/lang/String;)Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;
 
@@ -513,7 +513,7 @@
 
     const-string v1, "subscription.management_url"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;->k(Ljava/lang/String;)Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;
 
@@ -522,7 +522,7 @@
 
     const-string v0, "subscription.terms_url"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, p1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;->j(Ljava/lang/String;)Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;
 
@@ -541,7 +541,7 @@
     const-string p1, "adapter"
 
     .line 17
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -592,7 +592,7 @@
     const-string p1, "adapter"
 
     .line 27
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -603,11 +603,11 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->J:Lcom/vtosters/lite/fragments/money/r/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->J:Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->K:Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$e;
 
-    invoke-virtual {v0, p0, p1, v1}, Lcom/vtosters/lite/fragments/money/r/a;->b(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/dto/common/data/e;Lcom/vtosters/lite/data/PurchasesManager$o;)V
+    invoke-virtual {v0, p0, p1, v1}, Lcom/vtosters/lite/fragments/money/r/BuyMusicSubscriptionHelper;->b(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/dto/common/data/Purchase1;Lcom/vtosters/lite/data/PurchasesManager$o;)V
 
     return-void
 .end method
@@ -625,13 +625,13 @@
 
     const-string v2, "subscription.title"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p1, Lcom/vk/dto/common/data/Subscription;->D:Ljava/lang/String;
 
     const-string v3, "subscription.description"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;
 
@@ -655,7 +655,7 @@
 
     const-string v1, "subscription.terms_url"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;->j(Ljava/lang/String;)Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;
 
@@ -670,7 +670,7 @@
     const-string p1, "adapter"
 
     .line 11
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -709,7 +709,7 @@
     :cond_0
     const-string p1, "tabletHelper"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -742,7 +742,7 @@
     invoke-direct {v2, p0}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$onCreateView$2;-><init>(Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;)V
 
     .line 5
-    invoke-direct {v0, p3, v1, v2}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;-><init>(ZLkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p3, v1, v2}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;-><init>(ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     iput-object v0, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->H:Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;
 
@@ -769,7 +769,7 @@
     const-string p2, "it"
 
     .line 8
-    invoke-static {v2, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->H:Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionDetailsAdapter;
 
@@ -828,7 +828,7 @@
 
     move-result v4
 
-    invoke-virtual {p2, v3, v1, v0, v4}, Lcom/vk/core/ui/d;->a(IIII)V
+    invoke-virtual {p2, v3, v1, v0, v4}, Lcom/vk/core/ui/CardItemDecorator;->a(IIII)V
 
     .line 12
     invoke-virtual {v2, p2}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
@@ -848,7 +848,7 @@
 
     move-object v1, p2
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/core/ui/TabletUiHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/core/ui/TabletUiHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p2, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->G:Lcom/vk/core/ui/TabletUiHelper;
 
@@ -866,7 +866,7 @@
     const v0, 0x7f080376
 
     .line 15
-    invoke-static {p2, v0}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, v0}, Lcom/vtosters/lite/ViewUtils;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     .line 16
     new-instance v0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$d;
@@ -885,13 +885,13 @@
 
     .line 18
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 19
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -900,7 +900,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onStart()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onStart()V
 
     .line 2
     invoke-direct {p0}, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;->C()V

@@ -3,12 +3,12 @@
 .source "VoipCallActivity.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/voip/VoipCallActivity$onCreate$4;->a(Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/voip/VoipCallActivity$onCreate$4;->a(Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,22 +19,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $it:Lkotlin/jvm/b/b;
+.field final synthetic $it:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/voip/VoipCallActivity$onCreate$4$1;->$it:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/voip/VoipCallActivity$onCreate$4$1;->$it:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x0
 
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/voip/VoipCallActivity$onCreate$4$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -79,13 +79,13 @@
     invoke-static {v0}, Lcom/vk/log/L;->d([Ljava/lang/Object;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/voip/VoipCallActivity$onCreate$4$1;->$it:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/voip/VoipCallActivity$onCreate$4$1;->$it:Lkotlin/jvm/b/Functions2;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

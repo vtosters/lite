@@ -189,7 +189,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/profile/ui/StaticMapWrapper$showBlurInternal$1;-><init>(Lcom/vk/profile/ui/StaticMapWrapper;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/profile/ui/StaticMapWrapper;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, v0}, Lcom/vk/profile/ui/StaticMapWrapper;->a(Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -263,13 +263,13 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 12
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -300,7 +300,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -374,15 +374,15 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/b;)V
+.method public final a(Lkotlin/jvm/b/Functions2;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/google/android/gms/maps/c;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -392,7 +392,7 @@
 
     new-instance v1, Lcom/vk/profile/ui/StaticMapWrapper$e;
 
-    invoke-direct {v1, p1}, Lcom/vk/profile/ui/StaticMapWrapper$e;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p1}, Lcom/vk/profile/ui/StaticMapWrapper$e;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/MapView;->a(Lcom/google/android/gms/maps/e;)V
 

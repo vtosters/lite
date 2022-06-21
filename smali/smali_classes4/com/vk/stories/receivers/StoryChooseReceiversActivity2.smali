@@ -3,7 +3,7 @@
 .source "StoryChooseReceiversActivity2.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # instance fields
@@ -85,7 +85,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/stories/receivers/StoryChooseReceiversActivity2$initMVP$1;-><init>(Lcom/vk/stories/receivers/StoryChooseReceiversActivity2;)V
 
-    invoke-direct {v1, v0, v2}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;-><init>(Lcom/vk/stories/receivers/views/a;Lkotlin/jvm/b/c;)V
+    invoke-direct {v1, v0, v2}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;-><init>(Lcom/vk/stories/receivers/views/IStoryChooseView;Lkotlin/jvm/b/Functions1;)V
 
     iput-object v1, p0, Lcom/vk/stories/receivers/StoryChooseReceiversActivity2;->G:Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;
 
@@ -94,14 +94,14 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/receivers/views/StoryChooseView;->a(Lcom/vk/stories/receivers/presenters/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/receivers/views/StoryChooseView;->a(Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;)V
 
     return-void
 
     :cond_0
     const-string v0, "presenter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -112,7 +112,7 @@
     .locals 2
 
     .line 1
-    invoke-static {p0}, Lcom/vk/extensions/b;->a(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/vk/extensions/ActivityExt;->a(Landroid/app/Activity;)V
 
     .line 2
     invoke-static {}, Lcom/vk/core/util/OsUtil;->b()Z
@@ -154,7 +154,7 @@
 
     .line 5
     :goto_1
-    invoke-static {p0, v0}, Lcom/vk/core/extensions/a;->a(Landroid/app/Activity;I)V
+    invoke-static {p0, v0}, Lcom/vk/core/extensions/ActivityExt;->a(Landroid/app/Activity;I)V
 
     .line 6
     invoke-static {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(Landroid/app/Activity;)V
@@ -193,7 +193,7 @@
     const-string v0, "presenter"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -218,7 +218,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/view/Window;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/Window;)V
 
     .line 4
     invoke-direct {p0}, Lcom/vk/stories/receivers/StoryChooseReceiversActivity2;->y1()V
@@ -237,7 +237,7 @@
 
     const-string v1, "intent"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Lcom/vk/stories/receivers/presenters/StoryChoosePresenter;->a(Landroid/content/Intent;)V
 
@@ -246,7 +246,7 @@
     :cond_0
     const-string p1, "presenter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -271,7 +271,7 @@
     :cond_0
     const-string v0, "presenter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

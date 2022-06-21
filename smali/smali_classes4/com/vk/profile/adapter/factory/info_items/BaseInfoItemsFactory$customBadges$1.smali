@@ -3,12 +3,12 @@
 .source "BaseInfoItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/newsfeed/k0/b/b/i;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "TT;",
         "Ljava/util/ArrayList<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
@@ -92,14 +92,14 @@
     aget-object v7, v4, v6
 
     .line 5
-    new-instance v15, Lcom/vk/profile/adapter/items/w;
+    new-instance v15, Lcom/vk/profile/adapter/items/OverviewInfoItem;
 
     .line 6
-    new-instance v9, Lcom/vk/profile/adapter/items/w$d;
+    new-instance v9, Lcom/vk/profile/adapter/items/OverviewInfoItem$d;
 
     const-string v8, "it"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v7}, Lcom/vtosters/lite/api/ExtendedUserProfile$d;->a()Ljava/lang/String;
 
@@ -107,18 +107,18 @@
 
     if-eqz v8, :cond_0
 
-    invoke-direct {v9, v8}, Lcom/vk/profile/adapter/items/w$d;-><init>(Ljava/lang/String;)V
+    invoke-direct {v9, v8}, Lcom/vk/profile/adapter/items/OverviewInfoItem$d;-><init>(Ljava/lang/String;)V
 
     .line 7
     iget-object v8, v7, Lcom/vtosters/lite/api/ExtendedUserProfile$d;->a:Ljava/lang/String;
 
-    invoke-static {v8}, Lcom/vk/common/links/b;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v8}, Lcom/vk/common/links/LinkParser;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v10
 
     const-string v8, "LinkParser.parseWiki(it.text)"
 
-    invoke-static {v10, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     iget v11, v7, Lcom/vtosters/lite/api/ExtendedUserProfile$d;->e:I
@@ -150,7 +150,7 @@
     move v15, v7
 
     .line 11
-    invoke-direct/range {v8 .. v17}, Lcom/vk/profile/adapter/items/w;-><init>(Lcom/vk/profile/adapter/items/w$a;Ljava/lang/CharSequence;ILjava/lang/Runnable;IIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v8 .. v17}, Lcom/vk/profile/adapter/items/OverviewInfoItem;-><init>(Lcom/vk/profile/adapter/items/OverviewInfoItem$a;Ljava/lang/CharSequence;ILjava/lang/Runnable;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -160,7 +160,7 @@
 
     .line 12
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v1, 0x0
 

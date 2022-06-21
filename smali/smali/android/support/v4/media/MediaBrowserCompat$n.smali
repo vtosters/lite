@@ -62,7 +62,7 @@
     invoke-direct {v0, p0}, Landroid/support/v4/media/MediaBrowserCompat$n$b;-><init>(Landroid/support/v4/media/MediaBrowserCompat$n;)V
 
     .line 5
-    invoke-static {v0}, Landroid/support/v4/media/b;->a(Landroid/support/v4/media/b$a;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/support/v4/media/MediaBrowserCompatApi26;->a(Landroid/support/v4/media/MediaBrowserCompatApi26$a;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -77,7 +77,7 @@
     invoke-direct {v0, p0}, Landroid/support/v4/media/MediaBrowserCompat$n$a;-><init>(Landroid/support/v4/media/MediaBrowserCompat$n;)V
 
     .line 7
-    invoke-static {v0}, Landroid/support/v4/media/a;->a(Landroid/support/v4/media/a$d;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/support/v4/media/MediaBrowserCompatApi21;->a(Landroid/support/v4/media/MediaBrowserCompatApi21$d;)Ljava/lang/Object;
 
     :cond_1
     :goto_0

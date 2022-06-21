@@ -51,11 +51,11 @@
 
     iget-object v0, p0, Lcom/vk/statistic/StatisticBase$a$a;->a:Lcom/vk/statistic/StatisticBase$a;
 
-    iget-object v1, v0, Lcom/vk/statistic/StatisticBase$a;->a:Lcom/vk/statistic/b;
+    iget-object v1, v0, Lcom/vk/statistic/StatisticBase$a;->a:Lcom/vk/statistic/StatisticSender;
 
     iget-object v0, v0, Lcom/vk/statistic/StatisticBase$a;->b:Lcom/vk/statistic/StatisticBase;
 
-    invoke-interface {v1, v0}, Lcom/vk/statistic/b;->a(Lcom/vk/statistic/StatisticBase;)Z
+    invoke-interface {v1, v0}, Lcom/vk/statistic/StatisticSender;->a(Lcom/vk/statistic/StatisticBase;)Z
 
     move-result v0
 

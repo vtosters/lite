@@ -3,12 +3,12 @@
 .source "MsgDeleteMergeTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->b(Lcom/vk/im/engine/d;)Ljava/lang/Void;
+    value = Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->b(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Void;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,47 +52,47 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;)Lcom/vk/im/engine/internal/storage/delegates/messages/e;
+    invoke-static {v0}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;)Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;
 
     move-result-object v1
 
-    invoke-static {v0, p1, v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;Lcom/vk/im/engine/internal/storage/StorageManager;Lcom/vk/im/engine/internal/storage/delegates/messages/e;)Lcom/vk/im/engine/models/s;
+    invoke-static {v0, p1, v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;Lcom/vk/im/engine/internal/storage/StorageManager;Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;)Lcom/vk/im/engine/models/WeightRange;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/s;->a()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/WeightRange;->a()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v8
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/s;->b()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/WeightRange;->b()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v0
 
     .line 2
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;
 
-    invoke-static {v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;)Lcom/vk/im/engine/internal/storage/delegates/messages/e;
+    invoke-static {v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;)Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/delegates/messages/e;->a()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;->a()I
 
     move-result v2
 
-    invoke-static {v1, p1, v2, v8, v0}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;Lcom/vk/im/engine/internal/storage/StorageManager;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;)Ljava/lang/Boolean;
+    invoke-static {v1, p1, v2, v8, v0}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;Lcom/vk/im/engine/internal/storage/StorageManager;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;)Ljava/lang/Boolean;
 
     move-result-object v9
 
     .line 3
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;
 
-    invoke-static {v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;)Lcom/vk/im/engine/internal/storage/delegates/messages/e;
+    invoke-static {v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;)Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/delegates/messages/e;->a()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;->a()I
 
     move-result v3
 
@@ -108,16 +108,16 @@
 
     move-object v5, v0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;Lcom/vk/im/engine/internal/storage/StorageManager;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;Z)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;Lcom/vk/im/engine/internal/storage/StorageManager;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;Z)V
 
     .line 4
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;
 
-    invoke-static {v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;)Lcom/vk/im/engine/internal/storage/delegates/messages/e;
+    invoke-static {v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;)Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/delegates/messages/e;->a()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;->a()I
 
     move-result v3
 
@@ -127,31 +127,31 @@
 
     move-object v2, p1
 
-    invoke-static/range {v1 .. v7}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;Lcom/vk/im/engine/internal/storage/StorageManager;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;ZZ)V
+    invoke-static/range {v1 .. v7}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;Lcom/vk/im/engine/internal/storage/StorageManager;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;ZZ)V
 
     .line 5
     iget-object v1, p0, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;
 
-    invoke-static {v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;)Lcom/vk/im/engine/internal/storage/delegates/messages/e;
+    invoke-static {v1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;)Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/delegates/messages/e;->a()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;->a()I
 
     move-result v2
 
-    invoke-static {v1, p1, v2, v8, v0}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->b(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;Lcom/vk/im/engine/internal/storage/StorageManager;ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;)V
+    invoke-static {v1, p1, v2, v8, v0}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->b(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;Lcom/vk/im/engine/internal/storage/StorageManager;ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;)V
 
     if-eqz v9, :cond_0
 
     .line 6
     iget-object v0, p0, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask$onMerge$1;->this$0:Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;)Lcom/vk/im/engine/internal/storage/delegates/messages/e;
+    invoke-static {v0}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;->a(Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask;)Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/delegates/messages/e;->a()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgRangeArgs;->a()I
 
     move-result v1
 
@@ -173,7 +173,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/merge/messages/MsgDeleteMergeTask$onMerge$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

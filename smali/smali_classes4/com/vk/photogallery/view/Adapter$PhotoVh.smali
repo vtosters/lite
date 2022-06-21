@@ -62,7 +62,7 @@
 
     const-string v1, "view.findViewById(R.id.lg_image)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/facebook/drawee/view/SimpleDraweeView;
 
@@ -99,7 +99,7 @@
     const-string p1, "view.findViewById<AppCom\u2026MPLEX_UNIT_DIP)\n        }"
 
     .line 8
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/vk/photogallery/view/Adapter$PhotoVh;->c:Landroidx/appcompat/widget/AppCompatTextView;
 
@@ -112,7 +112,7 @@
 
     const-string v0, "view.findViewById(R.id.lg_counter_container)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/photogallery/view/Adapter$PhotoVh;->d:Landroid/view/View;
 
@@ -125,7 +125,7 @@
 
     const-string p2, "view.findViewById(R.id.lg_video_marker)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/photogallery/view/Adapter$PhotoVh;->e:Landroid/view/View;
 
@@ -134,13 +134,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/photogallery/dto/c;ILcom/vk/photogallery/view/Adapter$b;)V
+.method public final a(Lcom/vk/photogallery/dto/GalleryState2;ILcom/vk/photogallery/view/Adapter$b;)V
     .locals 6
 
     .line 1
     iget-object v0, p0, Lcom/vk/photogallery/view/Adapter$PhotoVh;->e:Landroid/view/View;
 
-    instance-of v1, p1, Lcom/vk/photogallery/dto/j;
+    instance-of v1, p1, Lcom/vk/photogallery/dto/GalleryState7;
 
     const/4 v2, 0x4
 
@@ -179,7 +179,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/photogallery/dto/SelectionState;->b(Lcom/vk/photogallery/dto/c;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/photogallery/dto/SelectionState;->b(Lcom/vk/photogallery/dto/GalleryState2;)Z
 
     move-result v0
 
@@ -201,7 +201,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, p1}, Lcom/vk/photogallery/dto/SelectionState;->a(Lcom/vk/photogallery/dto/c;)I
+    invoke-virtual {v3, p1}, Lcom/vk/photogallery/dto/SelectionState;->a(Lcom/vk/photogallery/dto/GalleryState2;)I
 
     move-result v3
 
@@ -236,9 +236,9 @@
 
     new-instance v3, Lcom/vk/photogallery/view/Adapter$PhotoVh$bind$1;
 
-    invoke-direct {v3, p0, p3, p1, p2}, Lcom/vk/photogallery/view/Adapter$PhotoVh$bind$1;-><init>(Lcom/vk/photogallery/view/Adapter$PhotoVh;Lcom/vk/photogallery/view/Adapter$b;Lcom/vk/photogallery/dto/c;I)V
+    invoke-direct {v3, p0, p3, p1, p2}, Lcom/vk/photogallery/view/Adapter$PhotoVh$bind$1;-><init>(Lcom/vk/photogallery/view/Adapter$PhotoVh;Lcom/vk/photogallery/view/Adapter$b;Lcom/vk/photogallery/dto/GalleryState2;I)V
 
-    invoke-static {v0, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_2
 
@@ -273,37 +273,37 @@
     .line 14
     sget-object v4, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v4}, Lcom/vk/imageloader/FrescoWrapper;->a()Lcom/facebook/u/b/a/f;
+    invoke-virtual {v4}, Lcom/vk/imageloader/FrescoWrapper;->a()Lcom/facebook/u/b/a/PipelineDraweeControllerBuilderSupplier;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/facebook/u/b/a/f;->get()Lcom/facebook/u/b/a/e;
+    invoke-virtual {v4}, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilderSupplier;->get()Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     move-result-object v4
 
     .line 15
     invoke-virtual {v4}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->j()Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v4, Lcom/facebook/u/b/a/e;
+    check-cast v4, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 16
     iget-object v5, p0, Lcom/vk/photogallery/view/Adapter$PhotoVh;->b:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    invoke-virtual {v5}, Lcom/facebook/drawee/view/DraweeView;->getController()Lcom/facebook/u/e/a;
+    invoke-virtual {v5}, Lcom/facebook/drawee/view/DraweeView;->getController()Lcom/facebook/u/e/DraweeController;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/a;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
+    invoke-virtual {v4, v5}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Lcom/facebook/u/e/DraweeController;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v4, Lcom/facebook/u/b/a/e;
+    check-cast v4, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 17
     invoke-virtual {v4, v1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->a(Z)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v4, Lcom/facebook/u/b/a/e;
+    check-cast v4, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 18
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/c;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState2;->d()Ljava/lang/String;
 
     move-result-object v1
 
@@ -316,11 +316,11 @@
     move-result-object v1
 
     .line 19
-    invoke-static {v0}, Lcom/facebook/imagepipeline/common/d;->a(I)Lcom/facebook/imagepipeline/common/d;
+    invoke-static {v0}, Lcom/facebook/imagepipeline/common/ResizeOptions;->a(I)Lcom/facebook/imagepipeline/common/ResizeOptions;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/d;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v1, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/ResizeOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 20
     invoke-virtual {v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a()Lcom/facebook/imagepipeline/request/ImageRequest;
@@ -330,10 +330,10 @@
     .line 21
     invoke-virtual {v4, v0}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->c(Ljava/lang/Object;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v4, Lcom/facebook/u/b/a/e;
+    check-cast v4, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 22
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/c;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState2;->a()Ljava/lang/String;
 
     move-result-object p1
 
@@ -346,11 +346,11 @@
     move-result-object p1
 
     .line 23
-    invoke-static {v2}, Lcom/facebook/imagepipeline/common/d;->a(I)Lcom/facebook/imagepipeline/common/d;
+    invoke-static {v2}, Lcom/facebook/imagepipeline/common/ResizeOptions;->a(I)Lcom/facebook/imagepipeline/common/ResizeOptions;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/d;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p1, v0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/ResizeOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 24
     invoke-virtual {p1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a()Lcom/facebook/imagepipeline/request/ImageRequest;
@@ -360,14 +360,14 @@
     .line 25
     invoke-virtual {v4, p1}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->b(Ljava/lang/Object;)Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;
 
-    check-cast v4, Lcom/facebook/u/b/a/e;
+    check-cast v4, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 
     .line 26
-    invoke-virtual {v4}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/a;
+    invoke-virtual {v4}, Lcom/facebook/drawee/controller/AbstractDraweeControllerBuilder;->k0()Lcom/facebook/drawee/controller/AbstractDraweeController;
 
     move-result-object p1
 
-    invoke-virtual {v3, p1}, Lcom/facebook/drawee/view/DraweeView;->setController(Lcom/facebook/u/e/a;)V
+    invoke-virtual {v3, p1}, Lcom/facebook/drawee/view/DraweeView;->setController(Lcom/facebook/u/e/DraweeController;)V
 
     .line 27
     iget-object p1, p0, Lcom/vk/photogallery/view/Adapter$PhotoVh;->b:Lcom/facebook/drawee/view/SimpleDraweeView;
@@ -376,7 +376,7 @@
 
     invoke-direct {v0, p0, p3, p2}, Lcom/vk/photogallery/view/Adapter$PhotoVh$bind$2;-><init>(Lcom/vk/photogallery/view/Adapter$PhotoVh;Lcom/vk/photogallery/view/Adapter$b;I)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

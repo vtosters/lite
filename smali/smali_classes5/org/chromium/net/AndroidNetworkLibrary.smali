@@ -257,7 +257,7 @@
     if-eqz p0, :cond_0
 
     .line 2
-    invoke-static {p0}, Lorg/chromium/base/h/b;->a(Landroid/net/LinkProperties;)Ljava/lang/String;
+    invoke-static {p0}, Lorg/chromium/base/h/ApiHelperForP;->a(Landroid/net/LinkProperties;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -278,7 +278,7 @@
     if-nez v0, :cond_1
 
     .line 4
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -295,7 +295,7 @@
     const-string v3, "android.permission.ACCESS_NETWORK_STATE"
 
     .line 7
-    invoke-static {v0, v3, v1, v2}, Lorg/chromium/base/b;->a(Landroid/content/Context;Ljava/lang/String;II)I
+    invoke-static {v0, v3, v1, v2}, Lorg/chromium/base/ApiCompatibilityUtils;->a(Landroid/content/Context;Ljava/lang/String;II)I
 
     move-result v0
 
@@ -355,7 +355,7 @@
     if-nez v0, :cond_1
 
     .line 4
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -371,7 +371,7 @@
     const-string v3, "android.permission.ACCESS_WIFI_STATE"
 
     .line 6
-    invoke-static {v0, v3, v1, v2}, Lorg/chromium/base/b;->a(Landroid/content/Context;Ljava/lang/String;II)I
+    invoke-static {v0, v3, v1, v2}, Lorg/chromium/base/ApiCompatibilityUtils;->a(Landroid/content/Context;Ljava/lang/String;II)I
 
     move-result v0
 
@@ -416,7 +416,7 @@
     if-eqz p0, :cond_0
 
     .line 2
-    invoke-static {p0}, Lorg/chromium/base/h/b;->b(Landroid/net/LinkProperties;)Z
+    invoke-static {p0}, Lorg/chromium/base/h/ApiHelperForP;->b(Landroid/net/LinkProperties;)Z
 
     move-result p0
 
@@ -482,7 +482,7 @@
 
     .line 3
     :cond_0
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v1
 
@@ -511,7 +511,7 @@
 
     .line 5
     :cond_1
-    invoke-static {v1}, Lorg/chromium/base/h/a;->a(Landroid/net/ConnectivityManager;)Landroid/net/Network;
+    invoke-static {v1}, Lorg/chromium/base/h/ApiHelperForM;->a(Landroid/net/ConnectivityManager;)Landroid/net/Network;
 
     move-result-object v3
 
@@ -714,7 +714,7 @@
 
     .line 2
     :cond_0
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -732,7 +732,7 @@
 
     .line 3
     :cond_1
-    invoke-static {v0}, Lorg/chromium/base/h/a;->a(Landroid/net/ConnectivityManager;)Landroid/net/Network;
+    invoke-static {v0}, Lorg/chromium/base/h/ApiHelperForM;->a(Landroid/net/ConnectivityManager;)Landroid/net/Network;
 
     move-result-object v2
 
@@ -769,7 +769,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -834,11 +834,11 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lorg/chromium/net/d;->f()Lorg/chromium/net/d;
+    invoke-static {}, Lorg/chromium/net/AndroidTelephonyManagerBridge;->f()Lorg/chromium/net/AndroidTelephonyManagerBridge;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lorg/chromium/net/d;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lorg/chromium/net/AndroidTelephonyManagerBridge;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -851,11 +851,11 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lorg/chromium/net/d;->f()Lorg/chromium/net/d;
+    invoke-static {}, Lorg/chromium/net/AndroidTelephonyManagerBridge;->f()Lorg/chromium/net/AndroidTelephonyManagerBridge;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lorg/chromium/net/d;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lorg/chromium/net/AndroidTelephonyManagerBridge;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -868,11 +868,11 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lorg/chromium/net/d;->f()Lorg/chromium/net/d;
+    invoke-static {}, Lorg/chromium/net/AndroidTelephonyManagerBridge;->f()Lorg/chromium/net/AndroidTelephonyManagerBridge;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lorg/chromium/net/d;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lorg/chromium/net/AndroidTelephonyManagerBridge;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -894,7 +894,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -915,7 +915,7 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -979,7 +979,7 @@
 
     .line 1
     :try_start_0
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1177,7 +1177,7 @@
     if-eq p1, v1, :cond_1
 
     .line 3
-    invoke-static {p1}, Lorg/chromium/net/r;->a(I)V
+    invoke-static {p1}, Lorg/chromium/net/ThreadStatsUid;->a(I)V
 
     .line 4
     :cond_1
@@ -1234,7 +1234,7 @@
     if-eq p1, v1, :cond_5
 
     .line 13
-    invoke-static {}, Lorg/chromium/net/r;->a()V
+    invoke-static {}, Lorg/chromium/net/ThreadStatsUid;->a()V
 
     :cond_5
     return-void

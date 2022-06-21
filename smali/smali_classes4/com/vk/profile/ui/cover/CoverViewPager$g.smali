@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/cover/CoverViewPager$g;
-.super Lcom/vk/core/ui/infiniteviewpager/a;
+.super Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;
 .source "CoverViewPager.kt"
 
 
@@ -32,7 +32,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverViewPager$g;->b:Lcom/vk/profile/ui/cover/CoverViewPager;
 
-    invoke-direct {p0, p2}, Lcom/vk/core/ui/infiniteviewpager/a;-><init>(Landroidx/viewpager/widget/PagerAdapter;)V
+    invoke-direct {p0, p2}, Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;-><init>(Landroidx/viewpager/widget/PagerAdapter;)V
 
     return-void
 .end method
@@ -43,13 +43,13 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/core/ui/infiniteviewpager/a;->instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;
+    invoke-super {p0, p1, p2}, Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;->instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;
 
     move-result-object p1
 
     const-string v0, "super.instantiateItem(container, position)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverViewPager$g;->b:Lcom/vk/profile/ui/cover/CoverViewPager;
@@ -68,7 +68,7 @@
 
     move-object v2, p1
 
-    check-cast v2, Lcom/vk/profile/ui/cover/c;
+    check-cast v2, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     invoke-direct {v1, v2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 

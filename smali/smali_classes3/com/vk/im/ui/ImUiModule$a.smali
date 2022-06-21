@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/ImUiModule;-><init>(Landroid/content/Context;Lb/h/n/c;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/im/engine/reporters/k;Lcom/vk/core/ui/themes/VKThemeHelper;Lcom/vk/im/ui/q/h/b$b;)V
+    value = Lcom/vk/im/ui/ImUiModule;-><init>(Landroid/content/Context;Lb/h/n/AppLifecycleDispatcher;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/engine/reporters/ImReporters;Lcom/vk/core/ui/themes/VKThemeHelper;Lcom/vk/im/ui/q/h/VideoAutoPlayer$b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

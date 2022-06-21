@@ -3,12 +3,12 @@
 .source "StoryBoxConverter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->b(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lc/a/m;
+    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->b(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -47,15 +47,15 @@
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Bitmap;)Lcom/vk/stories/clickable/stickers/k/b;
+.method public final a(Landroid/graphics/Bitmap;)Lcom/vk/stories/clickable/stickers/k/StoryBoxImageSticker;
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/stories/clickable/stickers/k/b;
+    new-instance v0, Lcom/vk/stories/clickable/stickers/k/StoryBoxImageSticker;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/box/StoryBoxConverter$c;->a:Lcom/vk/dto/stories/model/web/RenderableSticker;
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/stories/clickable/stickers/k/b;-><init>(Landroid/graphics/Bitmap;Lcom/vk/dto/stories/model/web/RenderableSticker;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/stories/clickable/stickers/k/StoryBoxImageSticker;-><init>(Landroid/graphics/Bitmap;Lcom/vk/dto/stories/model/web/RenderableSticker;)V
 
     return-object v0
 .end method
@@ -66,7 +66,7 @@
     .line 1
     check-cast p1, Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$c;->a(Landroid/graphics/Bitmap;)Lcom/vk/stories/clickable/stickers/k/b;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$c;->a(Landroid/graphics/Bitmap;)Lcom/vk/stories/clickable/stickers/k/StoryBoxImageSticker;
 
     move-result-object p1
 

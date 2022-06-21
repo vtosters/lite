@@ -3,7 +3,7 @@
 .source "SuperappCore.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/webapp/cache/AppsCacheManagerImpl;",
         ">;"
     }
@@ -65,11 +65,11 @@
 
     sget-object v2, Lcom/vk/webapp/SuperappCore;->d:Lcom/vk/webapp/SuperappCore;
 
-    invoke-virtual {v2}, Lcom/vk/webapp/SuperappCore;->b()Lcom/vk/webapp/h;
+    invoke-virtual {v2}, Lcom/vk/webapp/SuperappCore;->b()Lcom/vk/webapp/SuperappSettings;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/webapp/h;->a()Ljava/io/File;
+    invoke-virtual {v2}, Lcom/vk/webapp/SuperappSettings;->a()Ljava/io/File;
 
     move-result-object v2
 

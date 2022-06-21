@@ -41,7 +41,7 @@
     .locals 1
 
     .line 1
-    instance-of v0, p3, Lcom/vk/profile/ui/cover/c;
+    instance-of v0, p3, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz v0, :cond_0
 
@@ -107,7 +107,7 @@
     return v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -132,7 +132,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v7, Lcom/vk/profile/ui/cover/c;
+    new-instance v7, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -140,7 +140,7 @@
 
     const-string v1, "container.context"
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -152,7 +152,7 @@
 
     move-object v1, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/profile/ui/cover/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/profile/ui/cover/CoverViewItem;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 3
     invoke-virtual {p1, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
@@ -168,7 +168,7 @@
 
     check-cast p1, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;
 
-    invoke-virtual {p1, v7}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->b(Lcom/vk/profile/ui/cover/c;)V
+    invoke-virtual {p1, v7}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->b(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/profile/ui/cover/CoverViewPager$h;->a:Lcom/vk/profile/ui/cover/CoverViewPager;
@@ -179,7 +179,7 @@
 
     .line 6
     :cond_0
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -188,7 +188,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

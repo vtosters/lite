@@ -3,7 +3,7 @@
 .source "SocialGraphFriendsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/user/RequestUserProfile;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -77,7 +77,7 @@
 
     iget-object v4, p1, Lcom/vk/dto/user/RequestUserProfile;->t0:Ljava/lang/String;
 
-    invoke-static {v3, v4, v0}, Lcom/vk/api/execute/f;->a(ILjava/lang/String;Z)Lcom/vk/api/execute/f;
+    invoke-static {v3, v4, v0}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->a(ILjava/lang/String;Z)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     move-result-object v3
 
@@ -142,13 +142,13 @@
     .line 10
     iget-object v1, p1, Lcom/vk/dto/user/UserProfile;->X:Ljava/lang/String;
 
-    invoke-virtual {v3, v1}, Lcom/vk/api/execute/f;->e(Ljava/lang/String;)Lcom/vk/api/execute/f;
+    invoke-virtual {v3, v1}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->e(Ljava/lang/String;)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     :cond_5
     const/4 v1, 0x0
 
     .line 11
-    invoke-static {v3, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v3, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v4
 
@@ -171,7 +171,7 @@
 
     const/4 v12, 0x0
 
-    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -185,17 +185,17 @@
 
     if-eqz p1, :cond_6
 
-    new-instance v0, Lcom/vk/socialgraph/list/c;
+    new-instance v0, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment1;
 
-    invoke-direct {v0, p1}, Lcom/vk/socialgraph/list/c;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p1}, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object p1, v0
 
     :cond_6
-    check-cast p1, Lc/a/z/g;
+    check-cast p1, Lio/reactivex/functions/Consumer;
 
     .line 15
-    invoke-virtual {v1, v2, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -208,7 +208,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$addFriendAction$1;->a(Lcom/vk/dto/user/RequestUserProfile;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

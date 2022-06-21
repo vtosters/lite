@@ -6,17 +6,17 @@
 # instance fields
 .field private a:Z
 
-.field private final b:Lcom/vk/navigation/right/c;
+.field private final b:Lcom/vk/navigation/right/RightMenu1;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/navigation/right/c;)V
+.method public constructor <init>(Lcom/vk/navigation/right/RightMenu1;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/c;
+    iput-object p1, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/RightMenu1;
 
     return-void
 .end method
@@ -34,9 +34,9 @@
     .end annotation
 
     .line 5
-    iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/c;
+    iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/RightMenu1;
 
-    invoke-interface {v0}, Lcom/vk/navigation/right/c;->getActivity()Landroid/app/Activity;
+    invoke-interface {v0}, Lcom/vk/navigation/right/RightMenu1;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -58,7 +58,7 @@
 
     .line 8
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -77,7 +77,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/navigation/right/b;",
+            "Lcom/vk/navigation/right/RightMenuItem;",
             ">;"
         }
     .end annotation
@@ -111,32 +111,32 @@
     const-string v5, "it"
 
     .line 4
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v4}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v5
 
-    sget-object v6, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v6, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v7, "AppContextHolder.context"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v5, v6}, Lcom/vk/menu/c;->a(ILandroid/content/Context;)Z
+    invoke-static {v5, v6}, Lcom/vk/menu/MenuUtils;->a(ILandroid/content/Context;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
     .line 5
-    new-instance v5, Lcom/vk/navigation/right/b;
+    new-instance v5, Lcom/vk/navigation/right/RightMenuItem;
 
     new-instance v6, Lcom/vk/navigation/right/RightMenuPresenter$createMainMenu$1$1;
 
     invoke-direct {v6, p0}, Lcom/vk/navigation/right/RightMenuPresenter$createMainMenu$1$1;-><init>(Lcom/vk/navigation/right/RightMenuPresenter;)V
 
-    invoke-direct {v5, v4, v6}, Lcom/vk/navigation/right/b;-><init>(Landroid/view/MenuItem;Lkotlin/jvm/b/b;)V
+    invoke-direct {v5, v4, v6}, Lcom/vk/navigation/right/RightMenuItem;-><init>(Landroid/view/MenuItem;Lkotlin/jvm/b/Functions2;)V
 
     invoke-interface {v0, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -162,9 +162,9 @@
     .end annotation
 
     .line 9
-    iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/c;
+    iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/RightMenu1;
 
-    invoke-interface {v0}, Lcom/vk/navigation/right/c;->getActivity()Landroid/app/Activity;
+    invoke-interface {v0}, Lcom/vk/navigation/right/RightMenu1;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -172,13 +172,13 @@
 
     if-eqz v0, :cond_0
 
-    instance-of v2, v0, Lcom/vk/navigation/n;
+    instance-of v2, v0, Lcom/vk/navigation/NavigationDelegateProvider;
 
     if-eqz v2, :cond_0
 
-    check-cast v0, Lcom/vk/navigation/n;
+    check-cast v0, Lcom/vk/navigation/NavigationDelegateProvider;
 
-    invoke-interface {v0}, Lcom/vk/navigation/n;->E0()Lcom/vk/navigation/NavigationDelegate;
+    invoke-interface {v0}, Lcom/vk/navigation/NavigationDelegateProvider;->E0()Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object v0
 
@@ -199,21 +199,21 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v1, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
+    sget-object v1, Lcom/vk/core/ui/v/UiTracker;->g:Lcom/vk/core/ui/v/UiTracker;
 
-    invoke-virtual {v1}, Lcom/vk/core/ui/v/a;->e()Lcom/vk/core/ui/tracking/internal/f;
+    invoke-virtual {v1}, Lcom/vk/core/ui/v/UiTracker;->e()Lcom/vk/core/ui/tracking/internal/UiTrackingListener2;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/core/ui/tracking/internal/f;->a()V
+    invoke-virtual {v1}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener2;->a()V
 
     .line 3
     invoke-virtual {v0}, Lcom/vk/navigation/NavigationDelegate;->l()Z
 
     .line 4
-    sget-object v1, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
+    sget-object v1, Lcom/vk/core/ui/v/UiTracker;->g:Lcom/vk/core/ui/v/UiTracker;
 
-    invoke-virtual {v1}, Lcom/vk/core/ui/v/a;->e()Lcom/vk/core/ui/tracking/internal/f;
+    invoke-virtual {v1}, Lcom/vk/core/ui/v/UiTracker;->e()Lcom/vk/core/ui/tracking/internal/UiTrackingListener2;
 
     move-result-object v1
 
@@ -223,7 +223,7 @@
 
     invoke-direct {v3, v0, p1}, Lcom/vk/navigation/right/RightMenuPresenter$openMenu$$inlined$let$lambda$1;-><init>(Lcom/vk/navigation/NavigationDelegate;I)V
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/core/ui/tracking/internal/f;->a(ZLkotlin/jvm/b/a;)V
+    invoke-virtual {v1, v2, v3}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener2;->a(ZLkotlin/jvm/b/Functions;)V
 
     :cond_0
     return-void
@@ -233,9 +233,9 @@
     .locals 1
 
     .line 5
-    iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/c;
+    iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/RightMenu1;
 
-    invoke-interface {v0}, Lcom/vk/navigation/right/c;->getActivity()Landroid/app/Activity;
+    invoke-interface {v0}, Lcom/vk/navigation/right/RightMenu1;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -245,10 +245,10 @@
     invoke-static {v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->b(Landroid/app/Activity;[F)V
 
     .line 7
-    invoke-static {}, Lcom/vtosters/lite/data/s;->a()V
+    invoke-static {}, Lcom/vtosters/lite/data/ThemeTracker;->a()V
 
     .line 8
-    invoke-static {}, Lcom/vk/articles/preload/a;->e()V
+    invoke-static {}, Lcom/vk/articles/preload/WebCachePreloader;->e()V
 
     :cond_0
     return-void
@@ -271,13 +271,13 @@
     iput-boolean v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->a:Z
 
     .line 3
-    iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/c;
+    iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/RightMenu1;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->e1()Lcom/vk/dto/user/UserProfile;
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->e1()Lcom/vk/dto/user/UserProfile;
 
     move-result-object v1
 
@@ -285,18 +285,18 @@
 
     const-string v2, "VKAccountManager.getCurr\u2026.toUserProfile().fullName"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/navigation/right/c;->setTitle(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/navigation/right/RightMenu1;->setTitle(Ljava/lang/String;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/c;
+    iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/RightMenu1;
 
     invoke-direct {p0}, Lcom/vk/navigation/right/RightMenuPresenter;->d()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/navigation/right/c;->setItems(Ljava/util/List;)V
+    invoke-interface {v0, v1}, Lcom/vk/navigation/right/RightMenu1;->setItems(Ljava/util/List;)V
 
     return-void
 .end method
@@ -305,13 +305,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/c;
+    iget-object v0, p0, Lcom/vk/navigation/right/RightMenuPresenter;->b:Lcom/vk/navigation/right/RightMenu1;
 
     invoke-direct {p0}, Lcom/vk/navigation/right/RightMenuPresenter;->d()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/navigation/right/c;->setItems(Ljava/util/List;)V
+    invoke-interface {v0, v1}, Lcom/vk/navigation/right/RightMenu1;->setItems(Ljava/util/List;)V
 
     return-void
 .end method

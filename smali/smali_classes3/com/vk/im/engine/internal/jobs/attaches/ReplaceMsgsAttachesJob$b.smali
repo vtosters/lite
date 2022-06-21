@@ -3,7 +3,7 @@
 .source "ReplaceMsgsAttachesJob.kt"
 
 # interfaces
-.implements Lcom/vk/instantjobs/c;
+.implements Lcom/vk/instantjobs/InstantJobSerializer;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/instantjobs/c<",
+        "Lcom/vk/instantjobs/InstantJobSerializer<",
         "Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;",
         ">;"
     }
@@ -38,13 +38,13 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/instantjobs/d;)Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;
+.method public a(Lcom/vk/instantjobs/PersistedArgs;)Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;
     .locals 2
 
     const-string v0, "attach"
 
     .line 4
-    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/d;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/PersistedArgs;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -57,7 +57,7 @@
 
     const-string v0, "Base64.decode(this, Base64.DEFAULT)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     new-instance v0, Ljava/io/DataInputStream;
@@ -92,7 +92,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {v0, v1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     check-cast p1, Lcom/vk/im/engine/models/attaches/AttachWithId;
 
@@ -106,7 +106,7 @@
     .line 9
     :cond_0
     :try_start_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -123,23 +123,23 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {v0, p1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/instantjobs/d;)Lcom/vk/instantjobs/InstantJob;
+.method public bridge synthetic a(Lcom/vk/instantjobs/PersistedArgs;)Lcom/vk/instantjobs/InstantJob;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob$b;->a(Lcom/vk/instantjobs/d;)Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob$b;->a(Lcom/vk/instantjobs/PersistedArgs;)Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;Lcom/vk/instantjobs/d;)V
+.method public a(Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;Lcom/vk/instantjobs/PersistedArgs;)V
     .locals 1
 
     .line 3
@@ -147,24 +147,24 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/extensions/w;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/extensions/SerializerExt;->a(Lcom/vk/core/serialize/Serializer$StreamParcelable;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "attach"
 
-    invoke-virtual {p2, v0, p1}, Lcom/vk/instantjobs/d;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2, v0, p1}, Lcom/vk/instantjobs/PersistedArgs;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/instantjobs/InstantJob;Lcom/vk/instantjobs/d;)V
+.method public bridge synthetic a(Lcom/vk/instantjobs/InstantJob;Lcom/vk/instantjobs/PersistedArgs;)V
     .locals 0
 
     .line 2
     check-cast p1, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob$b;->a(Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;Lcom/vk/instantjobs/d;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob$b;->a(Lcom/vk/im/engine/internal/jobs/attaches/ReplaceMsgsAttachesJob;Lcom/vk/instantjobs/PersistedArgs;)V
 
     return-void
 .end method

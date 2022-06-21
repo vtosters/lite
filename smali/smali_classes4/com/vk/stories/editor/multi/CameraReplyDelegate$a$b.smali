@@ -42,18 +42,18 @@
 
     iget-object v1, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;->b:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
 
-    iget-object v0, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;->a:Lcom/vk/attachpicker/stickers/reply/c;
+    iget-object v0, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;->a:Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;
 
-    invoke-static {v1, v0}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Lcom/vk/stories/editor/multi/CameraReplyDelegate;Lcom/vk/attachpicker/stickers/reply/a;)V
+    invoke-static {v1, v0}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Lcom/vk/stories/editor/multi/CameraReplyDelegate;Lcom/vk/attachpicker/stickers/reply/ReplySticker;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a$b;->a:Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;
 
-    iget-object v0, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;->a:Lcom/vk/attachpicker/stickers/reply/c;
+    iget-object v0, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;->a:Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/s0;->setShowOnlyFirstFrame(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/VideoViewSticker;->setShowOnlyFirstFrame(Z)V
 
     return-void
 .end method

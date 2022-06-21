@@ -3,7 +3,7 @@
 .source "IdentityEditAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -62,7 +62,7 @@
 
     iget-object v0, v0, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder;->c:Lcom/vk/identity/adapters/IdentityEditAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -78,9 +78,9 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/identity/b/f;
+    check-cast v0, Lcom/vk/identity/b/IdentityAdapterItem8;
 
-    invoke-virtual {v0}, Lcom/vk/identity/b/f;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/identity/b/IdentityAdapterItem8;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -106,7 +106,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/identity/adapters/IdentityEditAdapter$SelectorHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

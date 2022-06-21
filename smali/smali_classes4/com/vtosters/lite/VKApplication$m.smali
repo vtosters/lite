@@ -54,12 +54,12 @@
     invoke-static {}, Lcom/vk/core/preference/Preference;->b()Landroid/content/SharedPreferences;
 
     .line 3
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->a()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->a()Landroid/content/SharedPreferences;
 
     .line 4
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/vk/emoji/b;->b(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lcom/vk/emoji/Emoji;->b(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     return-void
 .end method

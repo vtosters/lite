@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/util/StoryQuestionMessageDialog$c;
-.super Lcom/vk/core/util/c1;
+.super Lcom/vk/core/util/TextWatcherAdapter;
 .source "StoryQuestionMessageDialog.kt"
 
 
@@ -29,7 +29,7 @@
 
     iput-object p2, p0, Lcom/vk/stories/util/StoryQuestionMessageDialog$c;->b:Landroid/widget/TextView;
 
-    invoke-direct {p0}, Lcom/vk/core/util/c1;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/util/TextWatcherAdapter;-><init>()V
 
     return-void
 .end method
@@ -40,11 +40,11 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     .line 2
     invoke-static {p1}, Lkotlin/text/l;->f(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
@@ -70,7 +70,7 @@
 
     const-string v1, "messageEditText"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setActivated(Z)V
 
@@ -79,7 +79,7 @@
 
     const-string v1, "messageBtn"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEnabled(Z)V
 

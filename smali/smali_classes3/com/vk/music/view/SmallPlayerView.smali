@@ -93,7 +93,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/e;)V
+.method public a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/TrackInfo;)V
     .locals 3
 
     const/4 v0, 0x0
@@ -113,12 +113,12 @@
 
     invoke-direct {v2, p1, p2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/music/ui/common/o;->a(Ljava/lang/Object;I)V
+    invoke-virtual {v1, v2, v0}, Lcom/vk/music/ui/common/MusicViewHolder;->a(Ljava/lang/Object;I)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/music/player/e;)V
+.method public a(Lcom/vk/music/player/TrackInfo;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -134,7 +134,7 @@
 
     check-cast v0, Lcom/vk/music/view/SmallPlayerView$a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/view/SmallPlayerView$a;->a(Lcom/vk/music/player/e;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/view/SmallPlayerView$a;->a(Lcom/vk/music/player/TrackInfo;)V
 
     return-void
 .end method
@@ -183,7 +183,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/music/player/e;)V
+.method public b(Lcom/vk/music/player/TrackInfo;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -199,7 +199,7 @@
 
     check-cast v0, Lcom/vk/music/view/SmallPlayerView$a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/view/SmallPlayerView$a;->b(Lcom/vk/music/player/e;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/view/SmallPlayerView$a;->b(Lcom/vk/music/player/TrackInfo;)V
 
     return-void
 .end method

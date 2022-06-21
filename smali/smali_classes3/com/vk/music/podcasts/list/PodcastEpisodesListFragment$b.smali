@@ -40,31 +40,31 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/podcasts/list/PodcastEpisodesListFragment$b;->a:Lcom/vk/music/podcasts/list/PodcastEpisodesListFragment;
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/music/podcasts/list/a;
+    check-cast v0, Lcom/vk/music/podcasts/list/PodcastEpisodesListScreenContract;
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vk/profile/ui/c$z;
+    new-instance v1, Lcom/vk/profile/ui/BaseProfileFragment$z;
 
-    invoke-interface {v0}, Lcom/vk/music/podcasts/list/a;->b()I
+    invoke-interface {v0}, Lcom/vk/music/podcasts/list/PodcastEpisodesListScreenContract;->b()I
 
     move-result v0
 
-    invoke-direct {v1, v0}, Lcom/vk/profile/ui/c$z;-><init>(I)V
+    invoke-direct {v1, v0}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
 
     const-string v0, "v"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     :cond_0
     return-void

@@ -276,7 +276,7 @@
 
     const-string p3, "os_monitor"
 
-    invoke-static {p3, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 21
     :cond_0
@@ -367,7 +367,7 @@
 
     const-string v3, "os_monitor"
 
-    invoke-static {v3, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
     iget-wide v3, p0, Lru/mail/voip2/OsMonitor;->_nativeHandler:J
@@ -774,7 +774,7 @@
 
     const-string v0, "os_monitor"
 
-    invoke-static {v0, p0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -872,7 +872,7 @@
     const-string p2, "onActivityCreated"
 
     .line 1
-    invoke-static {p1, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -885,7 +885,7 @@
     const-string v0, "onActivityDestroyed"
 
     .line 1
-    invoke-static {p1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -898,7 +898,7 @@
     const-string v0, "onActivityPaused"
 
     .line 1
-    invoke-static {p1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -911,7 +911,7 @@
     const-string v0, "onActivityResumed"
 
     .line 1
-    invoke-static {p1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -959,7 +959,7 @@
 
     const-string v0, "os_monitor"
 
-    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1013,7 +1013,7 @@
 
     const-string v0, "os_monitor"
 
-    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1026,7 +1026,7 @@
     const-string v0, "onConfigurationChanged"
 
     .line 1
-    invoke-static {p1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1082,7 +1082,7 @@
 
     const-string v2, "os_monitor"
 
-    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iget-wide v4, p0, Lru/mail/voip2/OsMonitor;->_nativeHandler:J
@@ -1192,7 +1192,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     iget-wide p1, p0, Lru/mail/voip2/OsMonitor;->_nativeHandler:J
@@ -1279,7 +1279,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 13
     iget-boolean p1, p0, Lru/mail/voip2/OsMonitor;->_gsmCallActive:Z
@@ -1455,7 +1455,7 @@
 
     const-string v1, "os_monitor"
 
-    invoke-static {v1, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     iget-object p1, p0, Lru/mail/voip2/OsMonitor;->_proximityClose:Ljava/lang/Boolean;
@@ -1557,7 +1557,7 @@
 
     const-string v2, "os_monitor"
 
-    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iget-wide v4, p0, Lru/mail/voip2/OsMonitor;->_nativeHandler:J
@@ -1618,7 +1618,7 @@
 
     const-string v2, "os_monitor"
 
-    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-boolean v1, p0, Lru/mail/voip2/OsMonitor;->_running:Z
@@ -1775,7 +1775,7 @@
 
     const-string v1, "os_monitor"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lru/mail/voip2/OsMonitor;->_running:Z

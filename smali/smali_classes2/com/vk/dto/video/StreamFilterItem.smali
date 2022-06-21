@@ -1,5 +1,5 @@
 .class public Lcom/vk/dto/video/StreamFilterItem;
-.super Lcom/vk/dto/common/e;
+.super Lcom/vk/dto/common/Model;
 .source "StreamFilterItem.java"
 
 # interfaces
@@ -42,7 +42,7 @@
     .locals 1
 
     .line 8
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     .line 9
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -74,7 +74,7 @@
     .locals 0
 
     .line 5
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     .line 6
     iput-object p1, p0, Lcom/vk/dto/video/StreamFilterItem;->b:Ljava/lang/String;
@@ -94,7 +94,7 @@
     .end annotation
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const-string v0, "id"
 

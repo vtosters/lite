@@ -3,7 +3,7 @@
 .source "GroupedStoriesSettingsPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -66,11 +66,11 @@
     .line 3
     iget-object p1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$d;->a:Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;
 
-    invoke-static {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a(Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;)Lcom/vk/stories/settings/e;
+    invoke-static {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a(Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;)Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract2;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stories/settings/e;->V1()V
+    invoke-interface {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract2;->V1()V
 
     goto :goto_0
 
@@ -78,11 +78,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$d;->a:Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;
 
-    invoke-static {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a(Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;)Lcom/vk/stories/settings/e;
+    invoke-static {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a(Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;)Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract2;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stories/settings/e;->u3()V
+    invoke-interface {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract2;->u3()V
 
     :goto_0
     return-void

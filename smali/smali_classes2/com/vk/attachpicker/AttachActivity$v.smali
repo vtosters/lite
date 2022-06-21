@@ -1,5 +1,5 @@
 .class Lcom/vk/attachpicker/AttachActivity$v;
-.super Lcom/vk/core/fragments/h;
+.super Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;
 .source "AttachActivity.java"
 
 
@@ -34,7 +34,7 @@
     iput-object p1, p0, Lcom/vk/attachpicker/AttachActivity$v;->l:Lcom/vk/attachpicker/AttachActivity;
 
     .line 2
-    invoke-direct {p0, p2}, Lcom/vk/core/fragments/h;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;)V
+    invoke-direct {p0, p2}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;)V
 
     const/4 p1, 0x0
 
@@ -97,11 +97,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity$v;->l:Lcom/vk/attachpicker/AttachActivity;
 
-    invoke-static {v0}, Lcom/vk/attachpicker/AttachActivity;->f(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/adapter/f;
+    invoke-static {v0}, Lcom/vk/attachpicker/AttachActivity;->f(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/adapter/TabsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/f;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/TabsAdapter;->getItemCount()I
 
     move-result v0
 
@@ -123,9 +123,9 @@
     if-eq p1, v0, :cond_0
 
     .line 2
-    new-instance p1, Lcom/vk/attachpicker/q;
+    new-instance p1, Lcom/vk/attachpicker/StubFragment;
 
-    invoke-direct {p1}, Lcom/vk/attachpicker/q;-><init>()V
+    invoke-direct {p1}, Lcom/vk/attachpicker/StubFragment;-><init>()V
 
     return-object p1
 
@@ -134,11 +134,11 @@
     :try_start_0
     iget-object v0, p0, Lcom/vk/attachpicker/AttachActivity$v;->l:Lcom/vk/attachpicker/AttachActivity;
 
-    invoke-static {v0}, Lcom/vk/attachpicker/AttachActivity;->f(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/adapter/f;
+    invoke-static {v0}, Lcom/vk/attachpicker/AttachActivity;->f(Lcom/vk/attachpicker/AttachActivity;)Lcom/vk/attachpicker/adapter/TabsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/f;->j()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/adapter/TabsAdapter;->j()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -146,11 +146,11 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/attachpicker/adapter/f$b;
+    check-cast p1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;
 
-    iget-object p1, p1, Lcom/vk/attachpicker/adapter/f$b;->c:Lcom/vk/common/g/a;
+    iget-object p1, p1, Lcom/vk/attachpicker/adapter/TabsAdapter$b;->c:Lcom/vk/common/g/F0;
 
-    invoke-interface {p1}, Lcom/vk/common/g/a;->f()Ljava/lang/Object;
+    invoke-interface {p1}, Lcom/vk/common/g/F0;->f()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -186,7 +186,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    instance-of p1, p1, Lcom/vk/attachpicker/q;
+    instance-of p1, p1, Lcom/vk/attachpicker/StubFragment;
 
     if-eqz p1, :cond_0
 
@@ -213,13 +213,13 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/h;->isViewFromObject(Landroid/view/View;Ljava/lang/Object;)Z
+    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->isViewFromObject(Landroid/view/View;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    instance-of p1, p2, Lcom/vk/attachpicker/q;
+    instance-of p1, p2, Lcom/vk/attachpicker/StubFragment;
 
     if-nez p1, :cond_0
 
@@ -235,7 +235,7 @@
 
     .line 3
     :cond_1
-    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/h;->isViewFromObject(Landroid/view/View;Ljava/lang/Object;)Z
+    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->isViewFromObject(Landroid/view/View;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -254,7 +254,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/core/fragments/h;->a(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->a(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
     .line 2
     check-cast p3, Lcom/vk/core/fragments/FragmentImpl;
@@ -269,10 +269,10 @@
     if-eq p3, p1, :cond_0
 
     .line 4
-    invoke-virtual {p0, p1, p2}, Lcom/vk/core/fragments/h;->a(Lcom/vk/core/fragments/FragmentImpl;Z)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->a(Lcom/vk/core/fragments/FragmentImpl;Z)V
 
     .line 5
-    invoke-virtual {p0, p3, v0}, Lcom/vk/core/fragments/h;->a(Lcom/vk/core/fragments/FragmentImpl;Z)V
+    invoke-virtual {p0, p3, v0}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->a(Lcom/vk/core/fragments/FragmentImpl;Z)V
 
     .line 6
     iput-object p3, p0, Lcom/vk/attachpicker/AttachActivity$v;->k:Lcom/vk/core/fragments/FragmentImpl;
@@ -281,16 +281,16 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/attachpicker/AttachActivity$v;->k:Lcom/vk/core/fragments/FragmentImpl;
 
-    instance-of p3, p1, Lcom/vk/attachpicker/r;
+    instance-of p3, p1, Lcom/vk/attachpicker/SupportExternalToolbarContainer;
 
     if-eqz p3, :cond_2
 
     .line 8
-    check-cast p1, Lcom/vk/attachpicker/r;
+    check-cast p1, Lcom/vk/attachpicker/SupportExternalToolbarContainer;
 
     iget-object p3, p0, Lcom/vk/attachpicker/AttachActivity$v;->l:Lcom/vk/attachpicker/AttachActivity;
 
-    invoke-interface {p1, p3}, Lcom/vk/attachpicker/r;->a(Landroid/content/Context;)Landroid/view/ViewGroup;
+    invoke-interface {p1, p3}, Lcom/vk/attachpicker/SupportExternalToolbarContainer;->a(Landroid/content/Context;)Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -372,14 +372,14 @@
 
     .line 20
     :cond_4
-    instance-of p2, p1, Lcom/vk/attachpicker/fragment/s;
+    instance-of p2, p1, Lcom/vk/attachpicker/fragment/GalleryFragment;
 
     if-eqz p2, :cond_5
 
     .line 21
-    check-cast p1, Lcom/vk/attachpicker/fragment/s;
+    check-cast p1, Lcom/vk/attachpicker/fragment/GalleryFragment;
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/fragment/s;->Q4()V
+    invoke-virtual {p1}, Lcom/vk/attachpicker/fragment/GalleryFragment;->Q4()V
 
     .line 22
     iget-object p1, p0, Lcom/vk/attachpicker/AttachActivity$v;->l:Lcom/vk/attachpicker/AttachActivity;

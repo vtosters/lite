@@ -32,10 +32,10 @@
 
 .field private d:Landroid/view/View;
 
-.field private e:Lcom/vk/core/dialogs/adapter/a;
+.field private e:Lcom/vk/core/dialogs/adapter/ModalAdapter1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/dialogs/adapter/a<",
+            "Lcom/vk/core/dialogs/adapter/ModalAdapter1<",
             "TItem;>;"
         }
     .end annotation
@@ -119,12 +119,12 @@
     return-object p0
 .end method
 
-.method public final a(Lcom/vk/core/dialogs/adapter/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
+.method public final a(Lcom/vk/core/dialogs/adapter/ModalAdapter1;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/dialogs/adapter/a<",
+            "Lcom/vk/core/dialogs/adapter/ModalAdapter1<",
             "TItem;>;)",
             "Lcom/vk/core/dialogs/adapter/ModalAdapter$a<",
             "TItem;>;"
@@ -132,7 +132,7 @@
     .end annotation
 
     .line 3
-    iput-object p1, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->e:Lcom/vk/core/dialogs/adapter/a;
+    iput-object p1, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->e:Lcom/vk/core/dialogs/adapter/ModalAdapter1;
 
     return-object p0
 .end method
@@ -206,7 +206,7 @@
     .line 9
     :cond_2
     :goto_1
-    iget-object v7, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->e:Lcom/vk/core/dialogs/adapter/a;
+    iget-object v7, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->e:Lcom/vk/core/dialogs/adapter/ModalAdapter1;
 
     if-eqz v7, :cond_7
 
@@ -231,7 +231,7 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v2 .. v9}, Lcom/vk/core/dialogs/adapter/ModalAdapter;-><init>(Landroid/view/LayoutInflater;Ljava/lang/Integer;Landroid/view/View;ZLcom/vk/core/dialogs/adapter/a;Lcom/vk/core/dialogs/adapter/ModalAdapter$b;Lkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/core/dialogs/adapter/ModalAdapter;-><init>(Landroid/view/LayoutInflater;Ljava/lang/Integer;Landroid/view/View;ZLcom/vk/core/dialogs/adapter/ModalAdapter1;Lcom/vk/core/dialogs/adapter/ModalAdapter$b;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 11
     iget-object v2, p0, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->g:Ljava/util/List;
@@ -258,13 +258,13 @@
     goto :goto_2
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 13
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
@@ -274,7 +274,7 @@
 
     .line 14
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 

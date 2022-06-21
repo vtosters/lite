@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/chats/ChatItem;
-.super Lcom/vk/profile/adapter/items/chats/a;
+.super Lcom/vk/profile/adapter/items/chats/ChatBaseItem;
 .source "ChatItem.kt"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field static final synthetic e:[Lkotlin/u/j;
+.field static final synthetic e:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
-.field private final c:Lkotlin/e;
+.field private final c:Lkotlin/Lazy2;
 
 .field private final d:Lcom/vk/dto/group/GroupChat;
 
@@ -31,11 +31,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -43,9 +43,9 @@
 
     const-string v5, "getChatActiveText()Ljava/lang/CharSequence;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -53,7 +53,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -61,21 +61,21 @@
 
     const-string v4, "getChatInactiveText()Ljava/lang/CharSequence;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/profile/adapter/items/chats/ChatItem;->e:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/profile/adapter/items/chats/ChatItem;->e:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/profile/adapter/items/chats/ChatItem$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/items/chats/ChatItem$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/items/chats/ChatItem$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -86,7 +86,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/profile/adapter/items/chats/a;-><init>(I)V
+    invoke-direct {p0, v0}, Lcom/vk/profile/adapter/items/chats/ChatBaseItem;-><init>(I)V
 
     iput-object p1, p0, Lcom/vk/profile/adapter/items/chats/ChatItem;->d:Lcom/vk/dto/group/GroupChat;
 
@@ -95,22 +95,22 @@
 
     invoke-direct {p1, p0}, Lcom/vk/profile/adapter/items/chats/ChatItem$chatActiveText$2;-><init>(Lcom/vk/profile/adapter/items/chats/ChatItem;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/chats/ChatItem;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/chats/ChatItem;->b:Lkotlin/Lazy2;
 
     .line 3
     new-instance p1, Lcom/vk/profile/adapter/items/chats/ChatItem$chatInactiveText$2;
 
     invoke-direct {p1, p0}, Lcom/vk/profile/adapter/items/chats/ChatItem$chatInactiveText$2;-><init>(Lcom/vk/profile/adapter/items/chats/ChatItem;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/chats/ChatItem;->c:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/chats/ChatItem;->c:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -118,15 +118,15 @@
 .method private final f()Ljava/lang/CharSequence;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/chats/ChatItem;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/chats/ChatItem;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/profile/adapter/items/chats/ChatItem;->e:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/profile/adapter/items/chats/ChatItem;->e:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -138,15 +138,15 @@
 .method private final g()Ljava/lang/CharSequence;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/chats/ChatItem;->c:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/chats/ChatItem;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/profile/adapter/items/chats/ChatItem;->e:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/profile/adapter/items/chats/ChatItem;->e:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -206,7 +206,7 @@
 
     long-to-int v1, v0
 
-    invoke-static {v1}, Lcom/vk/core/util/i1;->b(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/TimeUtils;->b(I)Ljava/lang/String;
 
     move-result-object v0
 

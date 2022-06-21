@@ -3,12 +3,12 @@
 .source "CommunityGroupedStoryView.kt"
 
 # interfaces
-.implements Lb/h/g/l/e;
+.implements Lb/h/g/l/NotificationListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/view/CommunityGroupedStoryView;-><init>(Landroid/content/Context;ZLcom/vk/stories/StoriesController$SourceType;ILandroid/view/View$OnTouchListener;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/view/StoryView$u0;Lcom/vk/stories/view/p1;)V
+    value = Lcom/vk/stories/view/CommunityGroupedStoryView;-><init>(Landroid/content/Context;ZLcom/vk/stories/StoriesController$SourceType;ILandroid/view/View$OnTouchListener;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/view/StoryView$u0;Lcom/vk/stories/view/StorySettings;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lb/h/g/l/e<",
+        "Lb/h/g/l/NotificationListener<",
         "Lcom/vk/dto/stories/model/StoriesContainer;",
         ">;"
     }
@@ -52,7 +52,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView$hideStoriesListener$1;->a:Lcom/vk/stories/view/CommunityGroupedStoryView;
 
-    invoke-static {p1}, Lcom/vk/stories/view/CommunityGroupedStoryView;->b(Lcom/vk/stories/view/CommunityGroupedStoryView;)Lcom/vk/stories/view/z1/a;
+    invoke-static {p1}, Lcom/vk/stories/view/CommunityGroupedStoryView;->b(Lcom/vk/stories/view/CommunityGroupedStoryView;)Lcom/vk/stories/view/z1/GroupedStoriesAdapter;
 
     move-result-object p1
 
@@ -62,19 +62,19 @@
 
     invoke-direct {p2, p3}, Lcom/vk/stories/view/CommunityGroupedStoryView$hideStoriesListener$1$1;-><init>(Lcom/vk/dto/stories/model/StoriesContainer;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/lists/i0;->b(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, p2}, Lcom/vk/lists/SimpleAdapter;->b(Lkotlin/jvm/b/Functions2;)V
 
     .line 3
     :cond_0
     iget-object p1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView$hideStoriesListener$1;->a:Lcom/vk/stories/view/CommunityGroupedStoryView;
 
-    invoke-static {p1}, Lcom/vk/stories/view/CommunityGroupedStoryView;->b(Lcom/vk/stories/view/CommunityGroupedStoryView;)Lcom/vk/stories/view/z1/a;
+    invoke-static {p1}, Lcom/vk/stories/view/CommunityGroupedStoryView;->b(Lcom/vk/stories/view/CommunityGroupedStoryView;)Lcom/vk/stories/view/z1/GroupedStoriesAdapter;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result p1
 
@@ -83,7 +83,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView$hideStoriesListener$1;->a:Lcom/vk/stories/view/CommunityGroupedStoryView;
 
-    iget p2, p1, Lcom/vk/stories/view/e1;->I:I
+    iget p2, p1, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     invoke-virtual {p1, p2}, Lcom/vk/stories/view/StoryView;->b(I)V
 

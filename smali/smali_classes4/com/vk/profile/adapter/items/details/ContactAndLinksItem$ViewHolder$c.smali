@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$c;
-.super Lcom/vtosters/lite/v;
+.super Lcom/vtosters/lite/LinkSpan;
 .source "ContactAndLinksItem.kt"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$c;->C:Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;
 
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/v;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/LinkSpan;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -72,10 +72,10 @@
     sget-object v1, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$c$a;->a:Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$c$a;
 
     .line 5
-    invoke-static {p1, v0, v1}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;Landroid/content/Intent;Lc/a/z/g;)V
+    invoke-static {p1, v0, v1}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;Landroid/content/Intent;Lio/reactivex/functions/Consumer;)V
 
     .line 6
-    new-instance p1, Lcom/vk/profile/e/b;
+    new-instance p1, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     iget-object v0, p0, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$c;->C:Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;
 
@@ -83,7 +83,7 @@
 
     move-result v0
 
-    invoke-direct {p1, v0}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$c;->C:Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;
@@ -92,15 +92,15 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string v0, "phone"
 
     .line 8
-    invoke-virtual {p1, v0}, Lcom/vk/profile/e/b;->d(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->d(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 9
-    invoke-virtual {p1}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     return-void
 .end method

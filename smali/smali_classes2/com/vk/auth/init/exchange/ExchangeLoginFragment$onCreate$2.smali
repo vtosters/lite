@@ -3,7 +3,7 @@
 .source "ExchangeLoginFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,13 +19,13 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/auth/init/exchange/c;",
+        "Lcom/vk/auth/init/exchange/UserItem;",
         ">;",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -64,7 +64,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2;->a(Ljava/util/List;I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -75,7 +75,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/auth/init/exchange/c;",
+            "Lcom/vk/auth/init/exchange/UserItem;",
             ">;I)V"
         }
     .end annotation
@@ -85,12 +85,12 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/auth/init/exchange/c;
+    check-cast p1, Lcom/vk/auth/init/exchange/UserItem;
 
     .line 3
     iget-object p2, p0, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2;->this$0:Lcom/vk/auth/init/exchange/ExchangeLoginFragment;
 
-    invoke-static {p2}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->c(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)Lcom/vk/auth/main/i;
+    invoke-static {p2}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->c(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)Lcom/vk/auth/main/AuthUiManager;
 
     move-result-object p2
 
@@ -102,9 +102,9 @@
 
     const-string v1, "requireContext()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, v0}, Lcom/vk/auth/main/i;->a(Landroid/content/Context;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-interface {p2, v0}, Lcom/vk/auth/main/AuthUiManager;->a(Landroid/content/Context;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object p2
 
@@ -127,7 +127,7 @@
 
     new-instance v1, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2$a;-><init>(Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2;Lcom/vk/auth/init/exchange/c;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2$a;-><init>(Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2;Lcom/vk/auth/init/exchange/UserItem;)V
 
     invoke-virtual {p2, v0, v1}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 

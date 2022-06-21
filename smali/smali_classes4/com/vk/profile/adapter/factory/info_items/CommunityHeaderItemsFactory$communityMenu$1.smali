@@ -3,12 +3,12 @@
 .source "CommunityHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/i;Lcom/vk/profile/presenter/f/b;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Lcom/vk/profile/presenter/f/CommunityLocationController;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/CommunityDataScope;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/api/i;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
         "Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;",
         ">;"
     }
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;
     .locals 2
 
     .line 1
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->s()Lcom/vk/dto/profile/a;
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->s()Lcom/vk/dto/profile/CommunityInternalMenu;
 
     move-result-object p1
 
@@ -58,7 +58,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/dto/profile/a;->a()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/vk/dto/profile/CommunityInternalMenu;->a()Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -79,11 +79,11 @@
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$communityMenu$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->d(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;)Lcom/vk/profile/adapter/di/a;
+    invoke-static {v1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;->d(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;)Lcom/vk/profile/adapter/di/CommunityDataScope;
 
     move-result-object v1
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;-><init>(Ljava/util/List;Lcom/vk/profile/adapter/di/a;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;-><init>(Ljava/util/List;Lcom/vk/profile/adapter/di/CommunityDataScope;)V
 
     :cond_1
     return-object v0
@@ -93,9 +93,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$communityMenu$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$communityMenu$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;
 
     move-result-object p1
 

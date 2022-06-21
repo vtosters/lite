@@ -3,12 +3,12 @@
 .source "Groups.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/data/Groups;->a(Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)Lc/a/m;
+    value = Lcom/vtosters/lite/data/Groups;->a(Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }

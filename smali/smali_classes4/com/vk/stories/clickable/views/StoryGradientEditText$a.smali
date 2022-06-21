@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText$a;->a:Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
-    invoke-static {p1}, Lcom/vk/stories/clickable/views/StoryGradientEditText;->a(Lcom/vk/stories/clickable/views/StoryGradientEditText;)Lcom/vk/stories/clickable/views/a;
+    invoke-static {p1}, Lcom/vk/stories/clickable/views/StoryGradientEditText;->a(Lcom/vk/stories/clickable/views/StoryGradientEditText;)Lcom/vk/stories/clickable/views/StoryGradientEditText1;
 
     move-result-object p1
 
@@ -53,13 +53,13 @@
     .line 2
     iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientEditText$a;->a:Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
-    invoke-static {p1}, Lcom/vk/stories/clickable/views/StoryGradientEditText;->a(Lcom/vk/stories/clickable/views/StoryGradientEditText;)Lcom/vk/stories/clickable/views/a;
+    invoke-static {p1}, Lcom/vk/stories/clickable/views/StoryGradientEditText;->a(Lcom/vk/stories/clickable/views/StoryGradientEditText;)Lcom/vk/stories/clickable/views/StoryGradientEditText1;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/stories/clickable/views/a;->a()V
+    invoke-interface {p1}, Lcom/vk/stories/clickable/views/StoryGradientEditText1;->a()V
 
     :cond_0
     const/4 p1, 0x1

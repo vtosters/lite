@@ -3,7 +3,7 @@
 .source "ProfileMainPhotosFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/g;
+.implements Lcom/vk/navigation/Dismissed;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 
 # direct methods
@@ -33,11 +33,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method public final a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$c;->a:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$c;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method
@@ -46,11 +46,11 @@
     .locals 0
 
     .line 2
-    iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$c;->a:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object p1, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$c;->a:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->G4()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->G4()V
 
     :cond_0
     return-void
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/g$a;->a(Lcom/vk/navigation/g;)V
+    invoke-static {p0}, Lcom/vk/navigation/Dismissed$a;->a(Lcom/vk/navigation/Dismissed;)V
 
     return-void
 .end method

@@ -6,28 +6,28 @@
 # instance fields
 .field private k:Lcom/vk/core/fragments/FragmentImpl;
 
-.field private final l:Lcom/vk/webapp/o/c;
+.field private final l:Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/webapp/o/c;)V
+.method public constructor <init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/webapp/o/VkUiFragmentDelegate;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p2}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;-><init>(Lcom/vk/webapp/o/c;)V
+    invoke-direct {p0, p2}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;-><init>(Lcom/vk/webapp/o/VkUiFragmentDelegate;)V
 
     iput-object p1, p0, Lcom/vk/webapp/bridges/VkPayBridge;->k:Lcom/vk/core/fragments/FragmentImpl;
 
-    iput-object p2, p0, Lcom/vk/webapp/bridges/VkPayBridge;->l:Lcom/vk/webapp/o/c;
+    iput-object p2, p0, Lcom/vk/webapp/bridges/VkPayBridge;->l:Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/webapp/bridges/VkPayBridge;)Lcom/vk/webapp/o/c;
+.method public static final synthetic a(Lcom/vk/webapp/bridges/VkPayBridge;)Lcom/vk/webapp/o/VkUiFragmentDelegate;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/webapp/bridges/VkPayBridge;->l:Lcom/vk/webapp/o/c;
+    iget-object p0, p0, Lcom/vk/webapp/bridges/VkPayBridge;->l:Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
     return-object p0
 .end method
@@ -63,7 +63,7 @@
 
     move-object v2, p1
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/bridges/a;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v6}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/bridges/AndroidBridge;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result v0
 
@@ -87,7 +87,7 @@
 
     invoke-direct {p1, p0, v0}, Lcom/vk/webapp/bridges/VkPayBridge$a;-><init>(Lcom/vk/webapp/bridges/VkPayBridge;Landroid/content/Intent;)V
 
-    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/ViewUtils;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -137,7 +137,7 @@
     move-object v2, p1
 
     .line 2
-    invoke-static/range {v0 .. v6}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/bridges/a;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v6}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/bridges/AndroidBridge;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result p1
 
@@ -151,7 +151,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/webapp/bridges/VkPayBridge$b;-><init>(Lcom/vk/webapp/bridges/VkPayBridge;)V
 
-    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/ViewUtils;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -181,7 +181,7 @@
     move-object v2, p1
 
     .line 2
-    invoke-static/range {v0 .. v6}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/bridges/a;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v6}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/bridges/AndroidBridge;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result p1
 
@@ -233,7 +233,7 @@
     sget-object v6, Lcom/vk/webapp/bridges/VkPayBridge$VKWebAppOpenContacts$2;->a:Lcom/vk/webapp/bridges/VkPayBridge$VKWebAppOpenContacts$2;
 
     .line 8
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
@@ -259,7 +259,7 @@
     move-object v2, p1
 
     .line 2
-    invoke-static/range {v0 .. v6}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/bridges/a;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v6}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/bridges/AndroidBridge;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result p1
 
@@ -273,7 +273,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/webapp/bridges/VkPayBridge$c;-><init>(Lcom/vk/webapp/bridges/VkPayBridge;)V
 
-    invoke-static {p1}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lcom/vtosters/lite/ViewUtils;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -309,7 +309,7 @@
     move-object v3, p1
 
     .line 2
-    invoke-static/range {v1 .. v7}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/bridges/a;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static/range {v1 .. v7}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/bridges/AndroidBridge;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result v1
 
@@ -341,9 +341,9 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 5
-    sget-object v0, Lcom/vk/webapp/s/a;->b:Lcom/vk/webapp/s/a;
+    sget-object v0, Lcom/vk/webapp/s/VkPayTokenStorage;->b:Lcom/vk/webapp/s/VkPayTokenStorage;
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/s/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/s/VkPayTokenStorage;->a(Ljava/lang/String;)V
 
     .line 6
     new-instance p1, Lorg/json/JSONObject;
@@ -363,7 +363,7 @@
     const-string v1, "VKWebAppSetPaymentTokenResult"
 
     .line 9
-    invoke-virtual {p0, v0, v1, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p0, v0, v1, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
 
@@ -379,7 +379,7 @@
     move-result-object v1
 
     .line 12
-    invoke-virtual {p0, p1, v0, v1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
 
@@ -395,7 +395,7 @@
     move-result-object v1
 
     .line 15
-    invoke-virtual {p0, p1, v0, v1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stickers/AutoSuggestStickersPopupWindow$g;
-.super Lcom/vk/core/util/c1;
+.super Lcom/vk/core/util/TextWatcherAdapter;
 .source "AutoSuggestStickersPopupWindow.kt"
 
 
@@ -32,7 +32,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$g;->b:Lcom/vk/stickers/AutoSuggestStickersPopupWindow;
 
-    invoke-direct {p0}, Lcom/vk/core/util/c1;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/util/TextWatcherAdapter;-><init>()V
 
     const-string p1, ""
 
@@ -222,7 +222,7 @@
 
     const-string v1, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -240,9 +240,9 @@
     :goto_1
     iget-object v1, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$g;->b:Lcom/vk/stickers/AutoSuggestStickersPopupWindow;
 
-    sget-object v2, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v2, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v2, v0}, Lcom/vk/stickers/t;->a(Ljava/lang/String;)Lcom/vk/dto/stickers/StickersDictionaryItem;
+    invoke-virtual {v2, v0}, Lcom/vk/stickers/Stickers;->a(Ljava/lang/String;)Lcom/vk/dto/stickers/StickersDictionaryItem;
 
     move-result-object v0
 

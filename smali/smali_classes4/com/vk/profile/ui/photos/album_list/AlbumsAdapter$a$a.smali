@@ -46,13 +46,13 @@
 
     iget-object p1, p1, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter$a;->g:Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;->j()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter;->j()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsAdapter$a$a;->b:Lcom/vk/dto/photo/PhotoAlbum;
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

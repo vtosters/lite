@@ -3,7 +3,7 @@
 .source "StorageTriggerFactoryImpl.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/internal/storage/d;
+.implements Lcom/vk/im/engine/internal/storage/StorageTrigger;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/im/engine/internal/storage/d<",
-        "Lcom/vk/im/engine/internal/storage/models/a;",
+        "Lcom/vk/im/engine/internal/storage/StorageTrigger<",
+        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
         ">;"
     }
 .end annotation
@@ -50,8 +50,8 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/im/engine/internal/storage/models/f<",
-            "Lcom/vk/im/engine/internal/storage/models/a;",
+            "Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement<",
+            "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
             ">;>;)V"
         }
     .end annotation
@@ -89,35 +89,35 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/im/engine/internal/storage/models/f;
+    check-cast v3, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;
 
     .line 3
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/f;->b()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->b()Ljava/lang/Object;
 
     move-result-object v4
 
     if-nez v4, :cond_3
 
     .line 4
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/f;->a()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->a()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v4, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/a;->g()I
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->g()I
 
     move-result v4
 
     if-eqz v4, :cond_7
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/f;->a()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->a()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v3, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/a;->h()I
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->h()I
 
     move-result v3
 
@@ -127,25 +127,25 @@
 
     .line 5
     :cond_3
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/f;->b()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->b()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v4, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/a;->g()I
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->g()I
 
     move-result v4
 
     if-lez v4, :cond_4
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/f;->a()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->a()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v4, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/a;->g()I
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->g()I
 
     move-result v4
 
@@ -160,25 +160,25 @@
 
     .line 6
     :goto_0
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/f;->b()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->b()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v5, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v5}, Lcom/vk/im/engine/internal/storage/models/a;->h()I
+    invoke-virtual {v5}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->h()I
 
     move-result v5
 
     if-lez v5, :cond_5
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/f;->a()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->a()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v5, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v5}, Lcom/vk/im/engine/internal/storage/models/a;->h()I
+    invoke-virtual {v5}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->h()I
 
     move-result v5
 
@@ -193,23 +193,23 @@
 
     .line 7
     :goto_1
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/f;->a()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->a()Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v6, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v6}, Lcom/vk/im/engine/internal/storage/models/a;->y()I
+    invoke-virtual {v6}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->y()I
 
     move-result v6
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/f;->a()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->a()Ljava/lang/Object;
 
     move-result-object v7
 
-    check-cast v7, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v7, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v7}, Lcom/vk/im/engine/internal/storage/models/a;->x()I
+    invoke-virtual {v7}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->x()I
 
     move-result v7
 
@@ -228,13 +228,13 @@
     if-eqz v5, :cond_8
 
     .line 8
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/f;->b()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->b()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v3, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/a;->g()I
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->g()I
 
     move-result v3
 
@@ -257,13 +257,13 @@
     if-eqz v4, :cond_8
 
     .line 9
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/f;->b()Ljava/lang/Object;
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->b()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v3, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/a;->h()I
+    invoke-virtual {v3}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->h()I
 
     move-result v3
 
@@ -324,18 +324,18 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/im/engine/internal/storage/models/f;
+    check-cast v4, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;
 
     .line 13
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/f;->b()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->b()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v5, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
     if-eqz v5, :cond_e
 
-    invoke-virtual {v5}, Lcom/vk/im/engine/internal/storage/models/a;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v5}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v5
 
@@ -344,15 +344,15 @@
     goto :goto_6
 
     :cond_e
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/f;->b()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->b()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v5, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
     if-eqz v5, :cond_f
 
-    invoke-virtual {v5}, Lcom/vk/im/engine/internal/storage/models/a;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v5}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v5
 
@@ -363,13 +363,13 @@
 
     .line 14
     :goto_6
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/f;->a()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->a()Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v6, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v6}, Lcom/vk/im/engine/internal/storage/models/a;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v6}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v6
 
@@ -378,13 +378,13 @@
     goto :goto_7
 
     :cond_10
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/f;->a()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->a()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v4, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/a;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v6
 
@@ -448,18 +448,18 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/internal/storage/models/f;
+    check-cast v0, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;
 
     .line 18
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/f;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->b()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v1, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
     if-eqz v1, :cond_17
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/a;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v1
 
@@ -468,15 +468,15 @@
     goto :goto_c
 
     :cond_17
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/f;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->b()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v1, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
     if-eqz v1, :cond_18
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/a;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v1
 
@@ -487,13 +487,13 @@
 
     .line 19
     :goto_c
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/f;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->a()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v2, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/a;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v2
 
@@ -502,13 +502,13 @@
     goto :goto_d
 
     :cond_19
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/f;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->a()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v2, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/a;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v2
 
@@ -520,13 +520,13 @@
     .line 20
     iget-object v4, p0, Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerFactoryImpl$c;->a:Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/f;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/StorageModelReplacement;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast v0, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/a;->getId()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->getId()I
 
     move-result v0
 

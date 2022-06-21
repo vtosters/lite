@@ -3,7 +3,7 @@
 .source "VoipViewModel.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lb/h/c/d0/b$a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/api/voip/VoipGetBigProfilePhoto$a;",
         ">;"
     }
 .end annotation
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lb/h/c/d0/b$a;)V
+.method public final a(Lcom/vk/api/voip/VoipGetBigProfilePhoto$a;)V
     .locals 3
 
     .line 1
     new-instance v0, Lcom/vk/voip/VoipViewModel$a;
 
-    invoke-virtual {p1}, Lb/h/c/d0/b$a;->b()Lcom/vk/dto/photo/Photo;
+    invoke-virtual {p1}, Lcom/vk/api/voip/VoipGetBigProfilePhoto$a;->b()Lcom/vk/dto/photo/Photo;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lb/h/c/d0/b$a;->a()Landroid/graphics/RectF;
+    invoke-virtual {p1}, Lcom/vk/api/voip/VoipGetBigProfilePhoto$a;->a()Landroid/graphics/RectF;
 
     move-result-object v2
 
@@ -90,7 +90,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lb/h/c/d0/b$a;->c()Z
+    invoke-virtual {p1}, Lcom/vk/api/voip/VoipGetBigProfilePhoto$a;->c()Z
 
     move-result p1
 
@@ -112,9 +112,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/c/d0/b$a;
+    check-cast p1, Lcom/vk/api/voip/VoipGetBigProfilePhoto$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/voip/VoipViewModel$s;->a(Lb/h/c/d0/b$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/voip/VoipViewModel$s;->a(Lcom/vk/api/voip/VoipGetBigProfilePhoto$a;)V
 
     return-void
 .end method

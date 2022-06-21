@@ -32,7 +32,7 @@
         value = {
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/photogallery/dto/c;",
+            "Lcom/vk/photogallery/dto/GalleryState2;",
             ">;"
         }
     .end annotation
@@ -57,7 +57,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/photogallery/view/Adapter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/photogallery/view/Adapter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -212,9 +212,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/photogallery/dto/c;
+    check-cast p1, Lcom/vk/photogallery/dto/GalleryState2;
 
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/c;->c()J
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState2;->c()J
 
     move-result-wide v0
 
@@ -295,11 +295,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/photogallery/dto/c;
+    check-cast v0, Lcom/vk/photogallery/dto/GalleryState2;
 
     iget-object v1, p0, Lcom/vk/photogallery/view/Adapter;->e:Lcom/vk/photogallery/view/Adapter$b;
 
-    invoke-virtual {p1, v0, p2, v1}, Lcom/vk/photogallery/view/Adapter$PhotoVh;->a(Lcom/vk/photogallery/dto/c;ILcom/vk/photogallery/view/Adapter$b;)V
+    invoke-virtual {p1, v0, p2, v1}, Lcom/vk/photogallery/view/Adapter$PhotoVh;->a(Lcom/vk/photogallery/dto/GalleryState2;ILcom/vk/photogallery/view/Adapter$b;)V
 
     :cond_0
     return-void
@@ -325,7 +325,7 @@
 
     const-string v0, "inflater.inflate(R.layou\u2026m_loading, parent, false)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, p1}, Lcom/vk/photogallery/view/Adapter$c;-><init>(Landroid/view/View;)V
 
@@ -345,7 +345,7 @@
 
     const-string v0, "inflater.inflate(R.layou\u2026tem_photo, parent, false)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, p0, p1}, Lcom/vk/photogallery/view/Adapter$PhotoVh;-><init>(Lcom/vk/photogallery/view/Adapter;Landroid/view/View;)V
 
@@ -360,7 +360,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/photogallery/dto/c;",
+            "Lcom/vk/photogallery/dto/GalleryState2;",
             ">;)V"
         }
     .end annotation

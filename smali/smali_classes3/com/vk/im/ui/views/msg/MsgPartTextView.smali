@@ -3,7 +3,7 @@
 .source "MsgPartTextView.java"
 
 # interfaces
-.implements Lcom/vk/im/ui/views/msg/a;
+.implements Lcom/vk/im/ui/views/msg/WithTime;
 
 
 # instance fields

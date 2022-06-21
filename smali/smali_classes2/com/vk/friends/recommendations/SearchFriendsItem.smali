@@ -43,7 +43,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/friends/recommendations/SearchFriendsItem$Type;IIILjava/lang/String;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/friends/recommendations/SearchFriendsItem$Type;IIILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 7
 
     and-int/lit8 p7, p6, 0x2
@@ -165,7 +165,7 @@
 
     iget-object v1, p1, Lcom/vk/friends/recommendations/SearchFriendsItem;->a:Lcom/vk/friends/recommendations/SearchFriendsItem$Type;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -193,7 +193,7 @@
 
     iget-object p1, p1, Lcom/vk/friends/recommendations/SearchFriendsItem;->e:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

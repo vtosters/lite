@@ -3,12 +3,12 @@
 .source "CommentsListPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/CommentsListPresenter;->d(Lcom/vtosters/lite/q;)V
+    value = Lcom/vk/wall/post/CommentsListPresenter;->d(Lcom/vtosters/lite/Comment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -67,15 +67,15 @@
     .line 2
     iget-object v1, p0, Lcom/vk/wall/post/CommentsListPresenter$c;->a:Lcom/vk/wall/post/CommentsListPresenter;
 
-    invoke-static {v1}, Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vk/wall/post/CommentsListPresenter;)Lcom/vk/lists/o;
+    invoke-static {v1}, Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vk/wall/post/CommentsListPresenter;)Lcom/vk/lists/ListDataSet;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/o;->k(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lcom/vk/lists/ListDataSet;->k(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/wall/b;
+    check-cast v1, Lcom/vk/wall/CommentDisplayItem;
 
     const/4 v2, 0x0
 
@@ -83,16 +83,16 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/wall/b;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Lcom/vk/wall/CommentDisplayItem;->a(Ljava/lang/Object;)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/wall/post/CommentsListPresenter$c;->a:Lcom/vk/wall/post/CommentsListPresenter;
 
-    invoke-static {v1}, Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vk/wall/post/CommentsListPresenter;)Lcom/vk/lists/o;
+    invoke-static {v1}, Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vk/wall/post/CommentsListPresenter;)Lcom/vk/lists/ListDataSet;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/b;->a(I)V
+    invoke-virtual {v1, v0}, Lcom/vk/lists/BaseListDataSet;->a(I)V
 
     .line 4
     :cond_0
@@ -101,11 +101,11 @@
     if-eqz v0, :cond_1
 
     .line 5
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     check-cast p1, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;
 
-    invoke-static {v0, p1}, Lcom/vk/api/base/f;->b(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-static {v0, p1}, Lcom/vk/api/base/ApiUtils;->b(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     :cond_1
     return-void

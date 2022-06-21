@@ -20,8 +20,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
-            "Lcom/vk/queue/sync/models/a;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
+            "Lcom/vk/queue/sync/models/QueueAccessError;",
             ">;"
         }
     .end annotation
@@ -36,7 +36,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/queue/sync/models/QueueAccessException$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/queue/sync/models/QueueAccessException$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -47,8 +47,8 @@
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
-            "Lcom/vk/queue/sync/models/a;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
+            "Lcom/vk/queue/sync/models/QueueAccessError;",
             ">;)V"
         }
     .end annotation
@@ -83,8 +83,8 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
-            "Lcom/vk/queue/sync/models/a;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
+            "Lcom/vk/queue/sync/models/QueueAccessError;",
             ">;"
         }
     .end annotation

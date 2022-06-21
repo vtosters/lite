@@ -1,13 +1,13 @@
 .class public final Lcom/vk/stories/archive/holders/StoryArchiveHolder;
-.super Lcom/vk/common/e/b;
+.super Lcom/vk/common/e/BaseItemHolder;
 .source "StoryArchiveHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/b<",
-        "Lcom/vk/stories/archive/e/b;",
+        "Lcom/vk/common/e/BaseItemHolder<",
+        "Lcom/vk/stories/archive/e/StoryArchiveItem;",
         ">;"
     }
 .end annotation
@@ -22,12 +22,12 @@
 
 .field private final f:Landroid/widget/TextView;
 
-.field private final g:Lkotlin/jvm/b/b;
+.field private final g:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/dto/stories/model/StoryEntry;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -35,29 +35,29 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/stories/model/StoryEntry;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/common/e/b;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/common/e/BaseItemHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/stories/archive/holders/StoryArchiveHolder;->g:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/stories/archive/holders/StoryArchiveHolder;->g:Lkotlin/jvm/b/Functions2;
 
     const p2, 0x7f0a098c
 
     .line 2
-    invoke-virtual {p0, p2}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -68,7 +68,7 @@
     const p2, 0x7f0a0312
 
     .line 3
-    invoke-virtual {p0, p2}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -77,7 +77,7 @@
     const p2, 0x7f0a0318
 
     .line 4
-    invoke-virtual {p0, p2}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -88,7 +88,7 @@
     const p2, 0x7f0a083b
 
     .line 5
-    invoke-virtual {p0, p2}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -142,19 +142,19 @@
     .line 9
     iget-object p2, p0, Lcom/vk/stories/archive/holders/StoryArchiveHolder;->c:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p2}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p2}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p2
 
-    check-cast p2, Lcom/facebook/drawee/generic/a;
+    check-cast p2, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const-string v0, "photo.hierarchy"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    invoke-virtual {p2, v0}, Lcom/facebook/drawee/generic/a;->a(I)V
+    invoke-virtual {p2, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(I)V
 
     .line 10
     iget-object p2, p0, Lcom/vk/stories/archive/holders/StoryArchiveHolder;->c:Lcom/vk/imageloader/view/VKImageView;
@@ -169,14 +169,14 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    invoke-virtual {p2, v0}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p2, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 11
     new-instance p2, Lcom/vk/stories/archive/holders/StoryArchiveHolder$1;
 
     invoke-direct {p2, p0}, Lcom/vk/stories/archive/holders/StoryArchiveHolder$1;-><init>(Lcom/vk/stories/archive/holders/StoryArchiveHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
@@ -191,15 +191,15 @@
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/archive/holders/StoryArchiveHolder;)Lcom/vk/stories/archive/e/b;
+.method public static final synthetic a(Lcom/vk/stories/archive/holders/StoryArchiveHolder;)Lcom/vk/stories/archive/e/StoryArchiveItem;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/stories/archive/e/b;
+    check-cast p0, Lcom/vk/stories/archive/e/StoryArchiveItem;
 
     return-object p0
 .end method
@@ -213,11 +213,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/archive/holders/StoryArchiveHolder;)Lkotlin/jvm/b/b;
+.method public static final synthetic b(Lcom/vk/stories/archive/holders/StoryArchiveHolder;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/archive/holders/StoryArchiveHolder;->g:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/stories/archive/holders/StoryArchiveHolder;->g:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -243,11 +243,11 @@
 
 
 # virtual methods
-.method protected a(Lcom/vk/stories/archive/e/b;)V
+.method protected a(Lcom/vk/stories/archive/e/StoryArchiveItem;)V
     .locals 6
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/stories/archive/e/b;->g()Lcom/vk/dto/stories/model/StoryEntry;
+    invoke-virtual {p1}, Lcom/vk/stories/archive/e/StoryArchiveItem;->g()Lcom/vk/dto/stories/model/StoryEntry;
 
     move-result-object v0
 
@@ -277,7 +277,7 @@
 
     .line 7
     :goto_0
-    invoke-virtual {p1}, Lcom/vk/stories/archive/e/b;->f()Z
+    invoke-virtual {p1}, Lcom/vk/stories/archive/e/StoryArchiveItem;->f()Z
 
     move-result v0
 
@@ -301,7 +301,7 @@
     .line 11
     iget-object v0, p0, Lcom/vk/stories/archive/holders/StoryArchiveHolder;->e:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/archive/e/b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/archive/e/StoryArchiveItem;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -310,7 +310,7 @@
     .line 12
     iget-object v0, p0, Lcom/vk/stories/archive/holders/StoryArchiveHolder;->f:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/archive/e/b;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/archive/e/StoryArchiveItem;->d()Ljava/lang/String;
 
     move-result-object v1
 
@@ -340,9 +340,9 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -354,7 +354,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {p1}, Lcom/vk/stories/archive/e/b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/archive/e/StoryArchiveItem;->c()Ljava/lang/String;
 
     move-result-object v5
 
@@ -362,7 +362,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p1}, Lcom/vk/stories/archive/e/b;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/archive/e/StoryArchiveItem;->e()Ljava/lang/String;
 
     move-result-object p1
 
@@ -377,13 +377,13 @@
     return-void
 .end method
 
-.method public bridge synthetic b(Lcom/vk/common/i/b;)V
+.method public bridge synthetic b(Lcom/vk/common/i/RecyclerItem;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/stories/archive/e/b;
+    check-cast p1, Lcom/vk/stories/archive/e/StoryArchiveItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/archive/holders/StoryArchiveHolder;->a(Lcom/vk/stories/archive/e/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/archive/holders/StoryArchiveHolder;->a(Lcom/vk/stories/archive/e/StoryArchiveItem;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "ProfilesRecommendationsAdapter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -62,14 +62,14 @@
 
     iget-boolean v0, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$d$a;->c:Z
 
-    invoke-static {p1, v0}, Lcom/vk/dto/user/a;->a(Lcom/vk/dto/user/UserProfile;I)V
+    invoke-static {p1, v0}, Lcom/vk/dto/user/UserProfileExt;->a(Lcom/vk/dto/user/UserProfile;I)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$d$a;->a:Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$d;
 
-    iget-object p1, p1, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$d;->a:Lcom/vk/newsfeed/holders/k;
+    iget-object p1, p1, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$d;->a:Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->f0()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->f0()V
 
     return-void
 .end method

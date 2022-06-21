@@ -43,7 +43,7 @@
 
     const-string v1, "_makePhotoProc!"
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$2;->this$0:Lorg/webrtc/videoengine/VideoCapture;

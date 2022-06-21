@@ -46,11 +46,11 @@
     .line 2
     iget-object p2, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController$c;->a:Lcom/vk/profile/ui/community/FloatActionButtonsController;
 
-    invoke-virtual {p2}, Lcom/vk/profile/ui/community/FloatActionButtonsController;->d()Lkotlin/jvm/b/a;
+    invoke-virtual {p2}, Lcom/vk/profile/ui/community/FloatActionButtonsController;->d()Lkotlin/jvm/b/Functions;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p2
 
@@ -126,7 +126,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 

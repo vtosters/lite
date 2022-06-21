@@ -3,7 +3,7 @@
 .source "VkAppExperiments.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vtosters/lite/data/PurchasesManager$GooglePlayLocale;",
         ">;"
     }
@@ -58,7 +58,7 @@
 
     const-string v1, "locale"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vtosters/lite/im/VkAppExperiments;->a(Lcom/vtosters/lite/im/VkAppExperiments;Lcom/vtosters/lite/data/PurchasesManager$GooglePlayLocale;)V
 
@@ -89,7 +89,7 @@
     .line 4
     iget-object p1, p0, Lcom/vtosters/lite/im/VkAppExperiments$b;->a:Lcom/vtosters/lite/im/VkAppExperiments;
 
-    invoke-static {p1}, Lcom/vtosters/lite/im/VkAppExperiments;->d(Lcom/vtosters/lite/im/VkAppExperiments;)Lcom/vk/core/util/h0;
+    invoke-static {p1}, Lcom/vtosters/lite/im/VkAppExperiments;->d(Lcom/vtosters/lite/im/VkAppExperiments;)Lcom/vk/core/util/GooglePlayUtils;
 
     move-result-object p1
 
@@ -99,7 +99,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/util/h0;->a(Landroid/content/Context;)Z
+    invoke-virtual {p1, v0}, Lcom/vk/core/util/GooglePlayUtils;->a(Landroid/content/Context;)Z
 
     move-result p1
 

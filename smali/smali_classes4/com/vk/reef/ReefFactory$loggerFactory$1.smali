@@ -3,12 +3,12 @@
 .source "ReefFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/reef/ReefFactory;-><init>(Landroid/app/Application;Lcom/vk/reef/utils/a;)V
+    value = Lcom/vk/reef/ReefFactory;-><init>(Landroid/app/Application;Lcom/vk/reef/utils/ReefApplicationSettings;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/reef/utils/c;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/reef/utils/ReefLogger;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/reef/utils/c;
+.method public final invoke()Lcom/vk/reef/utils/ReefLogger;
     .locals 1
 
     .line 2
     sget-object v0, Lcom/vk/reef/ReefFactory;->r:Lcom/vk/reef/ReefFactory$Companion;
 
-    invoke-virtual {v0}, Lcom/vk/reef/ReefFactory$Companion;->a()Lcom/vk/reef/utils/c;
+    invoke-virtual {v0}, Lcom/vk/reef/ReefFactory$Companion;->a()Lcom/vk/reef/utils/ReefLogger;
 
     move-result-object v0
 
@@ -72,7 +72,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/reef/ReefFactory$loggerFactory$1;->invoke()Lcom/vk/reef/utils/c;
+    invoke-virtual {p0}, Lcom/vk/reef/ReefFactory$loggerFactory$1;->invoke()Lcom/vk/reef/utils/ReefLogger;
 
     move-result-object v0
 

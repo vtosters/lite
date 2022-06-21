@@ -3,7 +3,7 @@
 .source "PushOpenActivity.kt"
 
 # interfaces
-.implements Lcom/vk/common/links/f;
+.implements Lcom/vk/common/links/OpenCallback;
 
 
 # annotations
@@ -22,17 +22,17 @@
 
 .field final synthetic b:Ljava/lang/String;
 
-.field final synthetic c:Lcom/vk/common/links/c$b;
+.field final synthetic c:Lcom/vk/common/links/LinkProcessor$b;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/pushes/PushOpenActivity;Ljava/lang/String;Lcom/vk/common/links/c$b;)V
+.method constructor <init>(Lcom/vk/pushes/PushOpenActivity;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lcom/vk/common/links/c$b;",
+            "Lcom/vk/common/links/LinkProcessor$b;",
             ")V"
         }
     .end annotation
@@ -42,7 +42,7 @@
 
     iput-object p2, p0, Lcom/vk/pushes/PushOpenActivity$b;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vk/pushes/PushOpenActivity$b;->c:Lcom/vk/common/links/c$b;
+    iput-object p3, p0, Lcom/vk/pushes/PushOpenActivity$b;->c:Lcom/vk/common/links/LinkProcessor$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -68,7 +68,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/pushes/PushOpenActivity$b;->a:Lcom/vk/pushes/PushOpenActivity;
 
-    invoke-static {v0, p1}, Lcom/vk/api/base/f;->a(Landroid/content/Context;Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lcom/vk/api/base/ApiUtils;->a(Landroid/content/Context;Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -78,7 +78,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/pushes/PushOpenActivity$b;->a:Lcom/vk/pushes/PushOpenActivity;
@@ -97,7 +97,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/common/links/f$a;->a(Lcom/vk/common/links/f;Z)V
+    invoke-static {p0, p1}, Lcom/vk/common/links/OpenCallback$a;->a(Lcom/vk/common/links/OpenCallback;Z)V
 
     return-void
 .end method
@@ -114,9 +114,9 @@
 
     const-string v3, "url"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/vk/pushes/PushOpenActivity$b;->c:Lcom/vk/common/links/c$b;
+    iget-object v3, p0, Lcom/vk/pushes/PushOpenActivity$b;->c:Lcom/vk/common/links/LinkProcessor$b;
 
     const/4 v4, 0x0
 
@@ -124,7 +124,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Lcom/vk/common/links/BrowserUtils$Companion;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v6}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Lcom/vk/common/links/BrowserUtils$Companion;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/pushes/PushOpenActivity$b;->a:Lcom/vk/pushes/PushOpenActivity;

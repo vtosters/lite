@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$e;
-.super Lcom/vk/core/util/c1;
+.super Lcom/vk/core/util/TextWatcherAdapter;
 .source "StoryCreateQuestionDialog.kt"
 
 
@@ -25,7 +25,7 @@
     iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$e;->a:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/util/c1;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/util/TextWatcherAdapter;-><init>()V
 
     return-void
 .end method
@@ -36,11 +36,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     return-void
 .end method
@@ -51,13 +51,13 @@
     .line 1
     iget-object p2, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$e;->a:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;
 
-    invoke-virtual {p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/question/f;
+    invoke-virtual {p2}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1}, Lcom/vk/stories/clickable/dialogs/question/f;->e(Ljava/lang/CharSequence;)V
+    invoke-interface {p2, p1}, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionContract3;->e(Ljava/lang/CharSequence;)V
 
     :cond_0
     return-void

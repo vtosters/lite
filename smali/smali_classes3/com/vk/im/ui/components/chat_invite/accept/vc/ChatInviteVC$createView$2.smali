@@ -44,7 +44,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC$createView$2$1;-><init>(Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC$createView$2;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method

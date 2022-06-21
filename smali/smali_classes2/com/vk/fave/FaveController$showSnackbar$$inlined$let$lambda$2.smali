@@ -3,12 +3,12 @@
 .source "FaveController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;ZLcom/vk/fave/entities/e;)V
+    value = Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;ZLcom/vk/fave/entities/FaveMetaInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/core/dialogs/snackbar/VkSnackbar;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -32,13 +32,13 @@
 
 .field final synthetic $isFave$inlined:Z
 
-.field final synthetic $meta$inlined:Lcom/vk/fave/entities/e;
+.field final synthetic $meta$inlined:Lcom/vk/fave/entities/FaveMetaInfo;
 
 .field final synthetic $page$inlined:Lcom/vk/fave/entities/FavePage;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;ZLcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/e;)V
+.method constructor <init>(Landroid/content/Context;ZLcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/FaveMetaInfo;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;->$context$inlined:Landroid/content/Context;
@@ -47,7 +47,7 @@
 
     iput-object p3, p0, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;->$page$inlined:Lcom/vk/fave/entities/FavePage;
 
-    iput-object p4, p0, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;->$meta$inlined:Lcom/vk/fave/entities/e;
+    iput-object p4, p0, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;->$meta$inlined:Lcom/vk/fave/entities/FaveMetaInfo;
 
     const/4 p1, 0x1
 
@@ -76,7 +76,7 @@
     iget-object v1, p0, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;->$page$inlined:Lcom/vk/fave/entities/FavePage;
 
     .line 5
-    iget-object v2, p0, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;->$meta$inlined:Lcom/vk/fave/entities/e;
+    iget-object v2, p0, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;->$meta$inlined:Lcom/vk/fave/entities/FaveMetaInfo;
 
     const/4 v3, 0x0
 
@@ -90,12 +90,12 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v2 .. v8}, Lcom/vk/fave/entities/e;->a(Lcom/vk/fave/entities/e;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILjava/lang/Object;)Lcom/vk/fave/entities/e;
+    invoke-static/range {v2 .. v8}, Lcom/vk/fave/entities/FaveMetaInfo;->a(Lcom/vk/fave/entities/FaveMetaInfo;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILjava/lang/Object;)Lcom/vk/fave/entities/FaveMetaInfo;
 
     move-result-object v2
 
     .line 6
-    invoke-virtual {p1, v0, v1, v2}, Lcom/vk/fave/views/FaveCustomizeTagsView$Companion;->a(Landroid/content/Context;Lcom/vk/fave/entities/l;Lcom/vk/fave/entities/e;)V
+    invoke-virtual {p1, v0, v1, v2}, Lcom/vk/fave/views/FaveCustomizeTagsView$Companion;->a(Landroid/content/Context;Lcom/vk/fave/entities/WithTags;Lcom/vk/fave/entities/FaveMetaInfo;)V
 
     goto :goto_0
 
@@ -105,7 +105,7 @@
 
     iget-object v4, p0, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;->$page$inlined:Lcom/vk/fave/entities/FavePage;
 
-    iget-object v5, p0, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;->$meta$inlined:Lcom/vk/fave/entities/e;
+    iget-object v5, p0, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;->$meta$inlined:Lcom/vk/fave/entities/FaveMetaInfo;
 
     const/4 v6, 0x0
 
@@ -119,7 +119,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v5 .. v11}, Lcom/vk/fave/entities/e;->a(Lcom/vk/fave/entities/e;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILjava/lang/Object;)Lcom/vk/fave/entities/e;
+    invoke-static/range {v5 .. v11}, Lcom/vk/fave/entities/FaveMetaInfo;->a(Lcom/vk/fave/entities/FaveMetaInfo;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILjava/lang/Object;)Lcom/vk/fave/entities/FaveMetaInfo;
 
     move-result-object v5
 
@@ -129,7 +129,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v3 .. v10}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;ZILjava/lang/Object;)V
+    invoke-static/range {v3 .. v10}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;ZILjava/lang/Object;)V
 
     :goto_0
     return-void
@@ -143,7 +143,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;->a(Lcom/vk/core/dialogs/snackbar/VkSnackbar;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

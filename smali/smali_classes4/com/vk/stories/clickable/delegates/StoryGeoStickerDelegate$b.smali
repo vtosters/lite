@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/stories/clickable/l/a/e/a;
+.field final synthetic a:Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/clickable/l/a/e/a;)V
+.method constructor <init>(Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$b;->a:Lcom/vk/stories/clickable/l/a/e/a;
+    iput-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$b;->a:Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;
 
     invoke-direct {p0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetBehavior$c;-><init>()V
 
@@ -46,9 +46,9 @@
     if-ne p2, p1, :cond_0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$b;->a:Lcom/vk/stories/clickable/l/a/e/a;
+    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$b;->a:Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
 
     :cond_0
     return-void

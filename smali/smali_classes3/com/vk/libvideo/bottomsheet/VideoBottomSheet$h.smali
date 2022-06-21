@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;->a(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Ljava/lang/Long;ILcom/vk/navigation/k;ZLkotlin/jvm/b/a;Z)Lcom/vk/core/util/w;
+    value = Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;->a(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Ljava/lang/Long;ILcom/vk/navigation/ModalDialogCallback;ZLkotlin/jvm/b/Functions;Z)Lcom/vk/core/util/Dismissable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/navigation/k;
+.field final synthetic a:Lcom/vk/navigation/ModalDialogCallback;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/navigation/k;)V
+.method constructor <init>(Lcom/vk/navigation/ModalDialogCallback;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet$h;->a:Lcom/vk/navigation/k;
+    iput-object p1, p0, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet$h;->a:Lcom/vk/navigation/ModalDialogCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,16 +42,16 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;->a(Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;Lcom/vk/core/dialogs/bottomsheet/e;)V
+    invoke-static {p1, v0}, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;->a(Lcom/vk/libvideo/bottomsheet/VideoBottomSheet;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet$h;->a:Lcom/vk/navigation/k;
+    iget-object p1, p0, Lcom/vk/libvideo/bottomsheet/VideoBottomSheet$h;->a:Lcom/vk/navigation/ModalDialogCallback;
 
     if-eqz p1, :cond_0
 
     const-string v0, "video_options"
 
-    invoke-interface {p1, v0}, Lcom/vk/navigation/k;->A(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/navigation/ModalDialogCallback;->A(Ljava/lang/String;)V
 
     :cond_0
     return-void

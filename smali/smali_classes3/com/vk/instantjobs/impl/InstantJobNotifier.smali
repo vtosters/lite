@@ -19,13 +19,13 @@
 
 
 # static fields
-.field static final synthetic k:[Lkotlin/u/j;
+.field static final synthetic k:[Lkotlin/u/KProperty5;
 
 
 # instance fields
 .field private final a:Lcom/vk/instantjobs/impl/InstantJobNotifier$a;
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
 .field private final c:Ljava/util/ArrayList;
     .annotation build Landroidx/annotation/GuardedBy;
@@ -63,11 +63,11 @@
 
 .field private final f:Landroid/content/Context;
 
-.field private final g:Lcom/vk/instantjobs/components/appstate/a;
+.field private final g:Lcom/vk/instantjobs/components/appstate/AppStateDetector;
 
 .field private final h:Ljava/util/concurrent/ExecutorService;
 
-.field private final i:Lcom/vk/instantjobs/a;
+.field private final i:Lcom/vk/instantjobs/InstantJobLogger;
 
 .field private final j:Ljava/lang/Object;
 
@@ -78,13 +78,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/instantjobs/impl/InstantJobNotifier;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -92,20 +92,20 @@
 
     const-string v4, "getNotificationManager()Landroid/app/NotificationManager;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->k:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->k:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/instantjobs/components/appstate/a;Ljava/util/concurrent/ExecutorService;Lcom/vk/instantjobs/a;Ljava/lang/Object;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/instantjobs/components/appstate/AppStateDetector;Ljava/util/concurrent/ExecutorService;Lcom/vk/instantjobs/InstantJobLogger;Ljava/lang/Object;)V
     .locals 0
 
     .line 1
@@ -113,11 +113,11 @@
 
     iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->f:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->g:Lcom/vk/instantjobs/components/appstate/a;
+    iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->g:Lcom/vk/instantjobs/components/appstate/AppStateDetector;
 
     iput-object p3, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->h:Ljava/util/concurrent/ExecutorService;
 
-    iput-object p4, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->i:Lcom/vk/instantjobs/a;
+    iput-object p4, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->i:Lcom/vk/instantjobs/InstantJobLogger;
 
     iput-object p5, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->j:Ljava/lang/Object;
 
@@ -133,11 +133,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/instantjobs/impl/InstantJobNotifier$notificationManager$2;-><init>(Lcom/vk/instantjobs/impl/InstantJobNotifier;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b:Lkotlin/Lazy2;
 
     .line 4
     new-instance p1, Ljava/util/ArrayList;
@@ -154,21 +154,21 @@
     iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->d:Ljava/util/ArrayList;
 
     .line 6
-    iget-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->g:Lcom/vk/instantjobs/components/appstate/a;
+    iget-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->g:Lcom/vk/instantjobs/components/appstate/AppStateDetector;
 
     iget-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->a:Lcom/vk/instantjobs/impl/InstantJobNotifier$a;
 
-    invoke-interface {p1, p2}, Lcom/vk/instantjobs/components/appstate/a;->a(Lcom/vk/instantjobs/components/appstate/a$a;)V
+    invoke-interface {p1, p2}, Lcom/vk/instantjobs/components/appstate/AppStateDetector;->a(Lcom/vk/instantjobs/components/appstate/AppStateDetector$a;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/instantjobs/impl/b;Ljava/util/Map;)Landroid/app/Notification;
+.method private final a(Lcom/vk/instantjobs/impl/InstantJobInfo;Ljava/util/Map;)Landroid/app/Notification;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/instantjobs/impl/b;",
+            "Lcom/vk/instantjobs/impl/InstantJobInfo;",
             "Ljava/util/Map<",
             "Lcom/vk/instantjobs/InstantJob;",
             "Lcom/vk/instantjobs/InstantJob$a;",
@@ -178,7 +178,7 @@
     .end annotation
 
     .line 56
-    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/b;->d()Lcom/vk/instantjobs/InstantJob;
+    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/InstantJobInfo;->d()Lcom/vk/instantjobs/InstantJob;
 
     move-result-object v0
 
@@ -232,7 +232,7 @@
     invoke-virtual {v2, p2}, Landroidx/core/app/NotificationCompat$Builder;->setDeleteIntent(Landroid/app/PendingIntent;)Landroidx/core/app/NotificationCompat$Builder;
 
     .line 65
-    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->c(Lcom/vk/instantjobs/impl/b;)Landroidx/core/app/NotificationCompat$Action;
+    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->c(Lcom/vk/instantjobs/impl/InstantJobInfo;)Landroidx/core/app/NotificationCompat$Action;
 
     move-result-object p1
 
@@ -245,7 +245,7 @@
 
     const-string p2, "builder.apply {\n        \u2026bInfo))\n        }.build()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -265,24 +265,24 @@
     .locals 2
 
     .line 74
-    sget-object v0, Lcom/vk/instantjobs/utils/g;->a:Lcom/vk/instantjobs/utils/g;
+    sget-object v0, Lcom/vk/instantjobs/utils/NotificationUtils;->a:Lcom/vk/instantjobs/utils/NotificationUtils;
 
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->f:Landroid/content/Context;
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/instantjobs/utils/g;->a(Landroid/content/Context;Ljava/lang/String;)Landroidx/core/app/NotificationCompat$Builder;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/instantjobs/utils/NotificationUtils;->a(Landroid/content/Context;Ljava/lang/String;)Landroidx/core/app/NotificationCompat$Builder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final declared-synchronized a(Lkotlin/jvm/b/a;)Ljava/util/concurrent/Future;
+.method private final declared-synchronized a(Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Future;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Ljava/util/concurrent/Future<",
             "*>;"
@@ -302,7 +302,7 @@
     .line 68
     new-instance v1, Lcom/vk/instantjobs/impl/InstantJobNotifier$c;
 
-    invoke-direct {v1, p0, p1, v0}, Lcom/vk/instantjobs/impl/InstantJobNotifier$c;-><init>(Lcom/vk/instantjobs/impl/InstantJobNotifier;Lkotlin/jvm/b/a;Ljava/util/concurrent/CountDownLatch;)V
+    invoke-direct {v1, p0, p1, v0}, Lcom/vk/instantjobs/impl/InstantJobNotifier$c;-><init>(Lcom/vk/instantjobs/impl/InstantJobNotifier;Lkotlin/jvm/b/Functions;Ljava/util/concurrent/CountDownLatch;)V
 
     .line 69
     invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->a(Ljava/util/concurrent/CountDownLatch;)V
@@ -316,7 +316,7 @@
 
     const-string v0, "executor.submit(runnable)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -417,7 +417,7 @@
     :cond_1
     sget-object p1, Lcom/vk/instantjobs/impl/InstantJobNotifier$onAppStateChanged$4;->a:Lcom/vk/instantjobs/impl/InstantJobNotifier$onAppStateChanged$4;
 
-    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b(Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b(Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
@@ -425,7 +425,7 @@
     :cond_2
     sget-object p1, Lcom/vk/instantjobs/impl/InstantJobNotifier$onAppStateChanged$3;->a:Lcom/vk/instantjobs/impl/InstantJobNotifier$onAppStateChanged$3;
 
-    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b(Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b(Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
@@ -433,7 +433,7 @@
     :cond_3
     sget-object p1, Lcom/vk/instantjobs/impl/InstantJobNotifier$onAppStateChanged$2;->a:Lcom/vk/instantjobs/impl/InstantJobNotifier$onAppStateChanged$2;
 
-    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b(Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b(Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
@@ -441,7 +441,7 @@
     :cond_4
     sget-object p1, Lcom/vk/instantjobs/impl/InstantJobNotifier$onAppStateChanged$1;->a:Lcom/vk/instantjobs/impl/InstantJobNotifier$onAppStateChanged$1;
 
-    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->a(Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->a(Lkotlin/jvm/b/Functions2;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -488,11 +488,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/instantjobs/impl/InstantJobNotifier;Lcom/vk/instantjobs/impl/b;Ljava/util/Map;)V
+.method public static final synthetic a(Lcom/vk/instantjobs/impl/InstantJobNotifier;Lcom/vk/instantjobs/impl/InstantJobInfo;Ljava/util/Map;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b(Lcom/vk/instantjobs/impl/b;Ljava/util/Map;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b(Lcom/vk/instantjobs/impl/InstantJobInfo;Ljava/util/Map;)V
 
     return-void
 .end method
@@ -510,9 +510,9 @@
     .locals 1
 
     .line 73
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->i:Lcom/vk/instantjobs/a;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->i:Lcom/vk/instantjobs/InstantJobLogger;
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/instantjobs/a;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/instantjobs/InstantJobLogger;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -543,12 +543,12 @@
     throw p1
 .end method
 
-.method private final a(Lkotlin/jvm/b/b;)V
+.method private final a(Lkotlin/jvm/b/Functions2;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/instantjobs/impl/InstantJobNotifier$b;",
             "Ljava/lang/Boolean;",
@@ -561,9 +561,9 @@
 
     new-instance v1, Lcom/vk/instantjobs/impl/InstantJobNotifier$scheduleCancel$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier$scheduleCancel$1;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier$scheduleCancel$1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-static {v0, v1}, Lcom/vk/instantjobs/utils/b;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Ljava/util/List;
+    invoke-static {v0, v1}, Lcom/vk/instantjobs/utils/Extensions;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Ljava/util/List;
 
     move-result-object p1
 
@@ -612,7 +612,7 @@
     const/4 v8, 0x0
 
     .line 45
-    invoke-static/range {v2 .. v8}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a(Lcom/vk/instantjobs/impl/InstantJobNotifier$b;Lcom/vk/instantjobs/impl/b;IZLcom/vk/instantjobs/InstantJob$a;ILjava/lang/Object;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
+    invoke-static/range {v2 .. v8}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a(Lcom/vk/instantjobs/impl/InstantJobNotifier$b;Lcom/vk/instantjobs/impl/InstantJobInfo;IZLcom/vk/instantjobs/InstantJob$a;ILjava/lang/Object;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
 
     move-result-object v1
 
@@ -815,17 +815,17 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier$scheduleCancel$4;-><init>(Lcom/vk/instantjobs/impl/InstantJobNotifier;Lcom/vk/instantjobs/impl/InstantJobNotifier$b;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->a(Lkotlin/jvm/b/a;)Ljava/util/concurrent/Future;
+    invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->a(Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Future;
 
     return-void
 .end method
 
-.method private final b(Lcom/vk/instantjobs/impl/b;Ljava/util/Map;)V
+.method private final b(Lcom/vk/instantjobs/impl/InstantJobInfo;Ljava/util/Map;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/instantjobs/impl/b;",
+            "Lcom/vk/instantjobs/impl/InstantJobInfo;",
             "Ljava/util/Map<",
             "Lcom/vk/instantjobs/InstantJob;",
             "Lcom/vk/instantjobs/InstantJob$a;",
@@ -834,14 +834,14 @@
     .end annotation
 
     .line 20
-    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/b;->d()Lcom/vk/instantjobs/InstantJob;
+    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/InstantJobInfo;->d()Lcom/vk/instantjobs/InstantJob;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->c(Lcom/vk/instantjobs/InstantJob;)V
 
     .line 21
-    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/b;->d()Lcom/vk/instantjobs/InstantJob;
+    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/InstantJobInfo;->d()Lcom/vk/instantjobs/InstantJob;
 
     move-result-object v0
 
@@ -850,7 +850,7 @@
     move-result v0
 
     .line 22
-    invoke-direct {p0, p1, p2}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->a(Lcom/vk/instantjobs/impl/b;Ljava/util/Map;)Landroid/app/Notification;
+    invoke-direct {p0, p1, p2}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->a(Lcom/vk/instantjobs/impl/InstantJobInfo;Ljava/util/Map;)Landroid/app/Notification;
 
     move-result-object p1
 
@@ -890,12 +890,12 @@
     throw p1
 .end method
 
-.method private final b(Lkotlin/jvm/b/b;)V
+.method private final b(Lkotlin/jvm/b/Functions2;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/instantjobs/impl/InstantJobNotifier$b;",
             "Ljava/lang/Boolean;",
@@ -908,9 +908,9 @@
 
     new-instance v1, Lcom/vk/instantjobs/impl/InstantJobNotifier$scheduleInvalidate$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier$scheduleInvalidate$1;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier$scheduleInvalidate$1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-static {v0, v1}, Lcom/vk/instantjobs/utils/b;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Ljava/util/List;
+    invoke-static {v0, v1}, Lcom/vk/instantjobs/utils/Extensions;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Ljava/util/List;
 
     move-result-object p1
 
@@ -959,7 +959,7 @@
     const/4 v8, 0x0
 
     .line 15
-    invoke-static/range {v2 .. v8}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a(Lcom/vk/instantjobs/impl/InstantJobNotifier$b;Lcom/vk/instantjobs/impl/b;IZLcom/vk/instantjobs/InstantJob$a;ILjava/lang/Object;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
+    invoke-static/range {v2 .. v8}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a(Lcom/vk/instantjobs/impl/InstantJobNotifier$b;Lcom/vk/instantjobs/impl/InstantJobInfo;IZLcom/vk/instantjobs/InstantJob$a;ILjava/lang/Object;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
 
     move-result-object v1
 
@@ -1026,7 +1026,7 @@
     return p1
 .end method
 
-.method private final c(Lcom/vk/instantjobs/impl/b;)Landroidx/core/app/NotificationCompat$Action;
+.method private final c(Lcom/vk/instantjobs/impl/InstantJobInfo;)Landroidx/core/app/NotificationCompat$Action;
     .locals 3
 
     .line 17
@@ -1040,10 +1040,10 @@
 
     const-string v1, "context.getString(android.R.string.cancel)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 18
-    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->d(Lcom/vk/instantjobs/impl/b;)Landroid/app/PendingIntent;
+    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->d(Lcom/vk/instantjobs/impl/InstantJobInfo;)Landroid/app/PendingIntent;
 
     move-result-object p1
 
@@ -1101,7 +1101,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1217,11 +1217,11 @@
     check-cast v2, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
 
     .line 7
-    invoke-virtual {v2}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a()Lcom/vk/instantjobs/impl/b;
+    invoke-virtual {v2}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a()Lcom/vk/instantjobs/impl/InstantJobInfo;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/instantjobs/impl/b;->d()Lcom/vk/instantjobs/InstantJob;
+    invoke-virtual {v3}, Lcom/vk/instantjobs/impl/InstantJobInfo;->d()Lcom/vk/instantjobs/InstantJob;
 
     move-result-object v3
 
@@ -1239,7 +1239,7 @@
 
     invoke-direct {v1, p0, p1, v0}, Lcom/vk/instantjobs/impl/InstantJobNotifier$scheduleInvalidate$6;-><init>(Lcom/vk/instantjobs/impl/InstantJobNotifier;Lcom/vk/instantjobs/impl/InstantJobNotifier$b;Landroidx/collection/ArrayMap;)V
 
-    invoke-direct {p0, v1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->a(Lkotlin/jvm/b/a;)Ljava/util/concurrent/Future;
+    invoke-direct {p0, v1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->a(Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Future;
 
     return-void
 .end method
@@ -1304,7 +1304,7 @@
     throw v0
 .end method
 
-.method private final d(Lcom/vk/instantjobs/impl/b;)Landroid/app/PendingIntent;
+.method private final d(Lcom/vk/instantjobs/impl/InstantJobInfo;)Landroid/app/PendingIntent;
     .locals 3
 
     .line 4
@@ -1322,7 +1322,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/b;->b()I
+    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/InstantJobInfo;->b()I
 
     move-result v1
 
@@ -1331,7 +1331,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/b;->d()Lcom/vk/instantjobs/InstantJob;
+    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/InstantJobInfo;->d()Lcom/vk/instantjobs/InstantJob;
 
     move-result-object v1
 
@@ -1346,7 +1346,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/InstantJobInfo;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1357,7 +1357,7 @@
     .line 9
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->f:Landroid/content/Context;
 
-    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/b;->b()I
+    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/InstantJobInfo;->b()I
 
     move-result p1
 
@@ -1369,12 +1369,12 @@
 
     const-string v0, "PendingIntent.getBroadca\u2026tent.FLAG_UPDATE_CURRENT)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method private final e(Lcom/vk/instantjobs/impl/b;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
+.method private final e(Lcom/vk/instantjobs/impl/InstantJobInfo;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
     .locals 8
 
     .line 1
@@ -1410,33 +1410,33 @@
     check-cast v3, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
 
     .line 4
-    invoke-virtual {v3}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a()Lcom/vk/instantjobs/impl/b;
+    invoke-virtual {v3}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a()Lcom/vk/instantjobs/impl/InstantJobInfo;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/vk/instantjobs/impl/b;->b()I
+    invoke-virtual {v6}, Lcom/vk/instantjobs/impl/InstantJobInfo;->b()I
 
     move-result v6
 
-    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/b;->b()I
+    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/InstantJobInfo;->b()I
 
     move-result v7
 
     if-ne v6, v7, :cond_0
 
-    invoke-virtual {v3}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a()Lcom/vk/instantjobs/impl/b;
+    invoke-virtual {v3}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a()Lcom/vk/instantjobs/impl/InstantJobInfo;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/instantjobs/impl/b;->c()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/vk/instantjobs/impl/InstantJobInfo;->c()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/InstantJobInfo;->c()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -1490,9 +1490,9 @@
     .locals 1
 
     .line 10
-    sget-object v0, Lcom/vk/instantjobs/utils/g;->a:Lcom/vk/instantjobs/utils/g;
+    sget-object v0, Lcom/vk/instantjobs/utils/NotificationUtils;->a:Lcom/vk/instantjobs/utils/NotificationUtils;
 
-    invoke-virtual {v0}, Lcom/vk/instantjobs/utils/g;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/instantjobs/utils/NotificationUtils;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1537,9 +1537,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/instantjobs/utils/g;->a:Lcom/vk/instantjobs/utils/g;
+    sget-object v0, Lcom/vk/instantjobs/utils/NotificationUtils;->a:Lcom/vk/instantjobs/utils/NotificationUtils;
 
-    invoke-virtual {v0}, Lcom/vk/instantjobs/utils/g;->b()Landroid/app/NotificationChannel;
+    invoke-virtual {v0}, Lcom/vk/instantjobs/utils/NotificationUtils;->b()Landroid/app/NotificationChannel;
 
     move-result-object v0
 
@@ -1550,9 +1550,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/instantjobs/utils/g;->a:Lcom/vk/instantjobs/utils/g;
+    sget-object v0, Lcom/vk/instantjobs/utils/NotificationUtils;->a:Lcom/vk/instantjobs/utils/NotificationUtils;
 
-    invoke-virtual {v0}, Lcom/vk/instantjobs/utils/g;->c()I
+    invoke-virtual {v0}, Lcom/vk/instantjobs/utils/NotificationUtils;->c()I
 
     move-result v0
 
@@ -1562,15 +1562,15 @@
 .method private final h()Landroid/app/NotificationManager;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/instantjobs/impl/InstantJobNotifier;->k:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/instantjobs/impl/InstantJobNotifier;->k:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1618,9 +1618,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->g:Lcom/vk/instantjobs/components/appstate/a;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->g:Lcom/vk/instantjobs/components/appstate/AppStateDetector;
 
-    invoke-interface {v0}, Lcom/vk/instantjobs/components/appstate/a;->getState()Lcom/vk/instantjobs/components/appstate/AppState;
+    invoke-interface {v0}, Lcom/vk/instantjobs/components/appstate/AppStateDetector;->getState()Lcom/vk/instantjobs/components/appstate/AppState;
 
     move-result-object v0
 
@@ -1643,9 +1643,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->g:Lcom/vk/instantjobs/components/appstate/a;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->g:Lcom/vk/instantjobs/components/appstate/AppStateDetector;
 
-    invoke-interface {v0}, Lcom/vk/instantjobs/components/appstate/a;->getState()Lcom/vk/instantjobs/components/appstate/AppState;
+    invoke-interface {v0}, Lcom/vk/instantjobs/components/appstate/AppStateDetector;->getState()Lcom/vk/instantjobs/components/appstate/AppState;
 
     move-result-object v0
 
@@ -1679,11 +1679,11 @@
     if-nez v0, :cond_0
 
     .line 8
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->g:Lcom/vk/instantjobs/components/appstate/a;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->g:Lcom/vk/instantjobs/components/appstate/AppStateDetector;
 
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier;->a:Lcom/vk/instantjobs/impl/InstantJobNotifier$a;
 
-    invoke-interface {v0, v1}, Lcom/vk/instantjobs/components/appstate/a;->b(Lcom/vk/instantjobs/components/appstate/a$a;)V
+    invoke-interface {v0, v1}, Lcom/vk/instantjobs/components/appstate/AppStateDetector;->b(Lcom/vk/instantjobs/components/appstate/AppStateDetector$a;)V
 
     const/4 v0, 0x1
 
@@ -1692,7 +1692,7 @@
 
     .line 10
     :cond_0
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1739,7 +1739,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized a(Lcom/vk/instantjobs/impl/b;)V
+.method public final declared-synchronized a(Lcom/vk/instantjobs/impl/InstantJobInfo;)V
     .locals 2
 
     monitor-enter p0
@@ -1749,7 +1749,7 @@
     invoke-direct {p0}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b()V
 
     .line 26
-    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->e(Lcom/vk/instantjobs/impl/b;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
+    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->e(Lcom/vk/instantjobs/impl/InstantJobInfo;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
 
     move-result-object p1
     :try_end_0
@@ -1808,7 +1808,7 @@
     throw p1
 .end method
 
-.method public final declared-synchronized a(Lcom/vk/instantjobs/impl/b;II)V
+.method public final declared-synchronized a(Lcom/vk/instantjobs/impl/InstantJobInfo;II)V
     .locals 7
 
     monitor-enter p0
@@ -1818,7 +1818,7 @@
     invoke-direct {p0}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b()V
 
     .line 17
-    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->e(Lcom/vk/instantjobs/impl/b;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
+    invoke-direct {p0, p1}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->e(Lcom/vk/instantjobs/impl/InstantJobInfo;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
 
     move-result-object v0
     :try_end_0
@@ -1848,7 +1848,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a(Lcom/vk/instantjobs/impl/InstantJobNotifier$b;Lcom/vk/instantjobs/impl/b;IZLcom/vk/instantjobs/InstantJob$a;ILjava/lang/Object;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;->a(Lcom/vk/instantjobs/impl/InstantJobNotifier$b;Lcom/vk/instantjobs/impl/InstantJobInfo;IZLcom/vk/instantjobs/InstantJob$a;ILjava/lang/Object;)Lcom/vk/instantjobs/impl/InstantJobNotifier$b;
 
     move-result-object p1
 
@@ -1893,7 +1893,7 @@
     throw p1
 .end method
 
-.method public final declared-synchronized b(Lcom/vk/instantjobs/impl/b;)V
+.method public final declared-synchronized b(Lcom/vk/instantjobs/impl/InstantJobInfo;)V
     .locals 6
 
     monitor-enter p0
@@ -1903,12 +1903,12 @@
     invoke-direct {p0}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->b()V
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/b;->d()Lcom/vk/instantjobs/InstantJob;
+    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/InstantJobInfo;->d()Lcom/vk/instantjobs/InstantJob;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/b;->d()Lcom/vk/instantjobs/InstantJob;
+    invoke-virtual {p1}, Lcom/vk/instantjobs/impl/InstantJobInfo;->d()Lcom/vk/instantjobs/InstantJob;
 
     move-result-object v1
 
@@ -1985,7 +1985,7 @@
 
     invoke-direct {v5, v2, v3}, Lcom/vk/instantjobs/InstantJob$a;-><init>(II)V
 
-    invoke-direct {v4, p1, v1, v0, v5}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;-><init>(Lcom/vk/instantjobs/impl/b;IZLcom/vk/instantjobs/InstantJob$a;)V
+    invoke-direct {v4, p1, v1, v0, v5}, Lcom/vk/instantjobs/impl/InstantJobNotifier$b;-><init>(Lcom/vk/instantjobs/impl/InstantJobInfo;IZLcom/vk/instantjobs/InstantJob$a;)V
 
     .line 8
     invoke-direct {p0, v4}, Lcom/vk/instantjobs/impl/InstantJobNotifier;->a(Lcom/vk/instantjobs/impl/InstantJobNotifier$b;)V

@@ -16,11 +16,11 @@
 
 .field private b:Lcom/facebook/imagepipeline/request/ImageRequest$RequestLevel;
 
-.field private c:Lcom/facebook/imagepipeline/common/d;
+.field private c:Lcom/facebook/imagepipeline/common/ResizeOptions;
 
-.field private d:Lcom/facebook/imagepipeline/common/e;
+.field private d:Lcom/facebook/imagepipeline/common/RotationOptions;
 
-.field private e:Lcom/facebook/imagepipeline/common/b;
+.field private e:Lcom/facebook/imagepipeline/common/ImageDecodeOptions;
 
 .field private f:Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;
 
@@ -30,7 +30,7 @@
 
 .field private i:Lcom/facebook/imagepipeline/common/Priority;
 
-.field private j:Lcom/facebook/imagepipeline/request/c;
+.field private j:Lcom/facebook/imagepipeline/request/Postprocessor;
 
 .field private k:Z
 
@@ -38,9 +38,9 @@
 
 .field private m:Ljava/lang/Boolean;
 
-.field private n:Lcom/facebook/x/h/c;
+.field private n:Lcom/facebook/x/h/RequestListener;
 
-.field private o:Lcom/facebook/imagepipeline/common/a;
+.field private o:Lcom/facebook/imagepipeline/common/BytesRange;
 
 .field private p:Ljava/lang/Boolean;
 
@@ -63,17 +63,17 @@
     iput-object v1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->b:Lcom/facebook/imagepipeline/request/ImageRequest$RequestLevel;
 
     .line 4
-    iput-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->c:Lcom/facebook/imagepipeline/common/d;
+    iput-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->c:Lcom/facebook/imagepipeline/common/ResizeOptions;
 
     .line 5
-    iput-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->d:Lcom/facebook/imagepipeline/common/e;
+    iput-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->d:Lcom/facebook/imagepipeline/common/RotationOptions;
 
     .line 6
-    invoke-static {}, Lcom/facebook/imagepipeline/common/b;->a()Lcom/facebook/imagepipeline/common/b;
+    invoke-static {}, Lcom/facebook/imagepipeline/common/ImageDecodeOptions;->a()Lcom/facebook/imagepipeline/common/ImageDecodeOptions;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->e:Lcom/facebook/imagepipeline/common/b;
+    iput-object v1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->e:Lcom/facebook/imagepipeline/common/ImageDecodeOptions;
 
     .line 7
     sget-object v1, Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;->DEFAULT:Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;
@@ -81,11 +81,11 @@
     iput-object v1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->f:Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;
 
     .line 8
-    invoke-static {}, Lcom/facebook/x/d/h;->A()Lcom/facebook/x/d/h$c;
+    invoke-static {}, Lcom/facebook/x/d/ImagePipelineConfig;->A()Lcom/facebook/x/d/ImagePipelineConfig$c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/facebook/x/d/h$c;->a()Z
+    invoke-virtual {v1}, Lcom/facebook/x/d/ImagePipelineConfig$c;->a()Z
 
     move-result v1
 
@@ -102,7 +102,7 @@
     iput-object v1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->i:Lcom/facebook/imagepipeline/common/Priority;
 
     .line 11
-    iput-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->j:Lcom/facebook/imagepipeline/request/c;
+    iput-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->j:Lcom/facebook/imagepipeline/request/Postprocessor;
 
     const/4 v1, 0x1
 
@@ -116,7 +116,7 @@
     iput-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->m:Ljava/lang/Boolean;
 
     .line 15
-    iput-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->o:Lcom/facebook/imagepipeline/common/a;
+    iput-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->o:Lcom/facebook/imagepipeline/common/BytesRange;
 
     .line 16
     iput-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->p:Ljava/lang/Boolean;
@@ -128,7 +128,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/facebook/common/util/d;->a(I)Landroid/net/Uri;
+    invoke-static {p0}, Lcom/facebook/common/util/UriUtil;->a(I)Landroid/net/Uri;
 
     move-result-object p0
 
@@ -152,18 +152,18 @@
     move-result-object v0
 
     .line 3
-    invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->c()Lcom/facebook/imagepipeline/common/b;
+    invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->c()Lcom/facebook/imagepipeline/common/ImageDecodeOptions;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/b;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/ImageDecodeOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 4
-    invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->a()Lcom/facebook/imagepipeline/common/a;
+    invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->a()Lcom/facebook/imagepipeline/common/BytesRange;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/a;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/BytesRange;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 5
     invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->b()Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;
@@ -187,11 +187,11 @@
     invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/ImageRequest$RequestLevel;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 8
-    invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->f()Lcom/facebook/imagepipeline/request/c;
+    invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->f()Lcom/facebook/imagepipeline/request/Postprocessor;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 9
     invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->j()Z
@@ -208,25 +208,25 @@
     invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/Priority;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 11
-    invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->l()Lcom/facebook/imagepipeline/common/d;
+    invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->l()Lcom/facebook/imagepipeline/common/ResizeOptions;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/d;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/ResizeOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 12
-    invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->k()Lcom/facebook/x/h/c;
+    invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->k()Lcom/facebook/x/h/RequestListener;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/x/h/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/x/h/RequestListener;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 13
-    invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->n()Lcom/facebook/imagepipeline/common/e;
+    invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->n()Lcom/facebook/imagepipeline/common/RotationOptions;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/e;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v0, v1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/RotationOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 14
     invoke-virtual {p0}, Lcom/facebook/imagepipeline/request/ImageRequest;->t()Ljava/lang/Boolean;
@@ -271,7 +271,7 @@
     .locals 0
 
     .line 15
-    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 16
     iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a:Landroid/net/Uri;
@@ -288,38 +288,38 @@
     return-object p0
 .end method
 
-.method public a(Lcom/facebook/imagepipeline/common/a;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+.method public a(Lcom/facebook/imagepipeline/common/BytesRange;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
     .locals 0
 
     .line 20
-    iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->o:Lcom/facebook/imagepipeline/common/a;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->o:Lcom/facebook/imagepipeline/common/BytesRange;
 
     return-object p0
 .end method
 
-.method public a(Lcom/facebook/imagepipeline/common/b;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+.method public a(Lcom/facebook/imagepipeline/common/ImageDecodeOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
     .locals 0
 
     .line 21
-    iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->e:Lcom/facebook/imagepipeline/common/b;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->e:Lcom/facebook/imagepipeline/common/ImageDecodeOptions;
 
     return-object p0
 .end method
 
-.method public a(Lcom/facebook/imagepipeline/common/d;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+.method public a(Lcom/facebook/imagepipeline/common/ResizeOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
     .locals 0
 
     .line 18
-    iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->c:Lcom/facebook/imagepipeline/common/d;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->c:Lcom/facebook/imagepipeline/common/ResizeOptions;
 
     return-object p0
 .end method
 
-.method public a(Lcom/facebook/imagepipeline/common/e;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+.method public a(Lcom/facebook/imagepipeline/common/RotationOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
     .locals 0
 
     .line 19
-    iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->d:Lcom/facebook/imagepipeline/common/e;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->d:Lcom/facebook/imagepipeline/common/RotationOptions;
 
     return-object p0
 .end method
@@ -342,20 +342,20 @@
     return-object p0
 .end method
 
-.method public a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+.method public a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
     .locals 0
 
     .line 25
-    iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->j:Lcom/facebook/imagepipeline/request/c;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->j:Lcom/facebook/imagepipeline/request/Postprocessor;
 
     return-object p0
 .end method
 
-.method public a(Lcom/facebook/x/h/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+.method public a(Lcom/facebook/x/h/RequestListener;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
     .locals 0
 
     .line 26
-    iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->n:Lcom/facebook/x/h/c;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->n:Lcom/facebook/x/h/RequestListener;
 
     return-object p0
 .end method
@@ -378,11 +378,11 @@
     return-object p0
 .end method
 
-.method public b()Lcom/facebook/imagepipeline/common/a;
+.method public b()Lcom/facebook/imagepipeline/common/BytesRange;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->o:Lcom/facebook/imagepipeline/common/a;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->o:Lcom/facebook/imagepipeline/common/BytesRange;
 
     return-object v0
 .end method
@@ -405,11 +405,11 @@
     return-object v0
 .end method
 
-.method public d()Lcom/facebook/imagepipeline/common/b;
+.method public d()Lcom/facebook/imagepipeline/common/ImageDecodeOptions;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->e:Lcom/facebook/imagepipeline/common/b;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->e:Lcom/facebook/imagepipeline/common/ImageDecodeOptions;
 
     return-object v0
 .end method
@@ -423,20 +423,20 @@
     return-object v0
 .end method
 
-.method public f()Lcom/facebook/imagepipeline/request/c;
+.method public f()Lcom/facebook/imagepipeline/request/Postprocessor;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->j:Lcom/facebook/imagepipeline/request/c;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->j:Lcom/facebook/imagepipeline/request/Postprocessor;
 
     return-object v0
 .end method
 
-.method public g()Lcom/facebook/x/h/c;
+.method public g()Lcom/facebook/x/h/RequestListener;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->n:Lcom/facebook/x/h/c;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->n:Lcom/facebook/x/h/RequestListener;
 
     return-object v0
 .end method
@@ -450,11 +450,11 @@
     return-object v0
 .end method
 
-.method public i()Lcom/facebook/imagepipeline/common/d;
+.method public i()Lcom/facebook/imagepipeline/common/ResizeOptions;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->c:Lcom/facebook/imagepipeline/common/d;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->c:Lcom/facebook/imagepipeline/common/ResizeOptions;
 
     return-object v0
 .end method
@@ -468,11 +468,11 @@
     return-object v0
 .end method
 
-.method public k()Lcom/facebook/imagepipeline/common/e;
+.method public k()Lcom/facebook/imagepipeline/common/RotationOptions;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->d:Lcom/facebook/imagepipeline/common/e;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->d:Lcom/facebook/imagepipeline/common/RotationOptions;
 
     return-object v0
 .end method
@@ -496,7 +496,7 @@
 
     iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a:Landroid/net/Uri;
 
-    invoke-static {v0}, Lcom/facebook/common/util/d;->i(Landroid/net/Uri;)Z
+    invoke-static {v0}, Lcom/facebook/common/util/UriUtil;->i(Landroid/net/Uri;)Z
 
     move-result v0
 
@@ -558,7 +558,7 @@
     if-eqz v0, :cond_5
 
     .line 2
-    invoke-static {v0}, Lcom/facebook/common/util/d;->h(Landroid/net/Uri;)Z
+    invoke-static {v0}, Lcom/facebook/common/util/UriUtil;->h(Landroid/net/Uri;)Z
 
     move-result v0
 
@@ -641,7 +641,7 @@
     :goto_0
     iget-object v0, p0, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a:Landroid/net/Uri;
 
-    invoke-static {v0}, Lcom/facebook/common/util/d;->c(Landroid/net/Uri;)Z
+    invoke-static {v0}, Lcom/facebook/common/util/UriUtil;->c(Landroid/net/Uri;)Z
 
     move-result v0
 

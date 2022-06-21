@@ -3,7 +3,7 @@
 .source "UserNotificationView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -59,20 +59,20 @@
     if-eqz p1, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/api/internal/h;
+    new-instance v0, Lcom/vk/api/internal/InternalHideNotificationRequest;
 
     const/4 v1, 0x0
 
     iget v2, p1, Lcom/vk/dto/common/data/UserNotification;->a:I
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/api/internal/h;-><init>(ZI)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/api/internal/InternalHideNotificationRequest;-><init>(ZI)V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
     .line 3
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -95,7 +95,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -108,7 +108,7 @@
     sget-object p1, Lcom/vk/common/view/UserNotificationView$1$b;->a:Lcom/vk/common/view/UserNotificationView$1$b;
 
     .line 7
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -122,7 +122,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/common/view/UserNotificationView$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

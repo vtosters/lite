@@ -3,7 +3,7 @@
 .source "GiftCategoryFragment.kt"
 
 # interfaces
-.implements Lcom/vk/common/g/g;
+.implements Lcom/vk/common/g/VoidF1;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/g<",
+        "Lcom/vk/common/g/VoidF1<",
         "Lcom/vk/dto/gift/CatalogedGift;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     const-string v1, "gift"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;->a(Lcom/vtosters/lite/fragments/gifts/GiftCategoryFragment;Lcom/vk/dto/gift/CatalogedGift;)V
 

@@ -246,7 +246,7 @@
 
     move-result-object v0
 
-    new-instance v7, Lcom/vk/imageloader/o/a;
+    new-instance v7, Lcom/vk/imageloader/o/AvatarCropTransform;
 
     iget-object v9, v3, Lcom/vk/contacts/ContactsSyncAdapterService$d;->d:Landroid/graphics/RectF;
 
@@ -254,13 +254,13 @@
 
     move-result v10
 
-    invoke-direct {v7, v9, v10}, Lcom/vk/imageloader/o/a;-><init>(Landroid/graphics/RectF;I)V
+    invoke-direct {v7, v9, v10}, Lcom/vk/imageloader/o/AvatarCropTransform;-><init>(Landroid/graphics/RectF;I)V
 
-    invoke-static {v0, v7}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;Lcom/facebook/imagepipeline/request/c;)Lc/a/m;
+    invoke-static {v0, v7}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;Lcom/facebook/imagepipeline/request/Postprocessor;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/z0;->a(Lc/a/m;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/vk/core/util/RxUtil;->a(Lio/reactivex/Observable;)Ljava/lang/Object;
 
     move-result-object v0
 

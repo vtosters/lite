@@ -3,12 +3,12 @@
 .source "CommunityPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/presenter/CommunityPresenter;->a(Landroid/location/Location;)Lc/a/m;
+    value = Lcom/vk/profile/presenter/CommunityPresenter;->a(Landroid/location/Location;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,22 +57,22 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/execute/g$a;)Lcom/vtosters/lite/api/i;
+.method public final a(Lcom/vtosters/lite/api/execute/GetFullProfile$a;)Lcom/vtosters/lite/api/ExtendedCommunityProfile;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/api/execute/g$a<",
-            "Lcom/vtosters/lite/api/i;",
+            "Lcom/vtosters/lite/api/execute/GetFullProfile$a<",
+            "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
             ">;)",
-            "Lcom/vtosters/lite/api/i;"
+            "Lcom/vtosters/lite/api/ExtendedCommunityProfile;"
         }
     .end annotation
 
     .line 1
-    iget-object p1, p1, Lcom/vtosters/lite/api/execute/g$a;->a:Lcom/vtosters/lite/api/ExtendedUserProfile;
+    iget-object p1, p1, Lcom/vtosters/lite/api/execute/GetFullProfile$a;->a:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     return-object p1
 .end method
@@ -81,9 +81,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/execute/g$a;
+    check-cast p1, Lcom/vtosters/lite/api/execute/GetFullProfile$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$j;->a(Lcom/vtosters/lite/api/execute/g$a;)Lcom/vtosters/lite/api/i;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$j;->a(Lcom/vtosters/lite/api/execute/GetFullProfile$a;)Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object p1
 

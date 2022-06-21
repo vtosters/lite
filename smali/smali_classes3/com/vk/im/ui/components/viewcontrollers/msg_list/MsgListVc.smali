@@ -29,15 +29,15 @@
 
 
 # instance fields
-.field private final A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/d;
+.field private final A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/StickyDateController;
 
 .field private final B:Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;
 
 .field private final C:I
 
-.field private final D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;
+.field private final D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;
 
-.field private final E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;
+.field private final E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;
 
 .field private final F:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
 
@@ -45,7 +45,7 @@
 
 .field private H:Lcom/vk/im/engine/models/dialogs/Dialog;
 
-.field private I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+.field private I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
 .field private J:I
 
@@ -55,21 +55,21 @@
 
 .field private M:Z
 
-.field private N:Lcom/vk/im/engine/j/j;
+.field private N:Lcom/vk/im/engine/j/WebUrlCacheController;
 
 .field private O:Z
 
-.field private P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
+.field private P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
 
-.field private Q:Lcom/vk/im/ui/q/h/b;
+.field private Q:Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
-.field private final R:Lcom/vk/navigation/a;
+.field private final R:Lcom/vk/navigation/ActivityLauncher;
 
 .field private final S:Z
 
 .field private final T:Z
 
-.field private final U:Lcom/vk/im/engine/models/f;
+.field private final U:Lcom/vk/im/engine/models/ImExperimentsProvider;
 
 .field private final a:Landroid/content/Context;
 
@@ -101,27 +101,27 @@
 
 .field private final o:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-.field private final p:Lcom/vk/im/ui/utils/recyclerview/a;
+.field private final p:Lcom/vk/im/ui/utils/recyclerview/FakePaddingDecoration;
 
 .field private final q:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;
 
-.field private final r:Lcom/vk/im/ui/components/viewcontrollers/msg_list/h;
+.field private final r:Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback;
 
 .field private final s:Landroidx/recyclerview/widget/ItemTouchHelper;
 
 .field private final t:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$d;
 
-.field private final u:Lcom/vk/im/ui/utils/recyclerview/c;
+.field private final u:Lcom/vk/im/ui/utils/recyclerview/HideKeyboardVerticalScrollListener;
 
-.field private final v:Lcom/vk/im/ui/components/viewcontrollers/msg_list/g;
+.field private final v:Lcom/vk/im/ui/components/viewcontrollers/msg_list/StickerAnimationPauseScrollListener;
 
 .field private final w:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$e;
 
-.field private x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+.field private x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
-.field private final y:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/a;
+.field private final y:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/LabelControllerImpl;
 
-.field private final z:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/b;
+.field private final z:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/ListControllerImpl;
 
 
 # direct methods
@@ -132,7 +132,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Ljava/lang/Object;
@@ -158,7 +158,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;Lcom/vk/im/ui/q/h/b;Lcom/vk/navigation/a;ZZZLcom/vk/im/engine/models/f;Lcom/vk/im/ui/ImUiModule;)V
+.method public constructor <init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;Lcom/vk/im/ui/q/h/VideoAutoPlayer;Lcom/vk/navigation/ActivityLauncher;ZZZLcom/vk/im/engine/models/ImExperimentsProvider;Lcom/vk/im/ui/ImUiModule;)V
     .locals 18
 
     move-object/from16 v0, p0
@@ -170,11 +170,11 @@
 
     move-object/from16 v2, p4
 
-    iput-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/b;
+    iput-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
     move-object/from16 v2, p5
 
-    iput-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->R:Lcom/vk/navigation/a;
+    iput-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->R:Lcom/vk/navigation/ActivityLauncher;
 
     move/from16 v2, p6
 
@@ -186,7 +186,7 @@
 
     move-object/from16 v2, p9
 
-    iput-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->U:Lcom/vk/im/engine/models/f;
+    iput-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->U:Lcom/vk/im/engine/models/ImExperimentsProvider;
 
     .line 2
     invoke-virtual/range {p2 .. p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -209,13 +209,13 @@
 
     const-string v4, "context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v5, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$timeChangeReceiver$1;
 
     invoke-direct {v5, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$timeChangeReceiver$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
-    invoke-direct {v2, v3, v5}, Lcom/vk/im/ui/utils/TimeChangeReceiver;-><init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v3, v5}, Lcom/vk/im/ui/utils/TimeChangeReceiver;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
 
     iput-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->c:Lcom/vk/im/ui/utils/TimeChangeReceiver;
 
@@ -352,23 +352,23 @@
     .line 15
     new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual/range {p10 .. p10}, Lcom/vk/im/ui/ImUiModule;->f()Lcom/vk/core/ui/w/a;
+    invoke-virtual/range {p10 .. p10}, Lcom/vk/im/ui/ImUiModule;->f()Lcom/vk/core/ui/w/VkPools;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/vk/core/ui/w/a;->c()Lcom/vk/core/ui/w/b;
+    invoke-virtual {v6}, Lcom/vk/core/ui/w/VkPools;->c()Lcom/vk/core/ui/w/VkViewPoolProvider;
 
     move-result-object v6
 
-    invoke-virtual/range {p10 .. p10}, Lcom/vk/im/ui/ImUiModule;->f()Lcom/vk/core/ui/w/a;
+    invoke-virtual/range {p10 .. p10}, Lcom/vk/im/ui/ImUiModule;->f()Lcom/vk/core/ui/w/VkPools;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lcom/vk/core/ui/w/a;->a()Lcom/vk/core/ui/w/b;
+    invoke-virtual {v7}, Lcom/vk/core/ui/w/VkPools;->a()Lcom/vk/core/ui/w/VkViewPoolProvider;
 
     move-result-object v7
 
-    invoke-direct {v2, v1, v6, v7}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;-><init>(Landroid/view/LayoutInflater;Lcom/vk/core/ui/w/b;Lcom/vk/core/ui/w/b;)V
+    invoke-direct {v2, v1, v6, v7}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;-><init>(Landroid/view/LayoutInflater;Lcom/vk/core/ui/w/VkViewPoolProvider;Lcom/vk/core/ui/w/VkViewPoolProvider;)V
 
     iput-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
@@ -384,7 +384,7 @@
     iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->o:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     .line 17
-    new-instance v1, Lcom/vk/im/ui/utils/recyclerview/a;
+    new-instance v1, Lcom/vk/im/ui/utils/recyclerview/FakePaddingDecoration;
 
     const/16 v2, 0xc
 
@@ -392,9 +392,9 @@
 
     move-result v2
 
-    invoke-direct {v1, v3, v3, v3, v2}, Lcom/vk/im/ui/utils/recyclerview/a;-><init>(IIII)V
+    invoke-direct {v1, v3, v3, v3, v2}, Lcom/vk/im/ui/utils/recyclerview/FakePaddingDecoration;-><init>(IIII)V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->p:Lcom/vk/im/ui/utils/recyclerview/a;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->p:Lcom/vk/im/ui/utils/recyclerview/FakePaddingDecoration;
 
     .line 18
     new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;
@@ -403,19 +403,19 @@
 
     iget-object v7, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
-    invoke-static {v7, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, v2, v7}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;Landroid/content/Context;)V
 
     iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->q:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ItemDecorationImpl;
 
     .line 19
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/h;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback;
 
     .line 20
     iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
     new-instance v7, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$swipeToReplyCallback$1;
@@ -423,14 +423,14 @@
     invoke-direct {v7, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$swipeToReplyCallback$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
     .line 22
-    invoke-direct {v1, v2, v7}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/h;-><init>(Landroid/content/Context;Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, v2, v7}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->r:Lcom/vk/im/ui/components/viewcontrollers/msg_list/h;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->r:Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback;
 
     .line 23
     new-instance v1, Landroidx/recyclerview/widget/ItemTouchHelper;
 
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->r:Lcom/vk/im/ui/components/viewcontrollers/msg_list/h;
+    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->r:Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback;
 
     invoke-direct {v1, v2}, Landroidx/recyclerview/widget/ItemTouchHelper;-><init>(Landroidx/recyclerview/widget/ItemTouchHelper$Callback;)V
 
@@ -444,7 +444,7 @@
     iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->t:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$d;
 
     .line 25
-    new-instance v1, Lcom/vk/im/ui/utils/recyclerview/c;
+    new-instance v1, Lcom/vk/im/ui/utils/recyclerview/HideKeyboardVerticalScrollListener;
 
     iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
@@ -452,16 +452,16 @@
 
     invoke-direct {v7, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$hideKeyboardVerticalScrollListener$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
-    invoke-direct {v1, v2, v6, v3, v7}, Lcom/vk/im/ui/utils/recyclerview/c;-><init>(Landroid/content/Context;ZZLkotlin/jvm/b/b;)V
+    invoke-direct {v1, v2, v6, v3, v7}, Lcom/vk/im/ui/utils/recyclerview/HideKeyboardVerticalScrollListener;-><init>(Landroid/content/Context;ZZLkotlin/jvm/b/Functions2;)V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->u:Lcom/vk/im/ui/utils/recyclerview/c;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->u:Lcom/vk/im/ui/utils/recyclerview/HideKeyboardVerticalScrollListener;
 
     .line 26
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/g;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/StickerAnimationPauseScrollListener;
 
-    invoke-direct {v1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/g;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
+    invoke-direct {v1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/StickerAnimationPauseScrollListener;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->v:Lcom/vk/im/ui/components/viewcontrollers/msg_list/g;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->v:Lcom/vk/im/ui/components/viewcontrollers/msg_list/StickerAnimationPauseScrollListener;
 
     .line 27
     new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$e;
@@ -471,45 +471,45 @@
     iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->w:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$e;
 
     .line 28
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/a;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/LabelControllerImpl;
 
     iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->d:Landroid/view/View;
 
-    invoke-direct {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/a;-><init>(Landroid/view/View;)V
+    invoke-direct {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/LabelControllerImpl;-><init>(Landroid/view/View;)V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->y:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/a;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->y:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/LabelControllerImpl;
 
     .line 29
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/b;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/ListControllerImpl;
 
     iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
     const-string v7, "recyclerView"
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v8, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->o:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     iget-object v9, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-direct {v1, v2, v8, v9}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/b;-><init>(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/LinearLayoutManager;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;)V
+    invoke-direct {v1, v2, v8, v9}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/ListControllerImpl;-><init>(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/LinearLayoutManager;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;)V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->z:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/b;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->z:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/ListControllerImpl;
 
     .line 30
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/d;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/StickyDateController;
 
     iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v8, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->y:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/a;
+    iget-object v8, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->y:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/LabelControllerImpl;
 
-    iget-object v9, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->z:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/b;
+    iget-object v9, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->z:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/ListControllerImpl;
 
-    invoke-direct {v1, v2, v8, v9}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/d;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/im/ui/components/viewcontrollers/msg_list/k/b;Lcom/vk/im/ui/components/viewcontrollers/msg_list/k/c;)V
+    invoke-direct {v1, v2, v8, v9}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/StickyDateController;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/im/ui/components/viewcontrollers/msg_list/k/StickyDateLabelController;Lcom/vk/im/ui/components/viewcontrollers/msg_list/k/StickyDateListController;)V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/d;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/StickyDateController;
 
     .line 31
     new-instance v1, Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;
@@ -517,7 +517,7 @@
     .line 32
     iget-object v11, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {v11, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v11, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v12, 0x0
 
@@ -535,7 +535,7 @@
     move-object v10, v1
 
     .line 34
-    invoke-direct/range {v10 .. v17}, Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView;ZILcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper$Snap;Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper$Speed;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v10 .. v17}, Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView;ZILcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper$Snap;Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper$Speed;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->B:Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;
 
@@ -549,72 +549,72 @@
     iput v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->C:I
 
     .line 36
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;
 
     iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->l:Lcom/vk/im/ui/views/ScrollToBottomView;
 
     const-string v8, "scrollToBottomView"
 
-    invoke-static {v2, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v9, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/a;
+    new-instance v9, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomAnimator;
 
     iget-object v10, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->l:Lcom/vk/im/ui/views/ScrollToBottomView;
 
-    invoke-static {v10, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v9, v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/a;-><init>(Landroid/view/View;)V
+    invoke-direct {v9, v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomAnimator;-><init>(Landroid/view/View;)V
 
     new-instance v8, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$f;
 
     invoke-direct {v8, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$f;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
-    invoke-direct {v1, v2, v9, v8}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;-><init>(Lcom/vk/im/ui/views/ScrollToBottomView;Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/c;Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b$b;)V
+    invoke-direct {v1, v2, v9, v8}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;-><init>(Lcom/vk/im/ui/views/ScrollToBottomView;Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToItemAnimator;Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController$b;)V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;
 
     .line 37
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;
 
     iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->m:Lcom/vk/im/ui/views/ScrollToBottomView;
 
     const-string v8, "scrollToMentionView"
 
-    invoke-static {v2, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v9, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/d;
+    new-instance v9, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionAnimator;
 
     iget-object v10, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->m:Lcom/vk/im/ui/views/ScrollToBottomView;
 
-    invoke-static {v10, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v9, v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/d;-><init>(Landroid/view/View;)V
+    invoke-direct {v9, v10}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionAnimator;-><init>(Landroid/view/View;)V
 
     new-instance v8, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$g;
 
     invoke-direct {v8, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$g;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
-    invoke-direct {v1, v2, v9, v8}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;-><init>(Lcom/vk/im/ui/views/ScrollToBottomView;Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/c;Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e$b;)V
+    invoke-direct {v1, v2, v9, v8}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;-><init>(Lcom/vk/im/ui/views/ScrollToBottomView;Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToItemAnimator;Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController$b;)V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;
 
     .line 38
     new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
 
     iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;-><init>(Landroid/content/Context;)V
 
     iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->F:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
 
     .line 39
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    invoke-direct {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;-><init>()V
+    invoke-direct {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;-><init>()V
 
-    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iput-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     .line 40
     iput-boolean v6, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->L:Z
@@ -627,7 +627,7 @@
     .line 42
     iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {v1, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->o:Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -641,7 +641,7 @@
     .line 44
     iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->p:Lcom/vk/im/ui/utils/recyclerview/a;
+    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->p:Lcom/vk/im/ui/utils/recyclerview/FakePaddingDecoration;
 
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -669,7 +669,7 @@
     .line 48
     iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {v1, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v5}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
@@ -683,43 +683,43 @@
     .line 50
     iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {v1, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v5}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
     .line 51
-    sget-object v1, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
+    sget-object v1, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
 
     sget-object v2, Lcom/vk/metrics/performance/scroll/ScrollScreenType;->DIALOG:Lcom/vk/metrics/performance/scroll/ScrollScreenType;
 
     iget-object v4, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {v4, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2, v4}, Lcom/vk/metrics/reporters/a;->a(Lcom/vk/metrics/performance/scroll/ScrollScreenType;Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v1, v2, v4}, Lcom/vk/metrics/reporters/PerformanceReporter;->a(Lcom/vk/metrics/performance/scroll/ScrollScreenType;Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 52
     iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/a;
+    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/AdapterCallbackImpl;
 
-    invoke-direct {v2, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/a;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
+    invoke-direct {v2, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/AdapterCallbackImpl;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;)V
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;)V
 
     .line 53
     iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->U:Lcom/vk/im/engine/models/f;
+    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->U:Lcom/vk/im/engine/models/ImExperimentsProvider;
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/engine/models/f;)V
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/engine/models/ImExperimentsProvider;)V
 
     .line 54
     iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/b;
+    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/q/h/b;)V
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/q/h/VideoAutoPlayer;)V
 
     .line 55
     iget-boolean v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->S:Z
@@ -727,13 +727,13 @@
     if-eqz v1, :cond_0
 
     .line 56
-    iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;
+    iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;
 
     iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 57
     :cond_0
@@ -750,21 +750,21 @@
 
     .line 59
     :cond_1
-    iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/b;
+    iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
     if-eqz v1, :cond_2
 
-    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->R:Lcom/vk/navigation/a;
+    iget-object v2, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->R:Lcom/vk/navigation/ActivityLauncher;
 
-    invoke-interface {v2}, Lcom/vk/navigation/a;->a()Landroid/content/Context;
+    invoke-interface {v2}, Lcom/vk/navigation/ActivityLauncher;->a()Landroid/content/Context;
 
     move-result-object v2
 
     iget-object v4, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {v4, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, v2, v4}, Lcom/vk/im/ui/q/h/b;->a(Landroid/content/Context;Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-interface {v1, v2, v4}, Lcom/vk/im/ui/q/h/VideoAutoPlayer;->a(Landroid/content/Context;Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 60
     :cond_2
@@ -804,7 +804,7 @@
     move-object/from16 p6, v5
 
     .line 62
-    invoke-static/range {p1 .. p6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;Ljava/lang/Object;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Landroidx/recyclerview/widget/DiffUtil$DiffResult;ILjava/lang/Object;)V
+    invoke-static/range {p1 .. p6}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;Ljava/lang/Object;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Landroidx/recyclerview/widget/DiffUtil$DiffResult;ILjava/lang/Object;)V
 
     .line 63
     iget v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->J:I
@@ -820,12 +820,12 @@
 
     .line 65
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v5
 .end method
 
-.method public synthetic constructor <init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;Lcom/vk/im/ui/q/h/b;Lcom/vk/navigation/a;ZZZLcom/vk/im/engine/models/f;Lcom/vk/im/ui/ImUiModule;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;Lcom/vk/im/ui/q/h/VideoAutoPlayer;Lcom/vk/navigation/ActivityLauncher;ZZZLcom/vk/im/engine/models/ImExperimentsProvider;Lcom/vk/im/ui/ImUiModule;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 14
 
     move/from16 v0, p11
@@ -861,7 +861,7 @@
     if-eqz v0, :cond_2
 
     .line 66
-    invoke-static {}, Lcom/vk/im/ui/a;->a()Lcom/vk/im/ui/ImUiModule;
+    invoke-static {}, Lcom/vk/im/ui/ImUiModule1;->a()Lcom/vk/im/ui/ImUiModule;
 
     move-result-object v0
 
@@ -889,7 +889,7 @@
 
     move-object/from16 v12, p9
 
-    invoke-direct/range {v3 .. v13}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;Lcom/vk/im/ui/q/h/b;Lcom/vk/navigation/a;ZZZLcom/vk/im/engine/models/f;Lcom/vk/im/ui/ImUiModule;)V
+    invoke-direct/range {v3 .. v13}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;Lcom/vk/im/ui/q/h/VideoAutoPlayer;Lcom/vk/navigation/ActivityLauncher;ZZZLcom/vk/im/engine/models/ImExperimentsProvider;Lcom/vk/im/ui/ImUiModule;)V
 
     return-void
 .end method
@@ -942,18 +942,18 @@
     .locals 11
 
     .line 1
-    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->f:Landroid/view/View;
 
     const-string v1, "progressView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v1, 0x8
 
@@ -981,7 +981,7 @@
 
     const-string v1, "emptySubtitle"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->H:Lcom/vk/im/engine/models/dialogs/Dialog;
 
@@ -1002,23 +1002,23 @@
     .line 5
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     const/4 v2, 0x2
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v3, v2, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Landroidx/recyclerview/widget/DiffUtil$DiffResult;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v3, v2, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Landroidx/recyclerview/widget/DiffUtil$DiffResult;ILjava/lang/Object;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;->b()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;->b()V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;->b()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;->b()V
 
     return-void
 .end method
@@ -1027,11 +1027,11 @@
     .locals 10
 
     .line 1
-    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    invoke-direct {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     .line 2
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->f:Landroid/view/View;
@@ -1055,7 +1055,7 @@
 
     const-string v1, "emptyView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v1, 0x8
 
@@ -1064,23 +1064,23 @@
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     const/4 v2, 0x0
 
     const/4 v3, 0x2
 
-    invoke-static {v0, v1, v2, v3, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Landroidx/recyclerview/widget/DiffUtil$DiffResult;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Landroidx/recyclerview/widget/DiffUtil$DiffResult;ILjava/lang/Object;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;->b()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;->b()V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;->b()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;->b()V
 
     return-void
 .end method
@@ -1094,11 +1094,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;)V
     .locals 0
 
     .line 4
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     return-void
 .end method
@@ -1121,7 +1121,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;Ljava/lang/Object;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Landroidx/recyclerview/widget/DiffUtil$DiffResult;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;Ljava/lang/Object;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Landroidx/recyclerview/widget/DiffUtil$DiffResult;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x4
@@ -1132,7 +1132,7 @@
 
     .line 13
     :cond_0
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a(Ljava/lang/Object;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a(Ljava/lang/Object;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
 
     return-void
 .end method
@@ -1189,9 +1189,9 @@
     if-ltz p2, :cond_6
 
     .line 76
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->c()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->c()I
 
     move-result v0
 
@@ -1199,9 +1199,9 @@
 
     if-ltz p3, :cond_6
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->c()I
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->c()I
 
     move-result v0
 
@@ -1211,13 +1211,13 @@
 
     .line 77
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     .line 78
     sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$invalidateVisibleRange$1$lastVisibleMsgEntry$1;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$invalidateVisibleRange$1$lastVisibleMsgEntry$1;
 
     .line 79
-    invoke-virtual {v0, p2, p3, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->a(IILkotlin/jvm/b/b;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-virtual {v0, p2, p3, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->a(IILkotlin/jvm/b/Functions2;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v0
 
@@ -1226,7 +1226,7 @@
     if-eqz v0, :cond_1
 
     .line 80
-    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v0, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     goto :goto_0
 
@@ -1237,11 +1237,11 @@
     if-eqz v0, :cond_2
 
     .line 81
-    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
+    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
 
     if-eqz v2, :cond_2
 
-    invoke-interface {v2, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;->a(Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-interface {v2, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;->a(Lcom/vk/im/engine/models/messages/Msg;)V
 
     .line 82
     :cond_2
@@ -1249,7 +1249,7 @@
 
     const-string v2, "recyclerView"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
@@ -1257,16 +1257,16 @@
 
     invoke-direct {v3, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$invalidateVisibleRange$2$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
-    invoke-static {v0, v2, p2, p3, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/i;->a(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;IILkotlin/jvm/b/c;)V
+    invoke-static {v0, v2, p2, p3, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/VisibleMsgHelper;->a(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;IILkotlin/jvm/b/Functions1;)V
 
     .line 83
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
 
     if-eqz v0, :cond_3
 
     sget-object v2, Lcom/vk/im/engine/models/Direction;->AFTER:Lcom/vk/im/engine/models/Direction;
 
-    invoke-interface {v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;->a(Lcom/vk/im/engine/models/Direction;)I
+    invoke-interface {v0, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;->a(Lcom/vk/im/engine/models/Direction;)I
 
     move-result v0
 
@@ -1294,45 +1294,45 @@
     if-lt p3, p4, :cond_4
 
     .line 85
-    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    invoke-virtual {p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->c()I
+    invoke-virtual {p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->c()I
 
     move-result p4
 
     add-int/lit8 p4, p4, -0x1
 
-    invoke-virtual {p3, p4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->c(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-virtual {p3, p4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->c(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object p3
 
     .line 86
-    invoke-virtual {p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->e()Z
+    invoke-virtual {p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->e()Z
 
     move-result p4
 
     if-eqz p4, :cond_4
 
     .line 87
-    iget-object p4, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
+    iget-object p4, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
 
     if-eqz p4, :cond_4
 
-    iget-object p3, p3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->h:Lcom/vk/im/engine/models/Direction;
+    iget-object p3, p3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->h:Lcom/vk/im/engine/models/Direction;
 
-    invoke-static {p3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p4, p1, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/Direction;)V
+    invoke-interface {p4, p1, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/Direction;)V
 
     .line 88
     :cond_4
-    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
+    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
 
     if-eqz p3, :cond_5
 
     sget-object p4, Lcom/vk/im/engine/models/Direction;->BEFORE:Lcom/vk/im/engine/models/Direction;
 
-    invoke-interface {p3, p4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;->a(Lcom/vk/im/engine/models/Direction;)I
+    invoke-interface {p3, p4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;->a(Lcom/vk/im/engine/models/Direction;)I
 
     move-result p3
 
@@ -1353,31 +1353,31 @@
     if-gtz p2, :cond_6
 
     .line 90
-    iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     const/4 p3, 0x0
 
-    invoke-virtual {p2, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->c(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-virtual {p2, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->c(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object p2
 
     .line 91
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->e()Z
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->e()Z
 
     move-result p3
 
     if-eqz p3, :cond_6
 
     .line 92
-    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
+    iget-object p3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
 
     if-eqz p3, :cond_6
 
-    iget-object p2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->h:Lcom/vk/im/engine/models/Direction;
+    iget-object p2, p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->h:Lcom/vk/im/engine/models/Direction;
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p3, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/Direction;)V
+    invoke-interface {p3, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/Direction;)V
 
     :cond_6
     :goto_2
@@ -1414,7 +1414,7 @@
     move-result p1
 
     .line 63
-    invoke-virtual {v1, p1, p2, p3, v0}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a(IZZLkotlin/jvm/b/b;)V
+    invoke-virtual {v1, p1, p2, p3, v0}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a(IZZLkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1469,18 +1469,18 @@
     return-void
 .end method
 
-.method private final b(Ljava/lang/Object;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
+.method private final b(Ljava/lang/Object;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
     .locals 3
 
     .line 4
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     .line 5
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->f:Landroid/view/View;
 
     const-string v1, "progressView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v1, 0x8
 
@@ -1491,7 +1491,7 @@
 
     const-string v2, "emptyView"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
@@ -1500,7 +1500,7 @@
 
     const-string v1, "recyclerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -1509,7 +1509,7 @@
     .line 8
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual {v0, p2, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
+    invoke-virtual {v0, p2, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
 
     if-eqz p3, :cond_0
 
@@ -1534,11 +1534,11 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+.method public static final synthetic c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     return-object p0
 .end method
@@ -1552,11 +1552,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;
+.method public static final synthetic e(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;
+    iget-object p0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;
 
     return-object p0
 .end method
@@ -1578,7 +1578,7 @@
     .end param
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->p:Lcom/vk/im/ui/utils/recyclerview/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->p:Lcom/vk/im/ui/utils/recyclerview/FakePaddingDecoration;
 
     const/4 v1, 0x4
 
@@ -1588,7 +1588,7 @@
 
     add-int/2addr v1, p1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/utils/recyclerview/a;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/utils/recyclerview/FakePaddingDecoration;->a(I)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
@@ -1628,7 +1628,7 @@
 
     const-string v1, "stickyDateView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/core/extensions/ViewGroupExtKt;->f(Landroid/view/View;I)V
 
@@ -1660,7 +1660,7 @@
 
     iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v4, Lcom/vk/im/ui/c;->im_service_message_text_alternate:I
 
@@ -1673,11 +1673,11 @@
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->h:Landroid/widget/TextView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v3, Lcom/vk/im/ui/f;->bg_im_system_msg:I
 
@@ -1692,7 +1692,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v3, Lcom/vk/im/ui/c;->im_service_message_text_alternate:I
 
@@ -1705,11 +1705,11 @@
     .line 7
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->i:Landroid/widget/TextView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v1, Lcom/vk/im/ui/f;->bg_im_system_msg:I
 
@@ -1727,7 +1727,7 @@
 
     iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v4, Lcom/vk/im/ui/c;->text_primary:I
 
@@ -1740,7 +1740,7 @@
     .line 9
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->h:Landroid/widget/TextView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -1751,7 +1751,7 @@
 
     iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v2, Lcom/vk/im/ui/c;->text_placeholder:I
 
@@ -1764,7 +1764,7 @@
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->i:Landroid/widget/TextView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -1782,13 +1782,13 @@
 
     const-string v0, "stickyDateView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v1, Lcom/vk/im/ui/f;->bg_im_system_msg:I
 
@@ -1842,7 +1842,7 @@
     .locals 3
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->r:Lcom/vk/im/ui/components/viewcontrollers/msg_list/h;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->r:Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback;
 
     const/4 v1, 0x0
 
@@ -1853,7 +1853,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v2, Lcom/vk/im/ui/f;->vkim_ic_swipe_to_reply_with_bg:I
 
@@ -1866,7 +1866,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -1874,7 +1874,7 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a:Landroid/content/Context;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v2, Lcom/vk/im/ui/f;->vkim_ic_swipe_to_reply_20:I
 
@@ -1886,13 +1886,13 @@
 
     .line 7
     :goto_0
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/h;->a(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/SwipeToReplyItemTouchCallback;->a(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 
     .line 8
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -1903,7 +1903,7 @@
     .line 1
     sget-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->W:Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/vk/core/concurrent/a;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcom/vk/core/concurrent/ConcurrentExt;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1925,9 +1925,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/StickyDateController;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/d;->a()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/StickyDateController;->a()V
 
     return-void
 .end method
@@ -1936,7 +1936,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/StickyDateController;
 
     iget-boolean v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->G:Z
 
@@ -1954,7 +1954,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/d;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/StickyDateController;->a(Z)V
 
     return-void
 .end method
@@ -1963,7 +1963,7 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
 
     if-nez v0, :cond_0
 
@@ -1983,7 +1983,7 @@
 
     invoke-direct {v3, v4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$postInvalidateMessagesSyncState$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;)V
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/concurrent/a;->a(Ljava/lang/Object;JLkotlin/jvm/b/a;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/concurrent/ConcurrentExt;->a(Ljava/lang/Object;JLkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -1998,7 +1998,7 @@
 
     const-string v1, "recyclerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -2023,12 +2023,12 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;
+    check-cast v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;
 
     if-eqz v2, :cond_0
 
     .line 36
-    invoke-virtual {v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/e;->i(I)Landroid/view/View;
+    invoke-virtual {v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBase;->i(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -2074,14 +2074,14 @@
     invoke-virtual {v0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(ILcom/vk/im/engine/models/dialogs/Dialog;)V
 
     .line 22
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;->b()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;->b()V
 
     .line 23
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;->b()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;->b()V
 
     return-void
 .end method
@@ -2125,22 +2125,22 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/j/g;)V
+.method public final a(Lcom/vk/im/engine/j/StickersAnimationLoader;)V
     .locals 1
 
     .line 7
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/engine/j/g;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/engine/j/StickersAnimationLoader;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/j/j;)V
+.method public final a(Lcom/vk/im/engine/j/WebUrlCacheController;)V
     .locals 1
 
     .line 8
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->N:Lcom/vk/im/engine/j/j;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->N:Lcom/vk/im/engine/j/WebUrlCacheController;
 
     if-eqz p1, :cond_0
 
@@ -2148,7 +2148,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$a;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/j/j;->a(Lcom/vk/im/engine/j/j$a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/j/WebUrlCacheController;->a(Lcom/vk/im/engine/j/WebUrlCacheController$a;)V
 
     :cond_0
     return-void
@@ -2187,11 +2187,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/l;)V
+.method public final a(Lcom/vk/im/engine/models/ProfilesIds1;)V
     .locals 1
 
     .line 26
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/l;->f()Z
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/ProfilesIds1;->f()Z
 
     move-result v0
 
@@ -2200,7 +2200,7 @@
     .line 27
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/engine/models/l;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/engine/models/ProfilesIds1;)V
 
     :cond_0
     return-void
@@ -2224,7 +2224,7 @@
     const/4 p1, 0x1
 
     .line 69
-    invoke-virtual {v0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a(ILkotlin/jvm/b/a;)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a(ILkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -2240,15 +2240,15 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/messages/Msg;ZZLkotlin/jvm/b/a;)V
+.method public final a(Lcom/vk/im/engine/models/messages/Msg;ZZLkotlin/jvm/b/Functions;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/im/engine/models/messages/Msg;",
             "ZZ",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -2256,7 +2256,7 @@
     .line 64
     new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$showMsgDeleteSubmitDialog$onSubmitListener$1;
 
-    invoke-direct {v0, p0, p1, p4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$showMsgDeleteSubmitDialog$onSubmitListener$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;Lcom/vk/im/engine/models/messages/Msg;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p0, p1, p4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$showMsgDeleteSubmitDialog$onSubmitListener$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;Lcom/vk/im/engine/models/messages/Msg;Lkotlin/jvm/b/Functions;)V
 
     .line 65
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->F:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
@@ -2267,7 +2267,7 @@
 
     const/4 p4, 0x1
 
-    invoke-virtual {p1, p4, p2, p3, v0}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a(IZZLkotlin/jvm/b/b;)V
+    invoke-virtual {p1, p4, p2, p3, v0}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a(IZZLkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -2287,16 +2287,16 @@
     .locals 3
 
     .line 42
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->a(Lcom/vk/im/engine/models/messages/MsgIdType;I)I
+    invoke-virtual {v0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->a(Lcom/vk/im/engine/models/messages/MsgIdType;I)I
 
     move-result p1
 
     if-ltz p1, :cond_0
 
     .line 43
-    new-instance p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    new-instance p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
@@ -2306,9 +2306,9 @@
 
     iget v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->C:I
 
-    invoke-direct {p2, v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;-><init>(JI)V
+    invoke-direct {p2, v0, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;-><init>(JI)V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     .line 44
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->B:Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;
@@ -2325,13 +2325,13 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/utils/collection/h;)V
+.method public final a(Lcom/vk/im/engine/utils/collection/IntSet;)V
     .locals 1
 
     .line 28
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/engine/utils/collection/h;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/engine/utils/collection/IntSet;)V
 
     return-void
 .end method
@@ -2340,21 +2340,21 @@
     .locals 0
 
     .line 70
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->a(Lcom/vk/im/ui/components/common/NotifyId;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->a(Lcom/vk/im/ui/components/common/NotifyId;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;)V
     .locals 0
 
     .line 12
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;Z)V
+.method public final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;Z)V
     .locals 3
 
     .line 37
@@ -2362,7 +2362,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;->a()J
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;->a()J
 
     move-result-wide v1
 
@@ -2381,7 +2381,7 @@
     if-ltz v0, :cond_1
 
     .line 38
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     .line 39
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->B:Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;
@@ -2389,7 +2389,7 @@
     const/4 v2, 0x1
 
     .line 40
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;->b()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;->b()I
 
     move-result p1
 
@@ -2411,24 +2411,24 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/views/span/b;)V
+.method public final a(Lcom/vk/im/ui/views/span/OnSpanClickListener;)V
     .locals 1
 
     .line 10
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/views/span/b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/views/span/OnSpanClickListener;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/views/span/c;)V
+.method public final a(Lcom/vk/im/ui/views/span/OnSpanLongPressListener;)V
     .locals 1
 
     .line 11
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/views/span/c;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->a(Lcom/vk/im/ui/views/span/OnSpanLongPressListener;)V
 
     return-void
 .end method
@@ -2444,7 +2444,7 @@
     return-void
 .end method
 
-.method public final a(Ljava/lang/Object;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
+.method public final a(Ljava/lang/Object;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
     .locals 4
 
     .line 14
@@ -2463,9 +2463,9 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$setHistory$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
-    new-instance p3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/d;
+    new-instance p3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc1;
 
-    invoke-direct {p3, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/d;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {p3, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     sget-object p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->X:Ljava/lang/Object;
 
@@ -2485,7 +2485,7 @@
 
     .line 16
     :cond_0
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->d()Z
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->d()Z
 
     move-result v0
 
@@ -2498,7 +2498,7 @@
 
     .line 18
     :cond_1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->b(Ljava/lang/Object;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->b(Ljava/lang/Object;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
 
     :goto_0
     return-void
@@ -2508,7 +2508,7 @@
     .locals 0
 
     .line 71
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -2545,9 +2545,9 @@
     invoke-direct {v0, p0, p1, p3, p4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$showMsgsActionsDialog$onSelectListener$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;Ljava/util/Collection;ZZ)V
 
     .line 56
-    sget-object p1, Lcom/vk/im/ui/reporters/e;->b:Lcom/vk/im/ui/reporters/e;
+    sget-object p1, Lcom/vk/im/ui/reporters/MsgActionReporter;->b:Lcom/vk/im/ui/reporters/MsgActionReporter;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/reporters/e;->b()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/reporters/MsgActionReporter;->b()V
 
     .line 57
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->F:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
@@ -2560,18 +2560,18 @@
     sget-object p3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$showMsgsActionsDialog$1;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$showMsgsActionsDialog$1;
 
     .line 59
-    invoke-virtual {p1, p2, v0, p3}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a(Ljava/util/List;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2, v0, p3}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -2581,9 +2581,9 @@
 
     const-string v1, "recyclerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, p1}, Lcom/vk/extensions/i;->c(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, p1}, Lcom/vk/extensions/RecyclerViewExt;->c(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -2592,20 +2592,20 @@
     .locals 5
 
     .line 47
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->H:Lcom/vk/im/engine/models/dialogs/Dialog;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->a(Lcom/vk/im/engine/models/dialogs/Dialog;)I
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->a(Lcom/vk/im/engine/models/dialogs/Dialog;)I
 
     move-result v0
 
     if-ltz v0, :cond_0
 
     .line 48
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
@@ -2615,9 +2615,9 @@
 
     iget v4, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->C:I
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;-><init>(JI)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;-><init>(JI)V
 
-    iput-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    iput-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     .line 49
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->B:Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;
@@ -2635,7 +2635,7 @@
 
     .line 52
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -2674,20 +2674,20 @@
     :goto_0
     iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual {v3, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->getItem(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-virtual {v3, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->getItem(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
     if-eqz v3, :cond_3
 
     .line 16
-    invoke-virtual {v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->g()Z
+    invoke-virtual {v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->g()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    iget-object v4, v3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v4, v3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     const/4 v5, 0x0
 
@@ -2700,7 +2700,7 @@
     if-le v4, p1, :cond_3
 
     .line 17
-    iget-object p1, v3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object p1, v3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     if-eqz p1, :cond_1
 
@@ -2711,13 +2711,13 @@
     return p1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v5
 
     .line 18
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v5
 
@@ -2764,7 +2764,7 @@
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$showPinnedMsgAttachSubmitDialog$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;Lcom/vk/im/engine/models/messages/Msg;)V
 
     .line 27
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -2773,16 +2773,16 @@
     .locals 9
 
     .line 22
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->a(Lcom/vk/im/engine/models/messages/MsgIdType;I)I
+    invoke-virtual {v0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->a(Lcom/vk/im/engine/models/messages/MsgIdType;I)I
 
     move-result v2
 
     if-ltz v2, :cond_0
 
     .line 23
-    new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    new-instance p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     iget-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
@@ -2792,9 +2792,9 @@
 
     iget p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->C:I
 
-    invoke-direct {p1, v0, v1, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;-><init>(JI)V
+    invoke-direct {p1, v0, v1, p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;-><init>(JI)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     .line 24
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->B:Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;
@@ -2832,16 +2832,16 @@
     .locals 4
 
     .line 19
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 20
-    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
@@ -2851,9 +2851,9 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;-><init>(JI)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;-><init>(JI)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     .line 21
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->B:Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;
@@ -2910,7 +2910,7 @@
     const/4 v2, 0x2
 
     .line 11
-    invoke-static {v0, v1, p1, v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static {v0, v1, p1, v2, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -2928,7 +2928,7 @@
     if-ltz v0, :cond_0
 
     .line 4
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
@@ -2938,9 +2938,9 @@
 
     iget v4, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->C:I
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;-><init>(JI)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;-><init>(JI)V
 
-    iput-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    iput-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     .line 5
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->B:Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;
@@ -3026,10 +3026,10 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$destroy$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
     if-eqz v0, :cond_0
 
@@ -3037,17 +3037,17 @@
 
     const-string v2, "recyclerView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/im/ui/q/h/b;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-interface {v0, v1}, Lcom/vk/im/ui/q/h/VideoAutoPlayer;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 6
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/im/ui/q/h/b;->onDestroy()V
+    invoke-interface {v0}, Lcom/vk/im/ui/q/h/VideoAutoPlayer;->onDestroy()V
 
     .line 7
     :cond_1
@@ -3058,11 +3058,11 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->N:Lcom/vk/im/engine/j/j;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->N:Lcom/vk/im/engine/j/WebUrlCacheController;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/j/j;->a(Lcom/vk/im/engine/j/j$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/j/WebUrlCacheController;->a(Lcom/vk/im/engine/j/WebUrlCacheController$a;)V
 
     .line 9
     :cond_2
@@ -3140,13 +3140,13 @@
     :goto_0
     iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual {v3, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->getItem(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-virtual {v3, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->getItem(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    iget-object v3, v3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->c:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v3, v3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->c:Lcom/vk/im/engine/models/messages/Msg;
 
     goto :goto_1
 
@@ -3215,18 +3215,18 @@
 
     const-string v1, "emptyChatIcon"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     return-void
 .end method
 
-.method public final g()Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
+.method public final g()Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->P:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
 
     return-object v0
 .end method
@@ -3261,7 +3261,7 @@
 
     const-string v1, "emptyTitle"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -3276,7 +3276,7 @@
 
     const-string v1, "emptySubtitle"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -3292,7 +3292,7 @@
     return v0
 .end method
 
-.method public final j()Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+.method public final j()Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
     .locals 6
 
     .line 2
@@ -3321,7 +3321,7 @@
 
     .line 4
     :cond_0
-    iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     if-eqz v3, :cond_1
 
@@ -3334,14 +3334,14 @@
     :goto_0
     iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual {v3, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->getItem(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-virtual {v3, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->getItem(I)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
     .line 6
-    invoke-virtual {v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->g()Z
+    invoke-virtual {v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->g()Z
 
     move-result v3
 
@@ -3371,9 +3371,9 @@
     move-result v0
 
     .line 10
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
-    invoke-direct {v1, v3, v4, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;-><init>(JI)V
+    invoke-direct {v1, v3, v4, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;-><init>(JI)V
 
     return-object v1
 
@@ -3430,7 +3430,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$invalidateDate$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -3484,7 +3484,7 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$showPinnedMsgAttachProgressDialog$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
     .line 10
-    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->a(Lkotlin/jvm/b/a;Z)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->a(Lkotlin/jvm/b/Functions;Z)V
 
     return-void
 .end method
@@ -3516,13 +3516,13 @@
     :goto_0
     iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual {v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->l()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;
+    invoke-virtual {v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;->l()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/a;->e()Z
+    invoke-virtual {v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntry;->e()Z
 
     move-result v3
 
@@ -3540,14 +3540,14 @@
 
     .line 3
     :cond_2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     if-eqz v0, :cond_3
 
     .line 4
     iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;->a()J
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;->a()J
 
     move-result-wide v4
 
@@ -3602,14 +3602,14 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;->b()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;->b()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;->b()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;->b()V
 
     return-void
 .end method
@@ -3630,7 +3630,7 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$showPinnedMsgDetachProgressDialog$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
     .line 5
-    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->b(Lkotlin/jvm/b/a;Z)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->b(Lkotlin/jvm/b/Functions;Z)V
 
     return-void
 .end method
@@ -3651,7 +3651,7 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$showMsgDeleteProgressDialog$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -3672,7 +3672,7 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$showMsgMarkAsSpamProgressDialog$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;)V
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->b(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->b(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -3681,16 +3681,16 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->I:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->e()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
@@ -3700,9 +3700,9 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;-><init>(JI)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;-><init>(JI)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->B:Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;
@@ -3726,7 +3726,7 @@
     if-ltz v2, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 
@@ -3736,9 +3736,9 @@
 
     iget v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->C:I
 
-    invoke-direct {v0, v3, v4, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;-><init>(JI)V
+    invoke-direct {v0, v3, v4, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;-><init>(JI)V
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/f;
+    iput-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->x:Lcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;
 
     .line 3
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->B:Lcom/vk/im/ui/utils/recyclerview/LinearLayoutManagerScrollHelper;
@@ -3779,31 +3779,31 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->u:Lcom/vk/im/ui/utils/recyclerview/c;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->u:Lcom/vk/im/ui/utils/recyclerview/HideKeyboardVerticalScrollListener;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->v:Lcom/vk/im/ui/components/viewcontrollers/msg_list/g;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->v:Lcom/vk/im/ui/components/viewcontrollers/msg_list/StickerAnimationPauseScrollListener;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/q/h/b;->onResume()V
+    invoke-interface {v0}, Lcom/vk/im/ui/q/h/VideoAutoPlayer;->onResume()V
 
     .line 6
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/StickyDateController;
 
     iget-boolean v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->K:Z
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/d;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/StickyDateController;->a(Z)V
 
     const/4 v0, 0x0
 
@@ -3811,7 +3811,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->l(Z)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->N:Lcom/vk/im/engine/j/j;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->N:Lcom/vk/im/engine/j/WebUrlCacheController;
 
     if-eqz v0, :cond_1
 
@@ -3819,9 +3819,9 @@
 
     const-string v2, "recyclerView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/j/j;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/j/WebUrlCacheController;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 9
     :cond_1
@@ -3849,41 +3849,41 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->u:Lcom/vk/im/ui/utils/recyclerview/c;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->u:Lcom/vk/im/ui/utils/recyclerview/HideKeyboardVerticalScrollListener;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->v:Lcom/vk/im/ui/components/viewcontrollers/msg_list/g;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->v:Lcom/vk/im/ui/components/viewcontrollers/msg_list/StickerAnimationPauseScrollListener;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->Q:Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/q/h/b;->onPause()V
+    invoke-interface {v0}, Lcom/vk/im/ui/q/h/VideoAutoPlayer;->onPause()V
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->A:Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/StickyDateController;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/d;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/l/StickyDateController;->a(Z)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->D:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToBottomController;->a()V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->E:Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e;->a()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController;->a()V
 
     const/4 v0, 0x1
 
@@ -3891,7 +3891,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->l(Z)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->N:Lcom/vk/im/engine/j/j;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->N:Lcom/vk/im/engine/j/WebUrlCacheController;
 
     if-eqz v0, :cond_1
 
@@ -3899,9 +3899,9 @@
 
     const-string v3, "recyclerView"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/engine/j/j;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v0, v2}, Lcom/vk/im/engine/j/WebUrlCacheController;->b(Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 10
     :cond_1

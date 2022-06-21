@@ -1,5 +1,5 @@
 .class public final Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "CommunityNotificationSettingsFragment.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;",
         ">;"
     }
@@ -48,7 +48,7 @@
 
     const-string v0, "parent.context"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -60,9 +60,9 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/common/view/settings/SettingsSwitchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/common/view/settings/SettingsSwitchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     return-void
 .end method
@@ -80,44 +80,44 @@
     check-cast v0, Lcom/vk/common/view/settings/SettingsSwitchView;
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/b;
+    invoke-virtual {p1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/SettingsSectionItem;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/g/b;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lb/h/h/g/SettingsSectionItem;->c()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/view/settings/b;->setTitle(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/common/view/settings/SettingsView;->setTitle(Ljava/lang/String;)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/b;
+    invoke-virtual {p1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/SettingsSectionItem;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/g/b;->d()Z
+    invoke-virtual {v1}, Lb/h/h/g/SettingsSectionItem;->d()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/view/settings/b;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/common/view/settings/SettingsView;->setChecked(Z)V
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/b;
+    invoke-virtual {p1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/SettingsSectionItem;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/g/b;->a()Z
+    invoke-virtual {v1}, Lb/h/h/g/SettingsSectionItem;->a()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/view/settings/b;->setButtonEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/common/view/settings/SettingsView;->setButtonEnabled(Z)V
 
     .line 5
     new-instance v1, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a$a;
 
     invoke-direct {v1, p0, p1, v0}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a$a;-><init>(Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a;Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;Lcom/vk/common/view/settings/SettingsSwitchView;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/view/settings/b;->setOnCheckedChangesListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/vk/common/view/settings/SettingsView;->setOnCheckedChangesListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     return-void
 

@@ -3,7 +3,7 @@
 .source "GroupedNotificationsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/y;
+.implements Lcom/vk/lists/PreloadCallback;
 
 
 # annotations
@@ -48,7 +48,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 

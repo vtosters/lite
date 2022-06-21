@@ -3,12 +3,12 @@
 .source "VKAnimationLoader.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stickers/views/animation/VKAnimationLoader;->b(Ljava/lang/String;Ljava/lang/String;)Lc/a/m;
+    value = Lcom/vk/stickers/views/animation/VKAnimationLoader;->b(Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/airbnb/lottie/d;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/airbnb/lottie/LottieComposition;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/airbnb/lottie/d;)V
+.method public final a(Lcom/airbnb/lottie/LottieComposition;)V
     .locals 2
 
     .line 1
@@ -67,9 +67,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/airbnb/lottie/d;
+    check-cast p1, Lcom/airbnb/lottie/LottieComposition;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader$d;->a(Lcom/airbnb/lottie/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader$d;->a(Lcom/airbnb/lottie/LottieComposition;)V
 
     return-void
 .end method

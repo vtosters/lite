@@ -3,7 +3,7 @@
 .source "DiscoverFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/discover/DiscoverItemsContainer;",
@@ -62,7 +62,7 @@
     const-string v0, "it"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->h(Ljava/util/List;)Ljava/lang/Object;
 
@@ -87,7 +87,7 @@
 
     const-string v3, "discover_full"
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/newsfeed/b0;->a(Lcom/vk/dto/discover/DiscoverItem;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/newsfeed/PostsAnalytics;->a(Lcom/vk/dto/discover/DiscoverItem;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/discover/DiscoverFragment$f;->a:Lcom/vk/discover/DiscoverFragment;
@@ -97,7 +97,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/discover/DiscoverFragment$f;->a:Lcom/vk/discover/DiscoverFragment;
 
-    invoke-static {v0}, Lcom/vk/discover/DiscoverFragment;->g(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/lists/t;
+    invoke-static {v0}, Lcom/vk/discover/DiscoverFragment;->g(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object v0
 
@@ -111,13 +111,13 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/t;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/PaginationHelper;->a(Ljava/lang/String;)V
 
     .line 5
     :cond_0
     iget-object p1, p0, Lcom/vk/discover/DiscoverFragment$f;->a:Lcom/vk/discover/DiscoverFragment;
 
-    invoke-static {p1}, Lcom/vk/discover/DiscoverFragment;->b(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/discover/b;
+    invoke-static {p1}, Lcom/vk/discover/DiscoverFragment;->b(Lcom/vk/discover/DiscoverFragment;)Lcom/vk/discover/DiscoverAdapter;
 
     move-result-object p1
 
@@ -131,7 +131,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/discover/b;->setItems(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/discover/DiscoverAdapter;->setItems(Ljava/util/List;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/discover/DiscoverFragment$f;->a:Lcom/vk/discover/DiscoverFragment;

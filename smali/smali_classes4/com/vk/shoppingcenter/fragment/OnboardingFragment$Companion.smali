@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -39,17 +39,17 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/shoppingcenter/fragment/b;",
+            "Lcom/vk/shoppingcenter/fragment/OnboardingFragment2;",
             ">;"
         }
     .end annotation
 
     const/4 v0, 0x4
 
-    new-array v0, v0, [Lcom/vk/shoppingcenter/fragment/b;
+    new-array v0, v0, [Lcom/vk/shoppingcenter/fragment/OnboardingFragment2;
 
     .line 19
-    new-instance v1, Lcom/vk/shoppingcenter/fragment/b;
+    new-instance v1, Lcom/vk/shoppingcenter/fragment/OnboardingFragment2;
 
     const v2, 0x7f080a04
 
@@ -59,14 +59,14 @@
 
     const v5, 0x7f120d9d
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/shoppingcenter/fragment/b;-><init>(IIII)V
+    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/shoppingcenter/fragment/OnboardingFragment2;-><init>(IIII)V
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
     .line 20
-    new-instance v1, Lcom/vk/shoppingcenter/fragment/b;
+    new-instance v1, Lcom/vk/shoppingcenter/fragment/OnboardingFragment2;
 
     const v2, 0x7f080a05
 
@@ -76,14 +76,14 @@
 
     const v5, 0x7f120d9e
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/shoppingcenter/fragment/b;-><init>(IIII)V
+    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/shoppingcenter/fragment/OnboardingFragment2;-><init>(IIII)V
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
     .line 21
-    new-instance v1, Lcom/vk/shoppingcenter/fragment/b;
+    new-instance v1, Lcom/vk/shoppingcenter/fragment/OnboardingFragment2;
 
     const v2, 0x7f080a06
 
@@ -93,14 +93,14 @@
 
     const v5, 0x7f120d9f
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/shoppingcenter/fragment/b;-><init>(IIII)V
+    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/shoppingcenter/fragment/OnboardingFragment2;-><init>(IIII)V
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
     .line 22
-    new-instance v1, Lcom/vk/shoppingcenter/fragment/b;
+    new-instance v1, Lcom/vk/shoppingcenter/fragment/OnboardingFragment2;
 
     const v2, 0x7f080a07
 
@@ -110,7 +110,7 @@
 
     const v5, 0x7f120da0
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/shoppingcenter/fragment/b;-><init>(IIII)V
+    invoke-direct {v1, v2, v3, v4, v5}, Lcom/vk/shoppingcenter/fragment/OnboardingFragment2;-><init>(IIII)V
 
     const/4 v2, 0x3
 
@@ -153,21 +153,21 @@
     move-result-object p2
 
     .line 16
-    new-instance v0, Lcom/vk/shoppingcenter/fragment/a;
+    new-instance v0, Lcom/vk/shoppingcenter/fragment/OnboardingFragment1;
 
-    invoke-direct {v0, p2}, Lcom/vk/shoppingcenter/fragment/a;-><init>(Ljava/util/List;)V
+    invoke-direct {v0, p2}, Lcom/vk/shoppingcenter/fragment/OnboardingFragment1;-><init>(Ljava/util/List;)V
 
     .line 17
     new-instance v1, Lcom/vk/shoppingcenter/fragment/OnboardingFragment$Companion$createOnboardingView$1;
 
     invoke-direct {v1, p2}, Lcom/vk/shoppingcenter/fragment/OnboardingFragment$Companion$createOnboardingView$1;-><init>(Ljava/util/List;)V
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/shoppingcenter/fragment/OnboardingView;->a(Landroidx/viewpager/widget/PagerAdapter;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/shoppingcenter/fragment/OnboardingView;->a(Landroidx/viewpager/widget/PagerAdapter;Lkotlin/jvm/b/Functions2;)V
 
     const-string p2, "onboardView"
 
     .line 18
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -198,7 +198,7 @@
     const-string v2, "inflater"
 
     .line 3
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0, v1}, Lcom/vk/shoppingcenter/fragment/OnboardingFragment$Companion;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Lcom/vk/shoppingcenter/fragment/OnboardingView;
 
@@ -229,7 +229,7 @@
     const-string v1, "dialog"
 
     .line 8
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
@@ -238,7 +238,7 @@
     if-eqz v1, :cond_0
 
     .line 9
-    invoke-static {}, Lcom/vk/core/drawable/l$a;->c()Lcom/vk/core/drawable/f;
+    invoke-static {}, Lcom/vk/core/drawable/VkUiDrawableHelper$a;->c()Lcom/vk/core/drawable/InnerStrokeDrawable;
 
     move-result-object v2
 
@@ -251,7 +251,7 @@
 
     const-string v3, "decorView"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -269,7 +269,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/shoppingcenter/fragment/OnboardingFragment$Companion$showAsDialog$2;-><init>(Landroidx/appcompat/app/AlertDialog;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/shoppingcenter/fragment/OnboardingView;->setOnFinishedListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/shoppingcenter/fragment/OnboardingView;->setOnFinishedListener(Lkotlin/jvm/b/Functions;)V
 
     return-void
 

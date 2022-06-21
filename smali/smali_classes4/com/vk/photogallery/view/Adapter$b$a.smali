@@ -21,7 +21,7 @@
     return-void
 .end method
 
-.method public static a(Lcom/vk/photogallery/view/Adapter$b;ZLcom/vk/photogallery/dto/c;I)V
+.method public static a(Lcom/vk/photogallery/view/Adapter$b;ZLcom/vk/photogallery/dto/GalleryState2;I)V
     .locals 0
 
     return-void

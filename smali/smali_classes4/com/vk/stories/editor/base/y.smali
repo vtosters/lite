@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # static fields
@@ -36,9 +36,9 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lcom/facebook/common/references/a;
+    check-cast p1, Lcom/facebook/common/references/CloseableReference;
 
-    invoke-static {p1}, Lcom/vk/stories/editor/base/k0;->a(Lcom/facebook/common/references/a;)Lcom/vk/stories/editor/base/k0$c;
+    invoke-static {p1}, Lcom/vk/stories/editor/base/StickerEditorViewListener;->a(Lcom/facebook/common/references/CloseableReference;)Lcom/vk/stories/editor/base/StickerEditorViewListener$c;
 
     move-result-object p1
 

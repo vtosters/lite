@@ -3,7 +3,7 @@
 .source "ImExecutors.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lc/a/s;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lio/reactivex/Scheduler;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lc/a/s;
+.method public final invoke()Lio/reactivex/Scheduler;
     .locals 1
 
     .line 2
     sget-object v0, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->j()Lc/a/s;
+    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->j()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
@@ -72,7 +72,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/engine/concurrent/ImExecutors$mainScheduler$2;->invoke()Lc/a/s;
+    invoke-virtual {p0}, Lcom/vk/im/engine/concurrent/ImExecutors$mainScheduler$2;->invoke()Lio/reactivex/Scheduler;
 
     move-result-object v0
 

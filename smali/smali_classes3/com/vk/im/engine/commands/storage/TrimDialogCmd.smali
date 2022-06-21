@@ -1,12 +1,12 @@
 .class public final Lcom/vk/im/engine/commands/storage/TrimDialogCmd;
-.super Lcom/vk/im/engine/i/a;
+.super Lcom/vk/im/engine/i/BaseImEngineCmd;
 .source "TrimDialogCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/a<",
+        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/commands/storage/TrimDialogCmd;->b:I
 
@@ -67,35 +67,35 @@
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/commands/storage/TrimDialogCmd;Lcom/vk/im/engine/d;)Z
+.method public static final synthetic a(Lcom/vk/im/engine/commands/storage/TrimDialogCmd;Lcom/vk/im/engine/ImEnvironment;)Z
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/storage/TrimDialogCmd;->b(Lcom/vk/im/engine/d;)Z
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/storage/TrimDialogCmd;->b(Lcom/vk/im/engine/ImEnvironment;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final b(Lcom/vk/im/engine/d;)Z
+.method private final b(Lcom/vk/im/engine/ImEnvironment;)Z
     .locals 9
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object v0
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -106,14 +106,14 @@
     .line 3
     iget v1, p0, Lcom/vk/im/engine/commands/storage/TrimDialogCmd;->b:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->c(I)Lcom/vk/im/engine/internal/storage/models/a;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->c(I)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/a;->x()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->x()I
 
     move-result v0
 
@@ -138,7 +138,7 @@
     move-result-object v7
 
     .line 7
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->n(I)Lcom/vk/im/engine/models/q;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->n(I)Lcom/vk/im/engine/models/Weight;
 
     move-result-object v1
 
@@ -150,19 +150,19 @@
     :cond_1
     iget v1, p0, Lcom/vk/im/engine/commands/storage/TrimDialogCmd;->b:I
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->e(II)Lcom/vk/im/engine/models/i;
+    invoke-virtual {p1, v1, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->e(II)Lcom/vk/im/engine/models/Nearest;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/i;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/Nearest;->b()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast v0, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/e;->f()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->f()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v1
 
@@ -180,9 +180,9 @@
 
     .line 9
     :cond_3
-    sget-object v0, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v0, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/q$a;->a()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight$a;->a()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v0
 
@@ -207,7 +207,7 @@
     move-object v1, p1
 
     .line 13
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;II)Ljava/util/List;
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;II)Ljava/util/List;
 
     move-result-object v0
 
@@ -228,14 +228,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast v0, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     .line 16
     invoke-static {v7}, Lkotlin/collections/l;->l(Ljava/lang/Iterable;)Ljava/lang/Comparable;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast v1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     if-nez v1, :cond_5
 
@@ -247,33 +247,33 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast v0, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     .line 18
     :goto_3
     iget v1, p0, Lcom/vk/im/engine/commands/storage/TrimDialogCmd;->b:I
 
     .line 19
-    sget-object v2, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v2, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v2}, Lcom/vk/im/engine/models/q$a;->b()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v2}, Lcom/vk/im/engine/models/Weight$a;->b()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v2
 
     .line 20
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/e;->f()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->f()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/models/q;->a()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v3}, Lcom/vk/im/engine/models/Weight;->a()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v3
 
     .line 21
-    invoke-virtual {p1, v1, v2, v3}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/q;)V
+    invoke-virtual {p1, v1, v2, v3}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Weight;)V
 
     .line 22
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
 
     move-result v0
 
@@ -285,19 +285,19 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
+.method public a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
     .locals 4
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/im/engine/commands/storage/TrimDialogCmd$onExecute$trimHappened$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/commands/storage/TrimDialogCmd$onExecute$trimHappened$1;-><init>(Lcom/vk/im/engine/commands/storage/TrimDialogCmd;Lcom/vk/im/engine/d;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/commands/storage/TrimDialogCmd$onExecute$trimHappened$1;-><init>(Lcom/vk/im/engine/commands/storage/TrimDialogCmd;Lcom/vk/im/engine/ImEnvironment;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -323,7 +323,7 @@
 
     invoke-direct {v1, v2, v3}, Lcom/vk/im/engine/events/OnCacheInvalidateEvent;-><init>(Ljava/lang/Object;Lcom/vk/im/engine/events/OnCacheInvalidateEvent$Reason;)V
 
-    invoke-interface {p1, p0, v1}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/a;)V
+    invoke-interface {p1, p0, v1}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/Event;)V
 
     .line 6
     :cond_0
@@ -334,11 +334,11 @@
     return-object p1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/storage/TrimDialogCmd;->a(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/storage/TrimDialogCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
 
     move-result-object p1
 

@@ -3,12 +3,12 @@
 .source "StoryView.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/view/StoryView;->a(Lcom/vk/dto/stories/model/StoryOwner;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/g/a;)V
+    value = Lcom/vk/stories/view/StoryView;->a(Lcom/vk/dto/stories/model/StoryOwner;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/g/F0;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -31,7 +31,7 @@
 
 .field final synthetic b:Lcom/vk/dto/stories/model/StoryOwner;
 
-.field final synthetic c:Lcom/vk/common/g/a;
+.field final synthetic c:Lcom/vk/common/g/F0;
 
 .field final synthetic d:Landroid/content/Context;
 
@@ -39,7 +39,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/view/StoryView;ILcom/vk/dto/stories/model/StoryOwner;Lcom/vk/common/g/a;Landroid/content/Context;)V
+.method constructor <init>(Lcom/vk/stories/view/StoryView;ILcom/vk/dto/stories/model/StoryOwner;Lcom/vk/common/g/F0;Landroid/content/Context;)V
     .locals 0
 
     .line 1
@@ -49,7 +49,7 @@
 
     iput-object p3, p0, Lcom/vk/stories/view/StoryView$k0;->b:Lcom/vk/dto/stories/model/StoryOwner;
 
-    iput-object p4, p0, Lcom/vk/stories/view/StoryView$k0;->c:Lcom/vk/common/g/a;
+    iput-object p4, p0, Lcom/vk/stories/view/StoryView$k0;->c:Lcom/vk/common/g/F0;
 
     iput-object p5, p0, Lcom/vk/stories/view/StoryView$k0;->d:Landroid/content/Context;
 
@@ -75,7 +75,7 @@
     const p1, 0x7f120369
 
     .line 6
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     :cond_0
     return-void
@@ -99,9 +99,9 @@
     invoke-virtual {p1, v0, v1}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/dto/stories/model/StoryOwner;I)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView$k0;->c:Lcom/vk/common/g/a;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView$k0;->c:Lcom/vk/common/g/F0;
 
-    invoke-interface {p1}, Lcom/vk/common/g/a;->f()Ljava/lang/Object;
+    invoke-interface {p1}, Lcom/vk/common/g/F0;->f()Ljava/lang/Object;
 
     return-void
 .end method

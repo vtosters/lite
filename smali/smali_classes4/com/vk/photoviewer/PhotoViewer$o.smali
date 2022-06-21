@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photoviewer/PhotoViewer;->a(Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/photoviewer/PhotoViewer;->a(Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1;->a(Lcom/vtosters/lite/api/i;)Ljava/util/ArrayList;
+    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Ljava/util/ArrayList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1;
 
-.field final synthetic b:Lcom/vtosters/lite/api/i;
+.field final synthetic b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1;Lcom/vtosters/lite/api/i;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1$a;->a:Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1$a;->b:Lcom/vtosters/lite/api/i;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1$a;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,7 +44,7 @@
     .line 1
     new-instance p1, Lcom/vk/profile/ui/community/CommunityEventsFragment$a;
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1$a;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1$a;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
@@ -58,7 +58,7 @@
 
     iget-object v0, v0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$communityEvents$1;->$context:Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

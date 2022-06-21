@@ -52,7 +52,7 @@
 
     const-string v2, "remoteMessage.data"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, v1}, Lcom/vk/pushes/FirebasePushService;->a(Lcom/vk/pushes/FirebasePushService;Ljava/util/Map;)V
 

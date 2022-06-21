@@ -30,11 +30,11 @@
 
 .field private static final i:I
 
-.field private static j:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private static j:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 .field private static k:Landroid/content/DialogInterface$OnDismissListener;
 
-.field private static l:Lcom/vk/core/dialogs/bottomsheet/h$d;
+.field private static l:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
 
 .field public static final m:Lcom/vk/qrcode/QRViewUtils;
 
@@ -88,7 +88,7 @@
     sput-wide v0, Lcom/vk/qrcode/QRViewUtils;->c:D
 
     .line 5
-    sget-object v0, Lcom/vk/common/links/b;->a:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/vk/common/links/LinkParser;->a:Ljava/util/regex/Pattern;
 
     sput-object v0, Lcom/vk/qrcode/QRViewUtils;->d:Ljava/util/regex/Pattern;
 
@@ -188,7 +188,7 @@
 
     .line 399
     :goto_1
-    invoke-static {v3}, Lcom/vk/core/extensions/k;->a(Z)I
+    invoke-static {v3}, Lcom/vk/core/extensions/GeneralFunctions;->a(Z)I
 
     add-int/2addr v2, v3
 
@@ -200,13 +200,13 @@
     return v2
 .end method
 
-.method private final a(Lkotlin/jvm/b/a;)Landroid/text/style/ClickableSpan;
+.method private final a(Lkotlin/jvm/b/Functions;)Landroid/text/style/ClickableSpan;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Landroid/text/style/ClickableSpan;"
         }
@@ -222,12 +222,12 @@
     .line 346
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$b;
 
-    invoke-direct {v1, v0, p1}, Lcom/vk/qrcode/QRViewUtils$b;-><init>(ILkotlin/jvm/b/a;)V
+    invoke-direct {v1, v0, p1}, Lcom/vk/qrcode/QRViewUtils$b;-><init>(ILkotlin/jvm/b/Functions;)V
 
     return-object v1
 .end method
 
-.method private final a(Landroid/content/Context;Lcom/vk/qrcode/g$a;)Landroid/view/View;
+.method private final a(Landroid/content/Context;Lcom/vk/qrcode/QRTypes$a;)Landroid/view/View;
     .locals 4
 
     .line 325
@@ -292,11 +292,11 @@
     invoke-virtual {v1, p1}, Lcom/vk/core/view/StaticMapView;->setEnableInternalClickListener(Z)V
 
     .line 334
-    invoke-virtual {p2}, Lcom/vk/qrcode/g$a;->a()D
+    invoke-virtual {p2}, Lcom/vk/qrcode/QRTypes$a;->a()D
 
     move-result-wide v2
 
-    invoke-virtual {p2}, Lcom/vk/qrcode/g$a;->b()D
+    invoke-virtual {p2}, Lcom/vk/qrcode/QRTypes$a;->b()D
 
     move-result-wide p1
 
@@ -349,7 +349,7 @@
     const p1, 0x7f04059d
 
     .line 341
-    invoke-static {v0, p1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, p1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     const/high16 p1, 0x41600000    # 14.0f
 
@@ -371,16 +371,16 @@
     return-object v0
 .end method
 
-.method private final a(Lc/a/m;)Lc/a/m;
+.method private final a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;"
         }
     .end annotation
@@ -388,18 +388,18 @@
     .line 368
     sget-object v0, Lcom/vk/qrcode/QRViewUtils$z;->a:Lcom/vk/qrcode/QRViewUtils$z;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "this.doOnError {\n       \u2026)\n            }\n        }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method private final a(Landroid/content/Context;Lcom/vk/qrcode/l;)Ljava/lang/String;
+.method private final a(Landroid/content/Context;Lcom/vk/qrcode/QRTypes6;)Ljava/lang/String;
     .locals 3
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -408,7 +408,7 @@
     .end annotation
 
     .line 311
-    invoke-virtual {p2}, Lcom/vk/qrcode/l;->i()Lcom/vk/qrcode/QRTypes$Type;
+    invoke-virtual {p2}, Lcom/vk/qrcode/QRTypes6;->i()Lcom/vk/qrcode/QRTypes$Type;
 
     move-result-object v0
 
@@ -453,7 +453,7 @@
 
     const-string p2, "context.resources.getStr\u2026.string.qr_default_title)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -467,7 +467,7 @@
 
     const-string p2, "context.getString(R.string.qr_action_new_contact)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -481,7 +481,7 @@
 
     const-string p2, "getString(R.string.text)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -495,13 +495,13 @@
 
     const-string p2, "getString(R.string.address)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 316
     :cond_3
-    invoke-virtual {p2}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p2}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v0
 
@@ -531,7 +531,7 @@
 
     const-string p2, "getString(R.string.qr_shopping_title)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -545,7 +545,7 @@
 
     const-string p2, "getString(R.string.qr_action_vk_link)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -559,7 +559,7 @@
 
     const-string p2, "getString(R.string.article)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -573,13 +573,13 @@
 
     const-string p2, "getString(R.string.wall_view)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 321
     :pswitch_4
-    invoke-virtual {p2}, Lcom/vk/qrcode/l;->h()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/qrcode/QRTypes6;->h()Ljava/lang/String;
 
     move-result-object p1
 
@@ -595,7 +595,7 @@
 
     const-string p2, "getString(R.string.qr_action_external_link)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -615,7 +615,7 @@
     const/4 v2, 0x0
 
     .line 324
-    invoke-virtual {p2}, Lcom/vk/qrcode/l;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/qrcode/QRTypes6;->b()Ljava/lang/String;
 
     move-result-object p2
 
@@ -627,7 +627,7 @@
 
     const-string p2, "getString(R.string.qr_ac\u2026fi, action.description())"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1
@@ -652,27 +652,27 @@
     .end packed-switch
 .end method
 
-.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Landroid/content/Context;Lcom/vk/qrcode/l;)Ljava/lang/String;
+.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Landroid/content/Context;Lcom/vk/qrcode/QRTypes6;)Ljava/lang/String;
     .locals 0
 
     .line 9
-    invoke-direct {p0, p1, p2}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/l;)Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRTypes6;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Ljava/lang/CharSequence;Lkotlin/jvm/b/b;)Lkotlin/Pair;
+.method private final a(Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Lkotlin/Pair;
     .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)",
             "Lkotlin/Pair<",
             "Ljava/lang/CharSequence;",
@@ -752,7 +752,7 @@
 
     const-string v6, "replacement"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v5}, Lcom/vk/common/links/LinkProcessorKt;->a(Ljava/lang/String;)Z
 
@@ -767,7 +767,7 @@
 
     check-cast v7, Ljava/lang/String;
 
-    invoke-static {v7, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v8, 0x2f
 
@@ -793,7 +793,7 @@
 
     check-cast v7, Ljava/lang/String;
 
-    invoke-static {v7, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v8, 0x2f
 
@@ -838,7 +838,7 @@
 
     check-cast v8, Ljava/lang/String;
 
-    invoke-static {v8, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     add-int/lit8 v5, v5, 0x1e
 
@@ -850,7 +850,7 @@
 
     const-string v6, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -880,9 +880,9 @@
     :goto_2
     new-instance v5, Lcom/vk/qrcode/QRViewUtils$formatLinks$span$1;
 
-    invoke-direct {v5, p2, v4}, Lcom/vk/qrcode/QRViewUtils$formatLinks$span$1;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/internal/Ref$ObjectRef;)V
+    invoke-direct {v5, p2, v4}, Lcom/vk/qrcode/QRViewUtils$formatLinks$span$1;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/internal/Ref$ObjectRef;)V
 
-    invoke-direct {p0, v5}, Lcom/vk/qrcode/QRViewUtils;->a(Lkotlin/jvm/b/a;)Landroid/text/style/ClickableSpan;
+    invoke-direct {p0, v5}, Lcom/vk/qrcode/QRViewUtils;->a(Lkotlin/jvm/b/Functions;)Landroid/text/style/ClickableSpan;
 
     move-result-object v5
 
@@ -909,7 +909,7 @@
 
     const-string v6, "result.replace(matcher.s\u2026() - offset, replacement)"
 
-    invoke-static {v0, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 360
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I
@@ -963,7 +963,7 @@
 
     .line 362
     :cond_4
-    invoke-static {p1}, Lcom/vk/common/links/b;->e(Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/common/links/LinkParser;->e(Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1006,7 +1006,7 @@
 
     .line 366
     :cond_7
-    invoke-static {v0, p1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, p1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p1
 
@@ -1075,7 +1075,7 @@
     if-eqz v2, :cond_1
 
     .line 208
-    invoke-direct {v0, v4, v1}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/l;)Ljava/lang/String;
+    invoke-direct {v0, v4, v1}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRTypes6;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1157,7 +1157,7 @@
 
     .line 210
     :cond_5
-    invoke-direct {v0, v4, v1}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/l;)Ljava/lang/String;
+    invoke-direct {v0, v4, v1}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRTypes6;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1172,7 +1172,7 @@
     .line 212
     new-instance v7, Lcom/vk/qrcode/QRViewUtils$d;
 
-    invoke-direct {v7, v1}, Lcom/vk/qrcode/QRViewUtils$d;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v7, v1}, Lcom/vk/qrcode/QRViewUtils$d;-><init>(Lkotlin/jvm/b/Functions;)V
 
     const v11, 0x7f120c0a
 
@@ -1200,7 +1200,7 @@
 
     invoke-direct {v8, v2, v4, v5}, Lcom/vk/qrcode/QRViewUtils$forAddressBook$$inlined$apply$lambda$1;-><init>(Landroid/text/SpannableStringBuilder;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
 
-    invoke-direct {v1, v8}, Lcom/vk/qrcode/QRViewUtils;->a(Lkotlin/jvm/b/a;)Landroid/text/style/ClickableSpan;
+    invoke-direct {v1, v8}, Lcom/vk/qrcode/QRViewUtils;->a(Lkotlin/jvm/b/Functions;)Landroid/text/style/ClickableSpan;
 
     move-result-object v1
 
@@ -1219,17 +1219,17 @@
     iput-object v10, v8, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
     .line 217
-    new-instance v5, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v5, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v5, v4}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v5, v4}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 218
-    invoke-virtual {v5, v6}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v5, v6}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v1, 0x2
 
     .line 219
-    invoke-static {v5, v2, v3, v1, v10}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/CharSequence;IILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static {v5, v2, v3, v1, v10}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/CharSequence;IILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 220
     invoke-virtual {v4, v11}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -1238,7 +1238,7 @@
 
     const-string v1, "context.getString(R.string.qr_action_save_contact)"
 
-    invoke-static {v12, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v12, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v14, 0x0
 
@@ -1250,7 +1250,7 @@
 
     move-object v13, v7
 
-    invoke-static/range {v11 .. v16}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/h$e;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static/range {v11 .. v16}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 221
     new-instance v11, Lcom/vk/qrcode/QRViewUtils$forAddressBook$$inlined$apply$lambda$2;
@@ -1271,10 +1271,10 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/vk/qrcode/QRViewUtils$forAddressBook$$inlined$apply$lambda$2;-><init>(Ljava/lang/String;Landroid/text/SpannableStringBuilder;Landroid/app/Activity;Lcom/vk/qrcode/QRViewUtils$d;Lkotlin/jvm/internal/Ref$ObjectRef;)V
 
-    invoke-virtual {v12, v11}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v12, v11}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 222
-    invoke-static {v12, v10, v9, v10}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v12, v10, v9, v10}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v1
 
@@ -1283,40 +1283,40 @@
     .line 223
     iget-object v1, v8, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    check-cast v1, Lcom/vk/core/dialogs/bottomsheet/e;
+    check-cast v1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
-    sput-object v1, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object v1, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     goto/16 :goto_5
 
     .line 224
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 225
     :cond_7
-    new-instance v12, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v12, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v12, v4}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v12, v4}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 226
-    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/c;
+    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;
 
-    invoke-direct {v1, v3, v9, v10}, Lcom/vk/core/dialogs/bottomsheet/c;-><init>(ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v3, v9, v10}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v12, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v12, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 227
-    invoke-virtual {v12, v6}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v12, v6}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 228
-    new-instance v1, Lcom/vk/qrcode/y/b;
+    new-instance v1, Lcom/vk/qrcode/y/HintValueDecorator;
 
-    invoke-direct {v1}, Lcom/vk/qrcode/y/b;-><init>()V
+    invoke-direct {v1}, Lcom/vk/qrcode/y/HintValueDecorator;-><init>()V
 
-    invoke-virtual {v12, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v12, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 229
     new-instance v13, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
@@ -1332,16 +1332,16 @@
 
     const-string v3, "LayoutInflater.from(context)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v13, v1, v2}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(ILandroid/view/LayoutInflater;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 231
-    new-instance v1, Lcom/vk/qrcode/y/c/a;
+    new-instance v1, Lcom/vk/qrcode/y/c/AddressBookAdapterBinder;
 
-    invoke-direct {v1}, Lcom/vk/qrcode/y/c/a;-><init>()V
+    invoke-direct {v1}, Lcom/vk/qrcode/y/c/AddressBookAdapterBinder;-><init>()V
 
-    invoke-virtual {v13, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
+    invoke-virtual {v13, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter1;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 232
     new-instance v14, Lcom/vk/qrcode/QRViewUtils$c;
@@ -1360,7 +1360,7 @@
 
     move-object v15, v7
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/qrcode/QRViewUtils$c;-><init>(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;Lcom/vk/qrcode/QRViewUtils$d;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/qrcode/QRViewUtils$c;-><init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;Lcom/vk/qrcode/QRViewUtils$d;)V
 
     invoke-virtual {v13, v14}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter$b;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
@@ -1376,17 +1376,17 @@
     .line 234
     sget-object v2, Lcom/vk/qrcode/QRViewUtils$forAddressBook$2$1$2$1;->a:Lcom/vk/qrcode/QRViewUtils$forAddressBook$2$1$2$1;
 
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Lkotlin/jvm/b/b;)V
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)V
 
     .line 235
     invoke-virtual {v13, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Ljava/util/List;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 236
-    sget-object v1, Lcom/vk/qrcode/QRViewUtils;->l:Lcom/vk/core/dialogs/bottomsheet/h$d;
+    sget-object v1, Lcom/vk/qrcode/QRViewUtils;->l:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
 
     if-eqz v1, :cond_9
 
-    invoke-virtual {v12, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v12, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 237
     invoke-virtual {v13}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a()Lcom/vk/core/dialogs/adapter/ModalAdapter;
@@ -1404,34 +1404,34 @@
     move-object v2, v12
 
     .line 238
-    invoke-static/range {v2 .. v7}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static/range {v2 .. v7}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 239
-    invoke-virtual {v12, v11, v15}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(ILcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v12, v11, v15}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(ILcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 240
-    invoke-static {v12, v10, v9, v10}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v12, v10, v9, v10}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v1
 
-    sput-object v1, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object v1, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     .line 241
     :goto_5
-    sget-object v1, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/e;
+    sget-object v1, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz v1, :cond_8
 
     sget-object v2, Lcom/vk/qrcode/QRViewUtils;->k:Landroid/content/DialogInterface$OnDismissListener;
 
-    invoke-virtual {v1, v2}, Lcom/vk/core/dialogs/bottomsheet/e;->a(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->a(Landroid/content/DialogInterface$OnDismissListener;)V
 
     :cond_8
     return-void
 
     .line 242
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
@@ -1443,12 +1443,12 @@
     .locals 9
 
     .line 52
-    new-instance v6, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v6, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v6, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v6, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 53
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/c;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;
 
     const/4 v7, 0x1
 
@@ -1456,9 +1456,9 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, v7, v8}, Lcom/vk/core/dialogs/bottomsheet/c;-><init>(ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v7, v8}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v0, 0x7f120c1e
 
@@ -1469,16 +1469,16 @@
 
     const-string v1, "context.getString(R.string.qr_email_title)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 55
-    sget-object v0, Lcom/vk/qrcode/QRViewUtils;->l:Lcom/vk/core/dialogs/bottomsheet/h$d;
+    sget-object v0, Lcom/vk/qrcode/QRViewUtils;->l:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v0, 0x7f120c1c
 
@@ -1489,7 +1489,7 @@
 
     const-string v0, "context.getString(R.string.qr_email_send)"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/qrcode/QRViewUtils$i;
 
@@ -1503,14 +1503,14 @@
 
     move-object v0, v6
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/h$e;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 57
-    new-instance v0, Lcom/vk/qrcode/y/b;
+    new-instance v0, Lcom/vk/qrcode/y/HintValueDecorator;
 
-    invoke-direct {v0}, Lcom/vk/qrcode/y/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/qrcode/y/HintValueDecorator;-><init>()V
 
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 58
     new-instance v0, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
@@ -1526,16 +1526,16 @@
 
     const-string v3, "LayoutInflater.from(context)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(ILandroid/view/LayoutInflater;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 60
-    new-instance v1, Lcom/vk/qrcode/y/d/a;
+    new-instance v1, Lcom/vk/qrcode/y/d/EmailAdapterBinder;
 
-    invoke-direct {v1}, Lcom/vk/qrcode/y/d/a;-><init>()V
+    invoke-direct {v1}, Lcom/vk/qrcode/y/d/EmailAdapterBinder;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter1;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 61
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$h;
@@ -1569,16 +1569,16 @@
     move-object v0, v6
 
     .line 64
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 65
-    invoke-static {v6, v8, v7, v8}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v6, v8, v7, v8}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 
     .line 66
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v8
 .end method
@@ -1587,12 +1587,12 @@
     .locals 9
 
     .line 37
-    new-instance v6, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v6, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v6, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v6, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 38
-    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/c;
+    new-instance v0, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;
 
     const/4 v7, 0x1
 
@@ -1600,9 +1600,9 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, v7, v8}, Lcom/vk/core/dialogs/bottomsheet/c;-><init>(ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v7, v8}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v0, 0x7f120c3c
 
@@ -1613,16 +1613,16 @@
 
     const-string v1, "context.getString(R.string.qr_sms_title)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 40
-    sget-object v0, Lcom/vk/qrcode/QRViewUtils;->l:Lcom/vk/core/dialogs/bottomsheet/h$d;
+    sget-object v0, Lcom/vk/qrcode/QRViewUtils;->l:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v0, 0x7f120c3b
 
@@ -1633,7 +1633,7 @@
 
     const-string v0, "context.getString(R.string.qr_sms_send)"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/qrcode/QRViewUtils$o;
 
@@ -1647,14 +1647,14 @@
 
     move-object v0, v6
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/h$e;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 42
-    new-instance v0, Lcom/vk/qrcode/y/b;
+    new-instance v0, Lcom/vk/qrcode/y/HintValueDecorator;
 
-    invoke-direct {v0}, Lcom/vk/qrcode/y/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/qrcode/y/HintValueDecorator;-><init>()V
 
-    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v6, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 43
     new-instance v0, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
@@ -1670,16 +1670,16 @@
 
     const-string v3, "LayoutInflater.from(context)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(ILandroid/view/LayoutInflater;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 45
-    new-instance v1, Lcom/vk/qrcode/y/e/a;
+    new-instance v1, Lcom/vk/qrcode/y/e/SmsAdapterBinder;
 
-    invoke-direct {v1}, Lcom/vk/qrcode/y/e/a;-><init>()V
+    invoke-direct {v1}, Lcom/vk/qrcode/y/e/SmsAdapterBinder;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter1;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 46
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$n;
@@ -1713,25 +1713,25 @@
     move-object v0, v6
 
     .line 49
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lcom/vk/core/dialogs/adapter/ModalAdapter;ZZILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 50
-    invoke-static {v6, v8, v7, v8}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v6, v8, v7, v8}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 
     .line 51
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v8
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/d;)V
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes9;)V
     .locals 11
 
     .line 67
-    invoke-virtual {p3}, Lcom/vk/qrcode/i;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes7;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v0
 
@@ -1756,7 +1756,7 @@
     if-eq v0, v1, :cond_0
 
     .line 68
-    invoke-virtual {p3}, Lcom/vk/qrcode/d;->a()Lc/a/m;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes9;->a()Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -1777,7 +1777,7 @@
     move-object v3, p1
 
     .line 69
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1786,20 +1786,20 @@
     .line 70
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$e;
 
-    invoke-direct {v1, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils$e;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/d;)V
+    invoke-direct {v1, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils$e;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes9;)V
 
     .line 71
     sget-object p2, Lcom/vk/qrcode/QRViewUtils$f;->a:Lcom/vk/qrcode/QRViewUtils$f;
 
     .line 72
-    invoke-virtual {v0, v1, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
     .line 73
-    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -1807,18 +1807,18 @@
     const/4 v0, 0x0
 
     .line 74
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/d;Ljava/lang/Object;)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes9;Ljava/lang/Object;)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/d;Ljava/lang/Object;)V
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes9;Ljava/lang/Object;)V
     .locals 24
 
     .line 75
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/d;->m()Ljava/lang/String;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes9;->m()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1834,9 +1834,9 @@
 
     move-object/from16 v4, p4
 
-    invoke-direct {v2, v3, v4, v5}, Lcom/vk/qrcode/QRViewUtils$forBrand$positiveAction$1;-><init>(Lcom/vk/qrcode/d;Ljava/lang/Object;Landroid/app/Activity;)V
+    invoke-direct {v2, v3, v4, v5}, Lcom/vk/qrcode/QRViewUtils$forBrand$positiveAction$1;-><init>(Lcom/vk/qrcode/QRTypes9;Ljava/lang/Object;Landroid/app/Activity;)V
 
-    invoke-static {v0, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v17
 
@@ -1858,14 +1858,14 @@
     const/4 v12, 0x0
 
     .line 77
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/d;->q()Ljava/lang/String;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes9;->q()Ljava/lang/String;
 
     move-result-object v13
 
     if-eqz v13, :cond_1
 
     .line 78
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/d;->o()Ljava/lang/String;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes9;->o()Ljava/lang/String;
 
     move-result-object v14
 
@@ -1892,34 +1892,34 @@
     move-object/from16 v5, p1
 
     .line 79
-    invoke-static/range {v3 .. v23}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v23}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 
     .line 80
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 81
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 82
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/e;)V
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes8;)V
     .locals 9
 
     .line 172
-    invoke-virtual {p3}, Lcom/vk/qrcode/e;->a()Lc/a/m;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes8;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1940,14 +1940,14 @@
     move-object v1, p1
 
     .line 173
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 174
-    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lc/a/m;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1956,22 +1956,22 @@
     .line 175
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$g;
 
-    invoke-direct {v1, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils$g;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/e;)V
+    invoke-direct {v1, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils$g;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes8;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
     .line 176
-    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     :cond_0
     return-void
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/f;)V
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes10;)V
     .locals 21
 
     move-object/from16 v4, p1
@@ -1983,7 +1983,7 @@
     move-object/from16 v1, p2
 
     .line 243
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/f;->j()Lcom/vk/qrcode/f$a;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes10;->j()Lcom/vk/qrcode/QRTypes$a3;
 
     move-result-object v5
 
@@ -1998,7 +1998,7 @@
 
     invoke-direct {v3, v7, v6}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    invoke-virtual {v5}, Lcom/vk/qrcode/f$a;->c()Ljava/util/Date;
+    invoke-virtual {v5}, Lcom/vk/qrcode/QRTypes$a3;->c()Ljava/util/Date;
 
     move-result-object v6
 
@@ -2017,7 +2017,7 @@
 
     invoke-direct {v3, v8, v7}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    invoke-virtual {v5}, Lcom/vk/qrcode/f$a;->c()Ljava/util/Date;
+    invoke-virtual {v5}, Lcom/vk/qrcode/QRTypes$a3;->c()Ljava/util/Date;
 
     move-result-object v7
 
@@ -2028,14 +2028,14 @@
     .line 246
     new-instance v8, Lcom/vk/qrcode/QRViewUtils$forEvent$saveInCalendarAction$1;
 
-    invoke-direct {v8, v5, v4}, Lcom/vk/qrcode/QRViewUtils$forEvent$saveInCalendarAction$1;-><init>(Lcom/vk/qrcode/f$a;Landroid/app/Activity;)V
+    invoke-direct {v8, v5, v4}, Lcom/vk/qrcode/QRViewUtils$forEvent$saveInCalendarAction$1;-><init>(Lcom/vk/qrcode/QRTypes$a3;Landroid/app/Activity;)V
 
     const v3, 0x7f080476
 
     const v9, 0x7f040022
 
     .line 247
-    invoke-static {v3, v9}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v3, v9}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v3
 
@@ -2062,10 +2062,10 @@
 
     const-string v7, "context.getString(R.stri\u2026alendar_time, date, time)"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 249
-    invoke-virtual {v5}, Lcom/vk/qrcode/f$a;->d()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/vk/qrcode/QRTypes$a3;->d()Ljava/lang/String;
 
     move-result-object v11
 
@@ -2076,7 +2076,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v8}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v4, v8}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v14
 
@@ -2109,12 +2109,12 @@
     const/16 v20, 0x0
 
     .line 251
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/g;)V
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes;)V
     .locals 22
 
     move-object/from16 v11, p0
@@ -2126,7 +2126,7 @@
     .line 252
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$forGeo$openMapAction$1;
 
-    invoke-direct {v1, v0, v2}, Lcom/vk/qrcode/QRViewUtils$forGeo$openMapAction$1;-><init>(Lcom/vk/qrcode/g;Landroid/app/Activity;)V
+    invoke-direct {v1, v0, v2}, Lcom/vk/qrcode/QRViewUtils$forGeo$openMapAction$1;-><init>(Lcom/vk/qrcode/QRTypes;Landroid/app/Activity;)V
 
     .line 253
     :try_start_0
@@ -2134,19 +2134,19 @@
 
     invoke-direct {v3, v2}, Landroid/location/Geocoder;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/g;->j()Lcom/vk/qrcode/g$a;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes;->j()Lcom/vk/qrcode/QRTypes$a;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/qrcode/g$a;->a()D
+    invoke-virtual {v4}, Lcom/vk/qrcode/QRTypes$a;->a()D
 
     move-result-wide v4
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/g;->j()Lcom/vk/qrcode/g$a;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes;->j()Lcom/vk/qrcode/QRTypes$a;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/vk/qrcode/g$a;->b()D
+    invoke-virtual {v6}, Lcom/vk/qrcode/QRTypes$a;->b()D
 
     move-result-wide v6
 
@@ -2170,7 +2170,7 @@
 
     const-string v4, "Geocoder(context).getFro\u2026, 1)[0].getAddressLine(0)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -2200,18 +2200,18 @@
     const/4 v9, 0x0
 
     .line 255
-    invoke-direct {v11, v2, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/l;)Ljava/lang/String;
+    invoke-direct {v11, v2, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRTypes6;)Ljava/lang/String;
 
     move-result-object v10
 
     const/4 v12, 0x0
 
     .line 256
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/g;->j()Lcom/vk/qrcode/g$a;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes;->j()Lcom/vk/qrcode/QRTypes$a;
 
     move-result-object v0
 
-    invoke-direct {v11, v2, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/g$a;)Landroid/view/View;
+    invoke-direct {v11, v2, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRTypes$a;)Landroid/view/View;
 
     move-result-object v13
 
@@ -2222,7 +2222,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v14
 
@@ -2247,12 +2247,12 @@
     move-object/from16 v11, v21
 
     .line 258
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/common/data/ApiApplication;)V
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/common/data/ApiApplication;)V
     .locals 21
 
     move-object/from16 v3, p1
@@ -2270,7 +2270,7 @@
 
     move-object/from16 v4, p3
 
-    invoke-direct {v6, v3, v4}, Lcom/vk/qrcode/QRViewUtils$forVkApp$openAppAction$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/i;)V
+    invoke-direct {v6, v3, v4}, Lcom/vk/qrcode/QRViewUtils$forVkApp$openAppAction$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRTypes7;)V
 
     .line 184
     iget-object v4, v5, Lcom/vk/dto/common/data/ApiApplication;->c:Lcom/vk/dto/photo/Photo;
@@ -2283,7 +2283,7 @@
 
     const-string v7, "app.icon.getImageByWidth(PHOTO_SIZE)"
 
-    invoke-static {v4, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
@@ -2296,7 +2296,7 @@
 
     const-string v8, "app.title"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 186
     iget-object v11, v5, Lcom/vk/dto/common/data/ApiApplication;->f:Ljava/lang/String;
@@ -2318,7 +2318,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v6}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v3, v6}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v14
 
@@ -2351,12 +2351,12 @@
     const/16 v20, 0x0
 
     .line 188
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/group/Group;)V
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/group/Group;)V
     .locals 25
 
     move-object/from16 v6, p1
@@ -2392,7 +2392,7 @@
     invoke-virtual {v10, v0}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     .line 136
-    new-instance v11, Lcom/vk/core/drawable/b;
+    new-instance v11, Lcom/vk/core/drawable/CenteredImageSpan;
 
     sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->h:Lcom/vk/core/utils/VerifyInfoHelper;
 
@@ -2400,7 +2400,7 @@
 
     const-string v2, "group.verifyInfo"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -2414,7 +2414,7 @@
 
     move-result-object v0
 
-    invoke-direct {v11, v0}, Lcom/vk/core/drawable/b;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v11, v0}, Lcom/vk/core/drawable/CenteredImageSpan;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     invoke-virtual {v10}, Landroid/text/SpannableStringBuilder;->length()I
 
@@ -2465,7 +2465,7 @@
 
     .line 140
     :goto_1
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/i;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes7;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v4
 
@@ -2496,7 +2496,7 @@
 
     const/16 v16, 0x0
 
-    invoke-static/range {v11 .. v16}, Lcom/vk/core/util/b1;->a(IIIZILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v11 .. v16}, Lcom/vk/core/util/StringUtils;->a(IIIZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -2516,7 +2516,7 @@
 
     const/16 v16, 0x0
 
-    invoke-static/range {v11 .. v16}, Lcom/vk/core/util/b1;->a(IIIZILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v11 .. v16}, Lcom/vk/core/util/StringUtils;->a(IIIZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -2526,7 +2526,7 @@
 
     const-string v12, "banned"
 
-    invoke-static {v11, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v11, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v11
 
@@ -2546,7 +2546,7 @@
 
     const-string v13, "deleted"
 
-    invoke-static {v11, v13}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v11, v13}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v11
 
@@ -2694,7 +2694,7 @@
 
     invoke-direct {v2, v6, v7}, Lcom/vk/qrcode/QRViewUtils$forGroup$2;-><init>(Landroid/app/Activity;Lcom/vk/dto/group/Group;)V
 
-    invoke-static {v0, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -2748,7 +2748,7 @@
 
     invoke-direct {v2, v7}, Lcom/vk/qrcode/QRViewUtils$forGroup$3;-><init>(Lcom/vk/dto/group/Group;)V
 
-    invoke-static {v0, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -2772,9 +2772,9 @@
 
     new-instance v2, Lcom/vk/qrcode/QRViewUtils$forGroup$4;
 
-    invoke-direct {v2, v13}, Lcom/vk/qrcode/QRViewUtils$forGroup$4;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v13}, Lcom/vk/qrcode/QRViewUtils$forGroup$4;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {v0, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -2794,7 +2794,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/jvm/b/a;
+    check-cast v0, Lkotlin/jvm/b/Functions;
 
     .line 161
     invoke-virtual/range {p4 .. p4}, Lcom/vk/dto/group/Group;->I()Z
@@ -2830,7 +2830,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v2, v0}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -2863,9 +2863,9 @@
 
     move-object/from16 v3, p3
 
-    invoke-direct {v2, v7, v3}, Lcom/vk/qrcode/QRViewUtils$forGroup$addToFavoritesAction$1;-><init>(Lcom/vk/dto/group/Group;Lcom/vk/qrcode/i;)V
+    invoke-direct {v2, v7, v3}, Lcom/vk/qrcode/QRViewUtils$forGroup$addToFavoritesAction$1;-><init>(Lcom/vk/dto/group/Group;Lcom/vk/qrcode/QRTypes7;)V
 
-    invoke-static {v0, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -2886,7 +2886,7 @@
 
     invoke-direct {v3, v6}, Lcom/vk/qrcode/QRViewUtils$forGroup$openBookmarks$1;-><init>(Landroid/app/Activity;)V
 
-    invoke-static {v2, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v2, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v2
 
@@ -2899,7 +2899,7 @@
 
     const-string v5, "openBookmarks.first"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v4, Ljava/lang/String;
 
@@ -2907,9 +2907,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lkotlin/jvm/b/a;
+    check-cast v5, Lkotlin/jvm/b/Functions;
 
-    invoke-direct {v3, v4, v5, v9}, Lcom/vk/qrcode/QRViewUtils$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;Z)V
+    invoke-direct {v3, v4, v5, v9}, Lcom/vk/qrcode/QRViewUtils$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)V
 
     const/4 v4, 0x0
 
@@ -2950,13 +2950,13 @@
 
     const-string v1, "context.getString(R.string.qr_action_open_group)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$forGroup$5;
 
-    invoke-direct {v1, v13}, Lcom/vk/qrcode/QRViewUtils$forGroup$5;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, v13}, Lcom/vk/qrcode/QRViewUtils$forGroup$5;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-direct {v12, v0, v1, v9}, Lcom/vk/qrcode/QRViewUtils$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;Z)V
+    invoke-direct {v12, v0, v1, v9}, Lcom/vk/qrcode/QRViewUtils$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)V
 
     .line 170
     iget-boolean v0, v7, Lcom/vk/dto/group/Group;->h:Z
@@ -3008,12 +3008,12 @@
     move-object/from16 v17, v24
 
     .line 171
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
     .locals 23
 
     move-object/from16 v2, p1
@@ -3043,9 +3043,9 @@
 
     new-instance v5, Lcom/vk/qrcode/QRViewUtils$forMoneyTransfer$openProfileAction$1;
 
-    invoke-direct {v5, v1}, Lcom/vk/qrcode/QRViewUtils$forMoneyTransfer$openProfileAction$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v5, v1}, Lcom/vk/qrcode/QRViewUtils$forMoneyTransfer$openProfileAction$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {v4, v5}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v4, v5}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v4
 
@@ -3057,7 +3057,7 @@
 
     move-object/from16 v5, p3
 
-    invoke-direct {v4, v2, v5}, Lcom/vk/qrcode/QRViewUtils$forMoneyTransfer$continueAction$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/i;)V
+    invoke-direct {v4, v2, v5}, Lcom/vk/qrcode/QRViewUtils$forMoneyTransfer$continueAction$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRTypes7;)V
 
     if-eqz v0, :cond_1
 
@@ -3096,7 +3096,7 @@
 
     const-string v8, "context.getString(R.string.qr_anon_money_transfer)"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_3
     move-object v10, v7
@@ -3138,7 +3138,7 @@
 
     const-string v8, "context.getString(R.stri\u2026ney_transfer_title, name)"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -3179,7 +3179,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v14
 
@@ -3210,18 +3210,18 @@
     move-object/from16 v7, v22
 
     .line 199
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/k;)V
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes1;)V
     .locals 21
 
     move-object/from16 v2, p1
 
     .line 200
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -3239,9 +3239,9 @@
 
     .line 201
     :cond_0
-    sget-object v0, Lcom/vk/core/ui/themes/d;->c:Lcom/vk/core/ui/themes/d;
+    sget-object v0, Lcom/vk/core/ui/themes/MilkshakeHelper;->c:Lcom/vk/core/ui/themes/MilkshakeHelper;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/themes/d;->b()Z
+    invoke-virtual {v0}, Lcom/vk/core/ui/themes/MilkshakeHelper;->b()Z
 
     move-result v0
 
@@ -3270,7 +3270,7 @@
     if-eqz v4, :cond_2
 
     .line 202
-    invoke-static {v3, v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v3, v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v3
 
@@ -3303,7 +3303,7 @@
 
     const-string v11, "context.getString(titleRes)"
 
-    invoke-static {v0, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 204
     invoke-virtual {v2, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -3335,12 +3335,12 @@
     move-object/from16 v2, p1
 
     .line 205
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/l;)V
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes6;)V
     .locals 6
 
     if-eqz p3, :cond_d
@@ -3348,9 +3348,9 @@
     .line 94
     move-object v0, p3
 
-    check-cast v0, Lcom/vk/qrcode/i;
+    check-cast v0, Lcom/vk/qrcode/QRTypes7;
 
-    invoke-virtual {v0}, Lcom/vk/qrcode/i;->j()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/qrcode/QRTypes7;->j()Ljava/lang/String;
 
     move-result-object v1
 
@@ -3364,7 +3364,7 @@
     if-eqz v1, :cond_b
 
     .line 96
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -3372,13 +3372,13 @@
 
     if-ne v1, v2, :cond_0
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->b(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->b(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     goto/16 :goto_1
 
     .line 97
     :cond_0
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -3386,13 +3386,13 @@
 
     if-ne v1, v2, :cond_1
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->g(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->g(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     goto/16 :goto_1
 
     .line 98
     :cond_1
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -3400,13 +3400,13 @@
 
     if-ne v1, v2, :cond_2
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->i(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->i(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     goto/16 :goto_1
 
     .line 99
     :cond_2
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -3414,13 +3414,13 @@
 
     if-ne v1, v2, :cond_3
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->c(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->c(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     goto :goto_1
 
     .line 100
     :cond_3
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -3428,13 +3428,13 @@
 
     if-ne v1, v2, :cond_4
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->c(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->c(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     goto :goto_1
 
     .line 101
     :cond_4
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -3442,13 +3442,13 @@
 
     if-ne v1, v2, :cond_5
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->j(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->j(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     goto :goto_1
 
     .line 102
     :cond_5
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -3456,13 +3456,13 @@
 
     if-ne v1, v2, :cond_6
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->k(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->k(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     goto :goto_1
 
     .line 103
     :cond_6
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -3470,13 +3470,13 @@
 
     if-ne v1, v2, :cond_7
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->d(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->d(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     goto :goto_1
 
     .line 104
     :cond_7
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -3484,7 +3484,7 @@
 
     if-eq v1, v2, :cond_a
 
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -3496,7 +3496,7 @@
 
     .line 105
     :cond_8
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -3504,13 +3504,13 @@
 
     if-ne v1, v2, :cond_9
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->f(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->f(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     goto :goto_1
 
     .line 106
     :cond_9
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -3518,19 +3518,19 @@
 
     if-ne v1, v2, :cond_b
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->h(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->h(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     goto :goto_1
 
     .line 107
     :cond_a
     :goto_0
-    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->e(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/vk/qrcode/QRViewUtils;->e(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     .line 108
     :cond_b
     :goto_1
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object p1
 
@@ -3538,7 +3538,7 @@
 
     if-eq p1, p2, :cond_c
 
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object p1
 
@@ -3549,11 +3549,11 @@
     .line 109
     sget-object v0, Lcom/vk/qrcode/QRStatsTracker;->b:Lcom/vk/qrcode/QRStatsTracker;
 
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->i()Lcom/vk/qrcode/QRTypes$Type;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->i()Lcom/vk/qrcode/QRTypes$Type;
 
     move-result-object v1
 
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v2
 
@@ -3579,7 +3579,7 @@
     throw p1
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/m;)V
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes5;)V
     .locals 21
 
     move-object/from16 v3, p1
@@ -3603,9 +3603,9 @@
 
     new-instance v7, Lcom/vk/qrcode/QRViewUtils$forTel$callAction$1;
 
-    invoke-direct {v7, v3, v5, v4}, Lcom/vk/qrcode/QRViewUtils$forTel$callAction$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/m;Lcom/vk/qrcode/QRParser;)V
+    invoke-direct {v7, v3, v5, v4}, Lcom/vk/qrcode/QRViewUtils$forTel$callAction$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRTypes5;Lcom/vk/qrcode/QRParser;)V
 
-    invoke-static {v6, v7}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v6, v7}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v14
 
@@ -3618,9 +3618,9 @@
 
     new-instance v7, Lcom/vk/qrcode/QRViewUtils$forTel$addToPhoneAction$1;
 
-    invoke-direct {v7, v5, v3, v4}, Lcom/vk/qrcode/QRViewUtils$forTel$addToPhoneAction$1;-><init>(Lcom/vk/qrcode/m;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
+    invoke-direct {v7, v5, v3, v4}, Lcom/vk/qrcode/QRViewUtils$forTel$addToPhoneAction$1;-><init>(Lcom/vk/qrcode/QRTypes5;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
 
-    invoke-static {v6, v7}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v6, v7}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v15
 
@@ -3629,16 +3629,16 @@
     const v4, 0x7f040022
 
     .line 34
-    invoke-static {v3, v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v3, v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v3
 
     .line 35
-    new-instance v4, Lcom/vk/im/ui/formatters/s;
+    new-instance v4, Lcom/vk/im/ui/formatters/PhoneFormatter;
 
-    invoke-direct {v4}, Lcom/vk/im/ui/formatters/s;-><init>()V
+    invoke-direct {v4}, Lcom/vk/im/ui/formatters/PhoneFormatter;-><init>()V
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/m;->j()Lcom/google/zxing/client/result/TelParsedResult;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes5;->j()Lcom/google/zxing/client/result/TelParsedResult;
 
     move-result-object v5
 
@@ -3646,7 +3646,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lcom/vk/im/ui/formatters/s;->a(Ljava/lang/String;)Ljava/lang/CharSequence;
+    invoke-virtual {v4, v5}, Lcom/vk/im/ui/formatters/PhoneFormatter;->a(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v10
 
@@ -3679,12 +3679,12 @@
     const/16 v20, 0x0
 
     .line 36
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/n;)V
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes4;)V
     .locals 18
 
     move-object/from16 v0, p0
@@ -3701,7 +3701,7 @@
     invoke-direct {v4, v2, v1}, Lcom/vk/qrcode/QRViewUtils$forText$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
 
     .line 260
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/n;->j()Ljava/lang/String;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes4;->j()Ljava/lang/String;
 
     move-result-object v5
 
@@ -3710,27 +3710,27 @@
     move-result v6
 
     .line 261
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v5
 
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/n;->j()Ljava/lang/String;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes4;->j()Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {v5, v7}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v5, v7}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v5
 
     const-string v7, "Emoji.instance().replaceEmoji(action.data())"
 
-    invoke-static {v5, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v7, Lcom/vk/qrcode/QRViewUtils$forText$2;
 
     invoke-direct {v7, v4}, Lcom/vk/qrcode/QRViewUtils$forText$2;-><init>(Lcom/vk/qrcode/QRViewUtils$forText$1;)V
 
-    invoke-direct {v0, v5, v7}, Lcom/vk/qrcode/QRViewUtils;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/b;)Lkotlin/Pair;
+    invoke-direct {v0, v5, v7}, Lcom/vk/qrcode/QRViewUtils;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Lkotlin/Pair;
 
     move-result-object v5
 
@@ -3749,12 +3749,12 @@
     .line 262
     new-instance v8, Lcom/vk/qrcode/QRViewUtils$forText$copyTextAction$1;
 
-    invoke-direct {v8, v3, v1}, Lcom/vk/qrcode/QRViewUtils$forText$copyTextAction$1;-><init>(Lcom/vk/qrcode/n;Lcom/vk/qrcode/QRParser;)V
+    invoke-direct {v8, v3, v1}, Lcom/vk/qrcode/QRViewUtils$forText$copyTextAction$1;-><init>(Lcom/vk/qrcode/QRTypes4;Lcom/vk/qrcode/QRParser;)V
 
     .line 263
     new-instance v15, Lcom/vk/qrcode/QRViewUtils$p;
 
-    invoke-direct {v15, v4, v5, v8}, Lcom/vk/qrcode/QRViewUtils$p;-><init>(Lcom/vk/qrcode/QRViewUtils$forText$1;Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {v15, v4, v5, v8}, Lcom/vk/qrcode/QRViewUtils$p;-><init>(Lcom/vk/qrcode/QRViewUtils$forText$1;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     .line 264
     new-instance v8, Lkotlin/jvm/internal/Ref$ObjectRef;
@@ -3766,26 +3766,26 @@
     iput-object v4, v8, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
     .line 265
-    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v1, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 266
     sget-object v9, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    invoke-direct {v9, v2, v3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/l;)Ljava/lang/String;
+    invoke-direct {v9, v2, v3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRTypes6;)Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-virtual {v1, v9}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v9}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 267
-    invoke-virtual {v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->g()Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->g()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v9, 0x7f12028c
 
     .line 268
-    invoke-virtual {v1, v9, v15}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(ILcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v9, v15}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(ILcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v14, 0x0
 
@@ -3825,7 +3825,7 @@
 
     const-string v12, "Uri.parse(firstLink)"
 
-    invoke-static {v11, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v11, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v11}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
@@ -3839,7 +3839,7 @@
 
     const-string v9, "context.getString(R.stri\u2026ri.parse(firstLink).host)"
 
-    invoke-static {v10, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v12, 0x0
 
@@ -3857,7 +3857,7 @@
 
     move-object/from16 v14, v17
 
-    invoke-static/range {v9 .. v14}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/h$e;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static/range {v9 .. v14}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     goto :goto_2
 
@@ -3874,7 +3874,7 @@
     const/4 v10, 0x0
 
     .line 271
-    invoke-static {v1, v7, v4, v9, v10}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/CharSequence;IILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static {v1, v7, v4, v9, v10}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/CharSequence;IILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 272
     new-instance v9, Lcom/vk/qrcode/QRViewUtils$forText$$inlined$apply$lambda$1;
@@ -3891,9 +3891,9 @@
 
     move-object v12, v8
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/qrcode/QRViewUtils$forText$$inlined$apply$lambda$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/n;Lcom/vk/qrcode/QRViewUtils$p;Ljava/lang/String;ILjava/lang/CharSequence;Lkotlin/jvm/internal/Ref$ObjectRef;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/qrcode/QRViewUtils$forText$$inlined$apply$lambda$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRTypes4;Lcom/vk/qrcode/QRViewUtils$p;Ljava/lang/String;ILjava/lang/CharSequence;Lkotlin/jvm/internal/Ref$ObjectRef;)V
 
-    invoke-virtual {v11, v9}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v11, v9}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v3, 0x1
 
@@ -3907,13 +3907,13 @@
     const/4 v10, 0x0
 
     .line 273
-    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/c;
+    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v4, v3, v10}, Lcom/vk/core/dialogs/bottomsheet/c;-><init>(ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v4, v3, v10}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v11, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v11, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 274
     sget-object v1, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
@@ -3922,7 +3922,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v11, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v11, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 275
     :goto_3
@@ -3930,17 +3930,17 @@
 
     if-eqz v1, :cond_5
 
-    invoke-virtual {v11, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v11, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 276
-    sget-object v1, Lcom/vk/qrcode/QRViewUtils;->l:Lcom/vk/core/dialogs/bottomsheet/h$d;
+    sget-object v1, Lcom/vk/qrcode/QRViewUtils;->l:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v11, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v11, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 277
-    invoke-static {v11, v10, v3, v10}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v11, v10, v3, v10}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v1
 
@@ -3949,21 +3949,21 @@
     .line 278
     iget-object v1, v12, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    check-cast v1, Lcom/vk/core/dialogs/bottomsheet/e;
+    check-cast v1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
-    sput-object v1, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object v1, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 
     .line 279
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 
     .line 280
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v10
 .end method
@@ -3999,7 +3999,7 @@
 
     const-string v7, "app.icon.getImageByWidth(PHOTO_SIZE)"
 
-    invoke-static {v4, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
@@ -4012,7 +4012,7 @@
 
     const-string v8, "app.title"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v7, 0x7f120c11
 
@@ -4038,7 +4038,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v6}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v3, v6}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v14
 
@@ -4071,7 +4071,7 @@
     const/16 v20, 0x0
 
     .line 182
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -4080,11 +4080,11 @@
     .locals 1
 
     .line 309
-    sget-object v0, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/e;
+    sget-object v0, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
 
     :cond_0
     const/4 v0, 0x0
@@ -4095,7 +4095,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;)V
+.method private final a(Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;)V
     .locals 21
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -4106,8 +4106,8 @@
             "Ljava/lang/String;",
             "Ljava/lang/Integer;",
             "Z",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
             "Landroid/graphics/drawable/Drawable;",
             "Z",
@@ -4118,21 +4118,21 @@
             "Lkotlin/Pair<",
             "Ljava/lang/String;",
             "+",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;>;",
             "Lkotlin/Pair<",
             "Ljava/lang/String;",
             "+",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;>;",
             "Lcom/vk/qrcode/QRViewUtils$a;",
             "Lcom/vk/qrcode/QRViewUtils$a;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vk/core/dialogs/bottomsheet/e;",
-            "Lkotlin/m;",
+            "Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -4185,16 +4185,16 @@
 
     .line 283
     :goto_1
-    new-instance v8, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v8, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     move-object/from16 v0, p2
 
-    invoke-direct {v8, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v8, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     if-eqz v1, :cond_2
 
     .line 284
-    invoke-virtual {v8, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 285
     :cond_2
@@ -4244,7 +4244,7 @@
 
     move/from16 v18, p9
 
-    invoke-direct/range {v0 .. v18}, Lcom/vk/qrcode/QRViewUtils$showForQR$$inlined$apply$lambda$1;-><init>(Landroid/graphics/drawable/Drawable;Lkotlin/jvm/b/a;Lcom/vk/qrcode/QRParser;Ljava/lang/String;Ljava/lang/Integer;ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$x;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;Z)V
+    invoke-direct/range {v0 .. v18}, Lcom/vk/qrcode/QRViewUtils$showForQR$$inlined$apply$lambda$1;-><init>(Landroid/graphics/drawable/Drawable;Lkotlin/jvm/b/Functions;Lcom/vk/qrcode/QRParser;Ljava/lang/String;Ljava/lang/Integer;ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$x;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;Z)V
 
     const/4 v0, 0x1
 
@@ -4259,9 +4259,9 @@
 
     move-object/from16 v3, v20
 
-    invoke-direct {v2, v3, v4}, Lcom/vk/qrcode/QRViewUtils$$special$$inlined$let$lambda$1;-><init>(Lcom/vk/core/dialogs/bottomsheet/e$a;Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v3, v4}, Lcom/vk/qrcode/QRViewUtils$$special$$inlined$let$lambda$1;-><init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lkotlin/jvm/b/Functions;)V
 
-    invoke-virtual {v3, v1, v0, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;ZLkotlin/jvm/b/a;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1, v0, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;ZLkotlin/jvm/b/Functions;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     goto :goto_2
 
@@ -4281,21 +4281,21 @@
     .line 288
     new-instance v2, Lcom/vk/qrcode/QRViewUtils$$special$$inlined$let$lambda$2;
 
-    invoke-direct {v2, v3, v4}, Lcom/vk/qrcode/QRViewUtils$$special$$inlined$let$lambda$2;-><init>(Lcom/vk/core/dialogs/bottomsheet/e$a;Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v3, v4}, Lcom/vk/qrcode/QRViewUtils$$special$$inlined$let$lambda$2;-><init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Lkotlin/jvm/b/Functions;)V
 
-    invoke-virtual {v3, v1, v0, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(IZLkotlin/jvm/b/a;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1, v0, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(IZLkotlin/jvm/b/Functions;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     :cond_4
     if-eqz p6, :cond_5
 
     .line 289
-    invoke-virtual {v3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->e()Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->e()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     goto :goto_3
 
     .line 290
     :cond_5
-    invoke-virtual {v3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->f()Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->f()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     :goto_3
     move-object/from16 v1, p8
@@ -4303,13 +4303,13 @@
     if-eqz v1, :cond_6
 
     .line 291
-    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     :cond_6
     move-object/from16 v1, p10
 
     .line 292
-    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     move-object/from16 v1, p11
 
@@ -4318,7 +4318,7 @@
     move/from16 v2, p12
 
     .line 293
-    invoke-virtual {v3, v1, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/CharSequence;I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/CharSequence;I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     :cond_7
     move-object/from16 v1, p13
@@ -4326,11 +4326,11 @@
     if-eqz v1, :cond_8
 
     .line 294
-    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 295
     :cond_8
-    invoke-virtual {v3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->g()Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->g()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     if-eqz p14, :cond_9
 
@@ -4360,7 +4360,7 @@
     move-object/from16 p6, v5
 
     .line 297
-    invoke-static/range {p1 .. p6}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/h$e;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static/range {p1 .. p6}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     :cond_9
     if-eqz p16, :cond_a
@@ -4376,7 +4376,7 @@
 
     move-object/from16 v10, p7
 
-    invoke-virtual {v3, v1, v10, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/h$e;Z)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1, v10, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/CharSequence;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;Z)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     goto :goto_4
 
@@ -4394,7 +4394,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 300
-    invoke-virtual {v3, v1, v10}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;Lcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1, v10}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     :cond_b
     if-eqz p17, :cond_c
@@ -4408,7 +4408,7 @@
 
     move-result v2
 
-    invoke-virtual {v3, v1, v10, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;Lcom/vk/core/dialogs/bottomsheet/h$e;Z)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1, v10, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;Z)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     :cond_c
     move-object/from16 v1, p18
@@ -4418,9 +4418,9 @@
     .line 302
     new-instance v2, Lcom/vk/qrcode/QRViewUtils$w;
 
-    invoke-direct {v2, v1}, Lcom/vk/qrcode/QRViewUtils$w;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/qrcode/QRViewUtils$w;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v3, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$f;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 303
     :cond_d
@@ -4428,28 +4428,28 @@
 
     if-eqz v1, :cond_f
 
-    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 304
-    sget-object v1, Lcom/vk/qrcode/QRViewUtils;->l:Lcom/vk/core/dialogs/bottomsheet/h$d;
+    sget-object v1, Lcom/vk/qrcode/QRViewUtils;->l:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
 
     if-eqz v1, :cond_e
 
-    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     move/from16 v1, p9
 
     .line 305
-    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Z)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Z)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v1, 0x0
 
     .line 306
-    invoke-static {v3, v1, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v3, v1, v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object v0, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 
@@ -4457,7 +4457,7 @@
     const/4 v1, 0x0
 
     .line 307
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -4465,52 +4465,52 @@
     const/4 v1, 0x0
 
     .line 308
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
 
-.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/d;Ljava/lang/Object;)V
+.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes9;Ljava/lang/Object;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/d;Ljava/lang/Object;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes9;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 0
 
     .line 6
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->f(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->f(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/common/data/ApiApplication;)V
+.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/common/data/ApiApplication;)V
     .locals 0
 
     .line 7
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/common/data/ApiApplication;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/common/data/ApiApplication;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/group/Group;)V
+.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/group/Group;)V
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/group/Group;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/group/Group;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
     .locals 0
 
     .line 5
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
 
     return-void
 .end method
@@ -4533,7 +4533,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+.method static synthetic a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
     .locals 22
 
     move/from16 v0, p19
@@ -4741,21 +4741,21 @@
     move-object/from16 v13, p10
 
     .line 281
-    invoke-direct/range {v3 .. v21}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v3 .. v21}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Lio/reactivex/disposables/b;Landroid/content/Context;)V
+.method public static final synthetic a(Lcom/vk/qrcode/QRViewUtils;Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
     .locals 0
 
     .line 10
-    invoke-direct {p0, p1, p2}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/qrcode/i;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
+.method private final a(Lcom/vk/qrcode/QRTypes7;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
     .locals 12
 
     .line 111
@@ -4780,15 +4780,15 @@
 
     .line 112
     :goto_0
-    new-instance v0, Lcom/vk/api/execute/e;
+    new-instance v0, Lcom/vk/api/execute/ExecuteResolveScreenName;
 
-    invoke-virtual {p1}, Lcom/vk/qrcode/i;->l()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/qrcode/QRTypes7;->l()Ljava/lang/String;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/qrcode/i;->j()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/qrcode/QRTypes7;->j()Ljava/lang/String;
 
     move-result-object v4
 
@@ -4806,12 +4806,12 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v2 .. v11}, Lcom/vk/api/execute/e;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v11}, Lcom/vk/api/execute/ExecuteResolveScreenName;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v2, 0x1
 
     .line 113
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -4828,50 +4828,50 @@
     move-object v4, p2
 
     .line 114
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 115
-    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lc/a/m;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 116
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$s;
 
-    invoke-direct {v1, p1, p3}, Lcom/vk/qrcode/QRViewUtils$s;-><init>(Lcom/vk/qrcode/i;Lcom/vk/qrcode/QRParser;)V
+    invoke-direct {v1, p1, p3}, Lcom/vk/qrcode/QRViewUtils$s;-><init>(Lcom/vk/qrcode/QRTypes7;Lcom/vk/qrcode/QRParser;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 117
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$t;
 
-    invoke-direct {v1, p2, p3, p1}, Lcom/vk/qrcode/QRViewUtils$t;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {v1, p2, p3, p1}, Lcom/vk/qrcode/QRViewUtils$t;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p3, "ExecuteResolveScreenName\u2026      }\n                }"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 118
-    invoke-direct {p0, p1, p2}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     return-void
 
     .line 119
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
 
-.method private final a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+.method private final a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
     .locals 1
 
     .line 367
@@ -4886,19 +4886,19 @@
 
     if-eqz p2, :cond_1
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/Disposable;
 
     :cond_1
     return-void
 .end method
 
-.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)Z
+.method private final a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)Z
     .locals 23
 
     move-object/from16 v2, p1
 
     .line 120
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/i;->j()Ljava/lang/String;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes7;->j()Ljava/lang/String;
 
     move-result-object v0
 
@@ -4909,7 +4909,7 @@
     const-string v1, "uri"
 
     .line 121
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -4932,7 +4932,7 @@
 
     const-string v3, "fest"
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -4948,7 +4948,7 @@
     const-string v1, "publish_photo"
 
     .line 123
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/d0;->b(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/UriExt;->b(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4977,18 +4977,18 @@
     move-result v1
 
     .line 126
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v3
 
     const-string v4, "VKAccountManager.getCurrent()"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
     .line 127
-    invoke-virtual {v3}, Lb/h/h/d/c;->e0()Lcom/vk/dto/common/Image;
+    invoke-virtual {v3}, Lcom/vk/auth/api/VKAccount;->e0()Lcom/vk/dto/common/Image;
 
     move-result-object v5
 
@@ -5009,7 +5009,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v3}, Lb/h/h/d/c;->d0()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/vk/auth/api/VKAccount;->d0()Ljava/lang/String;
 
     move-result-object v1
 
@@ -5037,7 +5037,7 @@
 
     const-string v11, "context.getString(R.string.qr_fest_publish_title)"
 
-    invoke-static {v1, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f120c27
 
@@ -5063,7 +5063,7 @@
 
     new-instance v5, Lcom/vk/qrcode/QRViewUtils$checkAndHandleVkFestPublishLink$1;
 
-    invoke-direct {v5, v3, v0, v2}, Lcom/vk/qrcode/QRViewUtils$checkAndHandleVkFestPublishLink$1;-><init>(Lb/h/h/d/c;Ljava/lang/String;Landroid/app/Activity;)V
+    invoke-direct {v5, v3, v0, v2}, Lcom/vk/qrcode/QRViewUtils$checkAndHandleVkFestPublishLink$1;-><init>(Lcom/vk/auth/api/VKAccount;Ljava/lang/String;Landroid/app/Activity;)V
 
     invoke-direct {v1, v15, v5}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
@@ -5092,7 +5092,7 @@
     const/4 v5, 0x0
 
     .line 131
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return v21
 
@@ -5169,7 +5169,7 @@
     return p1
 .end method
 
-.method private final b(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method private final b(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 9
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -5178,7 +5178,7 @@
     .end annotation
 
     .line 31
-    invoke-virtual {p3}, Lcom/vk/qrcode/i;->a()Lc/a/m;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes7;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -5199,14 +5199,14 @@
     move-object v1, p1
 
     .line 32
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 33
-    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lc/a/m;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -5215,22 +5215,22 @@
     .line 34
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$forArticle$1;
 
-    invoke-direct {v1, p1, p3, p2}, Lcom/vk/qrcode/QRViewUtils$forArticle$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/i;Lcom/vk/qrcode/QRParser;)V
+    invoke-direct {v1, p1, p3, p2}, Lcom/vk/qrcode/QRViewUtils$forArticle$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRTypes7;Lcom/vk/qrcode/QRParser;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
     .line 35
-    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     :cond_0
     return-void
 .end method
 
-.method private final b(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+.method private final b(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
     .locals 23
 
     move-object/from16 v7, p1
@@ -5268,7 +5268,7 @@
     invoke-virtual {v10, v0}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     .line 7
-    new-instance v12, Lcom/vk/core/drawable/b;
+    new-instance v12, Lcom/vk/core/drawable/CenteredImageSpan;
 
     sget-object v0, Lcom/vk/core/utils/VerifyInfoHelper;->h:Lcom/vk/core/utils/VerifyInfoHelper;
 
@@ -5276,7 +5276,7 @@
 
     const-string v2, "profile.verifyInfo"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -5290,7 +5290,7 @@
 
     move-result-object v0
 
-    invoke-direct {v12, v0}, Lcom/vk/core/drawable/b;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v12, v0}, Lcom/vk/core/drawable/CenteredImageSpan;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     invoke-virtual {v10}, Landroid/text/SpannableStringBuilder;->length()I
 
@@ -5343,13 +5343,13 @@
 
     .line 9
     :goto_1
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
     iget-object v2, v8, Lcom/vk/dto/user/UserProfile;->a0:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v2}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -5395,7 +5395,7 @@
 
     invoke-direct {v2, v8}, Lcom/vk/qrcode/QRViewUtils$forUser$addToFriendsAction$1;-><init>(Lcom/vk/dto/user/UserProfile;)V
 
-    invoke-static {v0, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -5408,9 +5408,9 @@
 
     new-instance v3, Lcom/vk/qrcode/QRViewUtils$forUser$openProfileAction$1;
 
-    invoke-direct {v3, v15}, Lcom/vk/qrcode/QRViewUtils$forUser$openProfileAction$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v3, v15}, Lcom/vk/qrcode/QRViewUtils$forUser$openProfileAction$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {v2, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v2, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v2
 
@@ -5423,9 +5423,9 @@
 
     new-instance v4, Lcom/vk/qrcode/QRViewUtils$forUser$addToBookmarksAction$1;
 
-    invoke-direct {v4, v6, v8}, Lcom/vk/qrcode/QRViewUtils$forUser$addToBookmarksAction$1;-><init>(Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+    invoke-direct {v4, v6, v8}, Lcom/vk/qrcode/QRViewUtils$forUser$addToBookmarksAction$1;-><init>(Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
 
-    invoke-static {v3, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v3, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v3
 
@@ -5438,20 +5438,20 @@
 
     new-instance v5, Lcom/vk/qrcode/QRViewUtils$forUser$removeFromBookmarksAction$1;
 
-    invoke-direct {v5, v6, v8}, Lcom/vk/qrcode/QRViewUtils$forUser$removeFromBookmarksAction$1;-><init>(Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+    invoke-direct {v5, v6, v8}, Lcom/vk/qrcode/QRViewUtils$forUser$removeFromBookmarksAction$1;-><init>(Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
 
-    invoke-static {v4, v5}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v4, v5}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v4
 
     .line 17
     iget v5, v8, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v12
 
-    invoke-interface {v12}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v12}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v12
 
@@ -5466,7 +5466,7 @@
 
     .line 18
     :goto_4
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/i;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes7;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v6
 
@@ -5535,7 +5535,7 @@
 
     invoke-direct {v13, v7, v8}, Lcom/vk/qrcode/QRViewUtils$forUser$2;-><init>(Landroid/app/Activity;Lcom/vk/dto/user/UserProfile;)V
 
-    invoke-static {v0, v13}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v13}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -5571,14 +5571,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/jvm/b/a;
+    check-cast v0, Lkotlin/jvm/b/Functions;
 
     .line 22
     invoke-virtual {v7, v13}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v13
 
-    invoke-static {v13, v0}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v13, v0}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v16
 
@@ -5603,15 +5603,15 @@
 
     const-string v13, "context.getString(openProfileAction.first)"
 
-    invoke-static {v12, v13}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v12, v13}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Lkotlin/Pair;->d()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lkotlin/jvm/b/a;
+    check-cast v2, Lkotlin/jvm/b/Functions;
 
-    invoke-direct {v0, v12, v2, v9}, Lcom/vk/qrcode/QRViewUtils$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;Z)V
+    invoke-direct {v0, v12, v2, v9}, Lcom/vk/qrcode/QRViewUtils$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)V
 
     move-object/from16 v17, v0
 
@@ -5645,7 +5645,7 @@
 
     invoke-direct {v2, v7, v8}, Lcom/vk/qrcode/QRViewUtils$forUser$profileNegativeAction$1;-><init>(Landroid/app/Activity;Lcom/vk/dto/user/UserProfile;)V
 
-    invoke-static {v0, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -5702,7 +5702,7 @@
 
     const-string v2, "tuple.first"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Ljava/lang/String;
 
@@ -5710,9 +5710,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lkotlin/jvm/b/a;
+    check-cast v2, Lkotlin/jvm/b/Functions;
 
-    invoke-direct {v0, v1, v2, v11}, Lcom/vk/qrcode/QRViewUtils$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;Z)V
+    invoke-direct {v0, v1, v2, v11}, Lcom/vk/qrcode/QRViewUtils$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)V
 
     move-object/from16 v22, v0
 
@@ -5764,12 +5764,12 @@
     move-object/from16 v17, v22
 
     .line 30
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final b(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/l;)V
+.method private final b(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes6;)V
     .locals 21
 
     move-object/from16 v4, p1
@@ -5785,21 +5785,21 @@
     .line 36
     new-instance v6, Lcom/vk/qrcode/QRViewUtils$forWifi$buttonAction$1;
 
-    invoke-direct {v6, v5}, Lcom/vk/qrcode/QRViewUtils$forWifi$buttonAction$1;-><init>(Lcom/vk/qrcode/l;)V
+    invoke-direct {v6, v5}, Lcom/vk/qrcode/QRViewUtils$forWifi$buttonAction$1;-><init>(Lcom/vk/qrcode/QRTypes6;)V
 
     const v3, 0x7f08089c
 
     const v7, 0x7f040022
 
     .line 37
-    invoke-static {v3, v7}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v3, v7}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v3
 
     move-object/from16 v15, p0
 
     .line 38
-    invoke-direct {v15, v4, v5}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/l;)Ljava/lang/String;
+    invoke-direct {v15, v4, v5}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRTypes6;)Ljava/lang/String;
 
     move-result-object v10
 
@@ -5817,7 +5817,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v6}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v4, v6}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v14
 
@@ -5850,16 +5850,16 @@
     const/16 v20, 0x0
 
     .line 41
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+.method public static final synthetic b(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/qrcode/QRViewUtils;->b(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/qrcode/QRViewUtils;->b(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
 
     return-void
 .end method
@@ -5873,11 +5873,11 @@
     return p0
 .end method
 
-.method private final c(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method private final c(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 9
 
     .line 3
-    invoke-virtual {p3}, Lcom/vk/qrcode/i;->a()Lc/a/m;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes7;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -5898,14 +5898,14 @@
     move-object v1, p1
 
     .line 4
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lc/a/m;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -5914,22 +5914,22 @@
     .line 6
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$j;
 
-    invoke-direct {v1, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils$j;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {v1, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils$j;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
     .line 7
-    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     :cond_0
     return-void
 .end method
 
-.method private final c(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+.method private final c(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
     .locals 23
 
     move-object/from16 v2, p1
@@ -6007,14 +6007,14 @@
 
     const-string v5, "context.getString(R.stri\u2026ney_transfer_title, name)"
 
-    invoke-static {v10, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     new-instance v5, Lcom/vk/qrcode/QRViewUtils$forVkPay$continueAction$1;
 
     move-object/from16 v6, p3
 
-    invoke-direct {v5, v2, v6}, Lcom/vk/qrcode/QRViewUtils$forVkPay$continueAction$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/i;)V
+    invoke-direct {v5, v2, v6}, Lcom/vk/qrcode/QRViewUtils$forVkPay$continueAction$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRTypes7;)V
 
     const/4 v6, 0x0
 
@@ -6055,7 +6055,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v5}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v14
 
@@ -6090,25 +6090,25 @@
     move-object/from16 v7, v22
 
     .line 16
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+.method public static final synthetic c(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/qrcode/QRViewUtils;->c(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/qrcode/QRViewUtils;->c(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
 
     return-void
 .end method
 
-.method private final d(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method private final d(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 2
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)Z
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)Z
 
     move-result v0
 
@@ -6118,7 +6118,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p3}, Lcom/vk/qrcode/i;->j()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes7;->j()Ljava/lang/String;
 
     move-result-object v0
 
@@ -6128,7 +6128,7 @@
 
     const-string v1, "Uri.parse(action.data())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
 
@@ -6141,23 +6141,23 @@
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-direct {p0, p3, p1, p2}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/i;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
+    invoke-direct {p0, p3, p1, p2}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRTypes7;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
 
     goto :goto_0
 
     .line 4
     :cond_1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->f(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->f(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     :goto_0
     return-void
 .end method
 
-.method private final e(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method private final e(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 9
 
     .line 1
-    invoke-virtual {p3}, Lcom/vk/qrcode/i;->a()Lc/a/m;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes7;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -6178,7 +6178,7 @@
     move-object v1, p1
 
     .line 2
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -6187,26 +6187,26 @@
     .line 3
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$k;
 
-    invoke-direct {v1, p3, p1, p2}, Lcom/vk/qrcode/QRViewUtils$k;-><init>(Lcom/vk/qrcode/i;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
+    invoke-direct {v1, p3, p1, p2}, Lcom/vk/qrcode/QRViewUtils$k;-><init>(Lcom/vk/qrcode/QRTypes7;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
 
     .line 4
     sget-object p2, Lcom/vk/qrcode/QRViewUtils$l;->a:Lcom/vk/qrcode/QRViewUtils$l;
 
     .line 5
-    invoke-virtual {v0, v1, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
     .line 6
-    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     :cond_0
     return-void
 .end method
 
-.method private final f(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method private final f(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 21
 
     move-object/from16 v2, p1
@@ -6214,7 +6214,7 @@
     move-object/from16 v0, p3
 
     .line 1
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/i;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes7;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v1
 
@@ -6237,9 +6237,9 @@
     .line 2
     new-instance v3, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$1;
 
-    invoke-direct {v3, v0}, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$1;-><init>(Lcom/vk/qrcode/i;)V
+    invoke-direct {v3, v0}, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$1;-><init>(Lcom/vk/qrcode/QRTypes7;)V
 
-    invoke-static {v1, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -6258,12 +6258,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lkotlin/jvm/b/a;
+    check-cast v1, Lkotlin/jvm/b/Functions;
 
     .line 4
     new-instance v15, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$addToFavoritesAction$1;
 
-    invoke-direct {v15, v0}, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$addToFavoritesAction$1;-><init>(Lcom/vk/qrcode/i;)V
+    invoke-direct {v15, v0}, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$addToFavoritesAction$1;-><init>(Lcom/vk/qrcode/QRTypes7;)V
 
     .line 5
     sget-object v18, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$onShowListener$1;->a:Lcom/vk/qrcode/QRViewUtils$forOtherLinks$onShowListener$1;
@@ -6281,7 +6281,7 @@
 
     const-string v5, "context.getString(R.string.qr_action_go_to_faves)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v5, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$openBookmarksAction$1;
 
@@ -6289,7 +6289,7 @@
 
     const/4 v6, 0x0
 
-    invoke-direct {v3, v4, v5, v6}, Lcom/vk/qrcode/QRViewUtils$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;Z)V
+    invoke-direct {v3, v4, v5, v6}, Lcom/vk/qrcode/QRViewUtils$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)V
 
     const/4 v3, 0x0
 
@@ -6306,12 +6306,12 @@
     move-object/from16 v13, p0
 
     .line 7
-    invoke-direct {v13, v2, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/l;)Ljava/lang/String;
+    invoke-direct {v13, v2, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRTypes6;)Ljava/lang/String;
 
     move-result-object v10
 
     .line 8
-    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/i;->j()Ljava/lang/String;
+    invoke-virtual/range {p3 .. p3}, Lcom/vk/qrcode/QRTypes7;->j()Ljava/lang/String;
 
     move-result-object v11
 
@@ -6326,7 +6326,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v14
 
@@ -6337,7 +6337,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v15}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v15}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v15
 
@@ -6354,16 +6354,16 @@
     move-object/from16 v2, p1
 
     .line 11
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final g(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method private final g(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 9
 
     .line 1
-    invoke-virtual {p3}, Lcom/vk/qrcode/i;->a()Lc/a/m;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes7;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -6384,14 +6384,14 @@
     move-object v1, p1
 
     .line 2
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lc/a/m;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -6400,26 +6400,26 @@
     .line 4
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$forPost$1;
 
-    invoke-direct {v1, p1, p3, p2}, Lcom/vk/qrcode/QRViewUtils$forPost$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/i;Lcom/vk/qrcode/QRParser;)V
+    invoke-direct {v1, p1, p3, p2}, Lcom/vk/qrcode/QRViewUtils$forPost$1;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRTypes7;Lcom/vk/qrcode/QRParser;)V
 
     .line 5
     sget-object p2, Lcom/vk/qrcode/QRViewUtils$m;->a:Lcom/vk/qrcode/QRViewUtils$m;
 
     .line 6
-    invoke-virtual {v0, v1, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
     .line 7
-    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     :cond_0
     return-void
 .end method
 
-.method private final h(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method private final h(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 21
 
     move-object/from16 v4, p1
@@ -6435,21 +6435,21 @@
     .line 1
     new-instance v6, Lcom/vk/qrcode/QRViewUtils$forShopping$openLinkAction$1;
 
-    invoke-direct {v6, v5}, Lcom/vk/qrcode/QRViewUtils$forShopping$openLinkAction$1;-><init>(Lcom/vk/qrcode/i;)V
+    invoke-direct {v6, v5}, Lcom/vk/qrcode/QRViewUtils$forShopping$openLinkAction$1;-><init>(Lcom/vk/qrcode/QRTypes7;)V
 
     const v3, 0x7f080582
 
     const v7, 0x7f040022
 
     .line 2
-    invoke-static {v3, v7}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v3, v7}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v3
 
     move-object/from16 v15, p0
 
     .line 3
-    invoke-direct {v15, v4, v5}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/l;)Ljava/lang/String;
+    invoke-direct {v15, v4, v5}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRTypes6;)Ljava/lang/String;
 
     move-result-object v10
 
@@ -6467,7 +6467,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v6}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v4, v6}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v14
 
@@ -6500,16 +6500,16 @@
     const/16 v20, 0x0
 
     .line 6
-    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v20}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final i(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method private final i(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 9
 
     .line 1
-    invoke-virtual {p3}, Lcom/vk/qrcode/i;->a()Lc/a/m;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes7;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -6530,14 +6530,14 @@
     move-object v1, p1
 
     .line 2
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lc/a/m;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -6546,26 +6546,26 @@
     .line 4
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$q;
 
-    invoke-direct {v1, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils$q;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {v1, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils$q;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
     .line 5
-    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     :cond_0
     return-void
 .end method
 
-.method private final j(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method private final j(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 9
 
     .line 1
-    invoke-virtual {p3}, Lcom/vk/qrcode/i;->a()Lc/a/m;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes7;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -6586,14 +6586,14 @@
     move-object v1, p1
 
     .line 2
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lc/a/m;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -6602,37 +6602,37 @@
     .line 4
     new-instance v1, Lcom/vk/qrcode/QRViewUtils$r;
 
-    invoke-direct {v1, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils$r;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-direct {v1, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils$r;-><init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
     .line 5
-    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     :cond_0
     return-void
 .end method
 
-.method private final k(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method private final k(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p3, p1, p2}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/i;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
+    invoke-direct {p0, p3, p1, p2}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRTypes7;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/core/dialogs/bottomsheet/e;
+.method public final a()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
     .locals 1
 
     .line 11
-    sget-object v0, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/e;
+    sget-object v0, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-object v0
 .end method
@@ -6665,7 +6665,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 387
-    invoke-static {v1}, Lb/h/g/m/d$b;->a(Ljava/io/Closeable;)V
+    invoke-static {v1}, Lb/h/g/m/FileUtils$b;->a(Ljava/io/Closeable;)V
 
     goto :goto_1
 
@@ -6684,7 +6684,7 @@
     .line 388
     :cond_0
     :try_start_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -6700,18 +6700,18 @@
     :catch_1
     :goto_0
     :try_start_3
-    invoke-static {p2}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
+    invoke-static {p2}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     .line 390
-    invoke-static {v0}, Lb/h/g/m/d$b;->a(Ljava/io/Closeable;)V
+    invoke-static {v0}, Lb/h/g/m/FileUtils$b;->a(Ljava/io/Closeable;)V
 
     :goto_1
     return-object p2
 
     :goto_2
-    invoke-static {v0}, Lb/h/g/m/d$b;->a(Ljava/io/Closeable;)V
+    invoke-static {v0}, Lb/h/g/m/FileUtils$b;->a(Ljava/io/Closeable;)V
 
     throw p1
 .end method
@@ -6814,10 +6814,10 @@
 
     move-object/from16 v19, v3
 
-    invoke-direct/range {v19 .. v29}, Lcom/vk/promo/PromoRootViewController;-><init>(Ljava/util/List;IIIZIIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v19 .. v29}, Lcom/vk/promo/PromoRootViewController;-><init>(Ljava/util/List;IIIZIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 396
-    new-instance v1, Lcom/vk/promo/c$a;
+    new-instance v1, Lcom/vk/promo/PromoFragment$a;
 
     const/4 v4, 0x0
 
@@ -6833,9 +6833,9 @@
 
     move-object v2, v1
 
-    invoke-direct/range {v2 .. v9}, Lcom/vk/promo/c$a;-><init>(Lcom/vk/promo/PromoViewController;ZZZLjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/promo/PromoFragment$a;-><init>(Lcom/vk/promo/PromoViewController;ZZZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v1, v0}, Lcom/vk/navigation/o;->b(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-virtual {v1, v0}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v1
 
@@ -6845,7 +6845,7 @@
     return-void
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/l;)V
+.method public final a(Landroid/content/Context;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes6;)V
     .locals 5
 
     .line 13
@@ -6860,7 +6860,7 @@
 
     invoke-direct {v0}, Lcom/vk/qrcode/QRViewUtils$v;-><init>()V
 
-    sput-object v0, Lcom/vk/qrcode/QRViewUtils;->l:Lcom/vk/core/dialogs/bottomsheet/h$d;
+    sput-object v0, Lcom/vk/qrcode/QRViewUtils;->l:Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
 
     .line 15
     invoke-static {p1}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
@@ -6870,7 +6870,7 @@
     if-eqz p1, :cond_3
 
     .line 16
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->i()Lcom/vk/qrcode/QRTypes$Type;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->i()Lcom/vk/qrcode/QRTypes$Type;
 
     move-result-object v0
 
@@ -6894,9 +6894,9 @@
     :pswitch_0
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    check-cast p3, Lcom/vk/qrcode/d;
+    check-cast p3, Lcom/vk/qrcode/QRTypes9;
 
-    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/d;)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes9;)V
 
     goto/16 :goto_0
 
@@ -6904,9 +6904,9 @@
     :pswitch_1
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    check-cast p3, Lcom/vk/qrcode/n;
+    check-cast p3, Lcom/vk/qrcode/QRTypes4;
 
-    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/n;)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes4;)V
 
     goto/16 :goto_0
 
@@ -6934,9 +6934,9 @@
     :pswitch_4
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    check-cast p3, Lcom/vk/qrcode/m;
+    check-cast p3, Lcom/vk/qrcode/QRTypes5;
 
-    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/m;)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes5;)V
 
     goto :goto_0
 
@@ -6944,9 +6944,9 @@
     :pswitch_5
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    check-cast p3, Lcom/vk/qrcode/k;
+    check-cast p3, Lcom/vk/qrcode/QRTypes1;
 
-    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/k;)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes1;)V
 
     goto :goto_0
 
@@ -6954,9 +6954,9 @@
     :pswitch_6
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    check-cast p3, Lcom/vk/qrcode/g;
+    check-cast p3, Lcom/vk/qrcode/QRTypes;
 
-    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/g;)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes;)V
 
     goto :goto_0
 
@@ -6964,9 +6964,9 @@
     :pswitch_7
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    check-cast p3, Lcom/vk/qrcode/f;
+    check-cast p3, Lcom/vk/qrcode/QRTypes10;
 
-    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/f;)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes10;)V
 
     goto :goto_0
 
@@ -6984,7 +6984,7 @@
     :pswitch_9
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->b(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/l;)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->b(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes6;)V
 
     goto :goto_0
 
@@ -6992,9 +6992,9 @@
     :pswitch_a
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    check-cast p3, Lcom/vk/qrcode/e;
+    check-cast p3, Lcom/vk/qrcode/QRTypes8;
 
-    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/e;)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes8;)V
 
     goto :goto_0
 
@@ -7018,7 +7018,7 @@
 
     aput-object v4, v0, v3
 
-    invoke-virtual {p3}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p3}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v3
 
@@ -7031,9 +7031,9 @@
     .line 29
     move-object v0, p3
 
-    check-cast v0, Lcom/vk/qrcode/i;
+    check-cast v0, Lcom/vk/qrcode/QRTypes7;
 
-    invoke-virtual {v0}, Lcom/vk/qrcode/i;->l()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/qrcode/QRTypes7;->l()Ljava/lang/String;
 
     move-result-object v0
 
@@ -7057,7 +7057,7 @@
     :cond_2
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/l;)V
+    invoke-direct {v0, p1, p2, p3}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes6;)V
 
     goto :goto_0
 
@@ -7143,7 +7143,7 @@
 
     move-object/from16 v4, p2
 
-    invoke-direct/range {v2 .. v9}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;-><init>(Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/b;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationView;-><init>(Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions2;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const v15, -0x77fffffe
 
@@ -7193,7 +7193,7 @@
 
     const-wide/16 v1, 0x12c
 
-    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/ViewUtils;->a(Ljava/lang/Runnable;J)V
 
     return-void
 
@@ -7245,15 +7245,15 @@
     iput-object p6, p4, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
     .line 374
-    new-instance v8, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v8, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v8, p2}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v8, p2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 375
-    invoke-virtual {v8, p3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, p3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 376
-    invoke-virtual {v8, v6}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, v6}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 377
     sget-object p2, Lcom/vk/toggle/Features$Type;->FEATURE_QR_CREATE_QR:Lcom/vk/toggle/Features$Type;
@@ -7269,11 +7269,11 @@
     const v0, 0x7f04024f
 
     .line 378
-    invoke-static {p2, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {p2, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object p2
 
-    invoke-virtual {v8, p2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, p2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 379
     new-instance p2, Lcom/vk/qrcode/QRViewUtils$showSharingBottomSheet$$inlined$let$lambda$1;
@@ -7292,35 +7292,35 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/vk/qrcode/QRViewUtils$showSharingBottomSheet$$inlined$let$lambda$1;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;ILcom/vk/qrcode/QRSharingView;Landroid/content/Context;Landroid/content/DialogInterface$OnDismissListener;)V
 
-    invoke-virtual {v8, p2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, p2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     :cond_0
     const p1, 0x7f040099
 
     .line 380
-    invoke-virtual {v8, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 381
-    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/c;
+    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;
 
     const/4 p2, 0x1
 
-    invoke-direct {p1, v7, p2, p6}, Lcom/vk/core/dialogs/bottomsheet/c;-><init>(ZILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v7, p2, p6}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/high16 p3, 0x3f800000    # 1.0f
 
-    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/bottomsheet/c;->b(F)V
+    invoke-virtual {p1, p3}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;->b(F)V
 
-    invoke-virtual {v8, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     if-eqz p5, :cond_1
 
     .line 382
-    invoke-virtual {v8, p5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v8, p5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 383
     :cond_1
-    invoke-static {v8, p6, p2, p6}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v8, p6, p2, p6}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
@@ -7331,17 +7331,17 @@
 
     invoke-direct {p1, p4}, Lcom/vk/qrcode/QRViewUtils$showSharingBottomSheet$1$1;-><init>(Lkotlin/jvm/internal/Ref$ObjectRef;)V
 
-    invoke-virtual {v6, p1}, Lcom/vk/qrcode/QRSharingView;->setCloseListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v6, p1}, Lcom/vk/qrcode/QRSharingView;->setCloseListener(Lkotlin/jvm/b/Functions;)V
 
     :cond_2
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method public final a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 0
 
     .line 12
-    sput-object p1, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/e;
+    sput-object p1, Lcom/vk/qrcode/QRViewUtils;->j:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method

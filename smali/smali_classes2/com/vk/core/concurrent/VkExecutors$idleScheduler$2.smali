@@ -3,7 +3,7 @@
 .source "VkExecutors.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/core/extensions/l;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/core/extensions/RxExt2;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/core/extensions/l;
+.method public final invoke()Lcom/vk/core/extensions/RxExt2;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/core/extensions/l;
+    new-instance v0, Lcom/vk/core/extensions/RxExt2;
 
-    invoke-direct {v0}, Lcom/vk/core/extensions/l;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/extensions/RxExt2;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/concurrent/VkExecutors$idleScheduler$2;->invoke()Lcom/vk/core/extensions/l;
+    invoke-virtual {p0}, Lcom/vk/core/concurrent/VkExecutors$idleScheduler$2;->invoke()Lcom/vk/core/extensions/RxExt2;
 
     move-result-object v0
 

@@ -41,7 +41,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$a;->a:Lcom/vk/stories/view/StoryView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/e1;->J()V
+    invoke-virtual {v0}, Lcom/vk/stories/view/BaseStoryView;->J()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$a;->a:Lcom/vk/stories/view/StoryView;

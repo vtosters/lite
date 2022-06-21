@@ -40,17 +40,17 @@
     .line 1
     iget-object p1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$f;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/music/podcasts/episode/b;
+    check-cast p1, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/music/podcasts/episode/b;->q()Lcom/vk/dto/podcast/PodcastPage;
+    invoke-virtual {p1}, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;->q()Lcom/vk/dto/podcast/PodcastPage;
 
     move-result-object p1
 
@@ -81,15 +81,15 @@
     .line 4
     iget-object v1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$f;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
 
-    invoke-virtual {v1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {v1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/podcasts/episode/b;
+    check-cast v1, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/music/podcasts/episode/b;->F()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-virtual {v1}, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;->F()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v1
 
@@ -109,7 +109,7 @@
     iget-object p1, p1, Lcom/vk/dto/music/MusicTrack;->P:Ljava/lang/String;
 
     .line 6
-    invoke-static {v0, v1, p1}, Lcom/vk/music/i/a;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/music/i/PodcastsAnalytics;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$f;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
@@ -122,7 +122,7 @@
 
     const-string p1, "context"
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -132,7 +132,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/f;ILjava/lang/Object;)Z
+    invoke-static/range {v2 .. v7}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;ILjava/lang/Object;)Z
 
     :cond_1
     const/4 p1, 0x1

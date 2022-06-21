@@ -3,7 +3,7 @@
 .source "NewsListsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,22 +19,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $holder:Lcom/vtosters/lite/ui/b0/i;
+.field final synthetic $holder:Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/ui/b0/i;)V
+.method constructor <init>(Lcom/vtosters/lite/ui/holder/RecyclerHolder;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->$holder:Lcom/vtosters/lite/ui/b0/i;
+    iput-object p1, p0, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->$holder:Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
     const/4 p1, 0x0
 
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -83,13 +83,13 @@
     move-result v0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->$holder:Lcom/vtosters/lite/ui/b0/i;
+    iget-object v1, p0, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->$holder:Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v2, "holder.itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -101,7 +101,7 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->$holder:Lcom/vtosters/lite/ui/b0/i;
+    iget-object v0, p0, Lcom/vk/newsfeed/NewsListsAdapter$onCreateViewHolder$1;->$holder:Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 

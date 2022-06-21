@@ -3,12 +3,12 @@
 .source "StoryBoxConverter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionSticker;)Lc/a/m;
+    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionSticker;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -51,7 +51,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/airbnb/lottie/d;)Lcom/vk/attachpicker/stickers/b0;
+.method public final a(Lcom/airbnb/lottie/LottieComposition;)Lcom/vk/attachpicker/stickers/LottieSticker;
     .locals 4
 
     .line 1
@@ -64,7 +64,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/attachpicker/stickers/c0;
+    new-instance v0, Lcom/vk/attachpicker/stickers/PackLottieSticker;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/box/StoryBoxConverter$g;->a:Lcom/vk/dto/stories/model/actions/ActionSticker;
 
@@ -80,13 +80,13 @@
 
     iget-object v3, p0, Lcom/vk/stories/clickable/box/StoryBoxConverter$g;->b:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, p1, v3}, Lcom/vk/attachpicker/stickers/c0;-><init>(IILcom/airbnb/lottie/d;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, p1, v3}, Lcom/vk/attachpicker/stickers/PackLottieSticker;-><init>(IILcom/airbnb/lottie/LottieComposition;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    new-instance v0, Lcom/vk/attachpicker/stickers/b0;
+    new-instance v0, Lcom/vk/attachpicker/stickers/LottieSticker;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/box/StoryBoxConverter$g;->b:Ljava/lang/String;
 
@@ -96,7 +96,7 @@
 
     move-result v2
 
-    invoke-direct {v0, p1, v1, v2}, Lcom/vk/attachpicker/stickers/b0;-><init>(Lcom/airbnb/lottie/d;Ljava/lang/String;I)V
+    invoke-direct {v0, p1, v1, v2}, Lcom/vk/attachpicker/stickers/LottieSticker;-><init>(Lcom/airbnb/lottie/LottieComposition;Ljava/lang/String;I)V
 
     :goto_0
     return-object v0
@@ -106,9 +106,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/airbnb/lottie/d;
+    check-cast p1, Lcom/airbnb/lottie/LottieComposition;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$g;->a(Lcom/airbnb/lottie/d;)Lcom/vk/attachpicker/stickers/b0;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$g;->a(Lcom/airbnb/lottie/LottieComposition;)Lcom/vk/attachpicker/stickers/LottieSticker;
 
     move-result-object p1
 

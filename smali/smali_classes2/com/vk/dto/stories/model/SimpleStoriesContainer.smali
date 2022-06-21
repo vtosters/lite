@@ -853,7 +853,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/dto/stories/d/a;->a(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -865,7 +865,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/dto/stories/d/a;->b(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->b(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -914,7 +914,7 @@
     .locals 4
 
     .line 1
-    invoke-static {p0}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {p0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v0
 

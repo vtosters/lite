@@ -1,5 +1,5 @@
 .class public final Lcom/vk/search/fragment/AllSearchFragment$b;
-.super Lcom/vk/lists/m$b;
+.super Lcom/vk/lists/HeaderAdapter$b;
 .source "AllSearchFragment.kt"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/m$b<",
-        "Lcom/vk/common/i/b;",
+        "Lcom/vk/lists/HeaderAdapter$b<",
+        "Lcom/vk/common/i/RecyclerItem;",
         ">;"
     }
 .end annotation
@@ -25,11 +25,11 @@
 # instance fields
 .field private final a:Ljava/lang/String;
 
-.field private final b:Lkotlin/jvm/b/a;
+.field private final b:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -37,22 +37,22 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/m$b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/HeaderAdapter$b;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/search/fragment/AllSearchFragment$b;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/search/fragment/AllSearchFragment$b;->b:Lkotlin/jvm/b/Functions;
 
     const p2, 0x7f120301
 
@@ -63,7 +63,7 @@
 
     const-string p2, "ctx.getString(R.string.discover_search_recent)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/search/fragment/AllSearchFragment$b;->a:Ljava/lang/String;
 
@@ -76,22 +76,22 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/search/fragment/AllSearchFragment$b;->a(Landroid/view/ViewGroup;)Lcom/vk/search/holder/b;
+    invoke-virtual {p0, p1}, Lcom/vk/search/fragment/AllSearchFragment$b;->a(Landroid/view/ViewGroup;)Lcom/vk/search/holder/SearchAllListHeaderHolder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vk/search/holder/b;
+.method public a(Landroid/view/ViewGroup;)Lcom/vk/search/holder/SearchAllListHeaderHolder;
     .locals 2
 
     .line 4
-    new-instance v0, Lcom/vk/search/holder/b;
+    new-instance v0, Lcom/vk/search/holder/SearchAllListHeaderHolder;
 
-    iget-object v1, p0, Lcom/vk/search/fragment/AllSearchFragment$b;->b:Lkotlin/jvm/b/a;
+    iget-object v1, p0, Lcom/vk/search/fragment/AllSearchFragment$b;->b:Lkotlin/jvm/b/Functions;
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/search/holder/b;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/search/holder/SearchAllListHeaderHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions;)V
 
     return-object v0
 .end method
@@ -102,11 +102,11 @@
     if-eqz p1, :cond_0
 
     .line 5
-    check-cast p1, Lcom/vk/search/holder/b;
+    check-cast p1, Lcom/vk/search/holder/SearchAllListHeaderHolder;
 
     iget-object p2, p0, Lcom/vk/search/fragment/AllSearchFragment$b;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lcom/vk/search/holder/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lcom/vk/search/holder/SearchAllListHeaderHolder;->i(Ljava/lang/String;)V
 
     return-void
 
@@ -120,7 +120,7 @@
     throw p1
 .end method
 
-.method public a(Lcom/vk/common/i/b;)Z
+.method public a(Lcom/vk/common/i/RecyclerItem;)Z
     .locals 0
 
     const/4 p1, 0x0
@@ -128,7 +128,7 @@
     return p1
 .end method
 
-.method public a(Lcom/vk/common/i/b;Lcom/vk/common/i/b;II)Z
+.method public a(Lcom/vk/common/i/RecyclerItem;Lcom/vk/common/i/RecyclerItem;II)Z
     .locals 0
 
     const/4 p1, 0x0
@@ -140,9 +140,9 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/common/i/b;
+    check-cast p1, Lcom/vk/common/i/RecyclerItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/search/fragment/AllSearchFragment$b;->a(Lcom/vk/common/i/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/search/fragment/AllSearchFragment$b;->a(Lcom/vk/common/i/RecyclerItem;)Z
 
     move-result p1
 
@@ -153,11 +153,11 @@
     .locals 0
 
     .line 3
-    check-cast p1, Lcom/vk/common/i/b;
+    check-cast p1, Lcom/vk/common/i/RecyclerItem;
 
-    check-cast p2, Lcom/vk/common/i/b;
+    check-cast p2, Lcom/vk/common/i/RecyclerItem;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/search/fragment/AllSearchFragment$b;->a(Lcom/vk/common/i/b;Lcom/vk/common/i/b;II)Z
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/search/fragment/AllSearchFragment$b;->a(Lcom/vk/common/i/RecyclerItem;Lcom/vk/common/i/RecyclerItem;II)Z
 
     move-result p1
 
@@ -172,7 +172,7 @@
     return v0
 .end method
 
-.method public b(Lcom/vk/common/i/b;)Z
+.method public b(Lcom/vk/common/i/RecyclerItem;)Z
     .locals 1
 
     const/4 v0, 0x1
@@ -180,7 +180,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/common/i/b;->b()I
+    invoke-virtual {p1}, Lcom/vk/common/i/RecyclerItem;->b()I
 
     move-result p1
 
@@ -199,9 +199,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/common/i/b;
+    check-cast p1, Lcom/vk/common/i/RecyclerItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/search/fragment/AllSearchFragment$b;->b(Lcom/vk/common/i/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/search/fragment/AllSearchFragment$b;->b(Lcom/vk/common/i/RecyclerItem;)Z
 
     move-result p1
 

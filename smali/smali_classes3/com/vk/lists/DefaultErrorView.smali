@@ -1,5 +1,5 @@
 .class public Lcom/vk/lists/DefaultErrorView;
-.super Lcom/vk/lists/a;
+.super Lcom/vk/lists/AbstractErrorView;
 .source "DefaultErrorView.java"
 
 
@@ -18,7 +18,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/lists/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vk/lists/AbstractErrorView;-><init>(Landroid/content/Context;)V
 
     const-wide/16 v0, 0x0
 
@@ -35,7 +35,7 @@
     .locals 2
 
     .line 4
-    invoke-direct {p0, p1, p2}, Lcom/vk/lists/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/lists/AbstractErrorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const-wide/16 v0, 0x0
 
@@ -52,7 +52,7 @@
     .locals 0
 
     .line 7
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/lists/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/lists/AbstractErrorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const-wide/16 p2, 0x0
 
@@ -265,7 +265,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/lists/DefaultErrorView;->f:Landroid/widget/TextView;
 
-    invoke-static {v0, p1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, p1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     return-void
 .end method

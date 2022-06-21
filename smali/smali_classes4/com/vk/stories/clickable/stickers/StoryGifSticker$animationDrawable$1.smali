@@ -3,12 +3,12 @@
 .source "StoryGifSticker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/stickers/StoryGifSticker;-><init>(Lcom/facebook/imagepipeline/animated/base/d;Ljava/lang/String;)V
+    value = Lcom/vk/stories/clickable/stickers/StoryGifSticker;-><init>(Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/facebook/v/a/c/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/facebook/v/a/c/AnimatedDrawable2;",
         ">;"
     }
 .end annotation
@@ -45,18 +45,18 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/facebook/v/a/c/a;
+.method public final invoke()Lcom/facebook/v/a/c/AnimatedDrawable2;
     .locals 3
 
     .line 2
-    invoke-static {}, Lcom/facebook/x/d/j;->n()Lcom/facebook/x/d/j;
+    invoke-static {}, Lcom/facebook/x/d/ImagePipelineFactory;->n()Lcom/facebook/x/d/ImagePipelineFactory;
 
     move-result-object v0
 
     .line 3
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/facebook/x/d/j;->a(Landroid/content/Context;)Lcom/facebook/x/f/a;
+    invoke-virtual {v0, v1}, Lcom/facebook/x/d/ImagePipelineFactory;->a(Landroid/content/Context;)Lcom/facebook/x/f/DrawableFactory;
 
     move-result-object v0
 
@@ -64,26 +64,26 @@
 
     const-string v1, "pipelineFactory.getAnima\u2026pContextHolder.context)!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
-    new-instance v1, Lcom/facebook/x/g/a;
+    new-instance v1, Lcom/facebook/x/g/CloseableAnimatedImage;
 
     iget-object v2, p0, Lcom/vk/stories/clickable/stickers/StoryGifSticker$animationDrawable$1;->this$0:Lcom/vk/stories/clickable/stickers/StoryGifSticker;
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->r()Lcom/facebook/imagepipeline/animated/base/d;
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/stickers/StoryGifSticker;->r()Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/facebook/x/g/a;-><init>(Lcom/facebook/imagepipeline/animated/base/d;)V
+    invoke-direct {v1, v2}, Lcom/facebook/x/g/CloseableAnimatedImage;-><init>(Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;)V
 
-    invoke-interface {v0, v1}, Lcom/facebook/x/f/a;->b(Lcom/facebook/x/g/c;)Landroid/graphics/drawable/Drawable;
+    invoke-interface {v0, v1}, Lcom/facebook/x/f/DrawableFactory;->b(Lcom/facebook/x/g/CloseableImage;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/facebook/v/a/c/a;
+    check-cast v0, Lcom/facebook/v/a/c/AnimatedDrawable2;
 
     return-object v0
 
@@ -98,7 +98,7 @@
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -109,7 +109,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/clickable/stickers/StoryGifSticker$animationDrawable$1;->invoke()Lcom/facebook/v/a/c/a;
+    invoke-virtual {p0}, Lcom/vk/stories/clickable/stickers/StoryGifSticker$animationDrawable$1;->invoke()Lcom/facebook/v/a/c/AnimatedDrawable2;
 
     move-result-object v0
 

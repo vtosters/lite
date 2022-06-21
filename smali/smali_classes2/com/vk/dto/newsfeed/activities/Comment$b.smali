@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -142,7 +142,7 @@
     if-eqz v11, :cond_1
 
     .line 9
-    invoke-static {v11, p2}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v11, p2}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v11
 
@@ -166,7 +166,7 @@
 
     if-eqz p1, :cond_4
 
-    invoke-static {p1}, Lcom/vk/core/extensions/m;->b(Lorg/json/JSONArray;)[I
+    invoke-static {p1}, Lcom/vk/core/extensions/JsonObjectExt;->b(Lorg/json/JSONArray;)[I
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "DialogsEntryStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/internal/storage/models/a;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/internal/storage/models/a;)V
+.method public final a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)V
     .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$resetReadTillLocal$2;->this$0:Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)Lcom/vk/im/engine/internal/storage/b;
+    invoke-static {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->a(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -64,7 +64,7 @@
 
     new-array v1, v1, [Ljava/lang/Integer;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/a;->y()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->y()I
 
     move-result v2
 
@@ -76,7 +76,7 @@
 
     aput-object v2, v1, v3
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/a;->h()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->h()I
 
     move-result v2
 
@@ -88,7 +88,7 @@
 
     aput-object v2, v1, v3
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/a;->getId()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->getId()I
 
     move-result p1
 
@@ -111,11 +111,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$resetReadTillLocal$2;->a(Lcom/vk/im/engine/internal/storage/models/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$resetReadTillLocal$2;->a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

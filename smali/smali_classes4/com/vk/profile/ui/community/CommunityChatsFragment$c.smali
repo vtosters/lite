@@ -38,7 +38,7 @@
     .locals 7
 
     .line 1
-    new-instance p1, Lcom/vk/webapp/fragments/c$a;
+    new-instance p1, Lcom/vk/webapp/fragments/CommunityManageFragment$a;
 
     iget-object v0, p0, Lcom/vk/profile/ui/community/CommunityChatsFragment$c;->a:Lcom/vk/profile/ui/community/CommunityChatsFragment;
 
@@ -62,7 +62,7 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/webapp/fragments/c$a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/webapp/fragments/CommunityManageFragment$a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iget-object v0, p0, Lcom/vk/profile/ui/community/CommunityChatsFragment$c;->a:Lcom/vk/profile/ui/community/CommunityChatsFragment;
 
@@ -70,7 +70,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     const/4 p1, 0x1
 

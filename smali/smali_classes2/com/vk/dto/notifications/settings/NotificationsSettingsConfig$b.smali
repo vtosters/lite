@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -50,7 +50,7 @@
 
     const-string v0, "jo.optString(\"id\")"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "label"
 
@@ -92,12 +92,12 @@
     return-object v6
 .end method
 
-.method public final a()Lkotlin/jvm/b/b;
+.method public final a()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lorg/json/JSONObject;",
             "Lcom/vk/dto/notifications/settings/NotificationsSettingsConfig;",
             ">;"
@@ -105,7 +105,7 @@
     .end annotation
 
     .line 8
-    invoke-static {}, Lcom/vk/dto/notifications/settings/NotificationsSettingsConfig;->x1()Lkotlin/jvm/b/b;
+    invoke-static {}, Lcom/vk/dto/notifications/settings/NotificationsSettingsConfig;->x1()Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 

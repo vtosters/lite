@@ -3,7 +3,7 @@
 .source "VkAppCallback.kt"
 
 # interfaces
-.implements Lcom/vk/ui/photoviewer/e;
+.implements Lcom/vk/ui/photoviewer/PhotoUpdater;
 
 
 # annotations
@@ -40,17 +40,17 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/b;)V
+.method public a(Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/photo/Photo;",
             "Z",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/photo/Photo;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -58,7 +58,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback$g;->a:Lcom/vk/ui/photoviewer/VkAppCallback;
 
-    invoke-static {v0, p1, p2, p3}, Lcom/vk/ui/photoviewer/VkAppCallback;->a(Lcom/vk/ui/photoviewer/VkAppCallback;Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/b;)V
+    invoke-static {v0, p1, p2, p3}, Lcom/vk/ui/photoviewer/VkAppCallback;->a(Lcom/vk/ui/photoviewer/VkAppCallback;Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

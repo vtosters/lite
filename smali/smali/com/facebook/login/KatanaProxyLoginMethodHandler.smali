@@ -115,7 +115,7 @@
     move-object v3, v9
 
     .line 11
-    invoke-static/range {v0 .. v8}, Lcom/facebook/internal/n;->b(Landroid/content/Context;Ljava/lang/String;Ljava/util/Collection;Ljava/lang/String;ZZLcom/facebook/login/DefaultAudience;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-static/range {v0 .. v8}, Lcom/facebook/internal/NativeProtocol;->b(Landroid/content/Context;Ljava/lang/String;Ljava/util/Collection;Ljava/lang/String;ZZLcom/facebook/login/DefaultAudience;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object p1
 

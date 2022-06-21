@@ -40,15 +40,15 @@
     .line 1
     iget-object p1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$i;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/music/podcasts/episode/b;
+    check-cast p1, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/music/podcasts/episode/b;->q()Lcom/vk/dto/podcast/PodcastPage;
+    invoke-virtual {p1}, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;->q()Lcom/vk/dto/podcast/PodcastPage;
 
     move-result-object p1
 
@@ -88,7 +88,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/im/ui/utils/b;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/utils/ClipboardUtils;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     const v0, 0x7f1205e1
 
@@ -99,7 +99,7 @@
     const/4 v3, 0x0
 
     .line 4
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 5
     invoke-virtual {p1}, Lcom/vk/dto/music/MusicTrack;->y1()Ljava/lang/String;
@@ -109,15 +109,15 @@
     .line 6
     iget-object v1, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$i;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
 
-    invoke-virtual {v1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {v1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/podcasts/episode/b;
+    check-cast v1, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/music/podcasts/episode/b;->F()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-virtual {v1}, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;->F()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v1
 
@@ -132,7 +132,7 @@
     iget-object p1, p1, Lcom/vk/dto/music/MusicTrack;->P:Ljava/lang/String;
 
     .line 8
-    invoke-static {v0, v3, p1}, Lcom/vk/music/i/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3, p1}, Lcom/vk/music/i/PodcastsAnalytics;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     const/4 p1, 0x1

@@ -67,7 +67,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/StoriesBackgroundLoader$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/StoriesBackgroundLoader$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/stories/StoriesBackgroundLoader;->i:Lcom/vk/stories/StoriesBackgroundLoader$a;
 
@@ -92,11 +92,11 @@
     .line 2
     sget-object p1, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
 
-    sget-object p2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v0, "AppContextHolder.context"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v0, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
 
@@ -157,13 +157,13 @@
     return-object v0
 .end method
 
-.method public static final a(Lcom/vk/dto/stories/model/StoryEntry;Lkotlin/jvm/b/a;)V
+.method public static final a(Lcom/vk/dto/stories/model/StoryEntry;Lkotlin/jvm/b/Functions;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/StoryEntry;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Ljava/util/Set<",
             "Ljava/lang/String;",
@@ -173,7 +173,7 @@
 
     sget-object v0, Lcom/vk/stories/StoriesBackgroundLoader;->i:Lcom/vk/stories/StoriesBackgroundLoader$a;
 
-    invoke-virtual {v0, p0, p1}, Lcom/vk/stories/StoriesBackgroundLoader$a;->a(Lcom/vk/dto/stories/model/StoryEntry;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, p0, p1}, Lcom/vk/stories/StoriesBackgroundLoader$a;->a(Lcom/vk/dto/stories/model/StoryEntry;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -288,14 +288,14 @@
 
     const-string v3, "story.videoUrl!!"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -342,9 +342,9 @@
     if-eqz v0, :cond_2
 
     .line 3
-    sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v0, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/v;->A()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/DeviceState;->A()Z
 
     move-result v0
 
@@ -424,27 +424,27 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stories/StoriesBackgroundLoader$preload$1;-><init>(Lcom/vk/stories/StoriesBackgroundLoader;)V
 
-    invoke-static {v1}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v1}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 10
     sget-object v2, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v2}, Lcom/vk/core/concurrent/VkExecutors;->i()Lc/a/s;
+    invoke-virtual {v2}, Lcom/vk/core/concurrent/VkExecutors;->i()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 11
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -456,12 +456,12 @@
     const/4 v3, 0x0
 
     .line 13
-    invoke-static {v3, v0, v3}, Lcom/vk/core/util/z0;->a(Ljava/lang/String;ILjava/lang/Object;)Lc/a/z/g;
+    invoke-static {v3, v0, v3}, Lcom/vk/core/util/RxUtil;->a(Ljava/lang/String;ILjava/lang/Object;)Lio/reactivex/functions/Consumer;
 
     move-result-object v0
 
     .line 14
-    invoke-virtual {v1, v2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_2
     :goto_0
@@ -481,11 +481,11 @@
     .locals 1
 
     .line 2
-    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->k()Lcom/vk/mediastore/a/e/i;
+    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->k()Lcom/vk/mediastore/a/e/ExoVideoCache;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/mediastore/a/e/i;->f()V
+    invoke-virtual {v0}, Lcom/vk/mediastore/a/e/ExoVideoCache;->f()V
 
     return-void
 .end method
@@ -531,26 +531,26 @@
     .end annotation
 
     .line 4
-    invoke-static {}, Lcom/vk/core/network/Network;->m()Lcom/vk/core/network/b/a;
+    invoke-static {}, Lcom/vk/core/network/Network;->m()Lcom/vk/core/network/b/NetworkTrafficMeter;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/stories/StoriesBackgroundLoader;->f:Lcom/vk/stories/StoriesBackgroundLoader$c;
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/network/b/a;->b(Lcom/vk/core/network/b/a$b;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/core/network/b/NetworkTrafficMeter;->b(Lcom/vk/core/network/b/NetworkTrafficMeter$b;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 5
-    invoke-static {}, Lcom/vk/core/network/Network;->m()Lcom/vk/core/network/b/a;
+    invoke-static {}, Lcom/vk/core/network/Network;->m()Lcom/vk/core/network/b/NetworkTrafficMeter;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/stories/StoriesBackgroundLoader;->f:Lcom/vk/stories/StoriesBackgroundLoader$c;
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/network/b/a;->a(Lcom/vk/core/network/b/a$b;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/core/network/b/NetworkTrafficMeter;->a(Lcom/vk/core/network/b/NetworkTrafficMeter$b;)Z
 
     .line 6
     :cond_0
@@ -587,7 +587,7 @@
     check-cast v2, Lcom/vk/dto/stories/model/StoriesContainer;
 
     .line 8
-    invoke-static {v2}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v2}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v5
 
@@ -599,7 +599,7 @@
 
     const-string v6, "it.storyEntries"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v5}, Ljava/util/Collection;->isEmpty()Z
 
@@ -616,7 +616,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -680,7 +680,7 @@
 
     const-string v10, "story"
 
-    invoke-static {v6, v10}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v10}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v9, v6}, Lcom/vk/stories/StoriesBackgroundLoader$b;-><init>(Lcom/vk/dto/stories/model/StoryEntry;)V
 
@@ -721,11 +721,11 @@
     invoke-static {p1}, Lkotlin/collections/l;->c(Ljava/util/List;)V
 
     .line 19
-    invoke-static {}, Lcom/vk/core/network/Network;->m()Lcom/vk/core/network/b/a;
+    invoke-static {}, Lcom/vk/core/network/Network;->m()Lcom/vk/core/network/b/NetworkTrafficMeter;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/network/b/a;->a()Z
+    invoke-virtual {p1}, Lcom/vk/core/network/b/NetworkTrafficMeter;->a()Z
 
     move-result p1
 

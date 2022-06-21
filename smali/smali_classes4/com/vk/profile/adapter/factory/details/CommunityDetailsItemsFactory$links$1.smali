@@ -3,7 +3,7 @@
 .source "CommunityDetailsItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/api/i;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
         "Ljava/util/ArrayList<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
         ">;>;"
@@ -47,12 +47,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;)Ljava/util/ArrayList;
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Ljava/util/ArrayList;
     .locals 20
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/api/i;",
+            "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
             ")",
             "Ljava/util/ArrayList<",
             "Lcom/vk/profile/adapter/BaseInfoItem;",
@@ -87,9 +87,9 @@
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 3
-    new-instance v4, Lcom/vk/profile/adapter/items/d;
+    new-instance v4, Lcom/vk/profile/adapter/items/CaptionItem;
 
-    invoke-direct {v4}, Lcom/vk/profile/adapter/items/d;-><init>()V
+    invoke-direct {v4}, Lcom/vk/profile/adapter/items/CaptionItem;-><init>()V
 
     .line 4
     iget-object v5, v0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$links$1;->$context:Landroid/content/Context;
@@ -100,7 +100,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lcom/vk/profile/adapter/items/d;->c(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Lcom/vk/profile/adapter/items/CaptionItem;->c(Ljava/lang/String;)V
 
     .line 5
     iget-object v5, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->F:Ljava/util/ArrayList;
@@ -115,7 +115,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lcom/vk/profile/adapter/items/d;->a(Ljava/lang/Integer;)V
+    invoke-virtual {v4, v5}, Lcom/vk/profile/adapter/items/CaptionItem;->a(Ljava/lang/Integer;)V
 
     .line 6
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -188,7 +188,7 @@
     move-object v15, v4
 
     .line 15
-    invoke-direct/range {v5 .. v18}, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v5 .. v18}, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILandroid/view/View$OnClickListener;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object/from16 v4, v19
 
@@ -201,13 +201,13 @@
 
     .line 16
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 17
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
@@ -219,9 +219,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$links$1;->a(Lcom/vtosters/lite/api/i;)Ljava/util/ArrayList;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$links$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Ljava/util/ArrayList;
 
     move-result-object p1
 

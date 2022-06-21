@@ -3,12 +3,12 @@
 .source "BannerVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;Lcom/vk/im/ui/components/audio_msg_player/a;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)V
+    value = Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;-><init>(Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponent;Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponent;Lcom/vk/im/ui/components/audio_msg_player/AudioMsgPlayerComponent;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/ViewStub;Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/im/ui/utils/animators/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/im/ui/utils/animators/AlphaViewAnimator;",
         ">;"
     }
 .end annotation
@@ -45,11 +45,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/utils/animators/a;
+.method public final invoke()Lcom/vk/im/ui/utils/animators/AlphaViewAnimator;
     .locals 15
 
     .line 2
-    new-instance v14, Lcom/vk/im/ui/utils/animators/a;
+    new-instance v14, Lcom/vk/im/ui/utils/animators/AlphaViewAnimator;
 
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$separatorAnimator$2;->this$0:Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc;
 
@@ -59,7 +59,7 @@
 
     const-string v0, "separatorView"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -79,7 +79,7 @@
 
     move-object v0, v14
 
-    invoke-direct/range {v0 .. v13}, Lcom/vk/im/ui/utils/animators/a;-><init>(Landroid/view/View;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;JJJJILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v13}, Lcom/vk/im/ui/utils/animators/AlphaViewAnimator;-><init>(Landroid/view/View;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;JJJJILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v14
 .end method
@@ -88,7 +88,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$separatorAnimator$2;->invoke()Lcom/vk/im/ui/utils/animators/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerVc$separatorAnimator$2;->invoke()Lcom/vk/im/ui/utils/animators/AlphaViewAnimator;
 
     move-result-object v0
 

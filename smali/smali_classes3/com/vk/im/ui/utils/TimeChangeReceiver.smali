@@ -13,11 +13,11 @@
 
 .field private final b:Landroid/content/Context;
 
-.field private final c:Lkotlin/jvm/b/a;
+.field private final c:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -25,14 +25,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -42,7 +42,7 @@
 
     iput-object p1, p0, Lcom/vk/im/ui/utils/TimeChangeReceiver;->b:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/im/ui/utils/TimeChangeReceiver;->c:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/im/ui/utils/TimeChangeReceiver;->c:Lkotlin/jvm/b/Functions;
 
     .line 2
     new-instance p1, Lcom/vk/im/ui/utils/TimeChangeReceiver$receiver$1;
@@ -54,11 +54,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/utils/TimeChangeReceiver;)Lkotlin/jvm/b/a;
+.method public static final synthetic a(Lcom/vk/im/ui/utils/TimeChangeReceiver;)Lkotlin/jvm/b/Functions;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/utils/TimeChangeReceiver;->c:Lkotlin/jvm/b/a;
+    iget-object p0, p0, Lcom/vk/im/ui/utils/TimeChangeReceiver;->c:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
@@ -73,7 +73,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/utils/TimeChangeReceiver;->a:Lcom/vk/im/ui/utils/TimeChangeReceiver$receiver$1;
 
-    invoke-static {}, Lcom/vk/im/ui/utils/c;->a()Landroid/content/IntentFilter;
+    invoke-static {}, Lcom/vk/im/ui/utils/IntentUtils;->a()Landroid/content/IntentFilter;
 
     move-result-object v2
 

@@ -44,16 +44,16 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a$a;->a:Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;
 
-    iget-object v0, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;->a:Lcom/vk/attachpicker/stickers/reply/c;
+    iget-object v0, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;->a:Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/reply/c;->setDeterminateProgress(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;->setDeterminateProgress(Z)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a$a;->a:Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;
 
-    iget-object v0, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;->a:Lcom/vk/attachpicker/stickers/reply/c;
+    iget-object v0, v0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;->a:Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;
 
     iget v1, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a$a;->b:F
 
@@ -67,7 +67,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/reply/c;->setProgress(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;->setProgress(I)V
 
     return-void
 .end method

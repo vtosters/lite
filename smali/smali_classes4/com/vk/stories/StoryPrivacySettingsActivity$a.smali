@@ -1,5 +1,5 @@
 .class Lcom/vk/stories/StoryPrivacySettingsActivity$a;
-.super Lcom/vtosters/lite/api/l;
+.super Lcom/vtosters/lite/api/SimpleCallback;
 .source "StoryPrivacySettingsActivity.java"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/api/l<",
+        "Lcom/vtosters/lite/api/SimpleCallback<",
         "Ljava/util/ArrayList<",
-        "Lcom/vk/dto/common/data/d;",
+        "Lcom/vk/dto/common/data/PrivacySection;",
         ">;>;"
     }
 .end annotation
@@ -34,7 +34,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/stories/StoryPrivacySettingsActivity$a;->c:Lcom/vk/stories/StoryPrivacySettingsActivity;
 
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/l;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/SimpleCallback;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -45,7 +45,7 @@
     .locals 0
 
     .line 14
-    invoke-super {p0, p1}, Lcom/vtosters/lite/api/l;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/api/SimpleCallback;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     .line 15
     iget-object p1, p0, Lcom/vk/stories/StoryPrivacySettingsActivity$a;->c:Lcom/vk/stories/StoryPrivacySettingsActivity;
@@ -72,7 +72,7 @@
         value = {
             "(",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/common/data/d;",
+            "Lcom/vk/dto/common/data/PrivacySection;",
             ">;)V"
         }
     .end annotation
@@ -82,7 +82,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/stories/StoryPrivacySettingsActivity;->a(Lcom/vk/stories/StoryPrivacySettingsActivity;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/stories/StoryPrivacySettingsActivity;->a(Lcom/vk/stories/StoryPrivacySettingsActivity;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     if-eqz p1, :cond_4
 
@@ -103,9 +103,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/dto/common/data/d;
+    check-cast v3, Lcom/vk/dto/common/data/PrivacySection;
 
-    iget-object v3, v3, Lcom/vk/dto/common/data/d;->a:Ljava/lang/String;
+    iget-object v3, v3, Lcom/vk/dto/common/data/PrivacySection;->a:Ljava/lang/String;
 
     const-string v4, "stories"
 
@@ -119,9 +119,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/dto/common/data/d;
+    check-cast v3, Lcom/vk/dto/common/data/PrivacySection;
 
-    iget-object v3, v3, Lcom/vk/dto/common/data/d;->a:Ljava/lang/String;
+    iget-object v3, v3, Lcom/vk/dto/common/data/PrivacySection;->a:Ljava/lang/String;
 
     const-string v4, "lives"
 
@@ -136,9 +136,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/dto/common/data/d;
+    check-cast v3, Lcom/vk/dto/common/data/PrivacySection;
 
-    iget-object v3, v3, Lcom/vk/dto/common/data/d;->b:Ljava/util/ArrayList;
+    iget-object v3, v3, Lcom/vk/dto/common/data/PrivacySection;->b:Ljava/util/ArrayList;
 
     if-eqz v3, :cond_3
 
@@ -146,9 +146,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/dto/common/data/d;
+    check-cast v3, Lcom/vk/dto/common/data/PrivacySection;
 
-    iget-object v3, v3, Lcom/vk/dto/common/data/d;->b:Ljava/util/ArrayList;
+    iget-object v3, v3, Lcom/vk/dto/common/data/PrivacySection;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -175,9 +175,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lcom/vk/dto/common/data/d;
+    check-cast v5, Lcom/vk/dto/common/data/PrivacySection;
 
-    iget-object v5, v5, Lcom/vk/dto/common/data/d;->b:Ljava/util/ArrayList;
+    iget-object v5, v5, Lcom/vk/dto/common/data/PrivacySection;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
@@ -190,9 +190,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lcom/vk/dto/common/data/d;
+    check-cast v5, Lcom/vk/dto/common/data/PrivacySection;
 
-    iget-object v5, v5, Lcom/vk/dto/common/data/d;->b:Ljava/util/ArrayList;
+    iget-object v5, v5, Lcom/vk/dto/common/data/PrivacySection;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -219,9 +219,9 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/dto/common/data/d;
+    check-cast v4, Lcom/vk/dto/common/data/PrivacySection;
 
-    iget-object v4, v4, Lcom/vk/dto/common/data/d;->b:Ljava/util/ArrayList;
+    iget-object v4, v4, Lcom/vk/dto/common/data/PrivacySection;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -273,7 +273,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/f;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/FragmentManagerImplSimple;
 
     move-result-object p1
 
@@ -285,7 +285,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/fragments/f;->b(ILcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/fragments/FragmentManagerImplSimple;->b(ILcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 

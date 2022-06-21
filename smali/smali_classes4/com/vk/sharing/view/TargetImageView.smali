@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic H:[Lkotlin/u/j;
+.field static final synthetic H:[Lkotlin/u/KProperty5;
 
 .field private static final I:I
 
@@ -27,7 +27,7 @@
 
 .field private final D:Landroid/graphics/drawable/Drawable;
 
-.field private final E:Lkotlin/e;
+.field private final E:Lkotlin/Lazy2;
 
 .field private final F:[Ljava/lang/String;
 
@@ -50,13 +50,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/sharing/view/TargetImageView;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -64,21 +64,21 @@
 
     const-string v4, "getAbbreviationDrawable()Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/sharing/view/TargetImageView;->H:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/sharing/view/TargetImageView;->H:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/sharing/view/TargetImageView$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/sharing/view/TargetImageView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/sharing/view/TargetImageView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v0, 0x2
 
@@ -107,7 +107,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/sharing/view/TargetImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/sharing/view/TargetImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -127,7 +127,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/sharing/view/TargetImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/sharing/view/TargetImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -224,11 +224,11 @@
 
     invoke-direct {p3, p1}, Lcom/vk/sharing/view/TargetImageView$abbreviationDrawable$2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p3}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p3}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p3
 
-    iput-object p3, p0, Lcom/vk/sharing/view/TargetImageView;->E:Lkotlin/e;
+    iput-object p3, p0, Lcom/vk/sharing/view/TargetImageView;->E:Lkotlin/Lazy2;
 
     const/4 p3, 0x4
 
@@ -283,23 +283,23 @@
     invoke-virtual {p0}, Lcom/vk/imageloader/view/VKMultiImageView;->a()V
 
     .line 27
-    iget-object v0, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v0, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v0, p3}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v0, p3}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v0
 
     const-string v1, "draweeHolder.get(i)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/facebook/drawee/view/b;->b()Lcom/facebook/u/e/b;
+    invoke-virtual {v0}, Lcom/facebook/drawee/view/DraweeHolder;->b()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/a;->e(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->e(Landroid/graphics/drawable/Drawable;)V
 
     add-int/lit8 p3, p3, 0x1
 
@@ -307,22 +307,22 @@
 
     .line 28
     :cond_1
-    sget-object p1, Lcom/facebook/drawee/drawable/r$b;->o:Lcom/facebook/drawee/drawable/r$b;
+    sget-object p1, Lcom/facebook/drawee/drawable/ScalingUtils$b;->o:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/imageloader/view/VKMultiImageView;->setScaleType(Lcom/facebook/drawee/drawable/r$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/imageloader/view/VKMultiImageView;->setScaleType(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
 
     return-void
 
     .line 29
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -449,15 +449,15 @@
 
     .line 8
     :cond_0
-    iget-object v7, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v7, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v7, v10}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v7, v10}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v7
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v7}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v7}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
@@ -474,15 +474,15 @@
     invoke-virtual {v7, v1, v2, v8, v11}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 9
-    iget-object v7, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v7, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v7, v9}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v7, v9}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v7
 
-    invoke-static {v7, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v7}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v7}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
@@ -495,15 +495,15 @@
     invoke-virtual {v7, v1, v6, v8, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 10
-    iget-object v7, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v7, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v7, v13}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v7, v13}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v7
 
-    invoke-static {v7, v14}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v14}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v7}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v7}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
@@ -516,17 +516,17 @@
     invoke-virtual {v7, v5, v2, v1, v11}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 11
-    iget-object v2, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v2, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v2, v15}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v2, v15}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v2
 
     const-string v3, "draweeHolder.get(3)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -537,7 +537,7 @@
     goto/16 :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v1, 0x0
 
@@ -547,7 +547,7 @@
     const/4 v1, 0x0
 
     .line 12
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -555,7 +555,7 @@
     const/4 v1, 0x0
 
     .line 13
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -563,21 +563,21 @@
     const/4 v1, 0x0
 
     .line 14
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 15
     :cond_5
-    iget-object v7, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v7, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v7, v10}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v7, v10}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v7
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v7}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v7}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
@@ -592,15 +592,15 @@
     invoke-virtual {v7, v1, v2, v8, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 16
-    iget-object v7, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v7, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v7, v9}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v7, v9}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v7
 
-    invoke-static {v7, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v7}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v7}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
@@ -617,15 +617,15 @@
     invoke-virtual {v7, v5, v2, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 17
-    iget-object v2, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v2, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v2, v13}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v2, v13}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v2
 
-    invoke-static {v2, v14}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v14}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -638,7 +638,7 @@
     goto :goto_0
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v1, 0x0
 
@@ -648,7 +648,7 @@
     const/4 v1, 0x0
 
     .line 18
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -656,21 +656,21 @@
     const/4 v1, 0x0
 
     .line 19
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 20
     :cond_9
-    iget-object v6, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v6, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v6, v10}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v6, v10}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v6
 
-    invoke-static {v6, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v6}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v6}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
@@ -685,15 +685,15 @@
     invoke-virtual {v6, v1, v2, v7, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 21
-    iget-object v6, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v6, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v6, v9}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v6, v9}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v6
 
-    invoke-static {v6, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v6}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v6}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
@@ -708,7 +708,7 @@
     goto :goto_0
 
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v1, 0x0
 
@@ -718,21 +718,21 @@
     const/4 v1, 0x0
 
     .line 22
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 23
     :cond_c
-    iget-object v5, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v5, v0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v5, v10}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v5, v10}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v5
 
-    invoke-static {v5, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v5}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v5}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
@@ -748,7 +748,7 @@
     return-void
 
     :cond_d
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v1, 0x0
 
@@ -781,15 +781,15 @@
 .method private final getAbbreviationDrawable()Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/sharing/view/TargetImageView;->E:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/sharing/view/TargetImageView;->E:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/sharing/view/TargetImageView;->H:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/sharing/view/TargetImageView;->H:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -837,7 +837,7 @@
     const-string v2, "uri"
 
     .line 7
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
@@ -845,7 +845,7 @@
 
     const-string v3, "vkchatphoto"
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -910,7 +910,7 @@
 
     const-string v4, "vkchatplaceholder"
 
-    invoke-static {v4, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -1013,17 +1013,17 @@
     if-ge v1, v0, :cond_3
 
     .line 3
-    iget-object v2, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/c;
+    iget-object v2, p0, Lcom/vk/imageloader/view/VKMultiImageView;->a:Lcom/facebook/drawee/view/MultiDraweeHolder;
 
-    invoke-virtual {v2, v1}, Lcom/facebook/drawee/view/c;->a(I)Lcom/facebook/drawee/view/b;
+    invoke-virtual {v2, v1}, Lcom/facebook/drawee/view/MultiDraweeHolder;->a(I)Lcom/facebook/drawee/view/DraweeHolder;
 
     move-result-object v2
 
     const-string v3, "draweeHolder.get(i)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Lcom/facebook/drawee/view/b;->d()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2}, Lcom/facebook/drawee/view/DraweeHolder;->d()Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -1039,7 +1039,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

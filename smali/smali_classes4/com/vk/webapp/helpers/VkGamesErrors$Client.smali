@@ -64,7 +64,7 @@
     move-object v1, v9
 
     .line 1
-    invoke-direct/range {v1 .. v8}, Lcom/vk/webapp/helpers/VkGamesErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/webapp/helpers/VkGamesErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v9, Lcom/vk/webapp/helpers/VkGamesErrors$Client;->INVALID_PARAMS:Lcom/vk/webapp/helpers/VkGamesErrors$Client;
 
@@ -91,7 +91,7 @@
     move-object v10, v1
 
     .line 2
-    invoke-direct/range {v10 .. v17}, Lcom/vk/webapp/helpers/VkGamesErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v10 .. v17}, Lcom/vk/webapp/helpers/VkGamesErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkGamesErrors$Client;->MISSING_PARAMS:Lcom/vk/webapp/helpers/VkGamesErrors$Client;
 
@@ -116,7 +116,7 @@
     move-object v3, v1
 
     .line 3
-    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkGamesErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkGamesErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkGamesErrors$Client;->UNKNOWN_ERROR:Lcom/vk/webapp/helpers/VkGamesErrors$Client;
 
@@ -135,7 +135,7 @@
     move-object v3, v1
 
     .line 4
-    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkGamesErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkGamesErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkGamesErrors$Client;->NO_AD:Lcom/vk/webapp/helpers/VkGamesErrors$Client;
 
@@ -154,7 +154,7 @@
     move-object v3, v1
 
     .line 5
-    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkGamesErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkGamesErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkGamesErrors$Client;->CANCEL:Lcom/vk/webapp/helpers/VkGamesErrors$Client;
 
@@ -173,7 +173,7 @@
     move-object v3, v1
 
     .line 6
-    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkGamesErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkGamesErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkGamesErrors$Client;->FAIL:Lcom/vk/webapp/helpers/VkGamesErrors$Client;
 
@@ -209,7 +209,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+.method synthetic constructor <init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x4

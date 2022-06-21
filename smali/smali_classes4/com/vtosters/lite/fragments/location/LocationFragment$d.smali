@@ -3,7 +3,7 @@
 .source "LocationFragment.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/x$i;
+.implements Lcom/vtosters/lite/ui/SearchViewWrapper$i;
 
 
 # annotations

@@ -3,7 +3,7 @@
 .source "VideoFeedAdapter.kt"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/common/VideoFile;",
         ">;>;"
@@ -84,7 +84,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter$a;->a:Lcom/vk/profile/adapter/inner/VideoFeedAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->j()Ld/a/a/c/c;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->j()Lme/grishka/appkit/utils/Preloader;
 
     move-result-object v0
 
@@ -94,11 +94,11 @@
 
     iget-object v3, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter$a;->a:Lcom/vk/profile/adapter/inner/VideoFeedAdapter;
 
-    invoke-virtual {v3}, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->j()Ld/a/a/c/c;
+    invoke-virtual {v3}, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->j()Lme/grishka/appkit/utils/Preloader;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Ld/a/a/c/c;->a()Ljava/util/ArrayList;
+    invoke-virtual {v3}, Lme/grishka/appkit/utils/Preloader;->a()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -108,11 +108,11 @@
 
     iget-object v4, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter$a;->a:Lcom/vk/profile/adapter/inner/VideoFeedAdapter;
 
-    invoke-virtual {v4}, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->j()Ld/a/a/c/c;
+    invoke-virtual {v4}, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->j()Lme/grishka/appkit/utils/Preloader;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Ld/a/a/c/c;->b()Ljava/util/ArrayList;
+    invoke-virtual {v4}, Lme/grishka/appkit/utils/Preloader;->b()Ljava/util/ArrayList;
 
     move-result-object v4
 
@@ -133,7 +133,7 @@
     const/4 v1, 0x1
 
     :cond_0
-    invoke-virtual {v0, p1, v1}, Ld/a/a/c/c;->a(Ljava/util/List;Z)V
+    invoke-virtual {v0, p1, v1}, Lme/grishka/appkit/utils/Preloader;->a(Ljava/util/List;Z)V
 
     return-void
 .end method

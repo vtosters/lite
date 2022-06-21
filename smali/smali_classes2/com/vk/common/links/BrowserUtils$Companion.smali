@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -47,7 +47,7 @@
 
     .line 49
     :cond_0
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "context"
 
@@ -69,7 +69,7 @@
 
     move-result-object v5
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -110,13 +110,13 @@
 
     const-string v9, "defaultBrowser"
 
-    invoke-static {v5, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-static {v8, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v8, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v8
 
@@ -202,7 +202,7 @@
 
     const-string v8, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {v6, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v6, :cond_6
 
@@ -316,7 +316,7 @@
 
     const-string v6, "Uri.parse(destination)"
 
-    invoke-static {p2, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p2}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Landroid/net/Uri;)Landroid/content/Intent;
 
@@ -333,7 +333,7 @@
     if-eqz p2, :cond_b
 
     .line 66
-    invoke-static {p2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -378,7 +378,7 @@
     invoke-virtual {p2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 72
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -587,7 +587,7 @@
 
     .line 102
     :cond_3
-    sget-object p1, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object p1, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
@@ -595,9 +595,9 @@
 
     const-string v1, "builder.build()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/common/links/c$a;->a(Landroid/net/Uri;)Landroid/net/Uri;
+    invoke-virtual {p1, v0}, Lcom/vk/common/links/LinkProcessor$a;->a(Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object p1
 
@@ -607,7 +607,7 @@
 
     const-string v0, "LinkProcessor.appendAdAw\u2026lder.build()).buildUpon()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -688,13 +688,13 @@
     const-string p2, "browsers"
 
     .line 105
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/common/links/BrowserUtils$Companion$getExternalBrowsersInfo$1;
 
     invoke-direct {p2, v0}, Lcom/vk/common/links/BrowserUtils$Companion$getExternalBrowsersInfo$1;-><init>(Ljava/util/Set;)V
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)V
 
     return-object p1
 .end method
@@ -729,14 +729,14 @@
     const-string v1, "ui_click_link"
 
     .line 108
-    invoke-static {v1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v1}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v1
 
     const-string v2, "url"
 
     .line 109
-    invoke-virtual {v1, v2, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1, v2, p2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 110
     invoke-direct {p0}, Lcom/vk/common/links/BrowserUtils$Companion;->d()Z
@@ -751,7 +751,7 @@
 
     const-string v2, "browser_type"
 
-    invoke-virtual {v1, v2, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1, v2, p2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 111
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -760,23 +760,23 @@
 
     const-string v2, "auto"
 
-    invoke-virtual {v1, v2, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1, v2, p2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     if-eqz v0, :cond_1
 
     const-string p2, "auto_browser_name"
 
     .line 112
-    invoke-virtual {v1, p2, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1, p2, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 113
     :cond_1
-    invoke-virtual {v1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/common/links/BrowserUtils$Companion;Landroid/content/Context;Landroid/net/Uri;Lcom/vk/common/links/c$b;Landroid/os/Bundle;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/common/links/BrowserUtils$Companion;Landroid/content/Context;Landroid/net/Uri;Lcom/vk/common/links/LinkProcessor$b;Landroid/os/Bundle;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x8
@@ -787,12 +787,12 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Landroid/content/Context;Landroid/net/Uri;Lcom/vk/common/links/c$b;Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Landroid/content/Context;Landroid/net/Uri;Lcom/vk/common/links/LinkProcessor$b;Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/common/links/BrowserUtils$Companion;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;Landroid/os/Bundle;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/common/links/BrowserUtils$Companion;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;Landroid/os/Bundle;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x8
@@ -803,7 +803,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -843,7 +843,7 @@
 
     const-string p2, "url.toString()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v1, p1}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Landroid/content/Intent;Ljava/lang/String;)V
     :try_end_0
@@ -863,7 +863,7 @@
     const/4 v1, 0x0
 
     .line 45
-    invoke-static {p2, v0, p3, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p2, v0, p3, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 46
     sget-object p2, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
@@ -1005,7 +1005,7 @@
 
     const-string v1, "Uri.parse(\"https://${String(randomDomain)}/\")"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -1035,7 +1035,7 @@
 
     const-string v1, "context.packageManager.q\u2026ies(domain.toIntent(), 0)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lkotlin/collections/l;->h(Ljava/util/List;)Ljava/lang/Object;
 
@@ -1099,17 +1099,17 @@
 
     .line 80
     :cond_0
-    sget-object v0, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v0, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/links/c$a;->e(Landroid/net/Uri;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/common/links/LinkProcessor$a;->e(Landroid/net/Uri;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    sget-object p2, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object p2, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    invoke-virtual {p2, p1}, Lcom/vk/common/links/c$a;->a(Landroid/net/Uri;)Landroid/net/Uri;
+    invoke-virtual {p2, p1}, Lcom/vk/common/links/LinkProcessor$a;->a(Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object p1
 
@@ -1137,7 +1137,7 @@
 
     const-string p2, "builder.build()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -1175,17 +1175,17 @@
 
     .line 85
     :cond_0
-    sget-object v0, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v0, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/links/c$a;->e(Landroid/net/Uri;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/common/links/LinkProcessor$a;->e(Landroid/net/Uri;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    sget-object p2, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object p2, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    invoke-virtual {p2, p1}, Lcom/vk/common/links/c$a;->a(Landroid/net/Uri;)Landroid/net/Uri;
+    invoke-virtual {p2, p1}, Lcom/vk/common/links/LinkProcessor$a;->a(Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object p1
 
@@ -1253,7 +1253,7 @@
 
     const-string p2, "builder.build()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -1289,7 +1289,7 @@
 
     const-string p2, "url.toString()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p3, p1}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Landroid/content/Intent;Ljava/lang/String;)V
     :try_end_0
@@ -1309,11 +1309,11 @@
     return-void
 .end method
 
-.method public final a(Landroid/content/Context;Landroid/net/Uri;Lcom/vk/common/links/c$b;Landroid/os/Bundle;)V
+.method public final a(Landroid/content/Context;Landroid/net/Uri;Lcom/vk/common/links/LinkProcessor$b;Landroid/os/Bundle;)V
     .locals 4
 
     .line 5
-    invoke-virtual {p3}, Lcom/vk/common/links/c$b;->i()Z
+    invoke-virtual {p3}, Lcom/vk/common/links/LinkProcessor$b;->i()Z
 
     move-result v0
 
@@ -1323,7 +1323,7 @@
 
     .line 6
     :cond_0
-    invoke-virtual {p3}, Lcom/vk/common/links/c$b;->b()Z
+    invoke-virtual {p3}, Lcom/vk/common/links/LinkProcessor$b;->b()Z
 
     move-result v0
 
@@ -1369,7 +1369,7 @@
 
     const-string p4, "contextOrig.baseContext"
 
-    invoke-static {p2, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1453,7 +1453,7 @@
     const/4 p2, 0x2
 
     .line 15
-    invoke-static {p1, v1, p2, v0}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v1, p2, v0}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :goto_2
     return-void
@@ -1488,7 +1488,7 @@
     const-string v1, "it"
 
     .line 18
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/common/links/LinkProcessorKt;->b(Ljava/lang/String;)Z
 
@@ -1506,7 +1506,7 @@
 
     const-string v1, "Uri.parse(prepareVKLinkScheme(it))"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -1515,9 +1515,9 @@
 
     .line 19
     :goto_3
-    sget-object v1, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v1, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/common/links/c$a;->g(Landroid/net/Uri;)Z
+    invoke-virtual {v1, v0}, Lcom/vk/common/links/LinkProcessor$a;->g(Landroid/net/Uri;)Z
 
     move-result v1
 
@@ -1530,7 +1530,7 @@
 
     const-string v2, "m.vk.com"
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1553,7 +1553,7 @@
 
     const-string v1, "uriLocal.buildUpon().scheme(\"http\").build()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_4
 
@@ -1563,9 +1563,9 @@
     .line 22
     :cond_7
     :goto_4
-    sget-object v1, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v1, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/common/links/c$a;->d(Landroid/net/Uri;)Z
+    invoke-virtual {v1, v0}, Lcom/vk/common/links/LinkProcessor$a;->d(Landroid/net/Uri;)Z
 
     move-result v1
 
@@ -1613,14 +1613,14 @@
 
     const-string p2, "uriLocal.buildUpon().scheme(\"https\").build()"
 
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_7
 
     .line 24
     :cond_a
     :goto_6
-    invoke-virtual {p3}, Lcom/vk/common/links/c$b;->d()Z
+    invoke-virtual {p3}, Lcom/vk/common/links/LinkProcessor$b;->d()Z
 
     move-result p2
 
@@ -1729,7 +1729,7 @@
     return-void
 .end method
 
-.method public final a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;Landroid/os/Bundle;)V
+.method public final a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;Landroid/os/Bundle;)V
     .locals 1
 
     .line 3
@@ -1739,9 +1739,9 @@
 
     const-string v0, "Uri.parse(uri)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Landroid/content/Context;Landroid/net/Uri;Lcom/vk/common/links/c$b;Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Landroid/content/Context;Landroid/net/Uri;Lcom/vk/common/links/LinkProcessor$b;Landroid/os/Bundle;)V
 
     return-void
 .end method

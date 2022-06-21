@@ -3,12 +3,12 @@
 .source "VkMeCallback.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/ui/photoviewer/VkMeCallback;->Z(I)Lc/a/t;
+    value = Lcom/vk/ui/photoviewer/VkMeCallback;->Z(I)Lio/reactivex/Single;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -53,7 +53,7 @@
     .line 1
     iget v0, p0, Lcom/vk/ui/photoviewer/VkMeCallback$a;->a:I
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/ProfilesInfo;->get(I)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/models/ProfilesInfo;->get(I)Lcom/vk/im/engine/models/Profile;
 
     move-result-object p1
 
@@ -64,19 +64,19 @@
     .line 2
     new-instance v1, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->f0()I
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->f0()I
 
     move-result v2
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->name()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->name()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->g0()Lcom/vk/im/engine/models/ImageList;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->g0()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/im/engine/models/g;->b(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
+    invoke-static {p1}, Lcom/vk/im/engine/models/ImageList1;->b(Ljava/lang/Iterable;)Lcom/vk/im/engine/models/Image;
 
     move-result-object p1
 
@@ -93,7 +93,7 @@
 
     .line 3
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method

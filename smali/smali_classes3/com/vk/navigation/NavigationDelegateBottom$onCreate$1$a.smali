@@ -48,7 +48,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
+    invoke-interface {v0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
 
     move-result-object v0
 
@@ -70,7 +70,7 @@
 
     iget-object v0, v0, Lcom/vk/navigation/NavigationDelegateBottom$onCreate$1;->this$0:Lcom/vk/navigation/NavigationDelegateBottom;
 
-    invoke-static {v0}, Lcom/vk/navigation/NavigationDelegateBottom;->f(Lcom/vk/navigation/NavigationDelegateBottom;)Lcom/vk/music/player/d;
+    invoke-static {v0}, Lcom/vk/navigation/NavigationDelegateBottom;->f(Lcom/vk/navigation/NavigationDelegateBottom;)Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
@@ -82,31 +82,31 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/c;)V
+    invoke-interface {v0, v1}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerListener;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom$onCreate$1$a;->a:Lcom/vk/navigation/NavigationDelegateBottom$onCreate$1;
 
     iget-object v0, v0, Lcom/vk/navigation/NavigationDelegateBottom$onCreate$1;->this$0:Lcom/vk/navigation/NavigationDelegateBottom;
 
-    sget-object v1, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v1, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v1}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-virtual {v1}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/navigation/NavigationDelegateBottom;->a(Lcom/vk/navigation/NavigationDelegateBottom;Lcom/vk/music/player/d;)V
+    invoke-interface {v1}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/vk/navigation/NavigationDelegateBottom;->a(Lcom/vk/navigation/NavigationDelegateBottom;Lcom/vk/music/player/PlayerModel;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom$onCreate$1$a;->a:Lcom/vk/navigation/NavigationDelegateBottom$onCreate$1;
 
     iget-object v0, v0, Lcom/vk/navigation/NavigationDelegateBottom$onCreate$1;->this$0:Lcom/vk/navigation/NavigationDelegateBottom;
 
-    invoke-static {v0}, Lcom/vk/navigation/NavigationDelegateBottom;->f(Lcom/vk/navigation/NavigationDelegateBottom;)Lcom/vk/music/player/d;
+    invoke-static {v0}, Lcom/vk/navigation/NavigationDelegateBottom;->f(Lcom/vk/navigation/NavigationDelegateBottom;)Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
@@ -120,7 +120,7 @@
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/music/player/d;->a(Lcom/vk/music/player/c;Z)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/music/player/PlayerListener;Z)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom$onCreate$1$a;->a:Lcom/vk/navigation/NavigationDelegateBottom$onCreate$1;

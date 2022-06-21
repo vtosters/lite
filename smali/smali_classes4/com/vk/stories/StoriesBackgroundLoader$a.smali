@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -55,13 +55,13 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/vk/dto/stories/model/StoryEntry;Lkotlin/jvm/b/a;)V
+.method public final a(Lcom/vk/dto/stories/model/StoryEntry;Lkotlin/jvm/b/Functions;)V
     .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/StoryEntry;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Ljava/util/Set<",
             "Ljava/lang/String;",
@@ -89,11 +89,11 @@
 
     .line 4
     :cond_0
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v3, "AppContextHolder.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -213,11 +213,11 @@
     move-result-object v8
 
     .line 15
-    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->k()Lcom/vk/mediastore/a/e/i;
+    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->k()Lcom/vk/mediastore/a/e/ExoVideoCache;
 
     move-result-object p1
 
-    invoke-virtual {p1, v8}, Lcom/vk/mediastore/a/e/i;->a(Ljava/lang/String;)Z
+    invoke-virtual {p1, v8}, Lcom/vk/mediastore/a/e/ExoVideoCache;->a(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -256,12 +256,12 @@
     invoke-interface {p1, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 18
-    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->k()Lcom/vk/mediastore/a/e/i;
+    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->k()Lcom/vk/mediastore/a/e/ExoVideoCache;
 
     move-result-object v7
 
     .line 19
-    invoke-virtual {v7, p2}, Lcom/vk/mediastore/a/e/i;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v7, p2}, Lcom/vk/mediastore/a/e/ExoVideoCache;->a(Lkotlin/jvm/b/Functions;)V
 
     const/4 v9, 0x0
 
@@ -272,7 +272,7 @@
     const/4 v12, 0x0
 
     .line 20
-    invoke-static/range {v7 .. v12}, Lcom/vk/mediastore/a/c$a;->a(Lcom/vk/mediastore/a/c;Ljava/lang/String;ZLcom/vk/mediastore/a/c$b;ILjava/lang/Object;)V
+    invoke-static/range {v7 .. v12}, Lcom/vk/mediastore/a/VideoCache$a;->a(Lcom/vk/mediastore/a/VideoCache;Ljava/lang/String;ZLcom/vk/mediastore/a/VideoCache$b;ILjava/lang/Object;)V
 
     :cond_4
     return-void

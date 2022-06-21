@@ -43,13 +43,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/wall/post/PostViewFragment$receiver$1;->a:Lcom/vk/wall/post/PostViewFragment;
 
-    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {p1}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1, p2}, Lcom/vk/wall/post/b;->a(Landroid/content/Intent;)V
+    invoke-interface {p1, p2}, Lcom/vk/wall/post/PostViewContract1;->a(Landroid/content/Intent;)V
 
     :cond_0
     return-void

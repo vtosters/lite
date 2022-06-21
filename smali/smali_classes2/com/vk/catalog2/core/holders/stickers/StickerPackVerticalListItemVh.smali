@@ -17,24 +17,24 @@
 
 .field protected G:Landroid/widget/ImageButton;
 
-.field private final H:Lkotlin/jvm/b/b;
+.field private final H:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/dto/stickers/StickerStockItem;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final I:Lkotlin/jvm/b/c;
+.field private final I:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Landroid/content/Context;",
             "Lcom/vk/dto/stickers/StickerStockItem;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -51,34 +51,34 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;Lkotlin/jvm/b/c;Lcom/vk/stickers/bridge/GiftData;)V
+.method public constructor <init>(Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions1;Lcom/vk/stickers/bridge/GiftData;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/content/Context;",
             "-",
             "Lcom/vk/dto/stickers/StickerStockItem;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/stickers/StickerStockItem;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/content/Context;",
             "-",
             "Lcom/vk/dto/stickers/StickerStockItem;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
             "Lcom/vk/stickers/bridge/GiftData;",
             ")V"
@@ -92,18 +92,18 @@
     sget v1, Lcom/vk/catalog2/core/o;->stiсkers_catalog_vertical_list_image_size:I
 
     .line 4
-    invoke-direct {p0, v0, v1, p1}, Lcom/vk/catalog2/core/holders/stickers/BaseStickerPackVh;-><init>(IILkotlin/jvm/b/c;)V
+    invoke-direct {p0, v0, v1, p1}, Lcom/vk/catalog2/core/holders/stickers/BaseStickerPackVh;-><init>(IILkotlin/jvm/b/Functions1;)V
 
-    iput-object p2, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->H:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->H:Lkotlin/jvm/b/Functions2;
 
-    iput-object p3, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->I:Lkotlin/jvm/b/c;
+    iput-object p3, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->I:Lkotlin/jvm/b/Functions1;
 
     iput-object p4, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->J:Lcom/vk/stickers/bridge/GiftData;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;Lkotlin/jvm/b/c;Lcom/vk/stickers/bridge/GiftData;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions1;Lcom/vk/stickers/bridge/GiftData;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x8
@@ -114,16 +114,16 @@
     sget-object p4, Lcom/vk/stickers/bridge/GiftData;->c:Lcom/vk/stickers/bridge/GiftData;
 
     :cond_0
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;-><init>(Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;Lkotlin/jvm/b/c;Lcom/vk/stickers/bridge/GiftData;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;-><init>(Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions1;Lcom/vk/stickers/bridge/GiftData;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;)Lkotlin/jvm/b/b;
+.method public static final synthetic a(Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->H:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->H:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -224,25 +224,25 @@
     goto/16 :goto_1
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 34
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 35
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 36
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -308,25 +308,25 @@
     goto/16 :goto_1
 
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 41
     :cond_7
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 42
     :cond_8
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 43
     :cond_9
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -390,25 +390,25 @@
     goto :goto_1
 
     :cond_c
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 48
     :cond_d
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 49
     :cond_e
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 50
     :cond_f
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -477,25 +477,25 @@
     return-void
 
     :cond_11
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 55
     :cond_12
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 56
     :cond_13
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 57
     :cond_14
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -516,11 +516,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;)Lkotlin/jvm/b/c;
+.method public static final synthetic b(Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;)Lkotlin/jvm/b/Functions1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->I:Lkotlin/jvm/b/c;
+    iget-object p0, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->I:Lkotlin/jvm/b/Functions1;
 
     return-object p0
 .end method
@@ -544,7 +544,7 @@
 
     const-string p3, "findViewById(R.id.pack_buy)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -559,7 +559,7 @@
 
     const-string p3, "findViewById(R.id.pack_gift)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/ImageButton;
 
@@ -681,7 +681,7 @@
     goto :goto_3
 
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -746,19 +746,19 @@
     goto :goto_4
 
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 18
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 19
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -789,7 +789,7 @@
 
     invoke-direct {v3, p0, p1}, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh$bindData$1;-><init>(Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;Lcom/vk/dto/stickers/StickerStockItem;)V
 
-    invoke-static {v0, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 23
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->G:Landroid/widget/ImageButton;
@@ -800,12 +800,12 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh$bindData$2;-><init>(Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;Lcom/vk/dto/stickers/StickerStockItem;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
     :cond_b
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -813,25 +813,25 @@
     const-string p1, "packBuyView"
 
     .line 24
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 25
     :cond_d
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 26
     :cond_e
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 27
     :cond_f
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method

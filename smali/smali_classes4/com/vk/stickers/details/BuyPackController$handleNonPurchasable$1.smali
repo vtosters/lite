@@ -116,11 +116,11 @@
     if-eqz v6, :cond_0
 
     .line 7
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stickers/bridge/k;->b()Lcom/vk/stickers/bridge/j;
+    invoke-interface {p1}, Lcom/vk/stickers/bridge/StickersBridge;->b()Lcom/vk/stickers/bridge/StickersBridge7;
 
     move-result-object p1
 
@@ -136,7 +136,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/stickers/details/BuyPackController$handleNonPurchasable$1$1;-><init>(Lcom/vk/stickers/details/BuyPackController$handleNonPurchasable$1;)V
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/vk/stickers/bridge/j;->a(Landroid/app/Activity;Lcom/vk/dto/stickers/PurchaseDetails;Lkotlin/jvm/b/a;)V
+    invoke-interface {p1, v0, v1, v2}, Lcom/vk/stickers/bridge/StickersBridge7;->a(Landroid/app/Activity;Lcom/vk/dto/stickers/PurchaseDetails;Lkotlin/jvm/b/Functions;)V
 
     goto/16 :goto_6
 
@@ -144,7 +144,7 @@
     const-string v6, "titleView"
 
     .line 8
-    invoke-static {v0, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v6, p0, Lcom/vk/stickers/details/BuyPackController$handleNonPurchasable$1;->d:Lcom/vk/dto/stickers/PurchaseDetails;
 
@@ -169,7 +169,7 @@
     const-string v0, "messageView"
 
     .line 9
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/stickers/details/BuyPackController$handleNonPurchasable$1;->d:Lcom/vk/dto/stickers/PurchaseDetails;
 
@@ -227,7 +227,7 @@
 
     .line 11
     :cond_5
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/stickers/details/BuyPackController$handleNonPurchasable$1;->d:Lcom/vk/dto/stickers/PurchaseDetails;
 
@@ -261,7 +261,7 @@
     .line 13
     :cond_7
     :goto_4
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v4, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -285,7 +285,7 @@
     const-string v1, "dialogView"
 
     .line 16
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setView(Landroid/view/View;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 

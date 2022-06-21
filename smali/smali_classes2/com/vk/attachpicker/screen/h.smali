@@ -36,7 +36,7 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    invoke-static {p1, p2}, Lcom/vk/attachpicker/screen/d0;->b(Landroid/content/DialogInterface;I)V
+    invoke-static {p1, p2}, Lcom/vk/attachpicker/screen/EditorScreen;->b(Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/archive/holders/StoryArchiveHolder;->a(Lcom/vk/stories/archive/e/b;)V
+    value = Lcom/vk/stories/archive/holders/StoryArchiveHolder;->a(Lcom/vk/stories/archive/e/StoryArchiveItem;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -46,7 +46,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/auth/existingprofile/ExistingProfileFragment$e;->a:Lcom/vk/auth/existingprofile/ExistingProfileFragment;
 
-    invoke-static {v0}, Lcom/vk/auth/existingprofile/ExistingProfileFragment;->c(Lcom/vk/auth/existingprofile/ExistingProfileFragment;)Lcom/vk/auth/existingprofile/a;
+    invoke-static {v0}, Lcom/vk/auth/existingprofile/ExistingProfileFragment;->c(Lcom/vk/auth/existingprofile/ExistingProfileFragment;)Lcom/vk/auth/existingprofile/ExistingProfilePresenter;
 
     move-result-object v0
 
@@ -54,7 +54,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/auth/existingprofile/a;->e(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/auth/existingprofile/ExistingProfilePresenter;->e(Ljava/lang/String;)V
 
     return-void
 .end method

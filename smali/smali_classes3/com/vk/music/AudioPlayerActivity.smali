@@ -26,13 +26,13 @@
 
 .field private final K:Landroid/graphics/Rect;
 
-.field private final L:Lcom/vk/navigation/g;
+.field private final L:Lcom/vk/navigation/Dismissed;
 
 .field private M:Ljava/lang/Boolean;
 
-.field private N:Lcom/vk/music/player/d;
+.field private N:Lcom/vk/music/player/PlayerModel;
 
-.field private O:Lcom/vk/music/stats/d;
+.field private O:Lcom/vk/music/stats/MusicStatsTracker;
 
 
 # direct methods
@@ -62,7 +62,7 @@
 
     invoke-direct {v0, v1}, Lcom/vk/music/AudioPlayerActivity$b;-><init>(Lcom/vk/music/AudioPlayerActivity$a;)V
 
-    iput-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->L:Lcom/vk/navigation/g;
+    iput-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->L:Lcom/vk/navigation/Dismissed;
 
     const/4 v0, 0x1
 
@@ -74,18 +74,18 @@
     iput-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->M:Ljava/lang/Boolean;
 
     .line 5
-    sget-object v0, Lcom/vk/music/common/c$a;->a:Lcom/vk/music/common/c$c;
+    sget-object v0, Lcom/vk/music/common/Music$a;->a:Lcom/vk/music/common/Music$c;
 
-    invoke-interface {v0}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-interface {v0}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->N:Lcom/vk/music/player/d;
+    iput-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->N:Lcom/vk/music/player/PlayerModel;
 
     .line 6
-    sget-object v0, Lcom/vk/music/common/c$a;->h:Lcom/vk/music/stats/d;
+    sget-object v0, Lcom/vk/music/common/Music$a;->h:Lcom/vk/music/stats/MusicStatsTracker;
 
-    iput-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->O:Lcom/vk/music/stats/d;
+    iput-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->O:Lcom/vk/music/stats/MusicStatsTracker;
 
     return-void
 .end method
@@ -117,7 +117,7 @@
 
     move-result v0
 
-    invoke-static {v1, v0}, Lcom/vtosters/lite/f0;->a(Landroid/view/Window;I)V
+    invoke-static {v1, v0}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/view/Window;I)V
 
     const v0, 0x1020002
 
@@ -177,9 +177,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->N:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->N:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->Q()Lcom/vk/music/player/PlayState;
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->Q()Lcom/vk/music/player/PlayState;
 
     move-result-object v0
 
@@ -190,9 +190,9 @@
     if-eq v0, v1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->O:Lcom/vk/music/stats/d;
+    iget-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->O:Lcom/vk/music/stats/MusicStatsTracker;
 
-    invoke-interface {v0, v2}, Lcom/vk/music/stats/d;->a(Z)V
+    invoke-interface {v0, v2}, Lcom/vk/music/stats/MusicStatsTracker;->a(Z)V
 
     .line 3
     :cond_0
@@ -230,9 +230,9 @@
     invoke-super {p0, p1}, Lcom/vk/navigation/NavigationDelegateActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 3
-    new-instance v0, Lcom/vk/core/view/a;
+    new-instance v0, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
 
-    invoke-direct {v0, p0}, Lcom/vk/core/view/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;-><init>(Landroid/content/Context;)V
 
     const v1, 0x7f0a0480
 
@@ -245,7 +245,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setFitsSystemWindows(Z)V
 
     .line 6
-    invoke-virtual {v0, v1}, Lcom/vk/core/view/a;->setStatusBarBackgroundColor(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;->setStatusBarBackgroundColor(I)V
 
     .line 7
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(Landroid/view/View;)V
@@ -327,13 +327,13 @@
 
     int-to-float v1, v1
 
-    invoke-static {v1}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v1}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v1
 
     const/high16 v2, 0x43f00000    # 480.0f
 
-    invoke-static {v2}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v2}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v2
 
@@ -345,7 +345,7 @@
     const/high16 v1, 0x43b40000    # 360.0f
 
     .line 14
-    invoke-static {v1}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v1}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v1
 
@@ -369,7 +369,7 @@
 
     int-to-float v2, v2
 
-    invoke-static {v2}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v2}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v2
 
@@ -405,7 +405,7 @@
     if-nez p1, :cond_5
 
     .line 18
-    sget-object p1, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
+    sget-object p1, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -415,7 +415,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
 
     move-result-object p1
 
@@ -445,7 +445,7 @@
 
     .line 22
     :goto_2
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
 
     move-result-object v0
 
@@ -455,13 +455,13 @@
 
     .line 23
     :cond_5
-    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/y;
+    invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->E0()Lcom/vk/navigation/VKNavigationDelegate;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->L:Lcom/vk/navigation/g;
+    iget-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->L:Lcom/vk/navigation/Dismissed;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/g;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/Dismissed;)V
 
     return-void
 .end method
@@ -564,11 +564,11 @@
     invoke-super {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->onResume()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->O:Lcom/vk/music/stats/d;
+    iget-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->O:Lcom/vk/music/stats/MusicStatsTracker;
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/music/stats/d;->a(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/music/stats/MusicStatsTracker;->a(Z)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/music/AudioPlayerActivity;->M:Ljava/lang/Boolean;

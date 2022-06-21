@@ -98,7 +98,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/g;->a(Landroid/widget/EditText;I)V
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/EditTextExt;->a(Landroid/widget/EditText;I)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog$g;->a:Lcom/vk/stories/clickable/dialogs/question/StoryCreateQuestionDialog;
@@ -119,24 +119,24 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/g;->a(Landroid/widget/EditText;I)V
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/EditTextExt;->a(Landroid/widget/EditText;I)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 6
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method

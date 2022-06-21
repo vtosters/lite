@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservableThrottleLatest;
-.super Lio/reactivex/internal/operators/observable/a;
+.super Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;
 .source "ObservableThrottleLatest.java"
 
 
@@ -15,7 +15,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lio/reactivex/internal/operators/observable/a<",
+        "Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream<",
         "TT;TT;>;"
     }
 .end annotation
@@ -26,27 +26,27 @@
 
 .field final c:Ljava/util/concurrent/TimeUnit;
 
-.field final d:Lc/a/s;
+.field final d:Lio/reactivex/Scheduler;
 
 .field final e:Z
 
 
 # direct methods
-.method public constructor <init>(Lc/a/m;JLjava/util/concurrent/TimeUnit;Lc/a/s;Z)V
+.method public constructor <init>(Lio/reactivex/Observable;JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;J",
             "Ljava/util/concurrent/TimeUnit;",
-            "Lc/a/s;",
+            "Lio/reactivex/Scheduler;",
             "Z)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/a;-><init>(Lc/a/p;)V
+    invoke-direct {p0, p1}, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;-><init>(Lio/reactivex/ObservableSource;)V
 
     .line 2
     iput-wide p2, p0, Lio/reactivex/internal/operators/observable/ObservableThrottleLatest;->b:J
@@ -55,7 +55,7 @@
     iput-object p4, p0, Lio/reactivex/internal/operators/observable/ObservableThrottleLatest;->c:Ljava/util/concurrent/TimeUnit;
 
     .line 4
-    iput-object p5, p0, Lio/reactivex/internal/operators/observable/ObservableThrottleLatest;->d:Lc/a/s;
+    iput-object p5, p0, Lio/reactivex/internal/operators/observable/ObservableThrottleLatest;->d:Lio/reactivex/Scheduler;
 
     .line 5
     iput-boolean p6, p0, Lio/reactivex/internal/operators/observable/ObservableThrottleLatest;->e:Z
@@ -65,18 +65,18 @@
 
 
 # virtual methods
-.method protected b(Lc/a/r;)V
+.method protected b(Lio/reactivex/Observer;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/a;->a:Lc/a/p;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/AbstractObservableWithUpstream;->a:Lio/reactivex/ObservableSource;
 
     new-instance v8, Lio/reactivex/internal/operators/observable/ObservableThrottleLatest$ThrottleLatestObserver;
 
@@ -84,9 +84,9 @@
 
     iget-object v5, p0, Lio/reactivex/internal/operators/observable/ObservableThrottleLatest;->c:Ljava/util/concurrent/TimeUnit;
 
-    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableThrottleLatest;->d:Lc/a/s;
+    iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableThrottleLatest;->d:Lio/reactivex/Scheduler;
 
-    invoke-virtual {v1}, Lc/a/s;->a()Lc/a/s$c;
+    invoke-virtual {v1}, Lio/reactivex/Scheduler;->a()Lio/reactivex/Scheduler$c;
 
     move-result-object v6
 
@@ -96,9 +96,9 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v1 .. v7}, Lio/reactivex/internal/operators/observable/ObservableThrottleLatest$ThrottleLatestObserver;-><init>(Lc/a/r;JLjava/util/concurrent/TimeUnit;Lc/a/s$c;Z)V
+    invoke-direct/range {v1 .. v7}, Lio/reactivex/internal/operators/observable/ObservableThrottleLatest$ThrottleLatestObserver;-><init>(Lio/reactivex/Observer;JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler$c;Z)V
 
-    invoke-interface {v0, v8}, Lc/a/p;->a(Lc/a/r;)V
+    invoke-interface {v0, v8}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
 
     return-void
 .end method

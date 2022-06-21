@@ -71,11 +71,11 @@
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    new-instance v0, Lcom/vk/navigation/o;
+    new-instance v0, Lcom/vk/navigation/Navigator;
 
-    const-class v1, Lcom/vtosters/lite/fragments/q1;
+    const-class v1, Lcom/vtosters/lite/general/fragments/NotificationsAdvancedSettingsFragment;
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     iget-object p1, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$c;->a:Lcom/vk/notifications/settings/NotificationsSettingsAdapter;
 
@@ -83,7 +83,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

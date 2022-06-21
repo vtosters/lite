@@ -51,7 +51,7 @@
 
     sget-object v1, Lcom/vk/dto/stories/model/StoryViewAction;->HIDE_FROM_STORIES:Lcom/vk/dto/stories/model/StoryViewAction;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/view/e1;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/view/BaseStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$i0;->c:Lcom/vk/stories/view/StoryView;
@@ -70,7 +70,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/stories/view/StoryView$i0$a;-><init>(Lcom/vk/stories/view/StoryView$i0;)V
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/stories/StoriesController;->a(Landroid/content/Context;ILjava/lang/String;Lcom/vk/api/base/a;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/stories/StoriesController;->a(Landroid/content/Context;ILjava/lang/String;Lcom/vk/api/base/ApiCallback;)V
 
     return-void
 .end method

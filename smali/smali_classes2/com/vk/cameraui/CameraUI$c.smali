@@ -3,14 +3,14 @@
 .source "CameraUI.kt"
 
 # interfaces
-.implements Lcom/vk/cameraui/i/a;
-.implements Lcom/vk/stories/editor/base/f0;
-.implements Lcom/vk/libvideo/a0/c;
-.implements Lcom/vk/libvideo/a0/f;
-.implements Lcom/vk/media/camera/j$c;
-.implements Lcom/vk/libvideo/live/views/broadcast/b;
+.implements Lcom/vk/cameraui/i/BasePresenter;
+.implements Lcom/vk/stories/editor/base/CameraEditorContainer;
+.implements Lcom/vk/libvideo/a0/LiveBroadcastProvider;
+.implements Lcom/vk/libvideo/a0/MasksProvider;
+.implements Lcom/vk/media/camera/CameraUtils$c;
+.implements Lcom/vk/libvideo/live/views/broadcast/BroadcastContract2;
 .implements Lcom/vk/cameraui/widgets/shutter/ShutterButton$e;
-.implements Lcom/vk/media/camera/i$d;
+.implements Lcom/vk/media/camera/CameraSource$d;
 
 
 # annotations
@@ -32,16 +32,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/cameraui/i/a<",
+        "Lcom/vk/cameraui/i/BasePresenter<",
         "Lcom/vk/cameraui/CameraUI$e;",
         ">;",
-        "Lcom/vk/stories/editor/base/f0;",
-        "Lcom/vk/libvideo/a0/c;",
-        "Lcom/vk/libvideo/a0/f;",
-        "Lcom/vk/media/camera/j$c;",
-        "Lcom/vk/libvideo/live/views/broadcast/b;",
+        "Lcom/vk/stories/editor/base/CameraEditorContainer;",
+        "Lcom/vk/libvideo/a0/LiveBroadcastProvider;",
+        "Lcom/vk/libvideo/a0/MasksProvider;",
+        "Lcom/vk/media/camera/CameraUtils$c;",
+        "Lcom/vk/libvideo/live/views/broadcast/BroadcastContract2;",
         "Lcom/vk/cameraui/widgets/shutter/ShutterButton$e;",
-        "Lcom/vk/media/camera/i$d;"
+        "Lcom/vk/media/camera/CameraSource$d;"
     }
 .end annotation
 

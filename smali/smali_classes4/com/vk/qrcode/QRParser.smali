@@ -3,7 +3,7 @@
 .source "QRParser.kt"
 
 # interfaces
-.implements Lcom/vk/media/camera/qrcode/b$d;
+.implements Lcom/vk/media/camera/qrcode/CameraQRUtils$d;
 
 
 # annotations
@@ -44,35 +44,35 @@
 
 .field private final f:Landroid/content/Context;
 
-.field private final g:Lkotlin/jvm/b/a;
+.field private final g:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final h:Lkotlin/jvm/b/b;
+.field private final h:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final i:Lkotlin/jvm/b/c;
+.field private final i:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "[",
             "Lcom/google/zxing/ResultPoint;",
-            "Lcom/vk/media/camera/qrcode/b$e;",
-            "Lkotlin/m;",
+            "Lcom/vk/media/camera/qrcode/CameraQRUtils$e;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -87,7 +87,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/qrcode/QRParser$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/qrcode/QRParser$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/qrcode/QRParser;->l:Lcom/vk/qrcode/QRParser$a;
 
@@ -116,26 +116,26 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/c;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Integer;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-[",
             "Lcom/google/zxing/ResultPoint;",
             "-",
-            "Lcom/vk/media/camera/qrcode/b$e;",
-            "Lkotlin/m;",
+            "Lcom/vk/media/camera/qrcode/CameraQRUtils$e;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -145,11 +145,11 @@
 
     iput-object p1, p0, Lcom/vk/qrcode/QRParser;->f:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/qrcode/QRParser;->g:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/qrcode/QRParser;->g:Lkotlin/jvm/b/Functions;
 
-    iput-object p3, p0, Lcom/vk/qrcode/QRParser;->h:Lkotlin/jvm/b/b;
+    iput-object p3, p0, Lcom/vk/qrcode/QRParser;->h:Lkotlin/jvm/b/Functions2;
 
-    iput-object p4, p0, Lcom/vk/qrcode/QRParser;->i:Lkotlin/jvm/b/c;
+    iput-object p4, p0, Lcom/vk/qrcode/QRParser;->i:Lkotlin/jvm/b/Functions1;
 
     const/4 p1, 0x1
 
@@ -171,7 +171,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/media/camera/qrcode/a$b;Z)V
+.method private final a(Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;Z)V
     .locals 9
 
     .line 6
@@ -183,7 +183,7 @@
 
     .line 7
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/a$b;->d()Lcom/google/zxing/client/result/ParsedResult;
+    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;->d()Lcom/google/zxing/client/result/ParsedResult;
 
     move-result-object v0
 
@@ -203,7 +203,7 @@
 
     iget-object v2, p0, Lcom/vk/qrcode/QRParser;->d:Ljava/lang/String;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -215,23 +215,23 @@
 
     .line 10
     :cond_1
-    iget-object v2, p0, Lcom/vk/qrcode/QRParser;->i:Lkotlin/jvm/b/c;
+    iget-object v2, p0, Lcom/vk/qrcode/QRParser;->i:Lkotlin/jvm/b/Functions1;
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/a$b;->a()[Lcom/google/zxing/ResultPoint;
+    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;->a()[Lcom/google/zxing/ResultPoint;
 
     move-result-object v4
 
-    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/a$b;->b()Lcom/vk/media/camera/qrcode/b$e;
+    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;->b()Lcom/vk/media/camera/qrcode/CameraQRUtils$e;
 
     move-result-object v5
 
-    invoke-interface {v2, v4, v5}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v4, v5}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lkotlin/m;
+    check-cast v2, Lkotlin/Unit;
 
     :cond_2
     const/4 v2, 0x0
@@ -317,7 +317,7 @@
     if-eqz p2, :cond_6
 
     .line 14
-    invoke-direct {p0, p1}, Lcom/vk/qrcode/QRParser;->b(Lcom/vk/media/camera/qrcode/a$b;)V
+    invoke-direct {p0, p1}, Lcom/vk/qrcode/QRParser;->b(Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;)V
 
     goto/16 :goto_6
 
@@ -365,9 +365,9 @@
 
     .line 19
     :pswitch_2
-    new-instance p2, Lcom/vk/qrcode/m;
+    new-instance p2, Lcom/vk/qrcode/QRTypes5;
 
-    invoke-direct {p2, v0}, Lcom/vk/qrcode/m;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
+    invoke-direct {p2, v0}, Lcom/vk/qrcode/QRTypes5;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
 
     goto :goto_4
 
@@ -379,9 +379,9 @@
 
     if-eqz p2, :cond_8
 
-    new-instance p2, Lcom/vk/qrcode/e;
+    new-instance p2, Lcom/vk/qrcode/QRTypes8;
 
-    invoke-direct {p2, v0}, Lcom/vk/qrcode/e;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
+    invoke-direct {p2, v0}, Lcom/vk/qrcode/QRTypes8;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
 
     goto :goto_4
 
@@ -396,23 +396,23 @@
     if-eqz p2, :cond_9
 
     .line 22
-    new-instance p2, Lcom/vk/qrcode/d;
+    new-instance p2, Lcom/vk/qrcode/QRTypes9;
 
-    invoke-direct {p2, v0}, Lcom/vk/qrcode/d;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
+    invoke-direct {p2, v0}, Lcom/vk/qrcode/QRTypes9;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
 
     .line 23
     new-instance v0, Lcom/vk/qrcode/QRParser$processQR$action$action$1$1;
 
-    invoke-direct {v0, p2}, Lcom/vk/qrcode/QRParser$processQR$action$action$1$1;-><init>(Lcom/vk/qrcode/d;)V
+    invoke-direct {v0, p2}, Lcom/vk/qrcode/QRParser$processQR$action$action$1$1;-><init>(Lcom/vk/qrcode/QRTypes9;)V
 
-    invoke-virtual {p2, v0}, Lcom/vk/qrcode/d;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, v0}, Lcom/vk/qrcode/QRTypes9;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 24
     new-instance v0, Lcom/vk/cameraui/utils/CameraTracker;
 
     invoke-direct {v0}, Lcom/vk/cameraui/utils/CameraTracker;-><init>()V
 
-    invoke-virtual {p2}, Lcom/vk/qrcode/d;->n()I
+    invoke-virtual {p2}, Lcom/vk/qrcode/QRTypes9;->n()I
 
     move-result v4
 
@@ -422,17 +422,17 @@
 
     .line 25
     :cond_9
-    new-instance p2, Lcom/vk/qrcode/n;
+    new-instance p2, Lcom/vk/qrcode/QRTypes4;
 
-    invoke-direct {p2, v0}, Lcom/vk/qrcode/n;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
+    invoke-direct {p2, v0}, Lcom/vk/qrcode/QRTypes4;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
 
     goto :goto_4
 
     .line 26
     :pswitch_4
-    new-instance p2, Lcom/vk/qrcode/f;
+    new-instance p2, Lcom/vk/qrcode/QRTypes10;
 
-    invoke-direct {p2, v0}, Lcom/vk/qrcode/f;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
+    invoke-direct {p2, v0}, Lcom/vk/qrcode/QRTypes10;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
 
     goto :goto_4
 
@@ -440,7 +440,7 @@
     :pswitch_5
     new-instance p2, Lcom/vk/qrcode/QRTypes$AddressBookQRAction;
 
-    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/a$b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;->c()Ljava/lang/String;
 
     move-result-object v4
 
@@ -466,23 +466,23 @@
 
     .line 28
     :pswitch_6
-    new-instance p2, Lcom/vk/qrcode/g;
+    new-instance p2, Lcom/vk/qrcode/QRTypes;
 
-    invoke-direct {p2, v0}, Lcom/vk/qrcode/g;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
+    invoke-direct {p2, v0}, Lcom/vk/qrcode/QRTypes;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
 
     goto :goto_4
 
     .line 29
     :pswitch_7
-    new-instance p2, Lcom/vk/qrcode/p;
+    new-instance p2, Lcom/vk/qrcode/QRTypes2;
 
-    invoke-direct {p2, v0}, Lcom/vk/qrcode/p;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
+    invoke-direct {p2, v0}, Lcom/vk/qrcode/QRTypes2;-><init>(Lcom/google/zxing/client/result/ParsedResult;)V
 
     goto :goto_4
 
     .line 30
     :goto_3
-    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRParser;->b(Lcom/google/zxing/client/result/ParsedResult;)Lcom/vk/qrcode/l;
+    invoke-direct {p0, v0}, Lcom/vk/qrcode/QRParser;->b(Lcom/google/zxing/client/result/ParsedResult;)Lcom/vk/qrcode/QRTypes6;
 
     move-result-object p2
 
@@ -493,14 +493,14 @@
     move-result v0
 
     .line 32
-    invoke-direct {p0, p2}, Lcom/vk/qrcode/QRParser;->a(Lcom/vk/qrcode/l;)Z
+    invoke-direct {p0, p2}, Lcom/vk/qrcode/QRParser;->a(Lcom/vk/qrcode/QRTypes6;)Z
 
     move-result v3
 
     if-eqz v3, :cond_c
 
     .line 33
-    invoke-virtual {p2}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p2}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v3
 
@@ -508,7 +508,7 @@
 
     if-eq v3, v4, :cond_b
 
-    invoke-virtual {p2}, Lcom/vk/qrcode/l;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p2}, Lcom/vk/qrcode/QRTypes6;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v3
 
@@ -521,7 +521,7 @@
 
     iget-boolean v4, p0, Lcom/vk/qrcode/QRParser;->c:Z
 
-    invoke-virtual {v3, p2, v0, p1, v4}, Lcom/vk/qrcode/QRStatsTracker;->a(Lcom/vk/qrcode/l;ZLcom/vk/media/camera/qrcode/a$b;Z)V
+    invoke-virtual {v3, p2, v0, p1, v4}, Lcom/vk/qrcode/QRStatsTracker;->a(Lcom/vk/qrcode/QRTypes6;ZLcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;Z)V
 
     goto :goto_5
 
@@ -531,27 +531,27 @@
 
     iget-boolean v4, p0, Lcom/vk/qrcode/QRParser;->c:Z
 
-    invoke-virtual {v3, v0, p1, v4}, Lcom/vk/qrcode/QRStatsTracker;->a(ZLcom/vk/media/camera/qrcode/a$b;Z)V
+    invoke-virtual {v3, v0, p1, v4}, Lcom/vk/qrcode/QRStatsTracker;->a(ZLcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;Z)V
 
     .line 36
     :cond_c
     :goto_5
-    invoke-virtual {p2}, Lcom/vk/qrcode/l;->e()Z
+    invoke-virtual {p2}, Lcom/vk/qrcode/QRTypes6;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_11
 
     .line 37
-    instance-of p1, p2, Lcom/vk/qrcode/o;
+    instance-of p1, p2, Lcom/vk/qrcode/QRTypes3;
 
     if-eqz p1, :cond_d
 
     .line 38
-    invoke-virtual {p2}, Lcom/vk/qrcode/l;->a()Lc/a/m;
+    invoke-virtual {p2}, Lcom/vk/qrcode/QRTypes6;->a()Lio/reactivex/Observable;
 
     .line 39
-    iget-object p1, p0, Lcom/vk/qrcode/QRParser;->h:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/qrcode/QRParser;->h:Lkotlin/jvm/b/Functions2;
 
     if-eqz p1, :cond_10
 
@@ -559,17 +559,17 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     goto :goto_6
 
     .line 40
     :cond_d
-    invoke-virtual {p2}, Lcom/vk/qrcode/l;->i()Lcom/vk/qrcode/QRTypes$Type;
+    invoke-virtual {p2}, Lcom/vk/qrcode/QRTypes6;->i()Lcom/vk/qrcode/QRTypes$Type;
 
     move-result-object p1
 
@@ -581,9 +581,9 @@
 
     move-object p1, p2
 
-    check-cast p1, Lcom/vk/qrcode/k;
+    check-cast p1, Lcom/vk/qrcode/QRTypes1;
 
-    invoke-virtual {p1}, Lcom/vk/qrcode/k;->j()Z
+    invoke-virtual {p1}, Lcom/vk/qrcode/QRTypes1;->j()Z
 
     move-result p1
 
@@ -619,7 +619,7 @@
 
     iget-object v0, p0, Lcom/vk/qrcode/QRParser;->f:Landroid/content/Context;
 
-    invoke-virtual {p1, v0, p0, p2}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/l;)V
+    invoke-virtual {p1, v0, p0, p2}, Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes6;)V
 
     .line 45
     :cond_10
@@ -632,7 +632,7 @@
     :cond_11
     sget-object p2, Lcom/vk/qrcode/QRStatsTracker;->b:Lcom/vk/qrcode/QRStatsTracker;
 
-    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/a$b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;->c()Ljava/lang/String;
 
     move-result-object p1
 
@@ -661,16 +661,16 @@
     .end packed-switch
 .end method
 
-.method public static final synthetic a(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/a$b;Z)V
+.method public static final synthetic a(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;Z)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/qrcode/QRParser;->a(Lcom/vk/media/camera/qrcode/a$b;Z)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/qrcode/QRParser;->a(Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;Z)V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/a$b;ZILjava/lang/Object;)V
+.method static synthetic a(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;ZILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -681,7 +681,7 @@
 
     .line 5
     :cond_0
-    invoke-direct {p0, p1, p2}, Lcom/vk/qrcode/QRParser;->a(Lcom/vk/media/camera/qrcode/a$b;Z)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/qrcode/QRParser;->a(Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;Z)V
 
     return-void
 .end method
@@ -727,7 +727,7 @@
 
     .line 50
     :cond_0
-    sget-object v0, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v0, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     invoke-virtual {p1}, Lcom/google/zxing/client/result/ParsedResult;->toString()Ljava/lang/String;
 
@@ -735,9 +735,9 @@
 
     const-string v1, "parsedResult.toString()"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/links/c$a;->c(Ljava/lang/String;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/common/links/LinkProcessor$a;->c(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -762,15 +762,15 @@
     return p0
 .end method
 
-.method private final a(Lcom/vk/qrcode/l;)Z
+.method private final a(Lcom/vk/qrcode/QRTypes6;)Z
     .locals 1
 
     .line 56
-    instance-of v0, p1, Lcom/vk/qrcode/d;
+    instance-of v0, p1, Lcom/vk/qrcode/QRTypes9;
 
     if-nez v0, :cond_0
 
-    instance-of p1, p1, Lcom/vk/qrcode/o;
+    instance-of p1, p1, Lcom/vk/qrcode/QRTypes3;
 
     if-nez p1, :cond_0
 
@@ -803,7 +803,7 @@
 
     const-string v1, "lastResultTimeStamps[result] ?: return false"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
@@ -832,7 +832,7 @@
     return v0
 .end method
 
-.method private final b(Lcom/google/zxing/client/result/ParsedResult;)Lcom/vk/qrcode/l;
+.method private final b(Lcom/google/zxing/client/result/ParsedResult;)Lcom/vk/qrcode/QRTypes6;
     .locals 5
 
     .line 4
@@ -842,7 +842,7 @@
 
     const-string v1, "qr.toString()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-direct {p0, v0}, Lcom/vk/qrcode/QRParser;->c(Ljava/lang/String;)Z
@@ -854,25 +854,25 @@
     if-eqz v1, :cond_1
 
     .line 6
-    sget-object v0, Lcom/vk/core/ui/themes/d;->c:Lcom/vk/core/ui/themes/d;
+    sget-object v0, Lcom/vk/core/ui/themes/MilkshakeHelper;->c:Lcom/vk/core/ui/themes/MilkshakeHelper;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/themes/d;->b()Z
+    invoke-virtual {v0}, Lcom/vk/core/ui/themes/MilkshakeHelper;->b()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 7
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 8
-    sget-object v0, Lcom/vk/core/ui/themes/d;->c:Lcom/vk/core/ui/themes/d;
+    sget-object v0, Lcom/vk/core/ui/themes/MilkshakeHelper;->c:Lcom/vk/core/ui/themes/MilkshakeHelper;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/themes/d;->a()Z
+    invoke-virtual {v0}, Lcom/vk/core/ui/themes/MilkshakeHelper;->a()Z
 
     move-result v0
 
@@ -882,9 +882,9 @@
 
     .line 9
     :cond_0
-    new-instance v0, Lcom/vk/qrcode/k;
+    new-instance v0, Lcom/vk/qrcode/QRTypes1;
 
-    invoke-direct {v0, p1, v2}, Lcom/vk/qrcode/k;-><init>(Lcom/google/zxing/client/result/ParsedResult;Z)V
+    invoke-direct {v0, p1, v2}, Lcom/vk/qrcode/QRTypes1;-><init>(Lcom/google/zxing/client/result/ParsedResult;Z)V
 
     goto :goto_0
 
@@ -909,19 +909,19 @@
     if-eqz v1, :cond_2
 
     .line 11
-    new-instance v0, Lcom/vk/qrcode/j;
+    new-instance v0, Lcom/vk/qrcode/QRTypes11;
 
     iget-boolean v1, p0, Lcom/vk/qrcode/QRParser;->c:Z
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/qrcode/j;-><init>(Lcom/google/zxing/client/result/ParsedResult;Z)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/qrcode/QRTypes11;-><init>(Lcom/google/zxing/client/result/ParsedResult;Z)V
 
     goto :goto_0
 
     .line 12
     :cond_2
-    sget-object v1, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v1, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    invoke-virtual {v1}, Lcom/vk/common/links/c$a;->k()Lkotlin/text/Regex;
+    invoke-virtual {v1}, Lcom/vk/common/links/LinkProcessor$a;->k()Lkotlin/text/Regex;
 
     move-result-object v1
 
@@ -932,27 +932,27 @@
     if-eqz v0, :cond_3
 
     .line 13
-    new-instance v0, Lcom/vk/qrcode/o;
+    new-instance v0, Lcom/vk/qrcode/QRTypes3;
 
     iget-boolean v1, p0, Lcom/vk/qrcode/QRParser;->c:Z
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/qrcode/o;-><init>(Lcom/google/zxing/client/result/ParsedResult;Z)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/qrcode/QRTypes3;-><init>(Lcom/google/zxing/client/result/ParsedResult;Z)V
 
     goto :goto_0
 
     .line 14
     :cond_3
-    new-instance v0, Lcom/vk/qrcode/i;
+    new-instance v0, Lcom/vk/qrcode/QRTypes7;
 
     iget-boolean v1, p0, Lcom/vk/qrcode/QRParser;->c:Z
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/qrcode/i;-><init>(Lcom/google/zxing/client/result/ParsedResult;Z)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/qrcode/QRTypes7;-><init>(Lcom/google/zxing/client/result/ParsedResult;Z)V
 
     :goto_0
     return-object v0
 .end method
 
-.method private final b(Lcom/vk/media/camera/qrcode/a$b;)V
+.method private final b(Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;)V
     .locals 5
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -961,7 +961,7 @@
     .end annotation
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/a$b;->d()Lcom/google/zxing/client/result/ParsedResult;
+    invoke-virtual {p1}, Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;->d()Lcom/google/zxing/client/result/ParsedResult;
 
     move-result-object v0
 
@@ -970,7 +970,7 @@
     check-cast v0, Lcom/google/zxing/client/result/URIParsedResult;
 
     .line 16
-    new-instance v1, Lb/h/c/c0/c;
+    new-instance v1, Lcom/vk/api/utils/UtilsResolveShortLink;
 
     invoke-virtual {v0}, Lcom/google/zxing/client/result/URIParsedResult;->getURI()Ljava/lang/String;
 
@@ -978,42 +978,42 @@
 
     const-string v3, "uriResult.uri"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x2
 
     const/4 v4, 0x0
 
-    invoke-direct {v1, v2, v4, v3, v4}, Lb/h/c/c0/c;-><init>(Ljava/lang/String;Lorg/json/JSONObject;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2, v4, v3, v4}, Lcom/vk/api/utils/UtilsResolveShortLink;-><init>(Ljava/lang/String;Lorg/json/JSONObject;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v2, 0x1
 
     .line 17
-    invoke-static {v1, v4, v2, v4}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v4, v2, v4}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 18
     new-instance v2, Lcom/vk/qrcode/QRParser$b;
 
-    invoke-direct {v2, p0, p1}, Lcom/vk/qrcode/QRParser$b;-><init>(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/a$b;)V
+    invoke-direct {v2, p0, p1}, Lcom/vk/qrcode/QRParser$b;-><init>(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;)V
 
-    invoke-virtual {v1, v2}, Lc/a/m;->d(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 19
     new-instance v2, Lcom/vk/qrcode/QRParser$c;
 
-    invoke-direct {v2, p0, v0, p1}, Lcom/vk/qrcode/QRParser$c;-><init>(Lcom/vk/qrcode/QRParser;Lcom/google/zxing/client/result/URIParsedResult;Lcom/vk/media/camera/qrcode/a$b;)V
+    invoke-direct {v2, p0, v0, p1}, Lcom/vk/qrcode/QRParser$c;-><init>(Lcom/vk/qrcode/QRParser;Lcom/google/zxing/client/result/URIParsedResult;Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;)V
 
     .line 20
     new-instance v3, Lcom/vk/qrcode/QRParser$d;
 
-    invoke-direct {v3, p0, p1}, Lcom/vk/qrcode/QRParser$d;-><init>(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/a$b;)V
+    invoke-direct {v3, p0, p1}, Lcom/vk/qrcode/QRParser$d;-><init>(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;)V
 
     .line 21
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     .line 22
     invoke-virtual {v0}, Lcom/google/zxing/client/result/ParsedResult;->toString()Ljava/lang/String;
@@ -1022,7 +1022,7 @@
 
     const-string v0, "uriResult.toString()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/qrcode/QRParser;->d(Ljava/lang/String;)V
 
@@ -1095,9 +1095,9 @@
     if-eqz p1, :cond_1
 
     .line 4
-    sget-object v2, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v2, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    invoke-virtual {v2, p1}, Lcom/vk/common/links/c$a;->f(Landroid/net/Uri;)Z
+    invoke-virtual {v2, p1}, Lcom/vk/common/links/LinkProcessor$a;->f(Landroid/net/Uri;)Z
 
     move-result v2
 
@@ -1120,7 +1120,7 @@
     :cond_0
     const-string p1, "up"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1167,9 +1167,9 @@
     invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->c(I)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/qrcode/QRParser;->g:Lkotlin/jvm/b/a;
+    iget-object v1, p0, Lcom/vk/qrcode/QRParser;->g:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1189,7 +1189,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/media/camera/qrcode/a$b;)V
+.method public a(Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;)V
     .locals 3
 
     const/4 v0, 0x0
@@ -1199,7 +1199,7 @@
     const/4 v2, 0x0
 
     .line 2
-    invoke-static {p0, p1, v0, v1, v2}, Lcom/vk/qrcode/QRParser;->a(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/a$b;ZILjava/lang/Object;)V
+    invoke-static {p0, p1, v0, v1, v2}, Lcom/vk/qrcode/QRParser;->a(Lcom/vk/qrcode/QRParser;Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1208,7 +1208,7 @@
     .locals 1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/qrcode/QRParser;->h:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/qrcode/QRParser;->h:Lkotlin/jvm/b/Functions2;
 
     if-eqz v0, :cond_0
 
@@ -1216,11 +1216,11 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -1236,7 +1236,7 @@
 
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    invoke-virtual {v0}, Lcom/vk/qrcode/QRViewUtils;->a()Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {v0}, Lcom/vk/qrcode/QRViewUtils;->a()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v0
 
@@ -1257,17 +1257,17 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/qrcode/QRParser;->i:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/qrcode/QRParser;->i:Lkotlin/jvm/b/Functions1;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1, v1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1, v1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -1326,7 +1326,7 @@
     .line 1
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    invoke-virtual {v0}, Lcom/vk/qrcode/QRViewUtils;->a()Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {v0}, Lcom/vk/qrcode/QRViewUtils;->a()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v0
 

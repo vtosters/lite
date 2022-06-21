@@ -35,7 +35,7 @@
 
     const-string v1, "packageManager"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, v0}, Lcom/vk/silentauth/host/SilentAuthService$a;-><init>(Landroid/content/pm/PackageManager;)V
 

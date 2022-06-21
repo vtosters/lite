@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->g(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->g(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/newsfeed/entries/Post;",
         ">;"
     }
@@ -32,18 +32,18 @@
 # instance fields
 .field final synthetic a:Landroid/app/Activity;
 
-.field final synthetic b:Lcom/vk/qrcode/i;
+.field final synthetic b:Lcom/vk/qrcode/QRTypes7;
 
 .field final synthetic c:Lcom/vk/qrcode/QRParser;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Lcom/vk/qrcode/i;Lcom/vk/qrcode/QRParser;)V
+.method constructor <init>(Landroid/app/Activity;Lcom/vk/qrcode/QRTypes7;Lcom/vk/qrcode/QRParser;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forPost$1;->a:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$forPost$1;->b:Lcom/vk/qrcode/i;
+    iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$forPost$1;->b:Lcom/vk/qrcode/QRTypes7;
 
     iput-object p3, p0, Lcom/vk/qrcode/QRViewUtils$forPost$1;->c:Lcom/vk/qrcode/QRParser;
 
@@ -86,7 +86,7 @@
 
     invoke-direct {v4, v1, v0}, Lcom/vk/qrcode/QRViewUtils$forPost$1$$special$$inlined$let$lambda$3;-><init>(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/qrcode/QRViewUtils$forPost$1;)V
 
-    invoke-static {v3, v4}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v3, v4}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v3
 
@@ -153,7 +153,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v5}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -173,13 +173,13 @@
 
     const-string v10, "context.getString(R.string.qr_action_go_to_faves)"
 
-    invoke-static {v7, v10}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v10}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v10, Lcom/vk/qrcode/QRViewUtils$forPost$1$$special$$inlined$let$lambda$4;
 
     invoke-direct {v10, v0}, Lcom/vk/qrcode/QRViewUtils$forPost$1$$special$$inlined$let$lambda$4;-><init>(Lcom/vk/qrcode/QRViewUtils$forPost$1;)V
 
-    invoke-direct {v5, v7, v10, v9}, Lcom/vk/qrcode/QRViewUtils$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;Z)V
+    invoke-direct {v5, v7, v10, v9}, Lcom/vk/qrcode/QRViewUtils$a;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)V
 
     .line 12
     sget-object v7, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
@@ -225,14 +225,14 @@
 
     iget-object v14, v0, Lcom/vk/qrcode/QRViewUtils$forPost$1;->a:Landroid/app/Activity;
 
-    iget-object v13, v0, Lcom/vk/qrcode/QRViewUtils$forPost$1;->b:Lcom/vk/qrcode/i;
+    iget-object v13, v0, Lcom/vk/qrcode/QRViewUtils$forPost$1;->b:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-static {v6, v14, v13}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Landroid/content/Context;Lcom/vk/qrcode/l;)Ljava/lang/String;
+    invoke-static {v6, v14, v13}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Landroid/content/Context;Lcom/vk/qrcode/QRTypes6;)Ljava/lang/String;
 
     move-result-object v13
 
     .line 18
-    invoke-static {v4}, Lcom/vk/extensions/k;->a(Landroid/text/SpannableStringBuilder;)Landroid/text/SpannableString;
+    invoke-static {v4}, Lcom/vk/extensions/SpannableExt;->a(Landroid/text/SpannableStringBuilder;)Landroid/text/SpannableString;
 
     move-result-object v14
 
@@ -249,7 +249,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v4, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v24
 
@@ -269,11 +269,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v5}, Lcom/vk/qrcode/QRViewUtils$a;->a()Lkotlin/jvm/b/a;
+    invoke-virtual {v5}, Lcom/vk/qrcode/QRViewUtils$a;->a()Lkotlin/jvm/b/Functions;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v2, v3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v2
 
@@ -338,13 +338,13 @@
     move-object/from16 v18, v27
 
     .line 22
-    invoke-static/range {v1 .. v21}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v21}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     goto :goto_2
 
     .line 23
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v1, 0x0
 
@@ -354,7 +354,7 @@
     const/4 v1, 0x0
 
     .line 24
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;
-.super Lcom/vk/common/e/b;
+.super Lcom/vk/common/e/BaseItemHolder;
 .source "SuperAppWidgetMiniappsHolder.kt"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/b<",
-        "Lcom/vk/superapp/g/k;",
+        "Lcom/vk/common/e/BaseItemHolder<",
+        "Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;",
         ">;"
     }
 .end annotation
@@ -31,7 +31,7 @@
 
 .field private d:Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
 
-.field private final e:Lcom/vk/superapp/holders/b;
+.field private final e:Lcom/vk/superapp/holders/SuperAppClickListener;
 
 
 # direct methods
@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v0, 0x5
 
@@ -56,18 +56,18 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/View;Lcom/vk/superapp/holders/b;)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/superapp/holders/SuperAppClickListener;)V
     .locals 2
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/common/e/b;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/common/e/BaseItemHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->e:Lcom/vk/superapp/holders/b;
+    iput-object p2, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->e:Lcom/vk/superapp/holders/SuperAppClickListener;
 
     const p1, 0x7f0a0511
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -81,7 +81,7 @@
     const p1, 0x7f0a0b46
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -94,7 +94,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -113,7 +113,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$adapter$1;-><init>(Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;)V
 
-    invoke-direct {p1, p2}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$b;-><init>(Lkotlin/jvm/b/c;)V
+    invoke-direct {p1, p2}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$b;-><init>(Lkotlin/jvm/b/Functions1;)V
 
     iput-object p1, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->c:Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$b;
 
@@ -124,7 +124,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
@@ -148,7 +148,7 @@
     :cond_0
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -178,23 +178,23 @@
 
     if-ltz v6, :cond_3
 
-    check-cast v1, Lcom/vk/common/i/b;
+    check-cast v1, Lcom/vk/common/i/RecyclerItem;
 
     .line 19
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 20
-    iget-object v3, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->e:Lcom/vk/superapp/holders/b;
+    iget-object v3, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->e:Lcom/vk/superapp/holders/SuperAppClickListener;
 
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/vk/core/ui/v/j/h/f/a;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/core/ui/v/j/h/f/UiViewTimeRecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -202,7 +202,7 @@
 
     move-object v5, v1
 
-    check-cast v5, Lcom/vk/superapp/g/a;
+    check-cast v5, Lcom/vk/superapp/g/SuperAppItems;
 
     const/4 v8, 0x0
 
@@ -214,12 +214,12 @@
 
     move-object v7, p2
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/superapp/holders/b$a;->a(Lcom/vk/superapp/holders/b;Landroid/content/Context;Lcom/vk/superapp/g/a;ILcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Lcom/vk/superapp/holders/SuperAppRequestCodes;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v11}, Lcom/vk/superapp/holders/SuperAppClickListener$a;->a(Lcom/vk/superapp/holders/SuperAppClickListener;Landroid/content/Context;Lcom/vk/superapp/g/SuperAppItems;ILcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Lcom/vk/superapp/holders/SuperAppRequestCodes;ILjava/lang/Object;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -248,25 +248,25 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;)Lcom/vk/superapp/g/k;
+.method public static final synthetic b(Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;)Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/superapp/g/k;
+    check-cast p0, Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;
 
     return-object p0
 .end method
 
-.method private final b(Lcom/vk/superapp/g/k;)Ljava/util/List;
+.method private final b(Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;)Ljava/util/List;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/superapp/g/k;",
+            "Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$e;",
@@ -275,7 +275,7 @@
     .end annotation
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/superapp/g/k;->g()Lcom/vk/dto/menu/widgets/SuperAppWidgetMiniapps;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;->g()Lcom/vk/dto/menu/widgets/SuperAppWidgetMiniapps;
 
     move-result-object v0
 
@@ -314,7 +314,7 @@
     check-cast v2, Lcom/vk/dto/menu/widgets/WidgetAppItem;
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/superapp/g/k;->f()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;->f()Ljava/util/List;
 
     move-result-object v3
 
@@ -387,18 +387,18 @@
 
 
 # virtual methods
-.method protected a(Lcom/vk/superapp/g/k;)V
+.method protected a(Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;)V
     .locals 3
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/superapp/g/k;->g()Lcom/vk/dto/menu/widgets/SuperAppWidgetMiniapps;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;->g()Lcom/vk/dto/menu/widgets/SuperAppWidgetMiniapps;
 
     move-result-object v0
 
     const v1, 0x7f0a0517
 
     .line 4
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -414,7 +414,7 @@
     const v1, 0x7f0a0513
 
     .line 6
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -438,7 +438,7 @@
     invoke-virtual {v1, v0}, Lcom/vk/imageloader/view/VKImageView;->a(I)V
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/superapp/g/k;->f()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -462,7 +462,7 @@
     const v1, 0x7f0a0b46
 
     .line 10
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -471,11 +471,11 @@
     .line 11
     iget-object v2, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->c:Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$b;
 
-    invoke-direct {p0, p1}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->b(Lcom/vk/superapp/g/k;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->b(Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;)Ljava/util/List;
 
     move-result-object p1
 
-    invoke-virtual {v2, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v2, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->c:Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$b;
@@ -508,20 +508,20 @@
     return-void
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public bridge synthetic b(Lcom/vk/common/i/b;)V
+.method public bridge synthetic b(Lcom/vk/common/i/RecyclerItem;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/superapp/g/k;
+    check-cast p1, Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->a(Lcom/vk/superapp/g/k;)V
+    invoke-virtual {p0, p1}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->a(Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;)V
 
     return-void
 .end method

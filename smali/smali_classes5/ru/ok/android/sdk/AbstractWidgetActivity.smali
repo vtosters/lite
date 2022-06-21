@@ -256,7 +256,7 @@
     check-cast v4, Ljava/util/Map$Entry;
 
     .line 10
-    sget-object v7, Lru/ok/android/sdk/g;->a:Ljava/util/List;
+    sget-object v7, Lru/ok/android/sdk/Shared;->a:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -320,7 +320,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    invoke-static {v4}, Lru/ok/android/sdk/util/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lru/ok/android/sdk/util/OkRequestUtil;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -344,7 +344,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lru/ok/android/sdk/util/a;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/ok/android/sdk/util/OkEncryptUtil;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

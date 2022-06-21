@@ -3,7 +3,7 @@
 .source "QueueSyncManager.kt"
 
 # interfaces
-.implements Lcom/vk/queue/sync/a;
+.implements Lcom/vk/queue/sync/CancellationSignal;
 
 
 # annotations
@@ -33,7 +33,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Collection<",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;>;"
         }
     .end annotation
@@ -49,7 +49,7 @@
             "Lcom/vk/queue/sync/QueueSyncManager;",
             "Ljava/util/Collection<",
             "+",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;>;)V"
         }
     .end annotation

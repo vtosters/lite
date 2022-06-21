@@ -3,12 +3,12 @@
 .source "CommunityPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/presenter/CommunityPresenter;->j1()Lc/a/m;
+    value = Lcom/vk/profile/presenter/CommunityPresenter;->j1()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,16 +49,16 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/core/util/q0;)Lc/a/m;
+.method public final a(Lcom/vk/core/util/Optional;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/util/q0<",
+            "Lcom/vk/core/util/Optional<",
             "Landroid/location/Location;",
             ">;)",
-            "Lc/a/m<",
-            "Lcom/vtosters/lite/api/i;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
             ">;"
         }
     .end annotation
@@ -66,13 +66,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$m;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/q0;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/core/util/Optional;->a()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/location/Location;
 
-    invoke-static {v0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->a(Lcom/vk/profile/presenter/CommunityPresenter;Landroid/location/Location;)Lc/a/m;
+    invoke-static {v0, p1}, Lcom/vk/profile/presenter/CommunityPresenter;->a(Lcom/vk/profile/presenter/CommunityPresenter;Landroid/location/Location;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -83,9 +83,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/core/util/q0;
+    check-cast p1, Lcom/vk/core/util/Optional;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$m;->a(Lcom/vk/core/util/q0;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/presenter/CommunityPresenter$m;->a(Lcom/vk/core/util/Optional;)Lio/reactivex/Observable;
 
     move-result-object p1
 

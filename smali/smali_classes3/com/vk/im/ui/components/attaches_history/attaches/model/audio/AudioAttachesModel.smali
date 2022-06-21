@@ -1,12 +1,12 @@
 .class public final Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;
-.super Lcom/vk/im/ui/components/attaches_history/attaches/l/a;
+.super Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;
 .source "AudioAttachesModel.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/components/attaches_history/attaches/l/a<",
+        "Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel<",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
         ">;"
     }
@@ -14,10 +14,10 @@
 
 
 # instance fields
-.field private final a:Lio/reactivex/subjects/a;
+.field private final a:Lio/reactivex/subjects/BehaviorSubject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/subjects/a<",
+            "Lio/reactivex/subjects/BehaviorSubject<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/pagination/PageLoadingState<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
             ">;>;"
@@ -25,10 +25,10 @@
     .end annotation
 .end field
 
-.field private final b:Lkotlin/jvm/b/b;
+.field private final b:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/im/engine/models/attaches/HistoryAttach;",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
             ">;"
@@ -36,11 +36,11 @@
     .end annotation
 .end field
 
-.field private final c:Lc/a/m;
+.field private final c:Lio/reactivex/Observable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/m<",
-            "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/b;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioTrackState;",
             ">;"
         }
     .end annotation
@@ -48,21 +48,21 @@
 
 
 # direct methods
-.method public constructor <init>(Lc/a/m;)V
+.method public constructor <init>(Lio/reactivex/Observable;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
-            "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/b;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioTrackState;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/l/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->c:Lc/a/m;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->c:Lio/reactivex/Observable;
 
     .line 2
     new-instance p1, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesState;
@@ -77,32 +77,32 @@
     .line 4
     invoke-direct {p1, v0, v1, v1, v1}, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesState;-><init>(Ljava/util/List;ZZZ)V
 
-    invoke-static {p1}, Lio/reactivex/subjects/a;->h(Ljava/lang/Object;)Lio/reactivex/subjects/a;
+    invoke-static {p1}, Lio/reactivex/subjects/BehaviorSubject;->h(Ljava/lang/Object;)Lio/reactivex/subjects/BehaviorSubject;
 
     move-result-object p1
 
     const-string v0, "BehaviorSubject.createDe\u2026ng = false\n            ))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->a:Lio/reactivex/subjects/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->a:Lio/reactivex/subjects/BehaviorSubject;
 
     .line 5
     sget-object p1, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel$mapper$1;->a:Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel$mapper$1;
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->b:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->b:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lc/a/m;
+.method public a()Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
             ">;>;"
@@ -110,39 +110,39 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->c()Lio/reactivex/subjects/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->c()Lio/reactivex/subjects/BehaviorSubject;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel$a;->a:Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel$a;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->c:Lc/a/m;
+    iget-object v1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->c:Lio/reactivex/Observable;
 
     .line 2
     sget-object v2, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel$b;->a:Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel$b;
 
     .line 3
-    invoke-static {v0, v1, v2}, Lc/a/m;->a(Lc/a/p;Lc/a/p;Lc/a/z/c;)Lc/a/m;
+    invoke-static {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;Lio/reactivex/functions/BiFunction;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "Observable.combineLatest\u2026     }\n                })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method protected b()Lkotlin/jvm/b/b;
+.method protected b()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/im/engine/models/attaches/HistoryAttach;",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
             ">;"
@@ -150,17 +150,17 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->b:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->b:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
 
-.method protected c()Lio/reactivex/subjects/a;
+.method protected c()Lio/reactivex/subjects/BehaviorSubject;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lio/reactivex/subjects/a<",
+            "Lio/reactivex/subjects/BehaviorSubject<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/pagination/PageLoadingState<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachListItem;",
             ">;>;"
@@ -168,7 +168,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->a:Lio/reactivex/subjects/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->a:Lio/reactivex/subjects/BehaviorSubject;
 
     return-object v0
 .end method
@@ -177,11 +177,11 @@
     .locals 2
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->c()Lio/reactivex/subjects/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/model/audio/AudioAttachesModel;->c()Lio/reactivex/subjects/BehaviorSubject;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lio/reactivex/subjects/a;->p()Ljava/lang/Object;
+    invoke-virtual {v0}, Lio/reactivex/subjects/BehaviorSubject;->p()Ljava/lang/Object;
 
     move-result-object v0
 

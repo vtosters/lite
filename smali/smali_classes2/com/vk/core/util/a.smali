@@ -40,7 +40,7 @@
 
     iget-object v2, p0, Lcom/vk/core/util/a;->c:Landroid/content/Context;
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/y;->a(Ljava/io/InputStream;Ljava/io/File;Landroid/content/Context;)V
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/DownloadUtils;->a(Ljava/io/InputStream;Ljava/io/File;Landroid/content/Context;)V
 
     return-void
 .end method

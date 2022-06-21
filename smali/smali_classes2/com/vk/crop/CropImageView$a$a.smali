@@ -1,5 +1,5 @@
 .class Lcom/vk/crop/CropImageView$a$a;
-.super Lcom/vk/crop/h;
+.super Lcom/vk/crop/CropTouchListener;
 .source "CropImageView.java"
 
 
@@ -19,13 +19,13 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/crop/CropImageView$a;Landroid/content/Context;Lcom/vk/crop/h$a;)V
+.method constructor <init>(Lcom/vk/crop/CropImageView$a;Landroid/content/Context;Lcom/vk/crop/CropTouchListener$a;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vk/crop/CropImageView$a$a;->d:Lcom/vk/crop/CropImageView$a;
 
-    invoke-direct {p0, p2, p3}, Lcom/vk/crop/h;-><init>(Landroid/content/Context;Lcom/vk/crop/h$a;)V
+    invoke-direct {p0, p2, p3}, Lcom/vk/crop/CropTouchListener;-><init>(Landroid/content/Context;Lcom/vk/crop/CropTouchListener$a;)V
 
     return-void
 .end method
@@ -36,7 +36,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/crop/h;->a()Z
+    invoke-virtual {p0}, Lcom/vk/crop/CropTouchListener;->a()Z
 
     move-result v0
 
@@ -115,7 +115,7 @@
 
     .line 10
     :cond_2
-    invoke-super {p0, p1, p2}, Lcom/vk/crop/h;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1, p2}, Lcom/vk/crop/CropTouchListener;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
     move-result p1
 

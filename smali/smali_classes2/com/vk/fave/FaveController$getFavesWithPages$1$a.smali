@@ -3,7 +3,7 @@
 .source "FaveController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -62,7 +62,7 @@
     const/4 p1, 0x0
 
     .line 1
-    invoke-static {p1}, Lcom/vtosters/lite/w;->c(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->c(I)V
 
     return-void
 .end method

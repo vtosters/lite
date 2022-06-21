@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/observable/ObservableTimer;
-.super Lc/a/m;
+.super Lio/reactivex/Observable;
 .source "ObservableTimer.java"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lc/a/m<",
+        "Lio/reactivex/Observable<",
         "Ljava/lang/Long;",
         ">;"
     }
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field final a:Lc/a/s;
+.field final a:Lio/reactivex/Scheduler;
 
 .field final b:J
 
@@ -28,11 +28,11 @@
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/concurrent/TimeUnit;Lc/a/s;)V
+.method public constructor <init>(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lc/a/m;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/Observable;-><init>()V
 
     .line 2
     iput-wide p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimer;->b:J
@@ -41,19 +41,19 @@
     iput-object p3, p0, Lio/reactivex/internal/operators/observable/ObservableTimer;->c:Ljava/util/concurrent/TimeUnit;
 
     .line 4
-    iput-object p4, p0, Lio/reactivex/internal/operators/observable/ObservableTimer;->a:Lc/a/s;
+    iput-object p4, p0, Lio/reactivex/internal/operators/observable/ObservableTimer;->a:Lio/reactivex/Scheduler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lc/a/r;)V
+.method public b(Lio/reactivex/Observer;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-",
             "Ljava/lang/Long;",
             ">;)V"
@@ -63,24 +63,24 @@
     .line 1
     new-instance v0, Lio/reactivex/internal/operators/observable/ObservableTimer$TimerObserver;
 
-    invoke-direct {v0, p1}, Lio/reactivex/internal/operators/observable/ObservableTimer$TimerObserver;-><init>(Lc/a/r;)V
+    invoke-direct {v0, p1}, Lio/reactivex/internal/operators/observable/ObservableTimer$TimerObserver;-><init>(Lio/reactivex/Observer;)V
 
     .line 2
-    invoke-interface {p1, v0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, v0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimer;->a:Lc/a/s;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableTimer;->a:Lio/reactivex/Scheduler;
 
     iget-wide v1, p0, Lio/reactivex/internal/operators/observable/ObservableTimer;->b:J
 
     iget-object v3, p0, Lio/reactivex/internal/operators/observable/ObservableTimer;->c:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p1, v0, v1, v2, v3}, Lc/a/s;->a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1, v2, v3}, Lio/reactivex/Scheduler;->a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 4
-    invoke-virtual {v0, p1}, Lio/reactivex/internal/operators/observable/ObservableTimer$TimerObserver;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {v0, p1}, Lio/reactivex/internal/operators/observable/ObservableTimer$TimerObserver;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "DiscoverSearchFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -59,9 +59,9 @@
     if-eqz p1, :cond_2
 
     .line 2
-    check-cast p1, Lcom/vk/search/view/a$a;
+    check-cast p1, Lcom/vk/search/view/GroupsSearchParamsView$a;
 
-    invoke-virtual {p1}, Lcom/vk/search/view/a$a;->a()Lcom/vk/search/GroupsSearchParams;
+    invoke-virtual {p1}, Lcom/vk/search/view/GroupsSearchParamsView$a;->a()Lcom/vk/search/GroupsSearchParams;
 
     move-result-object p1
 

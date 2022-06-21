@@ -91,12 +91,12 @@
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-static {p0}, Lcom/vtosters/lite/f0;->b(Ljava/lang/Runnable;)V
+    invoke-static {p0}, Lcom/vtosters/lite/ViewUtils;->b(Ljava/lang/Runnable;)V
 
     const-wide/16 v0, 0xc8
 
     .line 6
-    invoke-static {p0, v0, v1}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {p0, v0, v1}, Lcom/vtosters/lite/ViewUtils;->a(Ljava/lang/Runnable;J)V
 
     :cond_1
     :goto_0

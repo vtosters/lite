@@ -41,7 +41,7 @@
     .end annotation
 .end field
 
-.field private C:Lcom/facebook/login/c;
+.field private C:Lcom/facebook/login/LoginLogger;
 
 .field a:[Lcom/facebook/login/LoginMethodHandler;
 
@@ -162,14 +162,14 @@
     iput-object v0, p0, Lcom/facebook/login/LoginClient;->g:Lcom/facebook/login/LoginClient$Request;
 
     .line 13
-    invoke-static {p1}, Lcom/facebook/internal/r;->a(Landroid/os/Parcel;)Ljava/util/Map;
+    invoke-static {p1}, Lcom/facebook/internal/Utility;->a(Landroid/os/Parcel;)Ljava/util/Map;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/facebook/login/LoginClient;->h:Ljava/util/Map;
 
     .line 14
-    invoke-static {p1}, Lcom/facebook/internal/r;->a(Landroid/os/Parcel;)Ljava/util/Map;
+    invoke-static {p1}, Lcom/facebook/internal/Utility;->a(Landroid/os/Parcel;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -243,16 +243,16 @@
     return-object v0
 .end method
 
-.method private S()Lcom/facebook/login/c;
+.method private S()Lcom/facebook/login/LoginLogger;
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/login/LoginClient;->C:Lcom/facebook/login/c;
+    iget-object v0, p0, Lcom/facebook/login/LoginClient;->C:Lcom/facebook/login/LoginLogger;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/facebook/login/c;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/facebook/login/LoginLogger;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -270,7 +270,7 @@
 
     .line 3
     :cond_0
-    new-instance v0, Lcom/facebook/login/c;
+    new-instance v0, Lcom/facebook/login/LoginLogger;
 
     invoke-virtual {p0}, Lcom/facebook/login/LoginClient;->H()Landroidx/fragment/app/FragmentActivity;
 
@@ -282,13 +282,13 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/facebook/login/c;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/facebook/login/LoginLogger;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/facebook/login/LoginClient;->C:Lcom/facebook/login/c;
+    iput-object v0, p0, Lcom/facebook/login/LoginClient;->C:Lcom/facebook/login/LoginLogger;
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/facebook/login/LoginClient;->C:Lcom/facebook/login/c;
+    iget-object v0, p0, Lcom/facebook/login/LoginClient;->C:Lcom/facebook/login/LoginLogger;
 
     return-object v0
 .end method
@@ -366,7 +366,7 @@
     if-nez v0, :cond_0
 
     .line 35
-    invoke-direct {p0}, Lcom/facebook/login/LoginClient;->S()Lcom/facebook/login/c;
+    invoke-direct {p0}, Lcom/facebook/login/LoginClient;->S()Lcom/facebook/login/LoginLogger;
 
     move-result-object p2
 
@@ -374,13 +374,13 @@
 
     const-string p4, "Unexpected call to logCompleteLogin with null pendingAuthorizationRequest."
 
-    invoke-virtual {p2, p3, p4, p1}, Lcom/facebook/login/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2, p3, p4, p1}, Lcom/facebook/login/LoginLogger;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 36
     :cond_0
-    invoke-direct {p0}, Lcom/facebook/login/LoginClient;->S()Lcom/facebook/login/c;
+    invoke-direct {p0}, Lcom/facebook/login/LoginClient;->S()Lcom/facebook/login/LoginLogger;
 
     move-result-object v0
 
@@ -400,7 +400,7 @@
 
     move-object v6, p5
 
-    invoke-virtual/range {v0 .. v6}, Lcom/facebook/login/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    invoke-virtual/range {v0 .. v6}, Lcom/facebook/login/LoginLogger;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     :goto_0
     return-void
@@ -712,7 +712,7 @@
     if-eqz v1, :cond_1
 
     .line 5
-    invoke-direct {p0}, Lcom/facebook/login/LoginClient;->S()Lcom/facebook/login/c;
+    invoke-direct {p0}, Lcom/facebook/login/LoginClient;->S()Lcom/facebook/login/LoginLogger;
 
     move-result-object v2
 
@@ -728,13 +728,13 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v2, v3, v0}, Lcom/facebook/login/c;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v3, v0}, Lcom/facebook/login/LoginLogger;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 8
     :cond_1
-    invoke-direct {p0}, Lcom/facebook/login/LoginClient;->S()Lcom/facebook/login/c;
+    invoke-direct {p0}, Lcom/facebook/login/LoginClient;->S()Lcom/facebook/login/LoginLogger;
 
     move-result-object v2
 
@@ -750,7 +750,7 @@
     move-result-object v4
 
     .line 10
-    invoke-virtual {v2, v3, v4}, Lcom/facebook/login/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v3, v4}, Lcom/facebook/login/LoginLogger;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
     invoke-virtual {v0}, Lcom/facebook/login/LoginMethodHandler;->G()Ljava/lang/String;
@@ -1333,12 +1333,12 @@
     .line 4
     iget-object p2, p0, Lcom/facebook/login/LoginClient;->h:Ljava/util/Map;
 
-    invoke-static {p1, p2}, Lcom/facebook/internal/r;->a(Landroid/os/Parcel;Ljava/util/Map;)V
+    invoke-static {p1, p2}, Lcom/facebook/internal/Utility;->a(Landroid/os/Parcel;Ljava/util/Map;)V
 
     .line 5
     iget-object p2, p0, Lcom/facebook/login/LoginClient;->B:Ljava/util/Map;
 
-    invoke-static {p1, p2}, Lcom/facebook/internal/r;->a(Landroid/os/Parcel;Ljava/util/Map;)V
+    invoke-static {p1, p2}, Lcom/facebook/internal/Utility;->a(Landroid/os/Parcel;Ljava/util/Map;)V
 
     return-void
 .end method

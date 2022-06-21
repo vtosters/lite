@@ -3,7 +3,7 @@
 .source "MusicRestrictionManagerImpl.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/music/MusicDynamicRestriction;",
         ">;"
     }
@@ -54,18 +54,18 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;Lio/reactivex/disposables/b;)V
+    invoke-static {v0, v1}, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;->a(Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;Lio/reactivex/disposables/Disposable;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl$b;->a:Lcom/vk/music/notifications/restriction/MusicRestrictionManagerImpl;
 
     const-string v2, "restriction"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x2
 
-    invoke-static {v0, p1, v1, v2, v1}, Lcom/vk/music/restriction/h$a;->a(Lcom/vk/music/restriction/h;Lcom/vk/dto/music/MusicDynamicRestriction;Landroid/content/DialogInterface$OnDismissListener;ILjava/lang/Object;)V
+    invoke-static {v0, p1, v1, v2, v1}, Lcom/vk/music/restriction/MusicRestrictionManager$a;->a(Lcom/vk/music/restriction/MusicRestrictionManager;Lcom/vk/dto/music/MusicDynamicRestriction;Landroid/content/DialogInterface$OnDismissListener;ILjava/lang/Object;)V
 
     return-void
 .end method

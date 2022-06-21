@@ -1,5 +1,5 @@
 .class final Lcom/vk/attachpicker/screen/QRScreen$a;
-.super Lcom/vk/qrcode/t;
+.super Lcom/vk/qrcode/QrBordersView;
 .source "QRScreen.kt"
 
 
@@ -34,7 +34,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/qrcode/t;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vk/qrcode/QrBordersView;-><init>(Landroid/content/Context;)V
 
     .line 2
     invoke-static {}, Lkotlin/collections/l;->a()Ljava/util/List;
@@ -83,7 +83,7 @@
     .locals 8
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/qrcode/t;->getLeftBottomCorner()Landroid/graphics/Bitmap;
+    invoke-virtual {p0}, Lcom/vk/qrcode/QrBordersView;->getLeftBottomCorner()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -122,14 +122,14 @@
     check-cast v4, Landroid/graphics/Point;
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/qrcode/t;->getCornerMatrix()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/vk/qrcode/QrBordersView;->getCornerMatrix()Landroid/graphics/Matrix;
 
     move-result-object v5
 
     invoke-virtual {v5}, Landroid/graphics/Matrix;->reset()V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/qrcode/t;->getCornerMatrix()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/vk/qrcode/QrBordersView;->getCornerMatrix()Landroid/graphics/Matrix;
 
     move-result-object v5
 
@@ -146,7 +146,7 @@
     invoke-virtual {v5, v6, v7, v0}, Landroid/graphics/Matrix;->preRotate(FFF)Z
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/qrcode/t;->getCornerMatrix()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/vk/qrcode/QrBordersView;->getCornerMatrix()Landroid/graphics/Matrix;
 
     move-result-object v5
 
@@ -158,7 +158,7 @@
 
     int-to-float v4, v4
 
-    invoke-virtual {p0}, Lcom/vk/qrcode/t;->getLeftBottomCorner()Landroid/graphics/Bitmap;
+    invoke-virtual {p0}, Lcom/vk/qrcode/QrBordersView;->getLeftBottomCorner()Landroid/graphics/Bitmap;
 
     move-result-object v7
 
@@ -177,24 +177,24 @@
 
     if-ne v3, v4, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/qrcode/t;->getLeftBottomCornerSelected()Landroid/graphics/Bitmap;
+    invoke-virtual {p0}, Lcom/vk/qrcode/QrBordersView;->getLeftBottomCornerSelected()Landroid/graphics/Bitmap;
 
     move-result-object v3
 
     goto :goto_1
 
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/qrcode/t;->getLeftBottomCorner()Landroid/graphics/Bitmap;
+    invoke-virtual {p0}, Lcom/vk/qrcode/QrBordersView;->getLeftBottomCorner()Landroid/graphics/Bitmap;
 
     move-result-object v3
 
     .line 9
     :goto_1
-    invoke-virtual {p0}, Lcom/vk/qrcode/t;->getCornerMatrix()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/vk/qrcode/QrBordersView;->getCornerMatrix()Landroid/graphics/Matrix;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/vk/qrcode/t;->getPaint()Landroid/graphics/Paint;
+    invoke-virtual {p0}, Lcom/vk/qrcode/QrBordersView;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v5
 

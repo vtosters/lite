@@ -76,7 +76,7 @@
 
     const-string v0, "denied"
 
-    invoke-direct {p1, v0, v2, v1, v2}, Lcom/vk/analytics/reporters/AppStartReporter$a;-><init>(Ljava/lang/String;Landroid/location/Location;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v0, v2, v1, v2}, Lcom/vk/analytics/reporters/AppStartReporter$a;-><init>(Ljava/lang/String;Landroid/location/Location;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_0
 
@@ -94,7 +94,7 @@
 
     new-instance p1, Lcom/vk/analytics/reporters/AppStartReporter$a;
 
-    invoke-direct {p1, v3, v2, v1, v2}, Lcom/vk/analytics/reporters/AppStartReporter$a;-><init>(Ljava/lang/String;Landroid/location/Location;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v3, v2, v1, v2}, Lcom/vk/analytics/reporters/AppStartReporter$a;-><init>(Ljava/lang/String;Landroid/location/Location;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_0
 
@@ -113,7 +113,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -122,7 +122,7 @@
     .line 25
     new-instance p1, Lcom/vk/analytics/reporters/AppStartReporter$a;
 
-    invoke-direct {p1, v3, v2, v1, v2}, Lcom/vk/analytics/reporters/AppStartReporter$a;-><init>(Ljava/lang/String;Landroid/location/Location;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v3, v2, v1, v2}, Lcom/vk/analytics/reporters/AppStartReporter$a;-><init>(Ljava/lang/String;Landroid/location/Location;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_0
 
@@ -414,25 +414,25 @@
 
     invoke-direct {p0, p2}, Lcom/vk/analytics/reporters/AppStartReporter$b;-><init>(Landroid/app/Activity;)V
 
-    invoke-static {p0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {p0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object p0
 
     .line 9
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p0, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p0
 
     .line 10
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p0, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p0
 
@@ -442,32 +442,32 @@
     invoke-direct {v0, p1}, Lcom/vk/analytics/reporters/AppStartReporter$c;-><init>(Z)V
 
     .line 12
-    invoke-static {}, Lcom/vk/core/util/z0;->c()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->c()Lio/reactivex/functions/Consumer;
 
     move-result-object p1
 
     .line 13
-    invoke-virtual {p0, v0, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p0, v0, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p0
 
     const-string p1, "Observable.fromCallable \u2026RxUtil.loggingConsumer())"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
-    invoke-static {p0, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)Lio/reactivex/disposables/b;
+    invoke-static {p0, p2}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)Lio/reactivex/disposables/Disposable;
 
     const-wide/16 p0, 0x18
 
     .line 15
     sget-object v0, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-static {p0, p1, v0, v1}, Lc/a/a;->a(JLjava/util/concurrent/TimeUnit;Lc/a/s;)Lc/a/a;
+    invoke-static {p0, p1, v0, v1}, Lio/reactivex/Completable;->a(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Lio/reactivex/Completable;
 
     move-result-object p0
 
@@ -476,16 +476,16 @@
 
     invoke-direct {p1, p2}, Lcom/vk/analytics/reporters/AppStartReporter$d;-><init>(Landroid/app/Activity;)V
 
-    invoke-virtual {p0, p1}, Lc/a/a;->b(Lc/a/z/a;)Lio/reactivex/disposables/b;
+    invoke-virtual {p0, p1}, Lio/reactivex/Completable;->b(Lio/reactivex/functions/Action;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p0
 
     const-string p1, "Completable.timer(24, Ti\u2026{ reportDaily(activity) }"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 17
-    invoke-static {p0, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)Lio/reactivex/disposables/b;
+    invoke-static {p0, p2}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)Lio/reactivex/disposables/Disposable;
 
     .line 18
     sget-object p0, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
@@ -623,7 +623,7 @@
     move-object/from16 v0, p0
 
     .line 1
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     .line 2
     invoke-static {v1}, Lcom/vk/core/util/Screen;->d(Landroid/content/Context;)Landroid/graphics/Point;
@@ -638,16 +638,16 @@
     const-string v4, "context"
 
     .line 4
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/analytics/reporters/AppStartReporter;->a(Landroid/content/Context;)Lcom/vk/analytics/reporters/AppStartReporter$a;
 
     move-result-object v4
 
     .line 5
-    sget-object v5, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v5, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v5}, Lcom/vk/core/util/v;->s()Z
+    invoke-virtual {v5}, Lcom/vk/core/util/DeviceState;->s()Z
 
     move-result v5
 
@@ -656,9 +656,9 @@
     if-eqz v5, :cond_0
 
     .line 6
-    sget-object v8, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v8, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v8}, Lcom/vk/core/util/v;->E()Z
+    invoke-virtual {v8}, Lcom/vk/core/util/DeviceState;->E()Z
 
     move-result v8
 
@@ -678,9 +678,9 @@
     move-result-object v9
 
     .line 8
-    sget-object v10, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
+    sget-object v10, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
 
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a;->e()Lcom/vk/metrics/reporters/a$a;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter;->e()Lcom/vk/metrics/reporters/PerformanceReporter$a;
 
     move-result-object v10
 
@@ -691,9 +691,9 @@
 
     if-eqz v11, :cond_1
 
-    sget-object v11, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v11, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v11}, Lcom/vk/core/util/v;->q()Ljava/lang/String;
+    invoke-virtual {v11}, Lcom/vk/core/util/DeviceState;->q()Ljava/lang/String;
 
     move-result-object v11
 
@@ -712,9 +712,9 @@
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
     .line 12
-    sget-object v14, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v14, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v14}, Lcom/vk/core/util/v;->p()Ljava/lang/String;
+    invoke-virtual {v14}, Lcom/vk/core/util/DeviceState;->p()Ljava/lang/String;
 
     move-result-object v14
 
@@ -839,7 +839,7 @@
     const/16 v21, 0x0
 
     .line 22
-    invoke-static {v1}, Lcom/vk/core/util/u;->e(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/DeviceIdProvider;->e(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v22
 
@@ -872,9 +872,9 @@
     move-result-object v25
 
     .line 27
-    sget-object v2, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v2, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v2}, Lcom/vk/core/util/v;->n()I
+    invoke-virtual {v2}, Lcom/vk/core/util/DeviceState;->n()I
 
     move-result v2
 
@@ -883,21 +883,21 @@
     move-result-object v28
 
     .line 28
-    invoke-static {}, Lcom/vk/core/util/m0;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/util/LangUtils;->a()Ljava/lang/String;
 
     move-result-object v29
 
     .line 29
-    sget-object v2, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v2, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v2}, Lcom/vk/core/util/v;->d()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/core/util/DeviceState;->d()Ljava/lang/String;
 
     move-result-object v30
 
     .line 30
-    sget-object v2, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v2, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v2}, Lcom/vk/core/util/v;->C()Z
+    invoke-virtual {v2}, Lcom/vk/core/util/DeviceState;->C()Z
 
     move-result v2
 
@@ -906,9 +906,9 @@
     move-result-object v31
 
     .line 31
-    sget-object v2, Lb/h/g/g/b;->i:Lb/h/g/g/b;
+    sget-object v2, Lb/h/g/g/BuildInfo;->i:Lb/h/g/g/BuildInfo;
 
-    invoke-virtual {v2}, Lb/h/g/g/b;->e()I
+    invoke-virtual {v2}, Lb/h/g/g/BuildInfo;->e()I
 
     move-result v2
 
@@ -919,9 +919,9 @@
     const/16 v33, 0x0
 
     .line 32
-    sget-object v2, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object v2, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
-    invoke-virtual {v2, v1}, Lcom/vk/pushes/j/e;->a(Landroid/content/Context;)Z
+    invoke-virtual {v2, v1}, Lcom/vk/pushes/j/NotificationHelper;->a(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -930,9 +930,9 @@
     move-result-object v34
 
     .line 33
-    sget-object v1, Lcom/vk/utils/b;->a:Lcom/vk/utils/b;
+    sget-object v1, Lcom/vk/utils/ContactImportUtils;->a:Lcom/vk/utils/ContactImportUtils;
 
-    invoke-virtual {v1}, Lcom/vk/utils/b;->b()Z
+    invoke-virtual {v1}, Lcom/vk/utils/ContactImportUtils;->b()Z
 
     move-result v1
 
@@ -952,7 +952,7 @@
     const-string v1, "dark"
 
     .line 35
-    invoke-static {v11, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v11, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -969,9 +969,9 @@
     move-object/from16 v37, v1
 
     .line 36
-    sget-object v1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v1, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/v;->f()J
+    invoke-virtual {v1}, Lcom/vk/core/util/DeviceState;->f()J
 
     move-result-wide v1
 
@@ -1037,9 +1037,9 @@
 
     .line 40
     :goto_8
-    sget-object v1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v1, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/v;->c()I
+    invoke-virtual {v1}, Lcom/vk/core/util/DeviceState;->c()I
 
     move-result v1
 
@@ -1048,9 +1048,9 @@
     move-result-object v41
 
     .line 41
-    sget-object v1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v1, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/v;->A()Z
+    invoke-virtual {v1}, Lcom/vk/core/util/DeviceState;->A()Z
 
     move-result v1
 
@@ -1059,9 +1059,9 @@
     move-result-object v42
 
     .line 42
-    sget-object v1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v1, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/v;->B()Z
+    invoke-virtual {v1}, Lcom/vk/core/util/DeviceState;->B()Z
 
     move-result v1
 
@@ -1072,9 +1072,9 @@
     const/16 v46, 0x0
 
     .line 43
-    sget-object v1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v1, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/v;->t()Z
+    invoke-virtual {v1}, Lcom/vk/core/util/DeviceState;->t()Z
 
     move-result v1
 
@@ -1083,9 +1083,9 @@
     move-result-object v45
 
     .line 44
-    sget-object v1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v1, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/v;->a()I
+    invoke-virtual {v1}, Lcom/vk/core/util/DeviceState;->a()I
 
     move-result v1
 
@@ -1094,9 +1094,9 @@
     move-result-object v47
 
     .line 45
-    sget-object v1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v1, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/v;->b()I
+    invoke-virtual {v1}, Lcom/vk/core/util/DeviceState;->b()I
 
     move-result v1
 
@@ -1105,7 +1105,7 @@
     move-result-object v48
 
     .line 46
-    invoke-static {}, Lcom/vk/core/util/v;->V()Z
+    invoke-static {}, Lcom/vk/core/util/DeviceState;->V()Z
 
     move-result v1
 
@@ -1160,9 +1160,9 @@
     move-result-object v53
 
     .line 51
-    sget-object v1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v1, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/v;->D()Z
+    invoke-virtual {v1}, Lcom/vk/core/util/DeviceState;->D()Z
 
     move-result v1
 
@@ -1171,7 +1171,7 @@
     move-result-object v56
 
     .line 52
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -1229,12 +1229,12 @@
     const/16 v58, 0x0
 
     .line 58
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->r()Ljava/lang/Integer;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->r()Ljava/lang/Integer;
 
     move-result-object v59
 
     .line 59
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->l()Ljava/lang/Long;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->l()Ljava/lang/Long;
 
     move-result-object v1
 
@@ -1257,7 +1257,7 @@
 
     .line 60
     :goto_a
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->k()Ljava/lang/Long;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->k()Ljava/lang/Long;
 
     move-result-object v1
 
@@ -1280,7 +1280,7 @@
 
     .line 61
     :goto_b
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->d()Ljava/lang/Long;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->d()Ljava/lang/Long;
 
     move-result-object v1
 
@@ -1303,7 +1303,7 @@
 
     .line 62
     :goto_c
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->b()Ljava/lang/Long;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->b()Ljava/lang/Long;
 
     move-result-object v1
 
@@ -1328,7 +1328,7 @@
     const/16 v70, 0x0
 
     .line 63
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->c()Ljava/lang/Long;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->c()Ljava/lang/Long;
 
     move-result-object v1
 
@@ -1351,11 +1351,11 @@
 
     .line 64
     :goto_e
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->h()Ljava/lang/Integer;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->h()Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-interface {v13, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v13, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1364,11 +1364,11 @@
     check-cast v71, Ljava/lang/Integer;
 
     .line 65
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->g()Ljava/lang/Integer;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->g()Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-interface {v13, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v13, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1377,11 +1377,11 @@
     check-cast v72, Ljava/lang/Integer;
 
     .line 66
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->f()Ljava/lang/Integer;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->f()Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-interface {v13, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v13, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1390,11 +1390,11 @@
     check-cast v73, Ljava/lang/Integer;
 
     .line 67
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->e()Ljava/lang/Integer;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->e()Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-interface {v13, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v13, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1403,11 +1403,11 @@
     check-cast v74, Ljava/lang/Integer;
 
     .line 68
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->j()Ljava/lang/Integer;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->j()Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-interface {v13, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v13, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1418,11 +1418,11 @@
     const/16 v77, 0x0
 
     .line 69
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->i()Ljava/lang/Integer;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->i()Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-interface {v13, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v13, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1431,7 +1431,7 @@
     check-cast v76, Ljava/lang/Integer;
 
     .line 70
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->q()Ljava/lang/Integer;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->q()Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -1454,7 +1454,7 @@
 
     .line 71
     :goto_f
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->p()Ljava/lang/Integer;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->p()Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -1477,17 +1477,17 @@
 
     .line 72
     :goto_10
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->o()Ljava/lang/Integer;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->o()Ljava/lang/Integer;
 
     move-result-object v80
 
     .line 73
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->n()Ljava/lang/Integer;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->n()Ljava/lang/Integer;
 
     move-result-object v82
 
     .line 74
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->m()Ljava/lang/Integer;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->m()Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -1496,7 +1496,7 @@
     move-result-object v81
 
     .line 75
-    invoke-virtual {v10}, Lcom/vk/metrics/reporters/a$a;->a()Ljava/lang/Boolean;
+    invoke-virtual {v10}, Lcom/vk/metrics/reporters/PerformanceReporter$a;->a()Ljava/lang/Boolean;
 
     move-result-object v83
 
@@ -1529,23 +1529,23 @@
 
     move-object/from16 v43, v2
 
-    invoke-direct/range {v14 .. v88}, Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts;-><init>(Ljava/lang/String;Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts$StartType;Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts$StartMethod;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts$SystemTheme;Ljava/lang/String;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/util/ArrayList;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/String;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v14 .. v88}, Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts;-><init>(Ljava/lang/String;Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts$StartType;Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts$StartMethod;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts$SystemTheme;Ljava/lang/String;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/util/ArrayList;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 77
     sget-object v2, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-virtual {v2}, Lcom/vk/stat/Stat;->a()Lcom/vk/stat/a/i/a;
+    invoke-virtual {v2}, Lcom/vk/stat/Stat;->a()Lcom/vk/stat/a/i/AppStartsEventBuilder;
 
     move-result-object v2
 
     .line 78
-    invoke-virtual {v2, v1}, Lcom/vk/stat/a/i/a;->a(Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts;)Lcom/vk/stat/a/i/a;
+    invoke-virtual {v2, v1}, Lcom/vk/stat/a/i/AppStartsEventBuilder;->a(Lcom/vk/stat/scheme/SchemeStat$TypeAppStarts;)Lcom/vk/stat/a/i/AppStartsEventBuilder;
 
     .line 79
-    invoke-virtual {v2}, Lcom/vk/stat/a/i/a;->a()Lcom/vk/stat/a/b;
+    invoke-virtual {v2}, Lcom/vk/stat/a/i/AppStartsEventBuilder;->a()Lcom/vk/stat/a/StatEvent3;
 
     .line 80
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-void
 .end method

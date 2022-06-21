@@ -48,7 +48,7 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/fragments/lives/LivesTabsFragment$c;->a:Lcom/vtosters/lite/fragments/lives/LivesTabsFragment;
 
-    invoke-virtual {p1}, Ld/a/a/a/l;->c5()Landroidx/viewpager/widget/ViewPager;
+    invoke-virtual {p1}, Lme/grishka/appkit/fragments/TabbedLoaderFragment;->c5()Landroidx/viewpager/widget/ViewPager;
 
     move-result-object p1
 

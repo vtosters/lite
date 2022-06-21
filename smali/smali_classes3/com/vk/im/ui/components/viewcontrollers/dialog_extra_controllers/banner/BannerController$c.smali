@@ -3,7 +3,7 @@
 .source "BannerController.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/dialog_pinned_msg/b;
+.implements Lcom/vk/im/ui/components/dialog_pinned_msg/DialogPinnedMsgComponentCallback;
 
 
 # annotations

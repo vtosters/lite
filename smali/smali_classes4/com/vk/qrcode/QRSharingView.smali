@@ -20,11 +20,11 @@
 
 .field private b:Landroid/net/Uri;
 
-.field private c:Lkotlin/jvm/b/a;
+.field private c:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -39,7 +39,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/qrcode/QRSharingView$e;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/qrcode/QRSharingView$e;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     const-class v0, Lcom/vk/qrcode/QRSharingView;
@@ -50,7 +50,7 @@
 
     const-string v1, "QRSharingView::class.java.simpleName"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/qrcode/QRSharingView;->d:Ljava/lang/String;
 
@@ -144,7 +144,7 @@
     invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     .line 12
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p1
 
@@ -162,7 +162,7 @@
     const-string v0, "shareText"
 
     .line 14
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -178,7 +178,7 @@
     const v3, 0x7f0400e7
 
     .line 16
-    invoke-static {p1, v2, v3}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;II)V
+    invoke-static {p1, v2, v3}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;II)V
 
     const p1, 0x7f0a0b27
 
@@ -192,7 +192,7 @@
     const-string v2, "saveText"
 
     .line 18
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setAllCaps(Z)V
 
@@ -202,7 +202,7 @@
     const v0, 0x7f08043b
 
     .line 20
-    invoke-static {p1, v0, v3}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;II)V
+    invoke-static {p1, v0, v3}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;II)V
 
     :cond_0
     return-void
@@ -295,7 +295,7 @@
     invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     .line 32
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p1
 
@@ -313,7 +313,7 @@
     const-string p2, "shareText"
 
     .line 34
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x0
 
@@ -329,7 +329,7 @@
     const v2, 0x7f0400e7
 
     .line 36
-    invoke-static {p1, v1, v2}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;II)V
+    invoke-static {p1, v1, v2}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;II)V
 
     const p1, 0x7f0a0b27
 
@@ -343,7 +343,7 @@
     const-string v1, "saveText"
 
     .line 38
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setAllCaps(Z)V
 
@@ -353,7 +353,7 @@
     const p2, 0x7f08043b
 
     .line 40
-    invoke-static {p1, p2, v2}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;II)V
+    invoke-static {p1, p2, v2}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;II)V
 
     :cond_0
     return-void
@@ -446,7 +446,7 @@
     invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     .line 52
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p1
 
@@ -464,7 +464,7 @@
     const-string p2, "shareText"
 
     .line 54
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x0
 
@@ -480,7 +480,7 @@
     const v1, 0x7f0400e7
 
     .line 56
-    invoke-static {p1, v0, v1}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;II)V
+    invoke-static {p1, v0, v1}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;II)V
 
     const p1, 0x7f0a0b27
 
@@ -494,7 +494,7 @@
     const-string v0, "saveText"
 
     .line 58
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setAllCaps(Z)V
 
@@ -504,7 +504,7 @@
     const p2, 0x7f08043b
 
     .line 60
-    invoke-static {p1, p2, v1}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;II)V
+    invoke-static {p1, p2, v1}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;II)V
 
     :cond_0
     return-void
@@ -519,11 +519,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/qrcode/QRSharingView;)Lkotlin/jvm/b/a;
+.method public static final synthetic a(Lcom/vk/qrcode/QRSharingView;)Lkotlin/jvm/b/Functions;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/qrcode/QRSharingView;->c:Lkotlin/jvm/b/a;
+    iget-object p0, p0, Lcom/vk/qrcode/QRSharingView;->c:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
@@ -532,7 +532,7 @@
     .locals 3
 
     .line 23
-    invoke-static {}, Lcom/vk/bridges/a0;->a()Lcom/vk/bridges/z;
+    invoke-static {}, Lcom/vk/bridges/SharingBridge;->a()Lcom/vk/bridges/SharingBridge1;
 
     move-result-object v0
 
@@ -542,7 +542,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -550,9 +550,9 @@
 
     const-string v2, "fileUri.toString()"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/z;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/SharingBridge1;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -631,7 +631,7 @@
     const v4, 0x7f120a22
 
     .line 22
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
@@ -861,7 +861,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/qrcode/QRUtils$a;-><init>(Landroid/content/Context;)V
 
@@ -875,7 +875,7 @@
     invoke-virtual {v0, p3}, Lcom/vk/qrcode/QRUtils$a;->a(Z)Lcom/vk/qrcode/QRUtils$a;
 
     .line 10
-    invoke-virtual {v0}, Lcom/vk/qrcode/QRUtils$a;->a()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/qrcode/QRUtils$a;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -884,7 +884,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/qrcode/QRSharingView$f;-><init>(Lcom/vk/qrcode/QRSharingView;)V
 
-    invoke-virtual {p1, p2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
@@ -904,9 +904,9 @@
     const-string p3, "subscription"
 
     .line 13
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Landroid/app/Activity;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Landroid/app/Activity;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -926,19 +926,19 @@
     return-void
 .end method
 
-.method public final setCloseListener(Lkotlin/jvm/b/a;)V
+.method public final setCloseListener(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/qrcode/QRSharingView;->c:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/qrcode/QRSharingView;->c:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method

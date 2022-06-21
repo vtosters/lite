@@ -3,12 +3,12 @@
 .source "AvatarView.kt"
 
 # interfaces
-.implements Lcom/facebook/common/internal/j;
+.implements Lcom/facebook/common/internal/Supplier;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/facebook/u/b/a/e;Ljava/util/List;)Lcom/facebook/u/b/a/e;
+    value = Lcom/vk/im/ui/views/avatars/AvatarView;->a(Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;Ljava/util/List;)Lcom/facebook/u/b/a/PipelineDraweeControllerBuilder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,10 +22,10 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/facebook/common/internal/j<",
-        "Lcom/facebook/datasource/b<",
-        "Lcom/facebook/common/references/a<",
-        "Lcom/facebook/x/g/c;",
+        "Lcom/facebook/common/internal/Supplier<",
+        "Lcom/facebook/datasource/DataSource<",
+        "Lcom/facebook/common/references/CloseableReference<",
+        "Lcom/facebook/x/g/CloseableImage;",
         ">;>;>;"
     }
 .end annotation
@@ -52,14 +52,14 @@
 
 
 # virtual methods
-.method public final get()Lcom/facebook/datasource/b;
+.method public final get()Lcom/facebook/datasource/DataSource;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/facebook/datasource/b<",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lcom/facebook/datasource/DataSource<",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;>;"
         }
     .end annotation
@@ -81,7 +81,7 @@
 
     move-result v3
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;->a(Ljava/util/List;II)Lcom/facebook/datasource/b;
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/im/ui/views/avatars/AvatarDataSource$c;->a(Ljava/util/List;II)Lcom/facebook/datasource/DataSource;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/views/avatars/AvatarView$b;->get()Lcom/facebook/datasource/b;
+    invoke-virtual {p0}, Lcom/vk/im/ui/views/avatars/AvatarView$b;->get()Lcom/facebook/datasource/DataSource;
 
     move-result-object v0
 

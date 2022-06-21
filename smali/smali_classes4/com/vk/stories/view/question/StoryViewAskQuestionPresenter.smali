@@ -3,7 +3,7 @@
 .source "StoryViewAskQuestionPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/stories/view/question/b;
+.implements Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
 
 # instance fields
@@ -13,11 +13,11 @@
 
 .field private final D:Ljava/lang/Runnable;
 
-.field private final E:Lcom/vk/stories/view/t1;
+.field private final E:Lcom/vk/stories/view/BaseStoryViewContract1;
 
-.field private final F:Lcom/vk/stories/view/question/a;
+.field private final F:Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
 
-.field private a:Lcom/vk/stories/view/question/c;
+.field private a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
 .field private b:Lcom/vk/dto/stories/model/clickable/ClickableQuestion;
 
@@ -35,15 +35,15 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/stories/view/t1;Lcom/vk/stories/view/question/a;)V
+.method public constructor <init>(Lcom/vk/stories/view/BaseStoryViewContract1;Lcom/vk/stories/view/question/StoryViewAskQuestionContract;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->E:Lcom/vk/stories/view/t1;
+    iput-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->E:Lcom/vk/stories/view/BaseStoryViewContract1;
 
-    iput-object p2, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/a;
+    iput-object p2, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
 
     const/4 p1, 0x1
 
@@ -68,11 +68,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/a;
+.method public static final synthetic a(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/a;
+    iget-object p0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
 
     return-object p0
 .end method
@@ -122,7 +122,7 @@
     iput-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->B:Lcom/vk/stories/view/question/StoryViewAskQuestionContract$State;
 
     .line 42
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     const/4 v1, 0x0
 
@@ -132,10 +132,10 @@
 
     iget-boolean v3, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->h:Z
 
-    invoke-interface {v0, p1, v3}, Lcom/vk/stories/view/question/c;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionContract$State;Z)V
+    invoke-interface {v0, p1, v3}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionContract$State;Z)V
 
     .line 43
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_2
 
@@ -163,27 +163,27 @@
     :goto_1
     iget-boolean v3, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->h:Z
 
-    invoke-interface {v0, p1, v1, v2, v3}, Lcom/vk/stories/view/question/c;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionContract$State;Ljava/lang/String;ZZ)V
+    invoke-interface {v0, p1, v1, v2, v3}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionContract$State;Ljava/lang/String;ZZ)V
 
     return-void
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 44
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/c;
+.method public static final synthetic b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object p0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz p0, :cond_0
 
@@ -192,7 +192,7 @@
     :cond_0
     const-string p0, "view"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -210,12 +210,12 @@
     iput-boolean v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->h:Z
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/a;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/a;->dismiss()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract;->dismiss()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     const/4 v1, 0x0
 
@@ -225,51 +225,51 @@
 
     iget-object v3, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->D:Ljava/lang/Runnable;
 
-    invoke-interface {v0, v3}, Lcom/vk/utils/a;->a(Ljava/lang/Runnable;)V
+    invoke-interface {v0, v3}, Lcom/vk/utils/AndroidUtilsProvider;->a(Ljava/lang/Runnable;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0, p0}, Lcom/vk/utils/a;->a(Lcom/vk/core/vc/KeyboardController$a;)V
+    invoke-interface {v0, p0}, Lcom/vk/utils/AndroidUtilsProvider;->a(Lcom/vk/core/vc/KeyboardController$a;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->Q()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->Q()V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->dismiss()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->dismiss()V
 
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 7
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 8
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 9
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -289,18 +289,18 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->m0()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->m0()V
 
     return-void
 
     :cond_1
     const-string v0, "view"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -311,7 +311,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     const/4 v1, 0x0
 
@@ -319,10 +319,10 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->D()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->D()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_0
 
@@ -332,18 +332,18 @@
 
     const-wide/16 v2, 0xc8
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/vk/utils/a;->a(Ljava/lang/Runnable;J)V
+    invoke-interface {v0, v1, v2, v3}, Lcom/vk/utils/AndroidUtilsProvider;->a(Ljava/lang/Runnable;J)V
 
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 3
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -352,11 +352,11 @@
     .locals 9
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->N()Ljava/lang/CharSequence;
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->N()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -399,7 +399,7 @@
 
     .line 4
     :goto_1
-    new-instance v8, Lcom/vk/api/stories/e$a;
+    new-instance v8, Lcom/vk/api/stories/StoriesAskQuestion$a;
 
     iget v2, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->d:I
 
@@ -411,10 +411,10 @@
 
     move v6, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/api/stories/e$a;-><init>(IILjava/lang/String;ZZ)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/api/stories/StoriesAskQuestion$a;-><init>(IILjava/lang/String;ZZ)V
 
     .line 5
-    iget-object v1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/a;
+    iget-object v1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
 
     new-instance v2, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onSendQuestionClicked$1;
 
@@ -426,7 +426,7 @@
     invoke-direct {v0, p0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onSendQuestionClicked$2;-><init>(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)V
 
     .line 7
-    invoke-interface {v1, v8, v2, v0}, Lcom/vk/stories/view/question/a;->a(Lcom/vk/api/stories/e$a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-interface {v1, v8, v2, v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract;->a(Lcom/vk/api/stories/StoriesAskQuestion$a;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
@@ -434,7 +434,7 @@
     const-string v0, "view"
 
     .line 8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -456,18 +456,18 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->m0()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->m0()V
 
     return-void
 
     :cond_1
     const-string v0, "view"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -574,9 +574,9 @@
     iput v2, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->e:I
 
     .line 11
-    iget-object v2, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->E:Lcom/vk/stories/view/t1;
+    iget-object v2, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->E:Lcom/vk/stories/view/BaseStoryViewContract1;
 
-    invoke-interface {v2}, Lcom/vk/stories/view/f1;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
+    invoke-interface {v2}, Lcom/vk/stories/view/BaseStoryViewContract;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
 
     move-result-object v2
 
@@ -612,11 +612,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/stories/view/question/c;)V
+.method public a(Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iput-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     return-void
 .end method
@@ -625,9 +625,9 @@
     .locals 5
 
     .line 16
-    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/a;
+    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
 
-    invoke-interface {p1}, Lcom/vk/stories/view/question/a;->b()V
+    invoke-interface {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract;->b()V
 
     .line 17
     iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b:Lcom/vk/dto/stories/model/clickable/ClickableQuestion;
@@ -651,31 +651,31 @@
     if-nez p1, :cond_2
 
     .line 19
-    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/stories/view/question/c;->y0()V
+    invoke-interface {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->y0()V
 
     return v0
 
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 20
     :cond_2
-    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz p1, :cond_e
 
-    invoke-interface {p1}, Lcom/vk/stories/view/question/c;->A()V
+    invoke-interface {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->A()V
 
     .line 21
-    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/a;
+    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
 
-    invoke-interface {p1}, Lcom/vk/stories/view/question/a;->a()Z
+    invoke-interface {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract;->a()Z
 
     move-result p1
 
@@ -701,18 +701,18 @@
 
     .line 25
     :goto_0
-    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz p1, :cond_4
 
     iget-boolean v3, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->g:Z
 
-    invoke-interface {p1, v3}, Lcom/vk/stories/view/question/c;->h(Z)V
+    invoke-interface {p1, v3}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->h(Z)V
 
     goto :goto_1
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -723,21 +723,21 @@
     invoke-direct {p0, p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionContract$State;)V
 
     .line 27
-    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz p1, :cond_d
 
     iget-boolean v3, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->g:Z
 
-    invoke-interface {p1, v3}, Lcom/vk/stories/view/question/c;->i(Z)V
+    invoke-interface {p1, v3}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->i(Z)V
 
     .line 28
     :goto_1
-    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz p1, :cond_c
 
-    iget-object v3, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/a;
+    iget-object v3, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
 
     iget-object v4, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b:Lcom/vk/dto/stories/model/clickable/ClickableQuestion;
 
@@ -753,44 +753,44 @@
     move-object v4, v2
 
     :goto_2
-    invoke-interface {v3, v4}, Lcom/vk/stories/view/question/a;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-interface {v3, v4}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    invoke-interface {p1, v3}, Lcom/vk/stories/view/question/c;->b(Ljava/lang/CharSequence;)V
+    invoke-interface {p1, v3}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->b(Ljava/lang/CharSequence;)V
 
     .line 29
-    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz p1, :cond_b
 
     const-string v3, ""
 
-    invoke-interface {p1, v3}, Lcom/vk/stories/view/question/c;->a(Ljava/lang/CharSequence;)V
+    invoke-interface {p1, v3}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->a(Ljava/lang/CharSequence;)V
 
     .line 30
-    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz p1, :cond_a
 
-    invoke-interface {p1}, Lcom/vk/stories/view/question/c;->show()V
+    invoke-interface {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->show()V
 
     .line 31
-    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz p1, :cond_9
 
-    invoke-interface {p1, p0}, Lcom/vk/utils/a;->b(Lcom/vk/core/vc/KeyboardController$a;)V
+    invoke-interface {p1, p0}, Lcom/vk/utils/AndroidUtilsProvider;->b(Lcom/vk/core/vc/KeyboardController$a;)V
 
     .line 32
-    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz p1, :cond_8
 
-    invoke-interface {p1}, Lcom/vk/stories/view/question/c;->K()V
+    invoke-interface {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->K()V
 
     .line 33
-    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz p1, :cond_7
 
@@ -798,54 +798,54 @@
 
     const-wide/16 v2, 0x258
 
-    invoke-interface {p1, v1, v2, v3}, Lcom/vk/utils/a;->a(Ljava/lang/Runnable;J)V
+    invoke-interface {p1, v1, v2, v3}, Lcom/vk/utils/AndroidUtilsProvider;->a(Ljava/lang/Runnable;J)V
 
     return v0
 
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 34
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 35
     :cond_9
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 36
     :cond_a
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 37
     :cond_b
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 38
     :cond_c
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 39
     :cond_d
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 40
     :cond_e
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -867,7 +867,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0}, Lcom/vk/stories/view/question/b$a;->a(Lcom/vk/stories/view/question/b;)V
+    invoke-static {p0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract$a1;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;)V
 
     return-void
 .end method
@@ -876,7 +876,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_1
 
@@ -898,14 +898,14 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-interface {v0, p1}, Lcom/vk/stories/view/question/c;->b(Z)V
+    invoke-interface {v0, p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->b(Z)V
 
     return-void
 
     :cond_1
     const-string p1, "view"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -916,18 +916,18 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->h0()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->h0()V
 
     return-void
 
     :cond_0
     const-string v0, "view"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -938,7 +938,7 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     const/4 v1, 0x0
 
@@ -946,25 +946,25 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p0}, Lcom/vk/utils/a;->a(Lcom/vk/core/vc/KeyboardController$a;)V
+    invoke-interface {v0, p0}, Lcom/vk/utils/AndroidUtilsProvider;->a(Lcom/vk/core/vc/KeyboardController$a;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/stories/view/question/c;->e(I)V
+    invoke-interface {v0, p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->e(I)V
 
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 4
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -973,18 +973,18 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->Q()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->Q()V
 
     return-void
 
     :cond_0
     const-string v0, "view"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1006,18 +1006,18 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->m0()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->m0()V
 
     return-void
 
     :cond_1
     const-string v0, "view"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1028,9 +1028,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/a;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/a;->a()Z
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract;->a()Z
 
     move-result v0
 
@@ -1083,20 +1083,20 @@
 
     .line 6
     :goto_0
-    iget-object v1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/c;
+    iget-object v1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     if-eqz v1, :cond_3
 
     iget-boolean v2, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->C:Z
 
-    invoke-interface {v1, v0, v2}, Lcom/vk/stories/view/question/c;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionContract$Visibility;Z)V
+    invoke-interface {v1, v0, v2}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionContract$Visibility;Z)V
 
     goto :goto_1
 
     :cond_3
     const-string v0, "view"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1117,9 +1117,9 @@
     invoke-direct {p0, v1}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionContract$State;)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/a;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/a;->c()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract;->c()V
 
     :goto_1
     return-void
@@ -1142,13 +1142,13 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/a;
+    iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->F:Lcom/vk/stories/view/question/StoryViewAskQuestionContract;
 
     new-instance v1, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onBottomSheetOpened$1;
 
     invoke-direct {v1, p0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$onBottomSheetOpened$1;-><init>(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/stories/view/question/a;->a(Lkotlin/jvm/b/b;)V
+    invoke-interface {v0, v1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract;->a(Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

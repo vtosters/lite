@@ -1,10 +1,10 @@
 .class public final Lcom/vk/search/fragment/RestoreSearchFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "RestoreSearchFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/k;
-.implements Lcom/vk/lists/t$o;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/lists/PaginationHelper$o;
 
 
 # annotations
@@ -19,11 +19,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/b;",
-        "Lcom/vk/navigation/b0/k;",
-        "Lcom/vk/lists/t$o<",
+        "Lcom/vk/core/fragments/BaseFragment1;",
+        "Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;",
+        "Lcom/vk/lists/PaginationHelper$o<",
         "Lcom/vk/dto/common/data/VKList<",
-        "Lcom/vk/common/i/b;",
+        "Lcom/vk/common/i/RecyclerItem;",
         ">;>;"
     }
 .end annotation
@@ -38,13 +38,13 @@
 
 .field private I:Landroid/widget/TextView;
 
-.field private J:Lcom/vk/core/widget/h;
+.field private J:Lcom/vk/core/widget/ViewDisplayer;
 
 .field private K:Lcom/vk/search/fragment/RestoreSearchFragment$RestoreSearchAdapter;
 
-.field private L:Lcom/vk/lists/t;
+.field private L:Lcom/vk/lists/PaginationHelper;
 
-.field private M:Lio/reactivex/disposables/b;
+.field private M:Lio/reactivex/disposables/Disposable;
 
 .field private N:Ljava/lang/String;
 
@@ -61,7 +61,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/search/fragment/RestoreSearchFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/search/fragment/RestoreSearchFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     const-string v0, ""
 
@@ -115,7 +115,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->N:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -131,22 +131,22 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->M:Lio/reactivex/disposables/b;
+    iget-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->M:Lio/reactivex/disposables/Disposable;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 5
     :cond_0
-    iget-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->L:Lcom/vk/lists/t;
+    iget-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->L:Lcom/vk/lists/PaginationHelper;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
 
     goto :goto_0
 
@@ -154,7 +154,7 @@
     const-string p1, "adapter"
 
     .line 6
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -189,7 +189,7 @@
 
     const-string v3, "getActivity()!!"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v4, Lcom/vk/search/view/PeopleSearchParamsView;
 
@@ -205,7 +205,7 @@
 
     if-eqz v6, :cond_1
 
-    invoke-static {v6, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v4, v5, v6}, Lcom/vk/search/view/PeopleSearchParamsView;-><init>(Lcom/vk/search/PeopleSearchParams;Landroid/app/Activity;)V
 
@@ -217,19 +217,19 @@
 
     const-string v2, "childFragmentManager"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/search/SearchParamsDialogSheet;->a(Landroidx/fragment/app/FragmentManager;)V
 
     return-void
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -247,7 +247,7 @@
     :cond_0
     const-string p0, "adapter"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -268,23 +268,23 @@
     move-object v0, p1
 
     .line 16
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 17
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 18
     sget-object v1, Lcom/vk/search/fragment/RestoreSearchFragment$e;->a:Lcom/vk/search/fragment/RestoreSearchFragment$e;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -293,20 +293,20 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/RestoreSearchFragment$initSearchView$1$2;-><init>(Lcom/vk/search/fragment/RestoreSearchFragment;)V
 
-    new-instance v2, Lcom/vk/search/fragment/d;
+    new-instance v2, Lcom/vk/search/fragment/RestoreSearchFragment1;
 
-    invoke-direct {v2, v1}, Lcom/vk/search/fragment/d;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/search/fragment/RestoreSearchFragment1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "observeQueryChangeEvents\u2026rchFragment::updateQuery)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     const/4 v0, 0x1
 
@@ -318,10 +318,10 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/RestoreSearchFragment$initSearchView$$inlined$apply$lambda$1;-><init>(Lcom/vk/search/fragment/RestoreSearchFragment;)V
 
-    invoke-virtual {p1, v1}, Lcom/vk/core/view/search/MilkshakeSearchView;->setSecondaryActionListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v1}, Lcom/vk/core/view/search/MilkshakeSearchView;->setSecondaryActionListener(Lkotlin/jvm/b/Functions;)V
 
     .line 23
-    sget-object v2, Lcom/vk/core/ui/s;->a:Lcom/vk/core/ui/s$a;
+    sget-object v2, Lcom/vk/core/ui/TalkBackDrawable;->a:Lcom/vk/core/ui/TalkBackDrawable$a;
 
     const v3, 0x7f08074c
 
@@ -333,11 +333,11 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/core/ui/s$a;->a(Lcom/vk/core/ui/s$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/s;
+    invoke-static/range {v2 .. v7}, Lcom/vk/core/ui/TalkBackDrawable$a;->a(Lcom/vk/core/ui/TalkBackDrawable$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/ui/s;)V
+    invoke-virtual {p1, v1}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/ui/TalkBackDrawable;)V
 
     .line 24
     iget-object v1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->O:Lcom/vk/search/PeopleSearchParams;
@@ -358,32 +358,32 @@
 
     invoke-direct {v0, p0}, Lcom/vk/search/fragment/RestoreSearchFragment$initSearchView$$inlined$apply$lambda$2;-><init>(Lcom/vk/search/fragment/RestoreSearchFragment;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/Functions;)V
 
     .line 27
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 28
     sget-object v1, Lcom/vk/search/fragment/RestoreSearchFragment$f;->a:Lcom/vk/search/fragment/RestoreSearchFragment$f;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 29
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -392,41 +392,41 @@
 
     invoke-direct {v1, p1}, Lcom/vk/search/fragment/RestoreSearchFragment$g;-><init>(Lcom/vk/core/view/search/MilkshakeSearchView;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026archView.hideKeyboard() }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 31
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 32
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 33
     sget-object v1, Lcom/vk/search/fragment/RestoreSearchFragment$h;->a:Lcom/vk/search/fragment/RestoreSearchFragment$h;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 34
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -435,16 +435,16 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/search/fragment/RestoreSearchFragment$i;-><init>(Lcom/vk/search/fragment/RestoreSearchFragment;Lcom/vk/core/view/search/MilkshakeSearchView;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "RxBus.instance.events\n  \u2026ault())\n                }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 36
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -540,30 +540,30 @@
 
     .line 11
     :cond_1
-    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
+    invoke-static {p0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object v0
 
     const/16 v1, 0x1e
 
     .line 12
-    invoke-virtual {v0, v1}, Lcom/vk/lists/t$k;->c(I)Lcom/vk/lists/t$k;
+    invoke-virtual {v0, v1}, Lcom/vk/lists/PaginationHelper$k;->c(I)Lcom/vk/lists/PaginationHelper$k;
 
     const-wide/16 v1, 0x12c
 
     .line 13
-    invoke-virtual {v0, v1, v2}, Lcom/vk/lists/t$k;->a(J)Lcom/vk/lists/t$k;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/lists/PaginationHelper$k;->a(J)Lcom/vk/lists/PaginationHelper$k;
 
     const-string v1, "PaginationHelper.createW\u2026setReloadOnBindDelay(300)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
-    invoke-static {v0, p1}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {v0, p1}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->L:Lcom/vk/lists/t;
+    iput-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->L:Lcom/vk/lists/PaginationHelper;
 
     return-void
 
@@ -571,7 +571,7 @@
     const-string p1, "adapter"
 
     .line 15
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -615,13 +615,13 @@
     if-eqz p2, :cond_1
 
     .line 46
-    iget-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->J:Lcom/vk/core/widget/h;
+    iget-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->J:Lcom/vk/core/widget/ViewDisplayer;
 
     if-eqz p1, :cond_0
 
     const/4 p2, 0x1
 
-    invoke-virtual {p1, p2}, Lcom/vk/core/widget/h;->a(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/core/widget/ViewDisplayer;->a(Z)V
 
     .line 47
     :cond_0
@@ -657,11 +657,11 @@
 
     .line 49
     :cond_2
-    iget-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->J:Lcom/vk/core/widget/h;
+    iget-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->J:Lcom/vk/core/widget/ViewDisplayer;
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/core/widget/h;->a()V
+    invoke-virtual {p1}, Lcom/vk/core/widget/ViewDisplayer;->a()V
 
     .line 50
     :cond_3
@@ -692,11 +692,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/search/fragment/RestoreSearchFragment;)Lcom/vk/lists/t;
+.method public static final synthetic b(Lcom/vk/search/fragment/RestoreSearchFragment;)Lcom/vk/lists/PaginationHelper;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->L:Lcom/vk/lists/t;
+    iget-object p0, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->L:Lcom/vk/lists/PaginationHelper;
 
     return-object p0
 .end method
@@ -738,32 +738,32 @@
     return v0
 .end method
 
-.method public a(ILcom/vk/lists/t;)Lc/a/m;
+.method public a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKList<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;>;"
         }
     .end annotation
 
     .line 38
-    new-instance v0, Lcom/vk/api/search/h;
+    new-instance v0, Lcom/vk/api/search/SearchRestorePeople;
 
     iget-object v1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->N:Ljava/lang/String;
 
-    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result p2
 
     iget-object v2, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->O:Lcom/vk/search/PeopleSearchParams;
 
-    invoke-direct {v0, v1, p2, p1, v2}, Lcom/vk/api/search/h;-><init>(Ljava/lang/String;IILcom/vk/search/PeopleSearchParams;)V
+    invoke-direct {v0, v1, p2, p1, v2}, Lcom/vk/api/search/SearchRestorePeople;-><init>(Ljava/lang/String;IILcom/vk/search/PeopleSearchParams;)V
 
     iget-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->P:Ljava/lang/String;
 
@@ -771,11 +771,11 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     const/4 p1, 0x1
 
-    invoke-static {v0, p2, p1, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p2, p1, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -784,21 +784,21 @@
     :cond_0
     const-string p1, "accessToken"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 .end method
 
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKList<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;>;"
         }
     .end annotation
@@ -806,23 +806,23 @@
     const/4 p2, 0x0
 
     .line 37
-    invoke-virtual {p0, p2, p1}, Lcom/vk/search/fragment/RestoreSearchFragment;->a(ILcom/vk/lists/t;)Lc/a/m;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/search/fragment/RestoreSearchFragment;->a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKList<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;>;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -830,24 +830,24 @@
     .line 39
     new-instance v0, Lcom/vk/search/fragment/RestoreSearchFragment$l;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/vk/search/fragment/RestoreSearchFragment$l;-><init>(Lcom/vk/search/fragment/RestoreSearchFragment;ZLcom/vk/lists/t;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/search/fragment/RestoreSearchFragment$l;-><init>(Lcom/vk/search/fragment/RestoreSearchFragment;ZLcom/vk/lists/PaginationHelper;)V
 
     .line 40
     sget-object p2, Lcom/vk/search/fragment/RestoreSearchFragment$m;->a:Lcom/vk/search/fragment/RestoreSearchFragment$m;
 
     .line 41
-    invoke-virtual {p1, v0, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "observable.subscribe(\n  \u2026L.e(e)\n                })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 42
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
-    iput-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->M:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->M:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -918,9 +918,9 @@
 
     .line 5
     :cond_3
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -930,15 +930,15 @@
 
     invoke-direct {v1, v2, v3}, Lcom/vk/search/view/PeopleSearchParamsView$a;-><init>(Lcom/vk/search/PeopleSearchParams;Z)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     goto :goto_4
 
     .line 6
     :cond_4
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -948,7 +948,7 @@
 
     invoke-direct {v1, v2, v4}, Lcom/vk/search/view/PeopleSearchParamsView$a;-><init>(Lcom/vk/search/PeopleSearchParams;Z)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -1006,7 +1006,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/i;->a(IILandroid/content/Intent;)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/VoiceUtils;->a(IILandroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1015,7 +1015,7 @@
     const-string p2, "it"
 
     .line 2
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -1048,7 +1048,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -1067,34 +1067,34 @@
 
     const-string v0, "getArguments()!!.getString(ACCESS_TOKEN_KEY, \"\")"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->P:Ljava/lang/String;
 
     .line 3
-    sget-object p1, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object p1, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {p1}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {p1}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 4
     sget-object v0, Lcom/vk/search/fragment/RestoreSearchFragment$j;->a:Lcom/vk/search/fragment/RestoreSearchFragment$j;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 5
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1103,22 +1103,22 @@
 
     invoke-direct {v0, p0}, Lcom/vk/search/fragment/RestoreSearchFragment$k;-><init>(Lcom/vk/search/fragment/RestoreSearchFragment;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "RxBus.instance.events\n  \u2026      }\n                }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 
     .line 8
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -1140,7 +1140,7 @@
     const-string p2, "view"
 
     .line 2
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x2
 
@@ -1148,7 +1148,7 @@
 
     const v0, 0x7f0a0b7f
 
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1166,7 +1166,7 @@
     const v0, 0x7f0a0baa
 
     .line 4
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1188,7 +1188,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/RestoreSearchFragment$onCreateView$1;-><init>(Lcom/vk/search/fragment/RestoreSearchFragment;)V
 
-    invoke-static {p1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+    invoke-static {p1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1201,12 +1201,12 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/RestoreSearchFragment$onCreateView$2;-><init>(Lcom/vk/search/fragment/RestoreSearchFragment;)V
 
-    invoke-static {p1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+    invoke-static {p1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
 
     const v0, 0x7f0a0e29
 
     .line 8
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -1225,32 +1225,32 @@
 
     .line 10
     :cond_0
-    new-instance p2, Lcom/vk/core/widget/h;
+    new-instance p2, Lcom/vk/core/widget/ViewDisplayer;
 
     iget-object p3, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->H:Landroid/view/View;
 
-    invoke-direct {p2, p3}, Lcom/vk/core/widget/h;-><init>(Landroid/view/View;)V
+    invoke-direct {p2, p3}, Lcom/vk/core/widget/ViewDisplayer;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->J:Lcom/vk/core/widget/h;
+    iput-object p2, p0, Lcom/vk/search/fragment/RestoreSearchFragment;->J:Lcom/vk/core/widget/ViewDisplayer;
 
     .line 11
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/vk/core/util/l0;->a(Landroid/app/Activity;)V
+    invoke-static {p2}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/app/Activity;)V
 
     return-object p1
 
     .line 12
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     .line 13
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 .end method

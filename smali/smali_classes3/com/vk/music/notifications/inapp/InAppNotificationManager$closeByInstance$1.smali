@@ -3,7 +3,7 @@
 .source "InAppNotificationManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/music/notifications/inapp/b;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/music/notifications/inapp/InAppNotificationManager1;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/music/notifications/inapp/b;)Z
+.method public final a(Lcom/vk/music/notifications/inapp/InAppNotificationManager1;)Z
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/music/notifications/inapp/b;->a()Lcom/vk/music/notifications/inapp/InAppNotification;
+    invoke-virtual {p1}, Lcom/vk/music/notifications/inapp/InAppNotificationManager1;->a()Lcom/vk/music/notifications/inapp/InAppNotification;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/music/notifications/inapp/InAppNotificationManager$closeByInstance$1;->$inAppNotification:Lcom/vk/music/notifications/inapp/InAppNotification;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -67,9 +67,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/music/notifications/inapp/b;
+    check-cast p1, Lcom/vk/music/notifications/inapp/InAppNotificationManager1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/music/notifications/inapp/InAppNotificationManager$closeByInstance$1;->a(Lcom/vk/music/notifications/inapp/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/music/notifications/inapp/InAppNotificationManager$closeByInstance$1;->a(Lcom/vk/music/notifications/inapp/InAppNotificationManager1;)Z
 
     move-result p1
 

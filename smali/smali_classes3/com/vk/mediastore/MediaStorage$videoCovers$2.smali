@@ -3,7 +3,7 @@
 .source "MediaStorage.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/mediastore/legacy/ProxyVideoCache;",
         ">;"
     }
@@ -61,13 +61,13 @@
     .line 2
     new-instance v0, Lcom/vk/mediastore/legacy/ProxyVideoCache;
 
-    invoke-static {}, Lb/h/g/m/d;->m()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->m()Ljava/io/File;
 
     move-result-object v1
 
     const-string v2, "getLiveCoversVideoCacheDir()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v2, 0xa
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/instantjobs/impl/InstantJobExecutor;->e(Lcom/vk/instantjobs/impl/b;)Ljava/lang/Runnable;
+    value = Lcom/vk/instantjobs/impl/InstantJobExecutor;->e(Lcom/vk/instantjobs/impl/InstantJobInfo;)Ljava/lang/Runnable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-.field final synthetic b:Lcom/vk/instantjobs/impl/b;
+.field final synthetic b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;)V
+.method constructor <init>(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,9 +44,9 @@
     .line 1
     iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
-    invoke-static {v0, v1}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->h(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
+    invoke-static {v0, v1}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->h(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
 
     move-result-object v0
 
@@ -68,9 +68,9 @@
     :try_start_0
     iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
-    invoke-static {v0, v1}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->b(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;)V
+    invoke-static {v0, v1}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->b(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -94,39 +94,39 @@
     :try_start_1
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
-    invoke-static {v1, v2}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->d(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;)V
+    invoke-static {v1, v2}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->d(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;)V
 
     .line 6
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
-    invoke-static {v1, v2}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->e(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;)V
+    invoke-static {v1, v2}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->e(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;)V
 
     .line 7
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
-    invoke-static {v1, v2}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->f(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;)V
+    invoke-static {v1, v2}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->f(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;)V
 
     .line 8
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
     sget-object v3, Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;->SUCCESS:Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;
 
-    invoke-static {v1, v2, v3}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
+    invoke-static {v1, v2, v3}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
 
     .line 9
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
-    invoke-static {v1, v2, v0}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->b(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;Z)V
+    invoke-static {v1, v2, v0}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->b(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;Z)V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -139,25 +139,25 @@
     .line 10
     iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v3, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v3, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
     sget-object v4, Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;->REJECTED:Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;
 
-    invoke-static {v2, v3, v4}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
+    invoke-static {v2, v3, v4}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
 
     .line 11
     iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v3, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v3, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
-    invoke-static {v2, v3, v1}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->b(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
+    invoke-static {v2, v3, v1}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->b(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;Ljava/lang/Throwable;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
 
     .line 12
     iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v2, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
-    invoke-static {v1, v2, v0}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;Z)Ljava/util/Collection;
+    invoke-static {v1, v2, v0}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;Z)Ljava/util/Collection;
 
     return-void
 
@@ -165,11 +165,11 @@
     :catch_0
     iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
     sget-object v2, Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;->REJECTED:Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;
 
-    invoke-static {v0, v1, v2}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
+    invoke-static {v0, v1, v2}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
 
     return-void
 
@@ -177,11 +177,11 @@
     :catch_1
     iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->a:Lcom/vk/instantjobs/impl/InstantJobExecutor;
 
-    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/b;
+    iget-object v1, p0, Lcom/vk/instantjobs/impl/InstantJobExecutor$d;->b:Lcom/vk/instantjobs/impl/InstantJobInfo;
 
     sget-object v2, Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;->REJECTED:Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;
 
-    invoke-static {v0, v1, v2}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/b;Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
+    invoke-static {v0, v1, v2}, Lcom/vk/instantjobs/impl/InstantJobExecutor;->a(Lcom/vk/instantjobs/impl/InstantJobExecutor;Lcom/vk/instantjobs/impl/InstantJobInfo;Lcom/vk/instantjobs/impl/InstantJobExecutor$RunState;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
 
     :cond_1
     :goto_1

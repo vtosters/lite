@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/StoryViewDialog;->b(Landroid/view/View;Lkotlin/jvm/b/e;II)V
+    value = Lcom/vk/stories/StoryViewDialog;->b(Landroid/view/View;Lkotlin/jvm/b/Functions3;II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -133,7 +133,7 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lcom/vk/core/util/h;->a([Landroidx/dynamicanimation/animation/DynamicAnimation;)V
+    invoke-static {v0}, Lcom/vk/core/util/AnimationUtils;->a([Landroidx/dynamicanimation/animation/DynamicAnimation;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StoryViewDialog$h;->C:Lcom/vk/stories/StoryViewDialog;
@@ -142,7 +142,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/core/util/z;->a:Landroid/util/Property;
+    sget-object v1, Lcom/vk/core/util/DrawableUtils;->a:Landroid/util/Property;
 
     new-array v2, v2, [I
 

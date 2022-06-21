@@ -57,7 +57,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1}, Lcom/vtosters/lite/j0/b;->a(Ljava/util/List;ZI)Ljava/util/ArrayList;
+    invoke-static {v0, v2, v1}, Lcom/vtosters/lite/j0/Cache;->a(Ljava/util/List;ZI)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -124,7 +124,7 @@
     if-nez v2, :cond_1
 
     .line 10
-    new-instance v1, Lcom/vk/api/users/h;
+    new-instance v1, Lcom/vk/api/users/UsersGetUsersAndGroups;
 
     iget-object v2, p0, Lcom/vtosters/lite/data/Friends$b;->a:Ljava/util/ArrayList;
 
@@ -134,7 +134,7 @@
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/api/users/h;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/api/users/UsersGetUsersAndGroups;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
     const-string v2, "photo_50,photo_100"
 
@@ -143,19 +143,19 @@
     move-result-object v2
 
     .line 11
-    invoke-virtual {v1, v2}, Lcom/vk/api/users/h;->a([Ljava/lang/String;)Lcom/vk/api/users/h;
+    invoke-virtual {v1, v2}, Lcom/vk/api/users/UsersGetUsersAndGroups;->a([Ljava/lang/String;)Lcom/vk/api/users/UsersGetUsersAndGroups;
 
     new-instance v2, Lcom/vtosters/lite/data/Friends$b$a;
 
     invoke-direct {v2, p0, v0}, Lcom/vtosters/lite/data/Friends$b$a;-><init>(Lcom/vtosters/lite/data/Friends$b;Ljava/util/concurrent/atomic/AtomicInteger;)V
 
     .line 12
-    invoke-virtual {v1, v2}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v1, v2}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object v1
 
     .line 13
-    invoke-virtual {v1}, Lcom/vk/api/base/b;->b()Z
+    invoke-virtual {v1}, Lcom/vk/api/base/ApiCallbackDisposable;->b()Z
 
     move-result v2
 

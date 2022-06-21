@@ -10,19 +10,19 @@
 
 .field private final c:Landroid/widget/ImageView;
 
-.field private final d:Lcom/vk/im/ui/formatters/d;
+.field private final d:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
-.field private final e:Lcom/vk/im/ui/components/msg_search/vc/p;
+.field private final e:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_search/vc/p;)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/msg_search/vc/VcCallback;)V
     .locals 0
 
     .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/HintVh;->e:Lcom/vk/im/ui/components/msg_search/vc/p;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_search/vc/HintVh;->e:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     .line 2
     sget p2, Lcom/vk/im/ui/h;->vkim_avatar:I
@@ -58,22 +58,22 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/HintVh;->c:Landroid/widget/ImageView;
 
     .line 5
-    new-instance p1, Lcom/vk/im/ui/formatters/d;
+    new-instance p1, Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     const-string p2, "\u2026"
 
-    invoke-direct {p1, p2}, Lcom/vk/im/ui/formatters/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/HintVh;->d:Lcom/vk/im/ui/formatters/d;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/HintVh;->d:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/msg_search/vc/HintVh;)Lcom/vk/im/ui/components/msg_search/vc/p;
+.method public static final synthetic a(Lcom/vk/im/ui/components/msg_search/vc/HintVh;)Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/msg_search/vc/HintVh;->e:Lcom/vk/im/ui/components/msg_search/vc/p;
+    iget-object p0, p0, Lcom/vk/im/ui/components/msg_search/vc/HintVh;->e:Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     return-object p0
 .end method
@@ -93,9 +93,9 @@
 
     const-string v1, "nameView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/msg_search/vc/HintVh;->d:Lcom/vk/im/ui/formatters/d;
+    iget-object v2, p0, Lcom/vk/im/ui/components/msg_search/vc/HintVh;->d:Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     const/4 v5, 0x0
 
@@ -107,7 +107,7 @@
 
     move-object v4, p3
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/ui/formatters/d;Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/lang/StringBuilder;ILjava/lang/Object;)Ljava/lang/CharSequence;
+    invoke-static/range {v2 .. v7}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/ui/formatters/DisplayNameFormatter;Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/lang/StringBuilder;ILjava/lang/Object;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -118,7 +118,7 @@
 
     move-result v0
 
-    invoke-virtual {p3, v0}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p3, v0}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/Profile;
 
     move-result-object v0
 
@@ -129,7 +129,7 @@
 
     const-string v3, "verifiedView"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v3, Lcom/vk/dto/common/VerifyInfo;
 
@@ -139,7 +139,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/engine/models/j;->U()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/models/Profile;->U()Z
 
     move-result v0
 
@@ -162,20 +162,20 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/im/ui/components/msg_search/vc/HintVh$bind$1;
 
     invoke-direct {v2, p0, p1, p3}, Lcom/vk/im/ui/components/msg_search/vc/HintVh$bind$1;-><init>(Lcom/vk/im/ui/components/msg_search/vc/HintVh;Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
-    invoke-static {v0, v2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     if-eqz p2, :cond_1
 
     .line 7
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 p2, 0x3f800000    # 1.0f
 
@@ -187,7 +187,7 @@
     :cond_1
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x3ecccccd    # 0.4f
 

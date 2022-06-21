@@ -3,12 +3,12 @@
 .source "SourcesNotificationsSettingsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/SourcesNotificationsSettingsFragment;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/notifications/SourcesNotificationsSettingsFragment;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,9 +22,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/common/data/VKList<",
-        "Lcom/vk/common/i/b;",
+        "Lcom/vk/common/i/RecyclerItem;",
         ">;>;"
     }
 .end annotation
@@ -33,18 +33,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/notifications/SourcesNotificationsSettingsFragment;
 
-.field final synthetic b:Lcom/vk/lists/t;
+.field final synthetic b:Lcom/vk/lists/PaginationHelper;
 
 .field final synthetic c:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/notifications/SourcesNotificationsSettingsFragment;Lcom/vk/lists/t;Z)V
+.method constructor <init>(Lcom/vk/notifications/SourcesNotificationsSettingsFragment;Lcom/vk/lists/PaginationHelper;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$f;->a:Lcom/vk/notifications/SourcesNotificationsSettingsFragment;
 
-    iput-object p2, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$f;->b:Lcom/vk/lists/t;
+    iput-object p2, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$f;->b:Lcom/vk/lists/PaginationHelper;
 
     iput-boolean p3, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$f;->c:Z
 
@@ -61,19 +61,19 @@
         value = {
             "(",
             "Lcom/vk/dto/common/data/VKList<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$f;->b:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$f;->b:Lcom/vk/lists/PaginationHelper;
 
     invoke-virtual {p1}, Lcom/vk/dto/common/data/VKList;->a()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/t;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/PaginationHelper;->a(I)V
 
     .line 2
     iget-boolean v0, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$f;->c:Z
@@ -89,7 +89,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     goto :goto_0
 
@@ -103,7 +103,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->g(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->g(Ljava/util/List;)V
 
     :cond_1
     :goto_0

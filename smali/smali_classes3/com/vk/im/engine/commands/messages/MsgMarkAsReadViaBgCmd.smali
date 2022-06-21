@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;
-.super Lcom/vk/im/engine/i/a;
+.super Lcom/vk/im/engine/i/BaseImEngineCmd;
 .source "MsgMarkAsReadViaBgCmd.kt"
 
 
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/a<",
-        "Lkotlin/m;",
+        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -32,7 +32,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->b:I
 
@@ -43,7 +43,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILjava/lang/Object;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IILjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x4
@@ -59,22 +59,22 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd$a;
+.method public static final synthetic a(Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd$a;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->c(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd$a;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->c(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd$a;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final b(Lcom/vk/im/engine/d;)V
+.method private final b(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 2
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
 
     move-result-object p1
 
@@ -84,29 +84,29 @@
 
     const-string v1, "old mark as read request"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/instantjobs/b;->b(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/instantjobs/InstantJobManager;->b(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method private final c(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd$a;
+.method private final c(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd$a;
     .locals 7
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object v0
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
@@ -115,22 +115,22 @@
     move-result-object v1
 
     .line 4
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
 
     move-result p1
 
     .line 5
     iget v2, p0, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->b:I
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->c(I)Lcom/vk/im/engine/internal/storage/models/a;
+    invoke-virtual {v0, v2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->c(I)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
     move-result-object v2
 
@@ -139,7 +139,7 @@
     if-eqz v2, :cond_2
 
     .line 6
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/a;->s()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->s()I
 
     move-result v4
 
@@ -149,7 +149,7 @@
 
     .line 7
     :cond_0
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/a;->x()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->x()I
 
     move-result v4
 
@@ -180,7 +180,7 @@
     const/4 v1, 0x0
 
     .line 11
-    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/a;->g()I
+    invoke-virtual {v2}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->g()I
 
     move-result v2
 
@@ -210,58 +210,58 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->a(Lcom/vk/im/engine/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->a(Lcom/vk/im/engine/ImEnvironment;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/d;)V
+.method public a(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 4
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->b(Lcom/vk/im/engine/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->b(Lcom/vk/im/engine/ImEnvironment;)V
 
     .line 4
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd$onExecute$result$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd$onExecute$result$1;-><init>(Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;Lcom/vk/im/engine/d;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd$onExecute$result$1;-><init>(Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;Lcom/vk/im/engine/ImEnvironment;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd$a;
 
     .line 5
-    new-instance v1, Lcom/vk/im/engine/internal/jobs/msg/e;
+    new-instance v1, Lcom/vk/im/engine/internal/jobs/msg/MsgMarkAsReadJob;
 
     iget v2, p0, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->b:I
 
     iget v3, p0, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->c:I
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/im/engine/internal/jobs/msg/e;-><init>(II)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/im/engine/internal/jobs/msg/MsgMarkAsReadJob;-><init>(II)V
 
     .line 6
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/vk/instantjobs/b;->a(Lcom/vk/instantjobs/InstantJob;)V
+    invoke-virtual {v2, v1}, Lcom/vk/instantjobs/InstantJobManager;->a(Lcom/vk/instantjobs/InstantJob;)V
 
     if-eqz v0, :cond_0
 
     .line 7
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->n0()Lcom/vk/im/engine/internal/c;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->n0()Lcom/vk/im/engine/internal/EventHelper;
 
     move-result-object p1
 
@@ -269,7 +269,7 @@
 
     iget v1, p0, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->b:I
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/internal/c;->a(Ljava/lang/Object;I)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/internal/EventHelper;->a(Ljava/lang/Object;I)V
 
     :cond_0
     return-void
@@ -279,13 +279,13 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/im/engine/internal/d;->g()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/im/engine/internal/QueueNames;->g()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "QueueNames.forMsgMarkAsReadLocal()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -346,7 +346,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->d:Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -3,13 +3,13 @@
 .source "CameraFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/k;
-.implements Lcom/vk/navigation/b0/m;
-.implements Lcom/vk/navigation/b0/g;
-.implements Lcom/vk/navigation/b0/f;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/navigation/b0/FragmentWithoutStatusBar;
+.implements Lcom/vk/navigation/b0/FragmentWithCustomStatusBar;
+.implements Lcom/vk/navigation/b0/FragmentWithCustomOrientation;
 .implements Lcom/vk/cameraui/CameraUI$b;
-.implements Lpub/devrel/easypermissions/b$a;
-.implements Lcom/vk/navigation/c;
+.implements Lpub/devrel/easypermissions/EasyPermissions$a;
+.implements Lcom/vk/navigation/ActivityResulter;
 
 
 # annotations
@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/CameraFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/CameraFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/stories/CameraFragment;->G:Lcom/vk/stories/CameraFragment$b;
 
@@ -97,7 +97,7 @@
     :cond_0
     const-string p0, "cameraUIView"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -123,7 +123,7 @@
     :cond_0
     const-string v0, "cameraUIView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -162,7 +162,7 @@
     :cond_0
     const-string p1, "cameraUIView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -210,7 +210,7 @@
     :cond_0
     const-string p1, "cameraUIView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -234,7 +234,7 @@
     :cond_0
     const-string v0, "cameraUIView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -256,7 +256,7 @@
     :cond_0
     const-string p1, "cameraUIView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -280,7 +280,7 @@
 
     const-string v1, "arguments!!"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "camera_params"
 
@@ -330,7 +330,7 @@
 
     const-string v3, "activity!!"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -341,7 +341,7 @@
     move-object v6, p0
 
     .line 9
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/cameraui/CameraUI$a;->a(Landroid/content/Context;Lcom/vk/cameraui/builder/CameraParams;ZZLcom/vk/cameraui/CameraUI$b;Lkotlin/jvm/b/b;)Lcom/vk/cameraui/BaseCameraUIView;
+    invoke-virtual/range {v1 .. v7}, Lcom/vk/cameraui/CameraUI$a;->a(Landroid/content/Context;Lcom/vk/cameraui/builder/CameraParams;ZZLcom/vk/cameraui/CameraUI$b;Lkotlin/jvm/b/Functions2;)Lcom/vk/cameraui/BaseCameraUIView;
 
     move-result-object v1
 
@@ -352,7 +352,7 @@
 
     if-eqz v1, :cond_4
 
-    invoke-interface {v1}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
+    invoke-interface {v1}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
 
     move-result-object v1
 
@@ -372,18 +372,18 @@
 
     move-result-object p1
 
-    instance-of v1, p1, Lcom/vk/navigation/u;
+    instance-of v1, p1, Lcom/vk/navigation/ResulterProvider;
 
     if-nez v1, :cond_2
 
     move-object p1, v0
 
     :cond_2
-    check-cast p1, Lcom/vk/navigation/u;
+    check-cast p1, Lcom/vk/navigation/ResulterProvider;
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1, p0}, Lcom/vk/navigation/u;->b(Lcom/vk/navigation/c;)V
+    invoke-interface {p1, p0}, Lcom/vk/navigation/ResulterProvider;->b(Lcom/vk/navigation/ActivityResulter;)V
 
     :cond_3
     return-void
@@ -392,25 +392,25 @@
     const-string p1, "cameraUIView"
 
     .line 12
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 13
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 14
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 15
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -428,7 +428,7 @@
     :cond_0
     const-string p1, "cameraUIView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -447,7 +447,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-interface {v0}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
+    invoke-interface {v0}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
 
     move-result-object v0
 
@@ -468,7 +468,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -479,18 +479,18 @@
 
     move-result-object v0
 
-    instance-of v3, v0, Lcom/vk/navigation/u;
+    instance-of v3, v0, Lcom/vk/navigation/ResulterProvider;
 
     if-nez v3, :cond_2
 
     move-object v0, v2
 
     :cond_2
-    check-cast v0, Lcom/vk/navigation/u;
+    check-cast v0, Lcom/vk/navigation/ResulterProvider;
 
     if-eqz v0, :cond_3
 
-    invoke-interface {v0, p0}, Lcom/vk/navigation/u;->a(Lcom/vk/navigation/c;)V
+    invoke-interface {v0, p0}, Lcom/vk/navigation/ResulterProvider;->a(Lcom/vk/navigation/ActivityResulter;)V
 
     .line 3
     :cond_3
@@ -512,13 +512,13 @@
 
     .line 6
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 7
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -542,7 +542,7 @@
     const-string v0, "cameraUIView"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -567,7 +567,7 @@
     :cond_0
     const-string p1, "cameraUIView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -594,7 +594,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/a;->b(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/vk/core/extensions/ActivityExt;->b(Landroid/app/Activity;)V
 
     .line 4
     :cond_0
@@ -612,7 +612,7 @@
     const-string v0, "cameraUIView"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -659,7 +659,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -669,7 +669,7 @@
 
     .line 5
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -714,7 +714,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -724,7 +724,7 @@
 
     .line 5
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -733,7 +733,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/m$a;->a(Lcom/vk/navigation/b0/m;)Z
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWithoutStatusBar$a;->a(Lcom/vk/navigation/b0/FragmentWithoutStatusBar;)Z
 
     move-result v0
 

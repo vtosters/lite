@@ -3,7 +3,7 @@
 .source "SeamlessNewsfeedLoadingDelegate.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/loading/b;
+.implements Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegate;
 
 
 # instance fields
@@ -11,11 +11,11 @@
 
 .field private b:Z
 
-.field private final c:Lcom/vk/newsfeed/contracts/p;
+.field private final c:Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
-.field private final d:Lcom/vk/newsfeed/contracts/n;
+.field private final d:Lcom/vk/newsfeed/contracts/NewsfeedContract2;
 
-.field private final e:Lcom/vk/newsfeed/p;
+.field private final e:Lcom/vk/newsfeed/NewsfeedInactiveTimeTracker;
 
 .field private final f:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -29,14 +29,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/newsfeed/contracts/p;Lcom/vk/newsfeed/contracts/n;Lcom/vk/newsfeed/p;Ljava/util/List;)V
+.method public constructor <init>(Lcom/vk/newsfeed/contracts/NewsfeedContract;Lcom/vk/newsfeed/contracts/NewsfeedContract2;Lcom/vk/newsfeed/NewsfeedInactiveTimeTracker;Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/newsfeed/contracts/p;",
-            "Lcom/vk/newsfeed/contracts/n;",
-            "Lcom/vk/newsfeed/p;",
+            "Lcom/vk/newsfeed/contracts/NewsfeedContract;",
+            "Lcom/vk/newsfeed/contracts/NewsfeedContract2;",
+            "Lcom/vk/newsfeed/NewsfeedInactiveTimeTracker;",
             "Ljava/util/List<",
             "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
             ">;)V"
@@ -46,31 +46,31 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/p;
+    iput-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
-    iput-object p2, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/n;
+    iput-object p2, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/NewsfeedContract2;
 
-    iput-object p3, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->e:Lcom/vk/newsfeed/p;
+    iput-object p3, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->e:Lcom/vk/newsfeed/NewsfeedInactiveTimeTracker;
 
     iput-object p4, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->f:Ljava/util/List;
 
     .line 2
     new-instance p1, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;
 
-    iget-object p2, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/p;
+    iget-object p2, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
-    iget-object p3, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/n;
+    iget-object p3, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/NewsfeedContract2;
 
     iget-object p4, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->f:Ljava/util/List;
 
-    invoke-direct {p1, p2, p3, p4}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;-><init>(Lcom/vk/newsfeed/contracts/p;Lcom/vk/newsfeed/contracts/n;Ljava/util/List;)V
+    invoke-direct {p1, p2, p3, p4}, Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;-><init>(Lcom/vk/newsfeed/contracts/NewsfeedContract;Lcom/vk/newsfeed/contracts/NewsfeedContract2;Ljava/util/List;)V
 
     iput-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a:Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;
 
     return-void
 .end method
 
-.method private final a(ILjava/lang/String;Ljava/lang/String;)Lc/a/m;
+.method private final a(ILjava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 14
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -78,7 +78,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
@@ -91,21 +91,21 @@
     if-ne v3, v0, :cond_0
 
     .line 13
-    invoke-static {}, Lc/a/m;->l()Lc/a/m;
+    invoke-static {}, Lio/reactivex/Observable;->l()Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "Observable.empty()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
     .line 14
     :cond_0
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->k()Z
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->k()Z
 
     move-result v0
 
@@ -140,13 +140,13 @@
     move v2, v0
 
     .line 16
-    sget-object v8, Lb/h/b/b;->d:Lb/h/b/b;
+    sget-object v8, Lb/h/b/LocationInfo;->d:Lb/h/b/LocationInfo;
 
-    sget-object v9, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v9, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v0, "AppContextHolder.context"
 
-    invoke-static {v9, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v10, 0x0
 
@@ -154,7 +154,7 @@
 
     const/4 v13, 0x0
 
-    invoke-static/range {v8 .. v13}, Lb/h/b/b;->a(Lb/h/b/b;Landroid/content/Context;JILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v8 .. v13}, Lb/h/b/LocationInfo;->a(Lb/h/b/LocationInfo;Landroid/content/Context;JILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v8
 
@@ -172,67 +172,67 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$b;-><init>(Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;IILjava/lang/String;ZLjava/lang/String;)V
 
-    invoke-virtual {v8, v9}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v8, v9}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "LocationInfo.getCurrentL\u2026oUiObservable()\n        }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method private final a(Lc/a/m;)Lc/a/m;
+.method private final a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
 
     .line 31
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "subscribeOn(Schedulers.i\u2026dSchedulers.mainThread())"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method private final a(Lc/a/m;ILc/a/m;)Lc/a/m;
+.method private final a(Lio/reactivex/Observable;ILio/reactivex/Observable;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;I",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
@@ -241,28 +241,28 @@
     .line 30
     new-instance v0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;-><init>(Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;ILc/a/m;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$a;-><init>(Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;ILio/reactivex/Observable;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "this.flatMap {\n         \u2026}\n            }\n        }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method private final a(Lc/a/m;J)Lc/a/m;
+.method private final a(Lio/reactivex/Observable;J)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;J)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
@@ -277,39 +277,39 @@
     .line 46
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {p1, p2, p3, v0, v1}, Lc/a/m;->c(JLjava/util/concurrent/TimeUnit;Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, p2, p3, v0, v1}, Lio/reactivex/Observable;->c(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "this.delaySubscription(d\u2026dSchedulers.mainThread())"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/api/base/d;Z)Lcom/vk/api/base/d;
+.method private final a(Lcom/vk/api/base/ApiRequest;Z)Lcom/vk/api/base/ApiRequest;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/api/base/d<",
+            "Lcom/vk/api/base/ApiRequest<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;Z)",
-            "Lcom/vk/api/base/d<",
+            "Lcom/vk/api/base/ApiRequest<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
@@ -408,17 +408,17 @@
     const-string p2, "has_cached_items"
 
     .line 38
-    invoke-virtual {p1, p2, v2}, Lcom/vk/api/base/d;->a(Ljava/lang/String;Z)Lcom/vk/api/base/d;
+    invoke-virtual {p1, p2, v2}, Lcom/vk/api/base/ApiRequest;->a(Ljava/lang/String;Z)Lcom/vk/api/base/ApiRequest;
 
     :cond_5
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;Lcom/vk/api/base/d;Z)Lcom/vk/api/base/d;
+.method public static final synthetic a(Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;Lcom/vk/api/base/ApiRequest;Z)Lcom/vk/api/base/ApiRequest;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(Lcom/vk/api/base/d;Z)Lcom/vk/api/base/d;
+    invoke-direct {p0, p1, p2}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(Lcom/vk/api/base/ApiRequest;Z)Lcom/vk/api/base/ApiRequest;
 
     return-object p1
 .end method
@@ -449,7 +449,7 @@
     .line 32
     sget-object v0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$filterViewed$1$1;->a:Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$filterViewed$1$1;
 
-    invoke-static {p1, v0}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
+    invoke-static {p1, v0}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
 
     return-object p1
 .end method
@@ -545,7 +545,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -591,17 +591,17 @@
     .end annotation
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->j()Lcom/vk/dto/account/c;
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->j()Lcom/vk/dto/account/CacheConfig;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/dto/account/c;->f()I
+    invoke-virtual {v0}, Lcom/vk/dto/account/CacheConfig;->f()I
 
     move-result v0
 
@@ -652,38 +652,38 @@
     .locals 9
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/n;
+    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/NewsfeedContract2;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/e;->A()Lcom/vk/lists/o;
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/EntriesListContract;->A()Lcom/vk/lists/ListDataSet;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/lists/o;->size()I
+    invoke-virtual {v0}, Lcom/vk/lists/ListDataSet;->size()I
 
     move-result v1
 
     .line 3
-    iget-object v2, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/p;
+    iget-object v2, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
-    invoke-interface {v2}, Lcom/vk/newsfeed/contracts/f;->D0()I
+    invoke-interface {v2}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->D0()I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/p;
+    iget-object v3, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
-    invoke-interface {v3}, Lcom/vk/newsfeed/contracts/f;->A0()I
+    invoke-interface {v3}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->A0()I
 
     move-result v3
 
     sub-int/2addr v2, v3
 
     .line 4
-    invoke-virtual {v0, v2}, Lcom/vk/lists/o;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Lcom/vk/lists/ListDataSet;->k(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/vtosters/lite/ui/f0/b;
+    check-cast v3, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
     if-nez v3, :cond_0
 
@@ -696,7 +696,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->f:Ljava/util/List;
 
-    iget-object v4, v3, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v4, v3, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     invoke-interface {p1, v4}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
@@ -710,17 +710,17 @@
     if-ge v4, v1, :cond_2
 
     .line 7
-    invoke-virtual {v0, v4}, Lcom/vk/lists/o;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, v4}, Lcom/vk/lists/ListDataSet;->k(I)Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Lcom/vtosters/lite/ui/f0/b;
+    check-cast v6, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
-    iget-object v6, v6, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v6, v6, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    iget-object v7, v3, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v7, v3, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -740,11 +740,11 @@
     .line 8
     :cond_2
     :goto_1
-    iget-object v3, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/n;
+    iget-object v3, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/NewsfeedContract2;
 
     const/4 v4, 0x0
 
-    invoke-interface {v3, v4}, Lcom/vk/newsfeed/contracts/n;->h(Z)V
+    invoke-interface {v3, v4}, Lcom/vk/newsfeed/contracts/NewsfeedContract2;->h(Z)V
 
     .line 9
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
@@ -798,7 +798,7 @@
     sub-int/2addr v1, v2
 
     .line 12
-    invoke-virtual {v0, v2, v1}, Lcom/vk/lists/o;->b(II)V
+    invoke-virtual {v0, v2, v1}, Lcom/vk/lists/ListDataSet;->b(II)V
 
     .line 13
     iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->f:Ljava/util/List;
@@ -920,17 +920,17 @@
     if-eqz v1, :cond_8
 
     .line 23
-    iget-object v1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/n;
+    iget-object v1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/NewsfeedContract2;
 
-    invoke-interface {v1, v0}, Lcom/vk/newsfeed/contracts/e;->b(Ljava/util/List;)V
+    invoke-interface {v1, v0}, Lcom/vk/newsfeed/contracts/EntriesListContract;->b(Ljava/util/List;)V
 
     .line 24
     :cond_8
-    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/n;
+    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/NewsfeedContract2;
 
     iget-object p2, p2, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->startFrom:Ljava/lang/String;
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/newsfeed/contracts/e;->a(Ljava/util/List;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/newsfeed/contracts/EntriesListContract;->a(Ljava/util/List;Ljava/lang/String;)V
 
     if-eqz v3, :cond_9
 
@@ -944,15 +944,15 @@
     if-eqz p1, :cond_9
 
     .line 26
-    iget-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/p;
+    iget-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/contracts/p;->k1()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/contracts/NewsfeedContract;->k1()V
 
     .line 27
     :cond_9
-    iget-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/n;
+    iget-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/NewsfeedContract2;
 
-    invoke-interface {p1, v5}, Lcom/vk/newsfeed/contracts/n;->h(Z)V
+    invoke-interface {p1, v5}, Lcom/vk/newsfeed/contracts/NewsfeedContract2;->h(Z)V
 
     return-void
 .end method
@@ -961,9 +961,9 @@
     .locals 11
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/p;
+    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/f;->G0()I
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->G0()I
 
     move-result v2
 
@@ -991,27 +991,27 @@
     xor-int/lit8 v6, v4, 0x1
 
     .line 3
-    iget-object v4, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/p;
+    iget-object v4, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
-    invoke-interface {v4}, Lcom/vk/newsfeed/contracts/f;->J0()Z
+    invoke-interface {v4}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->J0()Z
 
     move-result v4
 
     .line 4
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lb/h/h/d/c;->a0()I
+    invoke-virtual {v5}, Lcom/vk/auth/api/VKAccount;->a0()I
 
     move-result v5
 
     int-to-long v7, v5
 
     .line 5
-    iget-object v5, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->e:Lcom/vk/newsfeed/p;
+    iget-object v5, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->e:Lcom/vk/newsfeed/NewsfeedInactiveTimeTracker;
 
-    invoke-virtual {v5}, Lcom/vk/newsfeed/p;->a()J
+    invoke-virtual {v5}, Lcom/vk/newsfeed/NewsfeedInactiveTimeTracker;->a()J
 
     move-result-wide v9
 
@@ -1036,9 +1036,9 @@
     if-nez v4, :cond_2
 
     .line 6
-    iget-object v7, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/p;
+    iget-object v7, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
-    invoke-interface {v7}, Lcom/vk/newsfeed/contracts/f;->x0()Z
+    invoke-interface {v7}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->x0()Z
 
     move-result v7
 
@@ -1059,18 +1059,18 @@
     if-eqz v6, :cond_4
 
     .line 7
-    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/p;
+    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/f;->G0()I
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/EntriesListContract1;->G0()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/newsfeed/contracts/p;->q(I)V
+    invoke-interface {v0, v1}, Lcom/vk/newsfeed/contracts/NewsfeedContract;->q(I)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/p;
+    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/p;->x1()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/NewsfeedContract;->x1()V
 
     .line 9
     invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d(ILcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)V
@@ -1079,16 +1079,16 @@
 
     .line 10
     :cond_4
-    iget-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/n;
+    iget-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/NewsfeedContract2;
 
-    invoke-interface {p1, p2}, Lcom/vk/newsfeed/contracts/e;->b(Ljava/util/List;)V
+    invoke-interface {p1, p2}, Lcom/vk/newsfeed/contracts/EntriesListContract;->b(Ljava/util/List;)V
 
     goto :goto_3
 
     .line 11
     :cond_5
     :goto_2
-    sget-object v1, Lcom/vk/newsfeed/b0;->d:Lcom/vk/newsfeed/b0;
+    sget-object v1, Lcom/vk/newsfeed/PostsAnalytics;->d:Lcom/vk/newsfeed/PostsAnalytics;
 
     const/4 v0, 0x1
 
@@ -1098,12 +1098,12 @@
 
     move v5, p1
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/newsfeed/b0;->a(IZZIZ)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/newsfeed/PostsAnalytics;->a(IZZIZ)V
 
     .line 12
-    iget-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/n;
+    iget-object p1, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/NewsfeedContract2;
 
-    invoke-interface {p1, p2}, Lcom/vk/newsfeed/contracts/n;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)V
+    invoke-interface {p1, p2}, Lcom/vk/newsfeed/contracts/NewsfeedContract2;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;)V
 
     :goto_3
     return-void
@@ -1115,20 +1115,20 @@
     .locals 2
 
     .line 4
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->c0()Lcom/vk/dto/account/e;
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->c0()Lcom/vk/dto/account/PageSizeConfig;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
     .line 5
-    sget-object v1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/controllers/a;->k()Z
+    invoke-virtual {v1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->k()Z
 
     move-result v1
 
@@ -1139,7 +1139,7 @@
     if-eqz p2, :cond_0
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/dto/account/e;->d()I
+    invoke-virtual {v0}, Lcom/vk/dto/account/PageSizeConfig;->d()I
 
     move-result p1
 
@@ -1147,7 +1147,7 @@
 
     .line 7
     :cond_0
-    invoke-virtual {v0}, Lcom/vk/dto/account/e;->c()I
+    invoke-virtual {v0}, Lcom/vk/dto/account/PageSizeConfig;->c()I
 
     move-result p1
 
@@ -1157,7 +1157,7 @@
     if-eqz p2, :cond_2
 
     .line 8
-    invoke-virtual {v0}, Lcom/vk/dto/account/e;->b()I
+    invoke-virtual {v0}, Lcom/vk/dto/account/PageSizeConfig;->b()I
 
     move-result p1
 
@@ -1165,7 +1165,7 @@
 
     .line 9
     :cond_2
-    invoke-virtual {v0}, Lcom/vk/dto/account/e;->a()I
+    invoke-virtual {v0}, Lcom/vk/dto/account/PageSizeConfig;->a()I
 
     move-result p1
 
@@ -1173,9 +1173,9 @@
 
     .line 10
     :cond_3
-    sget-object p2, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p2, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p2}, Lcom/vk/newsfeed/controllers/a;->k()Z
+    invoke-virtual {p2}, Lcom/vk/newsfeed/controllers/NewsfeedController;->k()Z
 
     move-result p2
 
@@ -1194,57 +1194,57 @@
     return p1
 .end method
 
-.method public a()Lc/a/m;
+.method public a()Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
     .end annotation
 
     .line 11
-    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/n;
+    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->d:Lcom/vk/newsfeed/contracts/NewsfeedContract2;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/n;->getState()Lcom/vk/newsfeed/contracts/o;
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/NewsfeedContract2;->getState()Lcom/vk/newsfeed/contracts/NewsfeedContract1;
 
     move-result-object v0
 
     .line 12
-    invoke-virtual {v0}, Lcom/vk/newsfeed/contracts/o;->f()I
+    invoke-virtual {v0}, Lcom/vk/newsfeed/contracts/NewsfeedContract1;->f()I
 
     move-result v1
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/contracts/o;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/contracts/NewsfeedContract1;->g()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/contracts/o;->h()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/contracts/NewsfeedContract1;->h()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v1, v2, v0}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(ILjava/lang/String;Ljava/lang/String;)Lc/a/m;
+    invoke-direct {p0, v1, v2, v0}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(ILjava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/newsfeed/loading/a;->a(Lc/a/m;)Lc/a/m;
+    invoke-static {v0}, Lcom/vk/newsfeed/loading/NewsfeedGetExt;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public a(ILc/a/m;Z)Lc/a/m;
+.method public a(ILio/reactivex/Observable;Z)Lio/reactivex/Observable;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
@@ -1260,23 +1260,23 @@
 
     invoke-direct {p3, p1}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$d;-><init>(I)V
 
-    invoke-virtual {p2, p3}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p2, p3}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "fallback.doOnNext { News\u2026.saveReloadTime(listId) }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     :cond_0
     const/4 p3, 0x4
 
-    new-array p3, p3, [Lc/a/m;
+    new-array p3, p3, [Lio/reactivex/Observable;
 
     .line 24
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
     const/4 v1, 0x0
 
@@ -1284,7 +1284,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, p1, v3, v2, v1}, Lcom/vk/newsfeed/controllers/a;->a(Lcom/vk/newsfeed/controllers/a;IZILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p1, v3, v2, v1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->a(Lcom/vk/newsfeed/controllers/NewsfeedController;IZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1293,18 +1293,18 @@
     const/4 v0, 0x1
 
     .line 25
-    sget-object v1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/controllers/a;->e()Lc/a/m;
+    invoke-virtual {v1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->e()Lio/reactivex/Observable;
 
     move-result-object v1
 
     aput-object v1, p3, v0
 
     .line 26
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->g()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->g()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1313,9 +1313,9 @@
     const/4 v0, 0x3
 
     .line 27
-    sget-object v1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/controllers/a;->h()Lc/a/m;
+    invoke-virtual {v1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->h()Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -1326,31 +1326,31 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$e;-><init>(Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;I)V
 
-    invoke-static {p3, v0}, Lc/a/m;->a([Lc/a/p;Lc/a/z/j;)Lc/a/m;
+    invoke-static {p3, v0}, Lio/reactivex/Observable;->a([Lio/reactivex/ObservableSource;Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p3
 
     const-string v0, "observable"
 
     .line 29
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, p3, p1, p2}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(Lc/a/m;ILc/a/m;)Lc/a/m;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(Lc/a/m;)Lc/a/m;
+    invoke-direct {p0, p3, p1, p2}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(Lio/reactivex/Observable;ILio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/newsfeed/loading/a;->a(Lc/a/m;)Lc/a/m;
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/vk/newsfeed/loading/NewsfeedGetExt;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(ILjava/lang/String;IIIIILjava/lang/String;Ljava/lang/String;)Lc/a/m;
+.method public a(ILjava/lang/String;IIIIILjava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1360,7 +1360,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;",
             ">;"
         }
@@ -1371,19 +1371,19 @@
     if-ne p1, p3, :cond_0
 
     .line 17
-    invoke-static {}, Lc/a/m;->l()Lc/a/m;
+    invoke-static {}, Lio/reactivex/Observable;->l()Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "Observable.empty()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     .line 18
     :cond_0
-    invoke-direct {p0, p1, p2, p9}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(ILjava/lang/String;Ljava/lang/String;)Lc/a/m;
+    invoke-direct {p0, p1, p2, p9}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(ILjava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -1392,18 +1392,18 @@
 
     move-result-wide p3
 
-    sget-object p5, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p5, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p5, p1}, Lcom/vk/newsfeed/controllers/a;->b(I)J
+    invoke-virtual {p5, p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->b(I)J
 
     move-result-wide p5
 
     sub-long/2addr p3, p5
 
     .line 20
-    sget-object p5, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p5, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p5}, Lcom/vk/newsfeed/controllers/a;->k()Z
+    invoke-virtual {p5}, Lcom/vk/newsfeed/controllers/NewsfeedController;->k()Z
 
     move-result p5
 
@@ -1426,7 +1426,7 @@
     sub-long/2addr p5, p3
 
     .line 21
-    invoke-direct {p0, p2, p5, p6}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(Lc/a/m;J)Lc/a/m;
+    invoke-direct {p0, p2, p5, p6}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a(Lio/reactivex/Observable;J)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -1434,13 +1434,13 @@
 
     invoke-direct {p3, p1}, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate$c;-><init>(I)V
 
-    invoke-virtual {p2, p3}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p2, p3}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "observable.delayed(delay\u2026oadTime(listId)\n        }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -1462,13 +1462,13 @@
     .locals 7
 
     .line 39
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
     iget-object v2, p2, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->history:Ljava/util/List;
 
     const-string v1, "response.history"
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Lcom/vk/dto/common/data/VKFromList;->a()Ljava/lang/String;
 
@@ -1478,7 +1478,7 @@
 
     const-string v6, "response.isSmartNews"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1488,7 +1488,7 @@
 
     move v3, p1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/controllers/a;->a(Ljava/util/List;Ljava/util/List;ILjava/lang/String;Z)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/newsfeed/controllers/NewsfeedController;->a(Ljava/util/List;Ljava/util/List;ILjava/lang/String;Z)V
 
     .line 40
     iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->a:Lcom/vk/newsfeed/loading/NewsfeedLoadingDelegateImpl;
@@ -1504,7 +1504,7 @@
     .line 41
     iget-object v1, p2, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;->isSmartNews:Ljava/lang/Boolean;
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1612,9 +1612,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/p;
+    iget-object v0, p0, Lcom/vk/newsfeed/loading/SeamlessNewsfeedLoadingDelegate;->c:Lcom/vk/newsfeed/contracts/NewsfeedContract;
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/p;->r1()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/NewsfeedContract;->r1()V
 
     return-void
 .end method

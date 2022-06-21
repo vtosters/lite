@@ -182,52 +182,52 @@
 
     const-string p3, "invalidateBtn"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p3, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc$2;
 
     invoke-direct {p3, p0}, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc$2;-><init>(Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc;)V
 
-    invoke-static {p2, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 15
     iget-object p2, p0, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc;->f:Landroid/view/View;
 
     const-string p3, "copyBtn"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p3, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc$3;
 
     invoke-direct {p3, p0}, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc$3;-><init>(Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc;)V
 
-    invoke-static {p2, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 16
     iget-object p2, p0, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc;->g:Landroid/view/View;
 
     const-string p3, "shareBtn"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p3, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc$4;
 
     invoke-direct {p3, p0}, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc$4;-><init>(Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc;)V
 
-    invoke-static {p2, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 17
     iget-object p2, p0, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc;->h:Landroid/view/View;
 
     const-string p3, "shareQRBtn"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p3, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc$5;
 
     invoke-direct {p3, p0}, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc$5;-><init>(Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc;)V
 
-    invoke-static {p2, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p3}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 18
     invoke-direct {p0, p1}, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc;->a(Z)V
@@ -236,13 +236,13 @@
 
     .line 19
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 20
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -257,7 +257,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc;->e:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v0, 0x8
 
@@ -276,7 +276,7 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc;->e:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -306,7 +306,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/chats/a;)V
+.method public final a(Lcom/vk/im/engine/models/chats/ChatInviteLink;)V
     .locals 3
 
     .line 6
@@ -314,7 +314,7 @@
 
     const-string v1, "linkText"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -325,7 +325,7 @@
 
     const-string v2, "progress"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x4
 
@@ -334,9 +334,9 @@
     .line 8
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc;->d:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/chats/a;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/chats/ChatInviteLink;->b()Ljava/lang/String;
 
     move-result-object p1
 
@@ -367,7 +367,7 @@
     .locals 0
 
     .line 13
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->a(Lcom/vk/im/ui/components/common/NotifyId;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->a(Lcom/vk/im/ui/components/common/NotifyId;)V
 
     return-void
 .end method
@@ -379,18 +379,18 @@
     invoke-virtual {p0}, Lcom/vk/im/ui/components/chat_invite/make_link/ChatMakeLinkVc;->e()V
 
     .line 12
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -402,7 +402,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateChats;->b(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateChats;->b(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -439,7 +439,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
 
     return-void
 .end method
@@ -452,7 +452,7 @@
 
     const-string v1, "linkText"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x4
 
@@ -463,7 +463,7 @@
 
     const-string v1, "progress"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 

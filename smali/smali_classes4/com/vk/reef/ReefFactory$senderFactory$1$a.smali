@@ -3,7 +3,7 @@
 .source "ReefFactory.kt"
 
 # interfaces
-.implements Lcom/vk/reef/b;
+.implements Lcom/vk/reef/ReefDataSender;
 
 
 # annotations
@@ -29,7 +29,7 @@
 
 
 # virtual methods
-.method public a([BLcom/vk/reef/utils/c;)Z
+.method public a([BLcom/vk/reef/utils/ReefLogger;)Z
     .locals 0
 
     const/4 p1, 0x1

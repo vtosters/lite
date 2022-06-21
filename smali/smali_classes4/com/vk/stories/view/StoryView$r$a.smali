@@ -1,5 +1,5 @@
 .class Lcom/vk/stories/view/StoryView$r$a;
-.super Lcom/vk/core/widget/d;
+.super Lcom/vk/core/widget/OnGestureListenerAdapter;
 .source "StoryView.java"
 
 
@@ -27,7 +27,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/stories/view/StoryView$r$a;->b:Lcom/vk/stories/view/StoryView$r;
 
-    invoke-direct {p0}, Lcom/vk/core/widget/d;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/widget/OnGestureListenerAdapter;-><init>()V
 
     const/16 p1, 0x58
 

@@ -3,7 +3,7 @@
 .source "HeaderPhotosItem.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/p$a;
+.implements Lcom/vk/bridges/ImageViewer$a;
 
 
 # annotations
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/bridges/p$a$a;->b(Lcom/vk/bridges/p$a;I)V
+    invoke-static {p0, p1}, Lcom/vk/bridges/ImageViewer$a$a;->b(Lcom/vk/bridges/ImageViewer$a;I)V
 
     return-void
 .end method
@@ -78,7 +78,7 @@
     .locals 1
 
     .line 2
-    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->g(Lcom/vk/bridges/p$a;)Z
+    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->g(Lcom/vk/bridges/ImageViewer$a;)Z
 
     move-result v0
 
@@ -168,7 +168,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->f(Lcom/vk/bridges/p$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->f(Lcom/vk/bridges/ImageViewer$a;)V
 
     return-void
 .end method
@@ -239,16 +239,16 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->d(Lcom/vk/bridges/p$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->d(Lcom/vk/bridges/ImageViewer$a;)V
 
     return-void
 .end method
 
-.method public g()Lcom/vk/bridges/p$c;
+.method public g()Lcom/vk/bridges/ImageViewer$c;
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->a(Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$c;
+    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->a(Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$c;
 
     move-result-object v0
 
@@ -263,7 +263,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->a(Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;Lcom/vk/bridges/p$d;)V
+    invoke-static {v0, v1}, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->a(Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;Lcom/vk/bridges/ImageViewer$d;)V
 
     return-void
 .end method

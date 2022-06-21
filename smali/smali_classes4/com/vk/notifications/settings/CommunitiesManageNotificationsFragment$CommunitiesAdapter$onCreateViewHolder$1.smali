@@ -3,12 +3,12 @@
 .source "CommunitiesManageNotificationsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+    value = Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,28 +19,28 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Landroid/view/View;",
         "Lcom/vk/dto/group/Group;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $editGroup:Lkotlin/jvm/b/b;
+.field final synthetic $editGroup:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic this$0:Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter$onCreateViewHolder$1;->this$0:Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter;
 
-    iput-object p2, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter$onCreateViewHolder$1;->$editGroup:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter$onCreateViewHolder$1;->$editGroup:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x2
 
@@ -61,7 +61,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter$onCreateViewHolder$1;->a(Landroid/view/View;Lcom/vk/dto/group/Group;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -74,7 +74,7 @@
 
     const-string v1, "view"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -87,14 +87,14 @@
     const v1, 0x7f120331
 
     .line 3
-    invoke-static {v0, p1, v1}, Lcom/vk/core/extensions/s;->a(Landroid/widget/PopupMenu;II)Landroid/widget/PopupMenu;
+    invoke-static {v0, p1, v1}, Lcom/vk/core/extensions/PopupMenuExt;->a(Landroid/widget/PopupMenu;II)Landroid/widget/PopupMenu;
 
     const/4 p1, 0x1
 
     const v1, 0x7f1202d8
 
     .line 4
-    invoke-static {v0, p1, v1}, Lcom/vk/core/extensions/s;->a(Landroid/widget/PopupMenu;II)Landroid/widget/PopupMenu;
+    invoke-static {v0, p1, v1}, Lcom/vk/core/extensions/PopupMenuExt;->a(Landroid/widget/PopupMenu;II)Landroid/widget/PopupMenu;
 
     .line 5
     new-instance p1, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter$onCreateViewHolder$1$a;

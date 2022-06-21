@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -135,7 +135,7 @@
     return-object p1
 .end method
 
-.method public final a(IIII)Lcom/facebook/x/f/a;
+.method public final a(IIII)Lcom/facebook/x/f/DrawableFactory;
     .locals 1
 
     .line 1
@@ -160,7 +160,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
@@ -168,12 +168,12 @@
 
     invoke-direct {v2, p2, p3}, Lcom/vk/polls/ui/views/PhotoPollDrawable$Companion$findSuitableImage$1;-><init>(II)V
 
-    invoke-static {v1, v2}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v1, v2}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p2
 
     .line 3
-    invoke-interface {p2}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p2}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
 

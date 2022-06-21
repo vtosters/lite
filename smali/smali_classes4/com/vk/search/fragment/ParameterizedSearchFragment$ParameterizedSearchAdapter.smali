@@ -1,9 +1,9 @@
 .class public final Lcom/vk/search/fragment/ParameterizedSearchFragment$ParameterizedSearchAdapter;
-.super Lcom/vk/search/b/a;
+.super Lcom/vk/search/b/BaseSearchAdapter;
 .source "ParameterizedSearchFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/n;
+.implements Lcom/vk/core/ui/MilkshakeProvider;
 
 
 # annotations
@@ -27,7 +27,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/search/b/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/search/b/BaseSearchAdapter;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/search/fragment/ParameterizedSearchFragment$a;
@@ -42,11 +42,11 @@
 
     const-string v3, "activity!!"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/search/fragment/ParameterizedSearchFragment$a;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/m;->a(Lcom/vk/lists/m$b;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/HeaderAdapter;->a(Lcom/vk/lists/HeaderAdapter$b;)V
 
     .line 3
     new-instance v0, Lcom/vk/search/fragment/ParameterizedSearchFragment$b;
@@ -57,22 +57,22 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, p1}, Lcom/vk/search/fragment/ParameterizedSearchFragment$b;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/m;->a(Lcom/vk/lists/m$b;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/HeaderAdapter;->a(Lcom/vk/lists/HeaderAdapter$b;)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 4
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -81,9 +81,9 @@
     .locals 2
 
     .line 6
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -91,7 +91,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/search/fragment/AllSearchFragment$a;-><init>(Lcom/vk/dto/user/UserProfile;)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -132,17 +132,17 @@
 
     .line 2
     :cond_0
-    new-instance p2, Lcom/vk/search/holder/j;
+    new-instance p2, Lcom/vk/search/holder/SearchSuggestHolder;
 
-    invoke-direct {p2, p1}, Lcom/vk/search/holder/j;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/search/holder/SearchSuggestHolder;-><init>(Landroid/view/ViewGroup;)V
 
     goto :goto_0
 
     .line 3
     :cond_1
-    new-instance p2, Lcom/vk/search/holder/e;
+    new-instance p2, Lcom/vk/search/holder/SearchLinkHolder;
 
-    invoke-direct {p2, p1}, Lcom/vk/search/holder/e;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/search/holder/SearchLinkHolder;-><init>(Landroid/view/ViewGroup;)V
 
     goto :goto_0
 
@@ -154,7 +154,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/search/fragment/ParameterizedSearchFragment$ParameterizedSearchAdapter$onCreateItemViewHolder$2;-><init>(Lcom/vk/search/fragment/ParameterizedSearchFragment$ParameterizedSearchAdapter;)V
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/search/holder/SearchListHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/search/holder/SearchListHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
@@ -166,7 +166,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/search/fragment/ParameterizedSearchFragment$ParameterizedSearchAdapter$onCreateItemViewHolder$1;-><init>(Lcom/vk/search/fragment/ParameterizedSearchFragment$ParameterizedSearchAdapter;)V
 
-    invoke-direct {p2, p0, p1, v0}, Lcom/vk/search/holder/SearchHolder;-><init>(Lcom/vk/search/b/a;Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p0, p1, v0}, Lcom/vk/search/holder/SearchHolder;-><init>(Lcom/vk/search/b/BaseSearchAdapter;Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
 
     :goto_0
     return-object p2
@@ -178,7 +178,7 @@
     if-nez p1, :cond_0
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p1
 
@@ -186,7 +186,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 

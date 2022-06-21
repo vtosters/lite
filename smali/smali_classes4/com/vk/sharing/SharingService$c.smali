@@ -32,7 +32,7 @@
     const v0, 0x7f120d8b
 
     .line 19
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method
@@ -166,7 +166,7 @@
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 11
-    invoke-static {v0}, Lcom/vk/sharing/attachment/k;->c(Lcom/vk/sharing/attachment/AttachmentInfo;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/sharing/attachment/Attachments;->c(Lcom/vk/sharing/attachment/AttachmentInfo;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -201,7 +201,7 @@
 
     .line 16
     :cond_5
-    invoke-static {v0}, Lcom/vk/sharing/attachment/k;->c(Lcom/vk/sharing/attachment/AttachmentInfo;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/sharing/attachment/Attachments;->c(Lcom/vk/sharing/attachment/AttachmentInfo;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -211,20 +211,20 @@
 
     .line 17
     :goto_3
-    sget-object p1, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
+    sget-object p1, Lcom/vtosters/lite/im/ImSendHelper;->b:Lcom/vtosters/lite/im/ImSendHelper;
 
     iget v0, v1, Lcom/vk/sharing/target/Target;->a:I
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/im/i;->a(I)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/im/ImSendHelper;->a(I)V
 
     .line 18
-    sget-object v4, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
+    sget-object v4, Lcom/vtosters/lite/im/ImSendHelper;->b:Lcom/vtosters/lite/im/ImSendHelper;
 
     iget v6, v1, Lcom/vk/sharing/target/Target;->a:I
 
     const-string v5, "SharingService"
 
-    invoke-virtual/range {v4 .. v12}, Lcom/vtosters/lite/im/i;->a(Ljava/lang/Object;ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/Attachment;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual/range {v4 .. v12}, Lcom/vtosters/lite/im/ImSendHelper;->a(Ljava/lang/Object;ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/Attachment;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p1
 
@@ -237,7 +237,7 @@
     const v0, 0x7f120d8d
 
     .line 1
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method

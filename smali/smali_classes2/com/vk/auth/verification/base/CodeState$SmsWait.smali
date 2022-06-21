@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(JJIILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(JJIILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x4
@@ -77,7 +77,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/verification/base/CodeState$NotReceive;-><init>(IJILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/verification/base/CodeState$NotReceive;-><init>(IJILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v6
 .end method

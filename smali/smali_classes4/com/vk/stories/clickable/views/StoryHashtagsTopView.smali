@@ -6,17 +6,17 @@
 # instance fields
 .field private final a:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private final b:Lcom/vk/stories/clickable/k/a;
+.field private final b:Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
-.field private c:Lkotlin/jvm/b/c;
+.field private c:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
-            "Lcom/vk/stories/clickable/models/e;",
+            "Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -31,11 +31,11 @@
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance p1, Lcom/vk/stories/clickable/k/a;
+    new-instance p1, Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
-    invoke-direct {p1}, Lcom/vk/stories/clickable/k/a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/a;
+    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
     .line 3
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -55,7 +55,7 @@
 
     const v0, 0x7f0702bb
 
-    invoke-static {v0}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v0}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v0
 
@@ -79,7 +79,7 @@
 
     const-string v0, "findViewById(R.id.hashtags_suggest_list)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -103,7 +103,7 @@
     .line 8
     iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -120,11 +120,11 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 11
-    new-instance p1, Lcom/vk/stories/clickable/k/a;
+    new-instance p1, Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
-    invoke-direct {p1}, Lcom/vk/stories/clickable/k/a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/a;
+    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
     .line 12
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -144,7 +144,7 @@
 
     const p2, 0x7f0702bb
 
-    invoke-static {p2}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {p2}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result p2
 
@@ -168,7 +168,7 @@
 
     const-string p2, "findViewById(R.id.hashtags_suggest_list)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -192,7 +192,7 @@
     .line 17
     iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object p2, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/a;
+    iget-object p2, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -209,11 +209,11 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 20
-    new-instance p1, Lcom/vk/stories/clickable/k/a;
+    new-instance p1, Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
-    invoke-direct {p1}, Lcom/vk/stories/clickable/k/a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/a;
+    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
     .line 21
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -233,7 +233,7 @@
 
     const p2, 0x7f0702bb
 
-    invoke-static {p2}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {p2}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result p2
 
@@ -257,7 +257,7 @@
 
     const-string p2, "findViewById(R.id.hashtags_suggest_list)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -281,7 +281,7 @@
     .line 26
     iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object p2, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/a;
+    iget-object p2, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -291,11 +291,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/clickable/views/StoryHashtagsTopView;)Lcom/vk/stories/clickable/k/a;
+.method public static final synthetic a(Lcom/vk/stories/clickable/views/StoryHashtagsTopView;)Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/a;
+    iget-object p0, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
     return-object p0
 .end method
@@ -443,9 +443,9 @@
     .locals 8
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result v0
 
@@ -558,13 +558,13 @@
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     .line 15
-    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
     invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagSearchResult;->a()Ljava/util/List;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 16
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -633,59 +633,59 @@
 
     .line 23
     :cond_6
-    iget-object p2, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/a;
+    iget-object p2, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
     invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagSearchResult;->a()Ljava/util/List;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {p2, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     :goto_1
     return-void
 .end method
 
-.method public final getOnClick()Lkotlin/jvm/b/c;
+.method public final getOnClick()Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/c<",
-            "Lcom/vk/stories/clickable/models/e;",
+            "Lkotlin/jvm/b/Functions1<",
+            "Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->c:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->c:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
 
-.method public final setOnClick(Lkotlin/jvm/b/c;)V
+.method public final setOnClick(Lkotlin/jvm/b/Functions1;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
-            "Lcom/vk/stories/clickable/models/e;",
+            "Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->b:Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/clickable/k/a;->b(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v0, p1}, Lcom/vk/stories/clickable/k/StoryHashtagSearchAdapter;->b(Lkotlin/jvm/b/Functions1;)V
 
     .line 2
-    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->c:Lkotlin/jvm/b/c;
+    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryHashtagsTopView;->c:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method

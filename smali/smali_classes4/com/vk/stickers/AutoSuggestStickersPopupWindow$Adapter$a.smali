@@ -43,11 +43,11 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stickers/bridge/k;->b()Lcom/vk/stickers/bridge/j;
+    invoke-interface {v0}, Lcom/vk/stickers/bridge/StickersBridge;->b()Lcom/vk/stickers/bridge/StickersBridge7;
 
     move-result-object v0
 
@@ -57,13 +57,13 @@
 
     const-string v1, "view.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->e()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/stickers/bridge/j;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/stickers/bridge/StickersBridge7;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 2
     sget-object p1, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;

@@ -3,7 +3,7 @@
 .source "MenuFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/common/data/ApiApplication;",
@@ -68,7 +68,7 @@
     const-string v1, "games"
 
     .line 2
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
@@ -85,16 +85,16 @@
     if-eqz v1, :cond_0
 
     .line 3
-    new-instance v1, Lcom/vk/menu/d;
+    new-instance v1, Lcom/vk/menu/MenuViewItem;
 
     const/4 v5, 0x0
 
-    invoke-direct {v1, v4, v3, v5}, Lcom/vk/menu/d;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v1, v4, v3, v5}, Lcom/vk/menu/MenuViewItem;-><init>(IILjava/lang/Object;)V
 
     const/4 v5, 0x3
 
     .line 4
-    invoke-virtual {v1, v5}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v1, v5}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     .line 5
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -121,12 +121,12 @@
     check-cast v1, Lcom/vk/dto/common/data/ApiApplication;
 
     .line 7
-    new-instance v6, Lcom/vk/menu/d;
+    new-instance v6, Lcom/vk/menu/MenuViewItem;
 
-    invoke-direct {v6, v5, v3, v1}, Lcom/vk/menu/d;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v6, v5, v3, v1}, Lcom/vk/menu/MenuViewItem;-><init>(IILjava/lang/Object;)V
 
     .line 8
-    invoke-virtual {v6, v2}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v6, v2}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     .line 9
     invoke-interface {v0, v6}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -139,11 +139,11 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/menu/d;
+    check-cast p1, Lcom/vk/menu/MenuViewItem;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1, v5}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {p1, v5}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     .line 11
     :cond_2

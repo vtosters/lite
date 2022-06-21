@@ -1,5 +1,5 @@
 .class final Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;
-.super Lcom/vk/common/e/b;
+.super Lcom/vk/common/e/BaseItemHolder;
 .source "SuperAppWidgetMiniappsHolder.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/b<",
+        "Lcom/vk/common/e/BaseItemHolder<",
         "Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$e;",
         ">;"
     }
@@ -23,13 +23,13 @@
 
 
 # instance fields
-.field private final c:Lkotlin/jvm/b/c;
+.field private final c:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$e;",
             "Lcom/vk/dto/common/data/ApiApplication;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -37,26 +37,26 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/c;)V
+.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$e;",
             "-",
             "Lcom/vk/dto/common/data/ApiApplication;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/common/e/b;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/common/e/BaseItemHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;->c:Lkotlin/jvm/b/c;
+    iput-object p2, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;->c:Lkotlin/jvm/b/Functions1;
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -70,11 +70,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;)Lkotlin/jvm/b/c;
+.method public static final synthetic a(Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;)Lkotlin/jvm/b/Functions1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;->c:Lkotlin/jvm/b/c;
+    iget-object p0, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$d;->c:Lkotlin/jvm/b/Functions1;
 
     return-object p0
 .end method
@@ -83,7 +83,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
 
     move-result-object p0
 
@@ -100,7 +100,7 @@
     const v0, 0x7f0a0d80
 
     .line 2
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -128,7 +128,7 @@
     const v0, 0x7f0a0541
 
     .line 4
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -167,7 +167,7 @@
     return-void
 .end method
 
-.method public bridge synthetic b(Lcom/vk/common/i/b;)V
+.method public bridge synthetic b(Lcom/vk/common/i/RecyclerItem;)V
     .locals 0
 
     .line 2

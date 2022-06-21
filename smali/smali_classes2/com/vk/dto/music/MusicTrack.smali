@@ -3,7 +3,7 @@
 .source "MusicTrack.kt"
 
 # interfaces
-.implements Lcom/vk/core/serialize/a;
+.implements Lcom/vk/core/serialize/JSONSerialize;
 
 
 # annotations
@@ -25,10 +25,10 @@
     .end annotation
 .end field
 
-.field public static final W:Lcom/vk/dto/common/data/c;
+.field public static final W:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;"
         }
@@ -120,13 +120,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/dto/music/MusicTrack;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -134,9 +134,9 @@
 
     const-string v4, "getDurationS()Ljava/lang/String;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -146,7 +146,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/music/MusicTrack$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/music/MusicTrack$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/music/MusicTrack;->X:Lcom/vk/dto/music/MusicTrack$c;
 
@@ -163,7 +163,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/music/MusicTrack$a;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/music/MusicTrack;->W:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/music/MusicTrack;->W:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method
@@ -229,7 +229,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -295,7 +295,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -361,7 +361,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -427,7 +427,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -493,7 +493,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -559,7 +559,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -625,7 +625,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -691,7 +691,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -757,7 +757,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -823,7 +823,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -889,7 +889,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -955,7 +955,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -1021,7 +1021,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -1087,7 +1087,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -1153,7 +1153,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -1219,7 +1219,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -1303,7 +1303,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -1390,7 +1390,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -1479,7 +1479,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -1569,7 +1569,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -1660,7 +1660,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -1751,7 +1751,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -1842,7 +1842,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -1933,7 +1933,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -2024,7 +2024,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -2117,7 +2117,7 @@
 
     const/16 v30, 0x0
 
-    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v30}, Lcom/vk/dto/music/MusicTrack;-><init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -2266,7 +2266,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/dto/music/MusicTrack$durationS$2;-><init>(Lcom/vk/dto/music/MusicTrack;)V
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     .line 4
     iget v1, v0, Lcom/vk/dto/music/MusicTrack;->h:I
@@ -2307,7 +2307,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IILjava/lang/String;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;IZILjava/lang/String;Lcom/vk/dto/music/AlbumLink;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;Landroid/os/Bundle;Lcom/vk/dto/podcast/Episode;Ljava/lang/String;JIZJLcom/vk/dto/music/ChartInfo;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 29
 
     move/from16 v0, p29
@@ -3003,7 +3003,7 @@
 
     const-string v15, "o.optJSONObject(JsonKeys.ALBUM)"
 
-    invoke-static {v2, v15}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v15}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v3, v2}, Lcom/vk/dto/music/AlbumLink;-><init>(Lorg/json/JSONObject;)V
 
@@ -3030,24 +3030,24 @@
     move-result v18
 
     .line 47
-    sget-object v2, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
+    sget-object v2, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
 
-    sget-object v3, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/c;
+    sget-object v3, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v15, "main_artists"
 
-    invoke-virtual {v2, v0, v15, v3}, Lcom/vk/dto/common/data/c$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
+    invoke-virtual {v2, v0, v15, v3}, Lcom/vk/dto/common/data/JsonParser$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
 
     move-result-object v19
 
     .line 48
-    sget-object v2, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
+    sget-object v2, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
 
-    sget-object v3, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/c;
+    sget-object v3, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v15, "featured_artists"
 
-    invoke-virtual {v2, v0, v15, v3}, Lcom/vk/dto/common/data/c$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
+    invoke-virtual {v2, v0, v15, v3}, Lcom/vk/dto/common/data/JsonParser$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
 
     move-result-object v20
 
@@ -3120,7 +3120,7 @@
 
     const-string v13, "o.getJSONObject(ServerKeys.CHART_INFO)"
 
-    invoke-static {v2, v13}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v13}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v3, v2}, Lcom/vk/dto/music/ChartInfo;-><init>(Lorg/json/JSONObject;)V
 
@@ -3729,7 +3729,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/dto/music/MusicTrack$toJSONObject$1;-><init>(Lcom/vk/dto/music/MusicTrack;)V
 
-    invoke-static {v0}, Lcom/vk/dto/common/data/b;->a(Lkotlin/jvm/b/b;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lcom/vk/dto/common/data/JsonObj1;->a(Lkotlin/jvm/b/Functions2;)Lorg/json/JSONObject;
 
     move-result-object v0
 

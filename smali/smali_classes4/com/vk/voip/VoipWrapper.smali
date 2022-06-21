@@ -47,7 +47,7 @@
 
 .field private static J:Lru/mail/voip2/Voip2; = null
 
-.field private static K:Lcom/vk/voip/k; = null
+.field private static K:Lcom/vk/voip/VoipAppBinding; = null
 
 .field private static final L:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
@@ -147,11 +147,11 @@
 # The value of this static final field might be set in the static constructor
 .field private static final a:Z = true
 
-.field private static a0:Lkotlin/jvm/b/a; = null
+.field private static a0:Lkotlin/jvm/b/Functions; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -586,7 +586,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 111
     sget-object v0, Lcom/vk/voip/VoipWrapper;->u:Ljava/lang/String;
@@ -651,14 +651,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 116
-    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/voip/k;->z()Lkotlin/jvm/b/e;
+    invoke-virtual {v0}, Lcom/vk/voip/VoipAppBinding;->z()Lkotlin/jvm/b/Functions3;
 
     move-result-object v0
 
@@ -670,14 +670,14 @@
 
     move-result-object p3
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lkotlin/jvm/b/e;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2, p3, p4}, Lkotlin/jvm/b/Functions3;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
     :cond_0
     const-string p1, "voipAppBinding"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -728,7 +728,7 @@
     goto/16 :goto_5
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -798,7 +798,7 @@
     goto :goto_2
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -812,7 +812,7 @@
     .line 143
     :cond_5
     :try_start_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -867,7 +867,7 @@
     .line 146
     :cond_9
     :try_start_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
@@ -901,7 +901,7 @@
 
     move-result-object p4
 
-    invoke-static {p3, p4, p2}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p3, p4, p2}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
@@ -979,7 +979,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/voip/VoipWrapper;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/voip/VoipWrapper;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -990,7 +990,7 @@
 
     .line 11
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/vk/voip/VoipWrapper;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/voip/VoipWrapper;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -1002,7 +1002,7 @@
 
     .line 118
     :try_start_0
-    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1013,7 +1013,7 @@
     if-eqz v1, :cond_3
 
     :try_start_1
-    invoke-virtual {v1}, Lcom/vk/voip/k;->e()Lkotlin/jvm/b/b;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBinding;->e()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
@@ -1023,18 +1023,18 @@
 
     move-result-object v4
 
-    invoke-interface {v1, v4}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v4}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
     .line 119
-    sget-object v4, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v4, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v4, :cond_2
 
-    invoke-virtual {v4}, Lcom/vk/voip/k;->e()Lkotlin/jvm/b/b;
+    invoke-virtual {v4}, Lcom/vk/voip/VoipAppBinding;->e()Lkotlin/jvm/b/Functions2;
 
     move-result-object v2
 
@@ -1042,7 +1042,7 @@
 
     move-result-object v4
 
-    invoke-interface {v2, v4}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v4}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1098,7 +1098,7 @@
 
     move-result-object p2
 
-    invoke-static {v1, p2}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_1
 
@@ -1122,7 +1122,7 @@
 
     .line 126
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -1131,7 +1131,7 @@
     .line 127
     :cond_2
     :try_start_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -1140,7 +1140,7 @@
     .line 128
     :cond_3
     :try_start_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
@@ -1154,7 +1154,7 @@
 
     const-string p3, "VIGO failed"
 
-    invoke-static {p2, p3, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p2, p3, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_4
     :goto_1
@@ -1202,7 +1202,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1329,7 +1329,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 14
     invoke-direct {p0}, Lcom/vk/voip/VoipWrapper;->j()Landroid/content/Context;
@@ -1342,23 +1342,23 @@
 
     const-string v1, "context.resources"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     if-eqz p1, :cond_1
 
-    sget-object p1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
     sget-object v2, Lcom/vk/voip/VoipWrapper$SoundEvent;->HangupRemote:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {p1, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1369,7 +1369,7 @@
     :cond_0
     const-string p1, "voipAppBinding"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1398,7 +1398,7 @@
 
     const-string v0, "jsonData.optString(MSG_HASH_KEY, \"\")"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -1435,7 +1435,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 12
     sget-object v0, Lcom/vk/voip/VoipWrapper;->J:Lru/mail/voip2/Voip2;
@@ -1457,7 +1457,7 @@
 
     .line 14
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -1475,7 +1475,7 @@
     :try_start_0
     sget-object v0, Lcom/vk/voip/VoipWrapper;->h0:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1507,7 +1507,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, ""
 
@@ -1531,7 +1531,7 @@
 
     const-string v1, "VIGO failed"
 
-    invoke-static {v0, v1, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     :goto_0
@@ -1594,7 +1594,7 @@
 
     const-string v3, "sessionGuid"
 
-    invoke-static {v13, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v13, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v2, v13}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -1682,15 +1682,15 @@
 
     const-string v6, "firstName"
 
-    invoke-static {v1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v6, "lastName"
 
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v6, "photoMax"
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object/from16 v16, v5
 
@@ -1762,29 +1762,29 @@
     .line 23
     sget-object v3, Lcom/vk/voip/VoipWrapper;->T:Ljava/lang/String;
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
     .line 24
-    sget-object v2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v2, :cond_3
 
-    invoke-virtual {v2}, Lcom/vk/voip/k;->w()Lkotlin/jvm/b/a;
+    invoke-virtual {v2}, Lcom/vk/voip/VoipAppBinding;->w()Lkotlin/jvm/b/Functions;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     goto :goto_2
 
     :cond_3
     const-string v0, "voipAppBinding"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -1847,7 +1847,7 @@
 
     const-string v3, "sessionGuid"
 
-    invoke-static {v13, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v13, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v13}, Lkotlin/text/l;->a(Ljava/lang/CharSequence;)Z
 
@@ -1896,7 +1896,7 @@
 
     const-string v3, "sessionGuid"
 
-    invoke-static {v13, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v13, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v13}, Lkotlin/text/l;->a(Ljava/lang/CharSequence;)Z
 
@@ -1945,7 +1945,7 @@
 
     const-string v5, "sessionGuid"
 
-    invoke-static {v13, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v13, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v4, v13}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
     :try_end_3
@@ -2006,7 +2006,7 @@
     const-string v3, "androidKey"
 
     .line 36
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
 
@@ -2041,7 +2041,7 @@
 
     move-result-object v2
 
-    invoke-static {v3, v2}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 38
     :cond_d
@@ -2094,7 +2094,7 @@
 
     const-string v4, "jsonData.getJSONObject(V\u2026tring(VK_ORIENTATION_KEY)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v4, Lcom/vk/voip/VoipWrapper;->G:Ljava/lang/String;
 
@@ -2113,11 +2113,11 @@
     move-result v3
 
     .line 42
-    sget-object v4, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v4, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v4, :cond_e
 
-    invoke-virtual {v4}, Lcom/vk/voip/k;->h()Lkotlin/jvm/b/d;
+    invoke-virtual {v4}, Lcom/vk/voip/VoipAppBinding;->h()Lkotlin/jvm/b/Functions4;
 
     move-result-object v4
 
@@ -2129,14 +2129,14 @@
 
     move-result-object v3
 
-    invoke-interface {v4, v2, v13, v3}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v2, v13, v3}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_9
 
     :cond_e
     const-string v0, "voipAppBinding"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -2158,7 +2158,7 @@
 
     sget-object v3, Lcom/vk/voip/VoipWrapper;->y:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -2172,11 +2172,11 @@
     move-result v2
 
     .line 46
-    sget-object v3, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v3, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v3, :cond_10
 
-    invoke-virtual {v3}, Lcom/vk/voip/k;->y()Lkotlin/jvm/b/c;
+    invoke-virtual {v3}, Lcom/vk/voip/VoipAppBinding;->y()Lkotlin/jvm/b/Functions1;
 
     move-result-object v3
 
@@ -2184,14 +2184,14 @@
 
     move-result-object v2
 
-    invoke-interface {v3, v2, v13}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v2, v13}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_a
 
     :cond_10
     const-string v0, "voipAppBinding"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -2206,7 +2206,7 @@
 
     sget-object v3, Lcom/vk/voip/VoipWrapper;->C:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -2241,11 +2241,11 @@
     move-result-object v3
 
     .line 50
-    sget-object v4, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v4, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v4, :cond_12
 
-    invoke-virtual {v4}, Lcom/vk/voip/k;->j()Lkotlin/jvm/b/d;
+    invoke-virtual {v4}, Lcom/vk/voip/VoipAppBinding;->j()Lkotlin/jvm/b/Functions4;
 
     move-result-object v4
 
@@ -2255,16 +2255,16 @@
 
     const-string v5, "maskId"
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v4, v2, v13, v3}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v2, v13, v3}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_b
 
     :cond_12
     const-string v0, "voipAppBinding"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -2279,7 +2279,7 @@
 
     sget-object v3, Lcom/vk/voip/VoipWrapper;->z:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -2316,11 +2316,11 @@
     xor-int/2addr v0, v15
 
     .line 54
-    sget-object v3, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v3, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v3, :cond_14
 
-    invoke-virtual {v3}, Lcom/vk/voip/k;->v()Lkotlin/jvm/b/d;
+    invoke-virtual {v3}, Lcom/vk/voip/VoipAppBinding;->v()Lkotlin/jvm/b/Functions4;
 
     move-result-object v1
 
@@ -2332,14 +2332,14 @@
 
     move-result-object v0
 
-    invoke-interface {v1, v2, v13, v0}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v2, v13, v0}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_c
 
     :cond_14
     const-string v0, "voipAppBinding"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -2363,7 +2363,7 @@
 
     sget-object v0, Lcom/vk/voip/VoipWrapper;->l:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -2382,7 +2382,7 @@
 
     sget-object v0, Lcom/vk/voip/VoipWrapper;->m:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -2404,7 +2404,7 @@
 
     const-string v1, "ensureInitializedAndHaveUser: ensureInitialized returned FALSE"
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2412,15 +2412,15 @@
 
     .line 4
     :cond_0
-    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/voip/k;->c()Lkotlin/jvm/b/a;
+    invoke-virtual {v0}, Lcom/vk/voip/VoipAppBinding;->c()Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2443,7 +2443,7 @@
     const-string v0, "voipAppBinding"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2462,7 +2462,7 @@
 
     sget-object v0, Lcom/vk/voip/VoipWrapper;->p:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -2497,7 +2497,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     sget-object v1, Lcom/vk/voip/VoipWrapper;->M:Lcom/vk/voip/VoipWrapper$State;
@@ -2580,7 +2580,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vk/voip/u;->a([Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/vk/voip/VoipUtils;->a([Ljava/lang/String;)V
 
     .line 8
     sget-object v2, Lcom/vk/voip/VoipWrapper;->J:Lru/mail/voip2/Voip2;
@@ -2627,15 +2627,15 @@
 
     .line 13
     :cond_6
-    sget-object v2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v2, :cond_b
 
-    invoke-virtual {v2}, Lcom/vk/voip/k;->A()Lkotlin/jvm/b/a;
+    invoke-virtual {v2}, Lcom/vk/voip/VoipAppBinding;->A()Lkotlin/jvm/b/Functions;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -2672,18 +2672,18 @@
 
     move-result-object v2
 
-    invoke-static {v6, v2}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v2}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
-    sget-object v2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v2, :cond_a
 
-    invoke-virtual {v2}, Lcom/vk/voip/k;->A()Lkotlin/jvm/b/a;
+    invoke-virtual {v2}, Lcom/vk/voip/VoipAppBinding;->A()Lkotlin/jvm/b/Functions;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -2711,7 +2711,7 @@
     .line 18
     sget-object v2, Lcom/vk/voip/VoipWrapper;->j0:Lcom/vk/voip/VoipWrapper;
 
-    invoke-static {v2, v9, v3, v9}, Lcom/vk/voip/VoipWrapper;->a(Lcom/vk/voip/VoipWrapper;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static {v2, v9, v3, v9}, Lcom/vk/voip/VoipWrapper;->a(Lcom/vk/voip/VoipWrapper;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     .line 19
     sget-object v2, Lcom/vk/voip/VoipWrapper;->j0:Lcom/vk/voip/VoipWrapper;
@@ -2731,7 +2731,7 @@
 
     const-string v6, "voip!!.GetVoipVersion()"
 
-    invoke-static {v2, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v2, Lcom/vk/voip/VoipWrapper;->f0:Ljava/lang/String;
 
@@ -2763,7 +2763,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catch Lru/mail/voip2/VoipException2$CreateError; {:try_start_3 .. :try_end_3} :catch_2
     .catch Lru/mail/voip2/Voip2$VoipException; {:try_start_3 .. :try_end_3} :catch_1
@@ -2777,7 +2777,7 @@
     .line 24
     :cond_9
     :try_start_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_4
     .catch Lru/mail/voip2/VoipException2$CreateError; {:try_start_4 .. :try_end_4} :catch_2
     .catch Lru/mail/voip2/Voip2$VoipException; {:try_start_4 .. :try_end_4} :catch_1
@@ -2790,7 +2790,7 @@
     const-string v2, "voipAppBinding"
 
     .line 25
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_5
     .catch Lru/mail/voip2/VoipException2$CreateError; {:try_start_5 .. :try_end_5} :catch_2
     .catch Lru/mail/voip2/Voip2$VoipException; {:try_start_5 .. :try_end_5} :catch_1
@@ -2803,7 +2803,7 @@
     const-string v2, "voipAppBinding"
 
     .line 26
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_6
     .catch Lru/mail/voip2/VoipException2$CreateError; {:try_start_6 .. :try_end_6} :catch_2
     .catch Lru/mail/voip2/Voip2$VoipException; {:try_start_6 .. :try_end_6} :catch_1
@@ -2820,7 +2820,7 @@
 
     const-string v4, "Failed to initialize VOIP"
 
-    invoke-static {v3, v4, v2}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v4, v2}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 28
     invoke-static {}, Lru/mail/voip2/Voip2;->Destroy()V
@@ -2857,7 +2857,7 @@
 
     const-string v4, "Failed to initialize VOIP"
 
-    invoke-static {v3, v4, v2}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v4, v2}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 33
     sget-object v2, Lcom/vk/voip/VoipWrapper;->j0:Lcom/vk/voip/VoipWrapper;
@@ -2889,7 +2889,7 @@
 
     const-string v4, "Failed to initialize VOIP"
 
-    invoke-static {v3, v4, v2}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v4, v2}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
@@ -2919,7 +2919,7 @@
 
     sget-object v0, Lcom/vk/voip/VoipWrapper;->o:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -2930,15 +2930,15 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/voip/k;->a()Lkotlin/jvm/b/a;
+    invoke-virtual {v0}, Lcom/vk/voip/VoipAppBinding;->a()Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2949,7 +2949,7 @@
     :cond_0
     const-string v0, "voipAppBinding"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2968,7 +2968,7 @@
 
     sget-object v0, Lcom/vk/voip/VoipWrapper;->q:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -3006,7 +3006,7 @@
 
     sget-object v0, Lcom/vk/voip/VoipWrapper;->x:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -3054,7 +3054,7 @@
 
     .line 2
     :cond_0
-    sget-object v0, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
+    sget-object v0, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->a:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
 
     const/4 v0, 0x1
 
@@ -3082,7 +3082,7 @@
 
     const-string v1, "java.lang.String.format(format, *args)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -3099,7 +3099,7 @@
 
     sget-object v1, Lcom/vk/voip/VoipWrapper;->l:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -3114,7 +3114,7 @@
 
     const-string v1, "jsonPayloadToSend.optString(SESSION_GUID_KEY)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/voip/VoipWrapper;->S:Ljava/lang/String;
 
@@ -3128,7 +3128,7 @@
 
     sget-object v1, Lcom/vk/voip/VoipWrapper;->o:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -3143,7 +3143,7 @@
 
     const-string v1, "jsonPayloadToSend.optString(SESSION_GUID_KEY)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/voip/VoipWrapper;->T:Ljava/lang/String;
 
@@ -3157,7 +3157,7 @@
 
     sget-object v1, Lcom/vk/voip/VoipWrapper;->m:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -3172,7 +3172,7 @@
 
     sget-object v1, Lcom/vk/voip/VoipWrapper;->n:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -3192,7 +3192,7 @@
 
     const-string v2, "jsonPayloadToSend.optString(SESSION_GUID_KEY)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -3223,7 +3223,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -3304,7 +3304,7 @@
 
     const-string v3, "sessionGuid"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v2, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -3332,7 +3332,7 @@
 
     const-string v0, "sessionGuid"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, v1}, Lcom/vk/voip/VoipWrapper;->c(Ljava/lang/String;)Z
 
@@ -3356,15 +3356,15 @@
     if-nez v0, :cond_5
 
     .line 12
-    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lcom/vk/voip/k;->b()Lkotlin/jvm/b/a;
+    invoke-virtual {v0}, Lcom/vk/voip/VoipAppBinding;->b()Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3381,7 +3381,7 @@
     :cond_4
     const-string p1, "voipAppBinding"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -3488,7 +3488,7 @@
 
     move-result-object v0
 
-    invoke-static {v5, v0}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v4
 
@@ -3496,7 +3496,7 @@
 
     .line 20
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -3535,7 +3535,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 23
     sget v0, Lcom/vk/voip/VoipWrapper;->O:I
@@ -3552,7 +3552,7 @@
 
     .line 24
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -3598,9 +3598,9 @@
 
     const-string v2, "context.resources"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v3, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v3, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     const-string v4, "voipAppBinding"
 
@@ -3608,13 +3608,13 @@
 
     if-eqz v3, :cond_d
 
-    invoke-virtual {v3}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {v3}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object v3
 
     sget-object v6, Lcom/vk/voip/VoipWrapper$SoundEvent;->IncomingCall:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {v3, v6}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v6}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -3633,19 +3633,19 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v1, :cond_c
 
-    invoke-virtual {v1}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
     sget-object v3, Lcom/vk/voip/VoipWrapper$SoundEvent;->HangupByError:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {v1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3664,19 +3664,19 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v1, :cond_b
 
-    invoke-virtual {v1}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
     sget-object v3, Lcom/vk/voip/VoipWrapper$SoundEvent;->HangupLocal:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {v1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3695,19 +3695,19 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v1, :cond_a
 
-    invoke-virtual {v1}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
     sget-object v3, Lcom/vk/voip/VoipWrapper$SoundEvent;->HangupHandledByAnotherInstance:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {v1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3726,19 +3726,19 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v1, :cond_9
 
-    invoke-virtual {v1}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
     sget-object v3, Lcom/vk/voip/VoipWrapper$SoundEvent;->HangupRemote:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {v1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3757,19 +3757,19 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v1, :cond_8
 
-    invoke-virtual {v1}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
     sget-object v3, Lcom/vk/voip/VoipWrapper$SoundEvent;->CallHold:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {v1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3788,19 +3788,19 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v1, :cond_7
 
-    invoke-virtual {v1}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
     sget-object v3, Lcom/vk/voip/VoipWrapper$SoundEvent;->HangupRemoteBusy:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {v1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3819,19 +3819,19 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v1, :cond_6
 
-    invoke-virtual {v1}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
     sget-object v3, Lcom/vk/voip/VoipWrapper$SoundEvent;->WaitingForAccept:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {v1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3850,19 +3850,19 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v1, :cond_5
 
-    invoke-virtual {v1}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
     sget-object v3, Lcom/vk/voip/VoipWrapper$SoundEvent;->WaitingForAcceptConfirmed:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {v1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3881,19 +3881,19 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
     sget-object v3, Lcom/vk/voip/VoipWrapper$SoundEvent;->Connected:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {v1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3912,19 +3912,19 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v1}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
     sget-object v3, Lcom/vk/voip/VoipWrapper$SoundEvent;->Connecting:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {v1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3943,19 +3943,19 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1}, Lcom/vk/voip/k;->d()Lkotlin/jvm/b/b;
+    invoke-virtual {v1}, Lcom/vk/voip/VoipAppBinding;->d()Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
     sget-object v2, Lcom/vk/voip/VoipWrapper$SoundEvent;->Reconnecting:Lcom/vk/voip/VoipWrapper$SoundEvent;
 
-    invoke-interface {v1, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3968,73 +3968,73 @@
     return-void
 
     :cond_2
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 32
     :cond_3
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 33
     :cond_4
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 34
     :cond_5
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 35
     :cond_6
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 36
     :cond_7
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 37
     :cond_8
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 38
     :cond_9
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 39
     :cond_a
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 40
     :cond_b
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 41
     :cond_c
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 42
     :cond_d
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 .end method
@@ -4075,7 +4075,7 @@
     const-string v4, "uri"
 
     .line 2
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v4, "stun:"
 
@@ -4145,7 +4145,7 @@
 
     const-string v4, "(this as java.lang.String).substring(startIndex)"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -4227,15 +4227,15 @@
     invoke-virtual {p1, v4, v3, v2}, Lcom/vk/vigo/VigoVoip;->a(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 13
-    sget-object p1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p1, :cond_5
 
-    invoke-virtual {p1}, Lcom/vk/voip/k;->t()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/voip/VoipAppBinding;->t()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
-    invoke-interface {p1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 14
     sget-object p1, Lcom/vk/voip/VoipWrapper;->c:Ljava/lang/String;
@@ -4268,7 +4268,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_5
 
@@ -4276,7 +4276,7 @@
     const-string p1, "voipAppBinding"
 
     .line 15
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -4296,7 +4296,7 @@
 
     .line 17
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -4308,7 +4308,7 @@
 
     const-string v1, "VIGO failed"
 
-    invoke-static {v0, v1, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_8
     :goto_5
@@ -4369,7 +4369,7 @@
     .line 7
     :cond_1
     :try_start_1
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -4396,7 +4396,7 @@
 
     sget-object v2, Lcom/vk/voip/VoipWrapper;->m:Ljava/lang/String;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -4411,7 +4411,7 @@
 
     sget-object v2, Lcom/vk/voip/VoipWrapper;->r:Ljava/lang/String;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -4427,7 +4427,7 @@
     .line 12
     sget-object v0, Lcom/vk/voip/VoipWrapper;->S:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -4459,7 +4459,7 @@
     .line 16
     :cond_4
     :try_start_3
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -4510,7 +4510,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -4535,14 +4535,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/voip/k;->q()Lkotlin/jvm/b/b;
+    invoke-virtual {v0}, Lcom/vk/voip/VoipAppBinding;->q()Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
@@ -4550,14 +4550,14 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
     :cond_0
     const-string p1, "voipAppBinding"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -4590,7 +4590,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -4615,7 +4615,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -4646,7 +4646,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     sget-object v0, Lru/mail/voip2/Types$DeviceStatus;->DeviceStatus_Stopped_StartFail:Lru/mail/voip2/Types$DeviceStatus;
@@ -4674,23 +4674,23 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/vk/voip/u$a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lcom/vk/voip/VoipUtils$a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    sget-object p1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/voip/k;->o()Lkotlin/jvm/b/a;
+    invoke-virtual {p1}, Lcom/vk/voip/VoipAppBinding;->o()Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -4722,11 +4722,11 @@
 
     .line 7
     :goto_1
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_4
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->p()Lkotlin/jvm/b/b;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->p()Lkotlin/jvm/b/Functions2;
 
     move-result-object p2
 
@@ -4734,12 +4734,12 @@
 
     move-result-object p1
 
-    invoke-interface {p2, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_2
 
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -4756,7 +4756,7 @@
 
     const-string v0, "FaceDetectorResultChanged"
 
-    invoke-static {p1, v0}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -4787,7 +4787,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -4812,14 +4812,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/voip/k;->g()Lkotlin/jvm/b/b;
+    invoke-virtual {v0}, Lcom/vk/voip/VoipAppBinding;->g()Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
@@ -4837,7 +4837,7 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 p1, 0x0
 
@@ -4846,7 +4846,7 @@
     :cond_0
     const-string p1, "voipAppBinding"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -4873,7 +4873,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -4908,7 +4908,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -4943,7 +4943,7 @@
 
     move-result-object p2
 
-    invoke-static {v0, p2}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez p1, :cond_0
 
@@ -4955,7 +4955,7 @@
     const/4 p1, 0x0
 
     .line 3
-    sput-object p1, Lcom/vk/voip/VoipWrapper;->a0:Lkotlin/jvm/b/a;
+    sput-object p1, Lcom/vk/voip/VoipWrapper;->a0:Lkotlin/jvm/b/Functions;
 
     :cond_0
     return-void
@@ -4985,7 +4985,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -5002,25 +5002,25 @@
     sput-boolean p1, Lcom/vk/voip/VoipWrapper;->c0:Z
 
     .line 4
-    sget-object p1, Lcom/vk/voip/VoipWrapper;->a0:Lkotlin/jvm/b/a;
+    sget-object p1, Lcom/vk/voip/VoipWrapper;->a0:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     .line 5
     :cond_0
-    sput-object v0, Lcom/vk/voip/VoipWrapper;->a0:Lkotlin/jvm/b/a;
+    sput-object v0, Lcom/vk/voip/VoipWrapper;->a0:Lkotlin/jvm/b/Functions;
 
     goto :goto_0
 
     .line 6
     :cond_1
-    sput-object v0, Lcom/vk/voip/VoipWrapper;->a0:Lkotlin/jvm/b/a;
+    sput-object v0, Lcom/vk/voip/VoipWrapper;->a0:Lkotlin/jvm/b/Functions;
 
     :goto_0
     return-void
@@ -5046,7 +5046,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -5077,7 +5077,7 @@
 
     move-result-object p1
 
-    invoke-static {p3, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -5108,7 +5108,7 @@
 
     move-result-object p1
 
-    invoke-static {p3, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -5145,7 +5145,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/voip/VoipWrapper;->h()Z
@@ -5158,7 +5158,7 @@
     :try_start_0
     new-instance p1, Lorg/json/JSONObject;
 
-    invoke-static {p3}, Lcom/vk/voip/u;->a([B)Ljava/lang/String;
+    invoke-static {p3}, Lcom/vk/voip/VoipUtils;->a([B)Ljava/lang/String;
 
     move-result-object p2
 
@@ -5177,7 +5177,7 @@
 
     const-string v0, "Integer.valueOf(jsonPayl\u2026oSend.getString(USER_ID))"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
@@ -5230,7 +5230,7 @@
 
     move-result-object p3
 
-    invoke-static {p2, p3, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p2, p3, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     :goto_0
@@ -5275,7 +5275,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -5390,11 +5390,11 @@
 
     .line 10
     :cond_2
-    sget-object p4, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p4, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p4, :cond_3
 
-    invoke-virtual {p4}, Lcom/vk/voip/k;->l()Lkotlin/jvm/b/d;
+    invoke-virtual {p4}, Lcom/vk/voip/VoipAppBinding;->l()Lkotlin/jvm/b/Functions4;
 
     move-result-object p1
 
@@ -5410,7 +5410,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, p4, p2, v0}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p4, p2, v0}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 11
     invoke-direct {p0, p3}, Lcom/vk/voip/VoipWrapper;->d(Ljava/lang/String;)V
@@ -5419,7 +5419,7 @@
 
     .line 12
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
@@ -5444,11 +5444,11 @@
 
     .line 14
     :pswitch_0
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_6
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->i()Lkotlin/jvm/b/d;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->i()Lkotlin/jvm/b/Functions4;
 
     move-result-object p1
 
@@ -5462,22 +5462,22 @@
 
     move-result-object p4
 
-    invoke-interface {p1, p2, p3, p4}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2, p3, p4}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_1
 
     :cond_6
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 15
     :pswitch_1
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_7
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->i()Lkotlin/jvm/b/d;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->i()Lkotlin/jvm/b/Functions4;
 
     move-result-object p1
 
@@ -5491,22 +5491,22 @@
 
     move-result-object p4
 
-    invoke-interface {p1, p2, p3, p4}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2, p3, p4}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_1
 
     :cond_7
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 16
     :pswitch_2
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_8
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->i()Lkotlin/jvm/b/d;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->i()Lkotlin/jvm/b/Functions4;
 
     move-result-object p1
 
@@ -5518,12 +5518,12 @@
 
     move-result-object p4
 
-    invoke-interface {p1, p2, p3, p4}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2, p3, p4}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_1
 
     :cond_8
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
@@ -5553,11 +5553,11 @@
     if-nez v1, :cond_1a
 
     .line 19
-    sget-object p3, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p3, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p3, :cond_b
 
-    invoke-virtual {p3}, Lcom/vk/voip/k;->x()Lkotlin/jvm/b/c;
+    invoke-virtual {p3}, Lcom/vk/voip/VoipAppBinding;->x()Lkotlin/jvm/b/Functions1;
 
     move-result-object p1
 
@@ -5565,28 +5565,28 @@
 
     move-result-object p3
 
-    invoke-interface {p1, p3, p2}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p3, p2}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_1
 
     :cond_b
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 20
     :cond_c
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p1
 
     .line 21
     :pswitch_4
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_d
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->s()Lkotlin/jvm/b/c;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->s()Lkotlin/jvm/b/Functions1;
 
     move-result-object p1
 
@@ -5594,22 +5594,22 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2, p3}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2, p3}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_1
 
     :cond_d
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 22
     :pswitch_5
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_e
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->r()Lkotlin/jvm/b/d;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->r()Lkotlin/jvm/b/Functions4;
 
     move-result-object p1
 
@@ -5621,7 +5621,7 @@
 
     move-result-object p4
 
-    invoke-interface {p1, p2, p3, p4}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2, p3, p4}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 23
     invoke-direct {p0, p3, v0, v2}, Lcom/vk/voip/VoipWrapper;->a(Ljava/lang/String;IZ)V
@@ -5633,17 +5633,17 @@
 
     .line 25
     :cond_e
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 26
     :pswitch_6
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_f
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->r()Lkotlin/jvm/b/d;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->r()Lkotlin/jvm/b/Functions4;
 
     move-result-object p1
 
@@ -5655,7 +5655,7 @@
 
     move-result-object p4
 
-    invoke-interface {p1, p2, p3, p4}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2, p3, p4}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 27
     invoke-direct {p0, p3, v0, v1}, Lcom/vk/voip/VoipWrapper;->a(Ljava/lang/String;IZ)V
@@ -5667,7 +5667,7 @@
 
     .line 29
     :cond_f
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
@@ -5677,14 +5677,14 @@
 
     const-string p3, "voipAndroid: DISCONNECTED"
 
-    invoke-static {p2, p3}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 31
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_10
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->m()Lkotlin/jvm/b/c;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->m()Lkotlin/jvm/b/Functions1;
 
     move-result-object p1
 
@@ -5696,12 +5696,12 @@
 
     move-result-object p3
 
-    invoke-interface {p1, p2, p3}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2, p3}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_1
 
     :cond_10
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
@@ -5711,14 +5711,14 @@
 
     const-string p3, "voipAndroid: CONNECTED"
 
-    invoke-static {p2, p3}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 33
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_11
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->m()Lkotlin/jvm/b/c;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->m()Lkotlin/jvm/b/Functions1;
 
     move-result-object p1
 
@@ -5730,22 +5730,22 @@
 
     move-result-object p3
 
-    invoke-interface {p1, p2, p3}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2, p3}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_1
 
     :cond_11
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 34
     :pswitch_9
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_12
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->u()Lkotlin/jvm/b/b;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->u()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -5753,22 +5753,22 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_1
 
     :cond_12
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 35
     :pswitch_a
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_13
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->u()Lkotlin/jvm/b/b;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->u()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -5776,22 +5776,22 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_1
 
     :cond_13
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 36
     :pswitch_b
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_14
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->k()Lkotlin/jvm/b/c;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->k()Lkotlin/jvm/b/Functions1;
 
     move-result-object p1
 
@@ -5803,7 +5803,7 @@
 
     move-result-object p3
 
-    invoke-interface {p1, p2, p3}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2, p3}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 37
     invoke-direct {p0, v2}, Lcom/vk/voip/VoipWrapper;->c(Z)V
@@ -5812,17 +5812,17 @@
 
     .line 38
     :cond_14
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 39
     :pswitch_c
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_15
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->k()Lkotlin/jvm/b/c;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->k()Lkotlin/jvm/b/Functions1;
 
     move-result-object p1
 
@@ -5834,7 +5834,7 @@
 
     move-result-object p3
 
-    invoke-interface {p1, p2, p3}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2, p3}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 40
     invoke-direct {p0, v2}, Lcom/vk/voip/VoipWrapper;->c(Z)V
@@ -5843,17 +5843,17 @@
 
     .line 41
     :cond_15
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 42
     :pswitch_d
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_17
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->n()Lkotlin/jvm/b/e;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->n()Lkotlin/jvm/b/Functions3;
 
     move-result-object p2
 
@@ -5877,7 +5877,7 @@
 
     move-result-object p1
 
-    invoke-interface {p2, p4, v1, p3, p1}, Lkotlin/jvm/b/e;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p4, v1, p3, p1}, Lkotlin/jvm/b/Functions3;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 43
     invoke-direct {p0, p3, v0, v2}, Lcom/vk/voip/VoipWrapper;->a(Ljava/lang/String;IZ)V
@@ -5889,22 +5889,22 @@
 
     .line 45
     :cond_16
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p1
 
     :cond_17
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
     .line 46
     :pswitch_e
-    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object p2, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz p2, :cond_19
 
-    invoke-virtual {p2}, Lcom/vk/voip/k;->n()Lkotlin/jvm/b/e;
+    invoke-virtual {p2}, Lcom/vk/voip/VoipAppBinding;->n()Lkotlin/jvm/b/Functions3;
 
     move-result-object p2
 
@@ -5928,7 +5928,7 @@
 
     move-result-object p1
 
-    invoke-interface {p2, p4, v3, p3, p1}, Lkotlin/jvm/b/e;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p4, v3, p3, p1}, Lkotlin/jvm/b/Functions3;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 47
     invoke-direct {p0, p3, v0, v1}, Lcom/vk/voip/VoipWrapper;->a(Ljava/lang/String;IZ)V
@@ -5940,12 +5940,12 @@
 
     .line 49
     :cond_18
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p1
 
     :cond_19
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p1
 
@@ -5955,7 +5955,7 @@
 
     .line 50
     :cond_1b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p1
 
@@ -6012,7 +6012,7 @@
 
     move-result-object p1
 
-    invoke-static {p3, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -6063,7 +6063,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -6145,7 +6145,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -6176,7 +6176,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -6203,7 +6203,7 @@
     if-nez p2, :cond_4
 
     .line 100
-    invoke-static {p1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -6213,7 +6213,7 @@
 
     .line 101
     :cond_0
-    invoke-static {p1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -6225,7 +6225,7 @@
 
     .line 102
     :cond_1
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -6237,7 +6237,7 @@
 
     .line 103
     :cond_2
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -6251,7 +6251,7 @@
 
     .line 104
     :cond_4
-    invoke-static {p1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -6261,7 +6261,7 @@
 
     .line 105
     :cond_5
-    invoke-static {p1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -6273,7 +6273,7 @@
 
     .line 106
     :cond_6
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 
@@ -6285,7 +6285,7 @@
 
     .line 107
     :cond_7
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -6331,7 +6331,7 @@
     const-string v0, "payloadObj"
 
     .line 99
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -6356,7 +6356,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 30
     invoke-direct {p0}, Lcom/vk/voip/VoipWrapper;->h()Z
@@ -6370,7 +6370,7 @@
 
     const-string v0, "User is not logged in or initialization failed, ignoring acceptCall"
 
-    invoke-static {p1, v0}, Lcom/vk/voip/u$a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/voip/VoipUtils$a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -6389,7 +6389,7 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -6573,7 +6573,7 @@
 
     invoke-direct {v0, p4}, Lcom/vk/voip/VoipWrapper$applyMask$1;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/voip/VoipWrapper;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p0, v0}, Lcom/vk/voip/VoipWrapper;->a(Lkotlin/jvm/b/Functions;)V
 
     if-eqz p1, :cond_1
 
@@ -6694,7 +6694,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 35
     invoke-direct {p0}, Lcom/vk/voip/VoipWrapper;->h()Z
@@ -6708,7 +6708,7 @@
 
     const-string p2, "User is not logged in or initialization failed, ignoring declineOrHang"
 
-    invoke-static {p1, p2}, Lcom/vk/voip/u$a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lcom/vk/voip/VoipUtils$a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -6738,7 +6738,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -6748,7 +6748,7 @@
 
     .line 39
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -6809,31 +6809,31 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/voip/k;)V
+.method public final a(Lcom/vk/voip/VoipAppBinding;)V
     .locals 0
 
     .line 7
-    sput-object p1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sput-object p1, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     .line 8
-    invoke-static {p1}, Lcom/vk/voip/u$a;->a(Lcom/vk/voip/k;)V
+    invoke-static {p1}, Lcom/vk/voip/VoipUtils$a;->a(Lcom/vk/voip/VoipAppBinding;)V
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 12
-    sput-object p1, Lcom/vk/voip/VoipWrapper;->a0:Lkotlin/jvm/b/a;
+    sput-object p1, Lcom/vk/voip/VoipWrapper;->a0:Lkotlin/jvm/b/Functions;
 
     .line 13
     sget-boolean p1, Lcom/vk/voip/VoipWrapper;->c0:Z
@@ -6841,15 +6841,15 @@
     if-eqz p1, :cond_0
 
     .line 14
-    sget-object p1, Lcom/vk/voip/VoipWrapper;->a0:Lkotlin/jvm/b/a;
+    sget-object p1, Lcom/vk/voip/VoipWrapper;->a0:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     goto :goto_0
 
@@ -6869,15 +6869,15 @@
 
     if-eqz p1, :cond_2
 
-    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/k;
+    sget-object v0, Lcom/vk/voip/VoipWrapper;->K:Lcom/vk/voip/VoipAppBinding;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/voip/k;->f()Lkotlin/jvm/b/a;
+    invoke-virtual {v0}, Lcom/vk/voip/VoipAppBinding;->f()Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -6890,7 +6890,7 @@
     :cond_1
     const-string p1, "voipAppBinding"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -6960,7 +6960,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 46
     monitor-enter p0
@@ -7014,7 +7014,7 @@
 
     move-result-object p2
 
-    invoke-static {v0, p2}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 50
     sget-object p2, Lcom/vk/voip/VoipWrapper;->j0:Lcom/vk/voip/VoipWrapper;
@@ -7055,9 +7055,9 @@
 
     const-string v3, "array.toString()"
 
-    invoke-static {p2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v3, Lkotlin/text/d;->a:Ljava/nio/charset/Charset;
+    sget-object v3, Lkotlin/text/Charsets;->a:Ljava/nio/charset/Charset;
 
     if-eqz p2, :cond_0
 
@@ -7067,7 +7067,7 @@
 
     const-string v3, "(this as java.lang.String).getBytes(charset)"
 
-    invoke-static {p2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v2, p2, v1}, Lru/mail/voip2/Voip2;->ReadVoipMsg(Lru/mail/voip2/Types$VoipIncomingMsg;[BLjava/lang/String;)V
 
@@ -7083,7 +7083,7 @@
     throw p2
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -7117,7 +7117,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1, p2}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1, p2}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -7127,12 +7127,12 @@
 
     const-string p2, "User is not logged in or initialization failed, ignoring incoming message"
 
-    invoke-static {p1, p2}, Lcom/vk/voip/u$a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lcom/vk/voip/VoipUtils$a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 57
     :cond_3
     :goto_0
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -7268,7 +7268,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -7282,7 +7282,7 @@
 
     const-string v0, "VIGO failed"
 
-    invoke-static {p2, v0, p1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p2, v0, p1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
     :goto_2
@@ -7481,7 +7481,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
     sget-object v0, Lcom/vk/voip/VoipWrapper;->J:Lru/mail/voip2/Voip2;
@@ -7555,7 +7555,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     invoke-direct {p0}, Lcom/vk/voip/VoipWrapper;->h()Z
@@ -7569,7 +7569,7 @@
 
     const-string v0, "User is not logged in or initialization failed, ignoring startCall"
 
-    invoke-static {p1, v0}, Lcom/vk/voip/u$a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/voip/VoipUtils$a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -7588,7 +7588,7 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -7701,7 +7701,7 @@
 
     const-string v5, "camUids[cameraIndex]"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v4, Ljava/lang/String;
 
@@ -7713,7 +7713,7 @@
 
     const-string v5, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v5, "front"
 
@@ -7754,7 +7754,7 @@
     .line 8
     :cond_1
     :try_start_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -7777,7 +7777,7 @@
 
     const-string v3, "Failed to open camera!"
 
-    invoke-static {v1, v3}, Lcom/vk/voip/u$a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/vk/voip/VoipUtils$a;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 

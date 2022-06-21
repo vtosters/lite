@@ -63,11 +63,11 @@
     invoke-static {v0, v1, v2, v3}, Lcom/vk/pushes/receivers/NotificationActionsReceiver$a;->b(Lcom/vk/pushes/receivers/NotificationActionsReceiver$a;Landroid/content/Context;Landroid/content/Intent;Z)V
 
     .line 2
-    sget-object v0, Lcom/vk/pushes/i/b;->a:Lcom/vk/pushes/i/b;
+    sget-object v0, Lcom/vk/pushes/i/MessageNotificationCache;->a:Lcom/vk/pushes/i/MessageNotificationCache;
 
     iget v1, p0, Lcom/vk/pushes/receivers/NotificationActionsReceiver$a$s;->d:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/pushes/i/b;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/pushes/i/MessageNotificationCache;->a(I)V
 
     .line 3
     invoke-static {}, Lcom/vk/core/util/OsUtil;->c()Z
@@ -77,11 +77,11 @@
     if-eqz v0, :cond_0
 
     .line 4
-    sget-object v0, Lcom/vk/pushes/j/c;->b:Lcom/vk/pushes/j/c;
+    sget-object v0, Lcom/vk/pushes/j/MessageNotificationHelper;->b:Lcom/vk/pushes/j/MessageNotificationHelper;
 
     iget-object v1, p0, Lcom/vk/pushes/receivers/NotificationActionsReceiver$a$s;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/pushes/j/c;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/pushes/j/MessageNotificationHelper;->a(Landroid/content/Context;)V
 
     :cond_0
     return-void

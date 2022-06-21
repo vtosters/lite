@@ -1,5 +1,5 @@
 .class public final Lcom/vk/search/fragment/DiscoverSearchFragment$c0;
-.super Lcom/vk/common/view/i/b;
+.super Lcom/vk/common/view/i/TabSelectedListenerAdapter;
 .source "DiscoverSearchFragment.kt"
 
 
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$c0;->a:Lcom/vk/search/fragment/DiscoverSearchFragment;
 
-    invoke-direct {p0}, Lcom/vk/common/view/i/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/common/view/i/TabSelectedListenerAdapter;-><init>()V
 
     return-void
 .end method

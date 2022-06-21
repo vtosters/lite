@@ -3,7 +3,7 @@
 .source "VideoItemListSmallVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/common/VideoFile;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -103,7 +103,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/catalog2/core/holders/video/VideoItemListSmallVh$bindImage$1;->this$0:Lcom/vk/catalog2/core/holders/video/VideoItemListSmallVh;
@@ -190,7 +190,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/video/VideoItemListSmallVh$bindImage$1;->a(Lcom/vk/dto/common/VideoFile;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

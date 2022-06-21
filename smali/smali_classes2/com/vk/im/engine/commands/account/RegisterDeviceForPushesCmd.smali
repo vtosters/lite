@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/engine/commands/account/RegisterDeviceForPushesCmd;
-.super Lcom/vk/im/engine/i/a;
+.super Lcom/vk/im/engine/i/BaseImEngineCmd;
 .source "RegisterDeviceForPushesCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/a<",
-        "Lkotlin/m;",
+        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/account/RegisterDeviceForPushesCmd;->b:Ljava/lang/String;
 
@@ -39,32 +39,32 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/account/RegisterDeviceForPushesCmd;->a(Lcom/vk/im/engine/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/account/RegisterDeviceForPushesCmd;->a(Lcom/vk/im/engine/ImEnvironment;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/d;)V
+.method public a(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 6
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/vk/im/engine/i/a;->a()Lcom/vk/im/engine/internal/causation/a;
+    invoke-virtual {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;->a()Lcom/vk/im/engine/internal/causation/CauseProducer;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/causation/a;->c()Ljava/lang/Throwable;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/causation/CauseProducer;->c()Ljava/lang/Throwable;
 
     move-result-object v1
 
@@ -84,12 +84,12 @@
 
     const-string v1, ""
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/instantjobs/b;->a(Lcom/vk/instantjobs/b;Ljava/lang/String;Ljava/lang/Throwable;IILjava/lang/Object;)Ljava/lang/Throwable;
+    invoke-static/range {v0 .. v5}, Lcom/vk/instantjobs/InstantJobManager;->a(Lcom/vk/instantjobs/InstantJobManager;Ljava/lang/String;Ljava/lang/Throwable;IILjava/lang/Object;)Ljava/lang/Throwable;
 
     move-result-object v0
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
 
     move-result-object v1
 
@@ -97,14 +97,14 @@
 
     const-string v3, "old register device for pushes"
 
-    invoke-virtual {v1, v3, v0, v2}, Lcom/vk/instantjobs/b;->a(Ljava/lang/String;Ljava/lang/Throwable;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v1, v3, v0, v2}, Lcom/vk/instantjobs/InstantJobManager;->a(Ljava/lang/String;Ljava/lang/Throwable;Lkotlin/jvm/b/Functions2;)V
 
     .line 4
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
 
     move-result-object p1
 
-    new-instance v1, Lcom/vk/im/engine/internal/j/c/a;
+    new-instance v1, Lcom/vk/im/engine/internal/j/c/RegisterDeviceForPushesJob;
 
     iget-object v2, p0, Lcom/vk/im/engine/commands/account/RegisterDeviceForPushesCmd;->b:Ljava/lang/String;
 
@@ -112,9 +112,9 @@
 
     iget-object v4, p0, Lcom/vk/im/engine/commands/account/RegisterDeviceForPushesCmd;->d:Ljava/lang/String;
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/engine/internal/j/c/a;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/engine/internal/j/c/RegisterDeviceForPushesJob;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/instantjobs/b;->a(Lcom/vk/instantjobs/InstantJob;Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/instantjobs/InstantJobManager;->a(Lcom/vk/instantjobs/InstantJob;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -134,7 +134,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/account/RegisterDeviceForPushesCmd;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -150,7 +150,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/commands/account/RegisterDeviceForPushesCmd;->d:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -237,7 +237,7 @@
 
     const-string v1, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v1, Ljava/lang/StringBuilder;

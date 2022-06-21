@@ -21,15 +21,15 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/b;)V
+.method public abstract a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/Functions2;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/StoryViewAction;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vtosters/lite/data/n$l;",
-            "Lkotlin/m;",
+            "Lcom/vtosters/lite/data/Analytics$l;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation

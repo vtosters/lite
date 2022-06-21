@@ -3,7 +3,7 @@
 .source "ChatsChangeAvatarApiCmd.kt"
 
 # interfaces
-.implements Lcom/vk/api/sdk/h;
+.implements Lcom/vk/api/sdk/VKApiResponseParser;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/sdk/h<",
+        "Lcom/vk/api/sdk/VKApiResponseParser<",
         "Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$c;",
         ">;"
     }
@@ -57,17 +57,17 @@
     .line 4
     new-instance v0, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$c;
 
-    sget-object v1, Lcom/vk/im/engine/models/upload/a;->c:Lcom/vk/im/engine/models/upload/a$a;
+    sget-object v1, Lcom/vk/im/engine/models/upload/UploadServer;->c:Lcom/vk/im/engine/models/upload/UploadServer$a;
 
     const-string v2, "responseValue"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, p1}, Lcom/vk/im/engine/models/upload/a$a;->a(Lorg/json/JSONObject;)Lcom/vk/im/engine/models/upload/a;
+    invoke-virtual {v1, p1}, Lcom/vk/im/engine/models/upload/UploadServer$a;->a(Lorg/json/JSONObject;)Lcom/vk/im/engine/models/upload/UploadServer;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$c;-><init>(Lcom/vk/im/engine/models/upload/a;)V
+    invoke-direct {v0, p1}, Lcom/vk/im/engine/internal/api_commands/etc/ChatsChangeAvatarApiCmd$c;-><init>(Lcom/vk/im/engine/models/upload/UploadServer;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -6,15 +6,15 @@
 # instance fields
 .field private a:Lcom/vk/photoviewer/PhotoViewer$g;
 
-.field private b:Lkotlin/jvm/b/c;
+.field private b:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/Float;",
             "-",
             "Ljava/lang/Float;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -28,11 +28,11 @@
 
 .field private f:Z
 
-.field private final g:Lkotlin/u/f;
+.field private final g:Lkotlin/u/KFunction;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/u/f<",
-            "Lkotlin/m;",
+            "Lkotlin/u/KFunction<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -57,7 +57,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/photoviewer/PickPositionOverlayView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/photoviewer/PickPositionOverlayView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -77,7 +77,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/photoviewer/PickPositionOverlayView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/photoviewer/PickPositionOverlayView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -108,7 +108,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/photoviewer/PickPositionOverlayView$onLayoutListener$1;-><init>(Lcom/vk/photoviewer/PickPositionOverlayView;)V
 
-    iput-object p2, p0, Lcom/vk/photoviewer/PickPositionOverlayView;->g:Lkotlin/u/f;
+    iput-object p2, p0, Lcom/vk/photoviewer/PickPositionOverlayView;->g:Lkotlin/u/KFunction;
 
     .line 7
     sget p2, Lcom/vk/photoviewer/k;->position_marker:I
@@ -155,7 +155,7 @@
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -233,7 +233,7 @@
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 8
-    iget-object p1, p0, Lcom/vk/photoviewer/PickPositionOverlayView;->b:Lkotlin/jvm/b/c;
+    iget-object p1, p0, Lcom/vk/photoviewer/PickPositionOverlayView;->b:Lkotlin/jvm/b/Functions1;
 
     if-eqz p1, :cond_1
 
@@ -253,11 +253,11 @@
 
     move-result-object v0
 
-    invoke-interface {p1, p2, v0}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2, v0}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_1
     return-void
@@ -320,21 +320,21 @@
     return-object v0
 .end method
 
-.method public final getMarkerFractionPositionListener()Lkotlin/jvm/b/c;
+.method public final getMarkerFractionPositionListener()Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Ljava/lang/Float;",
             "Ljava/lang/Float;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/photoviewer/PickPositionOverlayView;->b:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/photoviewer/PickPositionOverlayView;->b:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
@@ -438,15 +438,15 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/photoviewer/PickPositionOverlayView;->g:Lkotlin/u/f;
+    iget-object v1, p0, Lcom/vk/photoviewer/PickPositionOverlayView;->g:Lkotlin/u/KFunction;
 
-    check-cast v1, Lkotlin/jvm/b/a;
+    check-cast v1, Lkotlin/jvm/b/Functions;
 
     if-eqz v1, :cond_0
 
-    new-instance v2, Lcom/vk/photoviewer/h;
+    new-instance v2, Lcom/vk/photoviewer/PickPositionOverlayView1;
 
-    invoke-direct {v2, v1}, Lcom/vk/photoviewer/h;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v1}, Lcom/vk/photoviewer/PickPositionOverlayView1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     move-object v1, v2
 
@@ -469,15 +469,15 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/photoviewer/PickPositionOverlayView;->g:Lkotlin/u/f;
+    iget-object v1, p0, Lcom/vk/photoviewer/PickPositionOverlayView;->g:Lkotlin/u/KFunction;
 
-    check-cast v1, Lkotlin/jvm/b/a;
+    check-cast v1, Lkotlin/jvm/b/Functions;
 
     if-eqz v1, :cond_0
 
-    new-instance v2, Lcom/vk/photoviewer/h;
+    new-instance v2, Lcom/vk/photoviewer/PickPositionOverlayView1;
 
-    invoke-direct {v2, v1}, Lcom/vk/photoviewer/h;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v1}, Lcom/vk/photoviewer/PickPositionOverlayView1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     move-object v1, v2
 
@@ -721,23 +721,23 @@
     return-void
 .end method
 
-.method public final setMarkerFractionPositionListener(Lkotlin/jvm/b/c;)V
+.method public final setMarkerFractionPositionListener(Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/Float;",
             "-",
             "Ljava/lang/Float;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/photoviewer/PickPositionOverlayView;->b:Lkotlin/jvm/b/c;
+    iput-object p1, p0, Lcom/vk/photoviewer/PickPositionOverlayView;->b:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method

@@ -64,7 +64,7 @@
 
     const-string v1, "ice_config_request"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -79,7 +79,7 @@
 
     const-string v0, "obj.optString(\"sessionGuid\")"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -211,13 +211,13 @@
     if-eqz v1, :cond_1
 
     .line 39
-    new-instance v10, Lb/h/c/d0/a;
+    new-instance v10, Lcom/vk/api/voip/VoipAllocateCall;
 
     move v11, p1
 
     move/from16 v12, p6
 
-    invoke-direct {v10, p1, v4, v12}, Lb/h/c/d0/a;-><init>(ILjava/lang/String;I)V
+    invoke-direct {v10, p1, v4, v12}, Lcom/vk/api/voip/VoipAllocateCall;-><init>(ILjava/lang/String;I)V
 
     .line 40
     new-instance v12, Lcom/vk/voip/VoipAppBindingFactory$b;
@@ -234,12 +234,12 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/vk/voip/VoipAppBindingFactory$b;-><init>(ILjava/lang/Integer;ILjava/lang/String;Lorg/json/JSONObject;)V
 
-    invoke-virtual {v10, v12}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v10, v12}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object v0
 
     .line 41
-    invoke-virtual {v0}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
 
@@ -249,21 +249,21 @@
     move/from16 v12, p6
 
     .line 42
-    new-instance v10, Lb/h/c/d0/d;
+    new-instance v10, Lcom/vk/api/voip/VoipMessageSend;
 
     invoke-virtual {p0, p1}, Lcom/vk/voip/VoipAppBindingFactory;->a(I)I
 
     move-result v3
 
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/vk/core/util/u;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/util/DeviceIdProvider;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v0, "DeviceIdProvider.getDevi\u2026AppContextHolder.context)"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v0, v10
 
@@ -273,7 +273,7 @@
 
     move/from16 v5, p6
 
-    invoke-direct/range {v0 .. v5}, Lb/h/c/d0/d;-><init>(ILorg/json/JSONObject;ILjava/lang/String;I)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/api/voip/VoipMessageSend;-><init>(ILorg/json/JSONObject;ILjava/lang/String;I)V
 
     .line 43
     new-instance v13, Lcom/vk/voip/VoipAppBindingFactory$c;
@@ -294,12 +294,12 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/vk/voip/VoipAppBindingFactory$c;-><init>(ILjava/lang/Integer;Lorg/json/JSONObject;ZII)V
 
-    invoke-virtual {v10, v13}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v10, v13}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object v0
 
     .line 44
-    invoke-virtual {v0}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     :goto_0
     return-void
@@ -380,11 +380,11 @@
 
     .line 52
     :try_start_0
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/f;->M1()Ljava/lang/String;
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->M1()Ljava/lang/String;
 
     move-result-object v1
 
@@ -448,13 +448,13 @@
     return v0
 .end method
 
-.method public final a()Lcom/vk/voip/k;
+.method public final a()Lcom/vk/voip/VoipAppBinding;
     .locals 2
 
     .line 3
-    new-instance v0, Lcom/vk/voip/k;
+    new-instance v0, Lcom/vk/voip/VoipAppBinding;
 
-    invoke-direct {v0}, Lcom/vk/voip/k;-><init>()V
+    invoke-direct {v0}, Lcom/vk/voip/VoipAppBinding;-><init>()V
 
     .line 4
     sget-object v1, Lcom/vk/voip/VoipViewModel;->Z:Lcom/vk/voip/VoipViewModel;
@@ -464,152 +464,152 @@
     .line 5
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$1;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$1;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 6
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$2;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$2;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->b(Lkotlin/jvm/b/e;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->b(Lkotlin/jvm/b/Functions3;)V
 
     .line 7
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$3;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$3;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 8
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$4;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$4;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->a(Lkotlin/jvm/b/e;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->a(Lkotlin/jvm/b/Functions3;)V
 
     .line 9
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$5;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$5;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->e(Lkotlin/jvm/b/d;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->e(Lkotlin/jvm/b/Functions4;)V
 
     .line 10
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$6;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$6;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->c(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->c(Lkotlin/jvm/b/Functions1;)V
 
     .line 11
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$7;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$7;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->g(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->g(Lkotlin/jvm/b/Functions2;)V
 
     .line 12
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$8;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$8;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->d(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->d(Lkotlin/jvm/b/Functions1;)V
 
     .line 13
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$9;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$9;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->e(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->e(Lkotlin/jvm/b/Functions2;)V
 
     .line 14
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$10;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$10;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->d(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->d(Lkotlin/jvm/b/Functions2;)V
 
     .line 15
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$11;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$11;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->f(Lkotlin/jvm/b/d;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->f(Lkotlin/jvm/b/Functions4;)V
 
     .line 16
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$12;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$12;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->c(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->c(Lkotlin/jvm/b/Functions;)V
 
     .line 17
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$13;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$13;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->c(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->c(Lkotlin/jvm/b/Functions2;)V
 
     .line 18
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$14;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$14;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->e(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->e(Lkotlin/jvm/b/Functions1;)V
 
     .line 19
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$15;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$15;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->g(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->g(Lkotlin/jvm/b/Functions;)V
 
     .line 20
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$16;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$16;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->f(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->f(Lkotlin/jvm/b/Functions;)V
 
     .line 21
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$17;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$17;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->a(Lkotlin/jvm/b/d;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->a(Lkotlin/jvm/b/Functions4;)V
 
     .line 22
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$18;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$18;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->b(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->b(Lkotlin/jvm/b/Functions1;)V
 
     .line 23
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$19;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$19;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->a(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->a(Lkotlin/jvm/b/Functions1;)V
 
     .line 24
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$20;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$20;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->f(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->f(Lkotlin/jvm/b/Functions1;)V
 
     .line 25
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$21;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$21;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->g(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->g(Lkotlin/jvm/b/Functions1;)V
 
     .line 26
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$22;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$22;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->b(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->b(Lkotlin/jvm/b/Functions;)V
 
     .line 27
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$23;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$23;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->b(Lkotlin/jvm/b/d;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->b(Lkotlin/jvm/b/Functions4;)V
 
     .line 28
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$24;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$24;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->c(Lkotlin/jvm/b/d;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->c(Lkotlin/jvm/b/Functions4;)V
 
     .line 29
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$25;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$25;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->d(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->d(Lkotlin/jvm/b/Functions;)V
 
     .line 30
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$26;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$26;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->d(Lkotlin/jvm/b/d;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->d(Lkotlin/jvm/b/Functions4;)V
 
     .line 31
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$27;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$27;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->b(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->b(Lkotlin/jvm/b/Functions2;)V
 
     .line 32
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$28;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$28;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->f(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->f(Lkotlin/jvm/b/Functions2;)V
 
     .line 33
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$29;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$29;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->g(Lkotlin/jvm/b/d;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->g(Lkotlin/jvm/b/Functions4;)V
 
     .line 34
     sget-object v1, Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$30;->a:Lcom/vk/voip/VoipAppBindingFactory$createVoipAppBinding$30;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/k;->e(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipAppBinding;->e(Lkotlin/jvm/b/Functions;)V
 
     return-object v0
 .end method

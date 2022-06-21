@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -39,7 +39,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/profile/ui/c;->W0:I
+    sget v0, Lcom/vk/profile/ui/BaseProfileFragment;->W0:I
 
     if-nez v0, :cond_0
 
@@ -55,7 +55,7 @@
 
     .line 2
     :cond_0
-    sget p1, Lcom/vk/profile/ui/c;->W0:I
+    sget p1, Lcom/vk/profile/ui/BaseProfileFragment;->W0:I
 
     if-nez p1, :cond_1
 

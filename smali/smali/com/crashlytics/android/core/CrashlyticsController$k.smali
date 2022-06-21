@@ -50,7 +50,7 @@
 
     iget-boolean v2, p0, Lcom/crashlytics/android/core/CrashlyticsController$k;->a:Z
 
-    invoke-static {p1, v0, v1, v2}, Lcom/crashlytics/android/core/n0;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-static {p1, v0, v1, v2}, Lcom/crashlytics/android/core/SessionProtobufHelper;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-void
 .end method

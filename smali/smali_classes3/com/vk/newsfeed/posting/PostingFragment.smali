@@ -1,28 +1,28 @@
 .class public Lcom/vk/newsfeed/posting/PostingFragment;
-.super Lcom/vk/core/fragments/c;
+.super Lcom/vk/core/fragments/BaseMvpFragment;
 .source "PostingFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/k;
-.implements Lcom/vk/navigation/b0/k;
-.implements Lcom/vk/navigation/b0/a;
+.implements Lcom/vk/newsfeed/posting/PostingContracts2;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/navigation/b0/FragmentWhiteStatusBar;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/c<",
+        "Lcom/vk/core/fragments/BaseMvpFragment<",
         "Lcom/vk/newsfeed/posting/PostingPresenter;",
         ">;",
-        "Lcom/vk/newsfeed/posting/k;",
-        "Lcom/vk/navigation/b0/k;",
-        "Lcom/vk/navigation/b0/a;"
+        "Lcom/vk/newsfeed/posting/PostingContracts2;",
+        "Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;",
+        "Lcom/vk/navigation/b0/FragmentWhiteStatusBar;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic O:[Lkotlin/u/j;
+.field static final synthetic O:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -30,25 +30,25 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/newsfeed/posting/d<",
+            "Lcom/vk/newsfeed/posting/PostingContracts10<",
             "*>;>;"
         }
     .end annotation
 .end field
 
-.field private H:Lcom/vk/mentions/j;
+.field private H:Lcom/vk/mentions/MentionSelectInterfaces1;
 
 .field private I:Z
 
 .field private J:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-.field private final K:Lkotlin/e;
+.field private final K:Lkotlin/Lazy2;
 
-.field private final L:Lkotlin/e;
+.field private final L:Lkotlin/Lazy2;
 
-.field private final M:Lkotlin/e;
+.field private final M:Lkotlin/Lazy2;
 
-.field private final N:Lkotlin/e;
+.field private final N:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -57,13 +57,13 @@
 
     const/4 v0, 0x4
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/newsfeed/posting/PostingFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -71,9 +71,9 @@
 
     const-string v4, "getExitNewPostAlertDialogBuilder()Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -83,7 +83,7 @@
 
     const-class v2, Lcom/vk/newsfeed/posting/PostingFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -91,9 +91,9 @@
 
     const-string v4, "getExitEditPostAlertDialogBuilder()Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x1
 
@@ -103,7 +103,7 @@
 
     const-class v2, Lcom/vk/newsfeed/posting/PostingFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -111,9 +111,9 @@
 
     const-string v4, "getPublishWithoutChangesDialogBuilder()Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x2
 
@@ -123,7 +123,7 @@
 
     const-class v2, Lcom/vk/newsfeed/posting/PostingFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -131,15 +131,15 @@
 
     const-string v4, "getExitListener()Landroid/content/DialogInterface$OnClickListener;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/newsfeed/posting/PostingFragment;->O:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/newsfeed/posting/PostingFragment;->O:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -148,51 +148,51 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/newsfeed/posting/PostingFragment$exitNewPostAlertDialogBuilder$2;
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/PostingFragment$exitNewPostAlertDialogBuilder$2;-><init>(Lcom/vk/newsfeed/posting/PostingFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->K:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->K:Lkotlin/Lazy2;
 
     .line 3
     new-instance v0, Lcom/vk/newsfeed/posting/PostingFragment$exitEditPostAlertDialogBuilder$2;
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/PostingFragment$exitEditPostAlertDialogBuilder$2;-><init>(Lcom/vk/newsfeed/posting/PostingFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->L:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->L:Lkotlin/Lazy2;
 
     .line 4
     new-instance v0, Lcom/vk/newsfeed/posting/PostingFragment$publishWithoutChangesDialogBuilder$2;
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/PostingFragment$publishWithoutChangesDialogBuilder$2;-><init>(Lcom/vk/newsfeed/posting/PostingFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->M:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->M:Lkotlin/Lazy2;
 
     .line 5
     new-instance v0, Lcom/vk/newsfeed/posting/PostingFragment$exitListener$2;
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/PostingFragment$exitListener$2;-><init>(Lcom/vk/newsfeed/posting/PostingFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->N:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->N:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -200,15 +200,15 @@
 .method private final P4()Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->L:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->L:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/PostingFragment;->O:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/posting/PostingFragment;->O:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -220,15 +220,15 @@
 .method private final Q4()Landroid/content/DialogInterface$OnClickListener;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->N:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->N:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/PostingFragment;->O:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/posting/PostingFragment;->O:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -240,15 +240,15 @@
 .method private final R4()Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->K:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->K:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/PostingFragment;->O:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/posting/PostingFragment;->O:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -260,15 +260,15 @@
 .method private final S4()Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->M:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->M:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/PostingFragment;->O:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/posting/PostingFragment;->O:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -294,7 +294,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->b(Lcom/vk/navigation/b0/a;)Z
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->b(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)Z
 
     move-result v0
 
@@ -328,7 +328,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->a(Lcom/vk/navigation/b0/a;)I
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->a(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)I
 
     move-result v0
 
@@ -346,7 +346,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/vk/api/base/f;->a(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lcom/vk/api/base/ApiUtils;->a(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -364,42 +364,42 @@
     return-void
 .end method
 
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/b;->b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->b(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public a(Lkotlin/jvm/b/a;J)V
+.method public a(Lkotlin/jvm/b/Functions;J)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;J)V"
         }
     .end annotation
 
     .line 3
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/core/fragments/b;->b(Lkotlin/jvm/b/a;J)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/core/fragments/BaseFragment1;->b(Lkotlin/jvm/b/Functions;J)V
 
     return-void
 .end method
 
-.method public b(Lc/a/m;)Lc/a/m;
+.method public b(Lio/reactivex/Observable;)Lio/reactivex/Observable;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;"
         }
     .end annotation
@@ -423,7 +423,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -443,7 +443,7 @@
     return-void
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/c;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseScreenContract;
     .locals 1
 
     .line 1
@@ -499,7 +499,7 @@
     const/4 v2, 0x0
 
     .line 2
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -586,7 +586,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -697,7 +697,7 @@
     return-void
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -708,7 +708,7 @@
     .locals 9
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     sget-object p1, Lcom/vk/newsfeed/posting/PostingInteractor;->e:Lcom/vk/newsfeed/posting/PostingInteractor$a;
@@ -720,7 +720,7 @@
     .line 3
     new-instance v0, Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;-><init>(Lcom/vk/newsfeed/posting/k;Lcom/vk/newsfeed/posting/PostingInteractor;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;-><init>(Lcom/vk/newsfeed/posting/PostingContracts2;Lcom/vk/newsfeed/posting/PostingInteractor;)V
 
     invoke-virtual {p0, v0}, Lcom/vk/newsfeed/posting/PostingFragment;->a(Lcom/vk/newsfeed/posting/PostingPresenter;)V
 
@@ -732,11 +732,11 @@
     iput-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->G:Ljava/util/ArrayList;
 
     .line 5
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v0
 
@@ -788,7 +788,7 @@
 
     const-string v8, "activity!!"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v6, v7, v0, p0}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;-><init>(Landroid/app/Activity;ILcom/vk/core/fragments/FragmentImpl;)V
 
@@ -808,7 +808,7 @@
 
     if-eqz v7, :cond_11
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v7}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
@@ -816,7 +816,7 @@
 
     const-string v8, "activity!!.fragmentManager"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v7}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;-><init>(Landroid/app/FragmentManager;)V
 
@@ -835,10 +835,10 @@
 
     if-eqz v8, :cond_f
 
-    invoke-direct {v7, v8, v1, p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;-><init>(Lcom/vk/newsfeed/posting/j;Lcom/vk/newsfeed/posting/g;Lcom/vk/newsfeed/posting/PostingInteractor;)V
+    invoke-direct {v7, v8, v1, p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;-><init>(Lcom/vk/newsfeed/posting/PostingContracts14;Lcom/vk/newsfeed/posting/PostingContracts;Lcom/vk/newsfeed/posting/PostingInteractor;)V
 
     .line 13
-    invoke-virtual {v1, v7}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->a(Lcom/vk/newsfeed/posting/f;)V
+    invoke-virtual {v1, v7}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingView;->a(Lcom/vk/newsfeed/posting/PostingContracts13;)V
 
     .line 14
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/PostingFragment;->getPresenter()Lcom/vk/newsfeed/posting/PostingPresenter;
@@ -847,10 +847,10 @@
 
     if-eqz p1, :cond_e
 
-    invoke-virtual {p1, v7}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/f;)V
+    invoke-virtual {p1, v7}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/PostingContracts13;)V
 
     .line 15
-    new-instance p1, Lcom/vk/newsfeed/posting/viewpresenter/text/a;
+    new-instance p1, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingPresenter;
 
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/PostingFragment;->getPresenter()Lcom/vk/newsfeed/posting/PostingPresenter;
 
@@ -858,10 +858,10 @@
 
     if-eqz v1, :cond_d
 
-    invoke-direct {p1, v1, v2}, Lcom/vk/newsfeed/posting/viewpresenter/text/a;-><init>(Lcom/vk/newsfeed/posting/j;Lcom/vk/newsfeed/posting/q;)V
+    invoke-direct {p1, v1, v2}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingPresenter;-><init>(Lcom/vk/newsfeed/posting/PostingContracts14;Lcom/vk/newsfeed/posting/PostingContracts12;)V
 
     .line 16
-    invoke-virtual {v2, p1}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->a(Lcom/vk/newsfeed/posting/p;)V
+    invoke-virtual {v2, p1}, Lcom/vk/newsfeed/posting/viewpresenter/text/TextPostingView;->a(Lcom/vk/newsfeed/posting/PostingContracts3;)V
 
     .line 17
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/PostingFragment;->getPresenter()Lcom/vk/newsfeed/posting/PostingPresenter;
@@ -870,7 +870,7 @@
 
     if-eqz v1, :cond_c
 
-    invoke-virtual {v1, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/p;)V
+    invoke-virtual {v1, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/PostingContracts3;)V
 
     .line 18
     new-instance p1, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;
@@ -881,10 +881,10 @@
 
     if-eqz v1, :cond_b
 
-    invoke-direct {p1, v1, v5}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;-><init>(Lcom/vk/newsfeed/posting/j;Lcom/vk/newsfeed/posting/i;)V
+    invoke-direct {p1, v1, v5}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingPresenter;-><init>(Lcom/vk/newsfeed/posting/PostingContracts14;Lcom/vk/newsfeed/posting/PostingContracts8;)V
 
     .line 19
-    invoke-virtual {v5, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->a(Lcom/vk/newsfeed/posting/h;)V
+    invoke-virtual {v5, p1}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->a(Lcom/vk/newsfeed/posting/PostingContracts11;)V
 
     .line 20
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/PostingFragment;->getPresenter()Lcom/vk/newsfeed/posting/PostingPresenter;
@@ -893,10 +893,10 @@
 
     if-eqz v1, :cond_a
 
-    invoke-virtual {v1, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/h;)V
+    invoke-virtual {v1, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/PostingContracts11;)V
 
     .line 21
-    new-instance p1, Lcom/vk/newsfeed/posting/viewpresenter/attachments/b;
+    new-instance p1, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingPresenter;
 
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/PostingFragment;->getPresenter()Lcom/vk/newsfeed/posting/PostingPresenter;
 
@@ -904,10 +904,10 @@
 
     if-eqz v1, :cond_9
 
-    invoke-direct {p1, v1, v6}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/b;-><init>(Lcom/vk/newsfeed/posting/j;Lcom/vk/newsfeed/posting/b;)V
+    invoke-direct {p1, v1, v6}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingPresenter;-><init>(Lcom/vk/newsfeed/posting/PostingContracts14;Lcom/vk/newsfeed/posting/PostingContracts7;)V
 
     .line 22
-    invoke-virtual {v6, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a(Lcom/vk/newsfeed/posting/a;)V
+    invoke-virtual {v6, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPostingViewController;->a(Lcom/vk/newsfeed/posting/PostingContracts1;)V
 
     .line 23
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/PostingFragment;->getPresenter()Lcom/vk/newsfeed/posting/PostingPresenter;
@@ -916,7 +916,7 @@
 
     if-eqz v1, :cond_8
 
-    invoke-virtual {v1, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/a;)V
+    invoke-virtual {v1, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/PostingContracts1;)V
 
     .line 24
     new-instance p1, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;
@@ -927,10 +927,10 @@
 
     if-eqz v1, :cond_7
 
-    invoke-direct {p1, v1, v0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;-><init>(Lcom/vk/newsfeed/posting/j;Lcom/vk/newsfeed/posting/o;)V
+    invoke-direct {p1, v1, v0}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingPresenter;-><init>(Lcom/vk/newsfeed/posting/PostingContracts14;Lcom/vk/newsfeed/posting/PostingContracts4;)V
 
     .line 25
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a(Lcom/vk/newsfeed/posting/n;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/settings/SettingsPostingView;->a(Lcom/vk/newsfeed/posting/PostingContracts5;)V
 
     .line 26
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/PostingFragment;->getPresenter()Lcom/vk/newsfeed/posting/PostingPresenter;
@@ -939,7 +939,7 @@
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/n;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/PostingContracts5;)V
 
     .line 27
     new-instance p1, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;
@@ -958,7 +958,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->a(Lcom/vk/newsfeed/posting/j;)V
+    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/posting/viewpresenter/bottom/BottomPanelPostingControllerImpl;->a(Lcom/vk/newsfeed/posting/PostingContracts14;)V
 
     .line 30
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/PostingFragment;->getPresenter()Lcom/vk/newsfeed/posting/PostingPresenter;
@@ -967,7 +967,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/e;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/newsfeed/posting/PostingContracts9;)V
 
     .line 31
     new-instance p1, Lcom/vk/mentions/MentionSelectViewControllerImpl;
@@ -978,9 +978,9 @@
 
     if-eqz v0, :cond_3
 
-    invoke-direct {p1, v0}, Lcom/vk/mentions/MentionSelectViewControllerImpl;-><init>(Lcom/vk/mentions/i;)V
+    invoke-direct {p1, v0}, Lcom/vk/mentions/MentionSelectViewControllerImpl;-><init>(Lcom/vk/mentions/MentionSelectInterfaces;)V
 
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/PostingFragment;->H:Lcom/vk/mentions/j;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/PostingFragment;->H:Lcom/vk/mentions/MentionSelectInterfaces1;
 
     .line 32
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/PostingFragment;->getPresenter()Lcom/vk/newsfeed/posting/PostingPresenter;
@@ -989,11 +989,11 @@
 
     if-eqz p1, :cond_2
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->H:Lcom/vk/mentions/j;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingFragment;->H:Lcom/vk/mentions/MentionSelectInterfaces1;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/mentions/j;)V
+    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->a(Lcom/vk/mentions/MentionSelectInterfaces1;)V
 
     .line 33
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/PostingFragment;->getPresenter()Lcom/vk/newsfeed/posting/PostingPresenter;
@@ -1011,7 +1011,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
@@ -1019,131 +1019,131 @@
     const-string p1, "mentionViewController"
 
     .line 34
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 35
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 36
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 37
     :cond_5
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 38
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 39
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 40
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 41
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 42
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 43
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 44
     :cond_c
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 45
     :cond_d
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 46
     :cond_e
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 47
     :cond_f
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 48
     :cond_10
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     :cond_11
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 49
     :cond_12
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 50
     :cond_13
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 51
     :cond_14
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 52
     :cond_15
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 53
     :cond_16
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 .end method
@@ -1172,7 +1172,7 @@
     move-result-object p2
 
     .line 3
-    iget-object p3, p0, Lcom/vk/newsfeed/posting/PostingFragment;->H:Lcom/vk/mentions/j;
+    iget-object p3, p0, Lcom/vk/newsfeed/posting/PostingFragment;->H:Lcom/vk/mentions/MentionSelectInterfaces1;
 
     const/4 v0, 0x0
 
@@ -1180,7 +1180,7 @@
 
     if-eqz p3, :cond_1
 
-    invoke-interface {p3, p1}, Lcom/vk/mentions/j;->a(Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-interface {p3, p1}, Lcom/vk/mentions/MentionSelectInterfaces1;->a(Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p3
 
@@ -1196,11 +1196,11 @@
     move-result v2
 
     .line 5
-    iget-object v3, p0, Lcom/vk/newsfeed/posting/PostingFragment;->H:Lcom/vk/mentions/j;
+    iget-object v3, p0, Lcom/vk/newsfeed/posting/PostingFragment;->H:Lcom/vk/mentions/MentionSelectInterfaces1;
 
     if-eqz v3, :cond_0
 
-    invoke-interface {v3, v2}, Lcom/vk/mentions/j;->a(I)V
+    invoke-interface {v3, v2}, Lcom/vk/mentions/MentionSelectInterfaces1;->a(I)V
 
     .line 6
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
@@ -1217,13 +1217,13 @@
 
     .line 9
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 10
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -1242,7 +1242,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroy()V
 
     .line 2
     sget-object v0, Lcom/vk/newsfeed/posting/PostingInteractor;->e:Lcom/vk/newsfeed/posting/PostingInteractor$a;
@@ -1278,10 +1278,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/newsfeed/posting/d;
+    check-cast v2, Lcom/vk/newsfeed/posting/PostingContracts10;
 
     .line 3
-    invoke-interface {v2}, Lcom/vk/newsfeed/posting/d;->onDestroyView()V
+    invoke-interface {v2}, Lcom/vk/newsfeed/posting/PostingContracts10;->onDestroyView()V
 
     goto :goto_0
 
@@ -1308,7 +1308,7 @@
 
     .line 5
     :cond_2
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroyView()V
 
     return-void
 
@@ -1316,7 +1316,7 @@
     const-string v0, "postingViews"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -1325,7 +1325,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onResume()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -1350,13 +1350,13 @@
     const-string v1, "it"
 
     .line 4
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/PostingFragment;->R3()I
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/a;->a(Landroid/app/Activity;I)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ActivityExt;->a(Landroid/app/Activity;I)V
 
     :cond_0
     return-void
@@ -1366,7 +1366,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/c;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/BaseMvpFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
     iget-object p2, p0, Lcom/vk/newsfeed/posting/PostingFragment;->G:Ljava/util/ArrayList;
@@ -1391,10 +1391,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/newsfeed/posting/d;
+    check-cast v1, Lcom/vk/newsfeed/posting/PostingContracts10;
 
     .line 4
-    invoke-interface {v1, p1}, Lcom/vk/newsfeed/posting/d;->a(Landroid/view/View;)V
+    invoke-interface {v1, p1}, Lcom/vk/newsfeed/posting/PostingContracts10;->a(Landroid/view/View;)V
 
     goto :goto_0
 
@@ -1428,7 +1428,7 @@
 
     const-string v1, "resources"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -1436,7 +1436,7 @@
 
     const-string v1, "resources.configuration"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p2}, Lcom/vk/newsfeed/posting/PostingFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
@@ -1448,7 +1448,7 @@
     const-string v1, "it"
 
     .line 9
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x10102eb
 
@@ -1469,11 +1469,11 @@
     sub-int/2addr v1, p2
 
     .line 10
-    iget-object p2, p0, Lcom/vk/newsfeed/posting/PostingFragment;->H:Lcom/vk/mentions/j;
+    iget-object p2, p0, Lcom/vk/newsfeed/posting/PostingFragment;->H:Lcom/vk/mentions/MentionSelectInterfaces1;
 
     if-eqz p2, :cond_3
 
-    invoke-interface {p2, v1}, Lcom/vk/mentions/j;->b(I)V
+    invoke-interface {p2, v1}, Lcom/vk/mentions/MentionSelectInterfaces1;->b(I)V
 
     const p2, 0x7f0a0a6b
 
@@ -1487,7 +1487,7 @@
     const-string p2, "editText"
 
     .line 12
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/widget/EditText;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -1526,13 +1526,13 @@
     const-string p1, "mentionViewController"
 
     .line 14
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 15
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -1540,7 +1540,7 @@
     const-string p1, "postingViews"
 
     .line 16
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method

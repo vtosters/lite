@@ -87,11 +87,11 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$f0;->c:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {p1}, Lcom/vtosters/lite/ui/WriteBar;->b(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vtosters/lite/ui/widget/f;
+    invoke-static {p1}, Lcom/vtosters/lite/ui/WriteBar;->b(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/widget/f;->b()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->b()Landroid/view/View;
 
     move-result-object p1
 
@@ -100,11 +100,11 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar$f0;->c:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->b(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vtosters/lite/ui/widget/f;
+    invoke-static {v0}, Lcom/vtosters/lite/ui/WriteBar;->b(Lcom/vtosters/lite/ui/WriteBar;)Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/widget/f;->d()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/widget/VoiceRecordControlPopupWindow;->d()Z
 
     move-result v0
 
@@ -158,7 +158,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 9
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$f0;->c:Lcom/vtosters/lite/ui/WriteBar;
@@ -169,7 +169,7 @@
 
     const/4 p2, 0x4
 
-    invoke-static {p1, p2}, Ld/a/a/c/e;->a(Landroid/view/View;I)V
+    invoke-static {p1, p2}, Lme/grishka/appkit/utils/V;->a(Landroid/view/View;I)V
 
     .line 10
     iget-object p1, p0, Lcom/vtosters/lite/ui/WriteBar$f0;->c:Lcom/vtosters/lite/ui/WriteBar;

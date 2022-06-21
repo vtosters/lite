@@ -3,7 +3,7 @@
 .source "VKApplication.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/Long;",
         ">;"
     }
@@ -59,7 +59,7 @@
     .locals 2
 
     .line 2
-    invoke-static {}, Lcom/vk/utils/g/a;->c()J
+    invoke-static {}, Lcom/vk/utils/g/ServerClock;->c()J
 
     move-result-wide v0
 

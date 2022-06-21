@@ -3,7 +3,7 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/qrcode/QRViewUtils$forPost$1$$special$$inlined$let$lambda$3;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/qrcode/QRViewUtils$forPost$1$$special$$inlined$let$lambda$3;->this$0:Lcom/vk/qrcode/QRViewUtils$forPost$1;
 
-    iget-object v2, v1, Lcom/vk/qrcode/QRViewUtils$forPost$1;->b:Lcom/vk/qrcode/i;
+    iget-object v2, v1, Lcom/vk/qrcode/QRViewUtils$forPost$1;->b:Lcom/vk/qrcode/QRTypes7;
 
     iget-object v3, p0, Lcom/vk/qrcode/QRViewUtils$forPost$1$$special$$inlined$let$lambda$3;->$post:Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -87,7 +87,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/qrcode/l;->a(Lcom/vk/qrcode/l;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/vk/qrcode/QRTypes6;->a(Lcom/vk/qrcode/QRTypes6;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 4
     iget-object v1, p0, Lcom/vk/qrcode/QRViewUtils$forPost$1$$special$$inlined$let$lambda$3;->$post:Lcom/vk/dto/newsfeed/entries/Post;

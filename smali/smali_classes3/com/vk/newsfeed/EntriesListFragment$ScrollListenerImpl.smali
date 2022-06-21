@@ -59,11 +59,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/EntriesListFragment$ScrollListenerImpl;->a:Lcom/vk/newsfeed/EntriesListFragment;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
 
     move-result-object v0
 
-    invoke-interface {v0, p2, p3}, Lcom/vk/newsfeed/contracts/e;->a(II)V
+    invoke-interface {v0, p2, p3}, Lcom/vk/newsfeed/contracts/EntriesListContract;->a(II)V
 
     .line 3
     iget-object p2, p0, Lcom/vk/newsfeed/EntriesListFragment$ScrollListenerImpl;->a:Lcom/vk/newsfeed/EntriesListFragment;

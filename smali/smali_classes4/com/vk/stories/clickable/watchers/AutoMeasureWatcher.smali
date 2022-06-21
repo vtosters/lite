@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/stories/clickable/b;
+.field private a:Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
 .field private final b:Landroid/widget/EditText;
 
@@ -17,11 +17,11 @@
 
 .field private e:I
 
-.field private f:Lcom/vk/stories/clickable/b;
+.field private f:Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/EditText;IIILcom/vk/stories/clickable/b;)V
+.method public constructor <init>(Landroid/widget/EditText;IIILcom/vk/stories/clickable/SingleLineTextMeasureHelper;)V
     .locals 0
 
     .line 1
@@ -35,17 +35,17 @@
 
     iput p4, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->e:I
 
-    iput-object p5, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->f:Lcom/vk/stories/clickable/b;
+    iput-object p5, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->f:Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
     .line 2
-    iget-object p1, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->f:Lcom/vk/stories/clickable/b;
+    iget-object p1, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->f:Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
     if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lcom/vk/stories/clickable/b;
+    new-instance p1, Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
     iget-object p2, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->b:Landroid/widget/EditText;
 
@@ -55,17 +55,17 @@
 
     const-string p3, "editText.paint"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p1, p2}, Lcom/vk/stories/clickable/b;-><init>(Landroid/graphics/Paint;)V
+    invoke-direct {p1, p2}, Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;-><init>(Landroid/graphics/Paint;)V
 
     :goto_0
-    iput-object p1, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->a:Lcom/vk/stories/clickable/b;
+    iput-object p1, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->a:Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/widget/EditText;IIILcom/vk/stories/clickable/b;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/widget/EditText;IIILcom/vk/stories/clickable/SingleLineTextMeasureHelper;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x10
@@ -88,7 +88,7 @@
     move v4, p4
 
     .line 3
-    invoke-direct/range {v0 .. v5}, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;-><init>(Landroid/widget/EditText;IIILcom/vk/stories/clickable/b;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;-><init>(Landroid/widget/EditText;IIILcom/vk/stories/clickable/SingleLineTextMeasureHelper;)V
 
     return-void
 .end method
@@ -127,7 +127,7 @@
     move-result-object p1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->a:Lcom/vk/stories/clickable/b;
+    iget-object v0, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->a:Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
     .line 3
     iget v1, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->d:I
@@ -143,16 +143,16 @@
     const/4 v4, 0x0
 
     .line 6
-    invoke-virtual {v0, v4, v1, v2, v3}, Lcom/vk/stories/clickable/b;->a(IILkotlin/jvm/b/a;I)I
+    invoke-virtual {v0, v4, v1, v2, v3}, Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;->a(IILkotlin/jvm/b/Functions;I)I
 
     move-result v0
 
     .line 7
-    iget-object v1, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->a:Lcom/vk/stories/clickable/b;
+    iget-object v1, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->a:Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
     iget v2, p0, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;->c:I
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/stories/clickable/b;->a(II)Z
+    invoke-virtual {v1, v2, v0}, Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;->a(II)Z
 
     move-result v1
 
@@ -182,7 +182,7 @@
 
     int-to-float p2, v0
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;F)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;F)V
 
     :cond_1
     :goto_0

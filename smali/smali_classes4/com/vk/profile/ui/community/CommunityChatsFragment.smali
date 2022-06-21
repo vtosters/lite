@@ -1,9 +1,9 @@
 .class public final Lcom/vk/profile/ui/community/CommunityChatsFragment;
-.super Lcom/vk/core/fragments/c;
+.super Lcom/vk/core/fragments/BaseMvpFragment;
 .source "CommunityChatsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/profile/presenter/b;
+.implements Lcom/vk/profile/presenter/CommunityChatsContract1;
 
 
 # annotations
@@ -16,10 +16,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/c<",
-        "Lcom/vk/profile/presenter/a;",
+        "Lcom/vk/core/fragments/BaseMvpFragment<",
+        "Lcom/vk/profile/presenter/CommunityChatsContract;",
         ">;",
-        "Lcom/vk/profile/presenter/b;"
+        "Lcom/vk/profile/presenter/CommunityChatsContract1;"
     }
 .end annotation
 
@@ -41,7 +41,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
 
     return-void
 .end method
@@ -70,7 +70,7 @@
     .locals 8
 
     .line 1
-    new-instance v7, Lcom/vk/webapp/fragments/c$a;
+    new-instance v7, Lcom/vk/webapp/fragments/CommunityManageFragment$a;
 
     iget v0, p0, Lcom/vk/profile/ui/community/CommunityChatsFragment;->J:I
 
@@ -90,13 +90,13 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/webapp/fragments/c$a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/webapp/fragments/CommunityManageFragment$a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    invoke-virtual {v7, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v7, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -123,13 +123,13 @@
     return-void
 .end method
 
-.method public b(Lio/reactivex/disposables/b;)V
+.method public b(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     if-eqz p1, :cond_0
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->b(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -139,7 +139,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -150,7 +150,7 @@
 
     if-eqz p1, :cond_0
 
-    sget-object v1, Lcom/vk/navigation/q;->G:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->G:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -171,7 +171,7 @@
 
     if-eqz p1, :cond_1
 
-    sget-object v0, Lcom/vk/navigation/q;->P:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->P:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
@@ -181,31 +181,31 @@
     iput-boolean v0, p0, Lcom/vk/profile/ui/community/CommunityChatsFragment;->K:Z
 
     .line 4
-    new-instance p1, Lcom/vk/profile/presenter/a;
+    new-instance p1, Lcom/vk/profile/presenter/CommunityChatsContract;
 
     iget v0, p0, Lcom/vk/profile/ui/community/CommunityChatsFragment;->J:I
 
-    invoke-direct {p1, p0, v0}, Lcom/vk/profile/presenter/a;-><init>(Lcom/vk/profile/presenter/b;I)V
+    invoke-direct {p1, p0, v0}, Lcom/vk/profile/presenter/CommunityChatsContract;-><init>(Lcom/vk/profile/presenter/CommunityChatsContract1;I)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/c;->a(Lb/h/r/c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/BaseMvpFragment;->a(Lb/h/r/BaseScreenContract;)V
 
     .line 5
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/a;->j()Lc/a/m;
+    invoke-virtual {p1}, Lcom/vk/im/engine/ImEngine;->j()Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 6
     sget-object v0, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->j()Lc/a/s;
+    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->j()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -214,16 +214,16 @@
 
     invoke-direct {v0, p0}, Lcom/vk/profile/ui/community/CommunityChatsFragment$b;-><init>(Lcom/vk/profile/ui/community/CommunityChatsFragment;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "imEngine.observeEvents()\u2026.subscribe(MsgListener())"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
-    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/b;->b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->b(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -243,7 +243,7 @@
     const-string p2, "view"
 
     .line 2
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0a0d9d
 
@@ -257,7 +257,7 @@
 
     move-object v1, p1
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v1 .. v6}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -274,7 +274,7 @@
 
     if-eqz p2, :cond_b
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
@@ -297,7 +297,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/ui/community/CommunityChatsFragment$onCreateView$1;-><init>(Lcom/vk/profile/ui/community/CommunityChatsFragment;)V
 
-    invoke-static {p2, p0, v1}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p0, v1}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     .line 5
     iget-boolean p2, p0, Lcom/vk/profile/ui/community/CommunityChatsFragment;->K:Z
@@ -352,7 +352,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
@@ -369,19 +369,19 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-boolean v2, p0, Lcom/vk/profile/ui/community/CommunityChatsFragment;->K:Z
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v3
 
     if-eqz v3, :cond_7
 
-    check-cast v3, Lcom/vk/profile/presenter/a;
+    check-cast v3, Lcom/vk/profile/presenter/CommunityChatsContract;
 
-    invoke-direct {p2, v1, v2, v3}, Lcom/vk/profile/adapter/CommunityChatsAdapter;-><init>(Landroid/content/Context;ZLcom/vk/profile/presenter/a;)V
+    invoke-direct {p2, v1, v2, v3}, Lcom/vk/profile/adapter/CommunityChatsAdapter;-><init>(Landroid/content/Context;ZLcom/vk/profile/presenter/CommunityChatsContract;)V
 
     iput-object p2, p0, Lcom/vk/profile/ui/community/CommunityChatsFragment;->I:Lcom/vk/profile/adapter/CommunityChatsAdapter;
 
@@ -398,7 +398,7 @@
     move-object v1, p1
 
     .line 12
-    invoke-static/range {v1 .. v6}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static/range {v1 .. v6}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILandroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -437,7 +437,7 @@
 
     const-string v4, "it.recyclerView"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
@@ -455,7 +455,7 @@
 
     move-result-object v8
 
-    invoke-static {v8, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v8}, Landroid/view/ViewGroup;->getPaddingRight()I
 
@@ -474,7 +474,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
@@ -501,94 +501,94 @@
 
     move-result-object p3
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 25
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/lists/t$o;
+    check-cast p2, Lcom/vk/lists/PaginationHelper$o;
 
-    invoke-static {p2}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
+    invoke-static {p2}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object p2
 
     const/4 p3, 0x5
 
     .line 26
-    invoke-virtual {p2, p3}, Lcom/vk/lists/t$k;->b(I)Lcom/vk/lists/t$k;
+    invoke-virtual {p2, p3}, Lcom/vk/lists/PaginationHelper$k;->b(I)Lcom/vk/lists/PaginationHelper$k;
 
     const/16 p3, 0xf
 
     .line 27
-    invoke-virtual {p2, p3}, Lcom/vk/lists/t$k;->c(I)Lcom/vk/lists/t$k;
+    invoke-virtual {p2, p3}, Lcom/vk/lists/PaginationHelper$k;->c(I)Lcom/vk/lists/PaginationHelper$k;
 
     .line 28
     iget-object p3, p0, Lcom/vk/profile/ui/community/CommunityChatsFragment;->I:Lcom/vk/profile/adapter/CommunityChatsAdapter;
 
-    invoke-virtual {p2, p3}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/t$l;)Lcom/vk/lists/t$k;
+    invoke-virtual {p2, p3}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/PaginationHelper$l;)Lcom/vk/lists/PaginationHelper$k;
 
     const-string p3, "PaginationHelper.createW\u2026DataInfoProvider(adapter)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 29
     iget-object p3, p0, Lcom/vk/profile/ui/community/CommunityChatsFragment;->H:Lcom/vk/lists/RecyclerPaginatedView;
 
     if-eqz p3, :cond_3
 
-    invoke-static {p2, p3}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p2, p3}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     return-object p1
 
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 30
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     :cond_5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 31
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 32
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v7
 
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v7
 
     .line 33
     :cond_9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 
     .line 34
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v7
 
     :cond_b
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v7
 .end method
@@ -608,7 +608,7 @@
     :cond_0
     const-string v0, "recycler"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

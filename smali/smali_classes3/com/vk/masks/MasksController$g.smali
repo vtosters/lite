@@ -3,7 +3,7 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         "Lcom/vk/core/network/RxFileDownloader$c;",
         ">;"

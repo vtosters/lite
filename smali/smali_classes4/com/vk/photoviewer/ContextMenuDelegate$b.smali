@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photoviewer/ContextMenuDelegate;->a(Landroid/widget/EditText;Ljava/util/List;Lkotlin/jvm/b/c;)Landroid/view/ViewGroup;
+    value = Lcom/vk/photoviewer/ContextMenuDelegate;->a(Landroid/widget/EditText;Ljava/util/List;Lkotlin/jvm/b/Functions1;)Landroid/view/ViewGroup;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,18 +20,18 @@
 # instance fields
 .field final synthetic a:Lkotlin/Pair;
 
-.field final synthetic b:Lkotlin/jvm/b/c;
+.field final synthetic b:Lkotlin/jvm/b/Functions1;
 
 .field final synthetic c:Landroid/view/ViewGroup;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/Pair;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lkotlin/jvm/b/c;Landroid/view/ViewGroup;)V
+.method constructor <init>(Lkotlin/Pair;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions1;Landroid/view/ViewGroup;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/photoviewer/ContextMenuDelegate$b;->a:Lkotlin/Pair;
 
-    iput-object p4, p0, Lcom/vk/photoviewer/ContextMenuDelegate$b;->b:Lkotlin/jvm/b/c;
+    iput-object p4, p0, Lcom/vk/photoviewer/ContextMenuDelegate$b;->b:Lkotlin/jvm/b/Functions1;
 
     iput-object p5, p0, Lcom/vk/photoviewer/ContextMenuDelegate$b;->c:Landroid/view/ViewGroup;
 
@@ -46,7 +46,7 @@
     .locals 2
 
     .line 1
-    iget-object p1, p0, Lcom/vk/photoviewer/ContextMenuDelegate$b;->b:Lkotlin/jvm/b/c;
+    iget-object p1, p0, Lcom/vk/photoviewer/ContextMenuDelegate$b;->b:Lkotlin/jvm/b/Functions1;
 
     iget-object v0, p0, Lcom/vk/photoviewer/ContextMenuDelegate$b;->c:Landroid/view/ViewGroup;
 
@@ -56,7 +56,7 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v0, v1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, v1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "AppsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/apps/AppsFragment$s;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/apps/AppsFragment$s;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/dto/apps/a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/dto/apps/AppsEntity;",
         ">;"
     }
 .end annotation
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/apps/AppsFragment$s;
 
-.field final synthetic b:Lcom/vk/lists/t;
+.field final synthetic b:Lcom/vk/lists/PaginationHelper;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/apps/AppsFragment$s;Lcom/vk/lists/t;)V
+.method constructor <init>(Lcom/vk/apps/AppsFragment$s;Lcom/vk/lists/PaginationHelper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/apps/AppsFragment$s$c;->a:Lcom/vk/apps/AppsFragment$s;
 
-    iput-object p2, p0, Lcom/vk/apps/AppsFragment$s$c;->b:Lcom/vk/lists/t;
+    iput-object p2, p0, Lcom/vk/apps/AppsFragment$s$c;->b:Lcom/vk/lists/PaginationHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/apps/a;)V
+.method public final a(Lcom/vk/dto/apps/AppsEntity;)V
     .locals 8
 
     .line 1
@@ -59,7 +59,7 @@
     invoke-direct {v0}, Lcom/vk/dto/common/data/VKList;-><init>()V
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/dto/apps/a;->a()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p1}, Lcom/vk/dto/apps/AppsEntity;->a()Lcom/vk/dto/common/data/VKList;
 
     move-result-object v1
 
@@ -80,7 +80,7 @@
 
     iget-object v3, v3, Lcom/vk/apps/AppsFragment$s;->a:Lcom/vk/apps/AppsFragment;
 
-    invoke-virtual {p1}, Lcom/vk/dto/apps/a;->a()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p1}, Lcom/vk/dto/apps/AppsEntity;->a()Lcom/vk/dto/common/data/VKList;
 
     move-result-object v4
 
@@ -90,7 +90,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/dto/apps/a;->b()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p1}, Lcom/vk/dto/apps/AppsEntity;->b()Lcom/vk/dto/common/data/VKList;
 
     move-result-object p1
 
@@ -124,7 +124,7 @@
 
     const-string v6, "section"
 
-    invoke-static {v3, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v4, v5, v3}, Lcom/vk/apps/AppsFragment$j;-><init>(Lcom/vk/apps/AppsFragment;Lcom/vk/dto/apps/AppsSection;)V
 
@@ -324,13 +324,13 @@
     invoke-virtual {p1, v0}, Lcom/vk/apps/AppsFragment$b;->setItems(Ljava/util/List;)V
 
     .line 21
-    iget-object p1, p0, Lcom/vk/apps/AppsFragment$s$c;->b:Lcom/vk/lists/t;
+    iget-object p1, p0, Lcom/vk/apps/AppsFragment$s$c;->b:Lcom/vk/lists/PaginationHelper;
 
     if-eqz p1, :cond_a
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/t;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/PaginationHelper;->a(Ljava/lang/String;)V
 
     :cond_a
     return-void
@@ -340,9 +340,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/apps/a;
+    check-cast p1, Lcom/vk/dto/apps/AppsEntity;
 
-    invoke-virtual {p0, p1}, Lcom/vk/apps/AppsFragment$s$c;->a(Lcom/vk/dto/apps/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/apps/AppsFragment$s$c;->a(Lcom/vk/dto/apps/AppsEntity;)V
 
     return-void
 .end method

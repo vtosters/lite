@@ -3,7 +3,7 @@
 .source "ObservableScalarXMap.java"
 
 # interfaces
-.implements Lc/a/a0/b/f;
+.implements Lc/a/a0/b/QueueDisposable;
 .implements Ljava/lang/Runnable;
 
 
@@ -23,7 +23,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lc/a/a0/b/f<",
+        "Lc/a/a0/b/QueueDisposable<",
         "TT;>;",
         "Ljava/lang/Runnable;"
     }
@@ -35,10 +35,10 @@
 
 
 # instance fields
-.field final observer:Lc/a/r;
+.field final observer:Lio/reactivex/Observer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;"
         }
     .end annotation
@@ -54,12 +54,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lc/a/r;Ljava/lang/Object;)V
+.method public constructor <init>(Lio/reactivex/Observer;Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;TT;)V"
         }
     .end annotation
@@ -68,7 +68,7 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$ScalarDisposable;->observer:Lc/a/r;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$ScalarDisposable;->observer:Lio/reactivex/Observer;
 
     .line 3
     iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$ScalarDisposable;->value:Ljava/lang/Object;
@@ -242,11 +242,11 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$ScalarDisposable;->observer:Lc/a/r;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$ScalarDisposable;->observer:Lio/reactivex/Observer;
 
     iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$ScalarDisposable;->value:Ljava/lang/Object;
 
-    invoke-interface {v0, v2}, Lc/a/r;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, v2}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
 
     .line 3
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -261,9 +261,9 @@
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
     .line 5
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$ScalarDisposable;->observer:Lc/a/r;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableScalarXMap$ScalarDisposable;->observer:Lio/reactivex/Observer;
 
-    invoke-interface {v0}, Lc/a/r;->b()V
+    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
 
     :cond_0
     return-void

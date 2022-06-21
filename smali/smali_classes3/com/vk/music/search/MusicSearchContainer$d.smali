@@ -3,12 +3,12 @@
 .source "MusicSearchContainer.kt"
 
 # interfaces
-.implements Lcom/vk/music/search/b$a;
+.implements Lcom/vk/music/search/MusicSearchModel$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/search/MusicSearchContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/search/c;)V
+    value = Lcom/vk/music/search/MusicSearchContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/search/MusicSearchModelImpl;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

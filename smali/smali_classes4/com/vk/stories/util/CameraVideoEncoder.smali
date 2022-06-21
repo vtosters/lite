@@ -22,7 +22,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lb/h/p/a;",
+            "Lb/h/p/MediaEncoder;",
             ">;"
         }
     .end annotation
@@ -30,7 +30,7 @@
 
 .field private final c:Lcom/vk/stories/util/CameraVideoEncoder$b;
 
-.field private final d:Lb/h/p/a$e;
+.field private final d:Lb/h/p/MediaEncoder$e;
 
 .field private e:Ljava/io/File;
 
@@ -63,7 +63,7 @@
     if-eqz p3, :cond_0
 
     .line 4
-    invoke-static {}, Lb/h/g/m/d;->l()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->l()Ljava/io/File;
 
     move-result-object p2
 
@@ -75,14 +75,14 @@
     if-eqz p2, :cond_1
 
     .line 5
-    invoke-static {}, Lb/h/g/m/d;->x()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->x()Ljava/io/File;
 
     move-result-object p2
 
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lb/h/g/m/d;->A()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->A()Ljava/io/File;
 
     move-result-object p2
 
@@ -98,12 +98,12 @@
 
     invoke-direct {p1, p0}, Lcom/vk/stories/util/CameraVideoEncoder$a;-><init>(Lcom/vk/stories/util/CameraVideoEncoder;)V
 
-    iput-object p1, p0, Lcom/vk/stories/util/CameraVideoEncoder;->d:Lb/h/p/a$e;
+    iput-object p1, p0, Lcom/vk/stories/util/CameraVideoEncoder;->d:Lb/h/p/MediaEncoder$e;
 
     .line 8
     iget-object p1, p0, Lcom/vk/stories/util/CameraVideoEncoder;->e:Ljava/io/File;
 
-    invoke-static {p1}, Lb/h/g/m/d;->m(Ljava/io/File;)V
+    invoke-static {p1}, Lb/h/g/m/FileUtils;->m(Ljava/io/File;)V
 
     return-void
 .end method
@@ -312,7 +312,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/g/m/d;->i(Ljava/io/File;)Z
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->i(Ljava/io/File;)Z
 
     move-result v0
 
@@ -325,7 +325,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/stories/t0;->a(Ljava/io/File;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/vk/stories/StoriesProcessor;->a(Ljava/io/File;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -401,7 +401,7 @@
     .line 13
     :cond_3
     :try_start_0
-    invoke-static {}, Lb/h/g/m/d;->x()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->x()Ljava/io/File;
 
     move-result-object v6
     :try_end_0
@@ -430,7 +430,7 @@
 
     move-object v8, v6
 
-    invoke-static/range {v7 .. v12}, Lcom/vk/attachpicker/videotrim/a;->b(Ljava/io/File;Ljava/io/File;JJ)V
+    invoke-static/range {v7 .. v12}, Lcom/vk/attachpicker/videotrim/VideoTrimmer;->b(Ljava/io/File;Ljava/io/File;JJ)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
@@ -535,7 +535,7 @@
 
     .line 22
     :goto_2
-    invoke-static {v6}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
+    invoke-static {v6}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
 
     .line 23
     invoke-direct {p0, v7}, Lcom/vk/stories/util/CameraVideoEncoder;->b(Ljava/lang/Exception;)V
@@ -548,13 +548,13 @@
     .line 24
     :goto_3
     :try_start_2
-    new-instance v7, Lb/h/p/a$a;
+    new-instance v7, Lb/h/p/MediaEncoder$a;
 
     iget-object v8, p0, Lcom/vk/stories/util/CameraVideoEncoder;->e:Ljava/io/File;
 
-    iget-object v9, p0, Lcom/vk/stories/util/CameraVideoEncoder;->d:Lb/h/p/a$e;
+    iget-object v9, p0, Lcom/vk/stories/util/CameraVideoEncoder;->d:Lb/h/p/MediaEncoder$e;
 
-    invoke-direct {v7, v6, v8, v9}, Lb/h/p/a$a;-><init>(Ljava/io/File;Ljava/io/File;Lb/h/p/a$e;)V
+    invoke-direct {v7, v6, v8, v9}, Lb/h/p/MediaEncoder$a;-><init>(Ljava/io/File;Ljava/io/File;Lb/h/p/MediaEncoder$e;)V
 
     if-eqz v0, :cond_6
 
@@ -591,7 +591,7 @@
 
     .line 28
     :cond_5
-    new-instance v6, Lb/h/p/d/b;
+    new-instance v6, Lb/h/p/d/DecoderBitmap;
 
     iget-object v8, p0, Lcom/vk/stories/util/CameraVideoEncoder;->g:Lcom/vk/stories/util/CameraVideoEncoder$e;
 
@@ -601,25 +601,25 @@
 
     int-to-long v9, v0
 
-    invoke-static {}, Lb/h/g/m/d;->x()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->x()Ljava/io/File;
 
     move-result-object v0
 
-    invoke-direct {v6, v8, v9, v10, v0}, Lb/h/p/d/b;-><init>(Landroid/graphics/Bitmap;JLjava/io/File;)V
+    invoke-direct {v6, v8, v9, v10, v0}, Lb/h/p/d/DecoderBitmap;-><init>(Landroid/graphics/Bitmap;JLjava/io/File;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_6
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     .line 29
     :try_start_3
-    invoke-virtual {v7, v6}, Lb/h/p/a$a;->a(Lb/h/p/a$c;)V
+    invoke-virtual {v7, v6}, Lb/h/p/MediaEncoder$a;->a(Lb/h/p/MediaEncoder$c;)V
 
     .line 30
-    invoke-static {}, Lb/h/p/c;->b()I
+    invoke-static {}, Lb/h/p/MediaUtils;->b()I
 
     move-result v0
 
-    invoke-virtual {v7, v0}, Lb/h/p/a$a;->c(I)V
+    invoke-virtual {v7, v0}, Lb/h/p/MediaEncoder$a;->c(I)V
 
     goto :goto_4
 
@@ -644,11 +644,11 @@
 
     .line 32
     :cond_7
-    invoke-static {}, Lb/h/p/c;->b()I
+    invoke-static {}, Lb/h/p/MediaUtils;->b()I
 
     move-result v0
 
-    invoke-virtual {v7, v0}, Lb/h/p/a$a;->c(I)V
+    invoke-virtual {v7, v0}, Lb/h/p/MediaEncoder$a;->c(I)V
 
     .line 33
     :cond_8
@@ -658,7 +658,7 @@
 
     move-result v0
 
-    invoke-virtual {v7, v0}, Lb/h/p/a$a;->b(Z)V
+    invoke-virtual {v7, v0}, Lb/h/p/MediaEncoder$a;->b(Z)V
 
     .line 34
     iget-object v0, p0, Lcom/vk/stories/util/CameraVideoEncoder;->f:Lcom/vk/stories/util/CameraVideoEncoder$Parameters;
@@ -667,7 +667,7 @@
 
     move-result v0
 
-    invoke-virtual {v7, v0}, Lb/h/p/a$a;->e(I)V
+    invoke-virtual {v7, v0}, Lb/h/p/MediaEncoder$a;->e(I)V
 
     .line 35
     iget-object v0, p0, Lcom/vk/stories/util/CameraVideoEncoder;->f:Lcom/vk/stories/util/CameraVideoEncoder$Parameters;
@@ -676,7 +676,7 @@
 
     move-result v0
 
-    invoke-virtual {v7, v0}, Lb/h/p/a$a;->d(I)V
+    invoke-virtual {v7, v0}, Lb/h/p/MediaEncoder$a;->d(I)V
 
     .line 36
     iget-object v0, p0, Lcom/vk/stories/util/CameraVideoEncoder;->f:Lcom/vk/stories/util/CameraVideoEncoder$Parameters;
@@ -685,7 +685,7 @@
 
     move-result v0
 
-    invoke-virtual {v7, v0}, Lb/h/p/a$a;->c(Z)V
+    invoke-virtual {v7, v0}, Lb/h/p/MediaEncoder$a;->c(Z)V
 
     .line 37
     iget-object v0, p0, Lcom/vk/stories/util/CameraVideoEncoder;->f:Lcom/vk/stories/util/CameraVideoEncoder$Parameters;
@@ -694,7 +694,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v7, v0}, Lb/h/p/a$a;->a([F)V
+    invoke-virtual {v7, v0}, Lb/h/p/MediaEncoder$a;->a([F)V
 
     .line 38
     iget-object v0, p0, Lcom/vk/stories/util/CameraVideoEncoder;->f:Lcom/vk/stories/util/CameraVideoEncoder$Parameters;
@@ -703,7 +703,7 @@
 
     move-result v0
 
-    invoke-virtual {v7, v0}, Lb/h/p/a$a;->a(I)V
+    invoke-virtual {v7, v0}, Lb/h/p/MediaEncoder$a;->a(I)V
 
     .line 39
     iget-object v0, p0, Lcom/vk/stories/util/CameraVideoEncoder;->f:Lcom/vk/stories/util/CameraVideoEncoder$Parameters;
@@ -733,7 +733,7 @@
 
     move-result-object v9
 
-    invoke-virtual {v9, v8}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/w0;
+    invoke-virtual {v9, v8}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/StoryRenderingLayer;
 
     move-result-object v8
 
@@ -743,7 +743,7 @@
 
     .line 43
     :cond_a
-    invoke-virtual {v7, v8}, Lb/h/p/a$a;->a(Lb/h/p/a$b;)V
+    invoke-virtual {v7, v8}, Lb/h/p/MediaEncoder$a;->a(Lb/h/p/MediaEncoder$b;)V
 
     :goto_6
     add-int/lit8 v1, v1, 0x1
@@ -767,7 +767,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v7, v0}, Lb/h/p/a$a;->a(Ljava/io/File;)V
+    invoke-virtual {v7, v0}, Lb/h/p/MediaEncoder$a;->a(Ljava/io/File;)V
 
     .line 46
     iget-object v0, p0, Lcom/vk/stories/util/CameraVideoEncoder;->f:Lcom/vk/stories/util/CameraVideoEncoder$Parameters;
@@ -776,16 +776,16 @@
 
     move-result v0
 
-    invoke-virtual {v7, v0}, Lb/h/p/a$a;->b(I)V
+    invoke-virtual {v7, v0}, Lb/h/p/MediaEncoder$a;->b(I)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     .line 47
-    invoke-virtual {v7, v0}, Lb/h/p/a$a;->a(F)V
+    invoke-virtual {v7, v0}, Lb/h/p/MediaEncoder$a;->a(F)V
 
     .line 48
     :cond_c
-    invoke-virtual {v7, v2}, Lb/h/p/a$a;->a(Z)Lb/h/p/a;
+    invoke-virtual {v7, v2}, Lb/h/p/MediaEncoder$a;->a(Z)Lb/h/p/MediaEncoder;
 
     move-result-object v0
     :try_end_3
@@ -799,7 +799,7 @@
     invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
     .line 50
-    invoke-interface {v0}, Lb/h/p/a;->b()Z
+    invoke-interface {v0}, Lb/h/p/MediaEncoder;->b()Z
 
     move-result v1
     :try_end_4
@@ -811,7 +811,7 @@
     if-eqz v0, :cond_d
 
     .line 51
-    invoke-interface {v0}, Lb/h/p/a;->a()V
+    invoke-interface {v0}, Lb/h/p/MediaEncoder;->a()V
 
     .line 52
     :cond_d
@@ -894,7 +894,7 @@
     :try_start_6
     iget-object v2, p0, Lcom/vk/stories/util/CameraVideoEncoder;->e:Ljava/io/File;
 
-    invoke-static {v2}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
+    invoke-static {v2}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
 
     .line 55
     iput-object v5, p0, Lcom/vk/stories/util/CameraVideoEncoder;->e:Ljava/io/File;
@@ -907,7 +907,7 @@
     if-eqz v1, :cond_f
 
     .line 57
-    invoke-interface {v1}, Lb/h/p/a;->a()V
+    invoke-interface {v1}, Lb/h/p/MediaEncoder;->a()V
 
     .line 58
     :cond_f
@@ -919,7 +919,7 @@
 
     .line 59
     :goto_8
-    invoke-virtual {v6}, Lb/h/p/d/b;->g()V
+    invoke-virtual {v6}, Lb/h/p/d/DecoderBitmap;->g()V
 
     .line 60
     :cond_10
@@ -946,7 +946,7 @@
     if-eqz v1, :cond_11
 
     .line 61
-    invoke-interface {v1}, Lb/h/p/a;->a()V
+    invoke-interface {v1}, Lb/h/p/MediaEncoder;->a()V
 
     .line 62
     :cond_11
@@ -957,7 +957,7 @@
     if-eqz v6, :cond_12
 
     .line 63
-    invoke-virtual {v6}, Lb/h/p/d/b;->g()V
+    invoke-virtual {v6}, Lb/h/p/d/DecoderBitmap;->g()V
 
     .line 64
     :cond_12

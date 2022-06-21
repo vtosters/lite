@@ -1,5 +1,5 @@
 .class public final Lcom/vk/dto/music/Playlist$c;
-.super Lcom/vk/dto/common/data/c;
+.super Lcom/vk/dto/common/data/JsonParser;
 .source "Playlist.kt"
 
 
@@ -21,7 +21,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/dto/common/data/c<",
+        "Lcom/vk/dto/common/data/JsonParser<",
         "Lcom/vk/dto/music/Playlist;",
         ">;"
     }
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/music/Playlist$c$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/music/Playlist$c$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/music/Playlist$c;->b:Lcom/vk/dto/music/Playlist$c$a;
 
@@ -51,7 +51,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/data/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/data/JsonParser;-><init>()V
 
     return-void
 .end method

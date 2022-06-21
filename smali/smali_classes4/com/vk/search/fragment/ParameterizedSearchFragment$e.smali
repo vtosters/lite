@@ -3,12 +3,12 @@
 .source "ParameterizedSearchFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/search/fragment/ParameterizedSearchFragment;->a(Lcom/vk/lists/t;Z)Lc/a/m;
+    value = Lcom/vk/search/fragment/ParameterizedSearchFragment;->a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,9 +22,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/common/data/VKList<",
-        "Lcom/vk/common/i/b;",
+        "Lcom/vk/common/i/RecyclerItem;",
         ">;>;"
     }
 .end annotation
@@ -53,7 +53,7 @@
         value = {
             "(",
             "Lcom/vk/dto/common/data/VKList<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;)V"
         }
     .end annotation
@@ -61,11 +61,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/search/fragment/ParameterizedSearchFragment$e;->a:Lcom/vk/search/fragment/ParameterizedSearchFragment;
 
-    invoke-virtual {p1}, Lcom/vk/search/fragment/BaseSearchFragment;->P4()Lcom/vk/search/b/a;
+    invoke-virtual {p1}, Lcom/vk/search/fragment/BaseSearchFragment;->P4()Lcom/vk/search/b/BaseSearchAdapter;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {p1}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     return-void
 .end method

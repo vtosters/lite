@@ -3,12 +3,12 @@
 .source "QRUtils.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRUtils;->a(Landroid/widget/ImageView;)Lc/a/m;
+    value = Lcom/vk/qrcode/QRUtils;->a(Landroid/widget/ImageView;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/io/File;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, p1, v1}, Lb/h/g/m/a;->a(Landroid/content/Context;Ljava/io/File;Landroid/media/MediaScannerConnection$OnScanCompletedListener;)V
+    invoke-static {v0, p1, v1}, Lb/h/g/m/CameraUtils;->a(Landroid/content/Context;Ljava/io/File;Landroid/media/MediaScannerConnection$OnScanCompletedListener;)V
 
     return-void
 .end method

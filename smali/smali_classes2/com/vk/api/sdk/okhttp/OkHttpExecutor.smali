@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic j:[Lkotlin/u/j;
+.field static final synthetic j:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -22,7 +22,7 @@
 
 .field private final c:Ljava/lang/Object;
 
-.field private final d:Lkotlin/e;
+.field private final d:Lkotlin/Lazy2;
 
 .field private final e:Ljava/lang/String;
 
@@ -34,13 +34,13 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/LongSparseArray<",
-            "Lokhttp3/x;",
+            "Lokhttp3/OkHttpClient;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final i:Lcom/vk/api/sdk/okhttp/b;
+.field private final i:Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
 
 # direct methods
@@ -49,13 +49,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -63,32 +63,32 @@
 
     const-string v4, "getOkHttpProvider()Lcom/vk/api/sdk/VKOkHttpProvider;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->j:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->j:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/api/sdk/okhttp/b;)V
+.method public constructor <init>(Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/b;
+    iput-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
     const/16 p1, 0x1f4
 
@@ -96,9 +96,9 @@
     iput p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a:I
 
     .line 3
-    iget-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/b;
+    iget-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/b;->c()Landroid/content/Context;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;->c()Landroid/content/Context;
 
     move-result-object p1
 
@@ -116,34 +116,34 @@
 
     invoke-direct {p1, p0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor$okHttpProvider$2;-><init>(Lcom/vk/api/sdk/okhttp/OkHttpExecutor;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->d:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->d:Lkotlin/Lazy2;
 
     .line 6
-    iget-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/b;
+    iget-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/b;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;->e()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->e:Ljava/lang/String;
 
     .line 7
-    iget-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/b;
+    iget-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/b;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;->a()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->f:Ljava/lang/String;
 
     .line 8
-    iget-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/b;
+    iget-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/b;->j()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;->j()Ljava/lang/String;
 
     move-result-object p1
 
@@ -187,23 +187,23 @@
 
     const-string v0, "URLEncoder.encode(fileNa\u2026ace(\"\\\"\", \"\\\\\\\"\"), UTF_8)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method private final a(Lokhttp3/w$a;Ljava/util/Map;)Lokhttp3/w$a;
+.method private final a(Lokhttp3/MultipartBody$a;Ljava/util/Map;)Lokhttp3/MultipartBody$a;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lokhttp3/w$a;",
+            "Lokhttp3/MultipartBody$a;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "+",
-            "Lcom/vk/api/sdk/internal/b;",
+            "Lcom/vk/api/sdk/internal/HttpMultipartEntry;",
             ">;)",
-            "Lokhttp3/w$a;"
+            "Lokhttp3/MultipartBody$a;"
         }
     .end annotation
 
@@ -240,45 +240,45 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/api/sdk/internal/b;
+    check-cast v0, Lcom/vk/api/sdk/internal/HttpMultipartEntry;
 
     .line 40
-    instance-of v2, v0, Lcom/vk/api/sdk/internal/b$b;
+    instance-of v2, v0, Lcom/vk/api/sdk/internal/HttpMultipartEntry$b;
 
     if-eqz v2, :cond_1
 
     .line 41
-    check-cast v0, Lcom/vk/api/sdk/internal/b$b;
+    check-cast v0, Lcom/vk/api/sdk/internal/HttpMultipartEntry$b;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/internal/b$b;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/api/sdk/internal/HttpMultipartEntry$b;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v1, v0}, Lokhttp3/w$a;->a(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/w$a;
+    invoke-virtual {p1, v1, v0}, Lokhttp3/MultipartBody$a;->a(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/MultipartBody$a;
 
     goto :goto_0
 
     .line 42
     :cond_1
-    instance-of v2, v0, Lcom/vk/api/sdk/internal/b$a;
+    instance-of v2, v0, Lcom/vk/api/sdk/internal/HttpMultipartEntry$a;
 
     if-eqz v2, :cond_0
 
     .line 43
-    new-instance v2, Lcom/vk/api/sdk/okhttp/a;
+    new-instance v2, Lcom/vk/api/sdk/okhttp/FileFullRequestBody;
 
     iget-object v3, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->b:Landroid/content/Context;
 
-    check-cast v0, Lcom/vk/api/sdk/internal/b$a;
+    check-cast v0, Lcom/vk/api/sdk/internal/HttpMultipartEntry$a;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/internal/b$a;->b()Landroid/net/Uri;
+    invoke-virtual {v0}, Lcom/vk/api/sdk/internal/HttpMultipartEntry$a;->b()Landroid/net/Uri;
 
     move-result-object v4
 
-    invoke-direct {v2, v3, v4}, Lcom/vk/api/sdk/okhttp/a;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
+    invoke-direct {v2, v3, v4}, Lcom/vk/api/sdk/okhttp/FileFullRequestBody;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
 
     .line 44
-    invoke-virtual {v0}, Lcom/vk/api/sdk/internal/b$a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/api/sdk/internal/HttpMultipartEntry$a;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -294,7 +294,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v1, v0, v2}, Lokhttp3/w$a;->a(Ljava/lang/String;Ljava/lang/String;Lokhttp3/a0;)Lokhttp3/w$a;
+    invoke-virtual {p1, v1, v0, v2}, Lokhttp3/MultipartBody$a;->a(Ljava/lang/String;Ljava/lang/String;Lokhttp3/RequestBody;)Lokhttp3/MultipartBody$a;
 
     goto :goto_0
 
@@ -302,7 +302,7 @@
     return-object p1
 .end method
 
-.method private final a(J)Lokhttp3/x;
+.method private final a(J)Lokhttp3/OkHttpClient;
     .locals 3
 
     .line 45
@@ -312,21 +312,21 @@
 
     .line 46
     :try_start_0
-    invoke-direct {p0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->h()Lcom/vk/api/sdk/m;
+    invoke-direct {p0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->h()Lcom/vk/api/sdk/VKOkHttpProvider;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/api/sdk/m;->a()Lokhttp3/x;
+    invoke-virtual {v1}, Lcom/vk/api/sdk/VKOkHttpProvider;->a()Lokhttp3/OkHttpClient;
 
     move-result-object v1
 
     .line 47
-    invoke-direct {p0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->g()Lokhttp3/x;
+    invoke-direct {p0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->g()Lokhttp3/OkHttpClient;
 
     move-result-object v2
 
     .line 48
-    invoke-direct {p0, v1, v2}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/x;Lokhttp3/x;)Z
+    invoke-direct {p0, v1, v2}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/OkHttpClient;Lokhttp3/OkHttpClient;)Z
 
     move-result v1
 
@@ -344,7 +344,7 @@
     add-long/2addr p1, v1
 
     .line 51
-    invoke-direct {p0, p1, p2}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->c(J)Lokhttp3/x;
+    invoke-direct {p0, p1, p2}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->c(J)Lokhttp3/OkHttpClient;
 
     move-result-object v1
 
@@ -353,7 +353,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-direct {p0, p1, p2}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->b(J)Lokhttp3/x;
+    invoke-direct {p0, p1, p2}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->b(J)Lokhttp3/OkHttpClient;
 
     move-result-object v1
     :try_end_0
@@ -373,7 +373,7 @@
     throw p1
 .end method
 
-.method private final a(Lcom/vk/api/sdk/m;)V
+.method private final a(Lcom/vk/api/sdk/VKOkHttpProvider;)V
     .locals 1
 
     .line 78
@@ -381,365 +381,365 @@
 
     invoke-direct {v0, p0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor$b;-><init>(Lcom/vk/api/sdk/okhttp/OkHttpExecutor;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/api/sdk/m;->a(Lcom/vk/api/sdk/m$a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/api/sdk/VKOkHttpProvider;->a(Lcom/vk/api/sdk/VKOkHttpProvider$a;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/api/sdk/okhttp/OkHttpExecutor;Lcom/vk/api/sdk/m;)V
+.method public static final synthetic a(Lcom/vk/api/sdk/okhttp/OkHttpExecutor;Lcom/vk/api/sdk/VKOkHttpProvider;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lcom/vk/api/sdk/m;)V
+    invoke-direct {p0, p1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lcom/vk/api/sdk/VKOkHttpProvider;)V
 
     return-void
 .end method
 
-.method private final a(Lokhttp3/x;Lokhttp3/x;)Z
+.method private final a(Lokhttp3/OkHttpClient;Lokhttp3/OkHttpClient;)Z
     .locals 2
 
     .line 53
-    invoke-virtual {p1}, Lokhttp3/x;->e()I
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->e()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->e()I
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->e()I
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
     .line 54
-    invoke-virtual {p1}, Lokhttp3/x;->x()I
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->x()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->x()I
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->x()I
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
     .line 55
-    invoke-virtual {p1}, Lokhttp3/x;->B()I
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->B()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->B()I
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->B()I
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
     .line 56
-    invoke-virtual {p1}, Lokhttp3/x;->s()I
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->s()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->s()I
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->s()I
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
     .line 57
-    invoke-virtual {p1}, Lokhttp3/x;->u()Ljava/net/Proxy;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->u()Ljava/net/Proxy;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->u()Ljava/net/Proxy;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->u()Ljava/net/Proxy;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 58
-    invoke-virtual {p1}, Lokhttp3/x;->w()Ljava/net/ProxySelector;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->w()Ljava/net/ProxySelector;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->w()Ljava/net/ProxySelector;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->w()Ljava/net/ProxySelector;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 59
-    invoke-virtual {p1}, Lokhttp3/x;->h()Lokhttp3/m;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->h()Lokhttp3/CookieJar;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->h()Lokhttp3/m;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->h()Lokhttp3/CookieJar;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 60
-    invoke-virtual {p1}, Lokhttp3/x;->b()Lokhttp3/c;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->b()Lokhttp3/Cache;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->b()Lokhttp3/c;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->b()Lokhttp3/Cache;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 61
-    invoke-virtual {p1}, Lokhttp3/x;->j()Lokhttp3/o;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->j()Lokhttp3/Dns;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->j()Lokhttp3/o;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->j()Lokhttp3/Dns;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 62
-    invoke-virtual {p1}, Lokhttp3/x;->z()Ljavax/net/SocketFactory;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->z()Ljavax/net/SocketFactory;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->z()Ljavax/net/SocketFactory;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->z()Ljavax/net/SocketFactory;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 63
-    invoke-virtual {p1}, Lokhttp3/x;->A()Ljavax/net/ssl/SSLSocketFactory;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->A()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->A()Ljavax/net/ssl/SSLSocketFactory;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->A()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 64
-    invoke-virtual {p1}, Lokhttp3/x;->A()Ljavax/net/ssl/SSLSocketFactory;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->A()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->A()Ljavax/net/ssl/SSLSocketFactory;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->A()Ljavax/net/ssl/SSLSocketFactory;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 65
-    invoke-virtual {p1}, Lokhttp3/x;->n()Ljavax/net/ssl/HostnameVerifier;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->n()Ljavax/net/ssl/HostnameVerifier;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->n()Ljavax/net/ssl/HostnameVerifier;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->n()Ljavax/net/ssl/HostnameVerifier;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 66
-    invoke-virtual {p1}, Lokhttp3/x;->d()Lokhttp3/g;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->d()Lokhttp3/CertificatePinner;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->d()Lokhttp3/g;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->d()Lokhttp3/CertificatePinner;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 67
-    invoke-virtual {p1}, Lokhttp3/x;->a()Lokhttp3/b;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->a()Lokhttp3/Authenticator;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->a()Lokhttp3/b;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->a()Lokhttp3/Authenticator;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 68
-    invoke-virtual {p1}, Lokhttp3/x;->v()Lokhttp3/b;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->v()Lokhttp3/Authenticator;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->v()Lokhttp3/b;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->v()Lokhttp3/Authenticator;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 69
-    invoke-virtual {p1}, Lokhttp3/x;->f()Lokhttp3/j;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->f()Lokhttp3/ConnectionPool;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->f()Lokhttp3/j;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->f()Lokhttp3/ConnectionPool;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 70
-    invoke-virtual {p1}, Lokhttp3/x;->m()Z
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->m()Z
 
     move-result v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->m()Z
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->m()Z
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
     .line 71
-    invoke-virtual {p1}, Lokhttp3/x;->l()Z
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->l()Z
 
     move-result v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->l()Z
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->l()Z
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
     .line 72
-    invoke-virtual {p1}, Lokhttp3/x;->y()Z
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->y()Z
 
     move-result v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->y()Z
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->y()Z
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
     .line 73
-    invoke-virtual {p1}, Lokhttp3/x;->i()Lokhttp3/n;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->i()Lokhttp3/Dispatcher;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->i()Lokhttp3/n;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->i()Lokhttp3/Dispatcher;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 74
-    invoke-virtual {p1}, Lokhttp3/x;->t()Ljava/util/List;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->t()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->t()Ljava/util/List;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->t()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 75
-    invoke-virtual {p1}, Lokhttp3/x;->g()Ljava/util/List;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->g()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->g()Ljava/util/List;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->g()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 76
-    invoke-virtual {p1}, Lokhttp3/x;->o()Ljava/util/List;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->o()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lokhttp3/x;->o()Ljava/util/List;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->o()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 77
-    invoke-virtual {p1}, Lokhttp3/x;->q()Ljava/util/List;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient;->q()Ljava/util/List;
 
     move-result-object p1
 
-    invoke-virtual {p2}, Lokhttp3/x;->q()Ljava/util/List;
+    invoke-virtual {p2}, Lokhttp3/OkHttpClient;->q()Ljava/util/List;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -756,35 +756,35 @@
     return p1
 .end method
 
-.method private final b(J)Lokhttp3/x;
+.method private final b(J)Lokhttp3/OkHttpClient;
     .locals 3
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->h()Lcom/vk/api/sdk/m;
+    invoke-direct {p0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->h()Lcom/vk/api/sdk/VKOkHttpProvider;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/m;->a()Lokhttp3/x;
+    invoke-virtual {v0}, Lcom/vk/api/sdk/VKOkHttpProvider;->a()Lokhttp3/OkHttpClient;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lokhttp3/x;->r()Lokhttp3/x$b;
+    invoke-virtual {v0}, Lokhttp3/OkHttpClient;->r()Lokhttp3/OkHttpClient$b;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, p1, p2, v1}, Lokhttp3/x$b;->b(JLjava/util/concurrent/TimeUnit;)Lokhttp3/x$b;
+    invoke-virtual {v0, p1, p2, v1}, Lokhttp3/OkHttpClient$b;->b(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$b;
 
     .line 5
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, p1, p2, v1}, Lokhttp3/x$b;->a(JLjava/util/concurrent/TimeUnit;)Lokhttp3/x$b;
+    invoke-virtual {v0, p1, p2, v1}, Lokhttp3/OkHttpClient$b;->a(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$b;
 
     .line 6
-    invoke-virtual {v0}, Lokhttp3/x$b;->a()Lokhttp3/x;
+    invoke-virtual {v0}, Lokhttp3/OkHttpClient$b;->a()Lokhttp3/OkHttpClient;
 
     move-result-object v0
 
@@ -793,14 +793,14 @@
 
     const-string v2, "client"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1, p1, p2, v0}, Lcom/vk/api/sdk/utils/a;->a(Landroidx/collection/LongSparseArray;JLjava/lang/Object;)V
+    invoke-static {v1, p1, p2, v0}, Lcom/vk/api/sdk/utils/ApiExt;->a(Landroidx/collection/LongSparseArray;JLjava/lang/Object;)V
 
     return-object v0
 .end method
 
-.method private final c(J)Lokhttp3/x;
+.method private final c(J)Lokhttp3/OkHttpClient;
     .locals 1
 
     .line 2
@@ -810,7 +810,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lokhttp3/x;
+    check-cast p1, Lokhttp3/OkHttpClient;
 
     return-object p1
 .end method
@@ -826,18 +826,18 @@
     return-void
 .end method
 
-.method private final g()Lokhttp3/x;
+.method private final g()Lokhttp3/OkHttpClient;
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/b;
+    iget-object v0, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/okhttp/b;->d()J
+    invoke-virtual {v0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;->d()J
 
     move-result-wide v0
 
     .line 2
-    invoke-direct {p0, v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->c(J)Lokhttp3/x;
+    invoke-direct {p0, v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->c(J)Lokhttp3/OkHttpClient;
 
     move-result-object v2
 
@@ -846,7 +846,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-direct {p0, v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->b(J)Lokhttp3/x;
+    invoke-direct {p0, v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->b(J)Lokhttp3/OkHttpClient;
 
     move-result-object v2
 
@@ -854,22 +854,22 @@
     return-object v2
 .end method
 
-.method private final h()Lcom/vk/api/sdk/m;
+.method private final h()Lcom/vk/api/sdk/VKOkHttpProvider;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->d:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->j:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->j:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/api/sdk/m;
+    check-cast v0, Lcom/vk/api/sdk/VKOkHttpProvider;
 
     return-object v0
 .end method
@@ -885,7 +885,7 @@
     return-object v0
 .end method
 
-.method public a(Lcom/vk/api/sdk/okhttp/c;)Ljava/lang/String;
+.method public a(Lcom/vk/api/sdk/okhttp/OkHttpMethodCall;)Ljava/lang/String;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -902,36 +902,36 @@
 
     iget-object v2, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->g:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/b;
+    iget-object v3, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
-    invoke-virtual {v3}, Lcom/vk/api/sdk/okhttp/b;->b()I
+    invoke-virtual {v3}, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;->b()I
 
     move-result v3
 
-    invoke-virtual {v0, v1, v2, v3, p1}, Lcom/vk/api/sdk/internal/QueryStringGenerator;->a(Ljava/lang/String;Ljava/lang/String;ILcom/vk/api/sdk/okhttp/c;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2, v3, p1}, Lcom/vk/api/sdk/internal/QueryStringGenerator;->a(Ljava/lang/String;Ljava/lang/String;ILcom/vk/api/sdk/okhttp/OkHttpMethodCall;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "application/x-www-form-urlencoded; charset=utf-8"
 
     .line 7
-    invoke-static {v1}, Lokhttp3/v;->b(Ljava/lang/String;)Lokhttp3/v;
+    invoke-static {v1}, Lokhttp3/MediaType;->b(Ljava/lang/String;)Lokhttp3/MediaType;
 
     move-result-object v1
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lcom/vk/api/sdk/okhttp/c;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lcom/vk/api/sdk/okhttp/OkHttpMethodCall;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lokhttp3/a0;->a(Lokhttp3/v;Ljava/lang/String;)Lokhttp3/a0;
+    invoke-static {v1, v0}, Lokhttp3/RequestBody;->a(Lokhttp3/MediaType;Ljava/lang/String;)Lokhttp3/RequestBody;
 
     move-result-object v0
 
     .line 8
-    new-instance v1, Lokhttp3/z$a;
+    new-instance v1, Lokhttp3/Request$a;
 
-    invoke-direct {v1}, Lokhttp3/z$a;-><init>()V
+    invoke-direct {v1}, Lokhttp3/Request$a;-><init>()V
 
     .line 9
-    invoke-virtual {v1, v0}, Lokhttp3/z$a;->a(Lokhttp3/a0;)Lokhttp3/z$a;
+    invoke-virtual {v1, v0}, Lokhttp3/Request$a;->a(Lokhttp3/RequestBody;)Lokhttp3/Request$a;
 
     .line 10
     new-instance v0, Ljava/lang/StringBuilder;
@@ -950,7 +950,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/c;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/OkHttpMethodCall;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -960,23 +960,23 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lokhttp3/z$a;->b(Ljava/lang/String;)Lokhttp3/z$a;
+    invoke-virtual {v1, v0}, Lokhttp3/Request$a;->b(Ljava/lang/String;)Lokhttp3/Request$a;
 
     .line 11
-    sget-object v0, Lokhttp3/d;->n:Lokhttp3/d;
+    sget-object v0, Lokhttp3/CacheControl;->n:Lokhttp3/CacheControl;
 
-    invoke-virtual {v1, v0}, Lokhttp3/z$a;->a(Lokhttp3/d;)Lokhttp3/z$a;
+    invoke-virtual {v1, v0}, Lokhttp3/Request$a;->a(Lokhttp3/CacheControl;)Lokhttp3/Request$a;
 
     .line 12
     const-class v0, Ljava/util/Map;
 
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/c;->c()Lcom/vk/api/sdk/okhttp/f;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/OkHttpMethodCall;->c()Lcom/vk/api/sdk/okhttp/RequestTag;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/f;->a()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/RequestTag;->a()Ljava/util/Map;
 
     move-result-object p1
 
@@ -986,30 +986,30 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {v1, v0, p1}, Lokhttp3/z$a;->a(Ljava/lang/Class;Ljava/lang/Object;)Lokhttp3/z$a;
+    invoke-virtual {v1, v0, p1}, Lokhttp3/Request$a;->a(Ljava/lang/Class;Ljava/lang/Object;)Lokhttp3/Request$a;
 
     .line 13
-    invoke-virtual {v1}, Lokhttp3/z$a;->a()Lokhttp3/z;
+    invoke-virtual {v1}, Lokhttp3/Request$a;->a()Lokhttp3/Request;
 
     move-result-object p1
 
     const-string v0, "request"
 
     .line 14
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/z;)Lokhttp3/b0;
+    invoke-virtual {p0, p1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/Request;)Lokhttp3/Response;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/b0;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/Response;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected final a(Lcom/vk/api/sdk/okhttp/c;Ljava/lang/String;)Ljava/lang/String;
+.method protected final a(Lcom/vk/api/sdk/okhttp/OkHttpMethodCall;Ljava/lang/String;)Ljava/lang/String;
     .locals 12
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1018,7 +1018,7 @@
     .end annotation
 
     .line 27
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/c;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/OkHttpMethodCall;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1100,7 +1100,7 @@
     const/16 v3, 0xf
 
     .line 32
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/c;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/OkHttpMethodCall;->b()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1121,7 +1121,7 @@
     move-object v2, p2
 
     .line 33
-    invoke-direct/range {v2 .. v11}, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;-><init>(ILjava/lang/String;ZLjava/lang/String;Landroid/os/Bundle;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v11}, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;-><init>(ILjava/lang/String;ZLjava/lang/String;Landroid/os/Bundle;Ljava/util/List;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     throw p2
 
@@ -1130,7 +1130,7 @@
     return-object p2
 .end method
 
-.method public final a(Lcom/vk/api/sdk/okhttp/d;Lcom/vk/api/sdk/g;)Ljava/lang/String;
+.method public final a(Lcom/vk/api/sdk/okhttp/OkHttpPostCall;Lcom/vk/api/sdk/VKApiProgressListener;)Ljava/lang/String;
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1141,42 +1141,42 @@
     .end annotation
 
     .line 15
-    new-instance v0, Lokhttp3/w$a;
+    new-instance v0, Lokhttp3/MultipartBody$a;
 
-    invoke-direct {v0}, Lokhttp3/w$a;-><init>()V
+    invoke-direct {v0}, Lokhttp3/MultipartBody$a;-><init>()V
 
     .line 16
-    sget-object v1, Lokhttp3/w;->f:Lokhttp3/v;
+    sget-object v1, Lokhttp3/MultipartBody;->f:Lokhttp3/MediaType;
 
-    invoke-virtual {v0, v1}, Lokhttp3/w$a;->a(Lokhttp3/v;)Lokhttp3/w$a;
+    invoke-virtual {v0, v1}, Lokhttp3/MultipartBody$a;->a(Lokhttp3/MediaType;)Lokhttp3/MultipartBody$a;
 
     const-string v1, "MultipartBody.Builder()\n\u2026tType(MultipartBody.FORM)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 17
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/d;->a()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/OkHttpPostCall;->a()Ljava/util/Map;
 
     move-result-object v1
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/w$a;Ljava/util/Map;)Lokhttp3/w$a;
+    invoke-direct {p0, v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/MultipartBody$a;Ljava/util/Map;)Lokhttp3/MultipartBody$a;
 
     .line 18
-    invoke-virtual {v0}, Lokhttp3/w$a;->a()Lokhttp3/w;
+    invoke-virtual {v0}, Lokhttp3/MultipartBody$a;->a()Lokhttp3/MultipartBody;
 
     move-result-object v0
 
     .line 19
-    new-instance v1, Lcom/vk/api/sdk/okhttp/e;
+    new-instance v1, Lcom/vk/api/sdk/okhttp/ProgressRequestBody;
 
     const-string v2, "body"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, v0, p2}, Lcom/vk/api/sdk/okhttp/e;-><init>(Lokhttp3/a0;Lcom/vk/api/sdk/g;)V
+    invoke-direct {v1, v0, p2}, Lcom/vk/api/sdk/okhttp/ProgressRequestBody;-><init>(Lokhttp3/RequestBody;Lcom/vk/api/sdk/VKApiProgressListener;)V
 
     .line 20
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/d;->b()J
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/OkHttpPostCall;->b()J
 
     move-result-wide v2
 
@@ -1186,66 +1186,66 @@
 
     if-lez p2, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/d;->b()J
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/OkHttpPostCall;->b()J
 
     move-result-wide v2
 
     goto :goto_0
 
     :cond_0
-    iget-object p2, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/b;
+    iget-object p2, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
-    invoke-virtual {p2}, Lcom/vk/api/sdk/okhttp/b;->i()J
+    invoke-virtual {p2}, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;->i()J
 
     move-result-wide v2
 
     .line 21
     :goto_0
-    new-instance p2, Lokhttp3/z$a;
+    new-instance p2, Lokhttp3/Request$a;
 
-    invoke-direct {p2}, Lokhttp3/z$a;-><init>()V
+    invoke-direct {p2}, Lokhttp3/Request$a;-><init>()V
 
     .line 22
-    invoke-virtual {p2, v1}, Lokhttp3/z$a;->a(Lokhttp3/a0;)Lokhttp3/z$a;
+    invoke-virtual {p2, v1}, Lokhttp3/Request$a;->a(Lokhttp3/RequestBody;)Lokhttp3/Request$a;
 
     .line 23
-    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/d;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/sdk/okhttp/OkHttpPostCall;->c()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lokhttp3/z$a;->b(Ljava/lang/String;)Lokhttp3/z$a;
+    invoke-virtual {p2, p1}, Lokhttp3/Request$a;->b(Ljava/lang/String;)Lokhttp3/Request$a;
 
     .line 24
-    sget-object p1, Lokhttp3/d;->n:Lokhttp3/d;
+    sget-object p1, Lokhttp3/CacheControl;->n:Lokhttp3/CacheControl;
 
-    invoke-virtual {p2, p1}, Lokhttp3/z$a;->a(Lokhttp3/d;)Lokhttp3/z$a;
+    invoke-virtual {p2, p1}, Lokhttp3/Request$a;->a(Lokhttp3/CacheControl;)Lokhttp3/Request$a;
 
     .line 25
-    invoke-virtual {p2}, Lokhttp3/z$a;->a()Lokhttp3/z;
+    invoke-virtual {p2}, Lokhttp3/Request$a;->a()Lokhttp3/Request;
 
     move-result-object p1
 
     const-string p2, "request"
 
     .line 26
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1, v2, v3}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/z;J)Lokhttp3/b0;
+    invoke-virtual {p0, p1, v2, v3}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/Request;J)Lokhttp3/Response;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/b0;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/Response;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected final a(Lokhttp3/b0;)Ljava/lang/String;
+.method protected final a(Lokhttp3/Response;)Ljava/lang/String;
     .locals 2
 
     .line 36
-    invoke-virtual {p1}, Lokhttp3/b0;->d()I
+    invoke-virtual {p1}, Lokhttp3/Response;->d()I
 
     move-result v0
 
@@ -1254,7 +1254,7 @@
     if-eq v0, v1, :cond_1
 
     .line 37
-    invoke-virtual {p1}, Lokhttp3/b0;->a()Lokhttp3/c0;
+    invoke-virtual {p1}, Lokhttp3/Response;->a()Lokhttp3/ResponseBody;
 
     move-result-object p1
 
@@ -1263,13 +1263,13 @@
     if-eqz p1, :cond_0
 
     :try_start_0
-    invoke-virtual {p1}, Lokhttp3/c0;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lokhttp3/ResponseBody;->g()Ljava/lang/String;
 
     move-result-object v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {p1, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     move-object v0, v1
 
@@ -1286,7 +1286,7 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {p1, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 
@@ -1298,37 +1298,37 @@
     :cond_1
     new-instance v0, Lcom/vk/api/sdk/exceptions/VKLargeEntityException;
 
-    invoke-virtual {p1}, Lokhttp3/b0;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lokhttp3/Response;->i()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v1, "response.message()"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, p1}, Lcom/vk/api/sdk/exceptions/VKLargeEntityException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
-.method protected final a(Lokhttp3/z;)Lokhttp3/b0;
+.method protected final a(Lokhttp3/Request;)Lokhttp3/Response;
     .locals 2
 
     .line 34
-    iget-object v0, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/b;
+    iget-object v0, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
-    invoke-virtual {v0}, Lcom/vk/api/sdk/okhttp/b;->d()J
+    invoke-virtual {v0}, Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;->d()J
 
     move-result-wide v0
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/z;J)Lokhttp3/b0;
+    invoke-virtual {p0, p1, v0, v1}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(Lokhttp3/Request;J)Lokhttp3/Response;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method protected final a(Lokhttp3/z;J)Lokhttp3/b0;
+.method protected final a(Lokhttp3/Request;J)Lokhttp3/Response;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1338,21 +1338,21 @@
     .end annotation
 
     .line 35
-    invoke-direct {p0, p2, p3}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(J)Lokhttp3/x;
+    invoke-direct {p0, p2, p3}, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->a(J)Lokhttp3/OkHttpClient;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lokhttp3/x;->a(Lokhttp3/z;)Lokhttp3/e;
+    invoke-virtual {p2, p1}, Lokhttp3/OkHttpClient;->a(Lokhttp3/Request;)Lokhttp3/Call;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lokhttp3/e;->execute()Lokhttp3/b0;
+    invoke-interface {p1}, Lokhttp3/Call;->execute()Lokhttp3/Response;
 
     move-result-object p1
 
     const-string p2, "clientWithTimeOut(timeou\u2026ewCall(request).execute()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -1361,9 +1361,9 @@
     .locals 1
 
     .line 3
-    sget-object v0, Lcom/vk/api/sdk/internal/f;->a:Lcom/vk/api/sdk/internal/f;
+    sget-object v0, Lcom/vk/api/sdk/internal/Validation;->a:Lcom/vk/api/sdk/internal/Validation;
 
-    invoke-virtual {v0, p1}, Lcom/vk/api/sdk/internal/f;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/api/sdk/internal/Validation;->a(Ljava/lang/String;)V
 
     .line 4
     iput-object p1, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->f:Ljava/lang/String;
@@ -1374,11 +1374,11 @@
     return-void
 .end method
 
-.method protected final b()Lcom/vk/api/sdk/okhttp/b;
+.method protected final b()Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/b;
+    iget-object v0, p0, Lcom/vk/api/sdk/okhttp/OkHttpExecutor;->i:Lcom/vk/api/sdk/okhttp/OkHttpExecutorConfig;
 
     return-object v0
 .end method

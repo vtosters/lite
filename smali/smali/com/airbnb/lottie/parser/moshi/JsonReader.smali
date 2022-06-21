@@ -159,18 +159,18 @@
     return-void
 .end method
 
-.method public static a(Lokio/e;)Lcom/airbnb/lottie/parser/moshi/JsonReader;
+.method public static a(Lokio/BufferedSource;)Lcom/airbnb/lottie/parser/moshi/JsonReader;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/airbnb/lottie/parser/moshi/b;
+    new-instance v0, Lcom/airbnb/lottie/parser/moshi/JsonUtf8Reader;
 
-    invoke-direct {v0, p0}, Lcom/airbnb/lottie/parser/moshi/b;-><init>(Lokio/e;)V
+    invoke-direct {v0, p0}, Lcom/airbnb/lottie/parser/moshi/JsonUtf8Reader;-><init>(Lokio/BufferedSource;)V
 
     return-object v0
 .end method
 
-.method static synthetic a(Lokio/d;Ljava/lang/String;)V
+.method static synthetic a(Lokio/BufferedSink;Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -179,12 +179,12 @@
     .end annotation
 
     .line 1
-    invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->b(Lokio/d;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->b(Lokio/BufferedSink;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private static b(Lokio/d;Ljava/lang/String;)V
+.method private static b(Lokio/BufferedSink;Ljava/lang/String;)V
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -198,7 +198,7 @@
     const/16 v1, 0x22
 
     .line 2
-    invoke-interface {p0, v1}, Lokio/d;->writeByte(I)Lokio/d;
+    invoke-interface {p0, v1}, Lokio/BufferedSink;->writeByte(I)Lokio/BufferedSink;
 
     .line 3
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -249,11 +249,11 @@
     if-ge v4, v3, :cond_3
 
     .line 6
-    invoke-interface {p0, p1, v4, v3}, Lokio/d;->a(Ljava/lang/String;II)Lokio/d;
+    invoke-interface {p0, p1, v4, v3}, Lokio/BufferedSink;->a(Ljava/lang/String;II)Lokio/BufferedSink;
 
     .line 7
     :cond_3
-    invoke-interface {p0, v5}, Lokio/d;->c(Ljava/lang/String;)Lokio/d;
+    invoke-interface {p0, v5}, Lokio/BufferedSink;->c(Ljava/lang/String;)Lokio/BufferedSink;
 
     add-int/lit8 v4, v3, 0x1
 
@@ -267,11 +267,11 @@
     if-ge v4, v2, :cond_6
 
     .line 8
-    invoke-interface {p0, p1, v4, v2}, Lokio/d;->a(Ljava/lang/String;II)Lokio/d;
+    invoke-interface {p0, p1, v4, v2}, Lokio/BufferedSink;->a(Ljava/lang/String;II)Lokio/BufferedSink;
 
     .line 9
     :cond_6
-    invoke-interface {p0, v1}, Lokio/d;->writeByte(I)Lokio/d;
+    invoke-interface {p0, v1}, Lokio/BufferedSink;->writeByte(I)Lokio/BufferedSink;
 
     return-void
 .end method
@@ -489,7 +489,7 @@
 
     iget-object v3, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->d:[I
 
-    invoke-static {v0, v1, v2, v3}, Lcom/airbnb/lottie/parser/moshi/a;->a(I[I[Ljava/lang/String;[I)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lcom/airbnb/lottie/parser/moshi/JsonScope;->a(I[I[Ljava/lang/String;[I)Ljava/lang/String;
 
     move-result-object v0
 

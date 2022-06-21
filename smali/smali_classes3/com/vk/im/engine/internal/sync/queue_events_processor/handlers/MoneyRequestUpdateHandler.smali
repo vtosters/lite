@@ -30,18 +30,18 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/b$a;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/attaches/AttachMoneyRequest;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/attaches/AttachMoneyRequest;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->a(Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/b$a;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/attaches/AttachMoneyRequest;
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->a(Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/attaches/AttachMoneyRequest;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/b$a;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/attaches/AttachMoneyRequest;
+.method private final a(Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/attaches/AttachMoneyRequest;
     .locals 7
 
     if-eqz p1, :cond_1
@@ -66,7 +66,7 @@
     const/4 v3, 0x0
 
     .line 12
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->a(Lcom/vk/im/engine/models/content/MoneyRequestChat;Lb/h/u/b/b$a;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/content/MoneyRequestChat;
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->a(Lcom/vk/im/engine/models/content/MoneyRequestChat;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/content/MoneyRequestChat;
 
     move-result-object v4
 
@@ -100,13 +100,13 @@
     throw p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/content/MoneyRequestChat;Lb/h/u/b/b$a;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/content/MoneyRequestChat;
+.method private final a(Lcom/vk/im/engine/models/content/MoneyRequestChat;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/content/MoneyRequestChat;
     .locals 16
 
     .line 14
     sget-object v0, Lcom/vk/im/engine/models/Member;->c:Lcom/vk/im/engine/models/Member$b;
 
-    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/b$a;->e()I
+    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->e()I
 
     move-result v1
 
@@ -117,15 +117,15 @@
     .line 15
     new-instance v8, Lcom/vk/im/engine/models/content/MoneyRequest$Amount;
 
-    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/b$a;->k()J
+    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->k()J
 
     move-result-wide v1
 
-    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/b$a;->j()Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->j()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/b$a;->i()Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->i()Ljava/lang/String;
 
     move-result-object v4
 
@@ -134,15 +134,15 @@
     .line 16
     new-instance v9, Lcom/vk/im/engine/models/content/MoneyRequest$Amount;
 
-    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/b$a;->h()J
+    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->h()J
 
     move-result-wide v1
 
-    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/b$a;->g()Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->g()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/b$a;->f()Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->f()Ljava/lang/String;
 
     move-result-object v4
 
@@ -159,11 +159,11 @@
 
     if-nez v1, :cond_0
 
-    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/b$a;->k()J
+    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->k()J
 
     move-result-wide v4
 
-    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/b$a;->h()J
+    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->h()J
 
     move-result-wide v6
 
@@ -182,12 +182,12 @@
     const/4 v10, 0x0
 
     .line 18
-    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/b$a;->b()I
+    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->b()I
 
     move-result v11
 
     .line 19
-    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/b$a;->a()Ljava/util/List;
+    invoke-virtual/range {p2 .. p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->a()Ljava/util/List;
 
     move-result-object v1
 
@@ -246,7 +246,7 @@
 
     move-object/from16 v1, p3
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -288,18 +288,18 @@
     return-object v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/b$a;)Z
+.method public static final synthetic a(Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;)Z
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->a(Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/b$a;)Z
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->a(Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/b$a;)Z
+.method private final a(Lcom/vk/im/engine/models/attaches/Attach;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;)Z
     .locals 3
 
     .line 7
@@ -332,7 +332,7 @@
 
     move-result v0
 
-    invoke-virtual {p2}, Lb/h/u/b/b$a;->c()I
+    invoke-virtual {p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->c()I
 
     move-result v2
 
@@ -342,7 +342,7 @@
 
     move-result p1
 
-    invoke-virtual {p2}, Lb/h/u/b/b$a;->d()I
+    invoke-virtual {p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->d()I
 
     move-result p2
 
@@ -354,11 +354,11 @@
     return v1
 .end method
 
-.method private final b(Lcom/vk/im/engine/d;Lb/h/u/b/b$a;)Landroid/util/SparseIntArray;
+.method private final b(Lcom/vk/im/engine/ImEnvironment;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;)Landroid/util/SparseIntArray;
     .locals 8
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -370,12 +370,12 @@
     const-class v1, Lcom/vk/im/engine/models/attaches/AttachMoneyRequest;
 
     .line 3
-    invoke-virtual {p2}, Lb/h/u/b/b$a;->c()I
+    invoke-virtual {p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->c()I
 
     move-result v2
 
     .line 4
-    invoke-virtual {p2}, Lb/h/u/b/b$a;->d()I
+    invoke-virtual {p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->d()I
 
     move-result v3
 
@@ -424,15 +424,15 @@
     .line 8
     new-instance v6, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$1;
 
-    invoke-direct {v6, p2, p1, v0}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$1;-><init>(Lb/h/u/b/b$a;Lcom/vk/im/engine/d;Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;)V
+    invoke-direct {v6, p2, p1, v0}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$1;-><init>(Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;)V
 
     .line 9
     new-instance v7, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$2;
 
-    invoke-direct {v7, p2, p1, v0}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$2;-><init>(Lb/h/u/b/b$a;Lcom/vk/im/engine/d;Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;)V
+    invoke-direct {v7, p2, p1, v0}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updateMsg$$inlined$forEach$lambda$2;-><init>(Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;)V
 
     .line 10
-    invoke-interface {v4, v5, v6, v7}, Lcom/vk/im/engine/models/messages/WithUserContent;->a(ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-interface {v4, v5, v6, v7}, Lcom/vk/im/engine/models/messages/WithUserContent;->a(ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     .line 11
     :cond_1
@@ -486,19 +486,19 @@
     return-object p1
 .end method
 
-.method private final c(Lcom/vk/im/engine/d;Lb/h/u/b/b$a;)Lcom/vk/im/engine/utils/collection/d;
+.method private final c(Lcom/vk/im/engine/ImEnvironment;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;)Lcom/vk/im/engine/utils/collection/IntCollection;
     .locals 9
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object v0
 
@@ -506,12 +506,12 @@
     const-class v1, Lcom/vk/im/engine/models/attaches/AttachMoneyRequest;
 
     .line 3
-    invoke-virtual {p2}, Lb/h/u/b/b$a;->c()I
+    invoke-virtual {p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->c()I
 
     move-result v2
 
     .line 4
-    invoke-virtual {p2}, Lb/h/u/b/b$a;->d()I
+    invoke-virtual {p2}, Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;->d()I
 
     move-result v3
 
@@ -544,17 +544,17 @@
     .line 8
     new-instance v6, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updatePinnedMsg$$inlined$forEach$lambda$1;
 
-    invoke-direct {v6, p2, p1, v0}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updatePinnedMsg$$inlined$forEach$lambda$1;-><init>(Lb/h/u/b/b$a;Lcom/vk/im/engine/d;Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)V
+    invoke-direct {v6, p2, p1, v0}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updatePinnedMsg$$inlined$forEach$lambda$1;-><init>(Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)V
 
     .line 9
     new-instance v7, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updatePinnedMsg$$inlined$forEach$lambda$2;
 
-    invoke-direct {v7, p2, p1, v0}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updatePinnedMsg$$inlined$forEach$lambda$2;-><init>(Lb/h/u/b/b$a;Lcom/vk/im/engine/d;Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)V
+    invoke-direct {v7, p2, p1, v0}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler$updatePinnedMsg$$inlined$forEach$lambda$2;-><init>(Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;)V
 
     const/4 v8, 0x1
 
     .line 10
-    invoke-virtual {v5, v8, v6, v7}, Lcom/vk/im/engine/models/messages/PinnedMsg;->a(ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v5, v8, v6, v7}, Lcom/vk/im/engine/models/messages/PinnedMsg;->a(ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     .line 11
     invoke-virtual {v0, v4, v5}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->a(ILcom/vk/im/engine/models/messages/PinnedMsg;)V
@@ -565,7 +565,7 @@
 
     .line 12
     :cond_0
-    invoke-static {v1}, Lcom/vk/im/engine/utils/collection/e;->a(Landroid/util/SparseArray;)Lcom/vk/im/engine/utils/collection/h;
+    invoke-static {v1}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Landroid/util/SparseArray;)Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object p1
 
@@ -574,34 +574,34 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/d;Lb/h/u/b/b$a;)V
+.method public final a(Lcom/vk/im/engine/ImEnvironment;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;)V
     .locals 3
 
     .line 3
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->c(Lcom/vk/im/engine/d;Lb/h/u/b/b$a;)Lcom/vk/im/engine/utils/collection/d;
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->c(Lcom/vk/im/engine/ImEnvironment;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;)Lcom/vk/im/engine/utils/collection/IntCollection;
 
     move-result-object v0
 
     .line 4
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->b(Lcom/vk/im/engine/d;Lb/h/u/b/b$a;)Landroid/util/SparseIntArray;
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/internal/sync/queue_events_processor/handlers/MoneyRequestUpdateHandler;->b(Lcom/vk/im/engine/ImEnvironment;Lb/h/u/b/MoneyRequestUpdateQueueEvent$a;)Landroid/util/SparseIntArray;
 
     move-result-object p2
 
     .line 5
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->n0()Lcom/vk/im/engine/internal/c;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->n0()Lcom/vk/im/engine/internal/EventHelper;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/im/engine/internal/c;->a(Ljava/lang/Object;Lcom/vk/im/engine/utils/collection/d;)V
+    invoke-virtual {v1, v2, v0}, Lcom/vk/im/engine/internal/EventHelper;->a(Ljava/lang/Object;Lcom/vk/im/engine/utils/collection/IntCollection;)V
 
     .line 6
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->n0()Lcom/vk/im/engine/internal/c;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->n0()Lcom/vk/im/engine/internal/EventHelper;
 
     move-result-object p1
 
-    invoke-virtual {p1, v2, p2}, Lcom/vk/im/engine/internal/c;->a(Ljava/lang/Object;Landroid/util/SparseIntArray;)V
+    invoke-virtual {p1, v2, p2}, Lcom/vk/im/engine/internal/EventHelper;->a(Ljava/lang/Object;Landroid/util/SparseIntArray;)V
 
     return-void
 .end method

@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/profile/adapter/counters/CountersAdapter$c<",
-        "Lcom/vk/profile/adapter/counters/e$a;",
+        "Lcom/vk/profile/adapter/counters/CountersCacheManager$a;",
         ">;"
     }
 .end annotation
@@ -83,12 +83,12 @@
 
     int-to-float v1, v1
 
-    invoke-static {p1, v1}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;F)V
+    invoke-static {p1, v1}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;F)V
 
     const v1, 0x7f06030c
 
     .line 7
-    invoke-static {p1, v1}, Lcom/vk/core/extensions/a0;->c(Landroid/widget/TextView;I)V
+    invoke-static {p1, v1}, Lcom/vk/core/extensions/TextViewExt;->c(Landroid/widget/TextView;I)V
 
     .line 8
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -109,15 +109,15 @@
     .line 10
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$a;->h:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/a;
+    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const-string p2, "imageView.hierarchy"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {}, Lcom/vk/profile/adapter/counters/CountersAdapter;->l()F
 
@@ -139,7 +139,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/a;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
+    invoke-virtual {p1, p2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->a(Lcom/facebook/drawee/generic/RoundingParams;)V
 
     .line 11
     invoke-virtual {p0}, Lcom/vk/profile/adapter/counters/CountersAdapter$c;->g0()Landroid/widget/FrameLayout;
@@ -192,7 +192,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/profile/adapter/counters/e$a;)V
+.method public a(Lcom/vk/profile/adapter/counters/CountersCacheManager$a;)V
     .locals 3
 
     .line 1
@@ -201,32 +201,32 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$a;->h:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/e$a;->d()Lcom/facebook/imagepipeline/request/a;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersCacheManager$a;->d()Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$a;->h:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/e$a;->a()Landroid/graphics/ColorFilter;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersCacheManager$a;->a()Landroid/graphics/ColorFilter;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/a;->setActualColorFilter(Landroid/graphics/ColorFilter;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setActualColorFilter(Landroid/graphics/ColorFilter;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$a;->h:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/e$a;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersCacheManager$a;->e()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->a(Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/e$a;->b()I
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersCacheManager$a;->b()I
 
     move-result v0
 
@@ -239,7 +239,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$a;->h:Lcom/vk/imageloader/view/VKImageView;
 
@@ -249,9 +249,9 @@
 
     const-string v2, "imageView.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/e$a;->b()I
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersCacheManager$a;->b()I
 
     move-result v2
 
@@ -269,7 +269,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -277,7 +277,7 @@
 
     .line 8
     :goto_0
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/e$a;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersCacheManager$a;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -309,7 +309,7 @@
     .line 10
     iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$a;->B:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/e$a;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersCacheManager$a;->c()Ljava/lang/String;
 
     move-result-object p1
 
@@ -338,9 +338,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/profile/adapter/counters/e$a;
+    check-cast p1, Lcom/vk/profile/adapter/counters/CountersCacheManager$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/counters/CountersAdapter$a;->a(Lcom/vk/profile/adapter/counters/e$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/counters/CountersAdapter$a;->a(Lcom/vk/profile/adapter/counters/CountersCacheManager$a;)V
 
     return-void
 .end method

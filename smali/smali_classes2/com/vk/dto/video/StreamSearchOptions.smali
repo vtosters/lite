@@ -1,5 +1,5 @@
 .class public Lcom/vk/dto/video/StreamSearchOptions;
-.super Lcom/vk/dto/common/e;
+.super Lcom/vk/dto/common/Model;
 .source "StreamSearchOptions.java"
 
 # interfaces
@@ -50,7 +50,7 @@
     .locals 2
 
     .line 11
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     .line 12
     new-instance v0, Ljava/util/ArrayList;
@@ -104,7 +104,7 @@
     .end annotation
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     .line 3
     new-instance v0, Ljava/util/ArrayList;

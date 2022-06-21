@@ -3,7 +3,7 @@
 .source "ScreenshotDetector.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/core/screenshot/ScreenshotDetector$a;",
@@ -82,7 +82,7 @@
 
     const-string v4, "Media.INTERNAL_CONTENT_URI"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, v2, v3}, Lcom/vk/core/screenshot/ScreenshotDetector$a;-><init>(Lcom/vk/core/screenshot/ScreenshotDetector;Landroid/net/Uri;)V
 
@@ -99,7 +99,7 @@
 
     const-string v4, "Media.EXTERNAL_CONTENT_URI"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, v2, v3}, Lcom/vk/core/screenshot/ScreenshotDetector$a;-><init>(Lcom/vk/core/screenshot/ScreenshotDetector;Landroid/net/Uri;)V
 

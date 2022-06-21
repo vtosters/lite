@@ -38,11 +38,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/extensions/ViewExtKt;->c()Lcom/vk/core/util/j1;
+    invoke-static {}, Lcom/vk/extensions/ViewExtKt;->c()Lcom/vk/core/util/TimeoutLock;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/util/j1;->a()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->a()Z
 
     move-result v0
 

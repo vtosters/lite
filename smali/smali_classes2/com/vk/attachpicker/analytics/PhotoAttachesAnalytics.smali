@@ -13,10 +13,10 @@
 
 
 # static fields
-.field private static final a:Lkotlin/jvm/b/b;
+.field private static final a:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -24,10 +24,10 @@
     .end annotation
 .end field
 
-.field private static final b:Lkotlin/jvm/b/b;
+.field private static final b:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -77,12 +77,12 @@
     .line 2
     sget-object v0, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics$FABRIC_NAME$1;->a:Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics$FABRIC_NAME$1;
 
-    sput-object v0, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->a:Lkotlin/jvm/b/b;
+    sput-object v0, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->a:Lkotlin/jvm/b/Functions2;
 
     .line 3
     sget-object v0, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics$STATLOG_NAME$1;->a:Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics$STATLOG_NAME$1;
 
-    sput-object v0, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->b:Lkotlin/jvm/b/b;
+    sput-object v0, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->b:Lkotlin/jvm/b/Functions2;
 
     .line 4
     new-instance v0, Landroid/util/ArrayMap;
@@ -110,12 +110,12 @@
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/b;Ljava/util/List;)V
+.method private final a(Lkotlin/jvm/b/Functions2;Ljava/util/List;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
@@ -164,7 +164,7 @@
     const-string v5, "UI.PICKER.SELECTION"
 
     .line 22
-    invoke-interface {p1, v5}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v5}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -251,7 +251,7 @@
     const-string v4, "UI.PICKER.EDIT"
 
     .line 32
-    invoke-interface {p1, v4}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v4}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -397,7 +397,7 @@
     const-string v3, "UI.PICKER.FULL_VIEW"
 
     .line 46
-    invoke-interface {p1, v3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -474,7 +474,7 @@
 
     .line 15
     :cond_0
-    sget-object v0, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->a:Lkotlin/jvm/b/b;
+    sget-object v0, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->a:Lkotlin/jvm/b/Functions2;
 
     const/4 v1, 0x2
 
@@ -488,9 +488,9 @@
 
     const/4 v2, 0x1
 
-    sget-object v3, Lb/h/b/c;->a:Lb/h/b/c;
+    sget-object v3, Lb/h/b/LoggingTracker;->a:Lb/h/b/LoggingTracker;
 
-    invoke-virtual {v3}, Lb/h/b/c;->getId()Ljava/lang/String;
+    invoke-virtual {v3}, Lb/h/b/LoggingTracker;->getId()Ljava/lang/String;
 
     move-result-object v3
 
@@ -500,14 +500,14 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->a(Lkotlin/jvm/b/b;Ljava/util/List;)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->a(Lkotlin/jvm/b/Functions2;Ljava/util/List;)V
 
     .line 16
-    sget-object v0, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->b:Lkotlin/jvm/b/b;
+    sget-object v0, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->b:Lkotlin/jvm/b/Functions2;
 
-    sget-object v1, Lb/h/b/d;->a:Lb/h/b/d;
+    sget-object v1, Lb/h/b/StatlogTracker;->a:Lb/h/b/StatlogTracker;
 
-    invoke-virtual {v1}, Lb/h/b/d;->getId()Ljava/lang/String;
+    invoke-virtual {v1}, Lb/h/b/StatlogTracker;->getId()Ljava/lang/String;
 
     move-result-object v1
 
@@ -515,7 +515,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->a(Lkotlin/jvm/b/b;Ljava/util/List;)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->a(Lkotlin/jvm/b/Functions2;Ljava/util/List;)V
 
     .line 17
     sget-object v0, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->c:Landroid/util/ArrayMap;
@@ -591,17 +591,17 @@
     return-void
 .end method
 
-.method public final a(ZLcom/vk/attachpicker/stickers/m0;ZLcom/vk/attachpicker/u/j/c;F)V
+.method public final a(ZLcom/vk/attachpicker/stickers/StickersState;ZLcom/vk/attachpicker/u/j/ApiFilterWrapper;F)V
     .locals 13
 
     .line 4
-    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
+    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
 
     move-result-object v0
 
     const-string v1, "stickersDrawingState.stickers"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     instance-of v2, v0, Ljava/util/Collection;
@@ -643,7 +643,7 @@
     check-cast v2, Lcom/vk/attachpicker/stickers/ISticker;
 
     .line 7
-    instance-of v2, v2, Lcom/vk/attachpicker/stickers/u;
+    instance-of v2, v2, Lcom/vk/attachpicker/stickers/BitmapSticker;
 
     if-eqz v2, :cond_2
 
@@ -651,11 +651,11 @@
 
     .line 8
     :goto_0
-    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/m0;->i()Ljava/util/ArrayList;
+    invoke-virtual {p2}, Lcom/vk/attachpicker/stickers/StickersState;->i()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     instance-of v1, v0, Ljava/util/Collection;
@@ -695,7 +695,7 @@
     check-cast v1, Lcom/vk/attachpicker/stickers/ISticker;
 
     .line 11
-    instance-of v1, v1, Lcom/vk/attachpicker/stickers/text/h;
+    instance-of v1, v1, Lcom/vk/attachpicker/stickers/text/TextSticker;
 
     if-eqz v1, :cond_5
 
@@ -705,11 +705,11 @@
 
     .line 12
     :goto_1
-    iget-object v0, v0, Lcom/vk/attachpicker/u/j/c;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcom/vk/attachpicker/u/j/ApiFilterWrapper;->a:Ljava/lang/String;
 
     const-string v1, "FILTER_ID_ORIGINAL"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -773,7 +773,7 @@
 
     move-object v0, v10
 
-    invoke-direct/range {v0 .. v9}, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics$a;-><init>(ZZZZZZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics$a;-><init>(ZZZZZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v10, Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics;->d:Lcom/vk/attachpicker/analytics/PhotoAttachesAnalytics$a;
 

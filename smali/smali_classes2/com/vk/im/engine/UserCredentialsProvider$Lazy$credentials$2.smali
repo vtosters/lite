@@ -3,12 +3,12 @@
 .source "UserCredentialsProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/UserCredentialsProvider$Lazy;-><init>(Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/im/engine/UserCredentialsProvider$Lazy;-><init>(Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/im/engine/models/credentials/UserCredentials;",
         ">;"
     }
@@ -51,11 +51,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/engine/UserCredentialsProvider$Lazy$credentials$2;->this$0:Lcom/vk/im/engine/UserCredentialsProvider$Lazy;
 
-    invoke-static {v0}, Lcom/vk/im/engine/UserCredentialsProvider$Lazy;->a(Lcom/vk/im/engine/UserCredentialsProvider$Lazy;)Lkotlin/jvm/b/a;
+    invoke-static {v0}, Lcom/vk/im/engine/UserCredentialsProvider$Lazy;->a(Lcom/vk/im/engine/UserCredentialsProvider$Lazy;)Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 

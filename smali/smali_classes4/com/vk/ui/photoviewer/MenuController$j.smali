@@ -57,7 +57,7 @@
     move-result-object p1
 
     .line 2
-    new-instance p2, Lcom/vk/api/photos/h;
+    new-instance p2, Lcom/vk/api/photos/PhotosEdit;
 
     iget-object v0, p0, Lcom/vk/ui/photoviewer/MenuController$j;->c:Lcom/vk/dto/photo/Photo;
 
@@ -65,14 +65,14 @@
 
     iget v0, v0, Lcom/vk/dto/photo/Photo;->a:I
 
-    invoke-direct {p2, v1, v0, p1}, Lcom/vk/api/photos/h;-><init>(IILjava/lang/String;)V
+    invoke-direct {p2, v1, v0, p1}, Lcom/vk/api/photos/PhotosEdit;-><init>(IILjava/lang/String;)V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     .line 3
-    invoke-static {p2, v0, v1, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p2, v0, v1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -95,7 +95,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -108,7 +108,7 @@
     sget-object p1, Lcom/vk/ui/photoviewer/MenuController$j$b;->a:Lcom/vk/ui/photoviewer/MenuController$j$b;
 
     .line 7
-    invoke-virtual {p2, v0, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, v0, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

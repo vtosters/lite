@@ -1,5 +1,5 @@
 .class public Lcom/vtosters/lite/fragments/market/GoodFragment$Builder;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "GoodFragment.java"
 
 
@@ -46,24 +46,24 @@
     .line 2
     const-class v0, Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "owner_id"
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 4
-    iget-object p2, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p2, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v0, "id"
 
     invoke-virtual {p2, v0, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 5
-    iget-object p2, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p2, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
@@ -76,7 +76,7 @@
     if-eqz p4, :cond_0
 
     .line 6
-    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string p2, "access_key"
 
@@ -96,10 +96,10 @@
     .line 7
     const-class v0, Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     iget v1, p2, Lcom/vk/dto/common/Good;->b:I
 
@@ -108,7 +108,7 @@
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     iget p2, p2, Lcom/vk/dto/common/Good;->a:I
 
@@ -117,7 +117,7 @@
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 10
-    iget-object p2, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p2, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
@@ -136,7 +136,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "comment"
 
@@ -149,7 +149,7 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "scroll_to_first_comment"
 

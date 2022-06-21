@@ -3,7 +3,7 @@
 .source "DeliveryInfo.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,15 +19,15 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/String;",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/market/orders/checkout/l;",
+        "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
         ">;",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/market/orders/checkout/l;",
+        "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
         ">;>;"
     }
 .end annotation
@@ -74,10 +74,10 @@
             "(",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/vk/market/orders/checkout/l;",
+            "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
             ">;)",
             "Ljava/util/List<",
-            "Lcom/vk/market/orders/checkout/l;",
+            "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
             ">;"
         }
     .end annotation
@@ -112,16 +112,16 @@
     .line 4
     move-object v1, v0
 
-    check-cast v1, Lcom/vk/market/orders/checkout/l;
+    check-cast v1, Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
     .line 5
-    invoke-virtual {v1}, Lcom/vk/market/orders/checkout/l;->g()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/market/orders/checkout/DeliveryInfo8;->g()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "city_id"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -134,7 +134,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/market/orders/checkout/DeliveryInfo$Companion;->a(Lcom/vk/market/orders/checkout/DeliveryInfo$Companion;Lcom/vk/market/orders/checkout/l;Ljava/lang/Integer;Z)Lcom/vk/market/orders/checkout/l;
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/market/orders/checkout/DeliveryInfo$Companion;->a(Lcom/vk/market/orders/checkout/DeliveryInfo$Companion;Lcom/vk/market/orders/checkout/DeliveryInfo8;Ljava/lang/Integer;Z)Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
     move-result-object v0
 

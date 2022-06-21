@@ -19,7 +19,7 @@
 
 .field private b:Z
 
-.field private c:Lcom/vk/qrcode/s;
+.field private c:Lcom/vk/qrcode/QrBordersDrawer;
 
 .field private d:Landroid/widget/FrameLayout;
 
@@ -60,7 +60,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/cameraui/QrScannerUi$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/cameraui/QrScannerUi$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -96,7 +96,7 @@
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/camera/c;[Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/b$e;)V
+.method private final a(Lcom/vk/camera/Camera1View;[Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/CameraQRUtils$e;)V
     .locals 7
 
     .line 12
@@ -109,7 +109,7 @@
     if-eqz v0, :cond_5
 
     .line 13
-    iget-object v1, p0, Lcom/vk/cameraui/QrScannerUi;->c:Lcom/vk/qrcode/s;
+    iget-object v1, p0, Lcom/vk/cameraui/QrScannerUi;->c:Lcom/vk/qrcode/QrBordersDrawer;
 
     const/4 v0, 0x0
 
@@ -139,7 +139,7 @@
 
     move-object v5, p3
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/qrcode/s;->a(Landroid/view/View;Landroid/view/ViewGroup;[Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/b$e;Z)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/qrcode/QrBordersDrawer;->a(Landroid/view/View;Landroid/view/ViewGroup;[Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/CameraQRUtils$e;Z)V
 
     :cond_1
     if-eqz p2, :cond_5
@@ -159,7 +159,7 @@
     if-eqz p2, :cond_5
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/camera/c;->q()V
+    invoke-virtual {p1}, Lcom/vk/camera/Camera1View;->q()V
 
     .line 16
     iget-object p1, p0, Lcom/vk/cameraui/QrScannerUi;->e:Landroid/view/View;
@@ -190,11 +190,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/cameraui/QrScannerUi;Lcom/vk/camera/c;[Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/b$e;)V
+.method public static final synthetic a(Lcom/vk/cameraui/QrScannerUi;Lcom/vk/camera/Camera1View;[Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/CameraQRUtils$e;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/cameraui/QrScannerUi;->a(Lcom/vk/camera/c;[Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/b$e;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/cameraui/QrScannerUi;->a(Lcom/vk/camera/Camera1View;[Lcom/google/zxing/ResultPoint;Lcom/vk/media/camera/qrcode/CameraQRUtils$e;)V
 
     return-void
 .end method
@@ -390,11 +390,11 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v5
 
-    invoke-interface {v5}, Lcom/vk/bridges/f;->h()Lcom/vk/bridges/Account;
+    invoke-interface {v5}, Lcom/vk/bridges/AuthBridge3;->h()Lcom/vk/bridges/Account;
 
     move-result-object v5
 
@@ -422,11 +422,11 @@
     invoke-virtual {v3, v5}, Lcom/vk/qrcode/QRSharingView;->a(Ljava/lang/String;)V
 
     .line 16
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v5
 
-    invoke-interface {v5}, Lcom/vk/bridges/f;->h()Lcom/vk/bridges/Account;
+    invoke-interface {v5}, Lcom/vk/bridges/AuthBridge3;->h()Lcom/vk/bridges/Account;
 
     move-result-object v5
 
@@ -460,12 +460,12 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v4, v5, v2, v3}, Lcom/vk/core/ui/v/j/g/a;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    invoke-virtual {v4, v5, v2, v3}, Lcom/vk/core/ui/v/j/g/UiTrackingPagerAdapter;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
     goto :goto_2
 
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -600,21 +600,21 @@
 
     const-string v5, "qrScannerTabs!!.context"
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v4, v3}, Lcom/vk/cameraui/QrScannerUi$b;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0, v2, v1, v4}, Lcom/vk/core/ui/v/j/g/a;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    invoke-virtual {v0, v2, v1, v4}, Lcom/vk/core/ui/v/j/g/UiTrackingPagerAdapter;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
     goto :goto_0
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
@@ -673,7 +673,7 @@
     return v0
 .end method
 
-.method public final a(Lcom/vk/camera/c;)V
+.method public final a(Lcom/vk/camera/Camera1View;)V
     .locals 5
 
     .line 6
@@ -688,7 +688,7 @@
 
     const-string v2, "root.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     new-instance v2, Lcom/vk/cameraui/QrScannerUi$setCamera1View$1;
@@ -703,17 +703,17 @@
     .line 10
     new-instance v4, Lcom/vk/cameraui/QrScannerUi$setCamera1View$3;
 
-    invoke-direct {v4, p0, p1}, Lcom/vk/cameraui/QrScannerUi$setCamera1View$3;-><init>(Lcom/vk/cameraui/QrScannerUi;Lcom/vk/camera/c;)V
+    invoke-direct {v4, p0, p1}, Lcom/vk/cameraui/QrScannerUi$setCamera1View$3;-><init>(Lcom/vk/cameraui/QrScannerUi;Lcom/vk/camera/Camera1View;)V
 
     .line 11
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/qrcode/QRParser;-><init>(Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/c;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/qrcode/QRParser;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions1;)V
 
     iput-object v0, p0, Lcom/vk/cameraui/QrScannerUi;->a:Lcom/vk/qrcode/QRParser;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/cameraui/f;)V
+.method public final a(Lcom/vk/cameraui/CameraUIPositionsImpl;)V
     .locals 2
 
     .line 19
@@ -730,32 +730,32 @@
     .line 20
     iget-object v1, p0, Lcom/vk/cameraui/QrScannerUi;->e:Landroid/view/View;
 
-    invoke-virtual {p1, v1}, Lcom/vk/cameraui/f;->r(Landroid/view/View;)V
+    invoke-virtual {p1, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->r(Landroid/view/View;)V
 
     if-nez v0, :cond_0
 
     .line 21
     iget-object v1, p0, Lcom/vk/cameraui/QrScannerUi;->g:Lcom/vk/core/view/VKTabLayout;
 
-    invoke-virtual {p1, v1}, Lcom/vk/cameraui/f;->t(Landroid/view/View;)V
+    invoke-virtual {p1, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->t(Landroid/view/View;)V
 
     .line 22
     :cond_0
     iget-object v1, p0, Lcom/vk/cameraui/QrScannerUi;->j:Landroid/view/View;
 
-    invoke-virtual {p1, v1}, Lcom/vk/cameraui/f;->s(Landroid/view/View;)V
+    invoke-virtual {p1, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->s(Landroid/view/View;)V
 
     .line 23
     iget-object v1, p0, Lcom/vk/cameraui/QrScannerUi;->k:Landroid/view/View;
 
-    invoke-virtual {p1, v1}, Lcom/vk/cameraui/f;->q(Landroid/view/View;)V
+    invoke-virtual {p1, v1}, Lcom/vk/cameraui/CameraUIPositionsImpl;->q(Landroid/view/View;)V
 
     if-nez v0, :cond_1
 
     .line 24
     iget-object v0, p0, Lcom/vk/cameraui/QrScannerUi;->f:Landroid/view/View;
 
-    invoke-virtual {p1, v0}, Lcom/vk/cameraui/f;->u(Landroid/view/View;)V
+    invoke-virtual {p1, v0}, Lcom/vk/cameraui/CameraUIPositionsImpl;->u(Landroid/view/View;)V
 
     :cond_1
     return-void
@@ -795,11 +795,11 @@
     iput-object v0, p0, Lcom/vk/cameraui/QrScannerUi;->d:Landroid/widget/FrameLayout;
 
     .line 4
-    new-instance v0, Lcom/vk/qrcode/s;
+    new-instance v0, Lcom/vk/qrcode/QrBordersDrawer;
 
-    invoke-direct {v0}, Lcom/vk/qrcode/s;-><init>()V
+    invoke-direct {v0}, Lcom/vk/qrcode/QrBordersDrawer;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/cameraui/QrScannerUi;->c:Lcom/vk/qrcode/s;
+    iput-object v0, p0, Lcom/vk/cameraui/QrScannerUi;->c:Lcom/vk/qrcode/QrBordersDrawer;
 
     .line 5
     iput-boolean p1, p0, Lcom/vk/cameraui/QrScannerUi;->n:Z
@@ -1051,7 +1051,7 @@
     return-object p1
 
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

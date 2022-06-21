@@ -3,12 +3,12 @@
 .source "Reef.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/reef/Reef;-><init>(Lcom/vk/reef/a;)V
+    value = Lcom/vk/reef/Reef;-><init>(Lcom/vk/reef/ReefController;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/reef/trackers/g;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/reef/trackers/ReefPlayerTracker;",
         ">;"
     }
 .end annotation
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/reef/trackers/g;
+.method public final invoke()Lcom/vk/reef/trackers/ReefPlayerTracker;
     .locals 4
 
     .line 2
@@ -78,7 +78,7 @@
 
     move-result-object v2
 
-    instance-of v3, v2, Lcom/vk/reef/trackers/g;
+    instance-of v3, v2, Lcom/vk/reef/trackers/ReefPlayerTracker;
 
     if-eqz v3, :cond_0
 
@@ -92,7 +92,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/reef/trackers/g;
+    check-cast v0, Lcom/vk/reef/trackers/ReefPlayerTracker;
 
     return-object v0
 .end method
@@ -101,7 +101,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/reef/Reef$playerTracker$2;->invoke()Lcom/vk/reef/trackers/g;
+    invoke-virtual {p0}, Lcom/vk/reef/Reef$playerTracker$2;->invoke()Lcom/vk/reef/trackers/ReefPlayerTracker;
 
     move-result-object v0
 

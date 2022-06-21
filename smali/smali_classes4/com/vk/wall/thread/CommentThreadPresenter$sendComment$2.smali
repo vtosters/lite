@@ -3,7 +3,7 @@
 .source "CommentThreadPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -63,7 +63,7 @@
 
     sget-object v0, Lcom/vk/wall/thread/CommentThreadPresenter$sendComment$2$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter$sendComment$2$1;
 
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/api/base/c;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/api/base/ApiExt;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -73,7 +73,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 4
     :goto_0
@@ -82,11 +82,11 @@
     if-eqz p1, :cond_1
 
     .line 5
-    invoke-static {}, Lcom/vk/sharing/target/n;->c()Lcom/vk/sharing/target/n;
+    invoke-static {}, Lcom/vk/sharing/target/GroupsForCommentsImpersonation;->c()Lcom/vk/sharing/target/GroupsForCommentsImpersonation;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/sharing/target/n;->a()V
+    invoke-virtual {p1}, Lcom/vk/sharing/target/GroupsForCommentsImpersonation;->a()V
 
     :cond_1
     return-void

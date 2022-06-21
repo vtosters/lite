@@ -33,7 +33,7 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lokhttp3/f0/i/f;->d()Lokhttp3/f0/i/f;
+    invoke-static {}, Lokhttp3/f0/i/Platform;->d()Lokhttp3/f0/i/Platform;
 
     move-result-object v0
 
@@ -41,7 +41,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, p1, v2}, Lokhttp3/f0/i/f;->a(ILjava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1, p1, v2}, Lokhttp3/f0/i/Platform;->a(ILjava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

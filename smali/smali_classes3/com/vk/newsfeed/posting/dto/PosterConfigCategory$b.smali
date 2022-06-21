@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -72,7 +72,7 @@
 
     const-string v5, "this.getJSONObject(i)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     sget-object v5, Lcom/vk/newsfeed/posting/dto/PosterBackground;->B:Lcom/vk/newsfeed/posting/dto/PosterBackground$b;
@@ -104,7 +104,7 @@
 
     const-string v2, "jo.optString(ServerKeys.ID)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "name"
 
@@ -115,7 +115,7 @@
 
     const-string v2, "jo.optString(ServerKeys.NAME)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     invoke-direct {p2, v1, p1, v0}, Lcom/vk/newsfeed/posting/dto/PosterConfigCategory;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V

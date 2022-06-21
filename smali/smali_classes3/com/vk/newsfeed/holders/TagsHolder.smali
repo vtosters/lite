@@ -1,12 +1,12 @@
 .class public final Lcom/vk/newsfeed/holders/TagsHolder;
-.super Lcom/vk/newsfeed/holders/h;
+.super Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;
 .source "TagsHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/newsfeed/holders/h<",
+        "Lcom/vk/newsfeed/holders/BaseNewsEntryHolder<",
         "Lcom/vk/dto/newsfeed/entries/FaveEntry;",
         ">;"
     }
@@ -24,7 +24,7 @@
     const v0, 0x7f0d056d
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/h;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -48,7 +48,7 @@
 
     invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/TagsHolder$1;-><init>(Lcom/vk/fave/FaveController;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/fave/views/FaveTagViewGroup;->setClickByTag(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, v0}, Lcom/vk/fave/views/FaveTagViewGroup;->setClickByTag(Lkotlin/jvm/b/Functions2;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/newsfeed/holders/TagsHolder;->F:Lcom/vk/fave/views/FaveTagViewGroup;

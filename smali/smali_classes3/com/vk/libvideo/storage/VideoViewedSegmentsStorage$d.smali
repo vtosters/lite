@@ -36,7 +36,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage$d;->a:Lcom/vk/libvideo/storage/VideoViewedSegmentsStorage;
 

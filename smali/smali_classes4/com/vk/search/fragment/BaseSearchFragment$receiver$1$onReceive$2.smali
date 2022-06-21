@@ -3,7 +3,7 @@
 .source "BaseSearchFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/common/i/b;",
-        "Lcom/vk/common/i/b;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/common/i/RecyclerItem;",
+        "Lcom/vk/common/i/RecyclerItem;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/common/i/b;)Lcom/vk/common/i/b;
+.method public final a(Lcom/vk/common/i/RecyclerItem;)Lcom/vk/common/i/RecyclerItem;
     .locals 4
 
     if-eqz p1, :cond_3
@@ -54,9 +54,9 @@
     .line 1
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/dto/discover/b/d;
+    check-cast v0, Lcom/vk/dto/discover/b/SearchProfileItem;
 
-    invoke-virtual {v0}, Lcom/vk/dto/discover/b/d;->e()Lcom/vk/dto/user/UserProfile;
+    invoke-virtual {v0}, Lcom/vk/dto/discover/b/SearchProfileItem;->e()Lcom/vk/dto/user/UserProfile;
 
     move-result-object v0
 
@@ -98,9 +98,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/common/i/b;
+    check-cast p1, Lcom/vk/common/i/RecyclerItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/search/fragment/BaseSearchFragment$receiver$1$onReceive$2;->a(Lcom/vk/common/i/b;)Lcom/vk/common/i/b;
+    invoke-virtual {p0, p1}, Lcom/vk/search/fragment/BaseSearchFragment$receiver$1$onReceive$2;->a(Lcom/vk/common/i/RecyclerItem;)Lcom/vk/common/i/RecyclerItem;
 
     move-result-object p1
 

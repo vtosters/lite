@@ -3,12 +3,12 @@
 .source "ContactsModel.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/ContactsModel;-><init>(Lcom/vk/im/engine/models/e;Ljava/util/Set;ZLjava/lang/String;Ljava/util/Set;)V
+    value = Lcom/vk/im/ui/components/contacts/ContactsModel;-><init>(Lcom/vk/im/engine/models/ImExperiments;Ljava/util/Set;ZLjava/lang/String;Ljava/util/Set;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -47,15 +47,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/contacts/e;)Ljava/util/List;
+.method public final a(Lcom/vk/im/ui/components/contacts/ContactsModel1;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/ui/components/contacts/e;",
+            "Lcom/vk/im/ui/components/contacts/ContactsModel1;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/ui/views/adapter_delegate/c;",
+            "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
             ">;"
         }
     .end annotation
@@ -63,7 +63,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsModel$a;->a:Lcom/vk/im/ui/components/contacts/ContactsModel;
 
-    invoke-static {v0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->a(Lcom/vk/im/ui/components/contacts/ContactsModel;Lcom/vk/im/ui/components/contacts/e;)Ljava/util/List;
+    invoke-static {v0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel;->a(Lcom/vk/im/ui/components/contacts/ContactsModel;Lcom/vk/im/ui/components/contacts/ContactsModel1;)Ljava/util/List;
 
     move-result-object p1
 
@@ -78,9 +78,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/contacts/e;
+    check-cast p1, Lcom/vk/im/ui/components/contacts/ContactsModel1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel$a;->a(Lcom/vk/im/ui/components/contacts/e;)Ljava/util/List;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel$a;->a(Lcom/vk/im/ui/components/contacts/ContactsModel1;)Ljava/util/List;
 
     move-result-object p1
 

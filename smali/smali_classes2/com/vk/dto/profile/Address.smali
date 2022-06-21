@@ -643,7 +643,7 @@
 
     invoke-direct {v3}, Lcom/vk/dto/profile/Address$c;-><init>()V
 
-    invoke-static {v1, v2, v3}, Lcom/vk/core/extensions/JsonExtKt;->a(Lorg/json/JSONArray;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Ljava/util/HashMap;
+    invoke-static {v1, v2, v3}, Lcom/vk/core/extensions/JsonExtKt;->a(Lorg/json/JSONArray;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Ljava/util/HashMap;
 
     move-result-object v1
 
@@ -656,7 +656,7 @@
 
     invoke-direct {v3}, Lcom/vk/dto/profile/Address$e;-><init>()V
 
-    invoke-static {p0, v2, v3}, Lcom/vk/core/extensions/JsonExtKt;->a(Lorg/json/JSONArray;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Ljava/util/HashMap;
+    invoke-static {p0, v2, v3}, Lcom/vk/core/extensions/JsonExtKt;->a(Lorg/json/JSONArray;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Ljava/util/HashMap;
 
     move-result-object p0
 
@@ -665,7 +665,7 @@
 
     invoke-direct {v2, v1, p0}, Lcom/vk/dto/profile/Address$f;-><init>(Ljava/util/HashMap;Ljava/util/HashMap;)V
 
-    invoke-static {v0, v2}, Lcom/vk/core/extensions/JsonExtKt;->a(Lorg/json/JSONArray;Lkotlin/jvm/b/b;)Ljava/util/ArrayList;
+    invoke-static {v0, v2}, Lcom/vk/core/extensions/JsonExtKt;->a(Lorg/json/JSONArray;Lkotlin/jvm/b/Functions2;)Ljava/util/ArrayList;
 
     move-result-object p0
 

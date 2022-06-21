@@ -14,11 +14,11 @@
 # instance fields
 .field private final a:Ljava/lang/Object;
 
-.field private final b:Lcom/vk/queue/sync/api/a;
+.field private final b:Lcom/vk/queue/sync/api/QueueApiManager;
 
-.field private final c:Lcom/vk/queue/sync/d/a;
+.field private final c:Lcom/vk/queue/sync/d/QueueStorageManager;
 
-.field private final d:Lb/h/u/c/a;
+.field private final d:Lb/h/u/c/QueueLogger;
 
 .field private final e:Ljava/util/concurrent/ExecutorService;
 
@@ -43,7 +43,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;>;"
         }
     .end annotation
@@ -57,7 +57,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;>;"
         }
     .end annotation
@@ -71,7 +71,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;>;"
         }
     .end annotation
@@ -113,29 +113,29 @@
     iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager;->a:Ljava/lang/Object;
 
     .line 3
-    new-instance p1, Lcom/vk/queue/sync/api/a;
+    new-instance p1, Lcom/vk/queue/sync/api/QueueApiManager;
 
     iget p2, p0, Lcom/vk/queue/sync/QueueSyncManager;->l:I
 
     iget-object p3, p0, Lcom/vk/queue/sync/QueueSyncManager;->m:Lcom/vk/api/internal/ApiManager;
 
-    invoke-direct {p1, p2, p3}, Lcom/vk/queue/sync/api/a;-><init>(ILcom/vk/api/internal/ApiManager;)V
+    invoke-direct {p1, p2, p3}, Lcom/vk/queue/sync/api/QueueApiManager;-><init>(ILcom/vk/api/internal/ApiManager;)V
 
-    iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager;->b:Lcom/vk/queue/sync/api/a;
+    iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager;->b:Lcom/vk/queue/sync/api/QueueApiManager;
 
     .line 4
-    new-instance p1, Lcom/vk/queue/sync/d/a;
+    new-instance p1, Lcom/vk/queue/sync/d/QueueStorageManager;
 
-    invoke-direct {p1}, Lcom/vk/queue/sync/d/a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/queue/sync/d/QueueStorageManager;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager;->c:Lcom/vk/queue/sync/d/a;
+    iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager;->c:Lcom/vk/queue/sync/d/QueueStorageManager;
 
     .line 5
-    new-instance p1, Lb/h/u/c/a;
+    new-instance p1, Lb/h/u/c/QueueLogger;
 
-    invoke-direct {p1}, Lb/h/u/c/a;-><init>()V
+    invoke-direct {p1}, Lb/h/u/c/QueueLogger;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager;->d:Lb/h/u/c/a;
+    iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager;->d:Lb/h/u/c/QueueLogger;
 
     .line 6
     new-instance p1, Lcom/vk/queue/sync/QueueSyncManager$d;
@@ -181,7 +181,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/queue/sync/QueueSyncManager;Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/queue/sync/a;
+.method public static synthetic a(Lcom/vk/queue/sync/QueueSyncManager;Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/queue/sync/CancellationSignal;
     .locals 7
 
     and-int/lit8 p7, p6, 0x2
@@ -239,27 +239,27 @@
     move-object v2, p1
 
     .line 9
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/queue/sync/QueueSyncManager;->a(Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)Lcom/vk/queue/sync/a;
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/queue/sync/QueueSyncManager;->a(Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)Lcom/vk/queue/sync/CancellationSignal;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/queue/sync/QueueSyncManager;)Lcom/vk/queue/sync/d/a;
+.method public static final synthetic a(Lcom/vk/queue/sync/QueueSyncManager;)Lcom/vk/queue/sync/d/QueueStorageManager;
     .locals 0
 
     .line 3
-    iget-object p0, p0, Lcom/vk/queue/sync/QueueSyncManager;->c:Lcom/vk/queue/sync/d/a;
+    iget-object p0, p0, Lcom/vk/queue/sync/QueueSyncManager;->c:Lcom/vk/queue/sync/d/QueueStorageManager;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/queue/sync/QueueSyncManager;Lcom/vk/queue/sync/c;)V
+.method public static final synthetic a(Lcom/vk/queue/sync/QueueSyncManager;Lcom/vk/queue/sync/Subscriber;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/queue/sync/QueueSyncManager;->a(Lcom/vk/queue/sync/c;)V
+    invoke-direct {p0, p1}, Lcom/vk/queue/sync/QueueSyncManager;->a(Lcom/vk/queue/sync/Subscriber;)V
 
     return-void
 .end method
@@ -282,12 +282,12 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/queue/sync/c;)V
+.method private final a(Lcom/vk/queue/sync/Subscriber;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;)V"
         }
     .end annotation
@@ -368,7 +368,7 @@
 
     invoke-direct {v2, p0, p1}, Lcom/vk/queue/sync/QueueSyncManager$doOnQueueReleased$$inlined$synchronized$lambda$1;-><init>(Lcom/vk/queue/sync/QueueSyncManager;Ljava/util/Collection;)V
 
-    invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
+    invoke-static {v1, v2}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -396,11 +396,11 @@
             "(",
             "Ljava/util/Collection<",
             "+",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;>;",
             "Ljava/util/Collection<",
             "+",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;>;)V"
         }
     .end annotation
@@ -443,7 +443,7 @@
 
     invoke-direct {v1, p2}, Lcom/vk/queue/sync/QueueSyncManager$invalidateSubscribers$1;-><init>(Ljava/util/Collection;)V
 
-    invoke-static {v0, v1}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
+    invoke-static {v0, v1}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
 
     .line 33
     iget-object v0, p0, Lcom/vk/queue/sync/QueueSyncManager;->h:Ljava/util/List;
@@ -457,7 +457,7 @@
 
     invoke-direct {v0, p2}, Lcom/vk/queue/sync/QueueSyncManager$invalidateSubscribers$2;-><init>(Ljava/util/Collection;)V
 
-    invoke-static {p1, v0}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
+    invoke-static {p1, v0}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
 
     .line 35
     iget-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager;->i:Ljava/util/List;
@@ -487,35 +487,35 @@
     new-instance p1, Lcom/vk/queue/sync/QueueSyncRunner;
 
     .line 39
-    iget-object v1, p0, Lcom/vk/queue/sync/QueueSyncManager;->b:Lcom/vk/queue/sync/api/a;
+    iget-object v1, p0, Lcom/vk/queue/sync/QueueSyncManager;->b:Lcom/vk/queue/sync/api/QueueApiManager;
 
     .line 40
-    iget-object v2, p0, Lcom/vk/queue/sync/QueueSyncManager;->c:Lcom/vk/queue/sync/d/a;
+    iget-object v2, p0, Lcom/vk/queue/sync/QueueSyncManager;->c:Lcom/vk/queue/sync/d/QueueStorageManager;
 
     .line 41
     iget-object v3, p0, Lcom/vk/queue/sync/QueueSyncManager;->n:Ljava/util/concurrent/ExecutorService;
 
     .line 42
-    iget-object v4, p0, Lcom/vk/queue/sync/QueueSyncManager;->d:Lb/h/u/c/a;
+    iget-object v4, p0, Lcom/vk/queue/sync/QueueSyncManager;->d:Lb/h/u/c/QueueLogger;
 
     .line 43
     iget-object p2, p0, Lcom/vk/queue/sync/QueueSyncManager;->i:Ljava/util/List;
 
-    invoke-static {p2}, Lcom/vk/core/extensions/c;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p2}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v5
 
     .line 44
     iget-object p2, p0, Lcom/vk/queue/sync/QueueSyncManager;->h:Ljava/util/List;
 
-    invoke-static {p2}, Lcom/vk/core/extensions/c;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p2}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v6
 
     .line 45
     iget-object p2, p0, Lcom/vk/queue/sync/QueueSyncManager;->g:Ljava/util/List;
 
-    invoke-static {p2}, Lcom/vk/core/extensions/c;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p2}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v7
 
@@ -537,7 +537,7 @@
     move-object v0, p1
 
     .line 49
-    invoke-direct/range {v0 .. v10}, Lcom/vk/queue/sync/QueueSyncRunner;-><init>(Lcom/vk/queue/sync/api/a;Lcom/vk/queue/sync/d/a;Ljava/util/concurrent/ExecutorService;Lb/h/u/c/a;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v0 .. v10}, Lcom/vk/queue/sync/QueueSyncRunner;-><init>(Lcom/vk/queue/sync/api/QueueApiManager;Lcom/vk/queue/sync/d/QueueStorageManager;Ljava/util/concurrent/ExecutorService;Lb/h/u/c/QueueLogger;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     .line 50
     iget-object p2, p0, Lcom/vk/queue/sync/QueueSyncManager;->e:Ljava/util/concurrent/ExecutorService;
@@ -551,7 +551,7 @@
     return-void
 .end method
 
-.method private final b(Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)Ljava/util/Collection;
+.method private final b(Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)Ljava/util/Collection;
     .locals 19
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -563,27 +563,27 @@
             ">(",
             "Ljava/util/Collection<",
             "+",
-            "Lb/h/u/b/c<",
+            "Lb/h/u/b/QueueEvent<",
             "TT;>;>;",
             "Ljava/lang/Object;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
-            "Lb/h/u/b/c<",
+            "Lb/h/u/b/QueueEvent<",
             "TT;>;-TT;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
-            "Lb/h/u/b/c<",
+            "Lb/h/u/b/QueueEvent<",
             "TT;>;-",
             "Ljava/lang/Throwable;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)",
             "Ljava/util/Collection<",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;>;"
         }
     .end annotation
@@ -633,13 +633,13 @@
     .line 9
     move-object v13, v1
 
-    check-cast v13, Lb/h/u/b/c;
+    check-cast v13, Lb/h/u/b/QueueEvent;
 
     .line 10
-    new-instance v14, Lcom/vk/queue/sync/c;
+    new-instance v14, Lcom/vk/queue/sync/Subscriber;
 
     .line 11
-    invoke-interface {v13}, Lb/h/u/b/c;->a()Ljava/lang/String;
+    invoke-interface {v13}, Lb/h/u/b/QueueEvent;->a()Ljava/lang/String;
 
     move-result-object v15
 
@@ -660,7 +660,7 @@
 
     move-object/from16 v7, p5
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$1;-><init>(Lcom/vk/queue/sync/QueueSyncManager;Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$1;-><init>(Lcom/vk/queue/sync/QueueSyncManager;Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)V
 
     .line 13
     new-instance v17, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$2;
@@ -681,7 +681,7 @@
 
     move-object/from16 v8, p5
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$2;-><init>(Lb/h/u/b/c;Lcom/vk/queue/sync/QueueSyncManager;Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$2;-><init>(Lb/h/u/b/QueueEvent;Lcom/vk/queue/sync/QueueSyncManager;Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)V
 
     .line 14
     new-instance v18, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;
@@ -702,7 +702,7 @@
 
     move-object/from16 v8, p5
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;-><init>(Lb/h/u/b/c;Lcom/vk/queue/sync/QueueSyncManager;Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/queue/sync/QueueSyncManager$subscribeImpl$$inlined$synchronized$lambda$3;-><init>(Lb/h/u/b/QueueEvent;Lcom/vk/queue/sync/QueueSyncManager;Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)V
 
     move-object v2, v14
 
@@ -719,7 +719,7 @@
     move-object/from16 v8, v18
 
     .line 15
-    invoke-direct/range {v2 .. v8}, Lcom/vk/queue/sync/c;-><init>(Ljava/lang/String;Lb/h/u/b/c;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/queue/sync/Subscriber;-><init>(Ljava/lang/String;Lb/h/u/b/QueueEvent;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     .line 16
     invoke-interface {v0, v14}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -773,11 +773,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/queue/sync/QueueSyncManager;Lcom/vk/queue/sync/c;)V
+.method public static final synthetic b(Lcom/vk/queue/sync/QueueSyncManager;Lcom/vk/queue/sync/Subscriber;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/queue/sync/QueueSyncManager;->b(Lcom/vk/queue/sync/c;)V
+    invoke-direct {p0, p1}, Lcom/vk/queue/sync/QueueSyncManager;->b(Lcom/vk/queue/sync/Subscriber;)V
 
     return-void
 .end method
@@ -791,12 +791,12 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/queue/sync/c;)V
+.method private final b(Lcom/vk/queue/sync/Subscriber;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;)V"
         }
     .end annotation
@@ -837,7 +837,7 @@
             "(",
             "Ljava/util/Collection<",
             "+",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;>;)V"
         }
     .end annotation
@@ -871,7 +871,7 @@
     invoke-direct {p0, v1, p1}, Lcom/vk/queue/sync/QueueSyncManager;->a(Ljava/util/Collection;Ljava/util/Collection;)V
 
     .line 27
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -890,7 +890,7 @@
 
 
 # virtual methods
-.method public final a(Lb/h/u/b/c;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Lcom/vk/queue/sync/a;
+.method public final a(Lb/h/u/b/QueueEvent;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Lcom/vk/queue/sync/CancellationSignal;
     .locals 6
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -900,22 +900,22 @@
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lb/h/u/b/c<",
+            "Lb/h/u/b/QueueEvent<",
             "TT;>;",
             "Ljava/lang/Object;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Throwable;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)",
-            "Lcom/vk/queue/sync/a;"
+            "Lcom/vk/queue/sync/CancellationSignal;"
         }
     .end annotation
 
@@ -927,12 +927,12 @@
     .line 6
     new-instance v4, Lcom/vk/queue/sync/QueueSyncManager$subscribe$1;
 
-    invoke-direct {v4, p4}, Lcom/vk/queue/sync/QueueSyncManager$subscribe$1;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v4, p4}, Lcom/vk/queue/sync/QueueSyncManager$subscribe$1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     new-instance v5, Lcom/vk/queue/sync/QueueSyncManager$subscribe$2;
 
-    invoke-direct {v5, p5}, Lcom/vk/queue/sync/QueueSyncManager$subscribe$2;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v5, p5}, Lcom/vk/queue/sync/QueueSyncManager$subscribe$2;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object v0, p0
 
@@ -941,14 +941,14 @@
     move-object v3, p3
 
     .line 8
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/queue/sync/QueueSyncManager;->a(Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)Lcom/vk/queue/sync/a;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/queue/sync/QueueSyncManager;->a(Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)Lcom/vk/queue/sync/CancellationSignal;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a(Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)Lcom/vk/queue/sync/a;
+.method public final a(Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)Lcom/vk/queue/sync/CancellationSignal;
     .locals 0
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
@@ -960,31 +960,31 @@
             ">(",
             "Ljava/util/Collection<",
             "+",
-            "Lb/h/u/b/c<",
+            "Lb/h/u/b/QueueEvent<",
             "TT;>;>;",
             "Ljava/lang/Object;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
-            "Lb/h/u/b/c<",
+            "Lb/h/u/b/QueueEvent<",
             "TT;>;-TT;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
-            "Lb/h/u/b/c<",
+            "Lb/h/u/b/QueueEvent<",
             "TT;>;-",
             "Ljava/lang/Throwable;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)",
-            "Lcom/vk/queue/sync/a;"
+            "Lcom/vk/queue/sync/CancellationSignal;"
         }
     .end annotation
 
     .line 10
-    invoke-direct/range {p0 .. p5}, Lcom/vk/queue/sync/QueueSyncManager;->b(Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)Ljava/util/Collection;
+    invoke-direct/range {p0 .. p5}, Lcom/vk/queue/sync/QueueSyncManager;->b(Ljava/util/Collection;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)Ljava/util/Collection;
 
     move-result-object p1
 
@@ -1108,14 +1108,14 @@
 
     move-object v4, v3
 
-    check-cast v4, Lcom/vk/queue/sync/c;
+    check-cast v4, Lcom/vk/queue/sync/Subscriber;
 
     .line 16
-    invoke-virtual {v4}, Lcom/vk/queue/sync/c;->b()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/vk/queue/sync/Subscriber;->b()Ljava/lang/Object;
 
     move-result-object v4
 
-    invoke-static {v4, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -1130,7 +1130,7 @@
     invoke-direct {p0, v2}, Lcom/vk/queue/sync/QueueSyncManager;->b(Ljava/util/Collection;)V
 
     .line 18
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1214,7 +1214,7 @@
 
     .line 7
     :cond_0
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/holders/CopyrightHolder;
-.super Lcom/vk/newsfeed/holders/h;
+.super Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;
 .source "CopyrightHolder.kt"
 
 # interfaces
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/newsfeed/holders/h<",
+        "Lcom/vk/newsfeed/holders/BaseNewsEntryHolder<",
         "Lcom/vk/dto/newsfeed/entries/Post;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -39,7 +39,7 @@
 # instance fields
 .field private final F:Landroidx/appcompat/widget/AppCompatTextView;
 
-.field private G:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private G:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 .field private final H:Ljava/lang/StringBuilder;
 
@@ -52,7 +52,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/CopyrightHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/holders/CopyrightHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/newsfeed/holders/CopyrightHolder;->L:Lcom/vk/newsfeed/holders/CopyrightHolder$a;
 
@@ -75,11 +75,11 @@
     sput v0, Lcom/vk/newsfeed/holders/CopyrightHolder;->J:I
 
     .line 3
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f0701bb
 
@@ -108,7 +108,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setId(I)V
 
-    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/h;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -133,13 +133,13 @@
 
     const-string v0, "textView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/newsfeed/holders/CopyrightHolder$2;
 
     invoke-direct {v1, p0}, Lcom/vk/newsfeed/holders/CopyrightHolder$2;-><init>(Lcom/vk/newsfeed/holders/CopyrightHolder;)V
 
-    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->F:Landroidx/appcompat/widget/AppCompatTextView;
@@ -149,7 +149,7 @@
     .line 6
     iget-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->F:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
@@ -190,7 +190,7 @@
     .line 9
     iget-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->F:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
@@ -199,11 +199,11 @@
     .line 10
     iget-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->F:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f04059b
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->F:Landroidx/appcompat/widget/AppCompatTextView;
@@ -221,7 +221,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -258,13 +258,13 @@
     .locals 13
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
     const-string v1, "parent"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -279,7 +279,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -337,9 +337,9 @@
     check-cast v6, Landroid/widget/TextView;
 
     .line 8
-    new-instance v2, Lcom/vk/api/newsfeed/b;
+    new-instance v2, Lcom/vk/api/newsfeed/GetCopyrightInfoRequest;
 
-    iget-object v3, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v3, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -359,14 +359,14 @@
 
     move-result-object v10
 
-    invoke-direct {v2, v3, v9, v10}, Lcom/vk/api/newsfeed/b;-><init>(IILcom/vk/dto/newsfeed/entries/Copyright$Type;)V
+    invoke-direct {v2, v3, v9, v10}, Lcom/vk/api/newsfeed/GetCopyrightInfoRequest;-><init>(IILcom/vk/dto/newsfeed/entries/Copyright$Type;)V
 
     const/4 v9, 0x1
 
     const/4 v10, 0x0
 
     .line 9
-    invoke-static {v2, v10, v9, v10}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v2, v10, v9, v10}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v11
 
@@ -380,36 +380,36 @@
     invoke-direct/range {v2 .. v8}, Lcom/vk/newsfeed/holders/CopyrightHolder$c;-><init>(Lcom/vk/newsfeed/holders/CopyrightHolder;Lcom/vk/dto/newsfeed/Owner;Lcom/vk/imageloader/view/VKImageView;Landroid/widget/TextView;Lcom/vk/dto/newsfeed/entries/Copyright;Landroid/widget/TextView;)V
 
     .line 11
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 12
-    invoke-virtual {v11, v12, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v11, v12, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v2
 
     .line 13
-    new-instance v3, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v3, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v3, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 14
-    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 15
     new-instance v0, Lcom/vk/newsfeed/holders/CopyrightHolder$b;
 
-    invoke-direct {v0, v2}, Lcom/vk/newsfeed/holders/CopyrightHolder$b;-><init>(Lio/reactivex/disposables/b;)V
+    invoke-direct {v0, v2}, Lcom/vk/newsfeed/holders/CopyrightHolder$b;-><init>(Lio/reactivex/disposables/Disposable;)V
 
-    invoke-virtual {v3, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v3, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 16
-    invoke-static {v3, v10, v9, v10}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v3, v10, v9, v10}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->G:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object v0, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->G:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     :cond_0
     return-void
@@ -508,7 +508,7 @@
     :cond_3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->F:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-static {v0, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, v2}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -531,14 +531,14 @@
     :goto_3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->F:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-static {v0, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/core/extensions/ViewGroupExtKt;->k(Landroid/view/View;I)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->F:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-static {p1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     iget-object v0, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->H:Ljava/lang/StringBuilder;
@@ -548,7 +548,7 @@
     const v2, 0x7f120103
 
     .line 14
-    invoke-virtual {p0, v2}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->m(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -576,7 +576,7 @@
     :goto_4
     iget-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->F:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-static {p1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, v3}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -630,7 +630,7 @@
     if-ne v0, v1, :cond_3
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -648,7 +648,7 @@
 
     if-eqz v3, :cond_2
 
-    sget-object v1, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v1, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -656,7 +656,7 @@
 
     const-string p1, "v.context"
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -664,15 +664,15 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     .line 4
     :cond_2
-    iget-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->G:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object p1, p0, Lcom/vk/newsfeed/holders/CopyrightHolder;->G:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->G4()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->G4()V
 
     goto :goto_2
 

@@ -3,12 +3,12 @@
 .source "MusicActionBtnViewHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/ui/common/MusicActionBtnViewHolder;-><init>(ILandroid/view/View;Ljava/lang/String;Lcom/vk/core/ui/k;II)V
+    value = Lcom/vk/music/ui/common/MusicActionBtnViewHolder;-><init>(ILandroid/view/View;Ljava/lang/String;Lcom/vk/core/ui/IdClickListener;II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,16 +19,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $onClickListener$inlined:Lcom/vk/core/ui/k;
+.field final synthetic $onClickListener$inlined:Lcom/vk/core/ui/IdClickListener;
 
 .field final synthetic $viewId$inlined:I
 
@@ -36,12 +36,12 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/ui/common/MusicActionBtnViewHolder;Lcom/vk/core/ui/k;I)V
+.method constructor <init>(Lcom/vk/music/ui/common/MusicActionBtnViewHolder;Lcom/vk/core/ui/IdClickListener;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$$special$$inlined$also$lambda$1;->this$0:Lcom/vk/music/ui/common/MusicActionBtnViewHolder;
 
-    iput-object p2, p0, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$$special$$inlined$also$lambda$1;->$onClickListener$inlined:Lcom/vk/core/ui/k;
+    iput-object p2, p0, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$$special$$inlined$also$lambda$1;->$onClickListener$inlined:Lcom/vk/core/ui/IdClickListener;
 
     iput p3, p0, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$$special$$inlined$also$lambda$1;->$viewId$inlined:I
 
@@ -58,7 +58,7 @@
     .locals 3
 
     .line 1
-    iget-object p1, p0, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$$special$$inlined$also$lambda$1;->$onClickListener$inlined:Lcom/vk/core/ui/k;
+    iget-object p1, p0, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$$special$$inlined$also$lambda$1;->$onClickListener$inlined:Lcom/vk/core/ui/IdClickListener;
 
     iget v0, p0, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$$special$$inlined$also$lambda$1;->$viewId$inlined:I
 
@@ -66,7 +66,7 @@
 
     const/4 v2, 0x2
 
-    invoke-static {p1, v0, v1, v2, v1}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;ILjava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2, v1}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;ILjava/lang/Object;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$$special$$inlined$also$lambda$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

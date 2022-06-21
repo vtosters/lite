@@ -40,7 +40,7 @@
     const-string p1, "event"
 
     .line 1
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -73,13 +73,13 @@
     .line 3
     iget-object p2, p0, Lcom/vk/core/tips/TipTextWindow$setClickListeners$2$a;->a:Lcom/vk/core/tips/TipTextWindow$setClickListeners$2;
 
-    iget-object p2, p2, Lcom/vk/core/tips/TipTextWindow$setClickListeners$2;->$dismissAction:Lkotlin/jvm/b/b;
+    iget-object p2, p2, Lcom/vk/core/tips/TipTextWindow$setClickListeners$2;->$dismissAction:Lkotlin/jvm/b/Functions2;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {p2, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 p1, 0x1
 

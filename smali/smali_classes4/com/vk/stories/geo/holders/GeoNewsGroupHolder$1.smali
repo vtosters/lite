@@ -3,7 +3,7 @@
 .source "GeoNewsGroupHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
     .locals 9
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
+    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v0
 
@@ -62,15 +62,15 @@
 
     iget-object p1, p0, Lcom/vk/stories/geo/holders/GeoNewsGroupHolder$1;->this$0:Lcom/vk/stories/geo/holders/GeoNewsGroupHolder;
 
-    invoke-static {p1}, Lcom/vk/stories/geo/holders/GeoNewsGroupHolder;->b(Lcom/vk/stories/geo/holders/GeoNewsGroupHolder;)Lcom/vk/stories/geo/e/a;
+    invoke-static {p1}, Lcom/vk/stories/geo/holders/GeoNewsGroupHolder;->b(Lcom/vk/stories/geo/holders/GeoNewsGroupHolder;)Lcom/vk/stories/geo/e/GeoNewsGroupItem;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stories/geo/e/a;->d()Lcom/vk/dto/stories/c;
+    invoke-virtual {p1}, Lcom/vk/stories/geo/e/GeoNewsGroupItem;->d()Lcom/vk/dto/stories/GeoNewsResponse;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/dto/stories/c;->c()Lcom/vk/dto/group/Group;
+    invoke-virtual {p1}, Lcom/vk/dto/stories/GeoNewsResponse;->c()Lcom/vk/dto/group/Group;
 
     move-result-object p1
 
@@ -90,7 +90,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v8}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -103,7 +103,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/geo/holders/GeoNewsGroupHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

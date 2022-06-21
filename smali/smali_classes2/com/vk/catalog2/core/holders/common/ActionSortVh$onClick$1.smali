@@ -3,7 +3,7 @@
 .source "ActionSortVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -60,7 +60,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/vk/catalog2/core/util/d;->a(Ljava/util/List;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/vk/catalog2/core/util/CatalogExtensions;->a(Ljava/util/List;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/ActionSortVh$onClick$1;->this$0:Lcom/vk/catalog2/core/holders/common/ActionSortVh;
@@ -76,11 +76,11 @@
 
     iget-object v2, p0, Lcom/vk/catalog2/core/holders/common/ActionSortVh$onClick$1;->$ctx:Landroid/content/Context;
 
-    invoke-virtual {v1, v2, p1}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a(Landroid/content/Context;Ljava/lang/String;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, p1}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a(Landroid/content/Context;Ljava/lang/String;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/catalog2/core/holders/common/ActionSortVh;->a(Lcom/vk/catalog2/core/holders/common/ActionSortVh;Lio/reactivex/disposables/b;)V
+    invoke-static {v0, p1}, Lcom/vk/catalog2/core/holders/common/ActionSortVh;->a(Lcom/vk/catalog2/core/holders/common/ActionSortVh;Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -93,7 +93,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/common/ActionSortVh$onClick$1;->a(Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

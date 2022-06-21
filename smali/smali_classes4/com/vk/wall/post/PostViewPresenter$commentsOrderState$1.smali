@@ -3,12 +3,12 @@
 .source "PostViewPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/PostViewPresenter;-><init>(Lcom/vk/wall/post/c;)V
+    value = Lcom/vk/wall/post/PostViewPresenter;-><init>(Lcom/vk/wall/post/PostViewContract;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/String;",
         "Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -57,7 +57,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/wall/post/PostViewPresenter$commentsOrderState$1;->a(Ljava/lang/String;Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -68,13 +68,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/wall/post/PostViewPresenter$commentsOrderState$1;->this$0:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-static {v0}, Lcom/vk/wall/post/PostViewPresenter;->a(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/wall/e;
+    invoke-static {v0}, Lcom/vk/wall/post/PostViewPresenter;->a(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/wall/CommentsListContract;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/wall/e;->a(Ljava/lang/String;Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/wall/CommentsListContract;->a(Ljava/lang/String;Lcom/vk/newsfeed/holders/CommentsOrderDropdownHolder$a;)V
 
     :cond_0
     return-void

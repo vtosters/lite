@@ -3,7 +3,7 @@
 .source "SearchQueryVh.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,11 +57,11 @@
 
 
 # virtual methods
-.method public final a(Lb/h/v/e;)Ljava/lang/String;
+.method public final a(Lb/h/v/TextViewTextChangeEvent;)Ljava/lang/String;
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lb/h/v/e;->d()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lb/h/v/TextViewTextChangeEvent;->d()Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -80,9 +80,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/v/e;
+    check-cast p1, Lb/h/v/TextViewTextChangeEvent;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh$c;->a(Lb/h/v/e;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/headers/SearchQueryVh$c;->a(Lb/h/v/TextViewTextChangeEvent;)Ljava/lang/String;
 
     move-result-object p1
 

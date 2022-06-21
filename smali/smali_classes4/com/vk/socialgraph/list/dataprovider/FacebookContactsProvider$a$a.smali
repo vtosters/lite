@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/socialgraph/list/dataprovider/FacebookContactsProvider$a;->call()Lcom/vk/socialgraph/list/dataprovider/b;
+    value = Lcom/vk/socialgraph/list/dataprovider/FacebookContactsProvider$a;->call()Lcom/vk/socialgraph/list/dataprovider/Contacts;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -38,15 +38,15 @@
 
 
 # virtual methods
-.method public final a(Lorg/json/JSONArray;Lcom/facebook/i;)V
+.method public final a(Lorg/json/JSONArray;Lcom/facebook/GraphResponse;)V
     .locals 8
 
     const-string v0, "response"
 
     .line 1
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p2}, Lcom/facebook/i;->a()Lcom/facebook/FacebookRequestError;
+    invoke-virtual {p2}, Lcom/facebook/GraphResponse;->a()Lcom/facebook/FacebookRequestError;
 
     move-result-object v0
 
@@ -81,7 +81,7 @@
     .line 4
     iget-object v3, p0, Lcom/vk/socialgraph/list/dataprovider/FacebookContactsProvider$a$a;->a:Ljava/util/ArrayList;
 
-    new-instance v4, Lcom/vk/dto/common/b;
+    new-instance v4, Lcom/vk/dto/common/Contact;
 
     const-string v5, "name"
 
@@ -101,7 +101,7 @@
 
     const-string v7, "it.getString(\"id\")"
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v2, v6, p2
 
@@ -109,7 +109,7 @@
 
     move-result-object v2
 
-    invoke-direct {v4, v5, v2}, Lcom/vk/dto/common/b;-><init>(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v4, v5, v2}, Lcom/vk/dto/common/Contact;-><init>(Ljava/lang/String;Ljava/util/List;)V
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -124,7 +124,7 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/socialgraph/list/dataprovider/FacebookContactsProvider$a$a;->b:Lkotlin/jvm/internal/Ref$ObjectRef;
 
-    invoke-virtual {p2}, Lcom/facebook/i;->a()Lcom/facebook/FacebookRequestError;
+    invoke-virtual {p2}, Lcom/facebook/GraphResponse;->a()Lcom/facebook/FacebookRequestError;
 
     move-result-object p2
 

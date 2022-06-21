@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;
-.super Lcom/vk/im/ui/views/adapter_delegate/d;
+.super Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
 .source "NewUsersVh.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/d<",
-        "Lcom/vk/im/ui/components/contacts/vc/newusers/b;",
+        "Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder<",
+        "Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;",
         ">;"
     }
 .end annotation
@@ -22,19 +22,19 @@
 
 .field private final d:Landroid/view/View;
 
-.field private e:Lcom/vk/im/ui/components/contacts/vc/newusers/b;
+.field private e:Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;
 
-.field private final f:Lcom/vk/im/ui/components/contacts/vc/newusers/a;
+.field private final f:Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersCallback;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/newusers/a;)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersCallback;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/d;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->f:Lcom/vk/im/ui/components/contacts/vc/newusers/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->f:Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersCallback;
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -91,44 +91,44 @@
 
     const-string p2, "btn"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh$1;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh$1;-><init>(Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->d:Landroid/view/View;
 
     const-string p2, "closeBtn"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh$2;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh$2;-><init>(Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;)Lcom/vk/im/ui/components/contacts/vc/newusers/a;
+.method public static final synthetic a(Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;)Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersCallback;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->f:Lcom/vk/im/ui/components/contacts/vc/newusers/a;
+    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->f:Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersCallback;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;)Lcom/vk/im/ui/components/contacts/vc/newusers/b;
+.method public static final synthetic b(Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;)Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->e:Lcom/vk/im/ui/components/contacts/vc/newusers/b;
+    iget-object p0, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->e:Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;
 
     if-eqz p0, :cond_0
 
@@ -137,7 +137,7 @@
     :cond_0
     const-string p0, "model"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -146,24 +146,24 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/ui/components/contacts/vc/newusers/b;)V
+.method public a(Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;)V
     .locals 6
 
     .line 3
-    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->e:Lcom/vk/im/ui/components/contacts/vc/newusers/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->e:Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->b:Landroid/widget/TextView;
 
     const-string v1, "label"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -171,11 +171,11 @@
 
     const-string v3, "itemView.context"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v4, Lcom/vk/im/ui/l;->vkim_contacts_label:I
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/b;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;->a()Ljava/util/List;
 
     move-result-object v5
 
@@ -194,21 +194,21 @@
 
     const-string v1, "btn"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v2, Lcom/vk/im/ui/l;->vkim_contacts_show_new_users:I
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/b;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;->a()Ljava/util/List;
 
     move-result-object v3
 
@@ -225,7 +225,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->a:Lcom/vk/im/ui/views/avatars/StackAvatarView;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/b;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;->a()Ljava/util/List;
 
     move-result-object v1
 
@@ -257,12 +257,12 @@
     move-result-object v3
 
     .line 9
-    check-cast v3, Lcom/vk/im/engine/models/j;
+    check-cast v3, Lcom/vk/im/engine/models/Profile;
 
     .line 10
     new-instance v4, Lcom/vk/im/engine/models/Member;
 
-    invoke-interface {v3}, Lcom/vk/im/engine/models/j;->f0()I
+    invoke-interface {v3}, Lcom/vk/im/engine/models/Profile;->f0()I
 
     move-result v3
 
@@ -275,7 +275,7 @@
     :cond_0
     new-instance v1, Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/b;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;->a()Ljava/util/List;
 
     move-result-object p1
 
@@ -286,13 +286,13 @@
     return-void
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/c;)V
+.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/im/ui/components/contacts/vc/newusers/b;
+    check-cast p1, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->a(Lcom/vk/im/ui/components/contacts/vc/newusers/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersVh;->a(Lcom/vk/im/ui/components/contacts/vc/newusers/NewUsersItemItem;)V
 
     return-void
 .end method

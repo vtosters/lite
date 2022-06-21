@@ -1,5 +1,5 @@
 .class public final Lcom/vk/search/fragment/DiscoverSearchFragment$a;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "DiscoverSearchFragment.kt"
 
 
@@ -21,7 +21,7 @@
     .line 1
     const-class v0, Lcom/vk/search/fragment/DiscoverSearchFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "query"
 
@@ -48,7 +48,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "no_anim"
 
@@ -63,7 +63,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     sget-object v1, Lcom/vk/stats/AppUseTime$Section;->search_groups:Lcom/vk/stats/AppUseTime$Section;
 
@@ -78,7 +78,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     sget-object v1, Lcom/vk/stats/AppUseTime$Section;->search_news:Lcom/vk/stats/AppUseTime$Section;
 
@@ -93,7 +93,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     sget-object v1, Lcom/vk/stats/AppUseTime$Section;->search_people:Lcom/vk/stats/AppUseTime$Section;
 
@@ -108,7 +108,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "start_voice_search"
 

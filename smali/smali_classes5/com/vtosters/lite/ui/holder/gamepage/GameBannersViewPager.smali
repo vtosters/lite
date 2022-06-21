@@ -11,7 +11,7 @@
 
     const/4 v1, 0x2
 
-    invoke-direct {p0, p1, v0, v1, v0}, Lcom/vtosters/lite/ui/holder/gamepage/GameBannersViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, p1, v0, v1, v0}, Lcom/vtosters/lite/ui/holder/gamepage/GameBannersViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -25,7 +25,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -47,7 +47,7 @@
     .locals 2
 
     .line 1
-    iget v0, p0, Lcom/vk/core/ui/infiniteviewpager/c;->a:F
+    iget v0, p0, Lcom/vk/core/ui/infiniteviewpager/ViewPagerRatio;->a:F
 
     const/4 v1, 0x0
 
@@ -55,7 +55,7 @@
 
     if-eqz v0, :cond_1
 
-    iget v0, p0, Lcom/vk/core/ui/infiniteviewpager/c;->b:I
+    iget v0, p0, Lcom/vk/core/ui/infiniteviewpager/ViewPagerRatio;->b:I
 
     if-eqz v0, :cond_0
 
@@ -89,7 +89,7 @@
     int-to-float p2, p2
 
     .line 4
-    iget v0, p0, Lcom/vk/core/ui/infiniteviewpager/c;->a:F
+    iget v0, p0, Lcom/vk/core/ui/infiniteviewpager/ViewPagerRatio;->a:F
 
     mul-float p2, p2, v0
 
@@ -116,14 +116,14 @@
     move-result p2
 
     .line 7
-    invoke-virtual {p0, p1, p2}, Lcom/vk/core/ui/infiniteviewpager/c;->a(II)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/core/ui/infiniteviewpager/ViewPagerRatio;->a(II)V
 
     return-void
 
     .line 8
     :cond_1
     :goto_0
-    invoke-super {p0, p1, p2}, Lcom/vk/core/ui/infiniteviewpager/c;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lcom/vk/core/ui/infiniteviewpager/ViewPagerRatio;->onMeasure(II)V
 
     return-void
 .end method

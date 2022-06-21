@@ -17,13 +17,13 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/model/content/b;",
+            "Lcom/airbnb/lottie/model/content/ContentModel;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final b:Lcom/airbnb/lottie/d;
+.field private final b:Lcom/airbnb/lottie/LottieComposition;
 
 .field private final c:Ljava/lang/String;
 
@@ -48,7 +48,7 @@
     .end annotation
 .end field
 
-.field private final i:Lcom/airbnb/lottie/model/i/l;
+.field private final i:Lcom/airbnb/lottie/model/i/AnimatableTransform;
 
 .field private final j:I
 
@@ -64,17 +64,17 @@
 
 .field private final p:I
 
-.field private final q:Lcom/airbnb/lottie/model/i/j;
+.field private final q:Lcom/airbnb/lottie/model/i/AnimatableTextFrame;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private final r:Lcom/airbnb/lottie/model/i/k;
+.field private final r:Lcom/airbnb/lottie/model/i/AnimatableTextProperties;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private final s:Lcom/airbnb/lottie/model/i/b;
+.field private final s:Lcom/airbnb/lottie/model/i/AnimatableFloatValue;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -83,7 +83,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/v/a<",
+            "Lcom/airbnb/lottie/v/Keyframe<",
             "Ljava/lang/Float;",
             ">;>;"
         }
@@ -96,21 +96,21 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lcom/airbnb/lottie/d;Ljava/lang/String;JLcom/airbnb/lottie/model/layer/Layer$LayerType;JLjava/lang/String;Ljava/util/List;Lcom/airbnb/lottie/model/i/l;IIIFFIILcom/airbnb/lottie/model/i/j;Lcom/airbnb/lottie/model/i/k;Ljava/util/List;Lcom/airbnb/lottie/model/layer/Layer$MatteType;Lcom/airbnb/lottie/model/i/b;Z)V
+.method public constructor <init>(Ljava/util/List;Lcom/airbnb/lottie/LottieComposition;Ljava/lang/String;JLcom/airbnb/lottie/model/layer/Layer$LayerType;JLjava/lang/String;Ljava/util/List;Lcom/airbnb/lottie/model/i/AnimatableTransform;IIIFFIILcom/airbnb/lottie/model/i/AnimatableTextFrame;Lcom/airbnb/lottie/model/i/AnimatableTextProperties;Ljava/util/List;Lcom/airbnb/lottie/model/layer/Layer$MatteType;Lcom/airbnb/lottie/model/i/AnimatableFloatValue;Z)V
     .locals 3
     .param p9    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p19    # Lcom/airbnb/lottie/model/i/j;
+    .param p19    # Lcom/airbnb/lottie/model/i/AnimatableTextFrame;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p20    # Lcom/airbnb/lottie/model/i/k;
+    .param p20    # Lcom/airbnb/lottie/model/i/AnimatableTextProperties;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p23    # Lcom/airbnb/lottie/model/i/b;
+    .param p23    # Lcom/airbnb/lottie/model/i/AnimatableFloatValue;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -118,9 +118,9 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/model/content/b;",
+            "Lcom/airbnb/lottie/model/content/ContentModel;",
             ">;",
-            "Lcom/airbnb/lottie/d;",
+            "Lcom/airbnb/lottie/LottieComposition;",
             "Ljava/lang/String;",
             "J",
             "Lcom/airbnb/lottie/model/layer/Layer$LayerType;",
@@ -129,16 +129,16 @@
             "Ljava/util/List<",
             "Lcom/airbnb/lottie/model/content/Mask;",
             ">;",
-            "Lcom/airbnb/lottie/model/i/l;",
+            "Lcom/airbnb/lottie/model/i/AnimatableTransform;",
             "IIIFFII",
-            "Lcom/airbnb/lottie/model/i/j;",
-            "Lcom/airbnb/lottie/model/i/k;",
+            "Lcom/airbnb/lottie/model/i/AnimatableTextFrame;",
+            "Lcom/airbnb/lottie/model/i/AnimatableTextProperties;",
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/v/a<",
+            "Lcom/airbnb/lottie/v/Keyframe<",
             "Ljava/lang/Float;",
             ">;>;",
             "Lcom/airbnb/lottie/model/layer/Layer$MatteType;",
-            "Lcom/airbnb/lottie/model/i/b;",
+            "Lcom/airbnb/lottie/model/i/AnimatableFloatValue;",
             "Z)V"
         }
     .end annotation
@@ -156,7 +156,7 @@
     move-object v1, p2
 
     .line 3
-    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->b:Lcom/airbnb/lottie/d;
+    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->b:Lcom/airbnb/lottie/LottieComposition;
 
     move-object v1, p3
 
@@ -191,7 +191,7 @@
     move-object v1, p11
 
     .line 10
-    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->i:Lcom/airbnb/lottie/model/i/l;
+    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->i:Lcom/airbnb/lottie/model/i/AnimatableTransform;
 
     move v1, p12
 
@@ -231,12 +231,12 @@
     move-object/from16 v1, p19
 
     .line 18
-    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->q:Lcom/airbnb/lottie/model/i/j;
+    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->q:Lcom/airbnb/lottie/model/i/AnimatableTextFrame;
 
     move-object/from16 v1, p20
 
     .line 19
-    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->r:Lcom/airbnb/lottie/model/i/k;
+    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->r:Lcom/airbnb/lottie/model/i/AnimatableTextProperties;
 
     move-object/from16 v1, p21
 
@@ -251,7 +251,7 @@
     move-object/from16 v1, p23
 
     .line 22
-    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->s:Lcom/airbnb/lottie/model/i/b;
+    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->s:Lcom/airbnb/lottie/model/i/AnimatableFloatValue;
 
     move/from16 v1, p24
 
@@ -263,11 +263,11 @@
 
 
 # virtual methods
-.method a()Lcom/airbnb/lottie/d;
+.method a()Lcom/airbnb/lottie/LottieComposition;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->b:Lcom/airbnb/lottie/d;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->b:Lcom/airbnb/lottie/LottieComposition;
 
     return-object v0
 .end method
@@ -294,13 +294,13 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 4
-    iget-object v2, p0, Lcom/airbnb/lottie/model/layer/Layer;->b:Lcom/airbnb/lottie/d;
+    iget-object v2, p0, Lcom/airbnb/lottie/model/layer/Layer;->b:Lcom/airbnb/lottie/LottieComposition;
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/model/layer/Layer;->h()J
 
     move-result-wide v3
 
-    invoke-virtual {v2, v3, v4}, Lcom/airbnb/lottie/d;->a(J)Lcom/airbnb/lottie/model/layer/Layer;
+    invoke-virtual {v2, v3, v4}, Lcom/airbnb/lottie/LottieComposition;->a(J)Lcom/airbnb/lottie/model/layer/Layer;
 
     move-result-object v2
 
@@ -318,13 +318,13 @@
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 6
-    iget-object v3, p0, Lcom/airbnb/lottie/model/layer/Layer;->b:Lcom/airbnb/lottie/d;
+    iget-object v3, p0, Lcom/airbnb/lottie/model/layer/Layer;->b:Lcom/airbnb/lottie/LottieComposition;
 
     invoke-virtual {v2}, Lcom/airbnb/lottie/model/layer/Layer;->h()J
 
     move-result-wide v4
 
-    invoke-virtual {v3, v4, v5}, Lcom/airbnb/lottie/d;->a(J)Lcom/airbnb/lottie/model/layer/Layer;
+    invoke-virtual {v3, v4, v5}, Lcom/airbnb/lottie/LottieComposition;->a(J)Lcom/airbnb/lottie/model/layer/Layer;
 
     move-result-object v2
 
@@ -343,13 +343,13 @@
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 8
-    iget-object v3, p0, Lcom/airbnb/lottie/model/layer/Layer;->b:Lcom/airbnb/lottie/d;
+    iget-object v3, p0, Lcom/airbnb/lottie/model/layer/Layer;->b:Lcom/airbnb/lottie/LottieComposition;
 
     invoke-virtual {v2}, Lcom/airbnb/lottie/model/layer/Layer;->h()J
 
     move-result-wide v4
 
-    invoke-virtual {v3, v4, v5}, Lcom/airbnb/lottie/d;->a(J)Lcom/airbnb/lottie/model/layer/Layer;
+    invoke-virtual {v3, v4, v5}, Lcom/airbnb/lottie/LottieComposition;->a(J)Lcom/airbnb/lottie/model/layer/Layer;
 
     move-result-object v2
 
@@ -537,7 +537,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/v/a<",
+            "Lcom/airbnb/lottie/v/Keyframe<",
             "Ljava/lang/Float;",
             ">;>;"
         }
@@ -637,7 +637,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/model/content/b;",
+            "Lcom/airbnb/lottie/model/content/ContentModel;",
             ">;"
         }
     .end annotation
@@ -681,9 +681,9 @@
     .line 1
     iget v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->n:F
 
-    iget-object v1, p0, Lcom/airbnb/lottie/model/layer/Layer;->b:Lcom/airbnb/lottie/d;
+    iget-object v1, p0, Lcom/airbnb/lottie/model/layer/Layer;->b:Lcom/airbnb/lottie/LottieComposition;
 
-    invoke-virtual {v1}, Lcom/airbnb/lottie/d;->d()F
+    invoke-virtual {v1}, Lcom/airbnb/lottie/LottieComposition;->d()F
 
     move-result v1
 
@@ -692,35 +692,35 @@
     return v0
 .end method
 
-.method q()Lcom/airbnb/lottie/model/i/j;
+.method q()Lcom/airbnb/lottie/model/i/AnimatableTextFrame;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->q:Lcom/airbnb/lottie/model/i/j;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->q:Lcom/airbnb/lottie/model/i/AnimatableTextFrame;
 
     return-object v0
 .end method
 
-.method r()Lcom/airbnb/lottie/model/i/k;
+.method r()Lcom/airbnb/lottie/model/i/AnimatableTextProperties;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->r:Lcom/airbnb/lottie/model/i/k;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->r:Lcom/airbnb/lottie/model/i/AnimatableTextProperties;
 
     return-object v0
 .end method
 
-.method s()Lcom/airbnb/lottie/model/i/b;
+.method s()Lcom/airbnb/lottie/model/i/AnimatableFloatValue;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->s:Lcom/airbnb/lottie/model/i/b;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->s:Lcom/airbnb/lottie/model/i/AnimatableFloatValue;
 
     return-object v0
 .end method
@@ -747,11 +747,11 @@
     return-object v0
 .end method
 
-.method u()Lcom/airbnb/lottie/model/i/l;
+.method u()Lcom/airbnb/lottie/model/i/AnimatableTransform;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->i:Lcom/airbnb/lottie/model/i/l;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->i:Lcom/airbnb/lottie/model/i/AnimatableTransform;
 
     return-object v0
 .end method

@@ -3,13 +3,13 @@
 .source "VideoActivity.kt"
 
 # interfaces
-.implements Lcom/vk/video/b$b;
+.implements Lcom/vk/video/VideoScreenController$b;
 
 
 # instance fields
-.field private G:Lcom/vk/video/b;
+.field private G:Lcom/vk/video/VideoScreenController;
 
-.field private H:Lcom/vk/video/b$a;
+.field private H:Lcom/vk/video/VideoScreenController$a;
 
 
 # direct methods
@@ -83,16 +83,16 @@
     const-string v1, "theme"
 
     .line 5
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public l1()Lcom/vk/video/b$a;
+.method public l1()Lcom/vk/video/VideoScreenController$a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/video/VideoActivity;->H:Lcom/vk/video/b$a;
+    iget-object v0, p0, Lcom/vk/video/VideoActivity;->H:Lcom/vk/video/VideoScreenController$a;
 
     if-eqz v0, :cond_0
 
@@ -101,7 +101,7 @@
     :cond_0
     const-string v0, "args"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -115,11 +115,11 @@
     invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/b;
+    iget-object v0, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/VideoScreenController;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/video/b;->a(Landroid/content/res/Configuration;)V
+    invoke-virtual {v0, p1}, Lcom/vk/video/VideoScreenController;->a(Landroid/content/res/Configuration;)V
 
     :cond_0
     return-void
@@ -172,14 +172,14 @@
     const/4 v4, 0x2
 
     .line 4
-    invoke-static {v2, v0, v4, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v2, v0, v4, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 5
     invoke-virtual {p0}, Lcom/vtosters/lite/VKActivity;->finish()V
 
     .line 6
     :cond_1
-    new-instance v11, Lcom/vk/video/b$a;
+    new-instance v11, Lcom/vk/video/VideoScreenController$a;
 
     if-eqz v3, :cond_5
 
@@ -271,19 +271,19 @@
     move-object v2, v11
 
     .line 14
-    invoke-direct/range {v2 .. v10}, Lcom/vk/video/b$a;-><init>(Lcom/vk/dto/common/VideoFile;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;Ljava/lang/String;ZZZ)V
+    invoke-direct/range {v2 .. v10}, Lcom/vk/video/VideoScreenController$a;-><init>(Lcom/vk/dto/common/VideoFile;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;Ljava/lang/String;ZZZ)V
 
-    iput-object v11, p0, Lcom/vk/video/VideoActivity;->H:Lcom/vk/video/b$a;
+    iput-object v11, p0, Lcom/vk/video/VideoActivity;->H:Lcom/vk/video/VideoScreenController$a;
 
     .line 15
-    new-instance v2, Lcom/vk/video/b;
+    new-instance v2, Lcom/vk/video/VideoScreenController;
 
-    invoke-direct {v2, p0, p0}, Lcom/vk/video/b;-><init>(Landroid/content/Context;Lcom/vk/video/b$b;)V
+    invoke-direct {v2, p0, p0}, Lcom/vk/video/VideoScreenController;-><init>(Landroid/content/Context;Lcom/vk/video/VideoScreenController$b;)V
 
-    iput-object v2, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/b;
+    iput-object v2, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/VideoScreenController;
 
     .line 16
-    iget-object v2, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/b;
+    iget-object v2, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/VideoScreenController;
 
     if-eqz v2, :cond_2
 
@@ -291,7 +291,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3, v1, p1}, Lcom/vk/video/b;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v2, v3, v1, p1}, Lcom/vk/video/VideoScreenController;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v1
 
@@ -299,11 +299,11 @@
     if-eqz v1, :cond_4
 
     .line 17
-    iget-object p1, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/b;
+    iget-object p1, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/VideoScreenController;
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1, v1}, Lcom/vk/video/b;->a(Landroid/view/View;)V
+    invoke-virtual {p1, v1}, Lcom/vk/video/VideoScreenController;->a(Landroid/view/View;)V
 
     :cond_3
     const p1, 0x7f0a0480
@@ -322,7 +322,7 @@
 
     .line 21
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -334,11 +334,11 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/b;
+    iget-object v0, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/VideoScreenController;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/video/b;->j()V
+    invoke-virtual {v0}, Lcom/vk/video/VideoScreenController;->j()V
 
     :cond_0
     return-void
@@ -351,11 +351,11 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onPause()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/b;
+    iget-object v0, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/VideoScreenController;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/video/b;->k()V
+    invoke-virtual {v0}, Lcom/vk/video/VideoScreenController;->k()V
 
     :cond_0
     return-void
@@ -368,11 +368,11 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onResume()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/b;
+    iget-object v0, p0, Lcom/vk/video/VideoActivity;->G:Lcom/vk/video/VideoScreenController;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/video/b;->l()V
+    invoke-virtual {v0}, Lcom/vk/video/VideoScreenController;->l()V
 
     :cond_0
     return-void

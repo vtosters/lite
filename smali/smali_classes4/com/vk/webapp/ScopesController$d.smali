@@ -3,12 +3,12 @@
 .source "ScopesController.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$d;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/webapp/ScopesController;->a(Landroid/app/Activity;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Ljava/util/List;Ljava/util/List;)V
+    value = Lcom/vk/webapp/ScopesController;->a(Landroid/app/Activity;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Ljava/util/List;Ljava/util/List;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,9 +22,9 @@
 
 .field final synthetic b:Landroid/app/Activity;
 
-.field final synthetic c:Lkotlin/jvm/b/b;
+.field final synthetic c:Lkotlin/jvm/b/Functions2;
 
-.field final synthetic d:Lkotlin/jvm/b/a;
+.field final synthetic d:Lkotlin/jvm/b/Functions;
 
 .field final synthetic e:Ljava/util/List;
 
@@ -32,14 +32,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/webapp/ScopesController;Landroid/app/Activity;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Ljava/util/List;Lcom/vk/core/dialogs/adapter/ModalAdapter;)V
+.method constructor <init>(Lcom/vk/webapp/ScopesController;Landroid/app/Activity;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Ljava/util/List;Lcom/vk/core/dialogs/adapter/ModalAdapter;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/app/Activity;",
-            "Lkotlin/jvm/b/b;",
-            "Lkotlin/jvm/b/a;",
+            "Lkotlin/jvm/b/Functions2;",
+            "Lkotlin/jvm/b/Functions;",
             "Ljava/util/List;",
             "Lcom/vk/core/dialogs/adapter/ModalAdapter;",
             ")V"
@@ -51,9 +51,9 @@
 
     iput-object p2, p0, Lcom/vk/webapp/ScopesController$d;->b:Landroid/app/Activity;
 
-    iput-object p3, p0, Lcom/vk/webapp/ScopesController$d;->c:Lkotlin/jvm/b/b;
+    iput-object p3, p0, Lcom/vk/webapp/ScopesController$d;->c:Lkotlin/jvm/b/Functions2;
 
-    iput-object p4, p0, Lcom/vk/webapp/ScopesController$d;->d:Lkotlin/jvm/b/a;
+    iput-object p4, p0, Lcom/vk/webapp/ScopesController$d;->d:Lkotlin/jvm/b/Functions;
 
     iput-object p5, p0, Lcom/vk/webapp/ScopesController$d;->e:Ljava/util/List;
 
@@ -74,9 +74,9 @@
 
     iget-object v1, p0, Lcom/vk/webapp/ScopesController$d;->b:Landroid/app/Activity;
 
-    iget-object v2, p0, Lcom/vk/webapp/ScopesController$d;->c:Lkotlin/jvm/b/b;
+    iget-object v2, p0, Lcom/vk/webapp/ScopesController$d;->c:Lkotlin/jvm/b/Functions2;
 
-    iget-object v3, p0, Lcom/vk/webapp/ScopesController$d;->d:Lkotlin/jvm/b/a;
+    iget-object v3, p0, Lcom/vk/webapp/ScopesController$d;->d:Lkotlin/jvm/b/Functions;
 
     iget-object v4, p0, Lcom/vk/webapp/ScopesController$d;->e:Ljava/util/List;
 
@@ -86,7 +86,7 @@
 
     move-result-object v5
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/webapp/ScopesController;->b(Lcom/vk/webapp/ScopesController;Landroid/app/Activity;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Ljava/util/List;Ljava/util/List;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/webapp/ScopesController;->b(Lcom/vk/webapp/ScopesController;Landroid/app/Activity;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Ljava/util/List;Ljava/util/List;)V
 
     return-void
 .end method

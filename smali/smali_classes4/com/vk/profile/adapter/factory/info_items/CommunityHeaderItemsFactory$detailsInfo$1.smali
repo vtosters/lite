@@ -3,12 +3,12 @@
 .source "CommunityHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/i;Lcom/vk/profile/presenter/f/b;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Lcom/vk/profile/presenter/f/CommunityLocationController;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/CommunityDataScope;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/api/i;",
-        "Lcom/vk/profile/adapter/items/community/c;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
+        "Lcom/vk/profile/adapter/items/community/CommunityDetailsBoldItem;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/c;
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/community/CommunityDetailsBoldItem;
     .locals 4
 
     .line 1
@@ -64,7 +64,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/adapter/b/a;->b(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
@@ -82,16 +82,16 @@
     if-eqz v0, :cond_0
 
     .line 3
-    new-instance v0, Lcom/vk/profile/adapter/items/community/c;
+    new-instance v0, Lcom/vk/profile/adapter/items/community/CommunityDetailsBoldItem;
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/vk/profile/adapter/items/community/c;-><init>(IILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v3, v1, v2}, Lcom/vk/profile/adapter/items/community/CommunityDetailsBoldItem;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const v1, 0x7f080500
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/c;->g(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/CommunityDetailsBoldItem;->g(I)V
 
     .line 5
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1;->$context:Landroid/content/Context;
@@ -102,14 +102,14 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/c;->c(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/CommunityDetailsBoldItem;->c(Ljava/lang/String;)V
 
     .line 6
     new-instance v1, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1;Lcom/vtosters/lite/api/i;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/c;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/adapter/items/community/CommunityDetailsBoldItem;->a(Landroid/view/View$OnClickListener;)V
 
     return-object v0
 
@@ -121,9 +121,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/community/c;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$detailsInfo$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/community/CommunityDetailsBoldItem;
 
     move-result-object p1
 

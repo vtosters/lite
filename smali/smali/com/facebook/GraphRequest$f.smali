@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/facebook/i;)V
+.method public abstract a(Lcom/facebook/GraphResponse;)V
 .end method

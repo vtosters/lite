@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationsPresenter;-><init>(Lcom/vk/notifications/l;)V
+    value = Lcom/vk/notifications/NotificationsPresenter;-><init>(Lcom/vk/notifications/NotificationsContract1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -98,14 +98,14 @@
     if-nez p2, :cond_3
 
     .line 4
-    invoke-static {}, Lcom/vtosters/lite/w;->k()I
+    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->k()I
 
     move-result p2
 
     if-lez p2, :cond_3
 
     .line 5
-    invoke-static {}, Lcom/vtosters/lite/w;->k()I
+    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->k()I
 
     move-result p2
 
@@ -120,7 +120,7 @@
     .line 6
     iget-object p2, p0, Lcom/vk/notifications/NotificationsPresenter$receiver$1;->a:Lcom/vk/notifications/NotificationsPresenter;
 
-    invoke-static {}, Lcom/vtosters/lite/w;->k()I
+    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->k()I
 
     move-result v0
 

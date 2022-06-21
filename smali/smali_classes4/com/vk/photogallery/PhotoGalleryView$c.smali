@@ -37,7 +37,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZLkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ZLkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2

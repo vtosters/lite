@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -114,7 +114,7 @@
     return-object v0
 .end method
 
-.method public final a(Ljava/util/Map;)Lkotlin/jvm/b/b;
+.method public final a(Ljava/util/Map;)Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -123,7 +123,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;)",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/String;",
             "Lcom/vk/webapp/ScopesController$b;",
             ">;"

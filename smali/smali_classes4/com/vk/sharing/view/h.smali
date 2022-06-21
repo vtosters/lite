@@ -3,20 +3,20 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/sharing/view/k;
+.field private final synthetic a:Lcom/vk/sharing/view/SharingView;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/sharing/view/k;)V
+.method public synthetic constructor <init>(Lcom/vk/sharing/view/SharingView;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/sharing/view/h;->a:Lcom/vk/sharing/view/k;
+    iput-object p1, p0, Lcom/vk/sharing/view/h;->a:Lcom/vk/sharing/view/SharingView;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/sharing/view/h;->a:Lcom/vk/sharing/view/k;
+    iget-object v0, p0, Lcom/vk/sharing/view/h;->a:Lcom/vk/sharing/view/SharingView;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/view/k;->t()Lkotlin/m;
+    invoke-virtual {v0}, Lcom/vk/sharing/view/SharingView;->t()Lkotlin/Unit;
 
     move-result-object v0
 

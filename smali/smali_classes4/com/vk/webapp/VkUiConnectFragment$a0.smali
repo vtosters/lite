@@ -3,7 +3,7 @@
 .source "VkUiConnectFragment.kt"
 
 # interfaces
-.implements Lcom/vk/webapp/helpers/e;
+.implements Lcom/vk/webapp/helpers/WebClients2;
 
 
 # annotations
@@ -46,38 +46,38 @@
     .line 3
     iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment$a0;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/cache/a$a;->a(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/cache/AppsCache$a;->a(Landroid/view/View;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment$a0;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/cache/a$a;->a(Landroid/webkit/WebChromeClient$CustomViewCallback;)V
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/cache/AppsCache$a;->a(Landroid/webkit/WebChromeClient$CustomViewCallback;)V
 
     return-void
 .end method
@@ -88,36 +88,36 @@
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment$a0;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/cache/a$a;->a(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/cache/AppsCache$a;->a(Landroid/view/View;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment$a0;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {p1}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p1}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {p1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {p1}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vk/webapp/cache/a$a;->a(Landroid/webkit/WebChromeClient$CustomViewCallback;)V
+    invoke-virtual {p1, p2}, Lcom/vk/webapp/cache/AppsCache$a;->a(Landroid/webkit/WebChromeClient$CustomViewCallback;)V
 
     return-void
 .end method

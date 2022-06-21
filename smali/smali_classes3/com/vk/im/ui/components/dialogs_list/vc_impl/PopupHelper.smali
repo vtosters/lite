@@ -15,15 +15,15 @@
 
 
 # static fields
-.field static final synthetic e:[Lkotlin/u/j;
+.field static final synthetic e:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lkotlin/e;
+.field private final a:Lkotlin/Lazy2;
 
 .field private b:Landroid/app/Dialog;
 
-.field private c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+.field private c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
 
 .field private final d:Landroid/content/Context;
 
@@ -34,13 +34,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -48,15 +48,15 @@
 
     const-string v4, "getPopupVc()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->e:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->e:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -74,11 +74,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper$popupVc$2;-><init>(Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->a:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->a:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -114,21 +114,21 @@
 
     .line 10
     :pswitch_0
-    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;->e(Lcom/vk/im/engine/models/dialogs/Dialog;)V
+    invoke-interface {p2, p1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;->e(Lcom/vk/im/engine/models/dialogs/Dialog;)V
 
     goto :goto_0
 
     .line 11
     :pswitch_1
-    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;->e(Lcom/vk/im/engine/models/dialogs/Dialog;)V
+    invoke-interface {p2, p1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;->e(Lcom/vk/im/engine/models/dialogs/Dialog;)V
 
     goto :goto_0
 
@@ -158,71 +158,71 @@
 
     .line 16
     :pswitch_6
-    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1, v1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;->c(Lcom/vk/im/engine/models/dialogs/Dialog;Z)V
+    invoke-interface {p2, p1, v1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;->c(Lcom/vk/im/engine/models/dialogs/Dialog;Z)V
 
     goto :goto_0
 
     .line 17
     :pswitch_7
-    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1, v1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;->c(Lcom/vk/im/engine/models/dialogs/Dialog;Z)V
+    invoke-interface {p2, p1, v1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;->c(Lcom/vk/im/engine/models/dialogs/Dialog;Z)V
 
     goto :goto_0
 
     .line 18
     :pswitch_8
-    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1, v0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;->c(Lcom/vk/im/engine/models/dialogs/Dialog;Z)V
+    invoke-interface {p2, p1, v0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;->c(Lcom/vk/im/engine/models/dialogs/Dialog;Z)V
 
     goto :goto_0
 
     .line 19
     :pswitch_9
-    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1, v1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Z)V
+    invoke-interface {p2, p1, v1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Z)V
 
     goto :goto_0
 
     .line 20
     :pswitch_a
-    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1, v0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Z)V
+    invoke-interface {p2, p1, v0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Z)V
 
     goto :goto_0
 
     .line 21
     :pswitch_b
-    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;->d(Lcom/vk/im/engine/models/dialogs/Dialog;)V
+    invoke-interface {p2, p1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;->d(Lcom/vk/im/engine/models/dialogs/Dialog;)V
 
     goto :goto_0
 
     .line 22
     :pswitch_c
-    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+    iget-object p2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;->a(Lcom/vk/im/engine/models/dialogs/Dialog;)V
+    invoke-interface {p2, p1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;->a(Lcom/vk/im/engine/models/dialogs/Dialog;)V
 
     :cond_0
     :goto_0
@@ -264,7 +264,7 @@
     invoke-direct {v1, p0, p1, p3}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper$showLeaveSubmit$1;-><init>(Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;Lcom/vk/im/engine/models/dialogs/Dialog;Z)V
 
     .line 28
-    invoke-virtual {v0, p1, p2, p3, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;ZLkotlin/jvm/b/a;)V
+    invoke-virtual {v0, p1, p2, p3, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;ZLkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -281,15 +281,15 @@
 .method private final c()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->a:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->a:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->e:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->e:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -316,7 +316,7 @@
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper$showClearSubmit$1;-><init>(Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;Lcom/vk/im/engine/models/dialogs/Dialog;)V
 
     .line 3
-    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -376,7 +376,7 @@
 
     const-string v3, "anchor.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 33
     invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -422,7 +422,7 @@
     const/16 v19, 0x0
 
     .line 34
-    invoke-static/range {v0 .. v19}, Lcom/vk/core/tips/TipTextWindow$a;->a(Lcom/vk/core/tips/TipTextWindow$a;Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog;
+    invoke-static/range {v0 .. v19}, Lcom/vk/core/tips/TipTextWindow$a;->a(Lcom/vk/core/tips/TipTextWindow$a;Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog;
 
     move-result-object v0
 
@@ -451,7 +451,7 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper$showClearProgress$1;-><init>(Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;)V
 
     .line 25
-    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, p1, p2, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -471,9 +471,9 @@
     .end annotation
 
     .line 4
-    sget-object v0, Lcom/vk/im/ui/reporters/c;->b:Lcom/vk/im/ui/reporters/c;
+    sget-object v0, Lcom/vk/im/ui/reporters/DialogActionReporter;->b:Lcom/vk/im/ui/reporters/DialogActionReporter;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/reporters/c;->b()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/reporters/DialogActionReporter;->b()V
 
     .line 5
     invoke-direct {p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
@@ -499,25 +499,25 @@
     move-object v4, p3
 
     .line 8
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/util/List;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/util/List;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;)V
+.method public final a(Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
 
     return-void
 .end method
 
-.method public final b()Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+.method public final b()Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/PopupHelper;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVcCallback;
 
     return-object v0
 .end method
@@ -542,7 +542,7 @@
     const/4 v2, 0x1
 
     .line 4
-    invoke-virtual {v0, p1, p2, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/a;Z)V
+    invoke-virtual {v0, p1, p2, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/Functions;Z)V
 
     return-void
 .end method
@@ -567,7 +567,7 @@
     const/4 v2, 0x1
 
     .line 3
-    invoke-virtual {v0, p1, p2, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/a;Z)V
+    invoke-virtual {v0, p1, p2, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->b(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lkotlin/jvm/b/Functions;Z)V
 
     return-void
 .end method

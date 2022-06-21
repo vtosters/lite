@@ -3,12 +3,12 @@
 .source "DefaultMediaPlayer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/f;Ljava/util/List;)V
+    value = Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;->a(Lcom/vk/audiomsg/player/Source;Ljava/util/List;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,16 +19,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/audiomsg/player/j/b;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/audiomsg/player/j/MediaPlayerListener;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $source$inlined:Lcom/vk/audiomsg/player/f;
+.field final synthetic $source$inlined:Lcom/vk/audiomsg/player/Source;
 
 .field final synthetic $trackList$inlined:Ljava/util/List;
 
@@ -36,12 +36,12 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/f;Ljava/util/List;)V
+.method constructor <init>(Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;Lcom/vk/audiomsg/player/Source;Ljava/util/List;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;->this$0:Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;
 
-    iput-object p2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;->$source$inlined:Lcom/vk/audiomsg/player/f;
+    iput-object p2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;->$source$inlined:Lcom/vk/audiomsg/player/Source;
 
     iput-object p3, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;->$trackList$inlined:Ljava/util/List;
 
@@ -54,17 +54,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/audiomsg/player/j/b;)V
+.method public final a(Lcom/vk/audiomsg/player/j/MediaPlayerListener;)V
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;->this$0:Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer;
 
-    iget-object v1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;->$source$inlined:Lcom/vk/audiomsg/player/f;
+    iget-object v1, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;->$source$inlined:Lcom/vk/audiomsg/player/Source;
 
     iget-object v2, p0, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;->$trackList$inlined:Ljava/util/List;
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/vk/audiomsg/player/j/b;->a(Lcom/vk/audiomsg/player/j/a;Lcom/vk/audiomsg/player/f;Ljava/util/List;)V
+    invoke-interface {p1, v0, v1, v2}, Lcom/vk/audiomsg/player/j/MediaPlayerListener;->a(Lcom/vk/audiomsg/player/j/MediaPlayer;Lcom/vk/audiomsg/player/Source;Ljava/util/List;)V
 
     return-void
 .end method
@@ -73,11 +73,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/audiomsg/player/j/b;
+    check-cast p1, Lcom/vk/audiomsg/player/j/MediaPlayerListener;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;->a(Lcom/vk/audiomsg/player/j/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/mediaplayer/impl/DefaultMediaPlayer$setTrackList$$inlined$accessState$lambda$1;->a(Lcom/vk/audiomsg/player/j/MediaPlayerListener;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

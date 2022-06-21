@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/vk/common/i/b;)V
+.method public abstract a(Lcom/vk/common/i/RecyclerItem;)V
 .end method

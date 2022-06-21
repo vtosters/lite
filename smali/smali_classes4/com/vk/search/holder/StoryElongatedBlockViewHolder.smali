@@ -1,5 +1,5 @@
 .class public final Lcom/vk/search/holder/StoryElongatedBlockViewHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "StoryElongatedBlockViewHolder.kt"
 
 
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
-        "Lcom/vk/search/c/a;",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vk/search/c/StoryElongatedData;",
         ">;"
     }
 .end annotation
@@ -35,7 +35,7 @@
 
 .field private final d:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private final e:Lcom/vk/search/b/c;
+.field private final e:Lcom/vk/search/b/StoryElongatedAdapter;
 
 
 # direct methods
@@ -46,7 +46,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/search/holder/StoryElongatedBlockViewHolder$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/search/holder/StoryElongatedBlockViewHolder$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->h:Lcom/vk/search/holder/StoryElongatedBlockViewHolder$b;
 
@@ -71,7 +71,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup;ZLcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Landroid/view/ViewGroup;ZLcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -80,7 +80,7 @@
             "Z",
             "Lcom/vk/stories/StoriesController$SourceType;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/String;",
             ">;)V"
         }
@@ -89,7 +89,7 @@
     const v0, 0x7f0d02bf
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -102,7 +102,7 @@
 
     const-string v0, "itemView.findViewById(R.id.stories_block_title)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -119,14 +119,14 @@
 
     const-string v0, "itemView.findViewById(R.id.list)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
     iput-object p1, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->d:Landroidx/recyclerview/widget/RecyclerView;
 
     .line 4
-    new-instance p1, Lcom/vk/search/b/c;
+    new-instance p1, Lcom/vk/search/b/StoryElongatedAdapter;
 
     new-instance v1, Lcom/vk/search/holder/StoryElongatedBlockViewHolder$adapter$1;
 
@@ -142,16 +142,16 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/search/b/c;-><init>(Lkotlin/jvm/b/b;ZLcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/search/b/StoryElongatedAdapter;-><init>(Lkotlin/jvm/b/Functions2;ZLcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
-    iput-object p1, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->e:Lcom/vk/search/b/c;
+    iput-object p1, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->e:Lcom/vk/search/b/StoryElongatedAdapter;
 
     .line 5
     iget-object p1, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->d:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance p2, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
@@ -194,7 +194,7 @@
     .line 10
     iget-object p1, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object p2, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->e:Lcom/vk/search/b/c;
+    iget-object p2, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->e:Lcom/vk/search/b/StoryElongatedAdapter;
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -231,9 +231,9 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->e:Lcom/vk/search/b/c;
+    iget-object v0, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->e:Lcom/vk/search/b/StoryElongatedAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/search/b/c;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/search/b/StoryElongatedAdapter;->getItemCount()I
 
     move-result v0
 
@@ -243,15 +243,15 @@
     if-ge v1, v0, :cond_1
 
     .line 2
-    iget-object v2, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->e:Lcom/vk/search/b/c;
+    iget-object v2, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->e:Lcom/vk/search/b/StoryElongatedAdapter;
 
-    invoke-virtual {v2, v1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object v2
 
     const-string v3, "adapter.getItemAt(i)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v2, Lcom/vk/dto/stories/model/StoriesContainer;
 
@@ -259,7 +259,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -284,26 +284,26 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/search/c/a;)V
+.method public a(Lcom/vk/search/c/StoryElongatedData;)V
     .locals 2
 
     .line 2
     iget-object v0, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->c:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/search/c/a;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/search/c/StoryElongatedData;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->e:Lcom/vk/search/b/c;
+    iget-object v0, p0, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->e:Lcom/vk/search/b/StoryElongatedAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/search/c/a;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/search/c/StoryElongatedData;->a()Ljava/util/List;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     return-void
 .end method
@@ -312,9 +312,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/search/c/a;
+    check-cast p1, Lcom/vk/search/c/StoryElongatedData;
 
-    invoke-virtual {p0, p1}, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->a(Lcom/vk/search/c/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/search/holder/StoryElongatedBlockViewHolder;->a(Lcom/vk/search/c/StoryElongatedData;)V
 
     return-void
 .end method

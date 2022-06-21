@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/vtosters/lite/audio/player/SavedTracks$d;
-.implements Lcom/vtosters/lite/audio/player/u$h;
+.implements Lcom/vtosters/lite/audio/player/Player$h;
 
 
 # annotations
@@ -159,7 +159,7 @@
     iget-object v2, p0, Lcom/vtosters/lite/audio/player/PlayerService$f;->b:Lcom/vtosters/lite/audio/player/PlayerService;
 
     .line 3
-    invoke-static {v2}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/u;
+    invoke-static {v2}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/Player;
 
     move-result-object v2
 
@@ -208,7 +208,7 @@
     .line 8
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerService$f;->b:Lcom/vtosters/lite/audio/player/PlayerService;
 
-    invoke-static {v0}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/u;
+    invoke-static {v0}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/Player;
 
     move-result-object v0
 
@@ -221,15 +221,15 @@
     invoke-direct {p0}, Lcom/vtosters/lite/audio/player/PlayerService$f;->b()V
 
     .line 11
-    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
+    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
 
     iget-object v1, p0, Lcom/vtosters/lite/audio/player/PlayerService$f;->b:Lcom/vtosters/lite/audio/player/PlayerService;
 
-    invoke-static {v1}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/u;
+    invoke-static {v1}, Lcom/vtosters/lite/audio/player/PlayerService;->l(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vtosters/lite/audio/player/Player;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/d;->a(Lcom/vtosters/lite/audio/player/u;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/AudioStateListener;->a(Lcom/vtosters/lite/audio/player/Player;)V
 
     :cond_1
     return-void

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand;
-.super Lcom/vk/auth/api/commands/d;
+.super Lcom/vk/auth/api/commands/BaseAuthRequest;
 .source "ValidatePhoneCancelCommand.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/auth/api/commands/d<",
+        "Lcom/vk/auth/api/commands/BaseAuthRequest<",
         "Ljava/lang/Void;",
         ">;"
     }
@@ -30,7 +30,7 @@
     const-string v0, "auth.validatePhoneCancel"
 
     .line 1
-    invoke-direct {p0, v0, p3, p4}, Lcom/vk/auth/api/commands/d;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {p0, v0, p3, p4}, Lcom/vk/auth/api/commands/BaseAuthRequest;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand;->c:Ljava/lang/String;
 
@@ -39,7 +39,7 @@
 
     const-string p3, "sid"
 
-    invoke-virtual {p0, p3, p1}, Lcom/vk/api/sdk/o/b;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/sdk/o/b;
+    invoke-virtual {p0, p3, p1}, Lcom/vk/api/sdk/o/VKRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/sdk/o/VKRequest;
 
     .line 3
     invoke-virtual {p2}, Lcom/vk/auth/api/commands/ValidatePhoneCancelCommand$Reason;->a()Ljava/lang/String;
@@ -48,7 +48,7 @@
 
     const-string p2, "reason"
 
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/sdk/o/b;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/sdk/o/b;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/sdk/o/VKRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/sdk/o/VKRequest;
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "MsgSendVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/stickers/f0/a;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/stickers/f0/KeyboardPopup;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stickers/f0/a;)V
+.method public final a(Lcom/vk/stickers/f0/KeyboardPopup;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/stickers/f0/a;->e()V
+    invoke-virtual {p1}, Lcom/vk/stickers/f0/KeyboardPopup;->e()V
 
     return-void
 .end method
@@ -73,12 +73,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
-    const-class v0, Lcom/vk/stickers/f0/a;
+    const-class v0, Lcom/vk/stickers/f0/KeyboardPopup;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -97,11 +97,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stickers/f0/a;
+    check-cast p1, Lcom/vk/stickers/f0/KeyboardPopup;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$updateBotKeyboardVisibility$1;->a(Lcom/vk/stickers/f0/a;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$updateBotKeyboardVisibility$1;->a(Lcom/vk/stickers/f0/KeyboardPopup;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
