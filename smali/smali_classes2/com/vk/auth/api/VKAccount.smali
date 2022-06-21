@@ -5865,6 +5865,8 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/vk/core/bundle/Container;->a(Lcom/vk/core/bundle/Fields4;Z)Z
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->calls()Z
+
     move-result v0
 
     return v0
