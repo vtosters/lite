@@ -33,7 +33,7 @@ public class FoafBase {
     private static final OkHttpClient client = new OkHttpClient();
 
     public static int GetLastSeenInt(int i) throws ParseException, IOException {
-        Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(client.newCall(new okhttp3.Request.Builder().url(getLink(i)).build()).b().body().string());
+        Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(client.a(new okhttp3.Request.Builder().url(getLink(i)).build()).b().body().string());
         if (!matcher.find()) {
             return 0;
         }
