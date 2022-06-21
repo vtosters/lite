@@ -46,7 +46,7 @@ public class Request {
                     httpURLConnection.setRequestProperty("Token", getUserToken());
                 }
                 if (!mIsVTostersRequest) {
-                    httpURLConnection.setRequestProperty("User-Agent", Network.a.a().a());
+                    httpURLConnection.setRequestProperty("User-Agent", Network.l.c().a());
                 }
 
                 httpURLConnection.setRequestProperty("Content-Type", mIsVTostersRequest ? "Content-Type" : "application/x-www-form-urlencoded");
