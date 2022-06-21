@@ -14,7 +14,7 @@ public class ReflectionUtils {
         try {
             Method declaredMethod = VKThemeHelper.class.getDeclaredMethod("a");
             declaredMethod.setAccessible(true);
-            declaredMethod.invoke("a", activity, theme, getCenterScreenCoords());
+            declaredMethod.invoke("k", activity, theme, getCenterScreenCoords());
         } catch (Exception e) {
             e.printStackTrace();
         }
