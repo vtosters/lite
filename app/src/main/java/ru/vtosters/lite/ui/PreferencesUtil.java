@@ -22,7 +22,7 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 
-import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
+import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.ui.MaterialSwitchPreference;
 
 import java.util.Objects;
