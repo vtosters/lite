@@ -10,6 +10,7 @@ import static ru.vtosters.lite.utils.Proxy.proxy;
 import android.app.ProgressDialog;
 import android.content.Context;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.exifinterface.media.ExifInterface;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
@@ -33,7 +34,10 @@ public class FoafBase {
     private static final OkHttpClient client = new OkHttpClient();
 
     public static int GetLastSeenInt(int i) throws ParseException, IOException {
-        Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(client.a(new okhttp3.Request.Builder().url(getLink(i)).build()).b().body().string());
+        Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(
+                client.a(
+                        new okhttp3.Request.a().a(getLink(i)).b().a()
+                ).execute().a().g());
         if (!matcher.find()) {
             return 0;
         }
@@ -78,8 +82,8 @@ public class FoafBase {
             matcher2.find();
             String normalHumanDate = getNormalHumanDate(matcher.group(1));
             getNormalHumanDate(matcher2.group(1));
-            AlertDialog.a a2 = new VkAlertDialog.a(context).a(getIdentifier("addinf", "string"));
-            a2.b(getString("foafid") + " " + i + getString("foafregdate") + " " + normalHumanDate + getString("foafdate") + " " + daysPassedFromFoafDate(normalHumanDate)).b(17039370, null).b().show();
+            VkAlertDialog.Builder a2 = new VkAlertDialog.Builder(context).setTitle(getIdentifier("addinf", "string"));
+            a2.setMessage(getString("foafid") + " " + i + getString("foafregdate") + " " + normalHumanDate + getString("foafdate") + " " + daysPassedFromFoafDate(normalHumanDate)).setPositiveButton(17039370, null).create().show();
         } catch (Exception e) {
             e.printStackTrace();
             makeText(context, getString("foaferr"), LENGTH_SHORT).show();
