@@ -53,10 +53,10 @@ public class VTVerifications {
             Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
         }
 
-        Request request = new Request.Builder()
-                .url("https://vtosters.app/vktoaster/getGalo4kiBatch")
+        Request request = new Request.a()
+                .a("https://vtosters.app/vktoaster/getGalo4kiBatch")
                 .a(RequestBody.a(MediaType.b("application/json; charset=UTF-8"), "{\"types\":[0,228,404,1337]}"))
-                .build();
+                .b().a();
 
         client.a(request).a(new Callback() {
             @Override
