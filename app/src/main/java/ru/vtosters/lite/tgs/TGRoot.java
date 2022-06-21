@@ -41,7 +41,7 @@ public class TGRoot {
     }
 
     public static Attachment processSticker(StickerItem item) {
-        int id = item.b();
+        int id = item.getId();
         if (id < N) return null;
 
         int index = (id - N) / 120;
@@ -144,7 +144,7 @@ public class TGRoot {
     }
 
     public static Attach modifyStickerIM(int i, StickerItem stickerItem, String str) {
-        if (stickerItem.b() < 76820000) {
+        if (stickerItem.getId() < 76820000) {
             return AppAttachToImAttachConverter.a.a(i, stickerItem, str);
         }
         return AppAttachToImAttachConverter.a.a(processSticker(stickerItem));

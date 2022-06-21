@@ -27,8 +27,6 @@ import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
 import com.vk.search.fragment.GroupsSearchFragment;
-import com.vtosters.lite.fragments.GamesFragment;
-import com.vtosters.lite.fragments.PhotosFragment;
 import com.vtosters.lite.fragments.ProfileFragment;
 import com.vtosters.lite.fragments.friends.FriendsFragment;
 import com.vtosters.lite.fragments.gifts.BirthdaysFragment;
@@ -37,6 +35,8 @@ import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 import com.vtosters.lite.fragments.p2.DocumentsViewFragment;
 import com.vtosters.lite.fragments.t2.c.DialogsFragment;
 import com.vtosters.lite.fragments.y2.VideosFragment;
+import com.vtosters.lite.general.fragments.GamesFragment;
+import com.vtosters.lite.general.fragments.PhotosFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
