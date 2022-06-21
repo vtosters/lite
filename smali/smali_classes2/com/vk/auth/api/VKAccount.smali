@@ -2387,6 +2387,10 @@
 
     move-result v0
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
+
+    move-result v0
+
     return v0
 .end method
 
@@ -4927,6 +4931,10 @@
     const-string v1, "worker"
 
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dev()Z
 
     move-result v0
 
