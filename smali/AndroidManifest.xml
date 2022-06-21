@@ -54,7 +54,7 @@
     <uses-feature android:name="android.hardware.telephony" android:required="false"/>
     <permission android:name="com.vtosters.lite.audioipc.communication.AUDIO_SERVICE_PERMISSION" android:protectionLevel="signature"/>
     <uses-permission android:name="com.example.libaudioipc_sensitive_data_provider.AUDIO_SERVICE_SENSITIVE_DATA_PERMISSION"/>
-    <permission android:name="com.audioipc.player.libaudioipc_sensitive_data_provider.AUDIO_SERVICE_SENSITIVE_DATA_PERMISSION" android:protectionLevel="signature"/>
+    <permission android:name="com.audioipc.player.libaudioipc_sensitive_data_provider_fix.AUDIO_SERVICE_SENSITIVE_DATA_PERMISSION" android:protectionLevel="signature"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
@@ -401,7 +401,7 @@
         <receiver android:exported="true" android:name="com.vtosters.lite.im.bridge.broadcasts.ImBroadcastReceiver" android:permission="com.vtosters.lite.permission.ACCESS_DATA"/>
         <provider android:authorities="com.vtosters.lite.providers.audio" android:exported="true" android:name="com.vtosters.lite.audio.contentprovider.AudioContentProvider"/>
         <provider android:authorities="com.vtosters.lite.providers.im" android:exported="true" android:name="com.vtosters.lite.im.bridge.contentprovider.ImContentProvider" android:permission="com.vtosters.lite.permission.ACCESS_DATA"/>
-        <provider android:authorities="com.vk.common.VKFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+        <provider android:authorities="com.vtosters.lite.common.VKFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
         </provider>
         <uses-library android:name="com.sec.android.app.multiwindow" android:required="false"/>
@@ -417,7 +417,7 @@
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.vk.stickers.details.StickerDetailsActivity" android:theme="@style/StickerDetailsTheme" android:windowSoftInputMode="adjustResize"/>
         <service android:enabled="true" android:exported="true" android:name="com.vk.audioipc.communication.AudioService" android:permission="com.vk.audioipc.communication.AUDIO_SERVICE_PERMISSION" android:process="com.vk.audio.service" android:stopWithTask="false"/>
-        <service android:enabled="true" android:exported="true" android:name="com.vk.audioipc.player.libaudioipc_sensitive_data_provider.SensitiveDataProviderService" android:permission="com.audioipc.player.libaudioipc_sensitive_data_provider.AUDIO_SERVICE_SENSITIVE_DATA_PERMISSION"/>
+        <service android:enabled="true" android:exported="true" android:name="com.vk.audioipc.player.libaudioipc_sensitive_data_provider.SensitiveDataProviderService" android:permission="com.audioipc.player.libaudioipc_sensitive_data_provider_fix.AUDIO_SERVICE_SENSITIVE_DATA_PERMISSION"/>
         <service android:enabled="true" android:exported="true" android:name="com.vk.im.engine.synchelper.ImEngineSyncService"/>
         <service android:exported="true" android:name="com.vk.silentauth.host.SilentAuthService">
             <intent-filter>
