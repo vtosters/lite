@@ -34,6 +34,12 @@ public class Toggles {
             case FEATURE_MUSIC_BG_OFF:
             case FEATURE_GQUIC_METRICS_ENABLE:
             case FEATURE_VIDEO_ADS:
+            case FEATURE_DEBUG_CRASH_INFO:
+            case FEATURE_DEBUG_FULL_MSG_LOGS:
+            case FEATURE_DEBUG_CYCLE_CALLS:
+            case FEATURE_DEBUG_STAT_NAVIGATION:
+            case FEATURE_DEBUG_VIDEO_RENDERER:
+            case FEATURE_DEBUG_LOG_CONFIG:
                 return false;
 
             case FEATURE_IM_AUDIO_MSG_TRANSCRIPT:
@@ -41,11 +47,6 @@ public class Toggles {
             case FEATURE_GROUP_MSG_PUSH_PARAM:
             case FEATURE_IMAGE_QUALITY_UPGRADE:
             case FEATURE_IM_DISABLE_FORCE_OPEN_VK_ME:
-            case FEATURE_IMAGE_QUALITY_UPGRADE:
-            case FEATURE_IMAGE_QUALITY_UPGRADE:
-            case FEATURE_IMAGE_QUALITY_UPGRADE:
-            case FEATURE_IMAGE_QUALITY_UPGRADE:
-                return true
 
             default:
                 return true;
