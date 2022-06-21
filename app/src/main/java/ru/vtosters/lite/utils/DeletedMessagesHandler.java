@@ -78,7 +78,7 @@ public class DeletedMessagesHandler {
     }
 
     public static void updateDialog(MsgDeleteLpTask msgDeleteLpTask) {
-        Cursor c = getMessageFromDatabaseById(msgDeleteLpTask.c);
+        Cursor c = getMessageFromDatabaseById(msgDeleteLpTask.d);
         if (c == null) return;
 
         @SuppressLint("Range")
