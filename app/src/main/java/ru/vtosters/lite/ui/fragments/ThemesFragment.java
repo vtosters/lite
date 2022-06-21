@@ -9,7 +9,7 @@ import androidx.preference.Preference;
 
 import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.R;
-import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
+import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.utils.Globals;
 

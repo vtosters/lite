@@ -46,7 +46,7 @@ import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.R;
-import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
+import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import java.io.File;
 

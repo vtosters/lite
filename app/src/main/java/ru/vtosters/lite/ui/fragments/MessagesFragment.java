@@ -10,7 +10,7 @@ import android.os.Bundle;
 import androidx.preference.Preference;
 
 import com.vtosters.lite.R;
-import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
+import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override

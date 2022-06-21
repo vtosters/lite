@@ -9,7 +9,7 @@ import androidx.preference.Preference;
 import com.vk.navigation.Navigator;
 import com.vk.newsfeed.NewsfeedSettingsFragment;
 import com.vtosters.lite.R;
-import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
+import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 public class FeedFragment extends MaterialPreferenceToolbarFragment {
     @Override

@@ -3,7 +3,7 @@ package ru.vtosters.lite.ui.fragments;
 import android.os.Bundle;
 
 import com.vtosters.lite.R;
-import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
+import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 public class MusicFragment extends MaterialPreferenceToolbarFragment {
     @Override
